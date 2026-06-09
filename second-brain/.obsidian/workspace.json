@@ -19,44 +19,27 @@
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
               "title": "network-science-l02"
-=======
-              "title": "multimedia-databases-lecture-03"
->>>>>>> 82917fb (plugins)
             }
           }
         ]
       },
       {
-<<<<<<< HEAD
         "id": "cd3432ea8368a3c2",
-=======
-        "id": "e16d09068dbea362",
->>>>>>> 82917fb (plugins)
         "type": "tabs",
         "dimension": 58.08641975308642,
         "children": [
           {
-<<<<<<< HEAD
             "id": "88f80659f1711afa",
-=======
-            "id": "7a63098d24529837",
->>>>>>> 82917fb (plugins)
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
                 "file": "vault/neighbourhood-and-degree.md",
-=======
-                "file": "vault/vector-graphics-svg.md",
->>>>>>> 82917fb (plugins)
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
               "title": "neighbourhood-and-degree"
             }
           },
@@ -76,12 +59,6 @@
           }
         ],
         "currentTab": 1
-=======
-              "title": "vector-graphics-svg"
-            }
-          }
-        ]
->>>>>>> 82917fb (plugins)
       }
     ],
     "direction": "vertical"
@@ -172,8 +149,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           },
           {
@@ -205,7 +182,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231
+    "width": 231,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,14 +195,12 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "templater-obsidian:Templater": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-kanban:Create new board": false
+      "templater-obsidian:Templater": false
     }
   },
   "active": "2ba99cf75d70bf17",
   "lastOpenFiles": [
-<<<<<<< HEAD
+    "vault/study-materials-index.md",
     "vault/topics/software-analyse-lecture-8.md",
     "vault/topics/software-analyse-lecture-7.md",
     "vault/topics/software-analyse-lecture-6.md",
@@ -250,7 +226,6 @@
     "vault/concepts/system-dependence-graph.md",
     "vault/concepts/symmetric-encryption.md",
     "vault/concepts/structural-balance-theory.md",
-    "vault/concepts/steensgaards-points-to-analysis.md",
     "raw/lectures/software_analyse/Vorlesung/8_Slicing_JupyterNotebookExport.pdf",
     "raw/lectures/software_analyse/Vorlesung/8_Slicing.pdf",
     "raw/lectures/software_analyse/Vorlesung/7_Interprocedural_JupyterNotebookExport.pdf",
@@ -269,44 +244,6 @@
     "Pasted image 20260623142244.png",
     "Pasted image 20260610105308.png",
     "Pasted image 20260609110111.png",
-=======
-    "vault/vector-graphics-svg.md",
-    "vault/topics/multimedia-databases-lecture-03.md",
-    "vault/jpeg2000-wavelet-compression.md",
-    "vault/jpeg-compression-pipeline.md",
-    "vault/image-file-formats.md",
-    "vault/floyd-steinberg-dithering.md",
-    "vault/dithering.md",
-    "vault/color-lookup-table.md",
-    "vault/color-quantization.md",
-    "vault/pixel-formats-and-bit-depth.md",
-    "vault/image-interpolation.md",
-    "vault/image-resolution-dpi-ppi.md",
-    "vault/image-representation-bitmap.md",
-    "vault/audio-sampling-nyquist-theorem.md",
-    "vault/concepts/digital-signatures.md",
-    "study/exams/iot-security-exam-format.md",
-    "raw/lectures/software_analyse/Vorlesung/6_AbstractInterpretation.pdf",
-    "vault/topics/multimedia-databases-lecture-02.md",
-    "study/practice/mmdb-ex01.md",
-    "study/practice/network-science-e01.md",
-    "study/practice/mmdb-ex06.md",
-    "projects/software-analyse/SOFTWARE_ANALYSE_PROJECTS.md",
-    "study/practice/mmdb-ex02.md",
-    "vault/concepts/electron-hole.md",
-    "vault/study-materials-index.md",
-    "Untitled 1.base",
-    "Untitled.base",
-    "vault/hmmd-color-space.md",
-    "vault/yuv-color-space.md",
-    "raw/books/software_analyse/Uebung/java-intermediate.pdf",
-    "raw/books/software_analyse/Uebung/annas-arch-4ac6fb27a5d8.azw3",
-    "raw/books/software_analyse/Uebung/java-beginner.pdf",
-    "raw/books/software_analyse/Uebung/Head First Java_ A Brain-Friendly Guide -- Sierra, Kathy & Bates, Bert -- 2005 -- cj5_7062 -- 97ef68dbc4567d230af6ce7134bfa824 -- Anna’s Archive.epub",
-    "projects/software-analyse/ss26sasign-putra01/target/surefire/surefirebooter-20260604203550610_3.jar",
-    "projects/software-analyse/ss26sasign-putra01/target/surefire/surefire_0-20260604203550610_2tmp",
-    "projects/software-analyse/ss26sasign-putra01/target/surefire/surefire-20260604203550610_1tmp",
->>>>>>> 82917fb (plugins)
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/source.gif"
   ]

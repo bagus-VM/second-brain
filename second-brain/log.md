@@ -203,3 +203,35 @@
 - Post-fix scan: 0 remaining broken table rows ✅
 
 
+<<<<<<< HEAD
+=======
+**Inbound connections added from:**
+- `iot-security-exam-format.md` — confirmed exam question
+- `firmware-security.md` — firmware signing mechanism
+- `iot-lecture-4.md` (IoT Secure Design) — Goal 3 firmware integrity
+- `trusted-platform-module.md` — TPM signing operations
+- `ota-updates.md` — signed firmware updates
+
+## [2026-06-09] LINT | Full vault audit + repair | 17 pages created, 2 fixed, 525 total
+
+**Formatting fixes:**
+- Fixed bare wikilink prerequisites in readability-classifier.md and sign-analysis.md
+- No line prefix corruption, no date issues, no merged delimiters
+
+**Pages created (17):**
+- 5 Microelectronics topic overviews: semiconductor-physics, doping-and-extrinsic-semiconductors, p-n-junction-overview, diode-applications, mos-transistors
+- 2 Microelectronics concepts: digital-circuit-design, vlsi-design
+- 1 Microelectronics concept: pmos-transistor (sibling to nmos-transistor)
+- 1 Software Analyse overview: software-analyse-projects-overview
+- 4 Cross-course concepts: machine-learning-basics, pagerank-algorithm, six-degrees-of-separation, visitor-pattern
+- 4 IoT Security concepts: actuators, authentication, non-repudiation, sensors
+
+**Study materials:**
+- Updated study-materials-index.md with all 39 study pages
+
+**Remaining (non-blocking):**
+- 5 broken links to future lectures (MMDB L07-L08, ReproEng L06-L08) — resolve on ingestion
+- 15 broken links in raw/ (immutable, informational)
+- 73 unsourced pages (source_count: 0) — need verification against raw lectures
+- 429 empty Open Questions — systemic, low priority
+>>>>>>> 1287aa7 (lint 09-06-2026)

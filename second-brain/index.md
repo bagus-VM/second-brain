@@ -2,9 +2,15 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
+<<<<<<< HEAD
 **Last updated:** 2026-06-22
 **Total pages:** 592 (vault: 540 pages + study: 52 practice/flashcards/exam materials; excluding raw/)
 **Active courses:** 6
+=======
+**Last updated:** 2026-06-09
+**Total pages:** 386
+**Active courses:** 8
+>>>>>>> 1287aa7 (lint 09-06-2026)
 
 ---
 
@@ -237,6 +243,7 @@
 | [[link-prediction-via-embeddings]] | Scoring by proximity | current |
 | [[pagerank-algorithm]] | Iterative ranking algorithm, damping factor, stationary distribution | current |
 | [[six-degrees-of-separation]] | Milgram's experiment, small-world phenomenon | current |
+<<<<<<< HEAD
 | [[word2vec-skip-gram]] | Skip-gram: predict context from target, basis of DeepWalk | current |
 | [[hierarchical-navigable-small-world]] | HNSW: layered graph for approximate nearest-neighbor search | current |
 
@@ -264,6 +271,8 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[network-science-exercise-prep]] | Exercise-based exam prep: NetworkX functions, hand calculations, key formulas | current |
+=======
+>>>>>>> 1287aa7 (lint 09-06-2026)
 
 ---
 
@@ -606,9 +615,88 @@
 ### Lecture Topic Pages
 | Page | Summary | Status |
 |------|---------|--------|
+<<<<<<< HEAD
 | [[microelectronics-lecture-1]] | L01: Semiconductor Physics | current |
 | [[microelectronics-lecture-2]] | L02: Doping and Extrinsic Semiconductors | current |
 | [[microelectronics-lecture-3]] | L03: P-N Junction Overview | current |
 | [[microelectronics-lecture-4]] | L04: Diode Applications — rectifiers, limiters, clampers | current |
 | [[microelectronics-lecture-5]] | L05: MOS Transistors — MOSFET structure and operation | current |
 | [[microelectronics-lecture-6]] | L06: CMOS Logic Gates and Digital Circuits | current |
+=======
+| [[rectifier]] | Circuit converting AC to DC using diodes | current |
+| [[half-wave-rectifier]] | Single diode, passes one half of AC waveform | current |
+| [[full-wave-rectifier]] | Both half-cycles, center-tap or bridge configuration | current |
+| [[bridge-rectifier]] | Four diodes, full-wave without center-tapped transformer | current |
+| [[clamper-circuit]] | DC restorer shifting waveform level using capacitor and diode | current |
+| [[limiter-circuit]] | Voltage clipping at threshold, series/parallel/dual-diode | current |
+
+### L05 — MOS Transistors
+| Page | Summary | Status |
+|------|---------|--------|
+| [[transistor]] | Three-terminal device, gate controls current, digital foundation | current |
+| [[mosfet]] | Metal-Oxide-Semiconductor FET, field-effect transistor | current |
+| [[mos-capacitor]] | Capacitor beneath gate controlling channel charge carriers | current |
+| [[threshold-voltage]] | Minimum V_GS to create conducting channel | current |
+| [[nmos-transistor]] | N-channel in P-substrate, electrons, V_GS>V_TH | current |
+| [[pmos-transistor]] | P-channel in N-substrate, holes, |V_GS|>|V_TH| | current |
+| [[mosfet-operating-regions]] | Cutoff/Linear/Saturation conditions with formulas | current |
+
+### 🗺️ Microelectronics Topics
+| Page | Summary | Status |
+|------|---------|--------|
+| [[semiconductor-physics]] | Band structure, carrier concentration, why Si dominates | current |
+| [[doping-and-extrinsic-semiconductors]] | Donor/acceptor types, doping methods, Fermi level shifts | current |
+| [[p-n-junction-overview]] | Junction formation, depletion region, biasing, breakdown | current |
+| [[diode-applications]] | Rectifiers, clippers, clampers, Zener regulators | current |
+| [[mos-transistors]] | MOS capacitor, threshold voltage, drain current, nMOS/pMOS | current |
+| [[digital-circuit-design]] | Combinational/sequential circuits, CMOS gate design, timing | current |
+| [[vlsi-design]] | VLSI design flow, fabrication, Moore's Law, DFM | current |
+
+---
+
+## 🎓 Courses
+
+| Course | Instructor | Semester | Exam | Status |
+|--------|-----------|----------|------|--------|
+| [[iot-security]] | Dr. Anagnostopoulos | SS 2026 | Aug 05 | active |
+| [[introduction-to-microelectronics]] | Dr. Anagnostopoulos | SS 2026 | Aug 06 | active |
+| [[multimedia-databases]] | | SS 2026 | Jul 21 | active |
+| [[network-science]] | | SS 2026 | Jul 28 | active |
+| [[reproducibility-engineering]] | | SS 2026 | Jul 30 | active |
+| [[software-analyse]] | | SS 2026 | Jul 31 | active |
+
+---
+
+## 🔗 Connections
+
+| Page | What It Connects | Status |
+|------|-----------------|--------|
+| *(populated as cross-topic patterns emerge)* | | |
+
+---
+
+## 📝 Study Materials
+
+| Page | Summary | Status |
+|------|---------|--------|
+| [[study-materials-index]] | Master index of all flashcard decks and practice problem sets | current |
+
+---
+
+## 📋 Open Questions
+
+*(Tracked across all courses — see individual pages for course-specific open questions)*
+
+---
+
+## 📁 Raw Sources Ingested
+
+| Source | Type | Date Ingested | Pages Created |
+|--------|------|--------------|---------------|
+| MMDB L01-L06 | Lectures | 2026-06-01 | 73 |
+| Network Science L01-L09 | Lectures | 2026-06-01 | 128 |
+| Reproducibility Eng L01-L05 | Lectures | 2026-06-01 | 44 |
+| Software Analyse L01-L05 | Lectures | 2026-06-01 | 49 |
+| IoT Security L01-L05 | Lectures | 2026-06-02 | 39 |
+| Intro to Microelectronics L01-L05 | Lectures | 2026-06-02 | 39 |
+>>>>>>> 1287aa7 (lint 09-06-2026)
