@@ -20,85 +20,28 @@
               "icon": "lucide-file",
               "title": "multimedia-databases-lecture-03"
             }
-          },
-          {
-            "id": "b504ed3e4515eaa0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/jpeg-compression-pipeline.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jpeg-compression-pipeline"
-            }
           }
         ]
       },
       {
-        "id": "611b5377f7e4377c",
+        "id": "e16d09068dbea362",
         "type": "tabs",
         "children": [
           {
-            "id": "59f60d9e5f81116d",
+            "id": "7a63098d24529837",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/dithering.md",
+                "file": "vault/vector-graphics-svg.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dithering"
-            }
-          },
-          {
-            "id": "55aad1f3534149e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/floyd-steinberg-dithering.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "floyd-steinberg-dithering"
-            }
-          },
-          {
-            "id": "d97a4500c4db8386",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/image-file-formats.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "image-file-formats"
-            }
-          },
-          {
-            "id": "d5a75c1da8f62969",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/jpeg2000-wavelet-compression.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jpeg2000-wavelet-compression"
+              "title": "vector-graphics-svg"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -190,8 +133,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "advanced-tables-toolbar"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -223,8 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231,
-    "collapsed": true
+    "width": 231
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,13 +177,16 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "2ba99cf75d70bf17",
   "lastOpenFiles": [
-    "vault/jpeg2000-wavelet-compression.md",
+    "vault/vector-graphics-svg.md",
     "vault/topics/multimedia-databases-lecture-03.md",
+    "vault/jpeg2000-wavelet-compression.md",
     "vault/jpeg-compression-pipeline.md",
     "vault/image-file-formats.md",
     "vault/floyd-steinberg-dithering.md",
@@ -268,7 +213,6 @@
     "Untitled.base",
     "vault/hmmd-color-space.md",
     "vault/yuv-color-space.md",
-    "vault/cmyk-color-model.md",
     "raw/books/software_analyse/Uebung/java-intermediate.pdf",
     "raw/books/software_analyse/Uebung/annas-arch-4ac6fb27a5d8.azw3",
     "raw/books/software_analyse/Uebung/java-beginner.pdf",
