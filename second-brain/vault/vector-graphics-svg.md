@@ -12,11 +12,10 @@ prerequisites: [image-representation-bitmap]
 Vector graphics are mathematically defined drawing instructions (curves, lines, shapes) in a coordinate system, as opposed to pixel arrays; SVG is the web standard XML format for 2D vector graphics.
 
 ## Core Intuition
-Instead of storing a color for every pixel (millions of values), vector graphics store a small set of mathematical instructions: "draw a curve from A to B with control points C and D, in red, 2px thick." The image is *computed* at display time (rendered). This means you can zoom infinitely without pixelation, because the math scales perfectly. It's like the difference between a recipe (vector) and a photograph of a meal (raster).
+==Instead of storing a color for every pixel (millions of values), vector graphics store a small set of mathematical instructions: "draw a curve from A to B with control points C and D, in red, 2px thick."== The image is *computed* at display time (rendered). This means you can zoom infinitely without pixelation, because the math scales perfectly. It's like the difference between a recipe (vector) and a photograph of a meal (raster).
 
 ## Formal Definition / Statement
 Vector graphics = programmatically defined drawing instructions within a coordinate system.
-
 Geometric transformations (scale, rotate, translate) are exact and trivial — they just transform the control points. Individual elements (layers, groups, objects) can be separated and their attributes (color, line thickness, fill) modified independently.
 
 **SVG (Scalable Vector Graphics)**:
@@ -26,6 +25,7 @@ Geometric transformations (scale, rotate, translate) are exact and trivial — t
 - Objects can be grouped, styled (CSS), transformed, combined
 - SVGs can be interactive and dynamic
 - Coordinate system: (0,0) at top-left, default units = screen pixels; header defines width/height/units
+	- ![[Pasted image 20260609110111.png]]
 
 **Vector graphics formats**: PostScript (.ps, .eps), PDF, WMF/EMF, Corel Draw (.cdr), SVG, VRML (3D)
 

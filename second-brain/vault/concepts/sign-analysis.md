@@ -5,7 +5,7 @@ course: "Software Analyse"
 source_count: 1
 status: current
 last_updated: 2026-06-05
-prerequisites: [[java-for-software-analysis]]
+prerequisites: ["[[java-for-software-analysis]]"]
 ---
 
 ## One-line Summary
