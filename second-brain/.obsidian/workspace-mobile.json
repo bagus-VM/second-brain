@@ -135,6 +135,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
+<<<<<<< HEAD
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
     "vault/topics/multimedia-databases-lecture-04.md",
@@ -166,4 +167,8 @@
     "vault/concepts/mos-transistors.md",
     "Pasted image 20260609110111.png"
   ]
+=======
+  "active": "d682b22383102c1e",
+  "lastOpenFiles": []
+>>>>>>> 266d810 (Last Sync: 2026-06-09 11:04 (Mobile))
 }
