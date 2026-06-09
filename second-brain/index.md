@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-05
-**Total pages:** 369
+**Last updated:** 2026-06-09
+**Total pages:** 386
 **Active courses:** 8
 
 ---
@@ -189,6 +189,8 @@
 | [[graph-neural-networks]] | GCN, GraphSAGE, GAT, GIN | current |
 | [[over-smoothing-in-gnns]] | Depth limit at 3-5 layers | current |
 | [[link-prediction-via-embeddings]] | Scoring by proximity | current |
+| [[pagerank-algorithm]] | Iterative ranking algorithm, damping factor, stationary distribution | current |
+| [[six-degrees-of-separation]] | Milgram's experiment, small-world phenomenon | current |
 
 ---
 
@@ -303,6 +305,8 @@
 | [[sign-analysis]] | Interprocedural sign analysis: lattice theory, pairwise decomposition, bytecode dataflow | current |
 | [[java-for-software-analysis]] | Java essentials: Maven, JavaParser, ASM, WEKA, picocli, visitor pattern | current |
 | [[software-analyse-projects-overview]] | Both projects overview, comparison, and study strategy | current |
+| [[visitor-pattern]] | Design pattern for AST traversal, double dispatch | current |
+| [[machine-learning-basics]] | Supervised learning, features, labels, classification | current |
 
 ---
 
@@ -366,6 +370,10 @@
 | [[iot-secure-design]] | 8 secure design goals + best practices for IoT | current |
 | [[iot-attack-surfaces]] | Miessler's 15 attack surface classes from DefCon 2023 | current |
 | [[iot-security-hardware]] | PUFs, TPMs, security co-processors overview | current |
+| [[sensors]] | IoT sensor categories, spoofing attacks, sensor fusion | current |
+| [[actuators]] | Motors, valves, solenoids — the "doing" part of IoT | current |
+| [[authentication]] | Identity verification: passwords, certificates, biometrics, MFA | current |
+| [[non-repudiation]] | Cannot deny having performed an action, digital signatures | current |
 
 ---
 
@@ -434,6 +442,8 @@
 | [[p-n-junction-overview]] | Junction formation, depletion region, biasing, breakdown | current |
 | [[diode-applications]] | Rectifiers, clippers, clampers, Zener regulators | current |
 | [[mos-transistors]] | MOS capacitor, threshold voltage, drain current, nMOS/pMOS | current |
+| [[digital-circuit-design]] | Combinational/sequential circuits, CMOS gate design, timing | current |
+| [[vlsi-design]] | VLSI design flow, fabrication, Moore's Law, DFM | current |
 
 ---
 

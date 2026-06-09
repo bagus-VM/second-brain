@@ -4,15 +4,15 @@ tags: [index, study, flashcards, practice, semester-1]
 course: "All"
 source_count: 0
 status: current
-last_updated: 2026-06-05
+last_updated: 2026-06-09
 prerequisites: []
 ---
 
 ## One-line Summary
-*Master index linking all flashcard decks and problem sets into the vault graph so nothing is orphaned.*
+*Master index linking all flashcard decks, problem sets, and exam materials into the vault graph so nothing is orphaned.*
 
 ## Purpose
-This page connects every study material — flashcard decks and practice problem sets — to the vault's knowledge graph. Without this page, study files live in isolation. With it, they are discoverable from any concept page that backlinks here.
+This page connects every study material — flashcard decks, practice problem sets, and exam resources — to the vault's knowledge graph. Without this page, study files live in isolation. With it, they are discoverable from any concept page that backlinks here.
 
 ---
 
@@ -74,11 +74,17 @@ This page connects every study material — flashcard decks and practice problem
 
 ---
 
-## Also Present (unlisted deck / general overview)
-- [[study/flashcards/Flashcards|Flashcards — General Index]]
+## IoT Security
 
-## Unlinked Practice Sets
+### Exam Materials
+- [[study/exams/iot-security-exam-format|IoT Security Exam Format — Question Types and Study Strategy]]
+
+---
+
+## General Indexes
+- [[study/flashcards/Flashcards|Flashcards — General Index]]
 - [[study/practice/Practice Problems|Practice Problems — General Index]]
+- [[study/exams/Exams|Exams — General Index]]
 
 ---
 
@@ -87,6 +93,9 @@ This page connects every study material — flashcard decks and practice problem
 - [[vault/concepts/electron-hole|Electron Hole]] — Example concept covered by MMDB exercises
 - [[vault/concepts/band-theory|Band Theory]] — Core theory underlying microelectronics exercises
 - [[vault/concepts/small-world-networks|Small-World Networks]] — Core theory underlying network science exercises
+- [[vault/concepts/iot-attack-taxonomy|IoT Attack Taxonomy]] — Core theory for IoT Security exam
+- [[vault/concepts/information-assurance|Information Assurance]] — Core theory for IoT Security exam
+- [[vault/concepts/digital-signatures|Digital Signatures]] — Confirmed IoT Security exam topic
 
 ## Notes
 This page was generated to link all orphan study materials into the vault graph. Each wikilink here creates a backlink from the target page, making study materials discoverable from the Obsidian graph view and from any concept page that links to this index.
