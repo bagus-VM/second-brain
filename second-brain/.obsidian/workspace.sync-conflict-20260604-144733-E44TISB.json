@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "2450082e85ff1d05",
+    "type": "split",
+    "children": [
+      {
+        "id": "55ba030aa32bc978",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3be5b64154dd3bec",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8aa89fdd9cd23c8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f869797ec107efc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2cb2c2f9c822c12f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bdf1958e1441aae8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0069f133d8c78d2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 356.5
+  },
+  "right": {
+    "id": "1b13ee6881b8d308",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e805bf16f44d3db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a43318569474ab40",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "courses/multimedia-databases.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for multimedia-databases"
+            }
+          },
+          {
+            "id": "7ceea4268c7ccfd2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "courses/multimedia-databases.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from multimedia-databases"
+            }
+          },
+          {
+            "id": "e74c51322c87eb3b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d7facb8a6d351c26",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "fd1b7cc249c17bb2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "courses/multimedia-databases.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of multimedia-databases"
+            }
+          },
+          {
+            "id": "06c25a0ddb7e5108",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "graph:Open graph view": false
+    }
+  },
+  "active": "3be5b64154dd3bec",
+  "lastOpenFiles": [
+    "vault/multimedia-query-predicates.md",
+    "vault/structured-vs-unstructured-retrieval.md",
+    "vault/multimedia-database-intro.md",
+    "vault/multimedia-main-domains.md",
+    "vault/multimedia-system.md",
+    "vault/media-types-discrete-continuous.md",
+    "vault/topics/multimedia-databases-lecture-01.md",
+    "vault/multimedia-definition.md",
+    "raw/lectures/multimedia_databases/Vorlesung/01MMDB_Introduction_en_2026.pdf",
+    "projects/software-analyse/ss26sasign-putra01/LLM/assignment-prompt.md",
+    "projects/assignment-prompt.md",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/PreprocessTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/PreprocessEdgeCasesTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/ParserTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperatorVisitorTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperatorVisitorReflectionTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperatorVisitorExactTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperatorVisitorEdgeCasesTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperatorOperandExhaustiveTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/test-classes/de/uni_passau/fim/se2/sa/readability/utils/OperandVisitorTest.class",
+    "projects/software-analyse/ss26sareadability-practice-putra01/LLM/prompt.md",
+    "vault/topics/network-science-l01.md",
+    "vault/concepts/network-examples.md",
+    "vault/concepts/network-intro.md",
+    "vault/concepts/network-effects.md",
+    "vault/concepts/edge-types.md",
+    "AGENTS.md",
+    "study/practice/mmdb-ex01.md",
+    "courses/iot-security/course.md",
+    "study/flashcards/network-science-e05-flashcards.md",
+    "study/flashcards/network-science-e06-flashcards.md",
+    "study/flashcards/network-science-e04-flashcards.md",
+    "study/flashcards/network-science-e01-flashcards.md",
+    "study/flashcards/network-science-e03-flashcards.md",
+    "study/flashcards/network-science-e02-flashcards.md",
+    "Untitled.canvas"
+  ]
+}

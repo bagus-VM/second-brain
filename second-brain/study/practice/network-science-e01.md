@@ -1,0 +1,138 @@
+---
+title: "Exercise Sheet 1 — What Is a Network?"
+tags:
+  - practice
+  - network-science
+  - semester-1
+course: "Network Science"
+status: current
+last_updated: 2026-06-02
+---
+
+# Exercise Sheet 1 — What Is a Network?
+
+## Exercises
+
+### 1.A What Is a Network?
+
+**Exercise 1.A.1: Recognising Networks in the Wild**
+
+For each of the five systems below, identify (a) what the nodes represent, (b) what the edges represent, (c) whether the edges are directed or undirected, and (d) whether weights are natural for the edges and what they would encode.
+
+| System | Nodes | Edges | Directed? | Weight? |
+|---|---|---|---|---|
+| University course enrollment | ? | ? | ? | ? |
+| Wikipedia hyperlinks | ? | ? | ? | ? |
+| Interbank lending | ? | ? | ? | ? |
+| Power transmission grid | ? | ? | ? | ? |
+| Co-authorship in research | ? | ? | ? | ? |
+
+After filling in the table, pick one system and argue: what does the network model reveal about this system that a plain list of its elements would not?
+
+---
+
+**Exercise 1.A.2: The Hidden Map of Information**
+
+Imagine a high school with 500 students. The administration wants to understand how a rumour spread so quickly through the student body. They possess a database listing all 500 students, including their age, gender, grades, and extracurricular activities.
+
+1. Why is this list of student properties insufficient to explain how the rumour travelled? What specific information is missing?
+2. Propose two different types of relationships (edges) between students that might help explain the rumour's path. How would the resulting networks differ?
+3. If you were allowed to look at only one structural feature of the true rumour-spreading network to identify the person who started it, what would you look for and why?
+
+### 1.B Why Do Networks Matter?
+
+**Exercise 1.B.1: When Structure Overrides Individual Quality**
+
+Two hypothetical messaging applications launch in the same week with identical features and code quality. App A launches exclusively to 200 students at one university. Every user's existing friends are already on the platform. App B launches publicly but has no existing user base.
+
+1. Which app is more likely to survive after 6 months? Argue using network concepts from the lecture.
+2. The lecture showed that "knowing every person in a city does not tell you how information travels." Explain this claim using App A as a concrete example.
+3. A venture capitalist says: "The product with better technology always wins." Based on what you learned, when is this claim wrong, and why?
+
+---
+
+**Exercise 1.B.2: Mapping Network Science Questions**
+
+Identify the core question type and analysis method for each scenario:
+
+| Scenario | Question type | Method |
+|---|---|---|
+| Vaccinating to slow a disease | ? | ? |
+| Detecting informal teams in logs | ? | ? |
+| Critical router failure risks | ? | ? |
+| Modeling viral tweet propagation | ? | ? |
+| Research community idea exchange | ? | ? |
+
+### 1.C What Can We Analyse?
+
+**Exercise 1.C.1: Structure Shapes Diffusion**
+
+Consider the high-school friendship network from the lecture. Imagine a rumour starts spreading, and at each step every student who knows the rumour tells all their friends.
+
+Two scenarios:
+- **Scenario A:** The rumour starts with a student at the dense centre of the network.
+- **Scenario B:** The rumour starts with a student at the periphery (part of a short chain hanging off the main cluster).
+
+1. In which scenario does the rumour reach more students after 2 steps? Explain why, without calculation.
+2. After enough steps, will the rumour eventually reach the same students in both scenarios? What condition determines this?
+3. What does this tell us about the importance of who a message reaches first, independent of the message itself?
+
+---
+
+## Solutions
+
+### 1.A.1 — Recognising Networks in the Wild
+
+> [!note]- Solution
+> | System | Nodes | Edges | Directed? | Weight? |
+> |---|---|---|---|---|
+> | Course enrollment | Students & courses (bipartite) | "enrolled in" | Directed (student→course) | Credit hours or grade |
+> | Wikipedia | Articles | Hyperlinks | Directed (one page links to another) | Click frequency or revision count |
+> | Interbank lending | Financial institutions | Lending relationships | Directed (lender→borrower) | Loan volume (€) |
+> | Power grid | Generators, substations, consumers | Transmission lines | Undirected (AC current flows both ways) | Capacity (MW) or voltage |
+> | Co-authorship | Researchers | "wrote a paper together" | Undirected (symmetric) | Number of joint papers |
+>
+> **What the network reveals:** For Wikipedia, a plain list of articles tells you only their content. The link graph reveals which articles are easy to reach (high in-degree), which serve as hubs between topics, and which are orphaned — questions you cannot answer by reading articles in isolation. **Key insight:** Once you model a system as a graph, structural questions become computable.
+
+### 1.A.2 — The Hidden Map of Information
+
+> [!note]- Solution
+> 1. **Missing relationships:** A list of attributes tells you who the students are, but not who talks to whom. Rumours travel along social ties, not via demographic categories. Without the connections (the network), you cannot trace the path of information.
+> 2. **Two types of edges:** "Is friends with" — an undirected network of general friendships (shows potential paths but might overstate actual spread). "Sent a text message to today" — a directed, dynamic network of actual communication (more precise, but narrower).
+> 3. **Structural feature:** Look for the node from which the most outward paths originates, or a node that is centrally located and connected to many different groups (high out-degree or high centrality). The initiator of a fast-spreading rumour is typically structurally positioned to reach many disjoint parts of the network quickly.
+
+### 1.B.1 — When Structure Overrides Individual Quality
+
+> [!note]- Solution
+> App A will likely survive. It already has a critical mass of users who are interconnected. New users find their friends already there — the value of joining is immediately high (network effect). App B starts from zero.
+>
+> **Why individual data is not enough:** App A users are not isolated individuals — they form a dense subgraph. If Alice (a high-degree hub) recommends the app, she reaches many others simultaneously. That spread pattern is invisible if you only look at individual users.
+>
+> **When the VC is wrong:** When network effects dominate. A technically inferior product can win if it reaches critical mass first. Historical examples: VHS vs. Betamax; QWERTY keyboard; Facebook vs. Google+. The structural fact — who is already connected to whom — overrides feature quality once a tipping point is crossed.
+
+### 1.B.2 — Mapping Network Science Questions
+
+> [!note]- Solution
+> | Scenario | Question type | Method |
+> |---|---|---|
+> | Vaccinating to slow disease | Who important? | Centrality (betweenness, degree) |
+> | Informal teams in emails | Are there groups? | Community detection (Louvain) |
+> | Critical router failure | How robust? | Connectivity, bridge detection |
+> | Viral tweet propagation | How spread? | Diffusion models (SIR, cascades) |
+> | Community idea exchange | Groups/Importance | Bridges, inter-community analysis |
+>
+> The last row spans categories deliberately — a preview of how course topics connect.
+
+### 1.C.1 — Structure Shapes Diffusion
+
+> [!note]- Solution
+> 1. **Scenario A reaches more students after 2 steps.** The central student has many direct friends (high degree), each of whom also has many friends. A peripheral student has few direct friends, possibly only 1–2, so after 2 steps only a small chain is informed.
+> 2. **Yes, in a connected network, both scenarios eventually reach all students.** The condition is connectivity — if every student is part of the same connected component, any starting point will eventually reach everyone.
+> 3. **Who receives the message first matters enormously for speed, not just for final reach.** A message that reaches a hub first spreads exponentially; one that starts at the periphery spreads linearly along chains. This is why marketing, public health, and influence campaigns all target structurally central individuals — structure shapes velocity of diffusion, independent of content.
+
+---
+
+## Related Lectures
+
+- [[network-science-l01]]
+- [[network-science-l02]]

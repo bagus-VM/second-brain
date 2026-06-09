@@ -1,0 +1,484 @@
+# second-brain — Master Index
+
+> Maintained by Professor White. Updated after every INGEST and significant QUERY.
+
+**Last updated:** 2026-06-05
+**Total pages:** 369
+**Active courses:** 8
+
+---
+
+## Exam Calendar
+
+| Course | Exam Date | Days Left | Progress |
+|--------|-----------|-----------|----------|
+| [[multimedia-databases]] | 21 July 2026 | ~50 | **6/6 lectures ✅** (73 pages) |
+| [[network-science]] | 28 July 2026 | ~57 | **9/9 lectures ✅** (128 pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~59 | **5/5 lectures ✅** (44 pages) |
+| [[software-analyse]] | 31 July 2026 | ~60 | **5/5 lectures ✅** (49 pages) |
+| [[iot-security]] | 05 Aug 2026 | ~65 | **5/5 lectures ✅** (39 pages) + exam format confirmed |
+| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~66 | **5/5 lectures ✅** (39 pages) |
+
+---
+
+## 📚 Multimedia Databases (73 pages)
+
+### L01 — Introduction
+| Page | Summary | Status |
+|------|---------|--------|
+| [[multimedia-definition]] | MHEG classification, strict vs loose multimedia | current |
+| [[media-types-discrete-continuous]] | Discrete (text, images) vs continuous (audio, video) | current |
+| [[multimedia-system]] | Herrtwich/Steinmetz definition | current |
+| [[data-streams]] | Async/sync/isochronous, FBR vs VBR | current |
+| [[multimedia-database-intro]] | MMDBMS = DBMS + IR | current |
+| [[structured-vs-unstructured-retrieval]] | DBMS vs IR, object-relational unifier | current |
+| [[multimedia-query-predicates]] | Attribute, structure, spatial, semantic | current |
+
+### L02 — Colors
+| Page | Summary | Status |
+|------|---------|--------|
+| [[color-perception]] | Visible spectrum, cones, opponent processing | current |
+| [[color-models-overview]] | Additive vs subtractive | current |
+| [[rgb-color-model]] | Additive color cube, 8-bit quantization | current |
+| [[cmyk-color-model]] | Subtractive printing | current |
+| [[hsv-color-model]] | Hue/Saturation/Value | current |
+| [[cie-chromaticity-diagram]] | CIE XYZ, horseshoe diagram | current |
+| [[color-gamut]] | Device gamut as triangle in CIE space | current |
+| [[lab-color-space]] | Perceptual uniformity, ΔE distance | current |
+| [[yuv-color-space]] | Luminance/chrominance, chroma subsampling | current |
+
+### L03 — Images & Dithering
+| Page | Summary | Status |
+|------|---------|--------|
+| [[image-representation-bitmap]] | Bitmap/raster as 2D pixel arrays | current |
+| [[pixel-formats-and-bit-depth]] | 1-bit to 48-bit, ARGB | current |
+| [[color-quantization]] | Reducing color count | current |
+| [[dithering]] | Noise, pattern, error diffusion | current |
+| [[floyd-steinberg-dithering]] | 7/16, 3/16, 5/16, 1/16 kernel | current |
+| [[image-file-formats]] | TIFF, GIF, PNG, JPEG comparison | current |
+| [[jpeg-compression-pipeline]] | DCT → quantization → entropy encoding | current |
+| [[vector-graphics-svg]] | Resolution independence | current |
+| [[bezier-curves]] | Bernstein polynomials, Hermite splines | current |
+| [[linear-convolution-filters]] | Kernel convolution, Sobel, Gaussian | current |
+
+### L04 — Text/Video/Audio
+| Page | Summary | Status |
+|------|---------|--------|
+| [[ascii-unicode-character-encoding]] | ASCII, Unicode, UTF-8/16/32 | current |
+| [[video-formats-container-vs-codec]] | MP4/MKV vs H.264/VP9/AV1 | current |
+| [[video-frame-rate-resolution]] | Progressive vs interlaced, PAL/HD/4K | current |
+| [[shot-segmentation]] | Hard cut/fade/dissolve detection | current |
+| [[audio-sampling-nyquist-theorem]] | Nyquist-Shannon, sampling rates | current |
+| [[pcm-digital-audio]] | PCM encoding, CD quality | current |
+
+### L05 — Compression
+| Page | Summary | Status |
+|------|---------|--------|
+| [[lossless-vs-lossy-compression]] | Entropy vs source coding | current |
+| [[entropy-coding-huffman-arithmetic]] | Huffman tree, arithmetic coding | current |
+| [[run-length-encoding]] | RLE, JPEG's zero-RLE | current |
+| [[lz77-lzw-compression]] | Dictionary-based, Deflate | current |
+| [[transform-coding]] | DCT/DWT, energy compaction | current |
+| [[mpeg-video-compression]] | I/P/B frames, GOP, motion estimation | current |
+| [[h264-avc-video-compression]] | Flexible partitions, CABAC | current |
+| [[rate-distortion-theory]] | R(D) function, QP control | current |
+
+### L06 — Modeling
+| Page | Summary | Status |
+|------|---------|--------|
+| [[semantic-gap]] | Features vs human interpretation | current |
+| [[sensory-gap]] | Real-world vs recordings | current |
+| [[mpeg-7]] | ISO/IEC 15938, 12 parts | current |
+| [[mpeg-7-descriptors]] | 20 visual descriptor types | current |
+| [[feature-extraction]] | Computing low-level features | current |
+| [[content-based-retrieval]] | Searching by content | current |
+| [[similarity-measures]] | Quantifying closeness | current |
+
+---
+
+## 📚 Network Science (128 pages)
+
+### L01 — Introduction
+| Page | Summary | Status |
+|------|---------|--------|
+| [[network-intro]] | Nodes + edges, lossy abstraction | current |
+| [[edge-types]] | Directed, undirected, weighted | current |
+| [[centrality]] | Degree, closeness, betweenness | current |
+| [[network-diffusion]] | SI/SIS/SIR models, R0 | current |
+| [[community-structure]] | Dense clusters, modularity | current |
+
+### L02 — Graph Theory
+| Page | Summary | Status |
+|------|---------|--------|
+| [[graph-fundamentals]] | G=(V,E), modeling choices | current |
+| [[graph-representations]] | Edge list, adjacency list/matrix | current |
+| [[neighbourhood-and-degree]] | N(v), deg(v), handshaking lemma | current |
+| [[paths-walks-and-cycles]] | Walk → path → cycle hierarchy | current |
+| [[shortest-path-and-diameter]] | dist(u,v), diam(G) | current |
+| [[eulerian-path-and-circuit]] | Königsberg, degree parity | current |
+| [[breadth-first-search]] | BFS, FIFO, O(|V|+|E|) | current |
+| [[depth-first-search]] | DFS, LIFO, cycle detection | current |
+| [[dijkstras-algorithm]] | Weighted shortest paths | current |
+| [[connectivity-and-components]] | Connected, giant component | current |
+
+### L03 — Strong/Weak Ties
+| Page | Summary | Status |
+|------|---------|--------|
+| [[triadic-closure]] | Open triads close into triangles | current |
+| [[clustering-coefficient]] | Node-level neighborhood density | current |
+| [[bridges-and-local-bridges]] | Bridges disconnect graph | current |
+| [[weak-ties-hypothesis]] | Granovetter's theorem | current |
+| [[structural-holes]] | Burt's brokerage theory | current |
+| [[social-capital]] | Bonding vs bridging | current |
+
+### L04 — Communities
+| Page | Summary | Status |
+|------|---------|--------|
+| [[modularity]] | Q formula, NP-hard, resolution limit | current |
+| [[girvan-newman-algorithm]] | Divisive edge-betweenness | current |
+| [[louvain-algorithm]] | Local moves + aggregation | current |
+| [[leiden-algorithm]] | Refinement before aggregation | current |
+| [[graph-partitioning-cut-spectral]] | Min-cut, Fiedler vector | current |
+| [[zacharys-karate-club]] | 34-node benchmark | current |
+
+### L05 — Social Context
+| Page | Summary | Status |
+|------|---------|--------|
+| [[homophily]] | Random-mixing baseline, index r | current |
+| [[selection-vs-socialization]] | Three mechanisms | current |
+| [[affiliation-networks]] | Bipartite, co-occurrence | current |
+| [[schelling-segregation-model]] | Threshold, micro-macro gap | current |
+| [[echo-chambers]] | Cinelli et al., platform ranking | current |
+
+### L06 — Structural Balance
+| Page | Summary | Status |
+|------|---------|--------|
+| [[signed-graphs]] | Signed graph definition | current |
+| [[structural-balance-theory]] | Heider's cognitive dissonance | current |
+| [[balance-theorem]] | ≤ 2 camps | current |
+| [[weak-structural-balance]] | Davis, k-coalition | current |
+| [[frustration-index]] | Min edge flips, NP-hard | current |
+
+### L07 — Small-World Networks
+| Page | Summary | Status |
+|------|---------|--------|
+| [[milgrams-experiment-six-degrees]] | Letter experiment | current |
+| [[small-world-property]] | d̄ ∝ log|V| | current |
+| [[watts-strogatz-model]] | Regular + random rewiring | current |
+| [[kleinberg-decentralized-search]] | Grid model, navigability | current |
+| [[random-graphs]] | Erdős-Rényi G(n,p) | current |
+| [[scale-free-networks]] | Power-law, hubs | current |
+| [[preferential-attachment]] | Barabási-Albert, rich-get-richer | current |
+
+### L08 — Network Dynamics
+| Page | Summary | Status |
+|------|---------|--------|
+| [[simple-contagion]] | Single exposure sufficient | current |
+| [[sir-model-network-epidemics]] | S→I→R compartments | current |
+| [[basic-reproduction-number-r0]] | R0 = (β/γ)×⟨k⟩ | current |
+| [[complex-contagion]] | Social reinforcement needed | current |
+| [[threshold-cascades]] | q fraction rule | current |
+| [[centola-2010-experiment]] | Clustered > random adoption | current |
+
+### L09 — Graph Embeddings
+| Page | Summary | Status |
+|------|---------|--------|
+| [[node-embeddings]] | Three waves of methods | current |
+| [[deepwalk]] | Random walks + word2vec | current |
+| [[node2vec]] | Biased walks, p/q parameters | current |
+| [[graph-neural-networks]] | GCN, GraphSAGE, GAT, GIN | current |
+| [[over-smoothing-in-gnns]] | Depth limit at 3-5 layers | current |
+| [[link-prediction-via-embeddings]] | Scoring by proximity | current |
+
+---
+
+## 📚 Reproducibility Engineering (44 pages)
+
+### L01 — Repeat/Reproduce/Replicate
+| Page | Summary | Status |
+|------|---------|--------|
+| [[repeat-reproduce-replicate]] | The three R's | current |
+| [[reproducibility-crisis]] | Nature survey, 52% significant | current |
+| [[artifact-availability]] | ACM: public repo + DOI | current |
+| [[types-of-reproducibility]] | Computational, empirical, statistical | current |
+
+### L02 — Levels & Provenance
+| Page | Summary | Status |
+|------|---------|--------|
+| [[levels-of-reproducibility]] | Availability, repeatability, confirmability | current |
+| [[provenance-in-reproducibility]] | Prospective, execution, version | current |
+| [[workflow-reproducibility]] | DAG-based workflows | current |
+| [[reproducibility-standards-bronze-silver-gold]] | Heil et al. 2021 | current |
+
+### L03 — Hypotheses
+| Page | Summary | Status |
+|------|---------|--------|
+| [[hypothesis-formulation]] | PRECISE, SPECIFIC, UNAMBIGUOUS | current |
+| [[null-and-alternative-hypothesis]] | H₀ vs H₁ | current |
+| [[p-values]] | P(data≥obs|H₀), misinterpretations | current |
+| [[statistical-significance]] | α, Type I/II, Bonferroni | current |
+| [[effect-sizes]] | Cohen's d, significance ≠ importance | current |
+| [[replication-crisis-and-hypothesis-testing]] | p-hacking, HARKing, PPV | current |
+
+### L04 — Git
+| Page | Summary | Status |
+|------|---------|--------|
+| [[git-dag-structure-and-internals]] | Blob, tree, commit, tag | current |
+| [[git-branching-and-merging]] | Fast-forward vs three-way | current |
+| [[git-commit-hygiene]] | Atomic commits, trailers | current |
+| [[developer-certificate-of-origin]] | Signed-off-by, DCO vs CLA | current |
+| [[git-for-reproducibility]] | Snapshot vs clone+patches | current |
+
+### L05 — Reproducible Builds
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducible-builds]] | Bit-for-bit identical builds | current |
+| [[deterministic-builds]] | Eliminating non-determinism | current |
+| [[source-date-epoch]] | SOURCE_DATE_EPOCH env var | current |
+| [[diffoscope]] | Deep comparison tool | current |
+| [[ci-cd-for-reproducibility]] | Automated verification | current |
+| [[make-and-build-systems]] | Make fundamentals | current |
+| [[c-preprocessor]] | Macros as non-determinism source | current |
+
+---
+
+## 📚 Software Analyse (49 pages)
+
+### L01 — Introduction
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analysis]] | Structural vs behavioural | current |
+| [[static-vs-dynamic-analysis]] | Code without execution vs observing runs | current |
+| [[abstract-interpretation]] | Sign analysis, lattice | current |
+| [[rices-theorem]] | All non-trivial properties undecidable | current |
+| [[soundness-and-completeness]] | Over- vs under-approximation | current |
+| [[code-clones]] | Types 1-4, detection strategies | current |
+
+### L02 — Tokens & Naturalness
+| Page | Summary | Status |
+|------|---------|--------|
+| [[lexical-analysis]] | Lexer, pattern matching | current |
+| [[tokenization-and-token-types]] | Token categories, symbol table | current |
+| [[finite-automata-and-regular-expressions]] | Regex ↔ DFA | current |
+| [[n-gram-language-models]] | Unigram/bigram/trigram | current |
+| [[code-naturalness-hypothesis]] | Hindle et al., code as language | current |
+| [[perplexity-and-entropy]] | PP metrics, cross-entropy | current |
+| [[smoothing-techniques]] | Laplace, Good-Turing, Kneser-Ney | current |
+
+### L03 — Parsing
+| Page | Summary | Status |
+|------|---------|--------|
+| [[context-free-grammar]] | CFG 4-tuple, productions | current |
+| [[parse-tree]] | Concrete syntax trees | current |
+| [[abstract-syntax-tree]] | AST construction | current |
+| [[grammar-ambiguity]] | Multiple parse trees | current |
+| [[predictive-parsing]] | LL(1), recursive descent | current |
+| [[shift-reduce-parsing]] | Stack-based bottom-up | current |
+| [[syntax-directed-translation]] | Attributes, semantic rules | current |
+
+### L04 — Control Flow
+| Page | Summary | Status |
+|------|---------|--------|
+| [[control-flow-graph]] | Directed graph, execution flow | current |
+| [[basic-block]] | Maximal consecutive statements | current |
+| [[dominance]] | Iterative fixed-point algorithm | current |
+| [[dominator-tree]] | IDom computation | current |
+| [[control-dependence]] | CDG construction | current |
+| [[natural-loop]] | Back edges, loop identification | current |
+
+### L05 — Data Flow
+| Page | Summary | Status |
+|------|---------|--------|
+| [[data-flow-analysis]] | Gen/kill, IN/OUT equations | current |
+| [[reaching-definitions]] | Forward may | current |
+| [[available-expressions]] | Forward must | current |
+| [[live-variable-analysis]] | Backward may | current |
+| [[very-busy-expressions]] | Backward must | current |
+| [[iterative-data-flow-analysis]] | Worklist algorithm | current |
+
+### Projects
+| Page | Summary | Status |
+|------|---------|--------|
+| [[readability-classifier]] | Code readability ML pipeline: Halstead, entropy, cyclomatic complexity, logistic regression | current |
+| [[sign-analysis]] | Interprocedural sign analysis: lattice theory, pairwise decomposition, bytecode dataflow | current |
+| [[java-for-software-analysis]] | Java essentials: Maven, JavaParser, ASM, WEKA, picocli, visitor pattern | current |
+| [[software-analyse-projects-overview]] | Both projects overview, comparison, and study strategy | current |
+
+---
+
+## 📚 IoT Security (39 pages)
+
+### L01 — IoT Fundamentals
+| Page | Summary | Status |
+|------|---------|--------|
+| [[internet-of-things]] | Definition and architecture of IoT | current |
+| [[iot-architecture]] | Three-segment architecture: sensors, processing, actuators | current |
+| [[iot-connectivity-protocols]] | Wi-Fi, LoRaWAN, BLE, ZigBee, CAN comparison | current |
+| [[cia-triad]] | Confidentiality, Integrity, Availability foundation | current |
+| [[information-assurance]] | CIA triad + authentication, non-repudiation, resilience, safety | current |
+
+### L02 — Attack Landscape
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-attack-taxonomy]] | 9 categories of IoT attacks with examples | current |
+| [[mirai-botnet]] | 2016 botnet exploiting default passwords for DDoS | current |
+| [[krack-attack]] | 2017 Key Reinstallation Attack against WPA2 | current |
+| [[zigbee-pairing-vulnerability]] | Sniffing network keys during ZigBee pairing | current |
+
+### L03 — Threat Modelling & Secure Design
+| Page | Summary | Status |
+|------|---------|--------|
+| [[threat-modeling]] | Process of identifying assets, threats, probability ratings | current |
+| [[security-by-design]] | Integrating security from the start of system design | current |
+| [[attack-tree]] | Structured diagram modeling attacker paths to a goal | current |
+| [[fault-tree]] | Structured diagram modeling failure paths to hazardous state | current |
+| [[devops-security]] | Blending development, QA, and operations for security | current |
+| [[operational-security-lifecycle]] | Define, implement, operate, dispose phases | current |
+| [[attack-surface-analysis]] | Miessler's 15 attack surface classes for IoT | current |
+
+### L04 — Hardware Security & Compliance
+| Page | Summary | Status |
+|------|---------|--------|
+| [[physical-unclonable-functions]] | Hardware security primitives using manufacturing variations | current |
+| [[trusted-platform-module]] | Dedicated security hardware for crypto and key storage | current |
+| [[secure-development-lifecycle]] | Security from scratch in system development framework | current |
+| [[iot-2.0]] | Next-gen IoT with 5G/6G, AI, edge computing, blockchain | current |
+| [[iot-compliance-frameworks]] | ENISA, DHS, FDA, US IoT Cybersecurity Improvement Act | current |
+| [[resilience-iot]] | Anticipate, withstand, recover, evolve framework | current |
+
+### L05 — Operational & Attack Surface Deep-Dive
+| Page | Summary | Status |
+|------|---------|--------|
+| [[ota-updates]] | Over-the-air firmware update security requirements | current |
+| [[iot-firewalling]] | Packet filtering for resource-constrained IoT devices | current |
+| [[device-memory-attack-surface]] | Cleartext credentials and keys in device memory | current |
+| [[physical-interface-attack-surface]] | JTAG, firmware extraction, privilege escalation via physical access | current |
+| [[firmware-security]] | Hardcoded passwords, sensitive URLs, encryption keys in firmware | current |
+| [[web-interface-vulnerabilities]] | SQL injection, XSS, weak passwords in IoT web UIs | current |
+| [[ecosystem-communications-security]] | Health checks, heartbeats, decommissioning exploitation | current |
+
+### 🗺️ IoT Security Topics
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-security-landscape]] | Overview tying all 5 IoT Security lectures together | current |
+| [[iot-common-attacks]] | 9 attack categories: scanning, protocol, eavesdropping, crypto, spoofing, OS/app, DoS, physical, access control | current |
+| [[digital-signatures]] | Cryptographic mechanism for authentication, integrity, non-repudiation (hash→sign→verify) | current |
+| [[iot-secure-design]] | 8 secure design goals + best practices for IoT | current |
+| [[iot-attack-surfaces]] | Miessler's 15 attack surface classes from DefCon 2023 | current |
+| [[iot-security-hardware]] | PUFs, TPMs, security co-processors overview | current |
+
+---
+
+## 📚 Microelectronics (39 pages)
+
+### L01 — Semiconductor Basics
+| Page | Summary | Status |
+|------|---------|--------|
+| [[electronics]] | Field manipulating electrons and charged particles | current |
+| [[microelectronics]] | Sub-micrometre electronic components using semiconductors | current |
+| [[nanoelectronics]] | Electronics exploiting quantum mechanical properties | current |
+| [[semiconductor]] | Medium resistivity material with controllable conduction | current |
+| [[silicon]] | Dominant semiconductor: abundant, forms SiO₂, 4 valence electrons | current |
+| [[bandgap]] | Energy gap between valence and conduction bands | current |
+| [[valence-band]] | Energy levels of outermost non-excited electrons | current |
+| [[conduction-band]] | Energy levels of excited/freed electrons | current |
+| [[intrinsic-semiconductor]] | Pure semiconductor material with no added impurities | current |
+| [[electron-hole]] | Quasiparticle: absence of electron in valence band, acts as positive charge carrier | current |
+
+### L02 — Doping & Extrinsic Semiconductors
+| Page | Summary | Status |
+|------|---------|--------|
+| [[doping]] | Adding impurities to modify semiconductor electrical properties | current |
+| [[n-type-semiconductor]] | Doped with electron donors (P, As), electron majority carriers | current |
+| [[p-type-semiconductor]] | Doped with electron acceptors (B), hole majority carriers | current |
+| [[ion-implantation]] | Accelerated ion doping method, precise but needs annealing | current |
+| [[thermal-diffusion]] | Heat-based doping, primary method until 1960s | current |
+| [[photolithography]] | Pattern transfer masking for selective doping/etching | current |
+
+### L03 — The P-N Junction
+| Page | Summary | Status |
+|------|---------|--------|
+| [[p-n-junction]] | N-type and p-type contact, depletion region, diode behavior | current |
+| [[depletion-region]] | Charge carrier depletion at p-n junction contact | current |
+| [[diode]] | Two-terminal device, unidirectional current from p-n junction | current |
+| [[zener-diode]] | Heavily doped diode operating in breakdown for voltage regulation | current |
+| [[zener-breakdown]] | Quantum tunnelling in thin depletion region at low voltage | current |
+| [[avalanche-breakdown]] | Carrier multiplication via impact ionization at higher voltage | current |
+
+### L04 — Diode Applications
+| Page | Summary | Status |
+|------|---------|--------|
+| [[rectifier]] | Circuit converting AC to DC using diodes | current |
+| [[half-wave-rectifier]] | Single diode, passes one half of AC waveform | current |
+| [[full-wave-rectifier]] | Both half-cycles, center-tap or bridge configuration | current |
+| [[bridge-rectifier]] | Four diodes, full-wave without center-tapped transformer | current |
+| [[clamper-circuit]] | DC restorer shifting waveform level using capacitor and diode | current |
+| [[limiter-circuit]] | Voltage clipping at threshold, series/parallel/dual-diode | current |
+
+### L05 — MOS Transistors
+| Page | Summary | Status |
+|------|---------|--------|
+| [[transistor]] | Three-terminal device, gate controls current, digital foundation | current |
+| [[mosfet]] | Metal-Oxide-Semiconductor FET, field-effect transistor | current |
+| [[mos-capacitor]] | Capacitor beneath gate controlling channel charge carriers | current |
+| [[threshold-voltage]] | Minimum V_GS to create conducting channel | current |
+| [[nmos-transistor]] | N-channel in P-substrate, electrons, V_GS>V_TH | current |
+| [[pmos-transistor]] | P-channel in N-substrate, holes, |V_GS|>|V_TH| | current |
+| [[mosfet-operating-regions]] | Cutoff/Linear/Saturation conditions with formulas | current |
+
+### 🗺️ Microelectronics Topics
+| Page | Summary | Status |
+|------|---------|--------|
+| [[semiconductor-physics]] | Band structure, carrier concentration, why Si dominates | current |
+| [[doping-and-extrinsic-semiconductors]] | Donor/acceptor types, doping methods, Fermi level shifts | current |
+| [[p-n-junction-overview]] | Junction formation, depletion region, biasing, breakdown | current |
+| [[diode-applications]] | Rectifiers, clippers, clampers, Zener regulators | current |
+| [[mos-transistors]] | MOS capacitor, threshold voltage, drain current, nMOS/pMOS | current |
+
+---
+
+## 🎓 Courses
+
+| Course | Instructor | Semester | Exam | Status |
+|--------|-----------|----------|------|--------|
+| [[iot-security]] | Dr. Anagnostopoulos | SS 2026 | Aug 05 | active |
+| [[introduction-to-microelectronics]] | Dr. Anagnostopoulos | SS 2026 | Aug 06 | active |
+| [[multimedia-databases]] | | SS 2026 | Jul 21 | active |
+| [[network-science]] | | SS 2026 | Jul 28 | active |
+| [[reproducibility-engineering]] | | SS 2026 | Jul 30 | active |
+| [[software-analyse]] | | SS 2026 | Jul 31 | active |
+
+---
+
+## 🔗 Connections
+
+| Page | What It Connects | Status |
+|------|-----------------|--------|
+| *(populated as cross-topic patterns emerge)* | | |
+
+---
+
+## 📝 Study Materials
+
+| Page | Summary | Status |
+|------|---------|--------|
+| [[study-materials-index]] | Master index of all flashcard decks and practice problem sets | current |
+
+---
+
+## 📋 Open Questions
+
+*(Tracked across all courses — see individual pages for course-specific open questions)*
+
+---
+
+## 📁 Raw Sources Ingested
+
+| Source | Type | Date Ingested | Pages Created |
+|--------|------|--------------|---------------|
+| MMDB L01-L06 | Lectures | 2026-06-01 | 73 |
+| Network Science L01-L09 | Lectures | 2026-06-01 | 128 |
+| Reproducibility Eng L01-L05 | Lectures | 2026-06-01 | 44 |
+| Software Analyse L01-L05 | Lectures | 2026-06-01 | 49 |
+| IoT Security L01-L05 | Lectures | 2026-06-02 | 39 |
+| Intro to Microelectronics L01-L05 | Lectures | 2026-06-02 | 39 |

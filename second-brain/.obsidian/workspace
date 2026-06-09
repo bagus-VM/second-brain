@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "d7e05476f887040a",
+    "type": "split",
+    "children": [
+      {
+        "id": "21c39758c1b85f63",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "obsidian/HMM/GOODIES.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "433e4c7a1c5f5a70",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b018a90bcf7dc67",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ee5140815e153b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f61ecd7b50e28e2d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 255.5
+  },
+  "right": {
+    "id": "98c5f4b9b4985579",
+    "type": "split",
+    "children": [
+      {
+        "id": "12c1aa4753cd956d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e38c797f09344bef",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "obsidian/HMM/GOODIES.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "d9953eccc5daef82",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231,
+    "collapsed": true
+  },
+  "active": "21c39758c1b85f63",
+  "lastOpenFiles": [
+    "obsidian/HMM/Request timed out fix.md",
+    "obsidian/ISGS/LMS.md",
+    "obsidian/ISGS/Structure.md",
+    "obsidian/Learn/Statistics.md",
+    "obsidian/My Notes/Skripsi/Step.md",
+    "obsidian/HMM/GOODIES.md",
+    "obsidian/Learn/Django/Learn Django.md",
+    "obsidian/Learn/Python/Learning Linear Regression.md",
+    "obsidian/Learn/Python/Tensorflow.md",
+    "obsidian/Learn/Python/IDR Prediction using tensorflow.md"
+  ]
+}
