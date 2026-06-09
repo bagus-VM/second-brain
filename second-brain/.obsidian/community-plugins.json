@@ -3,5 +3,8 @@
   "dataview",
   "obsidian-clipper",
   "calendar",
-  "oz-image-plugin"
+  "oz-image-plugin",
+  "table-editor-obsidian",
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-kanban"
 ]
