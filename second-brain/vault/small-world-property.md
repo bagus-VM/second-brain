@@ -12,9 +12,9 @@ prerequisites: []
 A network has the small-world property if its average shortest-path distance grows at most logarithmically with the number of nodes: $\bar{d} \propto \log |V|$.
 
 ## Core Intuition
-Even in networks with billions of nodes, you can reach any other node in just a handful of hops. This is because each step you take "multiplies" the number of people you can reach — like a branching tree. In a network with average degree $k$, after $d$ steps you can potentially reach $k^d$ nodes. Setting $k^d = n$ gives $d = \frac{\log n}{\log k}$.
+Even in networks with billions of nodes, you can reach any other node in just a handful of hops. This is because ==each step you take "multiplies" the number of people you can reach== — like a branching tree. In a network with average degree $k$, after $d$ steps you can potentially reach $k^d$ nodes. Setting $k^d = n$ gives $d = \frac{\log n}{\log k}$.
 
-This logarithmic scaling is a robust empirical fact across social, communication, and collaboration networks. Microsoft's Instant Messenger network (180 million users) has median distance ~7. Mathematical collaboration networks have Erdős numbers rarely exceeding 5.
+This ==logarithmic scaling== is a robust empirical fact across social, communication, and collaboration networks. Microsoft's Instant Messenger network (180 million users) has median distance ~7. Mathematical collaboration networks have Erdős numbers rarely exceeding 5.
 
 ## Formal Definition / Statement
 **Small-world property.** A network exhibits the small-world property if:

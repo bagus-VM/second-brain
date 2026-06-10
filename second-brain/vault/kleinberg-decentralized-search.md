@@ -32,7 +32,7 @@ The exponent $r = d$ is **unique** — it is the only value at which decentraliz
 
 **Setup:** Each node has local grid neighbors + one long-range link drawn with $P(\text{link to } u) \propto d(v, u)^{-r}$.
 
-**Greedy routing:** At each step, forward to the neighbor (local or long-range) closest to the target in grid distance.
+==**Greedy routing:** At each step, forward to the neighbor (local or long-range) closest to the target in grid distance.==
 
 ## Key Properties
 - $r = d$ is the **navigability sweet spot**: links exist at every distance scale, giving the algorithm a "ladder" to descend
@@ -44,11 +44,11 @@ The exponent $r = d$ is **unique** — it is the only value at which decentraliz
 ## Worked Example
 **2D grid ($d = 2$):**
 
-| Exponent $r$ | Short paths? | Greedy search time | Why? |
-|---|---|---|---|
-| $r = 0$ | Yes | $\Omega(n^{2/3})$ | Random links provide no gradient toward target |
-| $r = 2$ | Yes | $O(\log^2 n)$ | Links at every scale → hierarchical descent |
-| $r \gg 2$ | Yes | $\Omega(n^c)$ | "Shortcuts" are effectively local |
+| Exponent $r$ | Short paths? | Greedy search time | Why?                                           |
+| ------------ | ------------ | ------------------ | ---------------------------------------------- |
+| $r = 0$      | Yes          | $\Omega(n^{2/3})$  | Random links provide no gradient toward target |
+| $r = 2$      | Yes          | $O(\log^2 n)$      | Links at every scale → hierarchical descent    |
+| $r \gg 2$    | Yes          | $\Omega(n^c)$      | =="Shortcuts" are effectively local==          |
 
 The simulation shows a sharp minimum at $r = 2$: delivery time drops from polynomial to polylogarithmic and back up again.
 

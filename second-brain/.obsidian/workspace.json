@@ -4,53 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8b24e6d3bc782a3f",
+        "id": "3078e26321a5abc3",
         "type": "tabs",
         "children": [
           {
-            "id": "2ba99cf75d70bf17",
+            "id": "7f99bf4a48f9ee5d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-03.md",
+                "file": "vault/topics/network-science-l07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-03"
-            }
-          },
-          {
-            "id": "7a63098d24529837",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Vorlesung/03MMDB_Medien_Bild_and_Dithering_en_2026Part2.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "03MMDB_Medien_Bild_and_Dithering_en_2026Part2"
-            }
-          }
-        ]
-      },
-      {
-        "id": "051e1d8995906545",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a373160085f0b7cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/vector-graphics-svg.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "vector-graphics-svg"
+              "title": "network-science-l07"
             }
           }
         ]
@@ -110,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -195,11 +162,20 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2ba99cf75d70bf17",
+  "active": "7f99bf4a48f9ee5d",
   "lastOpenFiles": [
+    "vault/small-world-property.md",
+    "vault/topics/network-science-l07.md",
+    "vault/milgrams-experiment-six-degrees.md",
+    "vault/global-email-experiment.md",
+    "vault/kleinberg-decentralized-search.md",
+    "vault/watts-strogatz-model.md",
+    "Pasted image 20260610105308.png",
+    "raw/handwritten_notes/network_science/Vorlesung/L07.rnote",
     "vault/vector-graphics-svg.md",
-    "Pasted image 20260609110111.png",
+    "vault/topics/multimedia-databases-lecture-03.md",
     "raw/lectures/multimedia_databases/Vorlesung/03MMDB_Medien_Bild_and_Dithering_en_2026Part2.pdf",
+    "Pasted image 20260609110111.png",
     "vault/concepts/digital-circuit-design.md",
     "vault/concepts/vlsi-design.md",
     "vault/concepts/mos-transistors.md",
@@ -211,7 +187,6 @@
     "vault/concepts/six-degrees-of-separation.md",
     "vault/concepts/machine-learning-basics.md",
     "vault/concepts/pagerank-algorithm.md",
-    "vault/topics/multimedia-databases-lecture-03.md",
     "vault/concepts/diode-applications.md",
     "vault/concepts/p-n-junction-overview.md",
     "vault/concepts/doping-and-extrinsic-semiconductors.md",
@@ -219,11 +194,6 @@
     "vault/concepts/software-analyse-projects-overview.md",
     "vault/concepts/pmos-transistor.md",
     "vault/jpeg2000-wavelet-compression.md",
-    "vault/jpeg-compression-pipeline.md",
-    "vault/image-file-formats.md",
-    "vault/floyd-steinberg-dithering.md",
-    "vault/dithering.md",
-    "vault/color-lookup-table.md",
     "raw/lectures/software_analyse/Vorlesung/6_AbstractInterpretation.pdf",
     "Untitled 1.base",
     "Untitled.base",
@@ -232,7 +202,6 @@
     "raw/books/software_analyse/Uebung/java-beginner.pdf",
     "raw/books/software_analyse/Uebung/Head First Java_ A Brain-Friendly Guide -- Sierra, Kathy & Bates, Bert -- 2005 -- cj5_7062 -- 97ef68dbc4567d230af6ce7134bfa824 -- Anna’s Archive.epub",
     "projects/software-analyse/ss26sasign-putra01/target/surefire/surefirebooter-20260604203550610_3.jar",
-    "projects/software-analyse/ss26sasign-putra01/target/surefire/surefire_0-20260604203550610_2tmp",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif",
@@ -240,7 +209,6 @@
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/report.gif",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/redbar.gif",
     "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/package.gif",
-    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/method.gif",
-    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/group.gif"
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/method.gif"
   ]
 }
