@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-Dodds, Muhamad & Watts (2003) replicated Milgram's experiment using email across 166 countries, confirming short paths exist but revealing that motivation — not topology — is the primary bottleneck (1.6% completion rate).
+==Dodds, Muhamad & Watts (2003)== replicated Milgram's experiment using email across 166 countries, confirming short paths exist but ==revealing that motivation — not topology — is the primary bottleneck (1.6% completion rate).==
 
 ## Core Intuition
 Milgram's 1967 experiment was limited: US-only, postal mail, small sample. Dodds et al. (2003) ran a global version using email — no geographic constraints, 60,000 participants, 18 targets in 13 countries.

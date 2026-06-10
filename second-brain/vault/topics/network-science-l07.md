@@ -13,7 +13,7 @@ Lecture 07 explains why large networks have short paths (logarithmic distances),
 
 ## Core Intuition
 The lecture is organized around four questions raised by [[milgrams-experiment-six-degrees|Milgram's 1967 experiment]]:
-
+![[Pasted image 20260610105308.png]]
 1. **Existence** — Why do short paths exist in huge networks? → [[small-world-property|Logarithmic distances]]: $\bar{d} \approx \log n / \log k$
 2. **Coexistence** — How can networks be clustered AND short? → [[watts-strogatz-model|Watts-Strogatz model]]: a few random shortcuts collapse $L$ while $C$ stays high
 3. **Navigability** — Can people find short paths with local info? → [[kleinberg-decentralized-search|Kleinberg's theorem]]: only when long-range links follow $r = d$ geometry
