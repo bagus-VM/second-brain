@@ -11,14 +11,12 @@
             "id": "4d38619bdb620b4a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-01.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/lectures/network_science/Vorlesung/l07-small-world-networks.pdf"
               },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-01"
+              "icon": "lucide-file-text",
+              "title": "l07-small-world-networks"
             }
           }
         ]
@@ -125,6 +123,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -136,6 +135,29 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d682b22383102c1e",
-  "lastOpenFiles": []
+  "active": "4d38619bdb620b4a",
+  "lastOpenFiles": [
+    "vault/topics/multimedia-databases-lecture-03.md",
+    "vault/bezier-curves.md",
+    "vault/topics/reproducibility-engineering-lecture-1.md",
+    "vault/topics/multimedia-databases-lecture-01.md",
+    "vault/concepts/vlsi-design.md",
+    "vault/concepts/visitor-pattern.md",
+    "vault/concepts/software-analyse-projects-overview.md",
+    "vault/concepts/six-degrees-of-separation.md",
+    "vault/concepts/sensors.md",
+    "vault/concepts/semiconductor-physics.md",
+    "vault/concepts/pmos-transistor.md",
+    "vault/concepts/pagerank-algorithm.md",
+    "vault/concepts/p-n-junction-overview.md",
+    "vault/concepts/non-repudiation.md",
+    "vault/concepts/mos-transistors.md",
+    "vault/concepts/machine-learning-basics.md",
+    "vault/concepts/doping-and-extrinsic-semiconductors.md",
+    "vault/concepts/diode-applications.md",
+    "vault/concepts/digital-circuit-design.md",
+    "vault/concepts/authentication.md",
+    "vault/concepts/actuators.md",
+    "Pasted image 20260609110111.png"
+  ]
 }
