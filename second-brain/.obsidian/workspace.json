@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/topics/iot-lecture-6.md",
+                "file": "vault/topics/multimedia-databases-lecture-06.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "iot-lecture-6"
+              "title": "multimedia-databases-lecture-06"
             }
           }
         ]
@@ -162,8 +162,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "4ee5140815e153b0",
+  "active": "7f99bf4a48f9ee5d",
   "lastOpenFiles": [
+    "vault/topics/microelectronics-lecture-6.md",
+    "vault/topics/iot-lecture-6.md",
+    "vault/topics/software-analyse-lecture-7.md",
+    "vault/topics/network-science-l09.md",
+    "vault/topics/reproducibility-engineering-lecture-5.md",
+    "vault/topics/reproducibility-engineering-lecture-6.md",
     "vault/concepts/foreign-tables-postgresql.md",
     "vault/concepts/binary-build-reproducibility.md",
     "vault/concepts/triadic-focal-membership-closure.md",
@@ -184,12 +190,6 @@
     "vault/concepts/kolmogorov-smirnov-distance.md",
     "vault/concepts/chi-squared-distance.md",
     "vault/concepts/feature-vector.md",
-    "vault/concepts/content-based-retrieval.md",
-    "vault/concepts/curse-of-dimensionality.md",
-    "vault/concepts/minkowski-distance.md",
-    "vault/concepts/weak-structural-balance.md",
-    "vault/concepts/structural-balance-theory.md",
-    "vault/concepts/balance-theorem.md",
     "Pasted image 20260610105308.png",
     "raw/handwritten_notes/network_science/Vorlesung/L07.rnote",
     "raw/lectures/multimedia_databases/Vorlesung/03MMDB_Medien_Bild_and_Dithering_en_2026Part2.pdf",
