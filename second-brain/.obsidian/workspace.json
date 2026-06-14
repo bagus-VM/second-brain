@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "d7e05476f887040a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3078e26321a5abc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f99bf4a48f9ee5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/topics/iot-lecture-6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "iot-lecture-6"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "433e4c7a1c5f5a70",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b018a90bcf7dc67",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ee5140815e153b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f61ecd7b50e28e2d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ffd92ba1505805cb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 383.5
+  },
+  "right": {
+    "id": "98c5f4b9b4985579",
+    "type": "split",
+    "children": [
+      {
+        "id": "12c1aa4753cd956d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e38c797f09344bef",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "d9953eccc5daef82",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "de3d712e61434930",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f1d162b9e59511e6",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "4ee5140815e153b0",
+  "lastOpenFiles": [
+    "vault/concepts/foreign-tables-postgresql.md",
+    "vault/concepts/binary-build-reproducibility.md",
+    "vault/concepts/triadic-focal-membership-closure.md",
+    "vault/concepts/client-server-db-architecture.md",
+    "vault/concepts/out-of-source-build.md",
+    "vault/concepts/ei-index.md",
+    "vault/concepts/confounding.md",
+    "vault/concepts/make-dependency-tracking.md",
+    "vault/concepts/c-preprocessor.md",
+    "vault/concepts/dominant-color.md",
+    "vault/concepts/spatial-coherency.md",
+    "vault/concepts/docker-compose.md",
+    "vault/concepts/color-histogram.md",
+    "vault/concepts/constant-propagation.md",
+    "vault/concepts/galois-connection.md",
+    "vault/concepts/reprotest.md",
+    "vault/concepts/sqlite-architecture.md",
+    "vault/concepts/kolmogorov-smirnov-distance.md",
+    "vault/concepts/chi-squared-distance.md",
+    "vault/concepts/feature-vector.md",
+    "vault/concepts/content-based-retrieval.md",
+    "vault/concepts/curse-of-dimensionality.md",
+    "vault/concepts/minkowski-distance.md",
+    "vault/concepts/weak-structural-balance.md",
+    "vault/concepts/structural-balance-theory.md",
+    "vault/concepts/balance-theorem.md",
+    "Pasted image 20260610105308.png",
+    "raw/handwritten_notes/network_science/Vorlesung/L07.rnote",
+    "raw/lectures/multimedia_databases/Vorlesung/03MMDB_Medien_Bild_and_Dithering_en_2026Part2.pdf",
+    "Pasted image 20260609110111.png",
+    "raw/lectures/software_analyse/Vorlesung/6_AbstractInterpretation.pdf",
+    "Untitled 1.base",
+    "Untitled.base",
+    "raw/books/software_analyse/Uebung/java-intermediate.pdf",
+    "raw/books/software_analyse/Uebung/annas-arch-4ac6fb27a5d8.azw3",
+    "raw/books/software_analyse/Uebung/java-beginner.pdf",
+    "raw/books/software_analyse/Uebung/Head First Java_ A Brain-Friendly Guide -- Sierra, Kathy & Bates, Bert -- 2005 -- cj5_7062 -- 97ef68dbc4567d230af6ce7134bfa824 -- Anna’s Archive.epub",
+    "projects/software-analyse/ss26sasign-putra01/target/surefire/surefirebooter-20260604203550610_3.jar",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/session.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/report.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/redbar.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/package.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/method.gif"
+  ]
+}
