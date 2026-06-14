@@ -2,26 +2,25 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-09
-**Total pages:** 386
-**Active courses:** 8
+**Last updated:** 2026-06-14
+**Total pages:** 595 (vault only: 44 topic pages + 267 concept pages + 21 practice + 22 flashcards + courses; excluding raw/)
+**Active courses:** 6
 
 ---
 
 ## Exam Calendar
-
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~50 | **6/6 lectures ✅** (73 pages) |
-| [[network-science]] | 28 July 2026 | ~57 | **9/9 lectures ✅** (128 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~59 | **5/5 lectures ✅** (44 pages) |
-| [[software-analyse]] | 31 July 2026 | ~60 | **5/5 lectures ✅** (49 pages) |
-| [[iot-security]] | 05 Aug 2026 | ~65 | **5/5 lectures ✅** (39 pages) + exam format confirmed |
-| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~66 | **5/5 lectures ✅** (39 pages) |
+| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex07 (78 pages) |
+| [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~46 | **6/6 lectures ✅** + Sheet 1–6 (60 pages) |
+| [[software-analyse]] | 31 July 2026 | ~47 | **7/7 lectures ✅** (75 pages) |
+| [[iot-security]] | 05 Aug 2026 | ~52 | **6/6 lectures ✅** (~60 pages) + 3 papers ingested |
+| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
 
 ---
 
-## 📚 Multimedia Databases (73 pages)
+## 📚 Multimedia Databases (78 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -92,11 +91,16 @@
 | [[mpeg-7-descriptors]] | 20 visual descriptor types | current |
 | [[feature-extraction]] | Computing low-level features | current |
 | [[content-based-retrieval]] | Searching by content | current |
+| [[feature-vector]] | Numerical representation of multimedia content | current |
+| [[minkowski-distance]] | L1, L2, L∞ family of distance functions | current |
+| [[chi-squared-distance]] | Scale-invariant histogram distance | current |
+| [[kolmogorov-smirnov-distance]] | Max cumulative difference for histograms | current |
+| [[curse-of-dimensionality]] | Why nearest-neighbour loses meaning in high-D | current |
 | [[similarity-measures]] | Quantifying closeness | current |
 
 ---
 
-## 📚 Network Science (128 pages)
+## 📚 Network Science (138 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -149,15 +153,24 @@
 | [[affiliation-networks]] | Bipartite, co-occurrence | current |
 | [[schelling-segregation-model]] | Threshold, micro-macro gap | current |
 | [[echo-chambers]] | Cinelli et al., platform ranking | current |
+| [[ei-index]] | (E−I)/(E+I) measure of homophily | current |
+| [[triadic-focal-membership-closure]] | Three projection-edge-formation mechanisms in bipartite networks | current |
+| [[confounding]] | Third explanation for observed correlation between similarity and tie | current |
 
 ### L06 — Structural Balance
 | Page | Summary | Status |
 |------|---------|--------|
 | [[signed-graphs]] | Signed graph definition | current |
-| [[structural-balance-theory]] | Heider's cognitive dissonance | current |
-| [[balance-theorem]] | ≤ 2 camps | current |
-| [[weak-structural-balance]] | Davis, k-coalition | current |
+| [[signed-networks]] | Signed networks: positive/negative edges, Heider | current |
+| [[structural-balance-theory]] | Heider's cognitive dissonance; 1946 origin | current |
+| [[balanced-triads]] | Four triangle types: (+,+,+) and (+,-,-) balanced under strong | current |
+| [[balance-theorem]] | Cartwright-Harary 1956: ≤ 2 camps for balanced complete signed graphs | current |
+| [[weak-structural-balance]] | Davis 1967: k-camp relaxation allowing (-,-,-) | current |
 | [[frustration-index]] | Min edge flips, NP-hard | current |
+| [[cycle-criterion]] | Balance ⟺ every cycle has even number of negatives | current |
+| [[ei-index]] | (E−I)/(E+I) measure of homophily, with random-mixing baseline | current |
+| [[triadic-focal-membership-closure]] | Three mechanisms for new ties in affiliation-network projections | current |
+| [[confounding]] | The third explanation for observed similarity beyond selection and socialisation | current |
 
 ### L07 — Small-World Networks
 | Page | Summary | Status |
@@ -194,7 +207,7 @@
 
 ---
 
-## 📚 Reproducibility Engineering (44 pages)
+## 📚 Reproducibility Engineering (60 pages)
 
 ### L01 — Repeat/Reproduce/Replicate
 | Page | Summary | Status |
@@ -242,9 +255,21 @@
 | [[make-and-build-systems]] | Make fundamentals | current |
 | [[c-preprocessor]] | Macros as non-determinism source | current |
 
+### L06 — Database System Architectures
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-lecture-6]] | DB architectures (file-based, client/server), SQLite features, Docker Compose, foreign tables | current |
+| [[containerization-for-builds]] | Docker for reproducible environments (prereq from L05) | current |
+| [[binary-build-reproducibility]] | Bitwise-identical builds; the 4-snippet question (1 of 4 reproducible) | current |
+| [[c-preprocessor]] | `__FILE__`, `__LINE__`, `__TIME__`, `__DATE__` as build-time non-determinism sources | current |
+| [[out-of-source-build]] | Build artefacts in a separate dir; `mkdir build && cd build && ../configure` | current |
+| [[make-dependency-tracking]] | Make's mtime-based incremental rebuild algorithm; phony targets; parallel builds | current |
+| [[client-server-db-architecture]] | Server process + client library + network; the contrast to SQLite | current |
+| [[foreign-tables-postgresql]] | Query external files (e.g., /proc/meminfo) as if SQL tables via file_fdw | current |
+
 ---
 
-## 📚 Software Analyse (49 pages)
+## 📚 Software Analyse (75 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -296,7 +321,37 @@
 | [[available-expressions]] | Forward must | current |
 | [[live-variable-analysis]] | Backward may | current |
 | [[very-busy-expressions]] | Backward must | current |
-| [[iterative-data-flow-analysis]] | Worklist algorithm | current |
+|| [[iterative-data-flow-analysis]] | Worklist algorithm | current |
+
+### L06 — Abstract Interpretation (Data Flow Part 2)
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-6]] | Lattice theory, MOP vs MFP, abstract interpretation, Zero Analysis | current |
+| [[lattice]] | Partial order, join, meet, top, bottom, distributivity | current |
+| [[mop-vs-mfp]] | MOP precise/undecidable vs MFP computable/sound; equal for distributive | current |
+| [[distributive-framework]] | When transfer functions distribute over join; four classic analyses | current |
+| [[minimal-fixed-point-algorithm]] | Worklist-based MFP computation algorithm | current |
+| [[abstract-interpretation]] | Concrete→abstract domain, Galois connection, sound over-approximation | current |
+| [[zero-analysis-worked-example]] | The lecture's running example: Z/NZ/MZ lattice, division-by-zero detection | current |
+
+### L07 — Interprocedural and Heap Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-7]] | Interprocedural limits, context sensitivity, points-to, Steensgaard/Andersen | current |
+| [[interprocedural-analysis]] | Beyond one function: call/return nodes, MVP ideal, context sensitivity | current |
+| [[context-sensitivity]] | Distinguishing call contexts: 4 techniques (cloning, inlining, call strings, summaries) | current |
+| [[cloning-context-sensitivity]] | Duplicate procedure per call site — most precise, code-size explosion | current |
+| [[inlining-context-sensitivity]] | Substitute body at call site — perfect, but no termination for recursion | current |
+| [[call-strings]] | Tag each call with sequence of call sites; k-bounded for termination | current |
+| [[procedure-summaries]] | Compose transfer function for procedure; apply at every call site | current |
+| [[valid-paths]] | Interprocedural paths respecting call-return matching | current |
+| [[meet-over-valid-paths]] | Precise but undecidable interprocedural ideal (MVP) | current |
+| [[points-to-analysis]] | Which heap objects each pointer can refer to | current |
+| [[steensgaards-points-to-analysis]] | Fast equality-based, O(nα(n,n)) via Union-Find, imprecise | current |
+| [[andersens-points-to-analysis]] | Precise subset-based, O(n³), inclusion-based constraints | current |
+| [[heap-analysis]] | Family of analyses for heap memory; design space of 9 axes | current |
+| [[aliasing]] | Two names for same memory location; alias sets from points-to | current |
+| [[union-find-data-structure]] | Partition into equivalence classes; ~O(1) per op with path compression | current |
 
 ### Projects
 | Page | Summary | Status |
@@ -310,7 +365,7 @@
 
 ---
 
-## 📚 IoT Security (39 pages)
+## 📚 IoT Security (~60 pages)
 
 ### L01 — IoT Fundamentals
 | Page | Summary | Status |
@@ -361,6 +416,30 @@
 | [[web-interface-vulnerabilities]] | SQL injection, XSS, weak passwords in IoT web UIs | current |
 | [[ecosystem-communications-security]] | Health checks, heartbeats, decommissioning exploitation | current |
 
+### L06 — Cryptography and Lightweight Security Primitives
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-6]] | Cryptography (symmetric, asymmetric, hash, MAC, sig) + PUFs, TPMs, TRNGs, ASCON | current |
+| [[symmetric-encryption]] | AES, DES, Blowfish, Twofish, CAST-128, Camellia, IDEA; modes (ECB, CBC, GCM, CCM) | current |
+| [[asymmetric-encryption]] | RSA + ECC; PKCS#1/OAEP padding; quantum-broken; X25519/Ed25519 | current |
+| [[hashing]] | SHA-256, SHA-3, MD5/SHA-1 broken; HMAC construction; pre-image/collision resistance | current |
+| [[message-authentication-code]] | HMAC-SHA256, CMAC, GMAC; integrity+authentication, no non-repudiation | current |
+| [[random-number-generator]] | TRNG vs PRNG vs DRBG; memory-based TRNGs; von Neumann correction | current |
+| [[aes]] | FIPS 197; 128-bit blocks, 128/192/256-bit keys, 10/12/14 rounds | current |
+| [[hmac]] | RFC 2104; H(k⊕opad ‖ H(k⊕ipad ‖ m)); defeats length extension | current |
+| [[ascon]] | NIST lightweight crypto winner (Feb 2023); 320-bit permutation, AEAD + hash | current |
+| [[lightweight-cryptography]] | NIST process 2015–2023; PRESENT, GIFT, ChaCha20, ASCON for constrained IoT | current |
+| [[dolev-yao-attacker-model]] | Standard cryptographic adversary: controls network, cannot break primitives | current |
+| [[iot-2-0]] | Next-gen IoT with 5G/6G, AI/ML, edge computing, blockchain, Industry 4.0 | current |
+| [[iot-applications]] | Smart home, IIoT, healthcare, transportation, smart grid, space — use cases | current |
+
+### 📄 IoT Security Papers (3 ingested)
+| Page | Summary | Status |
+|------|---------|--------|
+| [[paper-iot-lightweight-hardware-architecture]] | Mexis et al. 2021 (JETC): DRAM PUF + HMAC-SHA-256 + AES-128-CBC + MQTT for SoS | current |
+| [[paper-iot-mexis-2021-poster]] | Mexis et al. 2021 (SIGCOMM poster): same architecture, demonstrator focus | current |
+| [[paper-zhou-iot-2-0]] | Zhou et al. 2021 (IEEE Access): IoT 2.0 across 7 dimensions; 6→8 layer architecture | current |
+
 ### 🗺️ IoT Security Topics
 | Page | Summary | Status |
 |------|---------|--------|
@@ -377,7 +456,7 @@
 
 ---
 
-## 📚 Microelectronics (39 pages)
+## 📚 Microelectronics (~45 pages)
 
 ### L01 — Semiconductor Basics
 | Page | Summary | Status |
@@ -433,6 +512,15 @@
 | [[nmos-transistor]] | N-channel in P-substrate, electrons, V_GS>V_TH | current |
 | [[pmos-transistor]] | P-channel in N-substrate, holes, |V_GS|>|V_TH| | current |
 | [[mosfet-operating-regions]] | Cutoff/Linear/Saturation conditions with formulas | current |
+
+### L06 — CMOS Logic Gates and Digital Circuits
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-6]] | CMOS inverter, NAND, NOR, XOR, arbitrary gate composition | current |
+| [[cmos-logic-gates]] | PDN for F, PUN for ¬F; static power ≈ 0; XOR breaks the rule | current |
+| [[cmos-nand-gate]] | 4T gate: series nMOS + parallel pMOS; universal Boolean primitive | current |
+| [[cmos-nor-gate]] | 4T gate: parallel nMOS + series pMOS; dual of NAND | current |
+| [[cmos-xor-gate]] | Not in single-stage CMOS; 12T transmission-gate or 6T static or multi-stage | current |
 
 ### 🗺️ Microelectronics Topics
 | Page | Summary | Status |
@@ -491,4 +579,6 @@
 | Reproducibility Eng L01-L05 | Lectures | 2026-06-01 | 44 |
 | Software Analyse L01-L05 | Lectures | 2026-06-01 | 49 |
 | IoT Security L01-L05 | Lectures | 2026-06-02 | 39 |
+| IoT Security L06 + 3 papers (Mexis×2, Zhou) | Lectures + papers | 2026-06-14 | 21 |
 | Intro to Microelectronics L01-L05 | Lectures | 2026-06-02 | 39 |
+| Intro to Microelectronics L06 | Lectures | 2026-06-14 | 5 |

@@ -27,3 +27,12 @@ last_updated: 2026-06-02
 
 > [!question]- Why can't cross-sectional data alone distinguish selection from socialization?
 > [!answer]- Both mechanisms produce the same observable pattern: friends are similar. Cross-sectional data is a single snapshot — you cannot see whether similarity preceded friendship (selection) or followed it (socialization). You need longitudinal data (to track changes over time) or experimental data (to randomly assign friendships) to separate the mechanisms.
+
+## Related Pages
+- [[network-science-l06]]
+- [[homophily]]
+- [[selection-vs-socialization]]
+- [[affiliation-networks]]
+- [[ei-index]] — the (E−I)/(E+I) measure
+- [[triadic-focal-membership-closure]] — three mechanisms for new ties in projections
+- [[confounding]] — the third explanation beyond selection and socialisation

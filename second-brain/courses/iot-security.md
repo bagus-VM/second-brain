@@ -21,11 +21,12 @@ Detailed prep page: [[iot-security-exam-format]]
 
 | # | Topic | Slides | Status |
 |---|-------|--------|--------|
-| 1 | Lecture 1 | IoTsec1_2026.pdf | not ingested |
-| 2 | Lecture 2 | IoTsec2_2026.pdf | not ingested |
-| 3 | Lecture 3 | IoTsec3_2026.pdf | not ingested |
-| 4 | Lecture 4 | IoTsec4_2026.pdf | not ingested |
-| 5 | Lecture 5 | IoTsec5_2026.pdf | not ingested |
+| 1 | Lecture 1 | IoTsec1_2026.pdf | **ingested** ✅ |
+| 2 | Lecture 2 | IoTsec2_2026.pdf | **ingested** ✅ |
+| 3 | Lecture 3 | IoTsec3_2026.pdf | **ingested** ✅ |
+| 4 | Lecture 4 | IoTsec4_2026.pdf | **ingested** ✅ |
+| 5 | Lecture 5 | IoTsec5_2026.pdf | **ingested** ✅ |
+| 6 | Lecture 6 (Cryptography & Lightweight Primitives) | IoTsec6_2026.pdf | **ingested** ✅ |
 
 ## Papers
 

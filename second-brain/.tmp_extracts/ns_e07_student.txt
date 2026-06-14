@@ -1,0 +1,140 @@
+    Exercise Sheet 7
+     Structural Balance
+       5942UE Network Science
+             26 March 2026
+       Prof. Dr. Michael Granitzer
+
+
+
+
+
+                                     1
+    7.A Triadic Balance Theory
+
+
+
+
+
+                                 2
+Exercise 7.A.1: Classifying Signed Triangles
+Label each signed triangle as balanced (B) or unbalanced (U):
+     +        +        +
+1. A − B , B − C , A − C (all positive)
+                  ​        ​
+
+
+
+
+     +        +        −
+2. A − B , B − C , A − C (two positive, one negative)
+                  ​        ​
+
+
+
+
+     −        −        +
+3. A − B , B − C , A − C (one positive, two negative)
+                  ​        ​
+
+
+
+
+     −        −        −
+4. A − B , B − C , A − C (all negative)
+                  ​        ​
+
+
+
+
+Which pattern is most stable, and which is "socially unstable"?
+
+
+
+
+
+                                                                  3
+4
+    7.B Weak Balance
+
+
+
+
+
+                       5
+Exercise 7.B.1: Strong vs. Weak Balance
+Graph with two triangles connected by one edge:
+
+                                   1. Is A, B, C balanced under strong balance? Under weak balance?
+  A, B, C all positive             2. Is D, E, F balanced under strong balance? Under weak balance?
+  D, E, F all negative             3. What does the global partition look like under each?
+  Connecting edge C –D is negative 4. In international relations, what does an all-negative triangle represent?
+
+
+
+
+
+                                                                                                                  6
+Exercise 7.B.2: Finding Camps in a Signed Network
+A signed graph: 1, 2, 3 are mutually friends, 4, 5, 6 are mutually friends, all cross-group edges are negative.
+
+1. Check every triangle for balance.
+2. Find the two-camp partition.
+3. Verify within-group edges are positive, between-group negative.
+                                +
+4. Add a "rogue" positive edge 1 − 4. Which triangles become unbalanced?
+                                    ​
+
+
+
+
+
+                                                                                                                  7
+    7.C Relaxed Balance and Applications
+
+
+
+
+
+                                           8
+Exercise 7.C.1: WWI Alliance Network
+Five countries during WWI:
+
+   Allies: France, Britain, Russia (mutually positive)
+   Central Powers: Germany, Austria-Hungary (mutually positive)
+   All Allies–Central Powers edges are negative
+1. Is this network perfectly balanced? Identify any unbalanced triangles.
+2. Does it match the two-camp Balance Theorem?
+3. What if a new country joins with positive ties to both camps?
+4. Italy switched from Germany to the Allies in 1915 — what does balance theory predict?
+
+
+
+
+
+                                                                                           9
+Exercise 7.C.2: Approximate Balance in Real Networks
+Using the karate club graph, sign edges by faction (within = +, cross = −).
+
+1. Count balanced vs. unbalanced triangles.
+2. What fraction of triangles are balanced?
+3. Remove cross-faction edges in order of how many unbalanced triangles they participate in. After removing the top 5, how
+   does the fraction change?
+4. Plot fraction-balanced vs. edges-removed.
+
+
+
+
+
+                                                                                                                             10
+Wrap-Up
+    triangle sign products give a one-line balance test
+    the Balance Theorem turns a local rule into a global two-camp partition
+    weak balance permits more than two camps and is often more realistic
+    real networks are rarely perfectly balanced — approximate balance is the typical regime
+
+
+
+
+
+                                                                                              11
+

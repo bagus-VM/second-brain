@@ -1,0 +1,390 @@
+Cryptographic Fundamentals for IoT Security
+
+
+
+
+      Security feature   Cryptographic service(s)
+      Confidentiality    Encryption
+      Integrity          Digital signature or Message Authentication Code (MAC)
+      Authentication     Digital signature or MAC
+      Non-repudiation    Digital signature
+
+
+
+
+                                      University of Passau                        50
+Types of Basic Security Applications
+
+
+
+• Encryption (and decryption) (provides confidentiality):
+     •   Symmetric
+     •   Asymmetric
+
+• Hashing
+
+• Digital signatures (provide integrity, identity, and data-origin authentication as well as non-repudiation):
+     •   Symmetric: MAC used for integrity and data-origin authentication
+     •   Asymmetric: Elliptic Curve (EC) and Integer Factorization Cryptography (IFC)
+
+• Random number generation (Most cryptography requires very large numbers originating from high-entropy
+  sources. These are needed to generate or establish cryptographic keys and other tokens.)
+
+
+
+
+                                                    University of Passau                                         51
+Encryption/Decryption
+
+
+
+
+                                               Eavesdropper
+
+
+
+
+                                             Unprotected
+                 019                         environment                 019
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                 52
+Symmetric Encryption/Decryption
+
+
+
+                                                                                                          Common symmetric ciphers
+                                                                                                          include the following:
+                                                                                                          • Advanced Encryption
+                                                                                                             Standard (AES) (based on
+                                                                                                             Rijndael and specified in
+                                                                                                             FIPS PUB 197)
+                                                                                                          • Blowfish
+                                                                                                          • DES and triple-DES
+                                                                                                          • Twofish
+                                                                                                          • CAST-128
+                                                                                                          • Camellia
+                                                                                                          • IDEA
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                                            53
+Asymmetric Encryption/Decryption
+
+
+
+
+                                                                                                          Common asymmetric encryption
+                                                                                                          algorithms include the following:
+                                                                                                          • Rivest, Shamir, Adelman (RSA)
+                                                                                                          • Elliptic Curve Cryptography
+
+
+
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                                                 54
+Hashing
+
+
+
+
+          Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                        University of Passau                 55
+Digital Signatures
+
+
+
+
+                                                Unprotected
+                        019                     environment            019
+
+
+
+        Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                      University of Passau                 56
+Symmetric Digital Signatures (MACs)
+
+
+
+
+                                                                                                          Examples of MACs include the
+                                                                                                          following:
+                                                                                                          • HMAC-SHA1
+                                                                                                          • HMAC-SHA256
+                                                                                                          • CMAC (using a block cipher such
+                                                                                                              as AES)
+                                                                                                          • Galois Message Authentication
+                                                                                                              Code ( GMAC) is the message
+                                                                                                              authentication element of the GCM
+                                                                                                              mode of AES)
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                                                  57
+Asymmetric Digital Signatures
+
+
+
+
+                                                                                                          Common asymmetric digital signature
+                                                                                                          algorithms include the following:
+                                                                                                          • RSA (with various padding
+                                                                                                             schemes such as PKCS1 or PSS)
+                                                                                                          • Digital Signature Algorithm (DSA)
+                                                                                                          • Elliptic Curve DSA (ECDSA)
+
+
+
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                                                58
+Random Number Generators
+
+
+                                                                                                          Deterministic Random-Bit
+                                                                                                          Generators (DRBGs)
+
+                                                                                                          vs.
+
+                                                                                                          Non-Deterministic Random
+                                                                                                          Number Generators (NDRNGs)
+
+                                                                                                          True Random-Number
+                                                                                                          Generators (TRNGs)
+
+                                                                                                          vs.
+
+                                                                                                          PseudoRandom-Number
+                                                                                                          Generators (PRNGs)
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                                            59
+Ciphersuites & Cryptographic Modules
+
+
+
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+
+                                                                     University of Passau                 60
+Key Management
+
+
+
+
+      Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+                                                                    University of Passau                 61
+Security Primitives for the IoT
+
+
+
+
+• Lightweight (hardware) security primitives
+    • Memory-based Physical Unclonable Functions (PUFs)
+    • True Random-Number Generators (TRNGs)
+    • Trusted Platform Modules (TPMs), and other solutions
+
+
+• Lightweight cryptography for the IoT: Standards and proposed solutions
+
+
+
+
+                                       University of Passau                62
+Security Primitives for the IoT: Memory-based PUFs
+
+• PUFs are real-world objects, such as hardware components, that have characteristics
+  that allow for the identification of each instance of these components
+
+• Thus, the relevant characteristics need to be unique per instance, and also persistent
+  over time (robust)
+
+• Ideally, these characteristics are also hard to imitate (copy) and hard to predict
+  (random)
+
+• Since memory forms an integral part of most systems, using a memory as a security
+  primitive does not incur additional hardware costs
+
+• Most often root privileges are required for the implementation of a memory-based
+  Physical Unclonable Function
+
+
+
+                                           University of Passau                            63
+Security Primitives for the IoT: Memory-based PUFs
+
+• Common examples of memory-based PUFs include:
+   • The SRAM PUF that is based on the values of Static Random-Access Memory
+     (SRAM) after a reboot.
+   • The DRAM (Dynamic Random-Access Memory) PUF that is based on the same
+     principle as the SRAM PUF (start-up values).
+   • The DRAM PUF that is based on the retention/decay characteristics of the DRAM
+     cells.
+   • The DRAM PUF that is based on the data remanence characteristics of the DRAM
+     cell.
+   • The DRAM PUF that is based on the disturbances occurring in DRAM cells that are
+     losing their charge due to nearby DRAM cells being constantly accessed
+     (rowhammered).
+   • The DRAM PUF that is based on the values attained from the DRAM cells when a
+     reduced write or read latency time is used.
+   • The Flash PUF that is based on the disturbances occurring in Flash memory cells
+     that are not being accessed due to the constant programming of other nearby Flash
+     memory cells.
+
+                                       University of Passau                              64
+Security Primitives for the IoT: TRNGs
+• True Random Number Generators (TRNGs)
+
+   •   Usually based on physical processes, which may be microscopic or macroscopic
+   •   Common examples: Cards, coins, dice, roulette wheels, keyboard stroke timing, lava lamps,
+       fishtank bubbles, radioactive decay, thermal noise, photoelectric effect
+
+   •   Can also be based on the random characteristics of memories, such as the writing or reading
+       latencies, or the randomness of the initial values of memory cells
+   •   Since memory forms an integral part of most systems, using a memory as a security primitive
+       does not incur additional hardware costs
+   •   Most often root privileges are required for the implementation of a memory-based TRNG
+
+   •   When TRNGs are based on quantum properties, such as the number (and other
+       characteristics) of electrons that, for example, move between two components of a transistor,
+       they are totally unpredictable
+
+   •   Unpredictable, but usually slow and potentially biased
+   •   Debiasing (post-processing) techniques may be required, such as von Neumann correction,
+       parity-based and/or hash-based methods
+   •   In general, entropy distillation is used to convert biased random bits to unbiased random bits
+                                              University of Passau                                      65
+Security Primitives for the IoT: TPMs and Other Solutions
+
+• Trusted Platform Module (TPM)
+   • An international standard for a secure cryptoprocessor
+   • Dedicated microcontroller designed to secure hardware through integrated
+     cryptographic keys
+   • Usually requires the addition of hardware, which results in cost overheads
+
+
+
+
+      https://en.wikipedia.org/wiki/File:TPM.svg                     https://en.wikipedia.org/wiki/File:TPM_Asus.jpg
+
+                                                   University of Passau                                                66
+Security Primitives for the IoT: TPMs and Other Solutions
+
+• Trusted Platform Module (TPM)
+   • Version 2.0
+• General Solution: Dedicated hardware for cryptography and security
+   • Incurs costs, in terms of money, area, power consumption, communication, etc.
+
+
+
+
+       https://www.youtube.com/watch?v=2JbWuoK1r9M&ab_channel=wolfSSL
+
+                                                            University of Passau     67
+Security Primitives for the IoT: Lightweight Cryptography
+
+• Standards and proposed solutions
+
+• Need for lightweight software solutions providing adequate security
+   • Especially for resource-constrained devices (e.g., in the context of the
+     IoT)
+
+• Executive summary of NIST Internal Report on Lightweight Cryptography
+  (https://nvlpubs.nist.gov/nistpubs/ir/2017/NIST.IR.8114.pdf):
+  “There are several emerging areas in which highly constrained devices are interconnected, working in concert
+  to accomplish some task. Examples of these areas include: automotive systems, sensor networks, healthcare,
+  distributed control systems, the Internet of Things (IoT), cyber-physical systems, and the smart grid. Security
+  and privacy can be very important in all of these areas. Because the majority of modern cryptographic
+  algorithms were designed for desktop/server environments, many of these algorithms cannot be implemented
+  in the constrained devices used by these applications. When current NIST-approved algorithms can be
+  engineered to fit into the limited resources of constrained environments, their performance may not be
+  acceptable. For these reasons, NIST started a lightweight cryptography project to investigate the issues and
+  then develop a strategy for the standardization of lightweight cryptographic algorithms.”
+
+                                                   University of Passau                                             68
+Security Primitives for the IoT: Lightweight Cryptography
+
+
+
+• U.S. National Institute of Standards and Technology (NIST) lightweight
+  cryptography standardisation process (2015 to 2023)
+  (https://csrc.nist.gov/projects/lightweight-cryptography)
+
+   • Finalists announced in 2021 (https://csrc.nist.gov/Projects/lightweight-
+     cryptography/finalists)
+
+   • ASCON (https://ascon.iaik.tugraz.at/) family of algorithms was
+     selected (February 2023)
+
+
+
+
+                                   University of Passau                         69
+Security Primitives for the IoT: ASCON
+
+
+• ASCON features:
+   • Authenticated encryption and hashing (fixed or variable output length) with a single
+     lightweight permutation
+   • Provably secure mode with keyed finalization for additional robustness
+   • Easy to implement in software and hardware
+   • Lightweight for constrained devices: small state, simple permutation, robust mode
+   • Fast in hardware
+   • Fast in software: Pipelinable, bit-sliced 5-bit S-box for 64-bit architectures
+   • Scalable for more conservative security or higher throughput
+   • Timing resistance: No table look-ups or additions
+   • Side-channel resistance: S-box optimized for countermeasures
+   • Key size = tag size = security level (128 bits recommended)
+   • Minimal overhead (ciphertext length = plaintext length)
+   • Single-pass, online (encryption and decryption), nonce-based, inverse-free
+
+
+
+                                        University of Passau                                70
+Identity and Access Management in the IoT
+
+
+
+
+       Russel & Van Duren: “Practical Internet of Things Security”, 2nd edition, Packt Publishing, 2019
+
+
+
+                                                                     University of Passau                 71
+
