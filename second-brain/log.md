@@ -474,3 +474,26 @@ Drop-batch ingest of 12 new PDFs across 5 courses. Software Analyse L6+L7 are th
 
 *"Eight PDFs, one compounding pass. The vault is now at 595 pages with zero broken wikilinks and complete lecture + exercise coverage for all four nearest-exam courses. The Make / binary-build / SQL architecture cluster joins the data-flow and structural-balance clusters as the third self-contained body of theory in the vault."*
 
+---
+
+## [2026-06-15] INGEST | MMDB Ex04-Ex07 practice backfill + exam prediction map | 5 pages
+
+**Trigger:** Student intel that MMDB professor recycles Uebung material into the exam. Ex01–Ex03 already had practice write-ups; Ex04–Ex07 did not.
+
+**Pattern scan of all 7 Uebungsblaetter:**
+- 11 distinct exercise archetypes identified
+- Heatmap shows: numeric computation (4 sheets), pipeline explanation (2), algorithm trace (1, LZW in Ex06), distance metric (1, Ex07), memory layout (1, Ex04)
+- Top-3 exam targets predicted: JPEG pipeline walkthrough, hand-trace Huffman/LZW, distance-metric calculation on new histograms
+
+**Files created (5):**
+- `study/practice/mmdb-ex04.md` — Image Processing Part 1 (formats, memory, quantization)
+- `study/practice/mmdb-ex05.md` — Image Processing Part 2 (point ops, convolution kernels, Laplacian)
+- `study/practice/mmdb-ex06.md` — Image Compression (JPEG, LZW, Huffman)
+- `study/practice/mmdb-ex07.md` — Content-Based Retrieval (CBIR concepts, histograms, Minkowski/K-S/χ²)
+- `vault/connections/mmdb-exam-prediction.md` — Pattern analysis + Top-10 exam-question predictions
+
+**Caveat logged:** Ex07 official solution PDF is missing from `raw/.../solutions/`; the Ex07 practice file's numerical answers were built from lecture material and standard textbook treatment. The 4×4 image figures were not extracted from the PDF — answers assume a checkerboard (left) and two solid blocks (right). Verify against a tutor's notes before relying on the numericals.
+
+**Vault state:** 579 → 584 vault/study pages. MMDB now has 7/7 practice write-ups. Course has 83 pages total (lectures + concepts + practice + connections).
+
+*"The Uebung is the syllabus. Don't treat it as optional practice — it is the syllabus. Ex06's LZW string and Ex07's distance-metric question are the two most parameterizable exam templates in the deck. Memorize the patterns, not the specific numbers."*

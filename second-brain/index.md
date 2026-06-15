@@ -11,7 +11,7 @@
 ## Exam Calendar
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex07 (78 pages) |
+| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex07 practice complete ✅ (83 pages) |
 | [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
 | [[reproducibility-engineering]] | 30 July 2026 | ~46 | **6/6 lectures ✅** + Sheet 1–6 (60 pages) |
 | [[software-analyse]] | 31 July 2026 | ~47 | **7/7 lectures ✅** (75 pages) |
@@ -20,7 +20,7 @@
 
 ---
 
-## 📚 Multimedia Databases (78 pages)
+## 📚 Multimedia Databases (83 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
