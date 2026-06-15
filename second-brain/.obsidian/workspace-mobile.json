@@ -11,12 +11,14 @@
             "id": "4d38619bdb620b4a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/lectures/network_science/Vorlesung/l07-small-world-networks.pdf"
+                "file": "vault/topics/multimedia-databases-lecture-04.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "l07-small-world-networks"
+              "icon": "lucide-file",
+              "title": "multimedia-databases-lecture-04"
             }
           }
         ]
@@ -95,7 +97,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "vault/topics/multimedia-databases-lecture-01.md",
+            "file": "vault/topics/multimedia-databases-lecture-04.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -137,7 +139,15 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "vault/xml-structured-text.md",
+    "vault/topics/multimedia-databases-lecture-04.md",
+    "vault/ascii-unicode-character-encoding.md",
     "vault/topics/multimedia-databases-lecture-03.md",
+    "vault/linear-convolution-filters.md",
+    "vault/image-point-operations.md",
+    "raw/lectures/network_science/Vorlesung/l07-small-world-networks.pdf",
+    "study/Study Materials.md",
+    "vault/topics/software-analyse-lecture-5.md",
     "vault/bezier-curves.md",
     "vault/topics/reproducibility-engineering-lecture-1.md",
     "vault/topics/multimedia-databases-lecture-01.md",
@@ -156,8 +166,6 @@
     "vault/concepts/doping-and-extrinsic-semiconductors.md",
     "vault/concepts/diode-applications.md",
     "vault/concepts/digital-circuit-design.md",
-    "vault/concepts/authentication.md",
-    "vault/concepts/actuators.md",
     "Pasted image 20260609110111.png"
   ]
 }
