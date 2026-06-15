@@ -18,6 +18,8 @@ status: active
 | 3 | Parsing | 3_Parsing.pdf | 3_Parsing_JupyterNotebookExport.pdf | **ingested** ✅ |
 | 4 | Control Flow | 4_Controlflow.pdf | 4_Controlflow_JupyterNotebookExport.pdf | **ingested** ✅ |
 | 5 | Data Flow | 5_Dataflow.pdf | 5_Dataflow_JupyterNotebookExport.pdf | **ingested** ✅ |
+| 6 | Abstract Interpretation (Data Flow Part 2) | 6_AbstractInterpretation.pdf | 6_AbstractInterpretation_JupyterNotebookExport.pdf | **ingested** ✅ |
+| 7 | Interprocedural and Heap Analysis | 7_Interprocedural.pdf | 7_Interprocedural_JupyterNotebookExport.pdf | **ingested** ✅ |
 
 ## Raw Paths
 

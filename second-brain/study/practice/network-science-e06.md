@@ -107,3 +107,9 @@ Implement a 1D Schelling model: agents in a line; each needs at least threshold 
 - [[network-science-l06]]
 - [[network-science-l07]]
 - [[network-science-l08]]
+- [[ei-index]] — the (E−I)/(E+I) measure of homophily
+- [[triadic-focal-membership-closure]] — three mechanisms for projected-edge formation
+- [[confounding]] — the third explanation for observed similarity
+- [[selection-vs-socialization]] — the two causal mechanisms being disentangled
+- [[homophily]] — the broader phenomenon
+- [[affiliation-networks]] — the bipartite source for focal/membership closure

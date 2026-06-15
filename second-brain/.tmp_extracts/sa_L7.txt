@@ -1,0 +1,1438 @@
+Software Analysis
+ Interprocedural and Heap Analysis
+
+
+           Gordon Fraser
+Lehrstuhl für Software Engineering II
+                         Outline
+
+
+     1. Limitations of Intraprocedural Analysis
+     2. Interprocedural Analysis
+     3. Data ow Analysis and the Heap
+
+
+
+
+                                                  2
+fl
+Limitations of Intra-Procedural
+            Analysis
+                  int a = 7;
+                  int d = f(a, 2);
+                  int e = a + d;
+
+
+
+
+ If you do not know anything about methods or
+ functions the analysis must be conservative: it is ⊤ or ⊥
+                                                             3
+Limitations of Intra-Procedural
+            Analysis
+
+ int a = 7;         int f(int x, int y) {
+ int d = f(a, 2);     int z = 0;
+ int e = a + d;       if (x > y) {
+                        z = x;
+                      } else {
+                        z = y;
+                      }
+                      return z;
+                    }
+
+
+
+
+                                            4
+Limitations of Intra-Procedural
+            Analysis
+                           f(x, y) =
+
+  b5     a = 7                      z = 0       b0
+
+
+
+  b6   d = f(a, 2)                if (x > y)    b1
+
+
+
+                     b2   z = x                z = y   b3
+
+
+
+                                   return z     b4
+  b7   e = a + d
+
+                                                            5
+Limitations of Intra-Procedural
+            Analysis
+                     x ⟼ {7}         f(x, y) =
+                     y ⟼ {2}
+  b5     a = 7                                z = 0       b0
+
+
+
+  b6   d = f(a, 2)                          if (x > y)    b1
+
+
+
+                               b2   z = x                z = y   b3
+
+
+
+                                             return z     b4
+  b7   e = a + d
+
+                                                                      6
+Limitations of Intra-Procedural
+            Analysis
+                     x ⟼ {7}           f(x, y) =
+                     y ⟼ {2}
+  b5     a = 7                                  z = 0       b0
+
+
+
+  b6   d = f(a, 2)                            if (x > y)    b1
+
+
+
+ b’6    (return)                 b2   z = x                z = y   b3
+
+
+
+                                               return z     b4
+  b7   e = a + d
+                     d ⟼ {2,7}
+                                                                        7
+Limitations of Intra-Procedural
+            Analysis
+                            x ⟼ {7}                       f(x, y) =
+                            y ⟼ {2}
+   b5      a = 7                                                   z = 0       b0
+
+
+
+   b6    d = f(a, 2)                                             if (x > y)    b1
+
+a ⟼ {7}            inb’6 = outb6 ⊔ outb4 = outb’6
+
+   b’6    (return)                                  b2   z = x                z = y   b3
+
+
+
+                                                                  return z     b4
+   b7     e = a + d
+                             d ⟼ {2,7}
+                                                                                           8
+Limitations of Intra-Procedural
+            Analysis
+                            x ⟼ {7}                       f(x, y) =
+                            y ⟼ {2}
+   b5      a = 7                                                   z = 0       b0
+
+
+
+   b6    d = f(a, 2)                                             if (x > y)    b1
+
+a ⟼ {7}            inb’6 = outb6 ⊔ outb4 = outb’6
+
+   b’6    (return)                                  b2   z = x                z = y   b3
+
+
+
+                                                                  return z     b4
+   b7     e = a + d
+                             d ⟼ {2,7}
+  outb7 : e ⟼ {9,14}                                                                       9
+Limitations of Intra-Procedural
+            Analysis
+                           f(x, y) =
+
+  b5     a = 7                      z = 0       b0
+
+
+
+  b6   d = f(a, 2)                if (x > y)    b1
+
+
+
+                     b2   z = x                z = y   b3
+
+
+
+                                   return z     b4
+  b7   e = f(1, 5)
+
+                                                            10
+Limitations of Intra-Procedural
+            Analysis
+                           f(x, y) =
+
+  b5      a = 7                     z = 0       b0
+
+
+
+  b6   d = f(a, 2)
+                                  if (x > y)    b1
+
+ b’6    (return)
+                     b2   z = x                z = y   b3
+
+  b7   e = f(1, 5)
+
+                                   return z     b4
+
+ b’7    (return)
+                                                            11
+Limitations of Intra-Procedural
+            Analysis
+                     x ⟼ {7}         f(x, y) =
+                     y ⟼ {2}
+  b5      a = 7                               z = 0       b0
+
+                     x ⟼ {1}
+  b6   d = f(a, 2)   y ⟼ {5}
+                                            if (x > y)    b1
+
+ b’6    (return)
+                               b2   z = x                z = y   b3
+
+  b7   e = f(1, 5)
+
+                                             return z     b4
+
+ b’7    (return)
+                                                                      12
+Limitations of Intra-Procedural
+            Analysis
+                                                         x ⟼ {1,7}
+                     x ⟼ {7}         f(x, y) =           y ⟼ {2,5}
+                     y ⟼ {2}
+  b5      a = 7                               z = 0       b0
+
+                     x ⟼ {1}
+  b6   d = f(a, 2)   y ⟼ {5}
+                                            if (x > y)    b1
+
+ b’6    (return)
+                               b2   z = x                z = y       b3
+
+  b7   e = f(1, 5)
+
+                                             return z     b4
+
+ b’7    (return)                                   z ⟼ {1,2,5,7}
+                                                                          13
+Limitations of Intra-Procedural
+            Analysis
+                                                                x ⟼ {1,7}
+                     x ⟼ {7}                f(x, y) =           y ⟼ {2,5}
+                     y ⟼ {2}
+  b5      a = 7                                      z = 0       b0
+
+                     x ⟼ {1}
+  b6   d = f(a, 2)   y ⟼ {5}
+                                                   if (x > y)    b1
+
+ b’6    (return)
+                                      b2   z = x                z = y       b3
+                     d ⟼ {1,2,5,7}
+  b7   e = f(1, 5)
+
+                                                    return z     b4
+
+ b’7    (return)      e ⟼ {1,2,5,7}                       z ⟼ {1,2,5,7}
+                                                                                 14
+Limitations of Intra-Procedural
+            Analysis
+• Split call sites b x into call (b cx ) and return (b rx)
+  nodes
+• Intra-procedural edge:
+  •   bcx → bcx carries environment/store
+
+• Inter-procedural edge:
+  • Caller → subroutine, substitutes parameters (for
+      pass-by-value)
+  • Return → Caller, substitutes result (for pass-by-
+      result)
+                                                             15
+Limitations of Intra-Procedural
+            Analysis
+
+• In this naive approach, all call sites connected
+  to subroutine entry and subroutine return
+  connected to all return sites
+• So the analysis is context-insensitive (it cannot
+  distinguish between the different call contexts)
+
+
+                                                      16
+Meet over valid paths
+                    Valid Paths
+                                          f(x, y) =
+
+b5       a = 7                                     z = 0       b0
+
+                     Invalid path
+bc6   d = f(a, 2)
+                                                 if (x > y)    b1
+
+br6    (return)
+                                    b2   z = x                z = y   b3
+
+bc7 e = f(1, 5)
+                                                  return z     b4
+
+br7    (return)
+                                                                           18
+                    Valid Paths
+                                          f(x, y) =
+
+b5       a = 7                                     z = 0       b0
+
+                     Invalid path
+bc6   d = f(a, 2)
+                                                 if (x > y)    b1
+
+br6    (return)
+                                    b2   z = x                z = y   b3
+
+bc7 e = f(1, 5)
+                                                  return z     b4
+
+br7    (return)
+                                                                           19
+                           Valid Paths
+[b5, bc6, b0, b1, b3, b4, br6, ]
+                                         f(x, y) =
+
+    b5       a = 7                                z = 0       b0
+
+
+
+   bc6   d = f(a, 2)
+                                                if (x > y)    b1
+
+   br6     (return)
+                                   b2   z = x                z = y   b3
+
+    bc7 e = f(1, 5)
+                                                 return z     b4
+
+   br7     (return)
+                                                                          20
+                         Valid Paths
+[b5, bc6, b0, b1, b3, b4, br6]
+      [bc7, b0, b1, b2]
+                                       f(x, y) =
+
+   b5       a = 7                               z = 0       b0
+
+
+
+   bc6   d = f(a, 2)
+                                              if (x > y)    b1
+
+   br6    (return)
+                                 b2   z = x                z = y   b3
+
+   bc7 e = f(1, 5)
+                                               return z     b4
+
+   br7    (return)
+                                                                        21
+                      Valid Paths
+• vpathb: Set of all valid paths that reach b
+     Path ::= ⟨P⟩* ⟨M⟩
+     P     ::= bx | bcy
+     M     ::= bcx ⟨M⟩ brx | by ⟨M⟩ | ⟨M⟩ by | ε
+
+• M productions: bcx ⟨M⟩ brx:
+
+     call and return must match up
+
+• P productions (pre x): b cy:
+
+     can have calls that we never return from
+                                                   22
+                 fi
+ Meet over Valid Paths (MVP)
+• Intra-procedural analysis aims for MOP
+  • Undecidable
+• Now we aim for its context-sensitive version:
+     outbi =   ⊔ trans ◦ … ◦ trans ◦ trans (⊥)
+                                p0   pk    bi
+         [p0, … pk] ∈ vpathbi
+
+
+
+  • Undecidable, like MOP
+                                                  23
+Context Sensitivity
+        Context-Sensitivity
+• Goal: distinguish among several context calls.
+• Techniques:
+  • Cloning
+  • Inlining
+  • Call Stacks/Call Strings
+  • Procedure Summaries
+Context Sensitivity: Cloning
+                           f(x, y) =
+
+  b5     a = 7                      z = 0       b0
+
+
+
+  b6   d = f(a, 2)                if (x > y)    b1
+
+
+
+                     b2   z = x                z = y   b3
+
+
+
+                                   return z     b4
+  b7   e = f(1, 5)
+
+                                                            26
+Context Sensitivity: Cloning
+                           f(x, y) =
+
+  b5     a = 7                      z = 0       b0
+
+
+
+  b6   d = f(a, 2)                if (x > y)    b1
+
+
+
+                     b2   z = x                z = y   b3
+
+
+
+                                   return z     b4
+  b7   e = f(1, 5)
+
+                                                            27
+     Context Sensitivity: Cloning
+                         f_1(x, y) =                             f_2(x, y) =
+
+b5     a = 7                      z = 0       b0                          z = 0       b’0
+
+
+
+b6 d = f_1(a, 2)                if (x > y)    b1                        if (x > y)    b’1
+
+                   b2                                b3   b’2                                b'3
+                        z = x                z = y              z = x                z = y
+
+
+
+                                 return z     b4                         return z     b’4
+b7 e = f_2(1, 5)
+
+                                                                                              28
+ Context Sensitivity: Cloning
+                         f_1(x, y) =                             f_2(x, y) =
+b5     a = 7
+                                  z = 0       b0                          z = 0       b’0
+
+
+b6 d = f_1(a, 2)
+                                if (x > y)    b1                        if (x > y)    b’1
+
+b’6   (return)
+                   b2                                b3   b’2                                b'3
+                        z = x                z = y              z = x                z = y
+b7 e = f_2(1, 5)
+
+                                 return z     b4                         return z     b’4
+b’7   (return)
+
+                                                                                              29
+ Context Sensitivity: Cloning
+               x ⟼ {7}                          x ⟼ {1}
+               y ⟼ {2}                          y ⟼ {5}
+
+                               f_1(x, y) =                             f_2(x, y) =
+b5     a = 7
+                                        z = 0       b0                          z = 0       b’0
+
+
+b6 d = f_1(a, 2)
+                                      if (x > y)    b1                        if (x > y)    b’1
+
+b’6   (return)
+                         b2                                b3   b’2                                b'3
+                              z = x                z = y              z = x                z = y
+b7 e = f_2(1, 5)
+
+                                       return z     b4                         return z     b’4
+b’7   (return)
+
+                                                                                                    30
+ Context Sensitivity: Cloning
+               x ⟼ {7}                          x ⟼ {1}
+               y ⟼ {2}                          y ⟼ {5}
+
+                               f_1(x, y) =                             f_2(x, y) =
+b5     a = 7
+                                        z = 0       b0                          z = 0       b’0
+
+
+b6 d = f_1(a, 2)
+                                      if (x > y)    b1                        if (x > y)    b’1
+
+b’6   (return)
+                         b2                                b3   b’2                                b'3
+                              z = x                z = y              z = x                z = y
+b7 e = f_2(1, 5)
+                 d ⟼ {2,7}
+                                       return z     b4                         return z     b’4
+b’7   (return)
+                                                           e ⟼ {1,5}                                31
+Context Sensitivity: Inlining
+                          f(x, y) =
+
+ b5     a = 7                      z = 0       b0
+
+
+
+ b6   d = f(a, 2)                if (x > y)    b1
+
+
+
+                    b2   z = x                z = y   b3
+
+
+
+                                  return z     b4
+ b7   e = f(1, 5)
+
+                                                           32
+     Context Sensitivity: Inlining
+b5      a = 7
+
+
+                                  z = 0       b0                          z = 0       b’0
+b6   d = f(a, 2)
+
+
+                                if (a > 2)    b1                        if (1 > 5)    b’1
+
+                   b2                                b3   b’2                                b'3
+                        d = a                d = 2              z = 1                z = 5
+
+b7   e = f(1, 5)
+
+                                  d = z       b4                          e = z       b’4
+
+
+                                                                                              33
+     Context Sensitivity: Inlining
+b5    a = 7
+
+
+                             z = 0       b0                          z = 0       b’0
+
+
+
+                           if (a > 2)    b1                        if (1 > 5)    b’1
+
+              b2                                b3   b’2                                b'3
+                   d = a                d = 2              z = 1                z = 5
+
+
+
+                             d = z       b4                          e = z       b’4
+
+
+                                                                                         34
+Context Sensitivity: Call Strings
+
+                             f(x, y) =
+
+   b5       a = 7                     z = 0       b0
+
+
+
+   b6    d = f(a, 2)
+                                    if (x > y)    b1
+
+   b’6    (return)
+                       b2   z = x                z = y   b3
+
+   b7    e = f(1, 5)
+
+                                     return z     b4
+
+   b’7    (return)
+                                                              35
+Context Sensitivity: Call Strings
+                       x ⟼ {7[b6]}         f(x, y) =
+                       y ⟼ {2[b6]}
+   b5       a = 7                                   z = 0       b0
+
+                       x ⟼ {1[b7]}
+   b6    d = f(a, 2)   y ⟼ {5[b7]}
+                                                  if (x > y)    b1
+
+   b’6    (return)
+                                     b2   z = x                z = y   b3
+
+   b7    e = f(1, 5)
+
+                                                   return z     b4
+
+   b’7    (return)
+                                                                            36
+Context Sensitivity: Call Strings
+                                                            x ⟼ {1[b7],7[b6]}
+                       x ⟼ {7[b6]}         f(x, y) =        y ⟼ {2[b6],5[b7]}
+                       y ⟼ {2[b6]}
+   b5       a = 7                                   z = 0        b0
+
+                       x ⟼ {1[b7]}
+   b6    d = f(a, 2)   y ⟼ {5[b7]}
+                                                  if (x > y)     b1
+
+   b’6    (return)
+                                     b2   z = x                z = y      b3
+
+   b7    e = f(1, 5)
+
+                                                   return z      b4
+
+   b’7    (return)
+                                                                               37
+Context Sensitivity: Call Strings
+                                                            x ⟼ {1[b7],7[b6]}
+                       x ⟼ {7[b6]}         f(x, y) =        y ⟼ {2[b6],5[b7]}
+                       y ⟼ {2[b6]}
+   b5       a = 7                                   z = 0        b0
+
+                       x ⟼ {1[b7]}
+   b6    d = f(a, 2)   y ⟼ {5[b7]}
+                                                  if (x > y)     b1
+
+   b’6    (return)
+                                     b2   z = x                z = y      b3
+
+   b7    e = f(1, 5)
+
+                                                   return z      b4
+
+   b’7    (return)                            z ⟼ {1[b7],2[b6],5[b7],7[b6]}
+                                                                               38
+Context Sensitivity: Call Strings
+                                                             x ⟼ {1[b7],7[b6]}
+                       x ⟼ {7[b6]}          f(x, y) =        y ⟼ {2[b6],5[b7]}
+                       y ⟼ {2[b6]}
+   b5       a = 7                                    z = 0        b0
+
+                       x ⟼ {1[b7]}
+   b6    d = f(a, 2)   y ⟼ {5[b7]}
+                                                   if (x > y)     b1
+
+   b’6    (return)
+                                      b2   z = x                z = y      b3
+                          d ⟼ {2,7}
+   b7    e = f(1, 5)
+
+                                                    return z      b4
+
+   b’7    (return)      d ⟼ {1,5}
+                                               z ⟼ {1[b7],2[b6],5[b7],7[b6]}
+                                                                                39
+Context Sensitivity: Call Strings
+• We used call sites to make      int g(y) {
+  context explicit                  return y;
+                                  }
+• Generalization:                 int f(x) {
+  • Call Strings support deeper     return g(x)
+    nesting                              + g(5);
+                                  }
+ • Examples: [b0, b6], [b1, b6]
+                                  …
+ • Must bound length of call
+    strings to ensure             f(1);
+    termination                   f(2);
+
+                                                   40
+Context Sensitivity: Call Strings
+
+
+
+
+           Call strings of size 1
+                                    41
+Context Sensitivity: Call Strings
+
+
+
+
+           Call strings of size 2
+                                    42
+        Context Sensitivity:
+       Procedure Summaries
+                          f(x, y) =
+
+b5     a = 7                       z = 0       b0
+
+
+
+b6   d = f(a, 2)                 if (x > y)    b1
+
+
+
+                    b2   z = x                z = y   b3
+
+
+
+                                  return z     b4
+b7   e = f(1, 5)
+
+                                                           43
+Composed Transfer Function
+                                 f(x, y) =
+
+                                          z = 0       b0           z ⟼ {0}
+
+
+
+
+                                        if (x > y)    b1     id
+
+
+
+               z ⟼ {x}   b2     z = x                z = y    b3   z ⟼ {y}
+
+
+
+                                         return z     b4     id
+
+
+  transb0 ◦ transb1 = [z ⟼ 0]
+
+                                                                             44
+Composed Transfer Function
+                                 f(x, y) =
+
+                                          z = 0       b0           z ⟼ {0}
+
+
+
+
+                                        if (x > y)    b1     id
+
+
+
+               z ⟼ {x}   b2     z = x                z = y    b3   z ⟼ {y}
+
+
+
+                                         return z     b4     id
+
+  transb0 ◦ transb1 = [z ⟼ 0]
+  transb0 ◦ transb1 ◦ transb2 = [z ⟼ {x}]
+                                                                             45
+Composed Transfer Function
+                                    f(x, y) =
+
+                                             z = 0       b0           z ⟼ {0}
+
+
+
+
+                                           if (x > y)    b1     id
+
+
+
+                    z ⟼ {x}   b2   z = x                z = y    b3   z ⟼ {y}
+
+
+
+                                            return z     b4     id
+
+transb0 ◦ transb1 = [z ⟼ 0]
+transb0 ◦ transb1 ◦ transb2 = [z ⟼ {x}]
+transb0 ◦ transb1 ◦ transb3 = [z ⟼ {y}]
+                                                                                46
+  Composed Transfer Function
+                                        f(x, y) =
+
+                                                 z = 0       b0           z ⟼ {0}
+
+
+
+
+                                               if (x > y)    b1     id
+
+
+
+                       z ⟼ {x}   b2    z = x                z = y    b3   z ⟼ {y}
+
+
+
+                                                return z     b4     id
+transb0 ◦ transb1 = [z ⟼ 0]
+transb0 ◦ transb1 ◦ transb2 = [z ⟼ {x}]
+transb0 ◦ transb1 ◦ transb3 = [z ⟼ {y}]
+transb0 ◦ transb1 ◦ (transb2 ⊔ transb3)= [z ⟼ {x,y}]                                47
+  Composed Transfer Function
+                                         f(x, y) =
+
+                                                  z = 0       b0           z ⟼ {0}
+
+
+
+
+                                                if (x > y)    b1     id
+
+
+
+                        z ⟼ {x}   b2    z = x                z = y    b3   z ⟼ {y}
+
+
+transb0 ◦ transb1 = [z ⟼ 0]
+                                              return z  b4     id
+transb0 ◦ transb1 ◦ transb2 = [z ⟼ {x}]
+transb0 ◦ transb1 ◦ transb3 = [z ⟼ {y}]
+transb0 ◦ transb1 ◦ (transb2 ⊔ transb3) = [z ⟼ {x,y}]
+transb0 ◦ transb1 ◦ (transb2 ⊔ transb3) ◦ transb4 = [z ⟼ {x,y}]
+                                                                                     48
+        Context Sensitivity:
+       Procedure Summaries
+                                       f(x, y) =
+
+b5     a = 7       a ⟼ {7}                      z = 0       b0
+
+
+
+b6   d = f(a, 2)   [z ⟼ {x,y}]                if (x > y)    b1
+
+            d ⟼ {7, 2}
+
+                                 b2   z = x                z = y   b3
+
+
+
+                                               return z     b4
+b7   e = f(1, 5)   [z ⟼ {x,y}]
+            e ⟼ {1, 5}                                                  49
+Composed Transfer Function
+
+• Symbolically composing transfer functions yields a
+  combined transfer function for f():
+  • transf = [return ⟼ {x,y}]
+• Can use trans at each call site of f() without
+  knowing the subroutine’s body
+
+
+                                                       50
+Composed Transfer Function
+• Limitations:
+  • Requires suitable representation for symbolic
+    result
+  • Depends on strength of symbolic reasoning
+  • Must analyze recursion patterns
+  • Worst cases:
+    • transf = ⊤ (i.e., as imprecise as intra-procedural analysis)
+    • transf is symbolic expression as complex as f itself
+                                                                     51
+Heap Analysis
+               Limitations
+                 • Program Analysis 1:
+                   • a.x and b.x and c.x are different things
+a = new A();
+b = a;             • We print 17 and 23
+c = new A();       • Unsound analysis!
+a.x = 17;
+c.x = 23;        • Program Analysis 2:
+b.x = 42;          • a and c and b might point to the same object
+print(a.x);
+print(c.x);        • We print one of {17, 23, 42}, twice
+                   • Imprecise analysis
+                 • Need to know:
+                   • Which variables can be aliases of each
+                      other?
+                                                                    53
+Heap Graph
+
+
+
+
+             54
+Heap Graph
+
+
+
+
+             55
+Heap Graph
+
+
+
+
+             56
+Heap Graph
+
+
+
+
+             57
+Heap Graph
+
+
+
+
+             58
+Heap Graph
+
+
+
+
+             59
+Heap Graph
+
+
+
+
+             60
+Heap Graph
+
+
+
+
+             61
+Heap Graph
+
+
+
+
+             62
+63
+       Pointer Operations
+
+Referencing       Dereferencing      Aliasing
+
+C                 C                  C
+my_t *p = &var;   int x = *ptr;      my_t *pa;
+p = malloc(8);    x = ptr2->field;   pa = pb;
+
+
+Java              Java               Java
+A a = new A();    int x = a.f;       A b = a;
+
+
+
+
+                                                 64
+      Points-to Information
+• Variable pairs that refer to the same memory location
+  • <*a, b>, <*c, b>, <*a, *c>
+  • *a and b alias, same with *c and b
+• Points-to pairs:
+  • <a → b>, <c → b>
+  • a points to b, and c points to b (hence *a and *c are alias)
+• Alias sets:
+  • {*a, b, *c}
+  • They all point to the same memory location
+                                                                   65
+                    Locations
+• Static locations
+  • Uniquely identi ed by name
+• Stack-dynamic locations (Local vars, parameters)
+  • Named
+  • May never exist (function not called)
+  • May exist more than once (recursion)
+• Heap-dynamic locations
+  • Not named
+  • May exist arbitrarily often
+                                                     66
+        fi
+Heap/Stack Locations: Design Space
+• Don’t distinguish, or
+• Distinguish by:
+  • Type
+  • Name
+  • Calling context (Context-sensitive analysis)
+  • Control ow (Flow-sensitive analysis)
+  • Containing heap objects (Object sensitivity)
+  • Referencing eld name in objects ( eld sensitivity)
+  • Array index (array sensitivity)
+  • Pointer arithmetic
+  • Literature has explored many options
+                                                         67
+                         fi
+      fi
+ fl
+     Steensgaard’s Points-To Analysis
+
+     • Steensgaard, B. (1996, January). Points-to analysis in almost linear time.
+       In Proceedings of the 23rd ACM SIGPLAN-SIGACT Symposium on Principles
+       of Programming Languages (pp. 32-41).
+
+     • Fast: O(n⍺(n,n)) over variables in program
+     • Developed to deal with large code bases at AT&T
+     • Sacri ces Precision
+     • Equality-based
+     • Basis for many more precise algorithms
+                                                                                    68
+fi
+Steensgaard’s Points-To Analysis
+• C pointer semantics:
+   • &a: Address of a
+   • *a: Object pointed to by a
+   • Converse operators: *(&a) = a
+• Steensgaards analysis considers four cases:
+
+                   C            Java
+ Referencing       a = &b       a = new A()     lb ∈ pts(a)
+
+ Aliasing          a = b        a = b           pts(a) = pts(b)
+ Dereferencing     a = *b       a = b.f         for each l ∈ pts(b) → pts(a) = pts(l)
+ read
+ Dereferencing     *a = b       a.f = b
+ write                                          for each l ∈ pts(a) → pts(b) = pts(l)   69
+Steensgaard’s Points-To Analysis
+                       Actual:
+
+
+
+   int i, j, k;
+   int *a = &i;
+   int *b = &k;
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+   int *c = *q;
+
+
+
+
+                                   70
+Steensgaard’s Points-To Analysis
+                       Actual:
+                                  i
+
+   int i, j, k;                   j
+   int *a = &i;
+   int *b = &k;                   k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                                  i
+   int *c = *q;
+                                  j
+
+                                  k
+                                      71
+Steensgaard’s Points-To Analysis
+                       Actual:
+                                  a   i
+
+   int i, j, k;                       j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                                  a   i
+   int *c = *q;
+                                      j
+
+                                      k
+                                          72
+Steensgaard’s Points-To Analysis
+                       Actual:
+                                  a   i
+
+   int i, j, k;                   b   j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                                  a   i
+   int *c = *q;
+                                  b   j
+
+                                      k
+                                          73
+Steensgaard’s Points-To Analysis
+                       Actual:
+                                  a   i
+
+   int i, j, k;                   b   j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                                  a   i
+   int *c = *q;
+                                  b   j
+
+                                      k
+                                          74
+Steensgaard’s Points-To Analysis
+                       Actual:
+                          p       a   i
+
+   int i, j, k;                   b   j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                          p       a   i
+   int *c = *q;
+                                  b   j
+
+                                      k
+                                          75
+Steensgaard’s Points-To Analysis
+                       Actual:
+                          p       a   i
+
+   int i, j, k;           q       b   j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                          p       a   i
+   int *c = *q;
+                          q       b   j
+
+                                      k
+                                          76
+Steensgaard’s Points-To Analysis
+                       Actual:
+                          p       a   i
+
+   int i, j, k;           q       b   j
+   int *a = &i;
+   int *b = &k;                       k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                          p       a   i
+   int *c = *q;
+                          q       b   j
+
+                                      k
+                                          77
+Steensgaard’s Points-To Analysis
+                       Actual:
+                          p       a   i
+
+   int i, j, k;           q       b   j
+   int *a = &i;
+   int *b = &k;                   c   k
+   a = &j;
+   int **p = &a;
+                   Steensgaard:
+   int **q = &b;
+   p = q;
+                          p       a   i
+   int *c = *q;
+                          q       b   j
+
+                                  c   k
+                                          78
+     Steensgaard’s Points-To Analysis
+     • Points-to sets pts(v) serve as abstraction over addresses that v
+            can point to
+
+     • Steensgaard’s points-to-analysis:
+            • Insensitive to ow, context, elds, …
+     • Ef ciently implemented using Union-Find data structure
+     • Highly ef cient
+     • Imprecise
+                                                                          79
+                             fi
+                fl
+       fi
+fi
+Andersen’s Points-To Analysis
+• Andersen, L. O. (1994). Program analysis and specialization for the
+  C programming language (Doctoral dissertation, University of
+  Copenhagen).
+
+• Asymptotic performance is O(n3)
+• More precise than Steensgaard’s analysis
+  • Still not terribly precise
+• Subset-based (a.k.a. inclusion-based)
+• Basis for many algorithms with performance improvements
+                                                                        80
+Andersen’s Points-To Analysis
+• Collect constraints, resolve as needed
+• For each statement in program, we record:
+  • If Referencing (a = &b):
+     {lb} ⊆ pts(a)
+
+  • If Aliasing (a = b):
+     pts(b) ⊆ pts(a)
+
+  • If Dereferencing read (a = *b):
+     pts(*b) ⊆ pts(a)
+
+  • If Dereferencing write (*a = b):
+     pts(b) ⊆ pts(*a)
+
+                                              81
+Andersen’s Points-To Analysis
+                    Actual:
+
+
+
+  int i, j, k;
+  int *a = &i;
+  int *b = &k;
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+  int *c = *q;
+
+
+
+
+                                82
+Andersen’s Points-To Analysis
+                    Actual:
+                              i
+
+  int i, j, k;                j
+  int *a = &i;
+  int *b = &k;                k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                              i
+  int *c = *q;
+                              j
+
+                              k
+                                  83
+Andersen’s Points-To Analysis
+                    Actual:
+                              a   i
+
+  int i, j, k;                    j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                              a   i
+  int *c = *q;
+                                  j
+
+                                  k
+                                      84
+Andersen’s Points-To Analysis
+                    Actual:
+                              a   i
+
+  int i, j, k;                b   j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                              a   i
+  int *c = *q;
+                              b   j
+
+                                  k
+                                      85
+Andersen’s Points-To Analysis
+                    Actual:
+                              a   i
+
+  int i, j, k;                b   j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                              a   i
+  int *c = *q;
+                              b   j
+
+                                  k
+                                      86
+Andersen’s Points-To Analysis
+                    Actual:
+                       p      a   i
+
+  int i, j, k;                b   j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                       p      a   i
+  int *c = *q;
+                              b   j
+
+                                  k
+                                      87
+Andersen’s Points-To Analysis
+                    Actual:
+                       p      a   i
+
+  int i, j, k;         q      b   j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                       p      a   i
+  int *c = *q;
+                       q      b   j
+
+                                  k
+                                      88
+Andersen’s Points-To Analysis
+                    Actual:
+                         p    a   i
+
+  int i, j, k;           q    b   j
+  int *a = &i;
+  int *b = &k;                    k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p    a   i
+  int *c = *q;       ⊆
+                         q    b   j
+
+                                  k
+                                      89
+Andersen’s Points-To Analysis
+                    Actual:
+                         p        a   i
+
+  int i, j, k;           q        b   j
+  int *a = &i;
+  int *b = &k;                    c   k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p        a   i
+  int *c = *q;       ⊆
+                         q        b   j
+
+                             *⊆   c   k
+                                          90
+Andersen’s Points-To Analysis
+                    Actual:
+                         p        a       i
+
+  int i, j, k;           q        b       j
+  int *a = &i;
+  int *b = &k;                    c       k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p        a       i
+  int *c = *q;       ⊆
+                         q        b       j
+                                      ⊆
+                             *⊆   c       k
+                                              91
+Andersen’s Points-To Analysis
+                    Actual:
+                         p            a   i
+
+  int i, j, k;           q            b   j
+  int *a = &i;
+  int *b = &k;                        c   k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p            a   i
+  int *c = *q;       ⊆
+                         q            b   j
+                                  ⊆
+                             *⊆       c   k
+                                              92
+Andersen’s Points-To Analysis
+                    Actual:
+                         p            a   i
+
+  int i, j, k;           q            b   j
+  int *a = &i;
+  int *b = &k;                        c   k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p            a   i
+  int *c = *q;       ⊆
+                         q            b   j
+                                  ⊆
+                             *⊆       c   k
+                                              93
+Andersen’s Points-To Analysis
+                    Actual:
+                         p            a   i
+
+  int i, j, k;           q            b   j
+  int *a = &i;
+  int *b = &k;                        c   k
+  a = &j;
+  int **p = &a;
+                  Andersen:
+  int **q = &b;
+  p = q;
+                         p            a   i
+  int *c = *q;       ⊆
+                         q            b   j
+                                  ⊆
+                             *⊆       c   k
+                                              94
+

@@ -18,6 +18,14 @@ This page connects every study material — flashcard decks, practice problem se
 
 ## Microelectronics (MMDB)
 
+### Lecture Knowledge (no flashcards yet — request via `drill me on [topic]`)
+- [[microelectronics-lecture-1]] — Semiconductor physics
+- [[microelectronics-lecture-2]] — Doping & pn junctions
+- [[microelectronics-lecture-3]] — pn junction details
+- [[microelectronics-lecture-4]] — Diode applications
+- [[microelectronics-lecture-5]] — MOS transistors
+- [[microelectronics-lecture-6]] — **NEW** CMOS logic gates (NAND, NOR, XOR)
+
 ### Flashcard Decks
 - [[study/flashcards/mmdb-ex01-flashcards|MMDB Exercise 1 — Flashcards]]
 - [[study/flashcards/mmdb-ex02-flashcards|MMDB Exercise 2 — Flashcards]]
@@ -75,6 +83,17 @@ This page connects every study material — flashcard decks, practice problem se
 ---
 
 ## IoT Security
+
+### Lecture Knowledge (no flashcards yet — request via `drill me on [topic]`)
+- [[iot-lecture-1]] — IoT fundamentals
+- [[iot-lecture-2]] — Vulnerabilities, attacks, countermeasures
+- [[iot-lecture-3]] — CIA, threat modelling, SDLC
+- [[iot-lecture-4]] — DevOps, secure design goals
+- [[iot-lecture-5]] — Attack surface analysis
+- [[iot-lecture-6]] — **NEW** Cryptography & lightweight security primitives
+- [[paper-iot-lightweight-hardware-architecture]] — Mexis et al. 2021 (JETC) — DRAM PUF + HMAC + AES
+- [[paper-iot-mexis-2021-poster]] — Mexis et al. 2021 (SIGCOMM poster)
+- [[paper-zhou-iot-2-0]] — Zhou et al. 2021 (IEEE Access) — IoT 2.0 survey
 
 ### Exam Materials
 - [[study/exams/iot-security-exam-format|IoT Security Exam Format — Question Types and Study Strategy]]

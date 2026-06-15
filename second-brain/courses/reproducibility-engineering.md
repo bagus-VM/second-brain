@@ -18,6 +18,7 @@ status: active
 | 3 | Hypotheses | SoSe_2026_RepEng_IC_3___Hypotheses.pdf | **ingested** ✅ |
 | 4 | Git | SoSe_2026_RepEng_IC_4___git.pdf | **ingested** ✅ |
 | 5 | Reproducible Builds | SoSe_2026_RepEng_IC_5___Reproducible_Builds.pdf | **ingested** ✅ |
+| 6 | Database System Architectures | SoSe_2026_RepEng_IC_6___Architectures.pdf | **ingested** ✅ |
 
 ## Key Concepts
 
@@ -34,6 +35,7 @@ status: active
 | 3 | Sheet_3.pdf | **ingested** ✅ |
 | 4 | Sheet_4.pdf | **ingested** ✅ |
 | 5 | Sheet_5.pdf | **ingested** ✅ |
+| 6 | Sheet_6.pdf | **ingested** ✅ |
 
 ## Supplementary Material
 

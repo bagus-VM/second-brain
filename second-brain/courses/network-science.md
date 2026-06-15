@@ -32,7 +32,8 @@ status: active
 | 3 | e03-strong-and-weak-ties.pdf | e03-strong-and-weak-ties-solutions.pdf | **ingested** ✅ |
 | 4 | e04-centrality-and-roles.pdf | e04-centrality-and-roles-solutions.pdf | **ingested** ✅ |
 | 5 | e05-community-detection.pdf | e05-community-detection-solutions.pdf | **ingested** ✅ |
-| 6 | e06-social-context.pdf | — | **ingested** ✅ |
+| 6 | e06-social-context.pdf | e06-social-context-solutions2.pdf | **ingested** ✅ |
+| 7 | e07-structural-balance-student.pdf | — | **ingested** ✅ |
 
 ## Raw Paths
 
