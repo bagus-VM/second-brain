@@ -9,7 +9,7 @@ prerequisites: [ascii-unicode-character-encoding]
 ---
 
 ## One-line Summary
-XML (Extensible Markup Language) is a platform-independent, self-describing markup language for representing structured data, defined as a subset of SGML that combines SGML's flexibility with HTML's wide acceptance.
+XML (Extensible Markup Language) is a platform-independent, ==self-describing markup language for representing structured data==, defined as a subset of SGML that combines SGML's flexibility with HTML's wide acceptance.
 
 ## Core Intuition
 Plain text (ASCII/Unicode) stores characters, but says nothing about *structure*. Markup text separates content from presentation by embedding structural tags. XML takes this further: it lets you define your own tags to describe *any* data structure (not just document formatting). This makes XML an "ideal medium" for exchanging documents and data between heterogeneous systems — a critical requirement for multimedia databases that must interoperate across platforms.
