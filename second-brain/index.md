@@ -2,49 +2,25 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Last updated:** 2026-06-22
 **Total pages:** 592 (vault: 540 pages + study: 52 practice/flashcards/exam materials; excluding raw/)
 **Active courses:** 6
-=======
-**Last updated:** 2026-06-09
-**Total pages:** 386
-**Active courses:** 8
->>>>>>> 1287aa7 (lint 09-06-2026)
-=======
-**Last updated:** 2026-06-14
-**Total pages:** 595 (vault only: 44 topic pages + 267 concept pages + 21 practice + 22 flashcards + courses; excluding raw/)
-**Active courses:** 6
->>>>>>> 20ac138 (2nd week of june)
 
 ---
 
 ## Exam Calendar
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-<<<<<<< HEAD
 | [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex08 practice complete ✅ (83+ pages) |
 | [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
 | [[reproducibility-engineering]] | 30 July 2026 | ~46 | **8/8 lectures ✅** + Sheet 1–7 (70+ pages) |
 | [[software-analyse]] | 31 July 2026 | ~47 | **8/8 lectures ✅** (85+ pages) |
 | [[iot-security]] | 05 Aug 2026 | ~52 | **7/7 lectures ✅** (~70 pages) + 3 papers ingested |
-=======
-| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex07 (78 pages) |
-| [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~46 | **6/6 lectures ✅** + Sheet 1–6 (60 pages) |
-| [[software-analyse]] | 31 July 2026 | ~47 | **7/7 lectures ✅** (75 pages) |
-| [[iot-security]] | 05 Aug 2026 | ~52 | **6/6 lectures ✅** (~60 pages) + 3 papers ingested |
->>>>>>> 20ac138 (2nd week of june)
 | [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
 
 ---
 
-<<<<<<< HEAD
 ## 📚 Multimedia Databases (83 pages)
-=======
-## 📚 Multimedia Databases (78 pages)
->>>>>>> 20ac138 (2nd week of june)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -206,14 +182,11 @@
 | [[ei-index]] | (E−I)/(E+I) measure of homophily | current |
 | [[triadic-focal-membership-closure]] | Three projection-edge-formation mechanisms in bipartite networks | current |
 | [[confounding]] | Third explanation for observed correlation between similarity and tie | current |
-<<<<<<< HEAD
 | [[experiment-vs-observation]] | Experimental vs observational causal inference | current |
 | [[manski-reflection-problem]] | Endogenous vs contextual effects not separately identified | current |
 | [[kossinets-watts-2006]] | Empirical evolving network: triadic + focal + membership closure | current |
 
 
-=======
->>>>>>> 20ac138 (2nd week of june)
 
 ### L06 — Structural Balance
 | Page | Summary | Status |
@@ -226,12 +199,6 @@
 | [[weak-structural-balance]] | Davis 1967: k-camp relaxation allowing (-,-,-) | current |
 | [[frustration-index]] | Min edge flips, NP-hard | current |
 | [[cycle-criterion]] | Balance ⟺ every cycle has even number of negatives | current |
-<<<<<<< HEAD
-=======
-| [[ei-index]] | (E−I)/(E+I) measure of homophily, with random-mixing baseline | current |
-| [[triadic-focal-membership-closure]] | Three mechanisms for new ties in affiliation-network projections | current |
-| [[confounding]] | The third explanation for observed similarity beyond selection and socialisation | current |
->>>>>>> 20ac138 (2nd week of june)
 
 ### L07 — Small-World Networks
 | Page | Summary | Status |
@@ -270,7 +237,6 @@
 | [[link-prediction-via-embeddings]] | Scoring by proximity | current |
 | [[pagerank-algorithm]] | Iterative ranking algorithm, damping factor, stationary distribution | current |
 | [[six-degrees-of-separation]] | Milgram's experiment, small-world phenomenon | current |
-<<<<<<< HEAD
 | [[word2vec-skip-gram]] | Skip-gram: predict context from target, basis of DeepWalk | current |
 | [[hierarchical-navigable-small-world]] | HNSW: layered graph for approximate nearest-neighbor search | current |
 
@@ -298,8 +264,6 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[network-science-exercise-prep]] | Exercise-based exam prep: NetworkX functions, hand calculations, key formulas | current |
-=======
->>>>>>> 1287aa7 (lint 09-06-2026)
 
 ---
 
@@ -395,18 +359,6 @@
 | [[reproducibility-engineering-sheet-7]] | Sheet 7: BenchBase lab — SQLite vs PostgreSQL benchmarking | current |
 | [[reproducibility-engineering-sheet-7-flashcards]] | Flashcards for Sheet 7 | current |
 
-### L06 — Database System Architectures
-| Page | Summary | Status |
-|------|---------|--------|
-| [[reproducibility-engineering-lecture-6]] | DB architectures (file-based, client/server), SQLite features, Docker Compose, foreign tables | current |
-| [[containerization-for-builds]] | Docker for reproducible environments (prereq from L05) | current |
-| [[binary-build-reproducibility]] | Bitwise-identical builds; the 4-snippet question (1 of 4 reproducible) | current |
-| [[c-preprocessor]] | `__FILE__`, `__LINE__`, `__TIME__`, `__DATE__` as build-time non-determinism sources | current |
-| [[out-of-source-build]] | Build artefacts in a separate dir; `mkdir build && cd build && ../configure` | current |
-| [[make-dependency-tracking]] | Make's mtime-based incremental rebuild algorithm; phony targets; parallel builds | current |
-| [[client-server-db-architecture]] | Server process + client library + network; the contrast to SQLite | current |
-| [[foreign-tables-postgresql]] | Query external files (e.g., /proc/meminfo) as if SQL tables via file_fdw | current |
-
 ---
 
 ## 📚 Software Analyse (75 pages)
@@ -491,7 +443,6 @@
 | [[heap-analysis]] | Family of analyses for heap memory; design space of 9 axes | current |
 | [[aliasing]] | Two names for same memory location; alias sets from points-to | current |
 | [[union-find-data-structure]] | Partition into equivalence classes; ~O(1) per op with path compression | current |
-<<<<<<< HEAD
 
 ### L08 — Program Slicing
 | Page | Summary | Status |
@@ -503,8 +454,6 @@
 | [[program-slicing]] | Backward/forward slice via PDG reachability | current |
 | [[system-dependence-graph]] | PDG extended to multiple procedures for interprocedural slicing | current |
 | [[dynamic-slicing]] | Slice for specific input + execution trace | current |
-=======
->>>>>>> 20ac138 (2nd week of june)
 
 ### Projects
 | Page | Summary | Status |
@@ -589,7 +538,6 @@
 | [[lightweight-cryptography]] | NIST process 2015–2023; PRESENT, GIFT, ChaCha20, ASCON for constrained IoT | current |
 | [[dolev-yao-attacker-model]] | Standard cryptographic adversary: controls network, cannot break primitives | current |
 | [[iot-2-0]] | Next-gen IoT with 5G/6G, AI/ML, edge computing, blockchain, Industry 4.0 | current |
-<<<<<<< HEAD
 
 ### L07 — Identity Lifecycle & Privacy
 | Page | Summary | Status |
@@ -597,8 +545,6 @@
 | [[iot-lecture-7]] | IAM, bootstrapping, PKI, OAuth 2.0, privacy by design, GDPR | current |
 | [[iot-identity-lifecycle]] | Device identity from bootstrapping through deactivation | current |
 | [[iot-privacy-concerns]] | Pervasive sensing, metadata leakage, complex data sharing chains | current |
-=======
->>>>>>> 20ac138 (2nd week of june)
 | [[iot-applications]] | Smart home, IIoT, healthcare, transportation, smart grid, space — use cases | current |
 
 ### 📄 IoT Security Papers (3 ingested)
@@ -660,102 +606,9 @@
 ### Lecture Topic Pages
 | Page | Summary | Status |
 |------|---------|--------|
-<<<<<<< HEAD
 | [[microelectronics-lecture-1]] | L01: Semiconductor Physics | current |
 | [[microelectronics-lecture-2]] | L02: Doping and Extrinsic Semiconductors | current |
 | [[microelectronics-lecture-3]] | L03: P-N Junction Overview | current |
 | [[microelectronics-lecture-4]] | L04: Diode Applications — rectifiers, limiters, clampers | current |
 | [[microelectronics-lecture-5]] | L05: MOS Transistors — MOSFET structure and operation | current |
 | [[microelectronics-lecture-6]] | L06: CMOS Logic Gates and Digital Circuits | current |
-=======
-| [[rectifier]] | Circuit converting AC to DC using diodes | current |
-| [[half-wave-rectifier]] | Single diode, passes one half of AC waveform | current |
-| [[full-wave-rectifier]] | Both half-cycles, center-tap or bridge configuration | current |
-| [[bridge-rectifier]] | Four diodes, full-wave without center-tapped transformer | current |
-| [[clamper-circuit]] | DC restorer shifting waveform level using capacitor and diode | current |
-| [[limiter-circuit]] | Voltage clipping at threshold, series/parallel/dual-diode | current |
-
-### L05 — MOS Transistors
-| Page | Summary | Status |
-|------|---------|--------|
-| [[transistor]] | Three-terminal device, gate controls current, digital foundation | current |
-| [[mosfet]] | Metal-Oxide-Semiconductor FET, field-effect transistor | current |
-| [[mos-capacitor]] | Capacitor beneath gate controlling channel charge carriers | current |
-| [[threshold-voltage]] | Minimum V_GS to create conducting channel | current |
-| [[nmos-transistor]] | N-channel in P-substrate, electrons, V_GS>V_TH | current |
-| [[pmos-transistor]] | P-channel in N-substrate, holes, |V_GS|>|V_TH| | current |
-| [[mosfet-operating-regions]] | Cutoff/Linear/Saturation conditions with formulas | current |
-
-### L06 — CMOS Logic Gates and Digital Circuits
-| Page | Summary | Status |
-|------|---------|--------|
-| [[microelectronics-lecture-6]] | CMOS inverter, NAND, NOR, XOR, arbitrary gate composition | current |
-| [[cmos-logic-gates]] | PDN for F, PUN for ¬F; static power ≈ 0; XOR breaks the rule | current |
-| [[cmos-nand-gate]] | 4T gate: series nMOS + parallel pMOS; universal Boolean primitive | current |
-| [[cmos-nor-gate]] | 4T gate: parallel nMOS + series pMOS; dual of NAND | current |
-| [[cmos-xor-gate]] | Not in single-stage CMOS; 12T transmission-gate or 6T static or multi-stage | current |
-
-### 🗺️ Microelectronics Topics
-| Page | Summary | Status |
-|------|---------|--------|
-| [[semiconductor-physics]] | Band structure, carrier concentration, why Si dominates | current |
-| [[doping-and-extrinsic-semiconductors]] | Donor/acceptor types, doping methods, Fermi level shifts | current |
-| [[p-n-junction-overview]] | Junction formation, depletion region, biasing, breakdown | current |
-| [[diode-applications]] | Rectifiers, clippers, clampers, Zener regulators | current |
-| [[mos-transistors]] | MOS capacitor, threshold voltage, drain current, nMOS/pMOS | current |
-| [[digital-circuit-design]] | Combinational/sequential circuits, CMOS gate design, timing | current |
-| [[vlsi-design]] | VLSI design flow, fabrication, Moore's Law, DFM | current |
-
----
-
-## 🎓 Courses
-
-| Course | Instructor | Semester | Exam | Status |
-|--------|-----------|----------|------|--------|
-| [[iot-security]] | Dr. Anagnostopoulos | SS 2026 | Aug 05 | active |
-| [[introduction-to-microelectronics]] | Dr. Anagnostopoulos | SS 2026 | Aug 06 | active |
-| [[multimedia-databases]] | | SS 2026 | Jul 21 | active |
-| [[network-science]] | | SS 2026 | Jul 28 | active |
-| [[reproducibility-engineering]] | | SS 2026 | Jul 30 | active |
-| [[software-analyse]] | | SS 2026 | Jul 31 | active |
-
----
-
-## 🔗 Connections
-
-| Page | What It Connects | Status |
-|------|-----------------|--------|
-| *(populated as cross-topic patterns emerge)* | | |
-
----
-
-## 📝 Study Materials
-
-| Page | Summary | Status |
-|------|---------|--------|
-| [[study-materials-index]] | Master index of all flashcard decks and practice problem sets | current |
-
----
-
-## 📋 Open Questions
-
-*(Tracked across all courses — see individual pages for course-specific open questions)*
-
----
-
-## 📁 Raw Sources Ingested
-
-| Source | Type | Date Ingested | Pages Created |
-|--------|------|--------------|---------------|
-| MMDB L01-L06 | Lectures | 2026-06-01 | 73 |
-| Network Science L01-L09 | Lectures | 2026-06-01 | 128 |
-| Reproducibility Eng L01-L05 | Lectures | 2026-06-01 | 44 |
-| Software Analyse L01-L05 | Lectures | 2026-06-01 | 49 |
-| IoT Security L01-L05 | Lectures | 2026-06-02 | 39 |
-| IoT Security L06 + 3 papers (Mexis×2, Zhou) | Lectures + papers | 2026-06-14 | 21 |
-| Intro to Microelectronics L01-L05 | Lectures | 2026-06-02 | 39 |
-<<<<<<< HEAD
->>>>>>> 1287aa7 (lint 09-06-2026)
-=======
-| Intro to Microelectronics L06 | Lectures | 2026-06-14 | 5 |
->>>>>>> 20ac138 (2nd week of june)
