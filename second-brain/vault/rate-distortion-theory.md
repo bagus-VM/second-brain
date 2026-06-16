@@ -12,7 +12,7 @@ prerequisites: [lossless-vs-lossy-compression, transform-coding]
 Rate-distortion theory formalizes the fundamental tradeoff in lossy compression: how many bits (rate) are needed to represent a signal with at most a given amount of distortion (quality loss)?
 
 ## Core Intuition
-You can't have both perfect quality and tiny file size — there's always a tradeoff. Rate-distortion theory mathematically describes this tradeoff: for any given acceptable distortion level D, there's a minimum rate R(D) below which you cannot go. In practice, this means encoders must choose: spend more bits for better quality, or save bits and accept more distortion. The quantization parameter (QP) is the primary knob that controls this tradeoff in video codecs.
+You can't have both perfect quality and tiny file size — there's always a tradeoff. Rate-distortion theory mathematically describes this tradeoff: ==for any given acceptable distortion level D, there's a minimum rate R(D) below which you cannot go==. In practice, this means encoders must choose: spend more bits for better quality, or save bits and accept more distortion. The quantization parameter (QP) is the primary knob that controls this tradeoff in video codecs.
 
 ## Formal Definition / Statement
 **Rate-Distortion Function R(D)**:

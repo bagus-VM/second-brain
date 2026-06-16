@@ -98,6 +98,26 @@
 | [[curse-of-dimensionality]] | Why nearest-neighbour loses meaning in high-D | current |
 | [[similarity-measures]] | Quantifying closeness | current |
 
+
+### Practice & Flashcards
+| Page | Summary | Status |
+|------|---------|--------|
+| [[mmdb-ex01]] | Exercise sheet 1: multimedia fundamentals | current |
+| [[mmdb-ex02]] | Exercise sheet 2: color models | current |
+| [[mmdb-ex03]] | Exercise sheet 3: image processing | current |
+| [[mmdb-ex04]] | Exercise sheet 4: compression | current |
+| [[mmdb-ex05]] | Exercise sheet 5: retrieval & features | current |
+| [[mmdb-ex06]] | Exercise sheet 6: distance metrics | current |
+| [[mmdb-ex07]] | Exercise sheet 7: evaluation | current |
+| [[mmdb-ex01-flashcards]] | Flashcards for Ex01 | current |
+| [[mmdb-ex02-flashcards]] | Flashcards for Ex02 | current |
+| [[mmdb-ex03-flashcards]] | Flashcards for Ex03 | current |
+| [[mmdb-ex04-flashcards]] | Flashcards for Ex04 | current |
+| [[mmdb-ex05-flashcards]] | Flashcards for Ex05 | current |
+| [[mmdb-ex06-flashcards]] | Flashcards for Ex06 | current |
+| [[mmdb-ex07-flashcards]] | Flashcards for Ex07 | current |
+| [[mmdb-exam-prediction]] | Exam prediction: 11 archetypes, top-3 targets | current |
+
 ---
 
 ## 📚 Network Science (138 pages)
@@ -205,6 +225,29 @@
 | [[pagerank-algorithm]] | Iterative ranking algorithm, damping factor, stationary distribution | current |
 | [[six-degrees-of-separation]] | Milgram's experiment, small-world phenomenon | current |
 
+### Practice & Flashcards
+| Page | Summary | Status |
+|------|---------|--------|
+| [[network-science-e01]] | Exercise sheet 1: what is a network? | current |
+| [[network-science-e02]] | Exercise sheet 2: graph theory | current |
+| [[network-science-e03]] | Exercise sheet 3: strong and weak ties | current |
+| [[network-science-e04]] | Exercise sheet 4: centrality | current |
+| [[network-science-e05]] | Exercise sheet 5: community detection | current |
+| [[network-science-e06]] | Exercise sheet 6: diffusion | current |
+| [[network-science-e07]] | Exercise sheet 7: embeddings | current |
+| [[network-science-e01-flashcards]] | Flashcards for E01 | current |
+| [[network-science-e02-flashcards]] | Flashcards for E02 | current |
+| [[network-science-e03-flashcards]] | Flashcards for E03 | current |
+| [[network-science-e04-flashcards]] | Flashcards for E04 | current |
+| [[network-science-e05-flashcards]] | Flashcards for E05 | current |
+| [[network-science-e06-flashcards]] | Flashcards for E06 | current |
+| [[network-science-e07-flashcards]] | Flashcards for E07 | current |
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[network-science-exercise-prep]] | Exercise-based exam prep: NetworkX functions, hand calculations, key formulas | current |
+
 ---
 
 ## 📚 Reproducibility Engineering (60 pages)
@@ -266,6 +309,23 @@
 | [[make-dependency-tracking]] | Make's mtime-based incremental rebuild algorithm; phony targets; parallel builds | current |
 | [[client-server-db-architecture]] | Server process + client library + network; the contrast to SQLite | current |
 | [[foreign-tables-postgresql]] | Query external files (e.g., /proc/meminfo) as if SQL tables via file_fdw | current |
+
+
+### Practice & Flashcards
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-sheet-1]] | Sheet 1: repeat/reproduce/replicate | current |
+| [[reproducibility-engineering-sheet-2]] | Sheet 2: levels & provenance | current |
+| [[reproducibility-engineering-sheet-3]] | Sheet 3: hypotheses & statistics | current |
+| [[reproducibility-engineering-sheet-4]] | Sheet 4: workflows & artifacts | current |
+| [[reproducibility-engineering-sheet-5]] | Sheet 5: version control & Docker | current |
+| [[reproducibility-engineering-sheet-6]] | Sheet 6: CI/CD & automation | current |
+| [[reproducibility-engineering-sheet-1-flashcards]] | Flashcards for Sheet 1 | current |
+| [[reproducibility-engineering-sheet-2-flashcards]] | Flashcards for Sheet 2 | current |
+| [[reproducibility-engineering-sheet-3-flashcards]] | Flashcards for Sheet 3 | current |
+| [[reproducibility-engineering-sheet-4-flashcards]] | Flashcards for Sheet 4 | current |
+| [[reproducibility-engineering-sheet-5-flashcards]] | Flashcards for Sheet 5 | current |
+| [[reproducibility-engineering-sheet-6-flashcards]] | Flashcards for Sheet 6 | current |
 
 ---
 
@@ -359,6 +419,11 @@
 | [[readability-classifier]] | Code readability ML pipeline: Halstead, entropy, cyclomatic complexity, logistic regression | current |
 | [[sign-analysis]] | Interprocedural sign analysis: lattice theory, pairwise decomposition, bytecode dataflow | current |
 | [[java-for-software-analysis]] | Java essentials: Maven, JavaParser, ASM, WEKA, picocli, visitor pattern | current |
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-codebase-defense]] | Exam defense prep: walk through both project codebases, explain design decisions, articulate concepts | current |
 | [[software-analyse-projects-overview]] | Both projects overview, comparison, and study strategy | current |
 | [[visitor-pattern]] | Design pattern for AST traversal, double dispatch | current |
 | [[machine-learning-basics]] | Supervised learning, features, labels, classification | current |
@@ -488,97 +553,3 @@
 | [[p-n-junction]] | N-type and p-type contact, depletion region, diode behavior | current |
 | [[depletion-region]] | Charge carrier depletion at p-n junction contact | current |
 | [[diode]] | Two-terminal device, unidirectional current from p-n junction | current |
-| [[zener-diode]] | Heavily doped diode operating in breakdown for voltage regulation | current |
-| [[zener-breakdown]] | Quantum tunnelling in thin depletion region at low voltage | current |
-| [[avalanche-breakdown]] | Carrier multiplication via impact ionization at higher voltage | current |
-
-### L04 — Diode Applications
-| Page | Summary | Status |
-|------|---------|--------|
-| [[rectifier]] | Circuit converting AC to DC using diodes | current |
-| [[half-wave-rectifier]] | Single diode, passes one half of AC waveform | current |
-| [[full-wave-rectifier]] | Both half-cycles, center-tap or bridge configuration | current |
-| [[bridge-rectifier]] | Four diodes, full-wave without center-tapped transformer | current |
-| [[clamper-circuit]] | DC restorer shifting waveform level using capacitor and diode | current |
-| [[limiter-circuit]] | Voltage clipping at threshold, series/parallel/dual-diode | current |
-
-### L05 — MOS Transistors
-| Page | Summary | Status |
-|------|---------|--------|
-| [[transistor]] | Three-terminal device, gate controls current, digital foundation | current |
-| [[mosfet]] | Metal-Oxide-Semiconductor FET, field-effect transistor | current |
-| [[mos-capacitor]] | Capacitor beneath gate controlling channel charge carriers | current |
-| [[threshold-voltage]] | Minimum V_GS to create conducting channel | current |
-| [[nmos-transistor]] | N-channel in P-substrate, electrons, V_GS>V_TH | current |
-| [[pmos-transistor]] | P-channel in N-substrate, holes, |V_GS|>|V_TH| | current |
-| [[mosfet-operating-regions]] | Cutoff/Linear/Saturation conditions with formulas | current |
-
-### L06 — CMOS Logic Gates and Digital Circuits
-| Page | Summary | Status |
-|------|---------|--------|
-| [[microelectronics-lecture-6]] | CMOS inverter, NAND, NOR, XOR, arbitrary gate composition | current |
-| [[cmos-logic-gates]] | PDN for F, PUN for ¬F; static power ≈ 0; XOR breaks the rule | current |
-| [[cmos-nand-gate]] | 4T gate: series nMOS + parallel pMOS; universal Boolean primitive | current |
-| [[cmos-nor-gate]] | 4T gate: parallel nMOS + series pMOS; dual of NAND | current |
-| [[cmos-xor-gate]] | Not in single-stage CMOS; 12T transmission-gate or 6T static or multi-stage | current |
-
-### 🗺️ Microelectronics Topics
-| Page | Summary | Status |
-|------|---------|--------|
-| [[semiconductor-physics]] | Band structure, carrier concentration, why Si dominates | current |
-| [[doping-and-extrinsic-semiconductors]] | Donor/acceptor types, doping methods, Fermi level shifts | current |
-| [[p-n-junction-overview]] | Junction formation, depletion region, biasing, breakdown | current |
-| [[diode-applications]] | Rectifiers, clippers, clampers, Zener regulators | current |
-| [[mos-transistors]] | MOS capacitor, threshold voltage, drain current, nMOS/pMOS | current |
-| [[digital-circuit-design]] | Combinational/sequential circuits, CMOS gate design, timing | current |
-| [[vlsi-design]] | VLSI design flow, fabrication, Moore's Law, DFM | current |
-
----
-
-## 🎓 Courses
-
-| Course | Instructor | Semester | Exam | Status |
-|--------|-----------|----------|------|--------|
-| [[iot-security]] | Dr. Anagnostopoulos | SS 2026 | Aug 05 | active |
-| [[introduction-to-microelectronics]] | Dr. Anagnostopoulos | SS 2026 | Aug 06 | active |
-| [[multimedia-databases]] | | SS 2026 | Jul 21 | active |
-| [[network-science]] | | SS 2026 | Jul 28 | active |
-| [[reproducibility-engineering]] | | SS 2026 | Jul 30 | active |
-| [[software-analyse]] | | SS 2026 | Jul 31 | active |
-
----
-
-## 🔗 Connections
-
-| Page | What It Connects | Status |
-|------|-----------------|--------|
-| *(populated as cross-topic patterns emerge)* | | |
-
----
-
-## 📝 Study Materials
-
-| Page | Summary | Status |
-|------|---------|--------|
-| [[study-materials-index]] | Master index of all flashcard decks and practice problem sets | current |
-
----
-
-## 📋 Open Questions
-
-*(Tracked across all courses — see individual pages for course-specific open questions)*
-
----
-
-## 📁 Raw Sources Ingested
-
-| Source | Type | Date Ingested | Pages Created |
-|--------|------|--------------|---------------|
-| MMDB L01-L06 | Lectures | 2026-06-01 | 73 |
-| Network Science L01-L09 | Lectures | 2026-06-01 | 128 |
-| Reproducibility Eng L01-L05 | Lectures | 2026-06-01 | 44 |
-| Software Analyse L01-L05 | Lectures | 2026-06-01 | 49 |
-| IoT Security L01-L05 | Lectures | 2026-06-02 | 39 |
-| IoT Security L06 + 3 papers (Mexis×2, Zhou) | Lectures + papers | 2026-06-14 | 21 |
-| Intro to Microelectronics L01-L05 | Lectures | 2026-06-02 | 39 |
-| Intro to Microelectronics L06 | Lectures | 2026-06-14 | 5 |

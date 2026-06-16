@@ -15,7 +15,7 @@ An intrinsic semiconductor is a pure semiconductor material with no added impuri
 An intrinsic semiconductor is like a perfectly clean crystal — the only way to get current flowing is by thermal energy exciting electrons across the [[bandgap]]. This makes its conductivity highly temperature-dependent and relatively low at room temperature.
 
 ## Formal Definition / Statement
-An intrinsic semiconductor is a pure [[semiconductor]] material (e.g., pure [[silicon]]) with no intentionally introduced impurities. The concentration of free electrons in the [[conduction-band]] equals the concentration of [[electron holes]] in the [[valence-band]]:
+An intrinsic semiconductor is a pure [[semiconductor]] material (e.g., pure [[silicon]]) with no intentionally introduced impurities. The concentration of free electrons in the [[conduction-band]] equals the concentration of [[electron-hole]] in the [[valence-band]]:
 
 n = p = nᵢ
 

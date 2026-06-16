@@ -12,7 +12,7 @@ prerequisites: [lossless-vs-lossy-compression, transform-coding, jpeg-compressio
 MPEG video compression combines intra-frame coding (JPEG-like DCT within each frame) with inter-frame coding (motion-compensated prediction between frames) using I, P, and B frames organized in Groups of Pictures (GOPs).
 
 ## Core Intuition
-Video is a sequence of frames with massive temporal redundancy — consecutive frames are nearly identical except for object motion. Rather than encoding each frame independently (like Motion-JPEG), MPEG exploits this by encoding only the *differences* between frames. A reference frame (I-frame) is coded fully (like JPEG), then subsequent frames (P-frames, B-frames) are predicted from it using motion vectors. Only the prediction error (residual) needs to be stored, dramatically reducing the bitrate.
+Video is a sequence of frames with massive temporal redundancy — consecutive frames are nearly identical except for object motion. Rather than encoding each frame independently (like Motion-JPEG), MPEG exploits this by encoding only the *differences* between frames. ==A reference frame (I-frame) is coded fully (like JPEG), then subsequent frames (P-frames, B-frames) are predicted from it using motion vectors==. Only the prediction error (residual) needs to be stored, dramatically reducing the bitrate.
 
 ## Formal Definition / Statement
 MPEG-2 compression uses three coding types in a **Group of Pictures (GOP)**:

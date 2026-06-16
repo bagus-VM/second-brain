@@ -12,7 +12,7 @@ prerequisites: [lossless-vs-lossy-compression]
 Transform coding converts data from its original domain (e.g., spatial pixels) into a mathematical representation (e.g., frequency coefficients) where redundancy becomes easier to exploit and perceptually insignificant information can be discarded.
 
 ## Core Intuition
-Raw pixel data is highly correlated — neighboring pixels have similar values. In the frequency domain, most of the important information is concentrated in a few coefficients (typically low frequencies = smooth structures), while high frequencies (fine details, noise) carry less perceptual weight. By transforming to frequency space, quantizing high-frequency coefficients aggressively, then applying entropy coding, we achieve dramatic compression with controlled quality loss.
+Raw pixel data is highly correlated — neighboring pixels have similar values. In the frequency domain, most of the important information is concentrated in a few coefficients (typically low frequencies = smooth structures), while high frequencies (fine details, noise) carry less perceptual weight. ==By transforming to frequency space, quantizing high-frequency coefficients aggressively, then applying entropy coding, we achieve dramatic compression with controlled quality loss.==
 
 ## Formal Definition / Statement
 Transform coding pipeline:

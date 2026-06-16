@@ -22,16 +22,16 @@ H = -Σ pᵢ × log₂(pᵢ)    (bits per symbol)
 
 Shannon's source coding theorem: no uniquely decodable code can have average length less than H. Entropy coding methods aim to approach this bound.
 
-**Huffman Coding**:
-1. Sort symbols by frequency
-2. Build a binary tree bottom-up: repeatedly merge the two least-frequent nodes
-3. Assign 0/1 to left/right branches
-4. Code for each symbol = path from root to leaf
+==**Huffman Coding**:==
+1. ==Sort symbols by frequency==
+2. ==Build a binary tree bottom-up: repeatedly merge the two least-frequent nodes==
+3. ==Assign 0/1 to left/right branches==
+4. ==Code for each symbol = path from root to leaf==
 
-**Arithmetic Coding**:
-- Represents the entire message as a single floating-point number in [0, 1)
-- Successively narrows the interval based on symbol probabilities
-- More efficient than Huffman for short messages and can achieve fractional bit lengths
+==**Arithmetic Coding**:==
+- ==Represents the entire message as a single floating-point number in [0, 1)==
+- ==Successively narrows the interval based on symbol probabilities==
+- ==More efficient than Huffman for short messages and can achieve fractional bit lengths==
 
 ## Key Properties
 - **Huffman coding** is optimal among prefix-free codes (no codeword is a prefix of another)

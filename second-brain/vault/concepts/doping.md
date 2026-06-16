@@ -18,7 +18,7 @@ Pure silicon is a poor conductor. Doping is like adding "flavor" to water — a 
 Doping is the intentional introduction of impurity atoms into an [[intrinsic-semiconductor]] to control its electrical properties. Two types:
 
 - **N-type doping:** Adding group-V elements (P, As, Sb) that have 5 valence electrons → 4 bond with Si, 1 becomes a free electron. Majority carrier: electron.
-- **P-type doping:** Adding group-III elements (B, Al, Ga) that have 3 valence electrons → creates an [[electron hole]]. Majority carrier: hole.
+- **P-type doping:** Adding group-III elements (B, Al, Ga) that have 3 valence electrons → creates an [[electron-hole]]. Majority carrier: hole.
 
 ## Key Properties / Complexity
 - Typical doping concentrations: 10¹⁴ to 10²⁰ atoms/cm³

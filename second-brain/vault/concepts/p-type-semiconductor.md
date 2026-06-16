@@ -15,7 +15,7 @@ A p-type semiconductor is a semiconductor doped with electron acceptor atoms (B,
 A p-type semiconductor is like creating "empty seats" in a crowd — acceptor atoms can't complete their bonds, leaving holes that act as positive carriers. Neighboring electrons fill these holes, effectively moving the hole through the material.
 
 ## Formal Definition / Statement
-A p-type semiconductor is created by [[doping]] an [[intrinsic-semiconductor]] (e.g., [[silicon]]) with group-III elements such as boron (B) or aluminum (Al). These acceptor atoms have 3 valence electrons — they form 3 bonds with silicon but cannot complete the 4th, creating an [[electron hole]] in the [[valence-band]].
+A p-type semiconductor is created by [[doping]] an [[intrinsic-semiconductor]] (e.g., [[silicon]]) with group-III elements such as boron (B) or aluminum (Al). These acceptor atoms have 3 valence electrons — they form 3 bonds with silicon but cannot complete the 4th, creating an [[electron-hole]] in the [[valence-band]].
 
 - **Majority carrier:** hole (positive)
 - **Minority carrier:** electron (negative)

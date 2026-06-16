@@ -9,7 +9,7 @@ prerequisites: [lossless-vs-lossy-compression]
 ---
 
 ## One-line Summary
-Run-length encoding compresses data by replacing consecutive identical bytes (runs) with a single byte plus a count, achieving high compression on data with long repetitive sequences.
+Run-length encoding ==compresses data by replacing consecutive identical bytes (runs) with a single byte plus a count==, achieving high compression on data with long repetitive sequences.
 
 ## Core Intuition
 Many data types contain long stretches of identical values — think of a black-and-white fax image with large white areas, or the many zero-valued high-frequency DCT coefficients after JPEG quantization. Instead of storing each repeated byte individually, RLE stores the byte once along with how many times it repeats. The simpler the repetition pattern, the better RLE works.
