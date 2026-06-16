@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-The Nyquist-Shannon theorem states that to perfectly reconstruct an analog signal, it must be sampled at a rate of at least twice its maximum frequency component.
+The Nyquist-Shannon theorem states that ==to perfectly reconstruct an analog signal, it must be sampled at a rate of at least twice its maximum frequency component==.
 
 ## Core Intuition
 Sound is a continuous analog pressure wave. To store it digitally, we must sample it — measure the amplitude at regular intervals. But how often must we sample? If we sample too infrequently, we miss important features of the wave and get distortion (aliasing). The Nyquist-Shannon theorem gives us the theoretical minimum: sample at least twice as fast as the highest frequency you want to capture. Since human hearing ranges from 20 Hz to 20 kHz, CDs sample at 44.1 kHz — just above the Nyquist rate for 20 kHz.
