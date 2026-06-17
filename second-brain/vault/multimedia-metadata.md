@@ -17,7 +17,7 @@ Raw multimedia data (pixels, audio samples) is meaningless to a system without c
 ## Formal Definition / Statement
 Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource (NISO, 2004).
 
-Multimedia metadata formats support the description of multimedia data in terms of: what the content is, who created it, how it can be processed, etc. (W3C, 2007).
+==Multimedia metadata formats support the description of multimedia data in terms of: what the content is, who created it, how it can be processed==, etc. (W3C, 2007).
 
 **Categories of multimedia metadata:**
 1. **Content description** — general description, keywords, summaries

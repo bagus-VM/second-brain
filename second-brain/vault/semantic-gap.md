@@ -18,8 +18,8 @@ A computer can compute that an image has 40% blue pixels and rough textures, but
 "The semantic gap is the lack of coincidence between the information that one can extract from the visual data and the interpretation that the same data have for a user in a given situation." — Smeulders et al. (2000)
 
 The gap exists between two levels:
-- **Low-level features**: size, resolution, color, texture, motion, shape
-- **High-level features**: keywords, description, classification, ontologies
+- **Low-level features**: ==size, resolution, color, texture, motion, shape==
+- **High-level features**: ==keywords, description, classification, ontologies==
 
 ## Key Properties
 - Fundamental challenge in content-based image/video retrieval
