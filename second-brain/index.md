@@ -37,6 +37,8 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[color-perception]] | Visible spectrum, cones, opponent processing | current |
+| [[metamers]] | Different spectra, same perceived color (light/material/observer types) | current |
+| [[chromatic-adaptation]] | Color constancy: same object looks same under different illuminants | current |
 | [[color-models-overview]] | Additive vs subtractive | current |
 | [[rgb-color-model]] | Additive color cube, 8-bit quantization | current |
 | [[cmyk-color-model]] | Subtractive printing | current |

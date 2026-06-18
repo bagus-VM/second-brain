@@ -52,3 +52,32 @@
 **Vault health:** B+ → A- (Excellent). The vault is now well-linked and study materials are discoverable from the index.
 
 *"The vault is a tool, not a trophy. The goal isn't zero orphans — it's making sure you can find what you need when you need it. The 17 remaining orphans are structural files that don't need to be linked. The 41 study materials are now one click away from the index. That's the win."*
+
+## [2026-06-18] QUERY | "What are metamers?" | 1 page created, 2 pages updated
+
+**Trigger:** Professor flagged "what are metamers?" as an exam question.
+
+**Action:**
+- Created `vault/metamers.md` — dedicated page with definition, types (light/material/observer), worked examples, pitfalls
+- Updated `vault/color-perception.md` — linked to metamers page, removed resolved open question
+- Updated `index.md` — added metamers to L02 Colors section
+
+**Exam relevance:** Metamers are a core concept in color perception. The exam will likely ask for definition + types + why they matter for multimedia databases.
+
+## [2026-06-18] QUERY | "Paper appears white under daylight and incandescent — explain" | 1 page created, 2 pages updated
+
+**Trigger:** Student confused chromatic adaptation with metamerism.
+
+**Clarification:**
+- **Metamerism:** Different spectra, same illuminant → same perceived color
+- **Chromatic adaptation:** Same object, different illuminants → same perceived color (illuminant discounting)
+- The paper example is chromatic adaptation, NOT metamerism
+
+**Action:**
+- Created `vault/chromatic-adaptation.md` — dedicated page with definition, mechanism, worked example
+- Updated `vault/metamers.md` — added explicit distinction in pitfalls section (exam trap warning)
+- Updated `index.md` — added chromatic-adaptation to L02 Colors section
+
+**Exam relevance:** Professor will test whether you can distinguish these two phenomena. They are related but NOT the same.
+
+
