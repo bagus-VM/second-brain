@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-14
-**Total pages:** 595 (vault only: 44 topic pages + 267 concept pages + 21 practice + 22 flashcards + courses; excluding raw/)
+**Last updated:** 2026-06-19
+**Total pages:** 618 (vault only: 48 topic pages + 280 concept pages + 22 practice + 23 flashcards + courses; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -11,11 +11,11 @@
 ## Exam Calendar
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex07 practice complete ✅ (83 pages) |
+| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex08 practice complete ✅ (83+ pages) |
 | [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~46 | **6/6 lectures ✅** + Sheet 1–6 (60 pages) |
-| [[software-analyse]] | 31 July 2026 | ~47 | **7/7 lectures ✅** (75 pages) |
-| [[iot-security]] | 05 Aug 2026 | ~52 | **6/6 lectures ✅** (~60 pages) + 3 papers ingested |
+| [[reproducibility-engineering]] | 30 July 2026 | ~46 | **8/8 lectures ✅** + Sheet 1–7 (70+ pages) |
+| [[software-analyse]] | 31 July 2026 | ~47 | **8/8 lectures ✅** (85+ pages) |
+| [[iot-security]] | 05 Aug 2026 | ~52 | **7/7 lectures ✅** (~70 pages) + 3 papers ingested |
 | [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
 
 ---
@@ -99,6 +99,9 @@
 | [[kolmogorov-smirnov-distance]] | Max cumulative difference for histograms | current |
 | [[curse-of-dimensionality]] | Why nearest-neighbour loses meaning in high-D | current |
 | [[similarity-measures]] | Quantifying closeness | current |
+| [[object-relational-databases]] | Relational DBs extended with objects, inheritance, UDTs | current |
+| [[sql-mm]] | ISO/IEC 13249 SQL multimedia extension for content-based queries | current |
+| [[mpqf]] | MPEG Query Format: standardized multimedia query expressions | current |
 
 
 ### Practice & Flashcards
@@ -118,6 +121,7 @@
 | [[mmdb-ex05-flashcards]] | Flashcards for Ex05 | current |
 | [[mmdb-ex06-flashcards]] | Flashcards for Ex06 | current |
 | [[mmdb-ex07-flashcards]] | Flashcards for Ex07 | current |
+| [[mmdb-ex08]] | Exercise sheet 8: querying, object-relational DBs, SQL/MM, MPQF | current |
 | [[mmdb-exam-prediction]] | Exam prediction: 11 archetypes, top-3 targets | current |
 
 ---
@@ -312,6 +316,18 @@
 | [[client-server-db-architecture]] | Server process + client library + network; the contrast to SQLite | current |
 | [[foreign-tables-postgresql]] | Query external files (e.g., /proc/meminfo) as if SQL tables via file_fdw | current |
 
+### L07 — Tidy Data
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-lecture-7]] | Wickham's tidy data, SQL pivoting/unpivoting, metadata workflows | current |
+| [[tidy-data]] | Each variable = column, each observation = row, each value = cell | current |
+
+### L08 — Hierarchical Dataformats
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-lecture-8]] | XML/JSON, JSON Schema, HDF5, h5py, visitor pattern | current |
+| [[hdf5]] | Hierarchical data format: files/groups/datasets/attributes | current |
+| [[json-schema]] | Vocabulary for validating JSON document structure | current |
 
 ### Practice & Flashcards
 | Page | Summary | Status |
@@ -328,6 +344,8 @@
 | [[reproducibility-engineering-sheet-4-flashcards]] | Flashcards for Sheet 4 | current |
 | [[reproducibility-engineering-sheet-5-flashcards]] | Flashcards for Sheet 5 | current |
 | [[reproducibility-engineering-sheet-6-flashcards]] | Flashcards for Sheet 6 | current |
+| [[reproducibility-engineering-sheet-7]] | Sheet 7: BenchBase lab — SQLite vs PostgreSQL benchmarking | current |
+| [[reproducibility-engineering-sheet-7-flashcards]] | Flashcards for Sheet 7 | current |
 
 ---
 
@@ -415,6 +433,17 @@
 | [[aliasing]] | Two names for same memory location; alias sets from points-to | current |
 | [[union-find-data-structure]] | Partition into equivalence classes; ~O(1) per op with path compression | current |
 
+### L08 — Program Slicing
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-8]] | SSA form, PDG, slicing, interprocedural slicing, dynamic slicing | current |
+| [[static-single-assignment]] | Each variable assigned once; phi functions at merge points | current |
+| [[phi-function]] | Pseudo-assignment merging definitions from different control paths | current |
+| [[program-dependence-graph]] | CFG nodes + control + data dependence edges = complete dependence map | current |
+| [[program-slicing]] | Backward/forward slice via PDG reachability | current |
+| [[system-dependence-graph]] | PDG extended to multiple procedures for interprocedural slicing | current |
+| [[dynamic-slicing]] | Slice for specific input + execution trace | current |
+
 ### Projects
 | Page | Summary | Status |
 |------|---------|--------|
@@ -498,6 +527,13 @@
 | [[lightweight-cryptography]] | NIST process 2015–2023; PRESENT, GIFT, ChaCha20, ASCON for constrained IoT | current |
 | [[dolev-yao-attacker-model]] | Standard cryptographic adversary: controls network, cannot break primitives | current |
 | [[iot-2-0]] | Next-gen IoT with 5G/6G, AI/ML, edge computing, blockchain, Industry 4.0 | current |
+
+### L07 — Identity Lifecycle & Privacy
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-7]] | IAM, bootstrapping, PKI, OAuth 2.0, privacy by design, GDPR | current |
+| [[iot-identity-lifecycle]] | Device identity from bootstrapping through deactivation | current |
+| [[iot-privacy-concerns]] | Pervasive sensing, metadata leakage, complex data sharing chains | current |
 | [[iot-applications]] | Smart home, IIoT, healthcare, transportation, smart grid, space — use cases | current |
 
 ### 📄 IoT Security Papers (3 ingested)
