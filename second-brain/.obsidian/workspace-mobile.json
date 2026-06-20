@@ -11,14 +11,12 @@
             "id": "4d38619bdb620b4a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-04.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf"
               },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-04"
+              "icon": "lucide-file-text",
+              "title": "Ex01"
             }
           }
         ]
@@ -139,12 +137,12 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "vault/topics/multimedia-databases-lecture-04.md",
     "study/exams/vault-lint-report-2026-06-16.md",
     "study/exams/software-analyse-codebase-defense.md",
     "study/exams/network-science-exercise-prep.md",
     "log-2026.md",
     "vault/xml-structured-text.md",
-    "vault/topics/multimedia-databases-lecture-04.md",
     "vault/ascii-unicode-character-encoding.md",
     "vault/topics/multimedia-databases-lecture-03.md",
     "vault/linear-convolution-filters.md",
