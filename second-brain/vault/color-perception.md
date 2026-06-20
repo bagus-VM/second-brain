@@ -33,7 +33,7 @@ Light is electromagnetic radiation. Only the 400–700 nm band is visible to hum
 White light hitting the retina stimulates all three cone types roughly equally. A pure 530 nm light strongly stimulates M-cones, weakly stimulates L-cones, and barely stimulates S-cones — the brain interprets this as "green."
 
 ## Common Pitfalls
-- Confusing wavelength (physical) with color (perceptual) — the same color can be produced by different spectra (metamerism)
+- Confusing wavelength (physical) with color (perceptual) — the same color can be produced by different spectra (see [[metamers]])
 - Assuming rods contribute to color perception — they only detect luminance
 
 ## Connections
@@ -42,5 +42,4 @@ White light hitting the retina stimulates all three cone types roughly equally. 
 - Opponent processing inspires [[yuv-color-space]] (luminance/chrominance separation)
 
 ## Open Questions
-- How does metamerism affect color accuracy in multimedia databases?
 - What are the implications of tetrachromatic vision (4 cone types) for future displays?

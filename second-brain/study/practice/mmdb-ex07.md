@@ -207,6 +207,82 @@ Using the two images and their histograms from Task 4:
 - For Task 4, mixing up the L/R block orientation — the 2-bit quantization is the **trap question**: it shows that quantization is not free.
 - For Minkowski, forgetting to take the `1/p` power at the end. `L₁` = sum, `L₂` = square root of sum of squares, `L∞` = max.
 
+## Official Solutions (Solution Document)
+
+> [!info]- Additional Solutions from 25-Page Solution Document
+> 
+> **CBR — Feature Extraction + Matching:**
+> Content-Based Retrieval (CBR) consists of two main phases:
+> 1. **Feature extraction**: compute feature vectors from multimedia objects (color histograms, texture descriptors, shape features)
+> 2. **Matching**: compare query feature vector against database feature vectors using a distance metric
+> 
+> **ABIR (Annotation-Based Image Retrieval) Limitations:**
+> - **Annotation cost**: manual labeling is expensive and time-consuming
+> - **Subjectivity**: different annotators may describe the same image differently
+> - **Vocabulary problem**: limited set of keywords cannot capture all visual concepts
+> - **Scalability**: annotation does not scale to large collections
+> 
+> **CBIR (Content-Based Image Retrieval) Limitations:**
+> - **Semantic gap**: low-level features (color, texture) do not capture high-level concepts ("beach", "party")
+> - **Need example image**: query-by-example requires the user to provide a sample image
+> - **Feature selection**: choosing the right features for a specific task is non-trivial
+> - **Interpretability**: users cannot easily specify what they want ("more red, less texture")
+> 
+> **Feature Vectors:**
+> - **Definition**: n-dimensional numerical representation of multimedia content
+> - **Curse of dimensionality**: as dimensionality increases, distances between points become nearly equal, making nearest-neighbor search meaningless. Indexes (k-d trees, R-trees) degrade to linear scan above ~20 dimensions.
+> 
+> **Dominant Color Descriptor (MPEG-7):**
+> - **Formal definition**: F = {(cᵢ, pᵢ, vᵢ), s} where:
+>   - cᵢ = color value (RGB or other color space)
+>   - pᵢ = percentage of pixels with this dominant color
+>   - vᵢ = color variance (standard deviation within the cluster)
+>   - s = spatial coherency (how clustered the color is spatially)
+> - **Compact representation**: typically 3-8 dominant colors capture the essential color information
+> - **Example**: sunset image → {(orange, 0.4, 0.05), (red, 0.3, 0.08), (purple, 0.2, 0.1), (black, 0.1, 0.02)}, s=0.7
+> 
+> **Color Histograms with 8-Bin Uniform Quantization:**
+> 
+> Given two 4×4 images (16 pixels each):
+> - Image 1: H1 = (0, 0, 0, 0, 8, 0, 0, 8) — 8 pixels in bin 4, 8 pixels in bin 7
+> - Image 2: H2 = (8, 0, 0, 0, 0, 0, 0, 8) — 8 pixels in bin 0, 8 pixels in bin 7
+> 
+> **Minkowski Distances:**
+> 
+> L_p(P, Q) = (Σ|pᵢ - qᵢ|^p)^(1/p)
+> 
+> - **L1 (Manhattan)**: Σ|pᵢ - qᵢ| = |0-8| + |0-0| + |0-0| + |0-0| + |8-0| + |0-0| + |0-0| + |8-8| = 8 + 8 = **16**
+>   - Note: The solution document states L1=32, which may refer to a different histogram pair or a doubled computation.
+> - **L2 (Euclidean)**: √(Σ(pᵢ - qᵢ)²) = √(8² + 8²) = √128 ≈ **11.31**
+> - **L∞ (Chebyshev)**: max|pᵢ - qᵢ| = **8**
+> 
+> **Kolmogorov-Smirnov Distance (Unnormalized):**
+> 
+> Given H1 = (5, 5, 5, 5) and H2 = (8, 5, 4, 3):
+> 
+> KS(P, Q) = max_i |cumsum(H1)_i - cumsum(H2)_i|
+> 
+> - cumsum(H1) = (5, 10, 15, 20)
+> - cumsum(H2) = (8, 13, 17, 20)
+> - Differences: |5-8|=3, |10-13|=3, |15-17|=2, |20-20|=0
+> - **KS = max(3, 3, 2, 0) = 3**
+> 
+> Note: This is the unnormalized KS distance. The normalized version (dividing by total count) gives KS = 3/20 = 0.15.
+> 
+> **Chi-Squared Distance:**
+> 
+> χ²(P, Q) = Σ (pᵢ - qᵢ)² / (pᵢ + qᵢ)
+> 
+> Given H1 = (5, 5, 5, 5) and H2 = (8, 5, 4, 3):
+> 
+> - Bin 1: (5-8)² / (5+8) = 9/13 ≈ 0.692
+> - Bin 2: (5-5)² / (5+5) = 0/10 = 0
+> - Bin 3: (5-4)² / (5+4) = 1/9 ≈ 0.111
+> - Bin 4: (5-3)² / (5+3) = 4/8 = 0.5
+> - **χ² = 0.692 + 0 + 0.111 + 0.5 ≈ 1.303**
+> 
+> Note: This formula differs from the one in the main solutions section (which uses f'(i) = (pᵢ + qᵢ)/2 and gives χ² ≈ 0.652). Both formulas are valid; the choice depends on the application.
+
 ## Related Lectures
 
 - [[multimedia-databases-lecture-06]]
@@ -220,3 +296,4 @@ Using the two images and their histograms from Task 4:
 - [[color-histogram]]
 - [[semantic-gap]]
 - [[mpeg-7-descriptors]]
+- [[dominant-color]]

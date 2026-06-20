@@ -52,3 +52,65 @@
 **Vault health:** B+ → A- (Excellent). The vault is now well-linked and study materials are discoverable from the index.
 
 *"The vault is a tool, not a trophy. The goal isn't zero orphans — it's making sure you can find what you need when you need it. The 17 remaining orphans are structural files that don't need to be linked. The 41 study materials are now one click away from the index. That's the win."*
+
+## [2026-06-18] QUERY | "What are metamers?" | 1 page created, 2 pages updated
+
+**Trigger:** Professor flagged "what are metamers?" as an exam question.
+
+**Action:**
+- Created `vault/metamers.md` — dedicated page with definition, types (light/material/observer), worked examples, pitfalls
+- Updated `vault/color-perception.md` — linked to metamers page, removed resolved open question
+- Updated `index.md` — added metamers to L02 Colors section
+
+**Exam relevance:** Metamers are a core concept in color perception. The exam will likely ask for definition + types + why they matter for multimedia databases.
+
+## [2026-06-18] QUERY | "Paper appears white under daylight and incandescent — explain" | 1 page created, 2 pages updated
+
+**Trigger:** Student confused chromatic adaptation with metamerism.
+
+**Clarification:**
+- **Metamerism:** Different spectra, same illuminant → same perceived color
+- **Chromatic adaptation:** Same object, different illuminants → same perceived color (illuminant discounting)
+- The paper example is chromatic adaptation, NOT metamerism
+
+**Action:**
+- Created `vault/chromatic-adaptation.md` — dedicated page with definition, mechanism, worked example
+- Updated `vault/metamers.md` — added explicit distinction in pitfalls section (exam trap warning)
+- Updated `index.md` — added chromatic-adaptation to L02 Colors section
+
+**Exam relevance:** Professor will test whether you can distinguish these two phenomena. They are related but NOT the same.
+
+## [2026-06-19] INGEST | 14 new files across 4 courses | 23 pages created, 1 updated
+
+**Sources ingested:**
+- RepEng: Lecture 7 (Tidy Data), Lecture 8 (Hierarchical Dataformats), Exercise Sheet 7 (BenchBase lab)
+- IoT Security: Lecture 7 (Identity Lifecycle + Privacy)
+- Multimedia DB: Exercise 8 (Querying), Exercise 7 Solutions (CBIR)
+- Software Analyse: Lecture 8 (Program Slicing, 167 pages)
+
+**New topic pages (4):**
+- `reproducibility-engineering-lecture-7` — Tidy Data, SQL pivoting, metadata workflows
+- `reproducibility-engineering-lecture-8` — XML/JSON, JSON Schema, HDF5, h5py, visitor pattern
+- `iot-lecture-7` — IAM, PKI, OAuth 2.0, privacy by design, GDPR, compliance
+- `software-analyse-lecture-8` — SSA form, PDG, slicing, SDG, dynamic slicing
+
+**New concept pages (13):**
+- `tidy-data`, `hdf5`, `json-schema` (RepEng)
+- `iot-identity-lifecycle`, `iot-privacy-concerns` (IoT)
+- `object-relational-databases`, `sql-mm`, `mpqf` (MMDB)
+- `static-single-assignment`, `phi-function`, `program-dependence-graph`, `program-slicing`, `system-dependence-graph`, `dynamic-slicing` (Software Analyse)
+
+**Practice/flashcards (3):**
+- `reproducibility-engineering-sheet-7` — BenchBase lab (SQLite vs PostgreSQL)
+- `reproducibility-engineering-sheet-7-flashcards` — 10 Q&A cards
+- `mmdb-ex08` — Object-relational DBs, SQL/MM, MPQF
+
+**Updated (1):**
+- `mmdb-ex07` — Added official solutions section (CBIR, color histograms, Minkowski distances, KS, chi-squared)
+- `privacy-by-design` — Added 8th principle, updated source_count, linked to IoT L07
+
+**Vault state:** 595 → 618 pages. All 6 courses now have complete lecture coverage.
+
+*"Every course is now fully ingested. The vault covers all lectures across all 6 courses. The compound effect is real — concepts from slicing connect to dominance, tidy data connects to provenance, HDF5 connects to the visitor pattern you already knew from Java. The web grows denser with every session."*
+
+

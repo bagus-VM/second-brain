@@ -12,7 +12,7 @@ prerequisites: []
 Multimedia annotation is the task of associating textual labels or tags to multimedia objects to represent their semantic content, hampered by the sensory and semantic gaps.
 
 ## Core Intuition
-A picture is worth a thousand words — but no two viewers describe the same picture the same way. Annotation tries to bridge the gap between raw multimedia data and human-understandable meaning, but this is inherently lossy and subjective. Different users, contexts, and perspectives produce different annotations for the same object (e.g., a Kandinsky painting described as "Abstract", "Bauhaus", "Colorful", "Beautiful").
+A picture is worth a thousand words — but no two viewers describe the same picture the same way. ==Annotation tries to bridge the gap between raw multimedia data and human-understandable meaning, but this is inherently lossy and subjective==. Different users, contexts, and perspectives produce different annotations for the same object (e.g., a Kandinsky painting described as "Abstract", "Bauhaus", "Colorful", "Beautiful").
 
 ## Formal Definition / Statement
 Multimedia annotation is the task of associating textual labels or tags to multimedia objects in order to represent their (semantic) content. It can be performed manually, automatically, or semi-automatically.
