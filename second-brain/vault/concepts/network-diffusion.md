@@ -17,7 +17,7 @@ Drop a rumor into a network. Where it starts matters enormously. If it starts in
 This applies to everything: viruses spreading through contact networks, information cascading through social media, innovations adopted through professional networks, and bank failures propagating through financial exposure.
 
 ## Formal Definition / Statement
-**Diffusion** is the process by which a quantity (information, disease, influence) spreads from node to node along edges.
+==**Diffusion** is the process by which a quantity (information, disease, influence) spreads from node to node along edges.==
 
 Basic model types:
 - **SI (Susceptible-Infected):** nodes are either susceptible or infected; infected nodes infect susceptible neighbors. Used for irreversible spreading (e.g., rumors).

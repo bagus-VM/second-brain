@@ -19,9 +19,9 @@ A blogger with few personal posts but many incoming links from diverse communiti
 ## Formal Definition / Statement
 Centrality measures assign a score $c(v)$ to each node $v$ capturing some notion of structural importance:
 
-- **Degree centrality:** $c(v) = \deg(v)$ — number of connections. Simple, local measure.
-- **Closeness centrality:** $c(v) = \frac{1}{\sum_{u} d(v, u)}$ — inverse of average distance to all other nodes. Measures how quickly a node can reach the whole network.
-- **Betweenness centrality:** $c(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$ — fraction of shortest paths passing through $v$. Measures bridge/brokerage role.
+- **==Degree centrality==:** $c(v) = \deg(v)$ — ==number of connections==. Simple, local measure.
+- ==**Closeness centrality==:** $c(v) = \frac{1}{\sum_{u} d(v, u)}$ — inverse of average distance to all other nodes. ==Measures how quickly a node can reach the whole network.==
+- ==**Betweenness centrality==:** $c(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$ — fraction of shortest paths passing through $v$. Measures bridge/brokerage role.
 
 For directed networks, degree splits into **in-degree** (edges arriving) and **out-degree** (edges leaving), each with different meanings (popularity vs. activity).
 
@@ -41,7 +41,7 @@ Consider a network where:
 - Node B has the shortest average distance to all others (highest closeness) — most "reachable"
 - Node C sits on the most shortest paths (highest betweenness) — most "central" as a bridge
 
-These three nodes could all be different! A political blogger who bridges liberal and conservative communities (high betweenness) might have fewer total links (lower degree) than a blogger deeply embedded in one community.
+==These three nodes could all be different! A political blogger who bridges liberal and conservative communities (high betweenness) might have fewer total links (lower degree) than a blogger deeply embedded in one community.==
 
 ## Common Pitfalls
 - **Assuming there's one "right" centrality.** Different measures answer different questions. The choice depends on the application.
