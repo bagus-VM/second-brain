@@ -2,12 +2,11 @@
 title: "IoT Communication Protocols"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[networking-fundamentals]]"]
 ---
-
 ## One-line Summary
 IoT communication protocols — MQTT, CoAP, Zigbee, BLE, LoRaWAN, and Thread/Matter — are the languages IoT devices use to talk, and each has distinct security models, strengths, and weaknesses.
 

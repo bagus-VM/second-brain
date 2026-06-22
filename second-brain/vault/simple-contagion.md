@@ -42,7 +42,7 @@ Contrast with [[complex-contagion]]: a new tool requiring 2 adopter contacts get
 - Threshold governed by [[basic-reproduction-number-r0]] — R₀ > 1 implies epidemic spread
 - Opposite behavior to [[complex-contagion]] — same structures have opposite effects
 - Weak ties role explained in [[weak-tie-paradox-contagion]]
-- Hubs as superspreaders connects to [[network-centrality-l04]]
+- Hubs as superspreaders connects to [[centrality]]
 - Validated empirically by [[centola-2010-experiment]] — random networks (shorter paths) spread simple contagion faster
 
 ## Open Questions

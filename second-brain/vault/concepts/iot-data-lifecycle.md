@@ -2,12 +2,11 @@
 title: "IoT Data Lifecycle"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-device-fundamentals]]", "[[iot-network-architecture]]"]
 ---
-
 ## One-line Summary
 The IoT data lifecycle — collection, transmission, storage, processing, and retention — defines where data exists at each moment and therefore where it can be attacked or leaked.
 

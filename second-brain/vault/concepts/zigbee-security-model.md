@@ -2,12 +2,11 @@
 title: "Zigbee Security Model"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-communication-protocols]]"]
 ---
-
 ## One-line Summary
 Zigbee security relies on a Trust Center that distributes network keys and AES-128-CCM encryption, but the well-known default link key and pairing vulnerabilities make it a frequent target in smart home and building automation attacks.
 

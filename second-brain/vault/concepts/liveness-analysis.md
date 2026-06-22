@@ -2,12 +2,11 @@
 title: "Liveness Analysis"
 tags: [concept, software-analyse, semester-1]
 course: "Software Analyse"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[control-flow-graph]]", "[[gen-kill-analysis]]"]
 ---
-
 ## One-line Summary
 Liveness analysis figures out, for every point in a program, which variables still have a future use — essential for knowing when a value can be thrown away or a register freed.
 

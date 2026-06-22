@@ -2,12 +2,11 @@
 title: "Denial of Service (DoS) in IoT"
 tags: [concept, iot-security, attacks, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Attacks that make IoT devices or services unavailable to legitimate users, ranging from simple resource exhaustion to large-scale distributed botnets.*
 

@@ -7,7 +7,7 @@ last_updated: 2026-06-01
 
 # Concepts — Vault
 
-One page per core concept. Each page is self-contained but cross-linked with `[[wikilinks]]`.
+One page per core concept. Each page is self-contained but cross-linked with `
 
 ## Naming convention
 Slugs only: `gradient-descent.md`, not `Gradient Descent Notes.md`

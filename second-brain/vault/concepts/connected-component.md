@@ -33,7 +33,7 @@ A graph is **connected** if it has exactly one connected component.
 ## Key Properties
 - Every node belongs to exactly one connected component (they partition the node set).
 - The number of components is a basic structural descriptor of a network.
-- In random graphs, the transition from many small components to one giant component is a phase transition — a key result in [[network-science-l01-overview]].
+- In random graphs, the transition from many small components to one giant component is a phase transition — a key result in [[network-intro]].
 - Removing nodes or edges can *split* a component into two (related to network robustness).
 - Real-world networks often have one **giant component** containing most nodes, plus many tiny isolated fragments.
 

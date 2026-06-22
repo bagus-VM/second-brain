@@ -2,12 +2,11 @@
 title: "Zero Trust Architecture"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[network-security-fundamentals]]", "[[device-provisioning]]"]
 ---
-
 ## One-line Summary
 Zero Trust Architecture — "never trust, always verify" — replaces perimeter-based security with identity-centric, microsegmented access control that treats every device and user as potentially compromised.
 

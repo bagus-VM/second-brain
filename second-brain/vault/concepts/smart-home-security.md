@@ -2,12 +2,11 @@
 title: "Smart Home Security"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-device-fundamentals]]", "[[iot-communication-protocols]]"]
 ---
-
 ## One-line Summary
 Smart home security covers consumer IoT threat models — voice assistants, smart locks, cameras, and hubs — where privacy invasion, physical access bypass, and botnet enrollment are the primary risks.
 

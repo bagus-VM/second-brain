@@ -3,11 +3,10 @@ title: "Band Theory"
 tags: [concept, microelectronics, semester-1]
 course: "Introduction to Microelectronics"
 source_count: 1
-status: draft
-last_updated: 2026-06-04
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[electricity]]"]
 ---
-
 ## One-line Summary
 *Band theory explains how electrons in solids occupy continuous ranges of allowed energies (bands) separated by forbidden gaps, which determines whether a material is a conductor, semiconductor, or insulator.*
 

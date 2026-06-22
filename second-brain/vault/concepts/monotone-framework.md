@@ -2,12 +2,11 @@
 title: "Monotone Framework"
 tags: [concept, software-analyse, semester-1]
 course: "Software Analyse"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[data-flow-analysis]]"]
 ---
-
 ## One-line Summary
 The monotone framework is the abstract mathematical skeleton that all data flow analyses share — it guarantees convergence by requiring that transfer functions preserve the ordering of facts.
 

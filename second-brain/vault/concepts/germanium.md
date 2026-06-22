@@ -3,11 +3,10 @@ title: "Germanium"
 tags: [concept, microelectronics, semester-1]
 course: "Introduction to Microelectronics"
 source_count: 1
-status: draft
-last_updated: 2026-06-04
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[semiconductor]]", "[[silicon]]"]
 ---
-
 ## One-line Summary
 *Germanium was the first semiconductor used in transistors but was largely replaced by silicon due to its higher leakage current and lack of a stable native oxide.*
 

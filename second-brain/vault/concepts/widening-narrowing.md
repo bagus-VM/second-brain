@@ -2,12 +2,11 @@
 title: "Widening and Narrowing"
 tags: [concept, software-analyse, abstract-interpretation, semester-1]
 course: "Software Analyse"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Operators in abstract interpretation that accelerate fixpoint computation (widening) and improve precision of the result (narrowing).*
 

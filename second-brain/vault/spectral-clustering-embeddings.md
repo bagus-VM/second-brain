@@ -5,7 +5,7 @@ course: "Network Science"
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[laplacian-eigenmaps]]", "[[spectral-clustering]]"]
+prerequisites: ["[[laplacian-eigenmaps]]", "[[graph-partitioning-cut-spectral]]"]
 ---
 
 ## One-line Summary
@@ -45,7 +45,7 @@ Graph with 3 disconnected components:
 
 ## Connections
 - [[laplacian-eigenmaps]] — the embedding step
-- [[spectral-clustering]] — the general technique
+- [[graph-partitioning-cut-spectral]] — the general technique
 - [[graph-laplacian]] — the matrix being decomposed
 - [[node-embeddings]] — spectral clustering is an application of embeddings
 - [[community-detection]] — an alternative perspective on the same problem

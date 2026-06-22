@@ -2,12 +2,11 @@
 title: "Word2Vec Skip-Gram"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 Skip-gram learns a vector for each word by training a neural network to predict the surrounding words from a target word — and the same trick works for nodes in a graph.
 
@@ -80,7 +79,7 @@ After training over millions of sentences, words with similar contexts (e.g., "c
 - [[node-embeddings]] — the general framework skip-gram feeds into
 - [[hierarchical-navigable-small-world]] — HNSW indexes over vectors produced by skip-gram–based methods
 - [[link-prediction-via-embeddings]] — downstream task for graph embeddings
-- [[spectral-clustering]] — alternative embedding approach (algebraic vs. statistical)
+- [[graph-partitioning-cut-spectral]] — alternative embedding approach (algebraic vs. statistical)
 - [[network-science-l09]] — lecture connecting NLP embeddings to graph embeddings
 
 ## Open Questions

@@ -2,12 +2,11 @@
 title: "Side-Channel Attacks"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-device-fundamentals]]", "[[physical-unclonable-functions]]"]
 ---
-
 ## One-line Summary
 Side-channel attacks extract cryptographic keys and internal state from IoT devices by measuring physical phenomena — power consumption, electromagnetic emissions, timing, and sound — rather than breaking the math.
 

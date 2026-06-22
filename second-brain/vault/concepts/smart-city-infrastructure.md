@@ -2,12 +2,11 @@
 title: "Smart City Infrastructure"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-network-architecture]]", "[[industrial-iot-security]]"]
 ---
-
 ## One-line Summary
 Smart city infrastructure covers IoT deployments in traffic management, utilities, surveillance, and public safety where cyber attacks can disrupt critical services for millions of people.
 

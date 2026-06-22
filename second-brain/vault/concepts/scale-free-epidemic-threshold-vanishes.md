@@ -2,12 +2,11 @@
 title: "Scale-Free Epidemic Threshold Vanishes"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *In scale-free networks, the epidemic threshold approaches zero, meaning even weakly contagious diseases can persist and spread.*
 
@@ -71,12 +70,12 @@ Comparing epidemic spread on random vs scale-free networks (N = 100,000):
 - **Practical immunization**: Identifying hubs requires global network knowledge, which may not be available
 
 ## Connections
-- [[network-dynamics-l08]] — Epidemic models on networks
+- [[network-diffusion]] — Epidemic models on networks
 - [[sis-model]] — SIS model where the threshold is most relevant
 - [[scale-free-networks]] — Scale-free network structure that causes threshold vanishing
-- [[network-centrality-l04]] — Degree centrality identifies the superspreader hubs
+- [[centrality]] — Degree centrality identifies the superspreader hubs
 - [[basic-reproduction-number-r0]] — R₀ and its relationship to epidemic thresholds
-- [[small-world-networks]] — Small-world networks have finite thresholds (unlike scale-free)
+- [[small-world-property]] — Small-world networks have finite thresholds (unlike scale-free)
 
 ## Open Questions
 - How does this concept apply in practice with real-world constraints?

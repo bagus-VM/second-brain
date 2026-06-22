@@ -6,7 +6,7 @@ lecture: 3
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[network-science-graph-fundamentals]]"]
+prerequisites: ["[[graph-fundamentals]]"]
 ---
 
 ## One-line Summary
@@ -50,7 +50,7 @@ Friends-of-friends tend to become friends (triadic closure). When you label ties
 | Bakshy et al. (2012) | Weak ties generate most total information diffusion |
 
 ## Connections
-- Builds on: [[network-science-graph-fundamentals]] (graph notation, adjacency)
+- Builds on: [[graph-fundamentals]] (graph notation, adjacency)
 - Related: [[social-capital]] (closure creates trust; bridges create opportunity)
 - Related: [[structural-holes]] (Burt's theory: brokerage across structural holes)
 - Extends to: [[network-science-l04]] (next lecture, likely network models)

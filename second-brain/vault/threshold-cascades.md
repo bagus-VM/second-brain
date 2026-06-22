@@ -48,7 +48,7 @@ The same communities with a disease ([[simple-contagion]]) would see the epidemi
 ## Connections
 - Mechanism of [[complex-contagion]]
 - Opposite dynamics to [[simple-contagion]] and [[sir-model-network-epidemics]]
-- Bridge structure connects to [[network-community-structure-l06]]
+- Bridge structure connects to [[community-structure]]
 - Empirically studied by [[centola-2010-experiment]]
 - The threshold q relates to [[basic-reproduction-number-r0]] — both are "will it spread?" conditions but for different processes
 - Connects to [[weak-tie-paradox-contagion]]

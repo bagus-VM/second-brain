@@ -37,7 +37,7 @@ where T is transmissibility across an edge. If T > T_c, a macroscopic outbreak i
 3. Hubs are superspreaders — they create disproportionately many transmission opportunities
 4. In scale-free networks (γ ≤ 3), the epidemic threshold vanishes: even low transmissibility can spread
 5. Recovery provides immunity — nodes do not cycle back to S (contrast with [[sis-model]] and [[sirs-model]])
-6. Vaccination strategy: target high-degree and high-betweenness nodes (dynamical version of "target the broker" from [[network-centrality-l04]])
+6. Vaccination strategy: target high-degree and high-betweenness nodes (dynamical version of "target the broker" from [[centrality]])
 
 ## Worked Example
 A cold virus starts with Ana (β = 0.3 per contact per day, γ = 0.2 per day). Ana has 4 contacts.
@@ -55,8 +55,8 @@ Since R₀ = 6 ≫ 1, the cold will spread through the workplace. To slow the sp
 ## Connections
 - Core model of [[simple-contagion]]
 - Threshold governed by [[basic-reproduction-number-r0]]
-- Hubs and superspreading connects to [[network-centrality-l04]] and [[scale-free-networks]]
-- Vaccination targeting connects to [[network-community-structure-l06]] — bridges are critical bottlenecks
+- Hubs and superspreading connects to [[centrality]] and [[scale-free-networks]]
+- Vaccination targeting connects to [[community-structure]] — bridges are critical bottlenecks
 - Contrasted with [[complex-contagion]] — same network, opposite effects of weak ties
 - Extended by [[temporal-networks]] — edge timing affects whether transmission paths exist
 

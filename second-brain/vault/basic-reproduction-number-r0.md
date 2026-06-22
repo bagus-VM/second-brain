@@ -56,8 +56,8 @@ Since R₀ = 6 ≫ 1, the cold becomes an epidemic. If we vaccinate one of Ana's
 ## Connections
 - Central to [[sir-model-network-epidemics]]
 - Part of [[simple-contagion]] theory
-- The scale-free vanishing threshold connects to [[scale-free-networks]] and [[network-centrality-l04]]
-- Vaccination targeting relates to [[network-community-structure-l06]] — bridges and hubs
+- The scale-free vanishing threshold connects to [[scale-free-networks]] and [[centrality]]
+- Vaccination targeting relates to [[community-structure]] — bridges and hubs
 - Contrasted with [[threshold-cascades]] — complex contagion has a different kind of threshold (fraction q of neighbors)
 
 ## Open Questions

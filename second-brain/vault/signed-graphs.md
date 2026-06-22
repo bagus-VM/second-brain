@@ -5,7 +5,7 @@ course: "Network Science"
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[network-science-graph-fundamentals]]"]
+prerequisites: ["[[graph-fundamentals]]"]
 ---
 
 ## One-line Summary
@@ -42,7 +42,7 @@ A **complete signed graph** has an edge (with some sign) between every pair of n
 
 ## Connections
 - Foundation for: [[structural-balance-theory]], [[balanced-triads]], [[balance-theorem]]
-- Extends: [[network-science-graph-fundamentals]] (adds sign to edges)
+- Extends: [[graph-fundamentals]] (adds sign to edges)
 - Measured by: [[frustration-index]] (how far from balanced)
 - Related to: [[homophily]] (sign patterns reflect attitude alignment)
 - Empirical data: Leskovec, Huttenlocher & Kleinberg (2010) — Epinions, Slashdot, Wikipedia signed networks

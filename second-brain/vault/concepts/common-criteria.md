@@ -2,12 +2,11 @@
 title: "Common Criteria (ISO 15408)"
 tags: [concept, iot-security, standards, evaluation, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *An international standard for evaluating the security properties of IT products through structured assurance levels.*
 

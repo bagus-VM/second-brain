@@ -48,8 +48,8 @@ Temporal network with 4 nodes (A, B, C, D):
 ## Connections
 - Applies to [[simple-contagion]] and [[complex-contagion]] — timing affects both
 - Extends [[sir-model-network-epidemics]] — edge timing changes effective R₀
-- Connects to [[network-community-structure-l06]] — temporal bridges are even more fragile than static ones
-- Part of the process-structure interaction gap in [[network-dynamics-l08]]
+- Connects to [[community-structure]] — temporal bridges are even more fragile than static ones
+- Part of the process-structure interaction gap in [[network-diffusion]]
 - Survey: Holme & Saramäki (2012), Temporal Networks, Physics Reports
 
 ## Open Questions

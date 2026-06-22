@@ -2,12 +2,11 @@
 title: "Finite Automata"
 tags: [concept, software-analyse, formal-methods, semester-1]
 course: "Software Analyse"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Abstract computational models with a finite set of states, used in compiler design, pattern matching, and program analysis.*
 

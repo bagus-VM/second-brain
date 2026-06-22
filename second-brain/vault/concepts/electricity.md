@@ -3,11 +3,10 @@ title: "Electricity"
 tags: [concept, microelectronics, semester-1]
 course: "Introduction to Microelectronics"
 source_count: 1
-status: draft
-last_updated: 2026-06-04
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Electricity is the flow of electric charge (carried by electrons or holes), governed by fundamental relationships between voltage (push), current (flow), and resistance (opposition).*
 

@@ -2,12 +2,11 @@
 title: "Analog Amplifier"
 tags: [concept, microelectronics, semester-1]
 course: "Microelectronics"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *A circuit that increases the amplitude of an analog signal using active components like transistors or op-amps.*
 

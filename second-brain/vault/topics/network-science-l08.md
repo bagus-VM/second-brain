@@ -54,10 +54,10 @@ The sixth gap in the course: the same network structure produces different outco
 | L08 (temporal) | Temporal | Static aggregation hides causal order |
 
 ## Connections
-- Builds on [[network-community-structure-l06]] — communities determine where contagion pauses or accelerates
-- Builds on [[network-navigation-small-worlds-l07]] — navigability relates to how processes find paths
-- Connects to [[weak-ties-and-bridges]] — Granovetter's weak ties play opposite roles for simple vs. complex contagion
-- Connects to [[network-centrality-l04]] — hubs are superspreaders; targeting high-betweenness nodes is the dynamical version of "target the broker"
+- Builds on [[community-structure]] — communities determine where contagion pauses or accelerates
+- Builds on [[kleinberg-decentralized-search]] — navigability relates to how processes find paths
+- Connects to [[weak-ties-hypothesis]] — Granovetter's weak ties play opposite roles for simple vs. complex contagion
+- Connects to [[centrality]] — hubs are superspreaders; targeting high-betweenness nodes is the dynamical version of "target the broker"
 - Relates to [[diffusion-of-innovations]] — adoption thresholds model technology and norm spreading
 
 ## Open Questions

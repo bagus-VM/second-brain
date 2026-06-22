@@ -2,12 +2,11 @@
 title: "IoT Attack Surfaces"
 tags: [concept, iot-security, attacks, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Systematic enumeration of all points where an IoT system can be attacked, from physical interfaces to cloud APIs.*
 

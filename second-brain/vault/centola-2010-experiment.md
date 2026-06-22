@@ -54,8 +54,8 @@ In the random network, neighbors are less likely to be connected to each other. 
 - Empirical validation of [[complex-contagion]] and the [[weak-tie-paradox-contagion]]
 - Contrasts with [[simple-contagion]] predictions — random networks should win for diseases
 - Connects to [[threshold-cascades]] — the multiple-exposure finding supports threshold models
-- Relates to [[network-community-structure-l06]] — clustering is a community-level property
-- Part of [[network-dynamics-l08]]
+- Relates to [[community-structure]] — clustering is a community-level property
+- Part of [[network-diffusion]]
 
 ## Open Questions
 - Does the clustering advantage hold for other complex contagions (political mobilization, technology adoption)?

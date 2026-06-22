@@ -2,12 +2,11 @@
 title: "Security Principles"
 tags: [concept, iot-security, fundamentals, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *The foundational principles that guide all security design decisions: defense in depth, least privilege, fail secure, and separation of duties.*
 

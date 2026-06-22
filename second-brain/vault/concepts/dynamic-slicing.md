@@ -6,6 +6,7 @@ tags:
   - dynamic-analysis
   - debugging
 course: Software Analyse
+source_count: 1
 status: current
 last_updated: 2026-06-19
 ---
@@ -114,7 +115,7 @@ Now statement 4 is excluded (then-branch not taken), and statement 6 is included
 - [[program-dependence-graph]] — dynamic slicing uses a dynamic dependence graph
 - [[data-flow-analysis]] — dynamic data flow is traced from execution
 - [[control-dependence]] — dynamic control dependence from actual branch outcomes
-- [[debugging]] — primary application of dynamic slicing
+- Debugging — primary application of dynamic slicing (produces the minimal relevant slice for a specific failing input)
 
 ## Open Questions
 

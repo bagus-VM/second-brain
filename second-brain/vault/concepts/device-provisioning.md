@@ -2,12 +2,11 @@
 title: "Device Provisioning"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-device-fundamentals]]", "[[key-management-lifecycle]]"]
 ---
-
 ## One-line Summary
 Device provisioning is the process of giving each IoT device its unique identity, credentials, and initial configuration — the moment where security is established (or fails) for the device's entire lifetime.
 

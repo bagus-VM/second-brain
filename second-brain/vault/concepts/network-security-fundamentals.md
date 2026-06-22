@@ -2,12 +2,11 @@
 title: "Network Security Fundamentals"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[networking-fundamentals]]"]
 ---
-
 ## One-line Summary
 Network security fundamentals — firewalls, IDS/IPS, VPNs, and segmentation — are the defensive tools applied to IoT networks to detect, prevent, and contain attacks.
 

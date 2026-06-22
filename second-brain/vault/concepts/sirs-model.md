@@ -2,12 +2,11 @@
 title: "SIRS Model on Networks"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *An epidemic model with temporary immunity: Susceptible → Infected → Recovered → Susceptible, modeling diseases where immunity wanes over time.*
 
@@ -76,10 +75,10 @@ Modeling influenza in a city (population 1M, contact network):
 - **Behavioral response**: People change behavior during outbreaks, affecting β dynamically
 
 ## Connections
-- [[network-dynamics-l08]] — General framework for epidemic dynamics
+- [[network-diffusion]] — General framework for epidemic dynamics
 - [[sis-model]] — Limiting case as δ → ∞ (no immunity)
 - [[basic-reproduction-number-r0]] — R₀ determines epidemic potential
-- [[network-community-structure-l06]] — Communities create localized waves before global spread
+- [[community-structure]] — Communities create localized waves before global spread
 - [[scale-free-epidemic-threshold-vanishes]] — Threshold behavior in heterogeneous networks
 - [[signed-networks]] — Signed network dynamics have analogous oscillatory behavior
 

@@ -2,12 +2,11 @@
 title: "IoT Secure Design"
 tags: [concept, iot-security, design, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Security-by-design principles and practices for building IoT systems that are resistant to attacks from the ground up.*
 

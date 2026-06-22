@@ -46,7 +46,7 @@ Adjacency matrix A of a small graph. Spectral embedding: eigendecompose L = D - 
 - [[deepwalk]] — factorises the walk PPMI matrix
 - [[node2vec]] — factorises the biased-walk PPMI matrix
 - [[node-embeddings]] — the unifying theoretical framework
-- [[spectral-clustering]] — eigendecomposition as factorisation
+- [[graph-partitioning-cut-spectral]] — eigendecomposition as factorisation
 
 ## Open Questions
 - Can we design better matrices to factorise for specific tasks?

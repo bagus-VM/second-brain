@@ -2,12 +2,11 @@
 title: "Etching in Semiconductor Fabrication"
 tags: [concept, microelectronics, fabrication, semester-1]
 course: "Microelectronics"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *The process of selectively removing material from a wafer surface using chemical or physical methods to create circuit patterns.*
 

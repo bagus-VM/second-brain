@@ -5,7 +5,7 @@ course: "Network Science"
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[graph-laplacian]]", "[[random-walks]]", "[[spectral-clustering]]", "[[word2vec-skip-gram]]"]
+prerequisites: ["[[graph-laplacian]]", "[[random-walks]]", "[[graph-partitioning-cut-spectral]]", "[[word2vec-skip-gram]]"]
 ---
 
 ## One-line Summary
@@ -64,7 +64,7 @@ Graphs are discrete objects; ML needs continuous vectors. The central question: 
 - L07 ([[hierarchical-navigable-small-world]]) — embeddings power HNSW retrieval
 - L06 ([[signed-networks]]) — signed Laplacian embeds friend/enemy structure
 - L08 — process-structure comparison (complementary gap)
-- [[spectral-clustering]] from earlier lectures = k-means on eigenmaps
+- [[graph-partitioning-cut-spectral]] from earlier lectures = k-means on eigenmaps
 
 ## Open Questions
 - How do graph transformers and foundation models (2024-2026) extend message passing?

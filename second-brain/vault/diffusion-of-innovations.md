@@ -44,8 +44,8 @@ A new collaboration tool is introduced in a company. Innovators (tech enthusiast
 - Cascade dynamics from [[threshold-cascades]]
 - Empirical support from [[centola-2010-experiment]]
 - The [[weak-tie-paradox-contagion]] explains why awareness ≠ adoption
-- Network structure effects relate to [[network-community-structure-l06]]
-- Part of [[network-dynamics-l08]]
+- Network structure effects relate to [[community-structure]]
+- Part of [[network-diffusion]]
 
 ## Open Questions
 - How do competing innovations interact on the same network?

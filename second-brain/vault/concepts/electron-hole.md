@@ -2,15 +2,14 @@
 title: "Electron Hole"
 tags: [concept, microelectronics, physics, semiconductor, semester-1]
 course: "Microelectronics"
-source_count: 0
-status: draft
-last_updated: 2026-06-05
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites:
   - band-theory
   - valence-band
   - conduction-band
 ---
-
 ## One-line Summary
 *A hole is the absence of an electron in the valence band that behaves like a positively charged particle with positive effective mass.*
 

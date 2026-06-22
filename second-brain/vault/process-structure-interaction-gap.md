@@ -47,11 +47,11 @@ Same edge, opposite effects. This gap cannot be resolved by better measurement o
 - Ignoring the gap when designing interventions — vaccination strategies for diseases may backfire for behavior change campaigns
 
 ## Connections
-- Core theme of [[network-dynamics-l08]]
+- Core theme of [[network-diffusion]]
 - Exemplified by [[simple-contagion]] vs. [[complex-contagion]]
 - The [[weak-tie-paradox-contagion]] is a specific manifestation
 - Temporal networks add another dimension — see [[temporal-networks]]
-- Builds on all previous gaps from [[network-centrality-l04]], [[network-community-structure-l06]], [[network-navigation-small-worlds-l07]]
+- Builds on all previous gaps from [[centrality]], [[community-structure]], [[kleinberg-decentralized-search]]
 
 ## Open Questions
 - Can we classify processes into a taxonomy that predicts which structural features matter?

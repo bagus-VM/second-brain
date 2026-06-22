@@ -2,12 +2,11 @@
 title: "CoAP Security"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[iot-communication-protocols]]"]
 ---
-
 ## One-line Summary
 CoAP (Constrained Application Protocol) security covers DTLS for transport encryption, OSCORE for end-to-end application security, and the unique challenges of securing a UDP-based REST protocol on resource-constrained devices.
 

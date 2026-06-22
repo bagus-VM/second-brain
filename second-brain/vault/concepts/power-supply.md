@@ -2,12 +2,11 @@
 title: "Power Supply in Electronics"
 tags: [concept, microelectronics, circuits, semester-1]
 course: "Microelectronics"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *The source of electrical energy that powers electronic circuits, converting AC mains or battery voltage to the regulated DC voltages needed by components.*
 

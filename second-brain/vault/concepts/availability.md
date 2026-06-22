@@ -2,12 +2,11 @@
 title: "Availability in Information Security"
 tags: [concept, iot-security, cia-triad, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *The assurance that systems and data are accessible to authorized users when needed, forming the 'A' in the CIA triad.*
 

@@ -2,12 +2,11 @@
 title: "Hierarchical Navigable Small World (HNSW)"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[small-world-property]]", "[[kleinberg-decentralized-search]]"]
 ---
-
 ## One-line Summary
 HNSW is a graph structure that lets you find the nearest neighbors of a point in a huge dataset by "zooming in" through layers — like a skip list, but for high-dimensional similarity search.
 

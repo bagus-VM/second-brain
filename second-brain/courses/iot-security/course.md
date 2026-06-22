@@ -16,7 +16,7 @@ This course covers security solutions for the Internet of Things (IoT), spanning
 
 ## Lectures
 
-### [[Lecture 1 — Introduction to IoT Security]]
+### [[iot-lecture-1|Lecture 1 — Introduction to IoT Security]]
 - Definition of IoT (IBM, Wikipedia, Anagnostopoulos definitions)
 - IoT components: [[sensors]], [[actuators]], processing segment
 - IoT segments: Space, Maritime, Agriculture, Smart Cities, Energy, Industry
@@ -26,13 +26,13 @@ This course covers security solutions for the Internet of Things (IoT), spanning
 - Security vs. cost balance; "acceptable level of security"
 - Systems of systems complexity
 
-### [[Lecture 2 — IoT Applications and Vulnerability Introduction]]
+### [[iot-lecture-2|Lecture 2 — IoT Applications and Vulnerability Introduction]]
 - Application scenarios: smart home, emergency response, Internet of Lights, LiFi, Internet of Sounds
 - Vulnerability-Attack-Countermeasure cycle
 - Attacker model definition
 - Penetration testing introduction
 
-### [[Lecture 3 — Information Assurance, Attacks, and Secure Development]]
+### [[iot-lecture-3|Lecture 3 — Information Assurance, Attacks, and Secure Development]]
 - [[cia-triad|CIA Triad]] + extensions: [[authentication]], [[non-repudiation]], [[resilience-iot|resilience]], safety
 - Common attacks: scanning, protocol attacks, eavesdropping, crypto attacks, spoofing, DoS, physical attacks, privilege escalation
 - Case studies: [[mirai-botnet|Mirai]], [[krack-attack|KRACK]], [[zigbee-pairing-vulnerability|ZigBee pairing]]
@@ -41,7 +41,7 @@ This course covers security solutions for the Internet of Things (IoT), spanning
 - Hardware security: [[physical-unclonable-functions|PUFs]], [[trusted-platform-module|TPM]], security co-processors
 - [[secure-development-lifecycle|SDLC models]]: Waterfall, Spiral, Agile
 
-### [[Lecture 4 — DevOps, Security Practices, and Secure Design Goals]]
+### [[iot-lecture-4|Lecture 4 — DevOps, Security Practices, and Secure Design Goals]]
 - [[devops-security|DevOps]] methodology and principles
 - Required properties: Security ([[attack-tree|attack tree]]), Safety ([[fault-tree|fault tree]]), Resilience (anticipate/withstand/recover/evolve)
 - Best practices: lifecycle enforcement, software auth, device network auth, [[iot-firewalling|IoT firewalling]], authenticated updates
@@ -49,7 +49,7 @@ This course covers security solutions for the Internet of Things (IoT), spanning
 - [[operational-security-lifecycle|Operational security life cycle]]: Define → Implement → Operate → Dispose
 - Compliance: US IoT Cybersecurity Improvement Act, ENISA, DHS, FDA
 
-### [[Lecture 5 — Attack Surface Analysis]]
+### [[iot-lecture-5|Lecture 5 — Attack Surface Analysis]]
 - Daniel Miessler's 15 [[attack-surface-analysis|attack surface classes]] (DefCon 2023)
 - Access control, [[device-memory-attack-surface|device memory]], [[physical-interface-attack-surface|physical interfaces]], web interfaces, [[firmware-security|firmware]], network services, admin interfaces, local data storage, cloud interfaces, third-party APIs, [[ota-updates|update mechanism]], mobile apps, vendor APIs, [[ecosystem-communications-security|ecosystem communications]], network traffic
 

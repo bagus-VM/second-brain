@@ -5,7 +5,7 @@ course: "Network Science"
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[network-science-graph-fundamentals]]"]
+prerequisites: ["[[graph-fundamentals]]"]
 ---
 
 ## One-line Summary

@@ -3,11 +3,10 @@ title: "Capacitor"
 tags: [concept, microelectronics, semester-1]
 course: "Introduction to Microelectronics"
 source_count: 1
-status: draft
-last_updated: 2026-06-04
+status: current
+last_updated: 2026-06-22
 prerequisites: ["[[electricity]]"]
 ---
-
 ## One-line Summary
 *A capacitor is a two-terminal component that stores energy in an electric field between two conductive plates separated by an insulator (dielectric), with capacitance proportional to plate area and inversely proportional to separation distance.*
 

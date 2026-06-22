@@ -2,12 +2,11 @@
 title: "Principle of Least Privilege (PoLP)"
 tags: [concept, iot-security, access-control, fundamentals, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *Every component, user, and process should have only the minimum permissions necessary to perform its intended function — nothing more.*
 

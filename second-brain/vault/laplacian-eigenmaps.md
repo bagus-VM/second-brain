@@ -5,7 +5,7 @@ course: "Network Science"
 source_count: 1
 status: current
 last_updated: 2026-06-01
-prerequisites: ["[[graph-laplacian]]", "[[spectral-clustering]]"]
+prerequisites: ["[[graph-laplacian]]", "[[graph-partitioning-cut-spectral]]"]
 ---
 
 ## One-line Summary
@@ -52,7 +52,7 @@ For two weakly connected clusters: eigenvectors v_2, v_3 embed nodes in R^2 wher
 
 ## Connections
 - [[graph-laplacian]] — the matrix being decomposed
-- [[spectral-clustering]] — k-means on eigenmaps
+- [[graph-partitioning-cut-spectral]] — k-means on eigenmaps
 - [[node-embeddings]] — first wave of embedding methods
 - [[adjacency-matrix-factorization]] — eigenmaps as implicit matrix factorisation
 - [[signed-networks]] — signed Laplacian for signed networks (L06)

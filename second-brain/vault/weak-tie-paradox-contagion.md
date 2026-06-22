@@ -47,10 +47,10 @@ Same edge, opposite effects. Structure alone does not determine the outcome — 
 
 ## Connections
 - Core tension between [[simple-contagion]] and [[complex-contagion]]
-- Bridges and weak ties from [[network-community-structure-l06]]
+- Bridges and weak ties from [[community-structure]]
 - Empirical validation by [[centola-2010-experiment]]
 - Relates to [[diffusion-of-innovations]] — innovation adoption is often complex contagion
-- The process-structure interaction is the key theme of [[network-dynamics-l08]]
+- The process-structure interaction is the key theme of [[network-diffusion]]
 
 ## Open Questions
 - How do mixed processes (partly simple, partly complex) interact with weak ties?

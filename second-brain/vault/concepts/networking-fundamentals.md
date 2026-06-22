@@ -2,12 +2,11 @@
 title: "Networking Fundamentals"
 tags: [concept, iot-security, semester-1]
 course: "IoT Security"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 Networking fundamentals — the OSI model, TCP/IP, addressing, and routing — are the prerequisite knowledge needed to understand how IoT devices communicate and where that communication can be attacked.
 

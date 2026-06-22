@@ -6,6 +6,7 @@ tags:
   - debugging
   - dependence
 course: Software Analyse
+source_count: 1
 status: current
 last_updated: 2026-06-19
 ---

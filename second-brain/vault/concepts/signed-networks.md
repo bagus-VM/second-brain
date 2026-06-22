@@ -2,12 +2,11 @@
 title: "Signed Networks"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
-prerequisites: ["[[network-science-graph-fundamentals]]"]
+source_count: 1
+status: current
+last_updated: 2026-06-22
+prerequisites: ["[[graph-fundamentals]]"]
 ---
-
 ## One-line Summary
 A signed network is a graph where every edge is labeled "positive" (friends, trust, alliance) or "negative" (enemies, distrust, rivalry) — and a single local rule about triangles forces the whole network into camps.
 

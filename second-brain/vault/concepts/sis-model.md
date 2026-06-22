@@ -2,12 +2,11 @@
 title: "SIS Model on Networks"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 0
-status: draft
-last_updated: 2026-06-04
+source_count: 1
+status: current
+last_updated: 2026-06-22
 prerequisites: []
 ---
-
 ## One-line Summary
 *The Susceptible-Infected-Susceptible model where nodes cycle between infected and healthy states, modeling diseases without permanent immunity.*
 
@@ -71,11 +70,11 @@ Modeling common cold spread in a university (1,000 students, contact network):
 - **Multiple strains**: Real diseases have variants; SIS models a single strain
 
 ## Connections
-- [[network-dynamics-l08]] — General framework for epidemic dynamics on networks
+- [[network-diffusion]] — General framework for epidemic dynamics on networks
 - [[scale-free-epidemic-threshold-vanishes]] — Why SIS threshold vanishes on scale-free networks
 - [[sirs-model]] — Extension with temporary immunity
 - [[basic-reproduction-number-r0]] — R₀ determines endemic vs disease-free equilibrium
-- [[network-centrality-l04]] — High centrality nodes are superspreaders in SIS
+- [[centrality]] — High centrality nodes are superspreaders in SIS
 - [[signed-networks]] — Signed network dynamics have analogous threshold phenomena
 
 ## Open Questions

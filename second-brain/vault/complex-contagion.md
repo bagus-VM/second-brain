@@ -51,7 +51,7 @@ Contrast: A disease ([[simple-contagion]]) crosses in both scenarios because a s
 - Cascade conditions relate to [[threshold-cascades]]
 - Empirically validated by [[centola-2010-experiment]]
 - Connects to [[diffusion-of-innovations]] — Rogers' adopter categories map to threshold dynamics
-- Dense clusters relate to [[network-community-structure-l06]]
+- Dense clusters relate to [[community-structure]]
 
 ## Open Questions
 - How do heterogeneous thresholds (different q for different nodes) affect cascade dynamics?

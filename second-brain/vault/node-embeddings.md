@@ -48,7 +48,7 @@ A graph with two weakly connected clusters. [[laplacian-eigenmaps]] using the 2n
 - [[adjacency-matrix-factorization]] — unifying perspective
 - [[link-prediction-via-embeddings]] — primary downstream task
 - [[hierarchical-navigable-small-world]] — embeddings power HNSW retrieval (L07)
-- [[spectral-clustering]] — clustering on embeddings
+- [[graph-partitioning-cut-spectral]] — clustering on embeddings
 
 ## Open Questions
 - What is the optimal embedding dimension d for a given graph?

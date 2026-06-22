@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-19
-**Total pages:** 618 (vault only: 48 topic pages + 280 concept pages + 22 practice + 23 flashcards + courses; excluding raw/)
+**Last updated:** 2026-06-22
+**Total pages:** 592 (vault: 540 pages + study: 52 practice/flashcards/exam materials; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -182,6 +182,11 @@
 | [[ei-index]] | (E−I)/(E+I) measure of homophily | current |
 | [[triadic-focal-membership-closure]] | Three projection-edge-formation mechanisms in bipartite networks | current |
 | [[confounding]] | Third explanation for observed correlation between similarity and tie | current |
+| [[experiment-vs-observation]] | Experimental vs observational causal inference | current |
+| [[manski-reflection-problem]] | Endogenous vs contextual effects not separately identified | current |
+| [[kossinets-watts-2006]] | Empirical evolving network: triadic + focal + membership closure | current |
+
+
 
 ### L06 — Structural Balance
 | Page | Summary | Status |
@@ -194,9 +199,6 @@
 | [[weak-structural-balance]] | Davis 1967: k-camp relaxation allowing (-,-,-) | current |
 | [[frustration-index]] | Min edge flips, NP-hard | current |
 | [[cycle-criterion]] | Balance ⟺ every cycle has even number of negatives | current |
-| [[ei-index]] | (E−I)/(E+I) measure of homophily, with random-mixing baseline | current |
-| [[triadic-focal-membership-closure]] | Three mechanisms for new ties in affiliation-network projections | current |
-| [[confounding]] | The third explanation for observed similarity beyond selection and socialisation | current |
 
 ### L07 — Small-World Networks
 | Page | Summary | Status |
@@ -218,6 +220,11 @@
 | [[complex-contagion]] | Social reinforcement needed | current |
 | [[threshold-cascades]] | q fraction rule | current |
 | [[centola-2010-experiment]] | Clustered > random adoption | current |
+| [[sis-model]] | Susceptible-Infected-Susceptible: no permanent immunity | current |
+| [[sirs-model]] | SIRS: adds waning immunity (R→S) to SIR | current |
+| [[scale-free-epidemic-threshold-vanishes]] | Scale-free networks: epidemic threshold → 0 | current |
+
+
 
 ### L09 — Graph Embeddings
 | Page | Summary | Status |
@@ -230,6 +237,10 @@
 | [[link-prediction-via-embeddings]] | Scoring by proximity | current |
 | [[pagerank-algorithm]] | Iterative ranking algorithm, damping factor, stationary distribution | current |
 | [[six-degrees-of-separation]] | Milgram's experiment, small-world phenomenon | current |
+| [[word2vec-skip-gram]] | Skip-gram: predict context from target, basis of DeepWalk | current |
+| [[hierarchical-navigable-small-world]] | HNSW: layered graph for approximate nearest-neighbor search | current |
+
+
 
 ### Practice & Flashcards
 | Page | Summary | Status |
@@ -302,7 +313,8 @@
 | [[diffoscope]] | Deep comparison tool | current |
 | [[ci-cd-for-reproducibility]] | Automated verification | current |
 | [[make-and-build-systems]] | Make fundamentals | current |
-| [[c-preprocessor]] | Macros as non-determinism source | current |
+| [[latexmk]] | Automates LaTeX compilation cycle, tracks deps via .fls | current |
+
 
 ### L06 — Database System Architectures
 | Page | Summary | Status |
@@ -356,7 +368,6 @@
 |------|---------|--------|
 | [[software-analysis]] | Structural vs behavioural | current |
 | [[static-vs-dynamic-analysis]] | Code without execution vs observing runs | current |
-| [[abstract-interpretation]] | Sign analysis, lattice | current |
 | [[rices-theorem]] | All non-trivial properties undecidable | current |
 | [[soundness-and-completeness]] | Over- vs under-approximation | current |
 | [[code-clones]] | Types 1-4, detection strategies | current |
@@ -591,3 +602,13 @@
 | [[p-n-junction]] | N-type and p-type contact, depletion region, diode behavior | current |
 | [[depletion-region]] | Charge carrier depletion at p-n junction contact | current |
 | [[diode]] | Two-terminal device, unidirectional current from p-n junction | current |
+
+### Lecture Topic Pages
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-1]] | L01: Semiconductor Physics | current |
+| [[microelectronics-lecture-2]] | L02: Doping and Extrinsic Semiconductors | current |
+| [[microelectronics-lecture-3]] | L03: P-N Junction Overview | current |
+| [[microelectronics-lecture-4]] | L04: Diode Applications — rectifiers, limiters, clampers | current |
+| [[microelectronics-lecture-5]] | L05: MOS Transistors — MOSFET structure and operation | current |
+| [[microelectronics-lecture-6]] | L06: CMOS Logic Gates and Digital Circuits | current |
