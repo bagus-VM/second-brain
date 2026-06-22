@@ -5,11 +5,7 @@ course: "Network Science"
 source_count: 0
 status: current
 last_updated: 2026-06-09
-<<<<<<< HEAD
 prerequisites: ["[[small-world-property]]"]
-=======
-prerequisites: ["[[small-world-networks]]"]
->>>>>>> 1287aa7 (lint 09-06-2026)
 ---
 
 ## One-line Summary
@@ -81,17 +77,10 @@ Each "hop" is one degree. The path length is 4, well within the six-degree predi
 - Assuming the number "six" is universal — it varies by network size, structure, and density
 
 ## Connections
-<<<<<<< HEAD
 - [[small-world-property]] — The Watts-Strogatz model explains why real networks have short paths
 - [[centrality-measures]] — Nodes with high betweenness often serve as shortcuts
 - [[homophily]] — People cluster with similar others, creating high clustering coefficient
 - [[kleinberg-decentralized-search]] — Lecture material on network navigation
-=======
-- [[small-world-networks]] — The Watts-Strogatz model explains why real networks have short paths
-- [[centrality-measures]] — Nodes with high betweenness often serve as shortcuts
-- [[homophily]] — People cluster with similar others, creating high clustering coefficient
-- [[network-navigation-small-worlds-l07]] — Lecture material on network navigation
->>>>>>> 1287aa7 (lint 09-06-2026)
 - [[pagerank-algorithm]] — PageRank relies on the web graph being navigable
 - [[girvan-newman-algorithm]] — Community detection exploits the gap between clustered and shortcut edges
 

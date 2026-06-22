@@ -87,11 +87,7 @@ Iterating from uniform [0.333, 0.333, 0.333]:
 - [[eigenvector-centrality]] — PageRank adds damping to eigenvector centrality's recursive prestige
 - [[betweenness-centrality]] — Alternative centrality measure capturing path brokerage
 - [[network-science-l04]] — PageRank is introduced alongside other centrality measures in L04
-<<<<<<< HEAD
 - [[small-world-property]] — Web graph exhibits small-world properties that affect PageRank convergence
-=======
-- [[small-world-networks]] — Web graph exhibits small-world properties that affect PageRank convergence
->>>>>>> 1287aa7 (lint 09-06-2026)
 - [[girvan-newman-algorithm]] — Community detection uses different centrality (edge betweenness)
 
 ## Open Questions
