@@ -4,11 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "326f5d96b90df0ca",
+        "id": "a97664dc6a07d619",
         "type": "tabs",
+        "dimension": 44.82942430703625,
         "children": [
           {
-            "id": "813fa46fb8bd70e6",
+            "id": "49a12602e1322d4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/topics/network-science-l02.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "network-science-l02"
+            }
+          },
+          {
+            "id": "1845f46d4af081c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -24,39 +39,53 @@
         ]
       },
       {
-        "id": "004e444c8eaf8c94",
+        "id": "80231be38bca2589",
         "type": "tabs",
+        "dimension": 55.17057569296375,
         "children": [
           {
-            "id": "7f54e8c56936be9d",
+            "id": "e88279ad97b86d72",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/concepts/network-diffusion.md",
+                "file": "vault/paths-walks-and-cycles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "network-diffusion"
+              "title": "paths-walks-and-cycles"
             }
           },
           {
-            "id": "38abc3395e9c8f59",
+            "id": "e63eb722ca59d555",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/concepts/centrality.md",
+                "file": "vault/shortest-path-and-diameter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "centrality"
+              "title": "shortest-path-and-diameter"
+            }
+          },
+          {
+            "id": "6c8c51f41b2cf303",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/eulerian-path-and-circuit.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "eulerian-path-and-circuit"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,24 +227,42 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "38abc3395e9c8f59",
+  "active": "e88279ad97b86d72",
   "lastOpenFiles": [
+    "vault/eulerian-path-and-circuit.md",
+    "vault/topics/network-science-l02.md",
+    "vault/shortest-path-and-diameter.md",
+    "vault/paths-walks-and-cycles.md",
+    "vault/neighbourhood-and-degree.md",
+    "vault/graph-representations.md",
+    "Pasted image 20260623144712.png",
+    "Pasted image 20260623144601.png",
+    "Pasted image 20260623144539.png",
+    "Pasted image 20260623144321.png",
+    "vault/sparse-dense-and-random-graphs.md",
+    "vault/bipartite-graphs.md",
+    "Pasted image 20260623143016.png",
+    "Pasted image 20260623142244.png",
     "vault/topics/network-science-l01.md",
+    "vault/weighted-graphs.md",
+    "vault/directed-and-undirected-graphs.md",
+    "vault/graph-fundamentals.md",
+    "vault/concepts/network-intro.md",
+    "vault/topics/multimedia-databases-lecture-06.md",
+    "index.md",
+    "courses/iot-security.md",
+    "courses/introduction-to-microelectronics.md",
+    "courses/Courses.md",
+    "vault/concepts/centrality.md",
+    "Untitled.base",
+    "courses/multimedia-databases.md",
+    "courses/network-science.md",
+    "study/exams/Exams.md",
     "vault/concepts/network-diffusion.md",
     "vault/concepts/community-structure.md",
     "vault/concepts/connected-component.md",
     "vault/concepts/network-effects.md",
-    "vault/concepts/centrality.md",
-    "vault/concepts/edge-types.md",
-    "vault/topics/network-science-l02.md",
-    "vault/topics/network-science-l04.md",
-    "vault/topics/network-science-l03.md",
-    "vault/topics/software-analyse-lecture-1.md",
-    "vault/concepts/network-examples.md",
-    "vault/concepts/network-intro.md",
-    "vault/topics/reproducibility-engineering-lecture-8.md",
     "raw/lectures/network_science/Uebung/e07-structural-balance-solutions.pdf",
-    "vault/topics/reproducibility-engineering-lecture-7.md",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target/classes/git.properties",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target/classes",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target",
@@ -224,27 +271,9 @@
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/ReadRecord.java",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/ReadModifyWriteRecord.java",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/InsertRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/DeleteRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/api/collectors/monitoring/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/templated/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/test/java/com/oltpbenchmark/benchmarks/templated/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/README.md",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/architecture.png",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/docker/tpch/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/docker/spanner-emulator/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/docker/cockroachdb-latest/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/docker/benchbase/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/docker/README.md",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/README.md",
     "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
     "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/session.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/report.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/redbar.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/package.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/method.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/group.gif"
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif"
   ]
 }
