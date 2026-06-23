@@ -20,14 +20,14 @@ For a graph G = (V, E):
 - **Adjacency list**: For each node, a list of its neighbors, e.g., {u₁: [v₁, v₂], u₂: [v₂], ...}
 - **Adjacency matrix**: An |V|×|V| matrix A where A[i][j] = 1 if (i,j) ∈ E, else 0
 
-## Key Properties
+## ==Key Properties==
 
-| Representation | Strength | Limitation |
-|---|---|---|
-| Edge list | Lean, simple, good for import/export | Slow to test whether a specific edge exists |
-| Adjacency list | Best default for [[breadth-first-search|BFS]]/[[depth-first-search|DFS]] on [[sparse-dense-and-random-graphs|sparse]] graphs | Less convenient for matrix-based methods |
-| Adjacency matrix | Fast edge lookup (O(1)), linear algebra friendly | Uses O(|V|²) space even for sparse graphs |
-
+| Representation   | Strength                                                                                                                        | Limitation                                  | Best use cases                 |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------ |
+| Edge list        | Lean, simple, good for import/export                                                                                            | Slow to test whether a specific edge exists | Kruskal's MST, I/O, Streaming  |
+| Adjacency list   | Best default for [[breadth-first-search\|BFS]]/[[depth-first-search\|DFS]] on [[sparse-dense-and-random-graphs\|sparse]] graphs | Less convenient for matrix-based methods    | BFS/DFS, Sparse Graphs         |
+| Adjacency matrix | Fast edge lookup (O(1)), linear algebra friendly                                                                                | Uses O(\|V\|²) space even for sparse graphs | Dense Graphs, Matrix Ops, GNNs |
+![[Pasted image 20260623144601.png]]![[Pasted image 20260623144321.png|383]]![[Pasted image 20260623144712.png]]
 - For undirected graphs, the adjacency matrix is symmetric: A[i][j] = A[j][i]
 - For directed graphs, the adjacency matrix is generally not symmetric
 - Edge lists are natural for tabular data and import/export

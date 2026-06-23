@@ -45,7 +45,7 @@ where I_s is the reverse saturation current, n is the ideality factor (1–2), V
 |-----------|---------|---------|-----------------|
 | Zero bias | V_bi | Zero (net) | W_0 |
 | Forward bias (V > 0) | V_bi − V | Exponential increase | Narrows |
-| Reverse bias (V < 0) | V_bi + |V| | ≈ −I_s (tiny) | Widens |
+| Reverse bias (V < 0) | V_bi + \|V\| | ≈ −I_s (tiny) | Widens |
 
 **Breakdown Mechanisms:**
 

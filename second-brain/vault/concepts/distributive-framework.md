@@ -42,10 +42,10 @@ All four are distributive (their transfer functions are gen/kill):
 
 | Analysis | Direction | Kind | Join | Distributive? |
 |----------|-----------|------|------|---------------|
-| [[reaching-definitions|Reaching definitions]] | Forward | May | ∪ | Yes |
-| [[available-expressions|Available expressions]] | Forward | Must | ∩ | Yes |
-| [[live-variable-analysis|Live variables]] | Backward | May | ∪ | Yes |
-| [[very-busy-expressions|Very busy expressions]] | Backward | Must | ∩ | Yes |
+| [[reaching-definitions\|Reaching definitions]] | Forward | May | ∪ | Yes |
+| [[available-expressions\|Available expressions]] | Forward | Must | ∩ | Yes |
+| [[live-variable-analysis\|Live variables]] | Backward | May | ∪ | Yes |
+| [[very-busy-expressions\|Very busy expressions]] | Backward | Must | ∩ | Yes |
 
 For all four, MFP = MOP, so the iterative algorithm gives the optimal answer.
 

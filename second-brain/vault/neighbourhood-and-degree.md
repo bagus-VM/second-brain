@@ -9,10 +9,10 @@ prerequisites: [graph-fundamentals]
 ---
 
 ## One-line Summary
-The neighbourhood N(v) of a node is the set of its directly connected neighbors; the degree deg(v) counts how many edges are incident to it.
+==The neighbourhood N(v) of a node is the set of its directly connected neighbors==; the degree deg(v) counts how many edges are incident to it.
 
 ## Core Intuition
-Degree is the simplest measure of a node's local connectivity. A person with 500 social connections has degree 500. A web page linked by 1000 other pages has in-degree 1000. These local properties aggregate into global patterns like degree distribution, which characterizes the entire network.
+Degree is the simplest measure of a node's local connectivity. ==A person with 500 social connections has degree 500==. A web page linked by 1000 other pages has in-degree 1000. These local properties aggregate into global patterns like degree distribution, which characterizes the entire network.
 
 ## Formal Definition / Statement
 - **Neighbourhood**: N(v) = {u ∈ V : {u, v} ∈ E} — the set of all nodes connected to v by an edge
