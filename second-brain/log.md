@@ -185,4 +185,21 @@
 
 *"Seventy-four drafts weren't stubs — they were complete pages that never got their status flipped. The vault was healthier than the lint suggested. The real disease was the seven drifted duplicates and nine abandoned ghosts creating ambiguity. Those are gone. What remains is seventeen unsourced pages — a verification task for exam prep, not a structural failure."*
 
+## [2026-06-23] QUERY | "When can a bipartite graph mislead instead of being a useful simplification?" | filed to vault/bipartite-graphs.md
+- Resolved open question on bipartite-graphs.md (line 47): two failure modes — (1) false no-within-set-edges axiom that deletes structure driving the phenomenon (epidemic threshold on sexual-contact network); (2) projection manufacturing dense cliques read as communities (C(s,2) artifact, see [[affiliation-networks]])
+- Added 2 Common Pitfalls to bipartite-graphs.md; bumped last_updated 2026-06-01 → 2026-06-23
+- Note: external edit added stray "- Lets samp" line to Open Questions during the session — left untouched (student's in-progress note)
+
+## [2026-06-23] QUERY | "How do bipartite structures affect diffusion?" (student fact-check) | filed to vault/bipartite-graphs.md
+- Student answered the 2nd open question: exam leak spreads across 90 friend groups via 1 shared course (the "common denominator"). Core intuition CORRECT.
+- Fact-check refinement: (1) course = broker spanning [[structural-holes]], high betweenness; (2) bipartite-specific = broker is a CONTEXT not a person — focus is the hub, C(300,2) bridges from one node; (3) leak = simple contagion (bridges accelerate), but complex contagion would BLOCK on same structure ([[weak-tie-paradox-contagion]]); (4) projection hides the single point of failure (connects to 1st resolved OQ)
+- Resolved 2nd OQ on bipartite-graphs.md; added 3 cross-links (affiliation-networks, structural-holes, weak-tie-paradox-contagion)
+- Both open questions on bipartite-graphs.md now resolved — page fully sourced
+
+## [2026-06-23] LINT | Broken markdown tables — unescaped pipes | 6 files, 9 rows fixed
+- Root cause: `|` inside table cells (wikilink aliases `[[slug\|alias]]`, math notation `O(\|V\|)`) is parsed as column delimiter by Obsidian/markdown, shredding cells and inflating column count.
+- Fix: escape every literal pipe as `\|` inside table rows. Obsidian still parses `[[slug\|alias]]` as a wikilink with alias.
+- Files fixed: vault/graph-representations.md (1 table), index.md (2 rows), vault/pixel-formats-and-bit-depth.md (1 row), vault/concepts/distributive-framework.md (4 rows), vault/topics/microelectronics-lecture-3.md (1 row)
+- Post-fix scan: 0 remaining broken table rows ✅
+
 

@@ -9,7 +9,7 @@ prerequisites: [graph-fundamentals]
 ---
 
 ## One-line Summary
-Undirected graphs model symmetric relationships (friendship), while directed graphs model asymmetric ones (following, citing).
+==Undirected graphs model symmetric relationships (friendship)==, while directed graphs model asymmetric ones (following, citing).
 
 ## Core Intuition
 The same set of nodes can yield very different models depending on whether edges have direction. Friendship is symmetric — if A is friends with B, then B is friends with A. But "A follows B" on Twitter does not imply "B follows A." The choice of directed vs. undirected is a fundamental modeling decision.

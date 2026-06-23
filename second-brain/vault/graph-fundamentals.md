@@ -12,7 +12,7 @@ prerequisites: []
 A graph G = (V, E) is the formal mathematical structure for modeling networks, consisting of vertices (nodes) and edges (links).
 
 ## Core Intuition
-Every network — social, technical, economic — can be abstracted as a graph. The key step is choosing what counts as a node and what counts as an edge. This modeling choice is never neutral; it determines what you can see and what you miss.
+==Every network — social, technical, economic — can be abstracted as a graph. The key step is choosing what counts as a node and what counts as an edge==. This modeling choice is never neutral; it determines what you can see and what you miss.
 
 ## Formal Definition / Statement
 A **graph** G = (V, E) consists of:

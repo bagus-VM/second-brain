@@ -146,7 +146,7 @@
 | [[paths-walks-and-cycles]] | Walk → path → cycle hierarchy | current |
 | [[shortest-path-and-diameter]] | dist(u,v), diam(G) | current |
 | [[eulerian-path-and-circuit]] | Königsberg, degree parity | current |
-| [[breadth-first-search]] | BFS, FIFO, O(|V|+|E|) | current |
+| [[breadth-first-search]] | BFS, FIFO, O(\|V\|+\|E\|) | current |
 | [[depth-first-search]] | DFS, LIFO, cycle detection | current |
 | [[dijkstras-algorithm]] | Weighted shortest paths | current |
 | [[connectivity-and-components]] | Connected, giant component | current |
@@ -204,7 +204,7 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[milgrams-experiment-six-degrees]] | Letter experiment | current |
-| [[small-world-property]] | d̄ ∝ log|V| | current |
+| [[small-world-property]] | d̄ ∝ log\|V\| | current |
 | [[watts-strogatz-model]] | Regular + random rewiring | current |
 | [[kleinberg-decentralized-search]] | Grid model, navigability | current |
 | [[random-graphs]] | Erdős-Rényi G(n,p) | current |
