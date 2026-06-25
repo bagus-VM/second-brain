@@ -12,7 +12,7 @@ prerequisites: [graph-fundamentals, graph-representations, paths-walks-and-cycle
 BFS explores a graph layer by layer using a FIFO queue, guaranteeing shortest paths in unweighted graphs with O(|V|+|E|) complexity.
 
 ## Core Intuition
-BFS is like dropping a stone in water: ripples expand outward one layer at a time. Starting from a source node, BFS first visits all direct neighbors (layer 1), then all their unvisited neighbors (layer 2), and so on. Because it processes nodes in FIFO order, the first time it reaches a node, it has found the shortest path to that node.
+==BFS is like dropping a stone in water: ripples expand outward one layer at a time==. Starting from a source node, BFS first visits all direct neighbors (layer 1), then all their unvisited neighbors (layer 2), and so on. Because it processes nodes in FIFO order, the first time it reaches a node, it has found the shortest path to that node.
 
 ## Formal Definition / Statement
 **Algorithm: BFS** (Input: Graph G = (V, E), source node s)

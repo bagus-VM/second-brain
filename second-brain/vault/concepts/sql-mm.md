@@ -2,9 +2,9 @@
 title: "SQL/MM (SQL Multimedia)"
 tags: [concept, multimedia-databases, semester-1, sql-mm, content-based-retrieval, standard]
 course: "Multimedia Databases"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-19
+last_updated: 2026-06-25
 prerequisites: ["[[object-relational-databases]]", "[[content-based-retrieval]]", "[[mpeg-7]]"]
 ---
 
@@ -36,8 +36,9 @@ SQL/MM bridges the gap between traditional relational databases and multimedia r
 - **SQL/MM Part 1: Framework** — overall architecture, data type hierarchy
 - **SQL/MM Part 2: Full-text** — full-text search (FT) predicates and functions
 - **SQL/MM Part 3: Spatial** — spatial data types and functions (geometry, geography)
-- **SQL/MM Part 4: Still Image** — still image data type and methods (SI)
-- **SQL/MM Part 5: SQL/MED** — management of external data (not multimedia-specific)
+- **SQL/MM Part 5: Still Image** — still image data type and methods (SI). UDT `SI_StillImage` with `SI_content` (BLOB, includes header/color tables), `SI_contentLength`, `SI_format` (8 chars), `SI_height`, `SI_width`. Feature subtypes: `SI_AverageColor`, `SI_ColorHistogram`, `SI_PositionalColor`, `SI_Texture`. Each has an `SI_Score` method that computes distance and returns a real value 0-1. CBR query example: `WHERE p1.photo1_color.SI_Score(p2.photo2) > 0.5`.
+- **SQL/MM Part 2: Full Text** — UDT `FullText` with two search methods: `Contains` (boolean yes/no) and `Rank` (implementation-dependent real value). Supports contextual and conceptual search patterns.
+- **SQL/MM Part 3: Spatial** — UDTs for 2D data: `ST_Point` (0-dim), `ST_Curve`/`ST_LineString`/`ST_CircularString` (1-dim), `ST_Surface`/`ST_Polygon` (2-dim), plus `ST_Multi*` collections. Each geometry has an SRID (spatial reference system identifier).
 - **SQL/MM Part 6: Data Mining** — data mining functions (not yet finalized)
 - **SQL/MM Part 7: History** — temporal data (not yet finalized)
 - **SQL/MM Part 8: Sequences** — sequence data (not yet finalized)
@@ -230,6 +231,8 @@ ORDER BY similarity;
 - [[mpeg-7-descriptors]] — specific descriptors (dominant color, color layout) used in SQL/MM queries
 - [[feature-vector]] — SQL/MM queries operate on feature vectors
 - [[structured-vs-unstructured-retrieval]] — SQL/MM bridges structured SQL and unstructured multimedia
+- [[moql]] — another SQL/OQL extension approach for multimedia queries
+- [[multimedia-query-languages]] — overview of MMQL history and categories
 
 ## Open Questions
 - Will SQL/MM gain wider adoption, or will specialized multimedia databases (vector databases, document stores) replace it?

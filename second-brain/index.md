@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-22
-**Total pages:** 592 (vault: 540 pages + study: 52 practice/flashcards/exam materials; excluding raw/)
+**Last updated:** 2026-06-25
+**Total pages:** 610 (vault: 552 pages + study: 54 practice/flashcards/exam materials; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -11,16 +11,16 @@
 ## Exam Calendar
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~37 | **6/6 lectures ✅** + Ex01–Ex08 practice complete ✅ (83+ pages) |
-| [[network-science]] | 28 July 2026 | ~44 | **9/9 lectures ✅** + Ex01–Ex07 (138 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~46 | **8/8 lectures ✅** + Sheet 1–7 (70+ pages) |
+| [[multimedia-databases]] | 21 July 2026 | ~26 | **9/9 lectures ✅** + Ex01–Ex08 practice complete ✅ (95+ pages) |
+| [[network-science]] | 28 July 2026 | ~33 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~35 | **8/8 lectures ✅** + Sheet 1–8 (61+ pages) |
 | [[software-analyse]] | 31 July 2026 | ~47 | **8/8 lectures ✅** (85+ pages) |
 | [[iot-security]] | 05 Aug 2026 | ~52 | **7/7 lectures ✅** (~70 pages) + 3 papers ingested |
 | [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
 
 ---
 
-## 📚 Multimedia Databases (83 pages)
+## 📚 Multimedia Databases (95 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -103,6 +103,34 @@
 | [[sql-mm]] | ISO/IEC 13249 SQL multimedia extension for content-based queries | current |
 | [[mpqf]] | MPEG Query Format: standardized multimedia query expressions | current |
 
+### L07 — Content-Based Image Retrieval
+| Page | Summary | Status |
+|------|---------|--------|
+| [[multimedia-databases-lecture-07]] | L07 topic: CBIR pipeline, QBE/QBF, histograms, distance metrics, DL, evaluation | current |
+| [[query-by-example-and-feature]] | QBE (sample image) vs QBF (feature values), interactive query loop | current |
+| [[cbir-systems-evaluation]] | Precision, recall, MAP, F-measure, IoU, TRECVID benchmarks | current |
+
+### L08 — Query Languages
+| Page | Summary | Status |
+|------|---------|--------|
+| [[multimedia-databases-lecture-08]] | L08 topic: MMQL history, MOQL/OQL, SQL/MM, MPQF, result presentation, query processing | current |
+| [[multimedia-query-languages]] | MMQL overview: history, categories, query types, requirements | current |
+| [[moql]] | Multimedia Object Query Language: OQL extension with spatial/temporal predicates | current |
+| [[oql]] | Object Query Language: ODMG model, SQL-92 with OO extensions | current |
+| [[nested-tables-vs-varrays]] | Oracle collection types: VARRAY (bounded, ordered) vs nested table (unbounded, SQL-queryable) | current |
+
+### L09 — Indexing & Access Structures
+| Page | Summary | Status |
+|------|---------|--------|
+| [[multimedia-databases-lecture-09]] | L09 topic: signature vectors, dimensionality reduction, R-tree family, SR-tree, LSH, GiST | current |
+| [[signature-vectors]] | Low-level features as vectors for content-based indexing | current |
+| [[dimensionality-reduction]] | Transformations (KLT, FFT, DCT, Wavelet) + space-filling curves (Hilbert, Z-Order) | current |
+| [[r-tree]] | R-tree family: R+, R*, SS, SR, TV, X-tree for multidimensional indexing | current |
+| [[sr-tree]] | Sphere/Rectangle-tree: intersection of bounding boxes, MINDIST/MINMAXDIST pruning | current |
+| [[locality-sensitive-hashing]] | LSH: hash similar items to same bucket for approximate NN search | current |
+| [[gist-framework]] | Generalized Search Tree: template index structure for ORDBMS | current |
+| [[quadtree-and-kd-tree]] | Main memory spatial structures: quadtree splits, kd-tree one-dimensional splits | current |
+
 
 ### Practice & Flashcards
 | Page | Summary | Status |
@@ -126,7 +154,7 @@
 
 ---
 
-## 📚 Network Science (138 pages)
+## 📚 Network Science (139 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -252,6 +280,7 @@
 | [[network-science-e05]] | Exercise sheet 5: community detection | current |
 | [[network-science-e06]] | Exercise sheet 6: diffusion | current |
 | [[network-science-e07]] | Exercise sheet 7: embeddings | current |
+| [[network-science-e08]] | Exercise sheet 8: small-world networks (solutions) | current |
 | [[network-science-e01-flashcards]] | Flashcards for E01 | current |
 | [[network-science-e02-flashcards]] | Flashcards for E02 | current |
 | [[network-science-e03-flashcards]] | Flashcards for E03 | current |
@@ -267,7 +296,7 @@
 
 ---
 
-## 📚 Reproducibility Engineering (60 pages)
+## 📚 Reproducibility Engineering (61 pages)
 
 ### L01 — Repeat/Reproduce/Replicate
 | Page | Summary | Status |
@@ -358,6 +387,7 @@
 | [[reproducibility-engineering-sheet-6-flashcards]] | Flashcards for Sheet 6 | current |
 | [[reproducibility-engineering-sheet-7]] | Sheet 7: BenchBase lab — SQLite vs PostgreSQL benchmarking | current |
 | [[reproducibility-engineering-sheet-7-flashcards]] | Flashcards for Sheet 7 | current |
+| [[reproducibility-engineering-sheet-8]] | Sheet 8: hierarchical data (XML/JSON, JSON Schema combinators, HDF5) | current |
 
 ---
 

@@ -2,9 +2,9 @@
 title: "Web Bow-Tie Structure"
 tags: [concept, network-science, semester-1]
 course: "Network Science"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-01
+last_updated: 2026-06-25
 prerequisites: []
 ---
 
@@ -65,6 +65,40 @@ For a directed graph $G = (V, E)$:
 - IN → OUT (via SCC): 200 × 250 = 50,000
 - Total: ~274,700 out of 1000 × 999 ≈ 10⁶ → **~27%** of pairs are reachable
 
+### 9-node bow-tie (Exercise Sheet 8)
+
+A small directed graph makes the components concrete. Nodes and edges:
+
+- SCC core: A → B → C → A
+- IN: D → A, E → B
+- OUT: C → F, B → G
+- Tendril: D → H
+- Isolated: I
+
+Classification: {A, B, C} form the only non-trivial SCC. D and E are IN (they reach the SCC but are not reached from it). F and G are OUT (reached from the SCC, cannot reach back). H is a tendril reachable only from D. I is isolated. D and E cannot reach each other, and I can neither reach nor be reached.
+
+Compute this in Python with `nx.strongly_connected_components` and `nx.condensation`:
+
+```python
+import networkx as nx
+
+W = nx.DiGraph()
+W.add_edges_from([("A", "B"), ("B", "C"), ("C", "A"),
+                  ("D", "A"), ("E", "B"),
+                  ("C", "F"), ("B", "G"),
+                  ("D", "H")])
+W.add_node("I")
+
+sccs = list(nx.strongly_connected_components(W))
+C = nx.condensation(W, scc=sccs)
+giant = max(range(len(sccs)), key=lambda i: len(sccs[i]))
+
+IN = nx.ancestors(C, giant) - {giant}
+OUT = nx.descendants(C, giant) - {giant}
+```
+
+The condensation graph collapses each SCC to a single node. The giant SCC node sits in the middle, with IN nodes pointing into it and OUT nodes pointing out of it. Pages in IN components or tendrils are invisible to crawlers that start from the SCC core.
+
 ## Common Pitfalls
 - **"The Web is a small world"** — Only the SCC (~28%) is. The rest has asymmetric or missing reachability.
 - **"Short paths exist between any two pages"** — Only within the SCC. From OUT to IN, no directed path exists.
@@ -77,6 +111,7 @@ For a directed graph $G = (V, E)$:
 - [[milgrams-experiment-six-degrees]] — Milgram's social network was effectively undirected (acquaintance is symmetric); the Web is not
 - [[random-graphs]] — Directed random graphs have different connectivity thresholds
 - [[scale-free-networks]] — The Web's degree distribution is heavy-tailed (in-degree follows power law)
+- [[network-science-e08]] — Exercise Sheet 8 works through a 9-node bow-tie example in Python
 
 ## Open Questions
 - How has the bow-tie structure changed since 2000 (with social media, SPAs, JavaScript rendering)?
