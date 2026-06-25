@@ -11,12 +11,14 @@
             "id": "4d38619bdb620b4a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf"
+                "file": "vault/concepts/centrality.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Ex01"
+              "icon": "lucide-file",
+              "title": "centrality"
             }
           }
         ]
@@ -95,7 +97,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "vault/topics/multimedia-databases-lecture-04.md",
+            "file": "vault/topics/network-science-l02.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -137,6 +139,10 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "vault/topics/network-science-l01.md",
+    "vault/topics/network-science-l02.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf",
+    "vault/concepts/centrality.md",
     "vault/topics/multimedia-databases-lecture-04.md",
     "study/exams/vault-lint-report-2026-06-16.md",
     "study/exams/software-analyse-codebase-defense.md",
@@ -161,9 +167,6 @@
     "vault/concepts/semiconductor-physics.md",
     "vault/concepts/pmos-transistor.md",
     "vault/concepts/pagerank-algorithm.md",
-    "vault/concepts/p-n-junction-overview.md",
-    "vault/concepts/non-repudiation.md",
-    "vault/concepts/mos-transistors.md",
     "Pasted image 20260609110111.png"
   ]
 }
