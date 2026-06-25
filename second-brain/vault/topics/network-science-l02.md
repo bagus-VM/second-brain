@@ -31,8 +31,8 @@ Lecture 02 introduces the formal language of graph theory as the foundation for 
 - [[eulerian-path-and-circuit]] — Königsberg bridges, degree parity conditions
 
 ### Graph Search
-- [[breadth-first-search]] — layer-by-layer, FIFO queue, O(|V|+|E|)
-- [[depth-first-search]] — deep-first, LIFO stack, O(|V|+|E|)
+- [[breadth-first-search]] — layer-by-layer, FIFO queue, O(|V|+|E|), guarantee shortest paths in unweighted graph
+- [[depth-first-search]] — deep-first, LIFO stack, O(|V|+|E|), determines reachability and sorting, but doesn't guarantee shortest path
 - [[dijkstras-algorithm]] — weighted shortest paths, priority queue
 
 ### Connectivity

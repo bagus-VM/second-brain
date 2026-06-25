@@ -12,7 +12,7 @@ prerequisites: [graph-fundamentals, graph-representations, paths-walks-and-cycle
 DFS explores a graph by going as deep as possible along each branch before backtracking, using a LIFO stack with O(|V|+|E|) complexity.
 
 ## Core Intuition
-DFS is like exploring a maze: pick a path and keep going until you hit a dead end, then backtrack to the last junction with unexplored exits. This "deep first, wide later" strategy is useful for structural exploration — finding cycles, determining reachability, and topological sorting — but it does NOT guarantee shortest paths.
+DFS is like exploring a maze: ==pick a path and keep going until you hit a dead end, then backtrack to the last junction with unexplored exits==. This "deep first, wide later" strategy is useful for structural exploration — finding cycles, determining reachability, and topological sorting — ==but it does NOT guarantee shortest paths.==
 
 ## Formal Definition / Statement
 **Algorithm: DFS** (Input: Graph G = (V, E), source node s)

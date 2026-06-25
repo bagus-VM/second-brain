@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "a97664dc6a07d619",
+        "id": "8b24e6d3bc782a3f",
         "type": "tabs",
-        "dimension": 44.82942430703625,
+        "dimension": 41.913580246913575,
         "children": [
           {
-            "id": "49a12602e1322d4a",
+            "id": "2ba99cf75d70bf17",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,71 +21,58 @@
               "icon": "lucide-file",
               "title": "network-science-l02"
             }
-          },
-          {
-            "id": "1845f46d4af081c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/topics/network-science-l01.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "network-science-l01"
-            }
           }
         ]
       },
       {
-        "id": "80231be38bca2589",
+        "id": "cd3432ea8368a3c2",
         "type": "tabs",
-        "dimension": 55.17057569296375,
+        "dimension": 58.08641975308642,
         "children": [
           {
-            "id": "e88279ad97b86d72",
+            "id": "c517187d38fd071e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/paths-walks-and-cycles.md",
+                "file": "vault/breadth-first-search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "paths-walks-and-cycles"
+              "title": "breadth-first-search"
             }
           },
           {
-            "id": "e63eb722ca59d555",
+            "id": "be568d950bb4eeab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/shortest-path-and-diameter.md",
+                "file": "vault/depth-first-search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shortest-path-and-diameter"
+              "title": "depth-first-search"
             }
           },
           {
-            "id": "6c8c51f41b2cf303",
+            "id": "6b8cc9463b14d95b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/eulerian-path-and-circuit.md",
+                "file": "vault/dijkstras-algorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "eulerian-path-and-circuit"
+              "title": "dijkstras-algorithm"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -142,7 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5,
+    "width": 255.5,
     "collapsed": true
   },
   "right": {
@@ -177,8 +164,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           },
           {
@@ -215,6 +202,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -222,58 +210,56 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "templater-obsidian:Templater": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-kanban:Create new board": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "e88279ad97b86d72",
+  "active": "6b8cc9463b14d95b",
   "lastOpenFiles": [
-    "vault/eulerian-path-and-circuit.md",
+    "vault/depth-first-search.md",
     "vault/topics/network-science-l02.md",
+    "vault/breadth-first-search.md",
+    "vault/dijkstras-algorithm.md",
+    "vault/eulerian-path-and-circuit.md",
     "vault/shortest-path-and-diameter.md",
     "vault/paths-walks-and-cycles.md",
-    "vault/neighbourhood-and-degree.md",
     "vault/graph-representations.md",
+    "vault/study-materials-index.md",
+    "vault/topics/software-analyse-lecture-8.md",
+    "vault/topics/software-analyse-lecture-7.md",
+    "vault/topics/software-analyse-lecture-6.md",
+    "vault/topics/reproducibility-engineering-lecture-8.md",
+    "vault/topics/reproducibility-engineering-lecture-7.md",
+    "vault/topics/reproducibility-engineering-lecture-6.md",
+    "vault/topics/paper-zhou-iot-2-0.md",
+    "vault/topics/paper-iot-mexis-2021-poster.md",
+    "vault/topics/paper-iot-lightweight-hardware-architecture.md",
+    "vault/topics/microelectronics-lecture-6.md",
+    "vault/topics/iot-lecture-7.md",
+    "vault/topics/iot-lecture-6.md",
+    "vault/metamers.md",
+    "vault/connections/mmdb-exam-prediction.md",
+    "vault/concepts/zero-analysis-worked-example.md",
+    "vault/concepts/weak-structural-balance.md",
+    "vault/concepts/vlsi-design.md",
+    "raw/lectures/software_analyse/Vorlesung/8_Slicing_JupyterNotebookExport.pdf",
+    "raw/lectures/software_analyse/Vorlesung/8_Slicing.pdf",
+    "raw/lectures/software_analyse/Vorlesung/7_Interprocedural_JupyterNotebookExport.pdf",
+    "raw/lectures/software_analyse/Vorlesung/7_Interprocedural.pdf",
+    "raw/lectures/software_analyse/Vorlesung/6_AbstractInterpretation_JupyterNotebookExport.pdf",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_7___Tidy_Data.pdf",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_6___Architectures.pdf",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_7.pdf",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_6.pdf",
+    "raw/lectures/network_science/Uebung/e07-structural-balance-student.pdf",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
     "Pasted image 20260623144321.png",
-    "vault/sparse-dense-and-random-graphs.md",
-    "vault/bipartite-graphs.md",
     "Pasted image 20260623143016.png",
     "Pasted image 20260623142244.png",
-    "vault/topics/network-science-l01.md",
-    "vault/weighted-graphs.md",
-    "vault/directed-and-undirected-graphs.md",
-    "vault/graph-fundamentals.md",
-    "vault/concepts/network-intro.md",
-    "vault/topics/multimedia-databases-lecture-06.md",
-    "index.md",
-    "courses/iot-security.md",
-    "courses/introduction-to-microelectronics.md",
-    "courses/Courses.md",
-    "vault/concepts/centrality.md",
-    "Untitled.base",
-    "courses/multimedia-databases.md",
-    "courses/network-science.md",
-    "study/exams/Exams.md",
-    "vault/concepts/network-diffusion.md",
-    "vault/concepts/community-structure.md",
-    "vault/concepts/connected-component.md",
-    "vault/concepts/network-effects.md",
-    "raw/lectures/network_science/Uebung/e07-structural-balance-solutions.pdf",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target/classes/git.properties",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target/classes",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/target",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/UpdateRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/ScanRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/ReadRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/ReadModifyWriteRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/src/main/java/com/oltpbenchmark/benchmarks/ycsb/procedures/InsertRecord.java",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/architecture.png",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif"
+    "Pasted image 20260610105308.png",
+    "Pasted image 20260609110111.png",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
+    "projects/software-analyse/ss26sasign-putra01/target/site/jacoco-ut/jacoco-resources/source.gif"
   ]
 }
