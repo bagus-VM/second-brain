@@ -2,9 +2,9 @@
 title: "MPEG Query Format (MPQF)"
 tags: [concept, multimedia-databases, semester-1, mpqf, mpeg-7, query-format]
 course: "Multimedia Databases"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-19
+last_updated: 2026-06-25
 prerequisites: ["[[mpeg-7]]", "[[mpeg-7-descriptors]]", "[[content-based-retrieval]]"]
 ---
 
@@ -169,8 +169,27 @@ MPQF supports multiple distance metrics:
 - **Weighted Euclidean**: `√(Σ wᵢ(pᵢ - qᵢ)²)` — per-dimension weights
 - **Custom**: user-defined distance functions
 
+### Three main categories (from the lecture)
+MPQF is composed of three main categories:
+- **Management**: how to find the right Multimedia Search Engine (MMRS). Two scenarios: (1) the MMRS is known to the user, (2) the MMRS is unknown and must be discovered. The management category handles MMRS discovery and listing.
+- **Input Query Format**: the structure of the query itself.
+- **Output Query Format**: the structure of the result set.
+
+### Query structure
+A general MPQF query has three parts:
+- **QFDeclaration** (0..1): declares resources for query conditions (text, media, or metadata descriptions like MPEG-7 DominantColorType).
+- **OutputDescription** (0..1): defines content and structure of the result set. Uses XPath for element selection (absolute and relative addressing). Supports grouping, sorting, restriction, and paging.
+- **QueryCondition** (0..1): modular filter architecture with TargetMediaType for encoding filtering and join functionality.
+
+### Scoring and thresholds
+Each condition can have:
+- **preferenceValue**: relative importance of the condition.
+- **thresholdValue**: minimum score for inclusion.
+- **scoringFunction**: defined for each fuzzy boolean operator (AND, OR, XOR). Recommended to comply with t-norm or t-conorm rules.
+Results in a rank and confidence evaluation for each element. MPQF also supports synchronous/asynchronous mode and timeout functionality.
+
 ### Advantages
-- **Standardization**: ISO standard ensures interoperability across systems
+- **Standardization**: ISO standard since 2008 (Part 12 of MPEG-7). XML-based, decoupled from specific metadata standards. Integrates limited XQuery functionality. Ensures interoperability across systems
 - **Flexibility**: supports multiple query types, descriptors, and distance metrics
 - **Extensibility**: can define custom descriptors and distance functions
 - **MPEG-7 integration**: uses MPEG-7 descriptors, ensuring compatibility
@@ -302,6 +321,8 @@ MPQF supports multiple distance metrics:
 - [[feature-vector]] — MPQF queries operate on feature vectors (MPEG-7 descriptors)
 - [[sql-mm]] — MPQF queries can be translated to SQL/MM for database execution
 - [[structured-vs-unstructured-retrieval]] — MPQF bridges natural language queries and structured multimedia data
+- [[multimedia-query-languages]] — places MPQF in the from-scratch category of MMQL approaches
+- [[moql]] — the SQL/OQL extension approach, contrasted with MPQF's from-scratch XML design
 
 ## Open Questions
 - Will MPQF gain wider adoption, or will proprietary query formats dominate?

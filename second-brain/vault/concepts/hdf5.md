@@ -2,9 +2,9 @@
 title: "HDF5"
 tags: [concept, reproducibility-engineering, semester-1, hierarchical-data, scientific-computing, metadata]
 course: "Reproducibility Engineering"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-19
+last_updated: 2026-06-25
 prerequisites: ["[[reproducibility-engineering-lecture-8]]", "[[visitor-pattern]]"]
 ---
 
@@ -115,6 +115,58 @@ Dataset: ocean/salinity, shape: (365, 180, 360)
   units: PSU
 ```
 
+## HDF5 vs XML vs JSON
+
+HDF5, XML, and JSON all model hierarchical data, but they fit different workloads.
+
+**Prefer HDF5 for:**
+- Large numerical arrays, especially multi-dimensional ones (climate grids, detector reads, image volumes).
+- Scientific data with rich metadata that belongs in a hierarchy (groups for components, datasets for variables, attributes for units and provenance).
+- Datasets that need chunking, compression, or parallel I/O for efficient partial reads.
+
+**Prefer XML or JSON for:**
+- Human-readable data that people will inspect or edit by hand.
+- Web APIs and configuration files, where text-based tools and broad language support matter.
+- Small to medium structured records exchanged between systems.
+
+HDF5 is binary and compact but opaque to text tools. XML and JSON are readable and universal but inefficient for large numerical arrays. Match the format to the data shape and the workflow.
+
+### Worked Example: Weather Stations (Exercise Sheet 8)
+
+Two weather stations (15 and 20) collect temperature and wind readings with per-station metadata (sampling delta, start time, unit). Stored as CSV, this needs three joined tables plus a fragile metadata table. In HDF5 the hierarchy mirrors the physical setup: one group per station, one dataset per measurement, and attributes for the metadata.
+
+```python
+import numpy as np
+import h5py
+
+temperature_station_15 = np.array([18.2, 18.4, 18.7, 19.0, 19.1])
+wind_station_15 = np.array([3.1, 3.3, 2.8, 4.0, 3.7])
+temperature_station_20 = np.array([64.0, 65.0, 66.1, 65.8])
+start_time = 0  # Should be a proper timestamp.
+
+with h5py.File("weather.hdf5", "w") as f:
+    # Station 15: h5py creates the intermediate group "/15" automatically.
+    f["/15/temperature"] = temperature_station_15
+    f["/15/temperature"].attrs["delta"] = 5.0
+    f["/15/temperature"].attrs["start time"] = start_time
+    f["/15/temperature"].attrs["temp unit"] = "degree Celsius"
+
+    f["/15/wind"] = wind_station_15
+    f["/15/wind"].attrs["delta"] = 5.0
+    f["/15/wind"].attrs["start time"] = start_time
+    f["/15/wind"].attrs["wind unit"] = "m/s"
+
+    # Station 20.
+    f["/20/temperature"] = temperature_station_20
+    f["/20/temperature"].attrs["delta"] = 10.0
+    f["/20/temperature"].attrs["start time"] = start_time
+    f["/20/temperature"].attrs["temp unit"] = "degree Fahrenheit"
+
+    f.attrs["description"] = "Weather station data (temperature and wind)"
+```
+
+Units now travel with the data, so station 20's Fahrenheit values cannot be confused with station 15's Celsius values. One self-describing file replaces three loosely coupled CSV tables.
+
 ## Common Pitfalls
 
 - **Forgetting to close the file**: HDF5 files buffer writes. If you don't close the file (or use `with`), data may not be flushed to disk. Always use `with h5py.File(...) as f:`.
@@ -133,6 +185,7 @@ Dataset: ocean/salinity, shape: (365, 180, 360)
 - [[xml-structured-text]] — XML is another hierarchical format
 - [[json-schema]] — validates JSON structure, analogous to HDF5's self-describing nature
 - [[tidy-data]] — hierarchical data can be tidy (each dataset = one variable)
+- [[reproducibility-engineering-sheet-8]] — Exercise Sheet 8 builds the weather station HDF5 file
 
 ## Open Questions
 - How does HDF5 compare to Parquet for columnar data? (Parquet is better for tabular data; HDF5 is better for multi-dimensional arrays.)

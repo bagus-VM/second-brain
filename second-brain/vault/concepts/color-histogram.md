@@ -2,9 +2,9 @@
 title: "Colour Histogram"
 tags: [concept, multimedia-databases, semester-1, color-histogram, feature, cbr]
 course: "Multimedia Databases"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-14
+last_updated: 2026-06-25
 prerequisites: ["[[content-based-retrieval]]", "[[feature-vector]]"]
 ---
 
@@ -63,6 +63,18 @@ The histogram h_I ∈ ℝ^k is the colour-based feature vector of I.
 - **Fuzzy histogram**: each pixel contributes to multiple bins (with weights)
 - **Cumulative histogram**: the CDF, used with Kolmogorov-Smirnov distance
 
+### Range quantization vs bin quantization
+Two separate quantization steps control the histogram size:
+- **Range quantization** (color space quantization): reduces the number of bins. A typical JPG has 256 values per RGB channel = 16.7M colors. Range quantization distributes these into n bins (e.g., 512 bins, each containing 32,768 colors). The histogram is a vector of bin values (pixel counts or percentages).
+- **Bin quantization**: defines the bit-coding of values in each bin. For an image with 65,536 pixels, 16 bits are theoretically needed per bin. In practice, 15 bits may be precise enough, saving ~50% space (15 bits * 512 bins = 7,680 bits vs 16 * 512 = 8,192).
+- **Adaptive (individual) binning**: adapts bin definitions to each image (e.g., several shades of blue for a sea image). Equalizes the distribution of bin values. Tends to provide more accurate content representation.
+- **Regular (uniform) binning**: fixed, uniform bin definitions across all images.
+
+### Query processing with histograms
+- QBF on a single descriptor returns a sorted *feature sequence* (images with similarity > 0, ordered by degree of match).
+- QBF on several descriptors requires fusion of the individual feature sequences.
+- QBE is a QBF that uses the feature sequences extracted from the query image. See [[query-by-example-and-feature]].
+
 ### MPEG-7 colour descriptors
 MPEG-7 standardises several colour features:
 - **Dominant Color Descriptor (DCD)**: a small set of (colour, percentage) pairs
@@ -100,6 +112,7 @@ For a more discriminative feature, you'd also include spatial information (e.g.,
 - [[minkowski-distance]] — common distance function
 - [[chi-squared-distance]] — scale-invariant distance
 - [[mpeg-7]] — standardised colour descriptors
+- [[query-by-example-and-feature]] — histograms produce the feature sequences that QBF and QBE operate on
 - [[multimedia-databases-lecture-06]] — the lecture
 
 ## Open Questions

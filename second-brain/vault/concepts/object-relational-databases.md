@@ -189,6 +189,7 @@ WHERE a.get_age() > 5;  -- works for AnimalType and all subtypes
 - [[sql-mm]] — the SQL/MM standard extends SQL for multimedia
 - [[content-based-retrieval]] — OR-DBMS can store and query feature vectors for CBIR
 - [[mpeg-7-descriptors]] — MPEG-7 descriptors can be modeled as UDTs
+- [[nested-tables-vs-varrays]] — Oracle's two collection types for storing sets inside a column (exam hint)
 
 ## Open Questions
 - Are object-relational databases the right abstraction for multimedia, or should we use specialized multimedia databases (e.g., vector databases for embeddings)?

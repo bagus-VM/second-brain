@@ -2,9 +2,9 @@
 title: "JSON Schema"
 tags: [concept, reproducibility-engineering, semester-1, json, validation, data-integrity]
 course: "Reproducibility Engineering"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-19
+last_updated: 2026-06-25
 prerequisites: ["[[reproducibility-engineering-lecture-8]]"]
 ---
 
@@ -48,6 +48,43 @@ Key keywords:
 - **Schema validation is a reproducibility tool**: if your experiment outputs JSON, a schema ensures the output has the expected structure. A schema violation is a bug — it means the experiment produced malformed data.
 - **Schemas are versioned**: you can track schema changes over time. If the schema changes, you know the data format changed.
 - **Schemas are machine-readable**: unlike a README, a schema can be validated automatically. You can write a test that validates every JSON output against the schema.
+
+### Schema combinators: allOf, anyOf, oneOf
+
+JSON Schema composes subschemas with three combinators. Each takes an array of subschemas and combines them with a different matching rule.
+
+- **`allOf`**: the instance must satisfy **all** subschemas. Use it to stack constraints, e.g. "must be a string AND at most 5 characters long".
+- **`anyOf`**: the instance must satisfy **at least one** subschema.
+- **`oneOf`**: the instance must satisfy **exactly one** subschema. If it matches zero, or matches more than one, it fails.
+
+Worked example (from Exercise Sheet 8): combine `{ "type": "string" }` and `{ "maxLength": 5 }`.
+
+`allOf` (both must hold):
+```json
+{ "allOf": [ { "type": "string" }, { "maxLength": 5 } ] }
+```
+- `"foo"`: valid (string, length 3 ≤ 5).
+- `"a"`: valid (string, length 1 ≤ 5).
+- `"1234567890"`: invalid (string, but length 10 > 5).
+- `42`: invalid (not a string).
+
+`anyOf` (at least one must hold):
+```json
+{ "anyOf": [ { "type": "string" }, { "maxLength": 5 } ] }
+```
+- `"foo"`, `"a"`, `"1234567890"`: valid. All are strings, so each satisfies the first subschema.
+- `42`: invalid. It is not a string, and the exercise treats `maxLength` as a string constraint, so a number does not satisfy the second subschema either.
+
+`oneOf` (exactly one must hold):
+```json
+{ "oneOf": [ { "type": "string" }, { "maxLength": 5 } ] }
+```
+- `"foo"`: invalid. It is a string AND has length 3 ≤ 5, so it matches **both** subschemas. `oneOf` rejects anything matching more than one.
+- `"a"`: invalid for the same reason (matches both).
+- `"1234567890"`: valid. It is a string (matches subschema 1) but too long for `maxLength` (does not match subschema 2). Exactly one match.
+- `42`: invalid (matches neither under the exercise's framing).
+
+The trap with `oneOf` is overlapping subschemas. Short strings satisfy both `{ "type": "string" }` and `{ "maxLength": 5 }`, so `oneOf` rejects them. When the subschemas describe disjoint types (e.g. `{ "type": "integer" }` and `{ "type": "string" }`), `anyOf` and `oneOf` are semantically equivalent, since a value can never be both an integer and a string at once.
 
 ## Worked Example
 
@@ -112,6 +149,7 @@ Validation errors:
 
 ## Connections
 - [[reproducibility-engineering-lecture-8]] — the lecture
+- [[reproducibility-engineering-sheet-8]] — Exercise Sheet 8 practices the combinators and validation flow
 - [[tidy-data]] — validates structure, analogous to tidy data's structural invariant
 - [[hdf5]] — HDF5 attributes are another form of metadata
 - [[data-provenance]] — schemas can be part of a provenance chain
@@ -120,4 +158,4 @@ Validation errors:
 - How do you validate JSON Schema against a meta-schema? (JSON Schema is itself defined by a schema.)
 - What is the relationship between JSON Schema and OpenAPI (Swagger)? (OpenAPI uses JSON Schema for request/response bodies.)
 - Can you generate code from a JSON Schema? (Yes — tools like `jsonschema2pojo` generate Java classes from a schema.)
-- How do you handle polymorphic data (e.g., a field that can be one of several types)? (Use `oneOf`, `anyOf`, `allOf`.)
+- ~~How do you handle polymorphic data (e.g., a field that can be one of several types)?~~ **Resolved**: use `oneOf`, `anyOf`, or `allOf` to compose subschemas. See the Schema Combinators section above and [[reproducibility-engineering-sheet-8]].

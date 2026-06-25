@@ -203,3 +203,43 @@
 - Post-fix scan: 0 remaining broken table rows ✅
 
 
+
+## [2026-06-25] INGEST | Bulk: MMDB L07-L09 + NS e08 + RepEng IC8 | 14 pages created, 7 updated
+
+**Sources ingested (5 PDFs):**
+- MMDB L07: Content-Based (Image) Retrieval (07MMDB_CBR_IR_en_SS2026.pdf)
+- MMDB L08: Query Languages (08MMDB_Query_Languages_en_SS2026.pdf)
+- MMDB L09: Indexing/Access Structures (09MMDB_Indexing_en_SS2026.pdf)
+- NS Exercise 8: Small-World Networks solutions (e08-small-world-solutions.pdf)
+- RepEng In-Class Exercise 8: Hierarchical Data (SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf)
+
+**New pages created (14):**
+MMDB L07 (2): query-by-example-and-feature, cbir-systems-evaluation
+MMDB L08 (3): multimedia-query-languages, moql, oql
+MMDB L09 (7): signature-vectors, dimensionality-reduction, r-tree, sr-tree, locality-sensitive-hashing, gist-framework, quadtree-and-kd-tree
+NS e08 (1): network-science-e08 (practice, solutions)
+RepEng IC8 (1): reproducibility-engineering-sheet-8 (practice, solutions)
+
+**Existing pages updated (7):**
+- content-based-retrieval: added QBE/QBF query modes, evaluation links (sc 1->2)
+- color-histogram: added range/bin quantization, adaptive vs regular binning, query processing (sc 1->2)
+- sql-mm: fixed Part numbers (Part 5 = Still Image), added UDT details (SI_StillImage, SI_Score, FullText, ST_Geometry) (sc 1->2)
+- mpqf: added Management/Input/Output categories, QFDeclaration/OutputDescription/QueryCondition, scoringFunction (sc 1->2)
+- web-bow-tie-structure: added 9-node bow-tie worked example with Python (sc 1->2)
+- json-schema: added allOf/anyOf/oneOf combinators with worked examples, resolved polymorphic OQ (sc 1->2)
+- hdf5: added HDF5 vs XML/JSON comparison, weather station example (sc 1->2)
+
+**Index updated:** Added L07/L08/L09 sections (12 MMDB pages), NS e08, RepEng sheet 8. Exam calendar: MMDB 6/6->9/9 lectures, NS Ex01-07->Ex01-08, RepEng Sheet 1-7->Sheet 1-8. Total: 592->606 pages.
+
+## [2026-06-25] INGEST (supplement) | MMDB L07-L09 lecture topic pages | 3 pages created
+- Created vault/topics/multimedia-databases-lecture-07.md (CBIR overview)
+- Created vault/topics/multimedia-databases-lecture-08.md (Query Languages overview)
+- Created vault/topics/multimedia-databases-lecture-09.md (Indexing and Access Structures overview)
+- Pattern fix: every lecture has an overview page in vault/topics/. L07-L09 were missing after the initial ingest.
+- Index updated: added 3 lecture topic pages. Total: 606 to 609.
+
+## [2026-06-25] QUERY | Professor exam hint: nested tables vs VARRAYs | 1 page created, exam prediction updated
+- Created vault/concepts/nested-tables-vs-varrays.md (Oracle collection types: VARRAY bounded/ordered/index-accessed vs nested table unbounded/SQL-queryable/set-operable)
+- Updated vault/connections/mmdb-exam-prediction.md: added Professor Exam Hints section, added L07-L09 lecture links
+- Updated vault/concepts/object-relational-databases.md: added cross-link
+- Index updated: 609 to 610 pages

@@ -72,6 +72,13 @@ Ordered by (frequency in Uebung) × (concept centrality) × (ease of parameteriz
 9. **Quantization error / Nyquist rate / sampling theorem calculation** (Archetype A, L01–L04 material). PCM error formula or minimum sampling rate for a sum of sines.
 10. **Concept comparison** (Archetype I). "Compare QbE vs. QbS" or "Compare structured vs. unstructured retrieval" — open-ended, tests depth.
 
+## Professor Exam Hints (direct intel)
+
+> **2026-06-25:** Professor hinted "when to use nested tables vs VARRAYs" as exam-relevant.
+> This is an Oracle ORDBMS collection-type design question. See [[nested-tables-vs-varrays]].
+> Archetype I (concept comparison). The decision criteria: bounded vs unbounded size, ordered vs unordered, need SQL access via TABLE() vs index access, inline vs separate storage.
+> Likely format: "You are modeling X in an ORDBMS. Should you use a VARRAY or a nested table? Justify." or a comparison table question.
+
 ## "Don't Get Faked Out" — Style Signals
 
 - **"Show the steps"** is the prof's way of saying "I will grade intermediate work, not just the answer." Skip the algebra and you lose half the points.
@@ -103,3 +110,7 @@ Ordered by (frequency in Uebung) × (concept centrality) × (ease of parameteriz
 - [[multimedia-databases-lecture-04]] — L04 scope.
 - [[multimedia-databases-lecture-05]] — L05 scope.
 - [[multimedia-databases-lecture-06]] — L06 scope.
+- [[multimedia-databases-lecture-07]] — L07 scope (CBIR).
+- [[multimedia-databases-lecture-08]] — L08 scope (Query Languages).
+- [[multimedia-databases-lecture-09]] — L09 scope (Indexing).
+- [[nested-tables-vs-varrays]] — Professor exam hint: Oracle collection type decision.

@@ -2,9 +2,9 @@
 title: "Content-Based Retrieval (CBR)"
 tags: [concept, multimedia-databases, semester-1, content-based-retrieval, cbr]
 course: "Multimedia Databases"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-06-14
+last_updated: 2026-06-25
 prerequisites: ["[[multimedia-database-intro]]", "[[feature-vector]]", "[[multimedia-query-predicates]]"]
 ---
 
@@ -49,7 +49,7 @@ The distance function depends on the feature type:
 ### The five steps in detail
 1. **Feature extraction**: image processing algorithms extract numerical descriptors. Common choices: colour histograms (RGB, HSV, Lab), texture features (Gabor filters, LBP), shape features (Fourier descriptors, moments), SIFT/SURF keypoints, deep CNN embeddings.
 2. **Indexing**: high-dimensional indexing structures — kd-trees (for low dimensions), VP-trees, LSH, [[hierarchical-navigable-small-world|HNSW]] (for high dimensions).
-3. **Query processing**: the user submits a query; the system extracts features using the *same* algorithms as in step 1.
+3. **Query processing**: the user submits a query; the system extracts features using the *same* algorithms as in step 1. Two query modes drive the interactive loop: [[query-by-example-and-feature|QBE]] (submit a sample image, precise narrowing) and [[query-by-example-and-feature|QBF]] (submit feature values, exploratory widening). The result page reports both matching images (for further QBE) and their features (for further QBF).
 4. **Similarity search**: compute distances. For top-k queries, use the index to find candidates. For full-rank queries, scan all images.
 5. **Ranking and presentation**: sort by distance; present top-k. May include relevance feedback (user marks results as relevant/irrelevant, system refines the query).
 
@@ -96,6 +96,8 @@ Limitations:
 - [[dominant-color]] — MPEG-7's compact colour representation
 - [[spatial-coherency]] — exploited in compression and segmentation
 - [[curse-of-dimensionality]] — the central scaling challenge
+- [[query-by-example-and-feature]] — the two query modes (QBE/QBF) that drive the interactive CBR loop
+- [[cbir-systems-evaluation]] — precision, recall, MAP for measuring CBR system quality
 - [[multimedia-databases-lecture-06]] — the lecture
 
 ## Open Questions
