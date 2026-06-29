@@ -38,9 +38,9 @@ last_updated: 2026-06-02
 >
 > **1.2) Cone sensitivities:** S-cones (short/blue, peak ~420nm), M-cones (medium/green, peak ~530nm), L-cones (long/red, peak ~560nm). All three overlap significantly.
 >
-> **1.3) Metamers:** Color stimuli that have different spectral radiant power distributions but are perceived as identical for a given observer — i.e. different spectral profiles that produce exactly the same relative stimulation to the L, M and S cones. Types include light metamers, material metamers, and observer metamers.
+> **1.3) Metamers:** Metamers are **colors** that have different **spectral power distributions** (wavelength compositions) but are perceived as identical by the human eye due to the trichromatic nature of vision. Types include light metamers, material metamers, and observer metamers.
 >
-> **1.4) Chromatic Adaptation:** Our eye constantly recalibrates to what it sees as "white light", similar to a camera with auto white balance. All other colors are judged relative to that white point. Despite changing illumination, we perceive "the light changed" not "all objects changed color."
+> **1.4) Chromatic Adaptation:** Human visual system's ability to adjust to changes in illumination to preserve the appearance of object colors."
 
 ### Task 2: Color Models
 
@@ -48,9 +48,20 @@ last_updated: 2026-06-02
 > **2.1) Color model:** An abstract method for representing color information that makes use of the characteristics of the human vision system. Two types: additive and subtractive.
 >
 > **2.2) Main properties:**
-> - **RGB (Additive):** Lights produce colors. Black=(0,0,0), White=(1,1,1). Primary: R, G, B. Secondary: Cyan, Magenta, Yellow. Used in monitors, TVs, projectors.
-> - **CMYK (Subtractive):** Pigments/dyes produce colors. White=(0,0,0), Black=(1,1,1). Primary: C, M, Y. K=Key (black) for deeper black and ink savings. Inversely related to RGB: C=1-R, M=1-G, Y=1-B. Used in printers.
-> - **HSV:** Hue (color, 0-360°), Saturation (0=gray, 1=full color), Value/Brightness (0=black, 1=white). Designed to approximate human color perception. HS and B treated separately.
+> - **RGB (Additive):** 
+> - Lights produce colors. 
+> - Black=(0,0,0), White=(1,1,1). Primary: R, G, B. Secondary: Cyan, Magenta, Yellow. 
+> - Used in monitors, TVs, projectors.
+> 
+> - **CMYK (Subtractive):** 
+> - Pigments/dyes produce colors. 
+> - White=(0,0,0), Black=(1,1,1). Primary: C, M, Y. K=Key (black) for deeper black and ink savings. Inversely related to RGB: C=1-R, M=1-G, Y=1-B. 
+> - Used in printers.
+> 
+> - **HSV:** 
+> - Hue (color, 0-360°), 
+> - Saturation (0=gray, 1=full color), Value/Brightness (0=black, 1=white). Designed to approximate human color perception. 
+> - HS and B treated separately.
 >
 > **2.3) Conversion of R=0.2, G=0.6, B=0.3:**
 > - **CMYK:** C=1-0.2=0.8, M=1-0.6=0.4, Y=1-0.3=0.7, K=min(C,M,Y)=0.4 → adjusted: C=(0.8-0.4)/(1-0.4)=0.667, M=(0.4-0.4)/(1-0.4)=0, Y=(0.7-0.4)/(1-0.4)=0.5, K=0.4
