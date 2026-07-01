@@ -148,6 +148,7 @@ The third iteration is a *no-change* pass — the fixed point. The lattice heigh
 - [[distributive-framework]] — the condition that makes MFP = MOP
 - [[zero-analysis-worked-example]] — the running example end-to-end
 - [[software-analyse-lecture-7]] — interprocedural analysis extends the same lattice machinery across function calls
+- [[software-analyse-lecture-10]] — symbolic execution explores paths exactly (per-path constraints) vs abstract interpretation's over-approximation; the lattice-vs-constraint duality
 - [[widening-narrowing]] — needed for infinite lattices (intervals, polyhedra) — covered later
 - [[reaching-definitions]], [[available-expressions]], [[live-variable-analysis]], [[very-busy-expressions]] — the four distributive classic analyses
 

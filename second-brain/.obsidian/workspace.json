@@ -1,57 +1,76 @@
 {
   "main": {
-    "id": "d7e05476f887040a",
+    "id": "b6673189c3761572",
     "type": "split",
     "children": [
       {
-        "id": "0a5e05706123709c",
+        "id": "d62fa45ccbbad16d",
         "type": "tabs",
         "children": [
           {
-            "id": "37e4a723131a1fd4",
+            "id": "12c135b8a656d2e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/practice/mmdb-ex03.md",
+                "file": "vault/topics/iot-lecture-8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mmdb-ex03"
-            }
-          },
-          {
-            "id": "c68047016198f1e6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex03.pdf",
-                "page": 1,
-                "left": -6,
-                "top": 269,
-                "zoom": 2.62189303785135
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex03"
+              "title": "iot-lecture-8"
             }
           }
         ]
+      },
+      {
+        "id": "46046217d4549c3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce6cd914181f9c82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/concepts/image-point-operations.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "image-point-operations"
+            }
+          },
+          {
+            "id": "8399905453ede707",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/concepts/linear-convolution-filters.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "linear-convolution-filters"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "433e4c7a1c5f5a70",
+    "id": "571d78c905ed6b80",
     "type": "split",
     "children": [
       {
-        "id": "4b018a90bcf7dc67",
+        "id": "1915882899b37be0",
         "type": "tabs",
         "children": [
           {
-            "id": "4ee5140815e153b0",
+            "id": "4e94a8bf5b9ad9a7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,13 +83,13 @@
             }
           },
           {
-            "id": "f61ecd7b50e28e2d",
+            "id": "f3425c556b801ab8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -81,7 +100,7 @@
             }
           },
           {
-            "id": "ffd92ba1505805cb",
+            "id": "79d449eee89a10e5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -94,46 +113,37 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 316.5
   },
   "right": {
-    "id": "98c5f4b9b4985579",
+    "id": "8086cda0e328ffce",
     "type": "split",
     "children": [
       {
-        "id": "12c1aa4753cd956d",
+        "id": "14a07976d29352eb",
         "type": "tabs",
         "children": [
           {
-            "id": "e38c797f09344bef",
+            "id": "005181e2f98b26bd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": true,
+                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex05_solutions.pdf",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Ex05_solutions"
             }
           },
           {
-            "id": "d9953eccc5daef82",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "advanced-tables-toolbar"
-            }
-          },
-          {
-            "id": "de3d712e61434930",
+            "id": "7d9c6d236acaf6f5",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -147,32 +157,31 @@
             }
           },
           {
-            "id": "f1d162b9e59511e6",
+            "id": "902e4c7992a39e75",
             "type": "leaf",
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 231,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
+      "bases:Create new base": false,
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-kanban:Create new board": false,
@@ -181,111 +190,33 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "floating": {
-    "id": "21e462d68ef241a5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "57d416289b704629",
-        "type": "window",
-        "children": [
-          {
-            "id": "83a86b8718549c99",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "33792c4b1191ae5d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "vault/topics/multimedia-databases-lecture-03.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "multimedia-databases-lecture-03"
-                }
-              }
-            ]
-          },
-          {
-            "id": "e9a78f0f12a654ae",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d83f685b4ba8fb33",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "vault/topics/multimedia-databases-lecture-04.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "multimedia-databases-lecture-04"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "33792c4b1191ae5d",
+  "active": "12c135b8a656d2e7",
   "lastOpenFiles": [
-    "study/practice/mmdb-ex03.md",
+    "vault/topics/software-analyse-lecture-9.md",
+    "vault/concepts/linear-convolution-filters.md",
+    "vault/topics/software-analyse-lecture-10.md",
+    "study/practice/mmdb-ex05.md",
+    "vault/topics/network-science-l08.md",
+    "vault/topics/iot-lecture-8.md",
     "vault/topics/multimedia-databases-lecture-03.md",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex03.pdf",
-    "vault/concepts/rgb-color-model.md",
-    "vault/topics/multimedia-databases-lecture-02.md",
-    "vault/concepts/image-file-formats.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex05.pdf",
+    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis.pdf",
+    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis_JupyterNotebookExport.pdf",
+    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution.pdf",
+    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution_JupyterNotebookExport.pdf",
+    "raw/lectures/iot_security/IoTsec8_2026.pdf",
     "vault/topics/multimedia-databases-lecture-04.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
-    "raw/lectures/iot_security/IoTsec4_2026.pdf",
-    "raw/lectures/iot_security/IoT_Security_Lectures_Extraction.md",
-    "raw/lectures/iot_security/IoTsec1_2026.pdf",
-    "raw/Raw Sources.md",
+    "vault/concepts/clustering-coefficient.md",
+    "vault/concepts/triadic-closure.md",
+    "vault/topics/network-science-l03.md",
+    "vault/topics/network-science-l04.md",
     "vault/topics/network-science-l01.md",
-    "study/flashcards/mmdb-ex03-flashcards.md",
-    "study/flashcards/mmdb-ex02-flashcards.md",
-    "study/flashcards/mmdb-ex01-flashcards.md",
-    "study/exams/Exams.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex01_solutions.pdf",
-    "study/flashcards/Flashcards.md",
     "vault/topics/network-science-l02.md",
-    "vault/topics/multimedia-databases-lecture-09.md",
-    "vault/topics/multimedia-databases-lecture-08.md",
+    "vault/topics/multimedia-databases-lecture-06.md",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex05_solutions.pdf",
+    "vault/concepts/image-point-operations.md",
     "vault/topics/multimedia-databases-lecture-07.md",
-    "vault/concepts/yuv-color-space.md",
-    "vault/concepts/xml-structured-text.md",
-    "vault/concepts/workflow-reproducibility.md",
-    "vault/concepts/weighted-graphs.md",
-    "vault/concepts/web-bow-tie-structure.md",
-    "vault/concepts/weak-ties-hypothesis.md",
-    "vault/concepts/weak-tie-paradox-contagion.md",
-    "Pasted image 20260623144712.png",
-    "Pasted image 20260623144601.png",
-    "Pasted image 20260623144539.png",
-    "Pasted image 20260623144321.png",
-    "Pasted image 20260623143016.png",
-    "Pasted image 20260623142244.png",
-    "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/architecture.png",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif"
+    "vault/topics/multimedia-databases-lecture-05.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf"
   ]
 }

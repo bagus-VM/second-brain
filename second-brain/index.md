@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-06-25
-**Total pages:** 610 (vault: 552 pages + study: 54 practice/flashcards/exam materials; excluding raw/)
+**Last updated:** 2026-07-01
+**Total pages:** 620 (vault: 562 pages + study: 54 practice/flashcards/exam materials; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -14,8 +14,8 @@
 | [[multimedia-databases]] | 21 July 2026 | ~26 | **9/9 lectures ✅** + Ex01–Ex08 practice complete ✅ (95+ pages) |
 | [[network-science]] | 28 July 2026 | ~33 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
 | [[reproducibility-engineering]] | 30 July 2026 | ~35 | **8/8 lectures ✅** + Sheet 1–8 (61+ pages) |
-| [[software-analyse]] | 31 July 2026 | ~47 | **8/8 lectures ✅** (85+ pages) |
-| [[iot-security]] | 05 Aug 2026 | ~52 | **7/7 lectures ✅** (~70 pages) + 3 papers ingested |
+| [[software-analyse]] | 31 July 2026 | ~30 | **10/10 lectures ✅** (95+ pages) |
+| [[iot-security]] | 05 Aug 2026 | ~35 | **8/8 lectures ✅** (~80 pages) + 3 papers ingested |
 | [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
 
 ---
@@ -391,7 +391,7 @@
 
 ---
 
-## 📚 Software Analyse (75 pages)
+## 📚 Software Analyse (85 pages)
 
 ### L01 — Introduction
 | Page | Summary | Status |
@@ -485,6 +485,21 @@
 | [[system-dependence-graph]] | PDG extended to multiple procedures for interprocedural slicing | current |
 | [[dynamic-slicing]] | Slice for specific input + execution trace | current |
 
+### L09 — Dynamic Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-9]] | Program traces, instrumentation, AOP/AspectJ, fault localization, delta debugging | current |
+| [[aspect-oriented-programming]] | Crosscutting concerns modularized via aspects, pointcuts, advice | current |
+| [[fault-localization]] | Rank statements by suspiciousness (Tarantula, Ochiai) | current |
+| [[delta-debugging]] | Binary search for minimal failure-inducing input | current |
+
+### L10 — Symbolic Execution
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-10]] | Symbolic store + path constraint, concolic execution, Ball-Larus path profiling | current |
+| [[symbolic-execution]] | Treat inputs as symbols, explore all paths via constraint solving | current |
+| [[concolic-execution]] | Concrete + symbolic: execute with real inputs, collect constraints, negate to explore | current |
+
 ### Projects
 | Page | Summary | Status |
 |------|---------|--------|
@@ -502,7 +517,7 @@
 
 ---
 
-## 📚 IoT Security (~60 pages)
+## 📚 IoT Security (~70 pages)
 
 ### L01 — IoT Fundamentals
 | Page | Summary | Status |
@@ -576,6 +591,11 @@
 | [[iot-identity-lifecycle]] | Device identity from bootstrapping through deactivation | current |
 | [[iot-privacy-concerns]] | Pervasive sensing, metadata leakage, complex data sharing chains | current |
 | [[iot-applications]] | Smart home, IIoT, healthcare, transportation, smart grid, space — use cases | current |
+
+### L08 — Compliance, IoT 2.0, and Advanced Threats
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-8]] | Compliance monitoring, risk assessments, governmental attacks, IoT 2.0, defence-in-depth | current |
 
 ### 📄 IoT Security Papers (3 ingested)
 | Page | Summary | Status |

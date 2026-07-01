@@ -171,6 +171,7 @@ print(x₄)
 - [[points-to-analysis]] — resolves aliasing for precise interprocedural slicing
 - [[basic-block]] — granularity of PDG nodes
 - [[reaching-definitions]] — underpins data dependence computation
+- [[software-analyse-lecture-10]] — symbolic execution and program slicing are complementary: slicing asks "what affects X?", symbolic asks "what inputs reach X?"
 
 ## Open Questions
 
