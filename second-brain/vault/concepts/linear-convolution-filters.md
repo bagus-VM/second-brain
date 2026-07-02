@@ -25,13 +25,13 @@ The kernel K is a small matrix (3×3, 5×5, etc.) defining the weights.
 
 **Example 3×3 kernels**:
 
-| Operation | Kernel K |
-|-----------|----------|
-| Box blur | 1/9 × [[1,1,1],[1,1,1],[1,1,1]] |
-| Gaussian blur | 1/16 × [[1,2,1],[2,4,2],[1,2,1]] |
-| Sharpen | [[0,-1,0],[-1,5,-1],[0,-1,0]] |
-| Sobel X (vertical edges) | [[-1,0,1],[-2,0,2],[-1,0,1]] |
-| Sobel Y (horizontal edges) | [[-1,-2,-1],[0,0,0],[1,2,1]] |
+| Operation                  | Kernel K                         |
+| -------------------------- | -------------------------------- |
+| Box blur                   | 1/9 × [[1,1,1],[1,1,1],[1,1,1]]  |
+| Gaussian blur              | 1/16 × [[1,2,1],[2,4,2],[1,2,1]] |
+| Sharpen                    | [[0,-1,0],[-1,5,-1],[0,-1,0]]    |
+| Sobel X (vertical edges)   | [[-1,0,1],[-2,0,2],[-1,0,1]]     |
+| Sobel Y (horizontal edges) | [[-1,-2,-1],[0,0,0],[1,2,1]]     |
 
 **Frequency domain interpretation**:
 - **Low-pass filter**: attenuates frequencies above the cut-off frequency; passes low frequencies → blurring/smoothing

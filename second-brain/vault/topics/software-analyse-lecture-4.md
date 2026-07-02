@@ -36,6 +36,7 @@ Lecture 4 introduces control flow analysis: representing program execution as di
 - [[control-dependence]] is the basis for program slicing and is used in testing (e.g., identifying which predicates affect which statements)
 - [[dominance]] is used in SSA (Static Single Assignment) form construction, a key intermediate representation in modern compilers
 - Branch coverage in testing directly corresponds to covering all edges in the [[control-flow-graph]]
+- [[software-analyse-lecture-10]] — Ball-Larus path profiling instruments CFG edges to uniquely identify execution paths; the spanning-tree approach minimizes instrumentation overhead
 
 ## Key Exam-Relevant Points
 

@@ -4,40 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "0a5e05706123709c",
+        "id": "70af18396157792b",
         "type": "tabs",
         "children": [
           {
-            "id": "37e4a723131a1fd4",
+            "id": "d83f685b4ba8fb33",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/practice/mmdb-ex03.md",
+                "file": "vault/topics/multimedia-databases-lecture-04.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mmdb-ex03"
+              "title": "multimedia-databases-lecture-04"
             }
           },
           {
-            "id": "c68047016198f1e6",
+            "id": "33792c4b1191ae5d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex03.pdf",
-                "page": 1,
-                "left": -6,
-                "top": 269,
-                "zoom": 2.62189303785135
+                "file": "vault/topics/multimedia-databases-lecture-06.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Ex03"
+              "icon": "lucide-file",
+              "title": "multimedia-databases-lecture-06"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,102 +180,44 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "floating": {
-    "id": "21e462d68ef241a5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "57d416289b704629",
-        "type": "window",
-        "children": [
-          {
-            "id": "83a86b8718549c99",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "33792c4b1191ae5d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "vault/topics/multimedia-databases-lecture-03.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "multimedia-databases-lecture-03"
-                }
-              }
-            ]
-          },
-          {
-            "id": "e9a78f0f12a654ae",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d83f685b4ba8fb33",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "vault/topics/multimedia-databases-lecture-04.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "multimedia-databases-lecture-04"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "33792c4b1191ae5d",
   "lastOpenFiles": [
-    "study/practice/mmdb-ex03.md",
-    "vault/topics/multimedia-databases-lecture-03.md",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex03.pdf",
-    "vault/concepts/rgb-color-model.md",
-    "vault/topics/multimedia-databases-lecture-02.md",
-    "vault/concepts/image-file-formats.md",
-    "vault/topics/multimedia-databases-lecture-04.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
-    "raw/lectures/iot_security/IoTsec4_2026.pdf",
-    "raw/lectures/iot_security/IoT_Security_Lectures_Extraction.md",
-    "raw/lectures/iot_security/IoTsec1_2026.pdf",
-    "raw/Raw Sources.md",
-    "vault/topics/network-science-l01.md",
-    "study/flashcards/mmdb-ex03-flashcards.md",
-    "study/flashcards/mmdb-ex02-flashcards.md",
-    "study/flashcards/mmdb-ex01-flashcards.md",
-    "study/exams/Exams.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex01_solutions.pdf",
-    "study/flashcards/Flashcards.md",
-    "vault/topics/network-science-l02.md",
-    "vault/topics/multimedia-databases-lecture-09.md",
-    "vault/topics/multimedia-databases-lecture-08.md",
+    "vault/concepts/path-profiling.md",
+    "vault/concepts/gdpr-compliance.md",
+    "vault/concepts/dynamic-analysis.md",
+    "vault/concepts/defense-in-depth.md",
+    "vault/concepts/pki.md",
+    "vault/concepts/program-traces.md",
+    "vault/concepts/debugging.md",
+    "vault/concepts/testing.md",
+    "vault/concepts/test-generation.md",
+    "vault/concepts/binary-search.md",
+    "vault/concepts/design-patterns.md",
+    "vault/concepts/iot-security-overview.md",
+    "vault/concepts/object-oriented-programming.md",
+    "vault/topics/software-analyse-lecture-9.md",
+    "vault/topics/software-analyse-lecture-10.md",
+    "vault/topics/iot-lecture-8.md",
+    "vault/concepts/symbolic-execution.md",
+    "vault/concepts/fault-localization.md",
+    "vault/concepts/delta-debugging.md",
+    "vault/concepts/concolic-execution.md",
+    "vault/concepts/aspect-oriented-programming.md",
+    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis_JupyterNotebookExport.pdf",
+    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis.pdf",
+    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution_JupyterNotebookExport.pdf",
+    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution.pdf",
+    "raw/lectures/iot_security/IoTsec8_2026.pdf",
+    "vault/concepts/mpeg-7-descriptors.md",
+    "vault/topics/multimedia-databases-lecture-06.md",
     "vault/topics/multimedia-databases-lecture-07.md",
-    "vault/concepts/yuv-color-space.md",
-    "vault/concepts/xml-structured-text.md",
-    "vault/concepts/workflow-reproducibility.md",
-    "vault/concepts/weighted-graphs.md",
-    "vault/concepts/web-bow-tie-structure.md",
-    "vault/concepts/weak-ties-hypothesis.md",
-    "vault/concepts/weak-tie-paradox-contagion.md",
+    "vault/concepts/cbir-systems-evaluation.md",
+    "vault/concepts/quadtree-and-kd-tree.md",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex09.rnote",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex05.rnote",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex04.rnote",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
