@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-07-01
-**Total pages:** 620 (vault: 562 pages + study: 54 practice/flashcards/exam materials; excluding raw/)
+**Last updated:** 2026-07-02
+**Total pages:** 637 (vault + study; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -132,6 +132,39 @@
 | [[quadtree-and-kd-tree]] | Main memory spatial structures: quadtree splits, kd-tree one-dimensional splits | current |
 
 
+| [[multimedia-databases-lecture-01]] | Lecture 01 establishes the foundations: what multimedia is, how media types are  | current |
+| [[multimedia-databases-lecture-02]] | Lecture 2 covers how humans perceive color and the mathematical models (RGB, CMY | current |
+| [[multimedia-databases-lecture-03]] |  | current |
+| [[multimedia-databases-lecture-04]] |  | current |
+| [[multimedia-databases-lecture-05]] |  | current |
+| [[multimedia-databases-lecture-06]] | Lecture 06 covers multimedia data modeling — how to annotate, describe, and stru | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[audio-quantization-pcm]] | Quantization in audio is the process of mapping continuous amplitude values to a | current |
+| [[classification-schemes]] | Classification Schemes (CS) in MPEG-7 are standardized taxonomies that provide c | current |
+| [[color-histogram]] | A colour histogram is a feature vector that counts how many pixels of an image ( | current |
+| [[color-lookup-table]] | A Color Lookup Table (CLUT) maps small pixel indices to full-color values, enabl | current |
+| [[color-space-conversion-ycbcr]] | Color space conversion from RGB to YCbCr separates luminance (brightness) from c | current |
+| [[dominant-color]] | Dominant colour is a compact representation of the most prominent colours in an  | current |
+| [[hmmd-color-space]] | HMMD (Hue-Max-Min-Diff) is a color space designed to be closer to perceptual uni | current |
+| [[image-interpolation]] | Image interpolation computes new pixel values when scaling images, using methods | current |
+| [[image-point-operations]] | Image point operations transform each pixel independently based on its value (br | current |
+| [[image-resolution-dpi-ppi]] | Image resolution measures how accurately a device or system approximates an imag | current |
+| [[jpeg2000-wavelet-compression]] | JPEG2000 replaces the DCT with Discrete Wavelet Transform (DWT), enabling both l | current |
+| [[mpeg-7-ddl]] | The Description Definition Language (DDL) is the XML-Schema-based language that  | current |
+| [[mpeg-7-indexing-pyramid]] | The MPEG-7 Indexing Pyramid is a 10-level framework for visual indexing that spa | current |
+| [[mpeg-7-semantic-description]] | MPEG-7 semantic description tools enable the representation of meaning — events, | current |
+| [[mpeg-7-structural-description]] | MPEG-7 structural description tools enable spatial, temporal, spatio-temporal, a | current |
+| [[multimedia-annotation]] | Multimedia annotation is the task of associating textual labels or tags to multi | current |
+| [[multimedia-main-domains]] | Steinmetz's layered model organizes multimedia into four domains — Basics (encod | current |
+| [[multimedia-metadata]] | Multimedia metadata is structured information that describes, explains, or locat | current |
+| [[relevance-feedback]] | Relevance feedback is an iterative retrieval technique where the user marks resu | current |
+| [[spatial-coherency]] | Spatial coherency is the property that neighbouring pixels in a natural image te | current |
+| [[video-hierarchy-shots-scenes]] | Digital video is hierarchically structured from frames (atomic units) through sh | current |
+| [[video-summarization-key-frames]] | Video summarization creates a concise overview of video content using key frames | current |
+| [[xml-structured-text]] | XML (Extensible Markup Language) is a platform-independent, ==self-describing ma | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
 |------|---------|--------|
@@ -270,6 +303,73 @@
 
 
 
+| [[network-science-l01]] | Lecture 1 introduces what networks are, why they matter, and what we can analyze | current |
+| [[network-science-l02]] |  | current |
+| [[network-science-l03]] | Social ties come in strong and weak varieties; triadic closure shapes how they f | current |
+| [[network-science-l04]] | Graph communities are dense subsets with few external links; finding them requir | current |
+| [[network-science-l05]] | Lecture 05 adds attributes and context to the graph: nodes carry properties, tie | current |
+| [[network-science-l06]] | Lecture 06 adds signs to edges — positive for alliance, negative for rivalry — a | current |
+| [[network-science-l07]] | Lecture 07 explains why large networks have short paths (logarithmic distances), | current |
+| [[network-science-l08]] | Network dynamics studies how processes (diseases, rumors, behaviors) spread on n | current |
+| [[network-science-l09]] | L09 shows how to map every node to a vector in R^d preserving graph structure —  | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[adjacency-matrix-factorization]] | A unifying view: spectral embeddings, DeepWalk, and node2vec all implicitly fact | current |
+| [[algebraic-connectivity]] | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-lap | current |
+| [[betweenness-centrality]] | Betweenness centrality measures how often a node sits on shortest paths between  | current |
+| [[bipartite-graphs]] | A bipartite graph has two disjoint node sets where edges only connect nodes acro | current |
+| [[centrality-measures]] | Centrality measures quantify node importance — but each measure encodes a differ | current |
+| [[closeness-centrality]] | Closeness centrality measures how near a node is to all other nodes on average — | current |
+| [[community-detection]] | Community detection partitions a graph into groups of nodes that are densely con | current |
+| [[community-detection-overview]] | Community detection finds subsets of nodes with dense internal connections and s | current |
+| [[conductance]] | Conductance measures the fraction of edges that leave a community relative to it | current |
+| [[configuration-model]] | The configuration model generates random graphs with a prescribed degree sequenc | current |
+| [[connected-component]] | A connected component is a maximal set of nodes where every node can reach every | current |
+| [[degree-centrality]] | Degree centrality measures the number of direct contacts a node has — the simple | current |
+| [[diffusion-of-innovations]] | Diffusion of innovations studies how new ideas, technologies, and behaviors spre | current |
+| [[directed-and-undirected-graphs]] | ==Undirected graphs model symmetric relationships (friendship)==, while directed | current |
+| [[directed-connectivity]] | In directed graphs, strong connectivity requires mutual reachability between all | current |
+| [[edge-betweenness]] | Edge betweenness measures how often an edge lies on shortest paths between all p | current |
+| [[eigenvector-centrality]] | Eigenvector centrality measures recursive prestige — important nodes are connect | current |
+| [[embeddedness]] | Embeddedness describes a node whose neighbors are themselves densely interconnec | current |
+| [[embedding-based-community-detection]] | Embedding-based community detection uses node embeddings (from random walks or n | current |
+| [[global-email-experiment]] | ==Dodds, Muhamad & Watts (2003)== replicated Milgram's experiment using email ac | current |
+| [[granovetter-weak-ties]] | Granovetter's weak-tie hypothesis states that weak ties (acquaintances, not clos | current |
+| [[graph-laplacian]] | The graph Laplacian L = D - A encodes the structure of a graph — its eigenvalues | current |
+| [[graph-partitioning]] | Graph partitioning divides a graph into a fixed number of balanced clusters — un | current |
+| [[harmonic-centrality]] | Harmonic centrality is the disconnected-graph extension of [[closeness-centralit | current |
+| [[hierarchical-clustering]] | Divisive and agglomerative community detection methods produce dendrograms — tre | current |
+| [[hnsw-indexing]] | HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg' | current |
+| [[k-balance]] | k-balance is the partition structure guaranteed by weak structural balance: a co | current |
+| [[kernighan-lin-algorithm]] | Kernighan-Lin is a local-search algorithm for balanced graph partitioning — iter | current |
+| [[laplacian-eigenmaps]] | Laplacian eigenmaps embed each node as a point in R^d using the eigenvectors of  | current |
+| [[maxstc-complexity]] | Finding the edge labeling with the most strong edges that satisfies Strong Triad | current |
+| [[message-passing-framework]] | The message-passing framework defines how GNNs compute node embeddings: each lay | current |
+| [[min-cut-max-flow]] | Min-cut / Max-flow finds the smallest set of edges whose removal disconnects two | current |
+| [[modularity-resolution-limit]] | The resolution limit is a fundamental limitation of [[modularity]] — it cannot d | current |
+| [[neighborhood-overlap]] | Neighborhood overlap measures the fraction of neighbors shared by two connected  | current |
+| [[network-autocorrelation]] | Network autocorrelation is the statistical tendency for connected nodes to share | current |
+| [[network-effects]] | The structure of connections creates outcomes — visibility, influence, lock-in,  | current |
+| [[network-examples]] | Networks appear across every domain — social, communication, information, econom | current |
+| [[normalized-cut]] | Normalized cut balances the size of a cut against the total degree (volume) of t | current |
+| [[online-link-formation]] | Online data with timestamps turns link formation into a measurable process — emp | current |
+| [[pagerank]] | PageRank extends [[eigenvector-centrality]] with a damping factor — a random sur | current |
+| [[power-law-distribution]] | A power-law distribution is a heavy-tailed distribution where a few nodes have v | current |
+| [[process-structure-interaction-gap]] | The process-structure interaction gap is the sixth gap in the course: the same n | current |
+| [[product-space-network]] | The product space network connects exported products that require similar capabi | current |
+| [[random-walks]] | A random walk on a graph is a stochastic process where a walker moves from node  | current |
+| [[signed-laplacian]] | The signed Laplacian L_σ = D − A_σ extends the standard graph Laplacian to signe | current |
+| [[sparse-dense-and-random-graphs]] | Graphs differ quantitatively in edge density — from sparse (few edges) to dense  | current |
+| [[spectral-clustering-embeddings]] | Spectral clustering is k-means applied to Laplacian eigenmaps — nodes in the sam | current |
+| [[spectral-partitioning]] | Spectral partitioning uses the eigenvectors of the graph Laplacian to find a nat | current |
+| [[strong-triadic-closure]] | If a node has two strong ties, Strong Triadic Closure requires those endpoints t | current |
+| [[structural-holes-and-brokerage]] | Structural holes are missing connections between groups; brokers who span them g | current |
+| [[temporal-networks]] | Temporal networks assign activation times to edges, revealing that static aggreg | current |
+| [[weak-tie-paradox-contagion]] | The same weak ties and bridges that accelerate simple contagion (rumors, disease | current |
+| [[web-bow-tie-structure]] | Broder et al. (2000) found that the Web decomposes into a bow-tie: a strongly co | current |
+| [[weighted-graphs]] | ==A weighted graph assigns a numerical value w(e) to each edge, encoding strengt | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
 |------|---------|--------|
@@ -370,6 +470,30 @@
 | [[hdf5]] | Hierarchical data format: files/groups/datasets/attributes | current |
 | [[json-schema]] | Vocabulary for validating JSON document structure | current |
 
+| [[reproducibility-engineering-lecture-1]] | Lecture 1 establishes the foundational vocabulary (repeat/reproduce/replicate),  | current |
+| [[reproducibility-engineering-lecture-2]] |  | current |
+| [[reproducibility-engineering-lecture-3]] | How to formulate testable research hypotheses and structure experiments for repr | current |
+| [[reproducibility-engineering-lecture-4]] | Lecture 4 covers Git as the fundamental tool for version control and reproducibi | current |
+| [[reproducibility-engineering-lecture-5]] | Lecture 5 introduces reproducible builds through hands-on C programming exercise | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[build-environment-isolation]] | Build environment isolation ensures that builds depend only on explicitly declar | current |
+| [[computational-reproducibility-in-ml]] | Machine learning experiments face unique reproducibility challenges -- stochasti | current |
+| [[confidence-intervals]] | A confidence interval gives a range of plausible values for a parameter, providi | current |
+| [[data-provenance]] | Data provenance is the documented lineage of data -- where it came from, how it  | current |
+| [[docker-compose]] | Docker Compose is a tool for declaring and running multi-container Docker applic | current |
+| [[git-patches-and-diffs]] | A patch (diff) is a structured text representation of changes between two snapsh | current |
+| [[git-rebasing-and-history-rewriting]] | Rebasing replays commits onto a new base to create a linear history; interactive | current |
+| [[gitignore-and-gitattributes]] | `.gitignore` tells Git which files to exclude from tracking; `.gitattributes` co | current |
+| [[levels-of-equivalence]] | When comparing computational experiments, different levels of equivalence define | current |
+| [[package-manager-reproducibility]] | Package manager reproducibility ensures that dependency resolution always produc | current |
+| [[presenting-experiments]] | A well-structured experiments section separates setup, results, and discussion,  | current |
+| [[reprotest]] | ReproTest is a tool that builds a program twice in different simulated environme | current |
+| [[research-artifacts]] | The tangible outputs of research—source code, datasets, scripts, configurations, | current |
+| [[sqlite-architecture]] | SQLite is a serverless, file-based, single-library database management system —  | current |
+| [[vistrails]] | VisTrails is a scientific workflow management system that provides integrated pr | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
 |------|---------|--------|
@@ -507,6 +631,45 @@
 | [[sign-analysis]] | Interprocedural sign analysis: lattice theory, pairwise decomposition, bytecode dataflow | current |
 | [[java-for-software-analysis]] | Java essentials: Maven, JavaParser, ASM, WEKA, picocli, visitor pattern | current |
 
+| [[software-analyse-lecture-1]] | Lecture 1 introduces software analysis as a field, its fundamental limitations ( | current |
+| [[software-analyse-lecture-2]] | Lecture 2 bridges compiler front-ends (lexical analysis, tokenization) with NLP  | current |
+| [[software-analyse-lecture-3]] | Lecture 3 covers syntax-based analysis: defining language structure with context | current |
+| [[software-analyse-lecture-4]] | Lecture 4 introduces control flow analysis: representing program execution as di | current |
+| [[software-analyse-lecture-5]] | Lecture 5 introduces data flow analysis — a family of compile-time techniques th | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[binary-search]] | O(log n) search on sorted arrays; core of delta debugging | current |
+| [[buggy-code-naturalness]] | Buggy code tends to be less "natural" (higher cross-entropy) than non-buggy code | current |
+| [[ccfinder]] | CCFinder is a token-based [[code-clones|code clone]] detection tool that convert | current |
+| [[common-subexpression-elimination]] | If the same calculation appears twice and nothing changed in between, the compil | current |
+| [[constant-propagation]] | Constant propagation is a [[data-flow-analysis|data flow analysis]] that tracks, | current |
+| [[dead-code-elimination]] | Dead code elimination removes statements that can never affect the program's out | current |
+| [[debugging]] | Debugging is the process of finding and fixing defects, supported by automated t | current |
+| [[design-patterns]] | Design patterns are reusable, catalogued solutions to common software design pro | current |
+| [[du-chains-ud-chains]] | DU-chains (definition-use chains) connect each variable definition to all uses i | current |
+| [[dynamic-analysis]] | Dynamic analysis observes actual program executions to collect traces, enabling  | current |
+| [[finite-automata]] | Abstract computational models with a finite set of states, used in compiler desi | current |
+| [[first-sets]] | FIRST(α) is the set of terminal symbols that can appear as the first token of an | current |
+| [[galois-connection]] | A Galois connection C ⇄ A between a concrete domain C and an abstract domain A i | current |
+| [[gen-kill-analysis]] | Gen and kill sets are the local transfer functions that describe how each statem | current |
+| [[hierarchy-of-analysis]] | Program analysis uses four reasoning paradigms — deduction (static), observation | current |
+| [[left-factoring]] | Left factoring is a grammar transformation that eliminates common prefixes among | current |
+| [[left-recursion-elimination]] | Left recursion elimination is a grammar transformation that rewrites left-recurs | current |
+| [[lex-and-flex]] | Lex (and its GNU successor Flex) are lexer generators that automatically convert | current |
+| [[liveness-analysis]] | Liveness analysis figures out, for every point in a program, which variables sti | current |
+| [[monotone-framework]] | The monotone framework is the abstract mathematical skeleton that all data flow  | current |
+| [[object-oriented-programming]] | Object-oriented programming organizes code around objects — instances of classes | current |
+| [[operator-precedence-associativity]] | Operator precedence and associativity are encoded into a grammar by introducing  | current |
+| [[path-profiling]] | Path profiling counts how often each execution path through a function runs, usi | current |
+| [[post-dominance]] | Node d post-dominates node n (d pdom n) if every path from n to the exit node pa | current |
+| [[program-traces]] | Program traces record the executed instructions and runtime attributes (data sta | current |
+| [[register-allocation]] | Register allocation maps program variables to a limited number of CPU registers, | current |
+| [[surprisal-and-code-prediction]] | Surprisal (information content) measures how unexpected a specific token is give | current |
+| [[test-generation]] | Test generation creates concrete input values that exercise specific program pat | current |
+| [[testing]] | Software testing validates program behaviour against expected outcomes and provi | current |
+| [[widening-narrowing]] | Operators in abstract interpretation that accelerate fixpoint computation (widen | current |
 ### Exam Prep
 | Page | Summary | Status |
 |------|---------|--------|
@@ -618,6 +781,59 @@
 | [[authentication]] | Identity verification: passwords, certificates, biometrics, MFA | current |
 | [[non-repudiation]] | Cannot deny having performed an action, digital signatures | current |
 
+| [[iot-lecture-1]] | A comprehensive overview of the IoT security domain spanning fundamentals, appli | current |
+| [[iot-lecture-2]] | A comprehensive taxonomy of attack types targeting IoT systems, organized into n | current |
+| [[iot-lecture-3]] | A systematic enumeration of IoT [[attack-surface-analysis]] based on Daniel Mies | current |
+| [[iot-lecture-4]] | Design goals and best practices for building secure IoT systems, covering automa | current |
+| [[iot-lecture-5]] | Hardware-based security mechanisms for IoT devices, covering [[physical-unclonab | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[availability]] | The assurance that systems and data are accessible to authorized users when need | current |
+| [[ble-security]] | Bluetooth Low Energy (BLE) security covers the pairing modes, encryption mechani | current |
+| [[coap-security]] | CoAP (Constrained Application Protocol) security covers DTLS for transport encry | current |
+| [[common-criteria]] | An international standard for evaluating the security properties of IT products  | current |
+| [[course]] |  | current |
+| [[defense-in-depth]] | Defence-in-depth layers multiple defensive mechanisms so that if one layer fails | current |
+| [[denial-of-service]] | Attacks that make IoT devices or services unavailable to legitimate users, rangi | current |
+| [[device-provisioning]] | Device provisioning is the process of giving each IoT device its unique identity | current |
+| [[etsi-en-303-645]] | A European standard defining 13 provisions for consumer IoT security, forming th | current |
+| [[fips-140-2]] | US government standard for validating the security of cryptographic modules in h | current |
+| [[gdpr-compliance]] | GDPR is EU law governing personal data processing — for IoT, it mandates data mi | current |
+| [[healthcare-iot-security]] | Healthcare IoT (IoMT) security covers connected medical devices — insulin pumps, | current |
+| [[iec-62443]] | The international standard series for securing industrial automation and control | current |
+| [[industrial-iot-security]] | Industrial IoT (IIoT) security covers SCADA systems, PLCs, and operational techn | current |
+| [[iot-communication-protocols]] | IoT communication protocols — MQTT, CoAP, Zigbee, BLE, LoRaWAN, and Thread/Matte | current |
+| [[iot-data-lifecycle]] | The IoT data lifecycle — collection, transmission, storage, processing, and rete | current |
+| [[iot-device-fundamentals]] | IoT device fundamentals covers the hardware and software building blocks — micro | current |
+| [[iot-network-architecture]] | IoT network architecture is the three-tier model — perception (devices), network | current |
+| [[iot-security-overview]] | IoT security spans the full lifecycle of connected devices — from threat modelin | current |
+| [[key-management-lifecycle]] | The complete lifecycle of cryptographic keys from generation through distributio | current |
+| [[mqtt-security]] | MQTT security covers TLS encryption, authentication methods, access control list | current |
+| [[network-security-fundamentals]] | Network security fundamentals — firewalls, IDS/IPS, VPNs, and segmentation — are | current |
+| [[networking-fundamentals]] | Networking fundamentals — the OSI model, TCP/IP, addressing, and routing — are t | current |
+| [[nist-iot-cybersecurity]] | NIST's framework for IoT device cybersecurity, defining baseline capabilities an | current |
+| [[owasp-iot-top-10]] | The ten most critical IoT security vulnerabilities, providing a prioritized taxo | current |
+| [[penetration-testing-methodology]] | IoT penetration testing methodology covers the phases — reconnaissance, enumerat | current |
+| [[pki]] | PKI is a framework for managing digital certificates and public-key encryption — | current |
+| [[principle-of-least-privilege]] | Every component, user, and process should have only the minimum permissions nece | current |
+| [[privacy-by-design]] | Privacy by Design embeds data minimization, consent, and anonymization into IoT  | current |
+| [[risk-assessment-frameworks]] | Structured methodologies for identifying, analyzing, and evaluating security ris | current |
+| [[secure-boot-chain]] | A verification chain from ROM bootloader through OS to application where each st | current |
+| [[security-principles]] | The foundational principles that guide all security design decisions: defense in | current |
+| [[side-channel-attacks]] | Side-channel attacks extract cryptographic keys and internal state from IoT devi | current |
+| [[smart-city-infrastructure]] | Smart city infrastructure covers IoT deployments in traffic management, utilitie | current |
+| [[smart-home-security]] | Smart home security covers consumer IoT threat models — voice assistants, smart  | current |
+| [[tcg-specifications]] | TCG defines hardware-based security standards including TPM, DICE, and TRNG for  | current |
+| [[zero-trust-architecture]] | Zero Trust Architecture — "never trust, always verify" — replaces perimeter-base | current |
+| [[zigbee-security-model]] | Zigbee security relies on a Trust Center that distributes network keys and AES-1 | current |
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-security-exam-format]] | Written exam format: definitions, short answers, scenarios | current |
+
 ---
 
 ## 📚 Microelectronics (~45 pages)
@@ -662,3 +878,49 @@
 | [[microelectronics-lecture-4]] | L04: Diode Applications — rectifiers, limiters, clampers | current |
 | [[microelectronics-lecture-5]] | L05: MOS Transistors — MOSFET structure and operation | current |
 | [[microelectronics-lecture-6]] | L06: CMOS Logic Gates and Digital Circuits | current |
+
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[analog-amplifier]] | A circuit that increases the amplitude of an analog signal using active componen | current |
+| [[avalanche-breakdown]] | Avalanche breakdown is a carrier multiplication mechanism that occurs at high re | current |
+| [[band-theory]] | Band theory explains how electrons in solids occupy continuous ranges of allowed | current |
+| [[bridge-rectifier]] | A full-wave rectifier using four diodes in a bridge configuration that eliminate | current |
+| [[capacitor]] | A capacitor is a two-terminal component that stores energy in an electric field  | current |
+| [[clamper-circuit]] | A clamper (DC restorer) shifts the DC level of a signal without changing its wav | current |
+| [[cmos-inverter]] | The fundamental building block of CMOS digital circuits: an NMOS and PMOS transi | current |
+| [[cmos-logic-gates]] | The CMOS logic family builds every Boolean function as a *complementary* pair of | current |
+| [[cmos-nand-gate]] | A CMOS NAND gate uses two nMOS in series (pull-down) and two pMOS in parallel (p | current |
+| [[cmos-nor-gate]] | A CMOS NOR gate uses two nMOS in parallel (pull-down) and two pMOS in series (pu | current |
+| [[cmos-xor-gate]] | The XOR function (A ⊕ B = AB̄ + ĀB) cannot be implemented in a single stage of s | current |
+| [[common-source-amplifier]] | A MOSFET amplifier configuration where the source is grounded, providing voltage | current |
+| [[conductor]] | A material with high electrical conductivity due to free charge carriers (typica | current |
+| [[digital-circuit-design]] | Digital circuit design is the art of combining MOS transistors into logic gates, | current |
+| [[digital-logic]] | The representation and manipulation of information using discrete voltage levels | current |
+| [[diode-applications]] | Diodes are one-way valves for current — by combining them with resistors and cap | current |
+| [[doping-and-extrinsic-semiconductors]] | Doping means adding tiny amounts of specific impurity atoms to silicon to create | current |
+| [[electricity]] | Electricity is the flow of electric charge (carried by electrons or holes), gove | current |
+| [[etching]] | The process of selectively removing material from a wafer surface using chemical | current |
+| [[full-wave-rectifier]] | A full-wave rectifier uses two or four diodes to pass both halves of the AC wave | current |
+| [[germanium]] | Germanium was the first semiconductor used in transistors but was largely replac | current |
+| [[half-wave-rectifier]] | A half-wave rectifier uses a single diode to pass only one half of the AC wavefo | current |
+| [[insulator]] | A material with very low electrical conductivity due to a large bandgap that pre | current |
+| [[limiter-circuit]] | A limiter clips the voltage waveform at a specified threshold, preventing it fro | current |
+| [[mask-alignment]] | The process of precisely positioning a photomask over a wafer so that new patter | current |
+| [[mos-capacitor]] | The MOS capacitor is the fundamental structure beneath the MOSFET gate — a metal | current |
+| [[mos-transistors]] | A MOSFET is a transistor where a voltage on a gate electrode controls current fl | current |
+| [[mosfet]] | A MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor) is a voltage-contro | current |
+| [[mosfet-operating-regions]] | MOSFETs operate in three distinct regions — Cutoff, Linear (Triode), and Saturat | current |
+| [[nmos-transistor]] | An nMOS transistor has N-type source and drain regions in a P-type substrate, us | current |
+| [[p-n-junction-overview]] | A p-n junction is where p-type and n-type semiconductors meet — the built-in ele | current |
+| [[pmos-transistor]] | A pMOS transistor has P-type source and drain regions in an N-type substrate, us | current |
+| [[pmtransistor]] | A pMOS transistor has P-type source and drain regions in an N-type substrate, us | current |
+| [[power-supply]] | The source of electrical energy that powers electronic circuits, converting AC m | current |
+| [[rectifier]] | A rectifier is a circuit that converts alternating current (AC) to direct curren | current |
+| [[semiconductor-physics]] | Semiconductors are materials whose electrical conductivity falls between conduct | current |
+| [[threshold-voltage]] | The threshold voltage (VTH) is the minimum gate-to-source voltage required to cr | current |
+| [[transistor]] | A transistor is a three-terminal semiconductor device that can amplify signals o | current |
+| [[vlsi-design]] | VLSI (Very Large Scale Integration) is the discipline of designing chips with mi | current |
+| [[zener-breakdown]] | Zener breakdown is a quantum mechanical tunnelling mechanism that occurs in heav | current |
+| [[zener-diode]] | A Zener diode is a heavily doped diode designed to operate reliably in the rever | current |
