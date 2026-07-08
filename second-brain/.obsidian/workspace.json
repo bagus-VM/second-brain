@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "64cb4cfa1036ca30",
+        "id": "3a8ef888269b6dc9",
         "type": "tabs",
         "children": [
           {
-            "id": "6dc24e2900c43b2e",
+            "id": "e3e3c2dc3efea2c8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "vault/concepts/jpeg-compression-pipeline.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "jpeg-compression-pipeline"
             }
           }
         ]
@@ -237,14 +241,14 @@
       }
     ]
   },
-  "active": "a722bad53acdce8c",
+  "active": "e3e3c2dc3efea2c8",
   "lastOpenFiles": [
+    "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/concepts/lossless-vs-lossy-compression.md",
+    "vault/topics/multimedia-databases-lecture-05.md",
+    "vault/concepts/run-length-encoding.md",
     "vault/concepts/lz77-lzw-compression.md",
     "vault/concepts/jpeg-compression-pipeline.md",
-    "vault/topics/multimedia-databases-lecture-05.md",
-    "vault/concepts/entropy-coding-huffman-arithmetic.md",
-    "vault/concepts/run-length-encoding.md",
-    "vault/concepts/lossless-vs-lossy-compression.md",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
     "Pasted image 20260708123921.png",
     "vault/concepts/h264-avc-video-compression.md",
@@ -275,7 +279,6 @@
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/OpenAI_API_Documentation_Text_Generation.url",
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
     "vault/topics/multimedia-databases-lecture-04.md",
-    "vault/topics/multimedia-databases-lecture-06.md",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",

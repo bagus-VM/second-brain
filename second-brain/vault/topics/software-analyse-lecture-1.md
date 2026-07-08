@@ -60,6 +60,9 @@ The lecture previews the full course structure:
 8. Symbolic Execution → Dynamic symbolic execution
 9. Dynamic Analysis → Runtime observation techniques
 
+## Course Projects
+- [[software-analyse-projects-overview]] — The two semester projects: readability classifier (metric-based static analysis) and sign analysis (interprocedural dataflow bug detection)
+
 ## Key Relationships
 ```
 [rices-theorem] ──forces──> [abstract-interpretation]

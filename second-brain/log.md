@@ -343,4 +343,39 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 
 **Vault state:** 640 -> 647 pages. All 6 courses now have complete lecture coverage through final lectures.
 
+## [2026-07-08] FIX | Bidirectional orphan concept <-> lecture links | 12 concepts rewired, 6 lecture topics updated
+
+**Trigger:** Student reported that some concept pages were unreachable when reading top-down through lecture topics.
+
+**Problem:** 83 concept pages had no inbound link from any lecture topic in `vault/topics/`. Most were either cross-cutting infrastructure (hashing, CIA triad) or survey pages (community-detection, modularity) — legitimately not owned by a single lecture. But 12 were genuine "built from a specific lecture" orphans where the lecture never wired back to the concept page.
+
+**Concept orphans fixed (12):**
+
+| Course | Concept | Source lecture |
+|--------|---------|----------------|
+| MMDB | `lz77-lzw-compression` | [[multimedia-databases-lecture-05]] Compression |
+| MMDB | `metamers` | [[multimedia-databases-lecture-02]] Color Models |
+| MMDB | `chromatic-adaptation` | [[multimedia-databases-lecture-02]] Color Models |
+| MMDB | `nested-tables-vs-varrays` | [[multimedia-databases-lecture-08]] Query Languages |
+| SA | `static-single-assignment` | [[software-analyse-lecture-8]] Program Slicing |
+| SA | `phi-function` | [[software-analyse-lecture-8]] |
+| SA | `program-dependence-graph` | [[software-analyse-lecture-8]] |
+| SA | `program-slicing` | [[software-analyse-lecture-8]] |
+| SA | `system-dependence-graph` | [[software-analyse-lecture-8]] |
+| SA | `dynamic-slicing` | [[software-analyse-lecture-8]] |
+| SA | `program-traces` | [[software-analyse-lecture-9]] Dynamic Analysis |
+| SA | `software-analyse-projects-overview` | [[software-analyse-lecture-1]] Introduction (Course Roadmap) |
+
+**Changes:**
+- 6 lecture topic pages: added wikilink in Key Concepts / Connections / Course Roadmap
+- 12 concept pages: added `[[source-lecture]]` backlink in Connections section
+- All 12 bidirectional pairs verified by `execute_code` (lecture→concept and concept→lecture both present)
+- Existing index.md already listed all 12 — no index edits needed
+
+**Decision log (not fixed, deferred):**
+- 71 remaining orphan concepts are survey pages (community-detection, modularity, iot-attack-taxonomy), cross-cutting infrastructure (hashing, symmetric-encryption, availability), or sibling-course artifacts (course field string mismatch: "Software Analyse" vs "Software Analyse"). These are reachable via other concept pages and don't need a single owning lecture.
+- Course field string mismatch in `concepts/` (e.g. `course: Software Analyse` unquoted vs `course: "Software Analyse"` quoted) inflates orphan count in programmatic scans. Not a content problem; not fixed in this pass.
+
+**Vault state:** 647 pages, all genuine lecture-owned orphans now wired.
+
 *"Seven sources, four courses, all filed. RepEng closes with LLMs and reproducibility, the newest frontier. Software Analyse ends with a guest lecture on agentic coding and quality. Microelectronics extends to OpAmps. MMDB gets its last exercise sheet on indexing. The vault now covers every lecture and every exercise across all six courses. That is the compound effect. Cook."*

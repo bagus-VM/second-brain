@@ -137,6 +137,7 @@ B5: x₄ = φ(x₂, x₃)   // x₂ from B3, x₃ from B4
 - [[control-flow-graph]] — phi functions live at merge points in the CFG
 - [[data-flow-analysis]] — phi functions make reaching definitions explicit
 - [[program-dependence-graph]] — SSA (with φ) makes data dependence edges clear
+- [[software-analyse-lecture-8]] — Source lecture: Program Slicing (SSA → dominance frontiers → φ → PDG → slicing)
 
 ## Open Questions
 

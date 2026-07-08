@@ -85,6 +85,7 @@ They share the same Java toolchain (Maven, JUnit, picocli) and demonstrate two m
 - [[java-for-software-analysis]] — Shared Java ecosystem reference for both projects.
 - [[data-flow-analysis]] — Theoretical foundation for sign analysis.
 - [[machine-learning-basics]] — Theoretical foundation for the readability classifier's ML pipeline.
+- [[software-analyse-lecture-1]] — Source lecture: Software Analyse introduction (Course Roadmap + Projects section)
 
 ## Open Questions
 - How do the two approaches complement each other in a real software quality workflow?

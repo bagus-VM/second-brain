@@ -138,6 +138,7 @@ Now `y` is not used in either branch. PDG edges from 2 go nowhere useful.
 - [[static-single-assignment]] — makes data dependence explicit
 - [[dominance]] — used to compute control dependence
 - [[reaching-definitions]] — underpins data dependence
+- [[software-analyse-lecture-8]] — Source lecture: Program Slicing (SSA → dominance frontiers → φ → PDG → slicing)
 
 ## Open Questions
 

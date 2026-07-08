@@ -18,6 +18,8 @@ This lecture progresses from the physics of light and biology of human color per
 
 ### Perception
 - [[color-perception]] — How light, the visible spectrum, and retinal cones create the experience of color
+- [[metamers]] — Different spectra producing identical cone responses (consequence of trichromatic vision)
+- [[chromatic-adaptation]] — Visual system recalibrates "white point" under different illuminants (color constancy)
 
 ### Color Model Fundamentals
 - [[color-models-overview]] — Additive vs. subtractive systems, primary and complementary colors

@@ -82,6 +82,7 @@ The temporal function `firstClip` wraps a subquery that filters clips by content
 - [[oql]] → [[moql]] (MOQL extends OQL's WHERE clause)
 - [[sql-mm]] → [[mpqf]] (two categories of MMQL: extension vs from-scratch)
 - [[object-relational-databases]] (both SQL/MM and MOQL build on OR data models)
+- [[nested-tables-vs-varrays]] — Oracle collection types used inside OR columns to hold feature vectors, key frames, etc.
 - [[content-based-retrieval]] (query languages are the interface to CBR)
 - [[multimedia-databases-lecture-06]] (modeling layer from L06 feeds into query languages)
 - [[multimedia-databases-lecture-07]] (CBIR concepts from L07 are what these languages query)

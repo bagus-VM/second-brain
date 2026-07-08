@@ -111,6 +111,7 @@ y₁ = x₄
 - [[reaching-definitions]] — in SSA, the reaching definition is always unique
 - [[program-dependence-graph]] — SSA makes data dependence edges explicit
 - [[basic-block]] — granularity at which SSA is typically constructed
+- [[software-analyse-lecture-8]] — Source lecture: Program Slicing (SSA → dominance frontiers → φ → PDG → slicing)
 
 ## Open Questions
 

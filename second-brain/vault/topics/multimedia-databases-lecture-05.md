@@ -36,6 +36,13 @@ This lecture covers data compression for multimedia — the techniques that make
 - Best for data with long runs (e.g., black-and-white images, zero-valued DCT coefficients)
 - Offset threshold determines minimum run length for compression
 
+### 3b. Dictionary-Based Compression
+- [[lz77-lzw-compression]] — LZ77 sliding-window back-references and LZW adaptive dictionary; the core of gzip, PNG, ZIP
+- LZ77: replaces repeated sequences with (offset, length) back-references into a sliding window
+- LZW: builds the dictionary on the fly at both encoder and decoder; used in GIF, compress, V.42bis
+- Combined with entropy coding in Deflate (gzip, zlib, PNG, ZIP) — LZ77 first, then Huffman
+- Not specialized for multimedia raw data (no perceptual model); best for text, structured data, metadata
+
 ### 4. Statistical Coding (Entropy Coding)
 - [[entropy-coding-huffman-arithmetic]] — variable-length codes based on symbol probability
 - Huffman coding: optimal prefix-free codes, bottom-up tree construction, two-pass (static) or one-pass (adaptive)
