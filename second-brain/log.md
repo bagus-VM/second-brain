@@ -287,3 +287,60 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 **Vault state:** 627 → 640 pages. All 6 courses fully indexed.
 
 *"The vault was healthier than the lint suggested — again. The 221 missing index entries were an indexing debt problem, not a content problem. The 13 broken links were all from the July 1 ingest creating prerequisites that didn't exist yet. Both are now fixed. The compound effect holds — every page is now findable from the index."*
+
+## [2026-07-08] LINT | Full vault health check | 3 broken links fixed, 7 new sources flagged
+
+**Trigger:** New raw materials added across 4 courses. Student requested lint.
+
+**Lint report created:** study/exams/vault-lint-report-2026-07-08.md
+
+**Findings:**
+- **Broken wikilinks in index.md (3): FIXED** — Wikilinks inside table summary cells had unescaped `|` aliases eaten as column delimiters, truncating slugs. Fixed: `[[graph-lap` → `[[graph-laplacian\|graph Laplacian]]`, `[[closeness-centralit` → `[[closeness-centrality\|closeness centrality]]`, `[[physical-unclonab` → `[[physical-unclonable-functions\|PUFs]]`. Post-fix: 0 broken targets.
+- **New raw materials NOT INGESTED (7 files across 4 courses):**
+  - RepEng: Lecture 9 (LLMs), Sheet 9 — no vault pages, not in index
+  - Software Analyse: Lecture 11 (Agentic Coding) — not in index
+  - Microelectronics: Lectures 7 + 8 — not in index
+  - MMDB: Ex09 solutions — not in index
+- **Structural health:** 0 drafts, 0 stale pages, 0 empty OQs, 0 source drift, 100% index completeness
+- **Orphans (28):** all structural/MOC files — acceptable floor
+- **Large pages (15):** 2 genuine split candidates (java-for-software-analysis 472 lines, sign-analysis 382 lines)
+- **Unsourced current concept pages (~20):** IoT + Microelectronics — verification risk for exam prep
+- **RepEng submodule noise:** 656 vendored dirs under RepEng/ (.venv, benchbase) inflating page count
+
+**Vault health score:** A- (structurally sound, ingestion backlog is the only gap)
+
+**Top 3 actions:**
+1. INGEST the 7 new raw files (exam-relevant)
+2. Update index exam calendar after ingest (RepEng 9/9, SA 11/11, Microelectronics 8/8)
+3. Address RepEng submodule noise (.gitignore for .venv/benchbase)
+
+## [2026-07-08] INGEST | 7 new sources across 4 courses | 7 pages created/updated
+
+**Sources ingested:**
+- Reproducibility Engineering: Lecture 9 (LLMs and Reproducibility), Exercise Sheet 8 (Tidy Data with DuckDB), Exercise Sheet 9 (JSON and JSON Schema)
+- Software Analyse: Lecture 11 (Agentic Coding and Software Quality)
+- Microelectronics: Lecture 7 (CMOS Applications: Flip-Flops and Amplifiers), Lecture 8 (OpAmps: Inverting and Non-Inverting)
+- Multimedia Databases: Exercise 9 Solutions (Indexing)
+
+**New topic pages (4):**
+- `reproducibility-engineering-lecture-9` - LLMs and reproducibility: local vs remote, structured outputs, constrained decoding, JSON Schema
+- `microelectronics-lecture-7` - CMOS Applications: Flip-Flops (SRAM/DRAM), CMOS Amplifiers (CS/CG/CD), OpAmps, non-inverting amplifier
+- `microelectronics-lecture-8` - OpAmps: Inverting amplifier, virtual short circuit, inverting vs non-inverting comparison
+- `software-analyse-lecture-11` - Agentic coding and software quality: AI code generation evidence, QA bottleneck, senior engineer tax, MCP
+
+**New practice pages (2):**
+- `reproducibility-engineering-sheet-9` - JSON, jq, JSON Schema validation, Bowtie meta-validator
+- `mmdb-ex09` - Indexing: B-tree, hash, K-d tree, point quadtree, R-tree properties/insert/delete, search algorithms (exact, range, NNQ)
+
+**Updated (1):**
+- `reproducibility-engineering-sheet-8` - Rewritten from hierarchical data to Tidy Data with DuckDB (pivoting, splitting, concatenation, WHO case study) to match actual Sheet_8.pdf content
+
+**Index updated:**
+- Exam calendar: RepEng 8/8 -> 9/9, SA 10/10 -> 11/11, Microelectronics 6/6 -> 8/8, MMDB Ex01-08 -> Ex01-09
+- Added 7 new page entries across 4 course sections
+- Updated total pages: 637 -> 644
+- Days left recalculated
+
+**Vault state:** 640 -> 647 pages. All 6 courses now have complete lecture coverage through final lectures.
+
+*"Seven sources, four courses, all filed. RepEng closes with LLMs and reproducibility, the newest frontier. Software Analyse ends with a guest lecture on agentic coding and quality. Microelectronics extends to OpAmps. MMDB gets its last exercise sheet on indexing. The vault now covers every lecture and every exercise across all six courses. That is the compound effect. Cook."*

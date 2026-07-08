@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-07-02
-**Total pages:** 637 (vault + study; excluding raw/)
+**Last updated:** 2026-07-08
+**Total pages:** 644 (vault + study; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -11,12 +11,12 @@
 ## Exam Calendar
 | Course | Exam Date | Days Left | Progress |
 |--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~26 | **9/9 lectures ✅** + Ex01–Ex08 practice complete ✅ (95+ pages) |
-| [[network-science]] | 28 July 2026 | ~33 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~35 | **8/8 lectures ✅** + Sheet 1–8 (61+ pages) |
-| [[software-analyse]] | 31 July 2026 | ~30 | **10/10 lectures ✅** (95+ pages) |
+| [[multimedia-databases]] | 21 July 2026 | ~13 | **9/9 lectures ✅** + Ex01–Ex09 practice complete ✅ (100+ pages) |
+| [[network-science]] | 28 July 2026 | ~20 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **9/9 lectures ✅** + Sheet 1–9 (66+ pages) |
+| [[software-analyse]] | 31 July 2026 | ~23 | **11/11 lectures ✅** (100+ pages) |
 | [[iot-security]] | 05 Aug 2026 | ~35 | **8/8 lectures ✅** (~80 pages) + 3 papers ingested |
-| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~53 | **6/6 lectures ✅** (~45 pages) |
+| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~28 | **8/8 lectures ✅** (~55 pages) |
 
 ---
 
@@ -183,6 +183,7 @@
 | [[mmdb-ex06-flashcards]] | Flashcards for Ex06 | current |
 | [[mmdb-ex07-flashcards]] | Flashcards for Ex07 | current |
 | [[mmdb-ex08]] | Exercise sheet 8: querying, object-relational DBs, SQL/MM, MPQF | current |
+| [[mmdb-ex09]] | Exercise sheet 9: indexing (B-tree, hash, R-tree, search algorithms) | current |
 | [[mmdb-exam-prediction]] | Exam prediction: 11 archetypes, top-3 targets | current |
 
 ---
@@ -317,7 +318,7 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[adjacency-matrix-factorization]] | A unifying view: spectral embeddings, DeepWalk, and node2vec all implicitly fact | current |
-| [[algebraic-connectivity]] | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-lap | current |
+| [[algebraic-connectivity]] | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-laplacian\|graph Laplacian]] | current |
 | [[betweenness-centrality]] | Betweenness centrality measures how often a node sits on shortest paths between  | current |
 | [[bipartite-graphs]] | A bipartite graph has two disjoint node sets where edges only connect nodes acro | current |
 | [[centrality-measures]] | Centrality measures quantify node importance — but each measure encodes a differ | current |
@@ -339,7 +340,7 @@
 | [[granovetter-weak-ties]] | Granovetter's weak-tie hypothesis states that weak ties (acquaintances, not clos | current |
 | [[graph-laplacian]] | The graph Laplacian L = D - A encodes the structure of a graph — its eigenvalues | current |
 | [[graph-partitioning]] | Graph partitioning divides a graph into a fixed number of balanced clusters — un | current |
-| [[harmonic-centrality]] | Harmonic centrality is the disconnected-graph extension of [[closeness-centralit | current |
+| [[harmonic-centrality]] | Harmonic centrality is the disconnected-graph extension of [[closeness-centrality\|closeness centrality]] | current |
 | [[hierarchical-clustering]] | Divisive and agglomerative community detection methods produce dendrograms — tre | current |
 | [[hnsw-indexing]] | HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg' | current |
 | [[k-balance]] | k-balance is the partition structure guaranteed by weak structural balance: a co | current |
@@ -467,6 +468,7 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[reproducibility-engineering-lecture-8]] | XML/JSON, JSON Schema, HDF5, h5py, visitor pattern | current |
+| [[reproducibility-engineering-lecture-9]] | LLMs and reproducibility: local vs remote, structured outputs, constrained decoding, JSON Schema | current |
 | [[hdf5]] | Hierarchical data format: files/groups/datasets/attributes | current |
 | [[json-schema]] | Vocabulary for validating JSON document structure | current |
 
@@ -511,7 +513,8 @@
 | [[reproducibility-engineering-sheet-6-flashcards]] | Flashcards for Sheet 6 | current |
 | [[reproducibility-engineering-sheet-7]] | Sheet 7: BenchBase lab — SQLite vs PostgreSQL benchmarking | current |
 | [[reproducibility-engineering-sheet-7-flashcards]] | Flashcards for Sheet 7 | current |
-| [[reproducibility-engineering-sheet-8]] | Sheet 8: hierarchical data (XML/JSON, JSON Schema combinators, HDF5) | current |
+| [[reproducibility-engineering-sheet-8]] | Sheet 8: tidy data with DuckDB (pivoting, splitting, concatenation) | current |
+| [[reproducibility-engineering-sheet-9]] | Sheet 9: JSON, jq, JSON Schema validation, Bowtie meta-validator | current |
 
 ---
 
@@ -621,6 +624,7 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[software-analyse-lecture-10]] | Symbolic store + path constraint, concolic execution, Ball-Larus path profiling | current |
+| [[software-analyse-lecture-11]] | Agentic coding and software quality: AI code generation, QA bottleneck, senior engineer tax, MCP | current |
 | [[symbolic-execution]] | Treat inputs as symbols, explore all paths via constraint solving | current |
 | [[concolic-execution]] | Concrete + symbolic: execute with real inputs, collect constraints, negate to explore | current |
 
@@ -785,7 +789,7 @@
 | [[iot-lecture-2]] | A comprehensive taxonomy of attack types targeting IoT systems, organized into n | current |
 | [[iot-lecture-3]] | A systematic enumeration of IoT [[attack-surface-analysis]] based on Daniel Mies | current |
 | [[iot-lecture-4]] | Design goals and best practices for building secure IoT systems, covering automa | current |
-| [[iot-lecture-5]] | Hardware-based security mechanisms for IoT devices, covering [[physical-unclonab | current |
+| [[iot-lecture-5]] | Hardware-based security mechanisms for IoT devices, covering [[physical-unclonable-functions\|PUFs]] | current |
 
 ### Additional Concepts
 | Page | Summary | Status |
@@ -878,6 +882,8 @@
 | [[microelectronics-lecture-4]] | L04: Diode Applications — rectifiers, limiters, clampers | current |
 | [[microelectronics-lecture-5]] | L05: MOS Transistors — MOSFET structure and operation | current |
 | [[microelectronics-lecture-6]] | L06: CMOS Logic Gates and Digital Circuits | current |
+| [[microelectronics-lecture-7]] | L07: CMOS Applications - Flip-Flops (SRAM/DRAM) and Amplifiers (CS/CG/CD) | current |
+| [[microelectronics-lecture-8]] | L08: OpAmps - Inverting and Non-Inverting Amplifiers | current |
 
 
 ### Additional Concepts

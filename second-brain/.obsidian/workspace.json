@@ -4,103 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "e9c4e40a3a838b63",
+        "id": "253a81204f53724e",
         "type": "tabs",
         "children": [
           {
-            "id": "7e8706dac2c9b782",
+            "id": "b2aa8975f769271c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
-                "page": 2,
-                "left": -10,
-                "top": 649,
-                "zoom": 1.5194632405808401
+                "file": "vault/concepts/sir-model-network-epidemics.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Ex06"
+              "icon": "lucide-file",
+              "title": "sir-model-network-epidemics"
             }
           }
         ]
-      },
-      {
-        "id": "a0dd6b61b0690a88",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "07f712fe1fe2aa8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/topics/multimedia-databases-lecture-05.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-05"
-            }
-          },
-          {
-            "id": "4b54891a2c78e9d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/entropy-coding-huffman-arithmetic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "entropy-coding-huffman-arithmetic"
-            }
-          },
-          {
-            "id": "eb8f2012ed06a69a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/jpeg-compression-pipeline.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jpeg-compression-pipeline"
-            }
-          },
-          {
-            "id": "e116081897d50aa9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study/practice/mmdb-ex06.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mmdb-ex06"
-            }
-          },
-          {
-            "id": "33ac26510655a8db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/lossless-vs-lossy-compression.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "lossless-vs-lossy-compression"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5,
-    "collapsed": true
+    "width": 383.5
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -245,18 +165,36 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4b54891a2c78e9d2",
+  "active": "b2aa8975f769271c",
   "lastOpenFiles": [
-    "vault/concepts/jpeg-compression-pipeline.md",
-    "study/practice/mmdb-ex06.md",
+    "vault/topics/network-science-l08.md",
     "vault/concepts/lossless-vs-lossy-compression.md",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
+    "study/practice/mmdb-ex06.md",
+    "vault/concepts/jpeg-compression-pipeline.md",
     "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/topics/software-analyse-lecture-11.md",
+    "vault/topics/microelectronics-lecture-8.md",
+    "vault/topics/microelectronics-lecture-7.md",
+    "study/practice/reproducibility-engineering-sheet-9.md",
+    "vault/topics/reproducibility-engineering-lecture-9.md",
+    "topics/software-analyse-lecture-11.md",
+    "topics/microelectronics-lecture-7.md",
+    "topics/microelectronics-lecture-8.md",
+    "topics",
+    "study/practice/mmdb-ex09.md",
+    "study/exams/vault-lint-report-2026-07-08.md",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.rnote",
+    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
+    "raw/lectures/introduction_to_microelectronics/Microelectronics8_2026.pdf",
+    "raw/lectures/introduction_to_microelectronics/Microelectronics7_2026.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/OpenAI_API_Documentation_Text_Generation.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_llama.cpp.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_Anthropic.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Introduction_to_Structured_Outputs_in_the__OpenAI_API.url",
     "vault/topics/multimedia-databases-lecture-05.md",
     "vault/concepts/run-length-encoding.md",
     "vault/topics/multimedia-databases-lecture-04.md",
-    "Untitled 1.base",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex05.pdf",
     "vault/topics/multimedia-databases-lecture-06.md",
     "vault/concepts/path-profiling.md",
     "vault/concepts/gdpr-compliance.md",
@@ -265,23 +203,6 @@
     "vault/concepts/pki.md",
     "vault/concepts/program-traces.md",
     "vault/concepts/debugging.md",
-    "vault/concepts/testing.md",
-    "vault/concepts/test-generation.md",
-    "vault/concepts/binary-search.md",
-    "vault/concepts/design-patterns.md",
-    "vault/concepts/iot-security-overview.md",
-    "vault/concepts/object-oriented-programming.md",
-    "vault/topics/software-analyse-lecture-9.md",
-    "vault/topics/software-analyse-lecture-10.md",
-    "vault/topics/iot-lecture-8.md",
-    "vault/concepts/symbolic-execution.md",
-    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis_JupyterNotebookExport.pdf",
-    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis.pdf",
-    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution_JupyterNotebookExport.pdf",
-    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution.pdf",
-    "raw/lectures/iot_security/IoTsec8_2026.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex09.rnote",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
