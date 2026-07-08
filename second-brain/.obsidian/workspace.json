@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "35fa8941fc5cf42c",
+        "id": "64cb4cfa1036ca30",
         "type": "tabs",
         "children": [
           {
-            "id": "4f09763437a5679f",
+            "id": "6dc24e2900c43b2e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -201,15 +201,30 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "vault/concepts/run-length-encoding.md",
+                    "file": "vault/concepts/jpeg-compression-pipeline.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "run-length-encoding"
+                  "title": "jpeg-compression-pipeline"
+                }
+              },
+              {
+                "id": "4f09763437a5679f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "vault/concepts/lz77-lzw-compression.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "lz77-lzw-compression"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical",
@@ -222,12 +237,17 @@
       }
     ]
   },
-  "active": "52da57db8bcbe4d4",
+  "active": "a722bad53acdce8c",
   "lastOpenFiles": [
-    "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/concepts/lz77-lzw-compression.md",
+    "vault/concepts/jpeg-compression-pipeline.md",
     "vault/topics/multimedia-databases-lecture-05.md",
-    "vault/concepts/h264-avc-video-compression.md",
+    "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/concepts/run-length-encoding.md",
+    "vault/concepts/lossless-vs-lossy-compression.md",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
+    "Pasted image 20260708123921.png",
+    "vault/concepts/h264-avc-video-compression.md",
     "study/practice/mmdb-ex06.md",
     "study/practice/mmdb-ex08.md",
     "vault/topics/multimedia-databases-lecture-07.md",
@@ -242,8 +262,6 @@
     "Untitled 1.base",
     "vault/concepts/sir-model-network-epidemics.md",
     "vault/topics/network-science-l08.md",
-    "vault/concepts/lossless-vs-lossy-compression.md",
-    "vault/concepts/jpeg-compression-pipeline.md",
     "vault/topics/microelectronics-lecture-8.md",
     "study/practice/reproducibility-engineering-sheet-9.md",
     "vault/topics/reproducibility-engineering-lecture-9.md",
@@ -256,10 +274,8 @@
     "raw/lectures/introduction_to_microelectronics/Microelectronics7_2026.pdf",
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/OpenAI_API_Documentation_Text_Generation.url",
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
-    "vault/concepts/run-length-encoding.md",
     "vault/topics/multimedia-databases-lecture-04.md",
     "vault/topics/multimedia-databases-lecture-06.md",
-    "vault/concepts/path-profiling.md",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
@@ -268,7 +284,6 @@
     "Pasted image 20260623142244.png",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/architecture.png",
     "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif"
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif"
   ]
 }
