@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "253a81204f53724e",
+        "id": "35fa8941fc5cf42c",
         "type": "tabs",
         "children": [
           {
-            "id": "b2aa8975f769271c",
+            "id": "4f09763437a5679f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/sir-model-network-epidemics.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "sir-model-network-epidemics"
+              "title": "New tab"
             }
           }
         ]
@@ -165,21 +161,92 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "b2aa8975f769271c",
+  "floating": {
+    "id": "53a5053bf41f4379",
+    "type": "floating",
+    "children": [
+      {
+        "id": "6ffa691afe5f6a0c",
+        "type": "window",
+        "children": [
+          {
+            "id": "4f2609fc82192284",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a722bad53acdce8c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
+                    "page": 2,
+                    "left": -10,
+                    "top": 637,
+                    "zoom": 1.5471814754836413
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Ex06"
+                }
+              }
+            ]
+          },
+          {
+            "id": "12b582b7db01a27d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "52da57db8bcbe4d4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "vault/concepts/run-length-encoding.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "run-length-encoding"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 320,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "52da57db8bcbe4d4",
   "lastOpenFiles": [
+    "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/topics/multimedia-databases-lecture-05.md",
+    "vault/concepts/h264-avc-video-compression.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
+    "study/practice/mmdb-ex06.md",
+    "study/practice/mmdb-ex08.md",
+    "vault/topics/multimedia-databases-lecture-07.md",
+    "topics/microelectronics-lecture-7.md",
+    "vault/topics/microelectronics-lecture-7.md",
+    "topics/microelectronics-lecture-8.md",
+    "vault/topics/software-analyse-lecture-11.md",
+    "topics/software-analyse-lecture-11.md",
+    "AGENTS.md",
+    "SOUL.md",
+    "Untitled.base",
+    "Untitled 1.base",
+    "vault/concepts/sir-model-network-epidemics.md",
     "vault/topics/network-science-l08.md",
     "vault/concepts/lossless-vs-lossy-compression.md",
-    "study/practice/mmdb-ex06.md",
     "vault/concepts/jpeg-compression-pipeline.md",
-    "vault/concepts/entropy-coding-huffman-arithmetic.md",
-    "vault/topics/software-analyse-lecture-11.md",
     "vault/topics/microelectronics-lecture-8.md",
-    "vault/topics/microelectronics-lecture-7.md",
     "study/practice/reproducibility-engineering-sheet-9.md",
     "vault/topics/reproducibility-engineering-lecture-9.md",
-    "topics/software-analyse-lecture-11.md",
-    "topics/microelectronics-lecture-7.md",
-    "topics/microelectronics-lecture-8.md",
     "topics",
     "study/practice/mmdb-ex09.md",
     "study/exams/vault-lint-report-2026-07-08.md",
@@ -189,20 +256,10 @@
     "raw/lectures/introduction_to_microelectronics/Microelectronics7_2026.pdf",
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/OpenAI_API_Documentation_Text_Generation.url",
     "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_llama.cpp.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_Anthropic.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Introduction_to_Structured_Outputs_in_the__OpenAI_API.url",
-    "vault/topics/multimedia-databases-lecture-05.md",
     "vault/concepts/run-length-encoding.md",
     "vault/topics/multimedia-databases-lecture-04.md",
     "vault/topics/multimedia-databases-lecture-06.md",
     "vault/concepts/path-profiling.md",
-    "vault/concepts/gdpr-compliance.md",
-    "vault/concepts/dynamic-analysis.md",
-    "vault/concepts/defense-in-depth.md",
-    "vault/concepts/pki.md",
-    "vault/concepts/program-traces.md",
-    "vault/concepts/debugging.md",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",

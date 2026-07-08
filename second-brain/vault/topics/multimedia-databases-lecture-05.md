@@ -95,25 +95,25 @@ This lecture covers data compression for multimedia — the techniques that make
 
 ## Key Concepts Summary
 
-| Concept | Core Idea |
-|---------|-----------|
-| Lossless compression | decode(encode(x)) = x; bounded by entropy |
-| Lossy compression | decode(encode(x)) ≈ x; rate-distortion tradeoff |
-| Entropy coding | Variable-length codes based on probability; Huffman, arithmetic |
-| Run-length encoding | Replace repeated sequences with (byte, count) |
-| Transform coding | DCT/DWT converts to frequency domain; quantize high frequencies |
-| YCbCr + subsampling | Separate luma/chroma; 4:2:0 = 50% reduction with minimal quality loss |
-| JPEG | 8×8 DCT + quantization + zig-zag + RLE + Huffman |
-| I-frame | Independently coded (like JPEG); random access point |
-| P-frame | Predicted from previous I/P frame; motion vector + residual |
-| B-frame | Bi-directional prediction from past and future I/P frames |
-| GOP | Sequence between I-frames; unit of random access |
-| Motion estimation | Find best matching block in reference frame |
-| Motion compensation | Encode motion vector + prediction residual |
-| Macroblock | 16×16 coding unit in MPEG; flexible partitions in H.264 |
-| H.264 improvements | QPEL, intra-prediction, CABAC, deblocking filter, flexible partitions |
-| Rate-distortion | Tradeoff between bits spent and quality achieved |
-| QP | Quantization parameter; lower = better quality, more bits |
+| Concept              | Core Idea                                                             |
+| -------------------- | --------------------------------------------------------------------- |
+| Lossless compression | decode(encode(x)) = x; bounded by entropy                             |
+| Lossy compression    | decode(encode(x)) ≈ x; rate-distortion tradeoff                       |
+| Entropy coding       | Variable-length codes based on probability; Huffman, arithmetic       |
+| Run-length encoding  | Replace repeated sequences with (byte, count)                         |
+| Transform coding     | DCT/DWT converts to frequency domain; quantize high frequencies       |
+| YCbCr + subsampling  | Separate luma/chroma; 4:2:0 = 50% reduction with minimal quality loss |
+| JPEG                 | 8×8 DCT + quantization + zig-zag + RLE + Huffman                      |
+| I-frame              | Independently coded (like JPEG); random access point                  |
+| P-frame              | Predicted from previous I/P frame; motion vector + residual           |
+| B-frame              | Bi-directional prediction from past and future I/P frames             |
+| GOP                  | Sequence between I-frames; unit of random access                      |
+| Motion estimation    | Find best matching block in reference frame                           |
+| Motion compensation  | Encode motion vector + prediction residual                            |
+| Macroblock           | 16×16 coding unit in MPEG; flexible partitions in H.264               |
+| H.264 improvements   | QPEL, intra-prediction, CABAC, deblocking filter, flexible partitions |
+| Rate-distortion      | Tradeoff between bits spent and quality achieved                      |
+| QP                   | Quantization parameter; lower = better quality, more bits             |
 
 ## Connections to Other Lectures
 - [[multimedia-databases-lecture-04]] — Lecture 04 covered text, video, audio media types; this lecture covers how to compress them

@@ -12,7 +12,7 @@ prerequisites: [[software-analyse-lecture-9]], [[software-analyse-lecture-10]], 
 *AI coding agents can write and fix code autonomously, but they make quality assurance more important, not less.*
 
 ## Core Intuition
-Agentic coding tools (like Claude Code) run autonomously: they read your codebase, make changes, run tests, and iterate. The promise is speed. The catch is that AI-generated code averages out to "good enough" but introduces subtle quality erosion. Test coverage, code cleanliness, and architectural understanding become the bottleneck. The senior engineers who used to build features now spend their time reviewing AI output. This is the senior engineer tax.
+Agentic coding tools (like Claude Code) run autonomously: they read your codebase, make changes, run tests, and iterate. The promise is speed. The catch is that AI-generated code averages out to "good enough" but introduces subtle quality erosion. Test coverage, code cleanliness, and architectural understanding become the bottleneck. The senior engineers who used to build features now spend their time reviewing AI output. This is the senior engineer tax. The fix is not to stop using AI. It is to keep the codebase clean enough that both AI and humans can understand it, and to use AI itself to close the quality loop: find issues, fix them, run tests, verify.
 
 ## Formal Definition / Statement
 
@@ -25,10 +25,7 @@ AI coding agents autonomously perform development tasks: writing code, reviewing
 The recursive self-improvement loop illustrates the pattern:
 
 ```
-while true
-do
-  claude -p "Task $RANDOM: Write a 1000 word essay on AI."
-done
+while true; do claude -p 'Task $RANDOM: Write a 1000 word essay on AI.'; done
 ```
 
 ### Evidence on AI Code Quality
@@ -67,29 +64,39 @@ Architecture: collaboration platforms, IDEs, browsers, and issue trackers connec
 ## Key Properties
 
 - AI coding erodes quality (He et al. MSR 2026): speed increases, quality decreases
-- QA becomes the bottleneck when AI generates more code
+- Agentic coding shifts the bottleneck from code production to code verification
+- AI-generated code trends toward average quality, which accumulates debt in large codebases
+- QA becomes the scaling constraint, not development speed
 - AI performs worse on low-quality code: clean code is a prerequisite for effective AI assistance
-- Senior engineer tax: experienced developers spend time reviewing AI output instead of building
-- MCP (Model Context Protocol) connects AI agents to development tools
-- AI agents can close the quality loop: find issues, fix them, run tests, verify
+- Senior engineer tax: experienced developers spend disproportionate time reviewing AI output instead of building
+- MCP (Model Context Protocol) is the integration layer connecting tools to AI backends
+- The quality loop (find, fix, test, verify) can be partially automated by AI agents
+- AI is better at convincing junior developers about quality issues than static reports alone
 
 ## Worked Example
 
-A development team adopts Claude Code for a medium-sized codebase. Before AI: 5 developers write code, 1 QA engineer reviews. After AI: 5 developers + Claude Code generate 3x more code. The QA engineer cannot keep up. The team adds an AI agent that:
-1. Reviews each merge request for style violations and findings
-2. Runs the test suite on changed code paths
-3. Generates tests for uncovered code
-4. Reports remaining gaps to the human QA engineer
+**Scenario: A team adopts agentic coding for a mid-size Python project.**
 
-The QA engineer shifts from reviewing code to reviewing AI review reports. The bottleneck moves from "finding issues" to "verifying AI-found issues are real and AI-generated fixes are correct."
+Before AI: 5 developers write and review code. QA finds issues in code review. Senior developers spend 20% of time on review.
+
+After AI: 5 developers use Claude Code to generate features. Output doubles. But code review now takes 3x longer because the volume is higher and AI code needs careful checking. Senior developers spend 60% of time on review. This is the senior engineer tax.
+
+**Mitigation with quality platform:** The team connects Teamscale to their CI pipeline. AI agents review merge requests automatically, flag findings, and suggest fixes. Junior developers see AI-generated explanations of quality issues and fix them before review. Senior developers review only what the AI could not resolve. Review time drops back to 25%. The quality loop is partially automated.
+
+The lesson: AI without quality infrastructure makes things worse. AI with quality infrastructure amplifies the team.
 
 ## Common Pitfalls
 
+- Assuming AI-generated code is correct because it looks plausible. It is average by construction and needs the same scrutiny as human code.
 - Assuming AI-generated code needs less review. The opposite is true: AI averages quality, so edge cases and subtle bugs need human verification.
 - Letting AI agents modify code without running tests. The quality loop requires verification, not just generation.
 - Believing AI can fix quality issues in already-poor code. AI performs worse on low-quality codebases. Clean first, then automate.
+- Ignoring the senior engineer tax. If you do not measure how much time seniors spend reviewing AI output, you will not notice the problem until it is severe.
+- Treating quality tools as optional when using AI. Clean code is the prerequisite for AI to work well, not a luxury.
+- Expecting AI agents to fully replace QA. They can close part of the loop, but verification still needs human judgment for non-obvious cases.
 - "The quality of AI generated code is so good, we no longer need additional quality measures." This is false. Evidence shows the opposite.
 - "Software quality is no longer relevant, as AI does all the changes." Also false. No human touching the code means no one understands it, which makes future AI changes worse.
+- Skipping the "notice the mistake" step in deep practice. Without honest failure analysis, neither humans nor AI improve.
 
 ## Connections
 
@@ -103,6 +110,11 @@ The QA engineer shifts from reviewing code to reviewing AI review reports. The b
 
 ## Open Questions
 
+- How reliable are AI agents at fixing findings without introducing regressions? The lecture showed the loop but did not quantify success rates.
+- What is the actual error rate of AI-generated merge request reviews compared to senior engineer reviews?
+- How does MCP handle security and access control when connecting AI backends to issue trackers and CI systems?
 - How does the senior engineer tax scale? As more AI code enters a codebase, does the review burden grow linearly or super-linearly?
 - Can AI agents reliably distinguish real quality issues from false positives, or do they need human verification for every finding?
+- The MSR 2026 paper measures quality erosion, but what is the long-term effect on codebase maintainability over months or years?
 - The lecture cites MSR 2026 evidence that AI erodes quality. Is there counter-evidence that AI improves quality when applied to clean codebases with strong test coverage?
+- How do you measure the senior engineer tax quantitatively in a real organization?
