@@ -8,6 +8,7 @@ status: active
 # Multimedia Databases
 
 **Exam:** 21 July 2026 — **nearest exam, highest priority**
+**Exam format (confirmed):** Exam is based on the exercise sheets (Ex01–Ex09), not the lecture slides. Master every exercise task cold.
 
 ## Syllabus
 

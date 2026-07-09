@@ -65,6 +65,7 @@ Even when two chips are manufactured identically, microscopic physical variation
 
 - [[iot-lecture-1]] — IoT Security Landscape — course overview
 - [[iot-lecture-5]] — IoT Security Hardware — PUFs, TPMs, secure boot
+- [[iot-lecture-9]] — DRAM-PUF based IoT security protocol — concrete application of DRAM retention PUFs for device authentication
 
 ## Open Questions
 - How do PUFs scale to billions of IoT devices?

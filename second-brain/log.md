@@ -379,3 +379,29 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 **Vault state:** 647 pages, all genuine lecture-owned orphans now wired.
 
 *"Seven sources, four courses, all filed. RepEng closes with LLMs and reproducibility, the newest frontier. Software Analyse ends with a guest lecture on agentic coding and quality. Microelectronics extends to OpAmps. MMDB gets its last exercise sheet on indexing. The vault now covers every lecture and every exercise across all six courses. That is the compound effect. Cook."*
+
+## [2026-07-09] INGEST | IoT Security Lecture 9 (DRAM-PUF Protocol) | 1 page created, 1 updated
+
+**Source:** IoTsec9_2026.pdf (1 slide — DRAM-PUF based IoT security protocol)
+
+**New page:**
+- `iot-lecture-9` — DRAM-PUF based IoT security protocol: enrollment phase records PUF characteristics (c, R, t, T, HD, k), authentication phase derives shared key k = HD ⊕ PUF_t(c) without storing keys on device
+
+**Updated:**
+- `physical-unclonable-functions` — added backlink to iot-lecture-9
+
+**Skipped:** `mmdb-ex07.rnote` — Rnote handwritten strokes, no text layer, no OCR tools available
+
+**Index updated:** IoT Security 8/8 → 9/9, total pages 644 → 645
+
+*Single slide, but it crystallises the PUF authentication pattern from lecture 6 into a concrete protocol. The key insight: the key is never stored, never transmitted — it is derived from DRAM physics each session. That is the whole point of PUFs.*
+
+## [2026-07-09] UPDATE | MMDB exam intel confirmed | 2 files updated
+
+**Intel:** Exam is based on the exercise sheets (Ex01–Ex09), not the lecture slides.
+
+**Updated:**
+- `vault/connections/mmdb-exam-prediction.md` — upgraded from "reportedly recycles" to CONFIRMED
+- `courses/multimedia-databases.md` — added exam format line
+
+**Strategy shift:** Practice files (`study/practice/mmdb-ex01..09.md`) are now the primary study material. 12 days to exam.
