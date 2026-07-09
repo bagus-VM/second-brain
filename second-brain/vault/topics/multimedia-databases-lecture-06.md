@@ -7,7 +7,7 @@ status: current
 last_updated: 2026-06-01
 prerequisites: []
 ---
-
+ 
 ## One-line Summary
 Lecture 06 covers multimedia data modeling — how to annotate, describe, and structure multimedia content using metadata standards, with MPEG-7 as the comprehensive framework spanning from low-level features to high-level semantics.
 
