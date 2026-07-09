@@ -92,13 +92,13 @@ WHERE i.format = 'JPEG';
 ## Key Properties
 
 ### UDTs vs Relational Types
-| Aspect | Relational | Object-Relational |
-|--------|-----------|-------------------|
-| Data types | Primitive (INT, VARCHAR, DATE) | Primitive + User-defined (Image, Video) |
-| Structure | Flat tables | Nested, hierarchical |
-| Behavior | None (data only) | Methods attached to types |
-| Identity | Primary key (user-defined) | OID (system-generated) |
-| Relationships | Foreign keys | REF (typed object references) |
+| Aspect        | Relational                     | Object-Relational                       |
+| ------------- | ------------------------------ | --------------------------------------- |
+| Data types    | Primitive (INT, VARCHAR, DATE) | Primitive + User-defined (Image, Video) |
+| Structure     | Flat tables                    | Nested, hierarchical                    |
+| Behavior      | None (data only)               | Methods attached to types               |
+| Identity      | Primary key (user-defined)     | OID (system-generated)                  |
+| Relationships | Foreign keys                   | REF (typed object references)           |
 
 ### Advantages
 - **Complex data modeling**: can represent multimedia objects with their full structure
