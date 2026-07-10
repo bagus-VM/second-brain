@@ -4,21 +4,73 @@
     "type": "split",
     "children": [
       {
-        "id": "0427755730771adb",
+        "id": "de5a7fcd1ce28b6c",
         "type": "tabs",
         "children": [
           {
-            "id": "2115594d2935fc26",
+            "id": "c07d740f6ff97407",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+                "page": 1,
+                "left": -4,
+                "top": 634,
+                "zoom": 1.7
+              },
+              "icon": "lucide-file-text",
+              "title": "Ex09"
+            }
+          },
+          {
+            "id": "47c7cfe0ac85c2ff",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
+                "page": 24,
+                "left": -13,
+                "top": 74,
+                "zoom": 1.2562499999999999
+              },
+              "icon": "lucide-file-text",
+              "title": "Ex09_solutions"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd23bc93dbb4d4a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "78d39b643f178c61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "vault/topics/multimedia-databases-lecture-09.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "multimedia-databases-lecture-09"
+            }
+          },
+          {
+            "id": "aab6b93f42280fb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/concepts/content-based-retrieval.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "content-based-retrieval"
             }
           }
         ]
@@ -78,7 +130,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 383.5,
+    "collapsed": true
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -165,34 +218,37 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2115594d2935fc26",
+  "active": "c07d740f6ff97407",
   "lastOpenFiles": [
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+    "study/practice/mmdb-ex09.md",
+    "vault/topics/multimedia-databases-lecture-09.md",
+    "SOUL.md",
+    "AGENTS.md",
+    "vault/concepts/content-based-retrieval.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
     "vault/topics/reproducibility-engineering-lecture-10.md",
-    "raw/assets/reproducibility_engineering/Vorlesung/10_-_Remoteness/Material_for_in-class_students_need_not_prepare_this_ahead_of_time/SQLite_Walkthrough.pdf",
-    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQLite_Walkthrough.pdf",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/OpenAI_API_Documentation_Text_Generation.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_llama.cpp.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Limitations_of_Structured_Outputs_Anthropic.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Introduction_to_Structured_Outputs_in_the__OpenAI_API.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs/Hands-On_LLM_extracted_pages.pdf",
-    "raw/assets/reproducibility_engineering/Vorlesung/9 - LLMs",
-    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
-    "vault/topics/reproducibility-engineering-lecture-8.md",
+    "vault/topics/microelectronics-lecture-9.md",
     "vault/concepts/weighted-summer.md",
     "vault/concepts/voltage-follower.md",
     "vault/concepts/sram-cell.md",
+    "vault/concepts/sense-amplifier.md",
+    "vault/concepts/opamp-integrator.md",
     "vault/concepts/opamp-differentiator.md",
     "vault/concepts/flash-memory.md",
     "vault/concepts/dram-cell.md",
-    "vault/concepts/sense-amplifier.md",
-    "vault/concepts/opamp-integrator.md",
-    "vault/topics/microelectronics-lecture-9.md",
-    "study/practice/reproducibility-engineering-sheet-10.md",
     "vault/concepts/artifact-packaging.md",
-    "vault/topics/reproducibility-engineering-lecture-9.md",
+    "study/practice/reproducibility-engineering-sheet-10.md",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_10___Remote_Experiments.pdf",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
+    "raw/lectures/introduction_to_microelectronics/Microelectronics9_2026.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/OpenAI_API_Documentation_Text_Generation.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_llama.cpp.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_Anthropic.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Introduction_to_Structured_Outputs_in_the__OpenAI_API.url",
     "vault/topics/iot-lecture-9.md",
-    "study/practice/mmdb-ex09.md",
     "vault/concepts/jpeg-compression-pipeline.md",
     "vault/concepts/entropy-coding-huffman-arithmetic.md",
     "vault/concepts/lossless-vs-lossy-compression.md",
@@ -201,8 +257,6 @@
     "vault/concepts/lz77-lzw-compression.md",
     "Pasted image 20260708123921.png",
     "vault/concepts/h264-avc-video-compression.md",
-    "study/practice/mmdb-ex06.md",
-    "study/practice/mmdb-ex08.md",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
