@@ -144,6 +144,7 @@ If `y` were not used in `add`, the summary edge `y_actual_in → z_actual_out` w
 - [[points-to-analysis]] — resolves aliasing for accurate SDG construction
 - [[control-flow-graph]] — basis for each procedure's PDG
 - [[data-flow-analysis]] — interprocedural data flow feeds SDG edges
+- [[software-analyse-lecture-8]] — Source lecture: Program Slicing (SSA → dominance frontiers → φ → PDG → slicing)
 
 ## Open Questions
 

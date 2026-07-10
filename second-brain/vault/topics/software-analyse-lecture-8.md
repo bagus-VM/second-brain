@@ -161,7 +161,6 @@ print(x₄)
 6. **Summary edges are essential**: Without them, interprocedural slicing is exponential (must consider all call paths).
 
 ## Connections
-
 - [[control-flow-graph]] — basis for PDG nodes
 - [[dominance]] — needed for SSA construction (dominance frontiers)
 - [[dominator-tree]] — used in variable renaming pass
@@ -172,6 +171,12 @@ print(x₄)
 - [[basic-block]] — granularity of PDG nodes
 - [[reaching-definitions]] — underpins data dependence computation
 - [[software-analyse-lecture-10]] — symbolic execution and program slicing are complementary: slicing asks "what affects X?", symbolic asks "what inputs reach X?"
+- [[static-single-assignment]] — SSA form underlies the PDG construction described here
+- [[phi-function]] — merge-point pseudo-assignments that define SSA's structure
+- [[program-dependence-graph]] — the central data structure of this lecture
+- [[program-slicing]] — slicing = reachability in the PDG, the lecture's main result
+- [[system-dependence-graph]] — interprocedural extension of PDG (Section "Interprocedural Slicing")
+- [[dynamic-slicing]] — trace-based slice variant, complements the static slice
 
 ## Open Questions
 

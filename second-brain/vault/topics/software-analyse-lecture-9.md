@@ -132,6 +132,8 @@ Three techniques:
 
 ## Connections
 - [[static-vs-dynamic-analysis]] — dynamic analysis is the "observation" paradigm
+- [[dynamic-analysis]] — this lecture's topic: the field, its tradeoffs, and its techniques
+- [[program-traces]] — traces are the foundational artifact of dynamic analysis (instructions, data state, call stack)
 - [[dynamic-slicing]] — dynamic slicing is a dynamic analysis technique
 - [[program-slicing]] — slicing can be static or dynamic; dynamic slicing is a subtopic
 - [[program-dependence-graph]] — PDGs used in dynamic slicing

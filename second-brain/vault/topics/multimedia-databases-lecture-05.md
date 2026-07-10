@@ -36,6 +36,13 @@ This lecture covers data compression for multimedia — the techniques that make
 - Best for data with long runs (e.g., black-and-white images, zero-valued DCT coefficients)
 - Offset threshold determines minimum run length for compression
 
+### 3b. Dictionary-Based Compression
+- [[lz77-lzw-compression]] — LZ77 sliding-window back-references and LZW adaptive dictionary; the core of gzip, PNG, ZIP
+- LZ77: replaces repeated sequences with (offset, length) back-references into a sliding window
+- LZW: builds the dictionary on the fly at both encoder and decoder; used in GIF, compress, V.42bis
+- Combined with entropy coding in Deflate (gzip, zlib, PNG, ZIP) — LZ77 first, then Huffman
+- Not specialized for multimedia raw data (no perceptual model); best for text, structured data, metadata
+
 ### 4. Statistical Coding (Entropy Coding)
 - [[entropy-coding-huffman-arithmetic]] — variable-length codes based on symbol probability
 - Huffman coding: optimal prefix-free codes, bottom-up tree construction, two-pass (static) or one-pass (adaptive)
@@ -95,25 +102,25 @@ This lecture covers data compression for multimedia — the techniques that make
 
 ## Key Concepts Summary
 
-| Concept | Core Idea |
-|---------|-----------|
-| Lossless compression | decode(encode(x)) = x; bounded by entropy |
-| Lossy compression | decode(encode(x)) ≈ x; rate-distortion tradeoff |
-| Entropy coding | Variable-length codes based on probability; Huffman, arithmetic |
-| Run-length encoding | Replace repeated sequences with (byte, count) |
-| Transform coding | DCT/DWT converts to frequency domain; quantize high frequencies |
-| YCbCr + subsampling | Separate luma/chroma; 4:2:0 = 50% reduction with minimal quality loss |
-| JPEG | 8×8 DCT + quantization + zig-zag + RLE + Huffman |
-| I-frame | Independently coded (like JPEG); random access point |
-| P-frame | Predicted from previous I/P frame; motion vector + residual |
-| B-frame | Bi-directional prediction from past and future I/P frames |
-| GOP | Sequence between I-frames; unit of random access |
-| Motion estimation | Find best matching block in reference frame |
-| Motion compensation | Encode motion vector + prediction residual |
-| Macroblock | 16×16 coding unit in MPEG; flexible partitions in H.264 |
-| H.264 improvements | QPEL, intra-prediction, CABAC, deblocking filter, flexible partitions |
-| Rate-distortion | Tradeoff between bits spent and quality achieved |
-| QP | Quantization parameter; lower = better quality, more bits |
+| Concept              | Core Idea                                                             |
+| -------------------- | --------------------------------------------------------------------- |
+| Lossless compression | decode(encode(x)) = x; bounded by entropy                             |
+| Lossy compression    | decode(encode(x)) ≈ x; rate-distortion tradeoff                       |
+| Entropy coding       | Variable-length codes based on probability; Huffman, arithmetic       |
+| Run-length encoding  | Replace repeated sequences with (byte, count)                         |
+| Transform coding     | DCT/DWT converts to frequency domain; quantize high frequencies       |
+| YCbCr + subsampling  | Separate luma/chroma; 4:2:0 = 50% reduction with minimal quality loss |
+| JPEG                 | 8×8 DCT + quantization + zig-zag + RLE + Huffman                      |
+| I-frame              | Independently coded (like JPEG); random access point                  |
+| P-frame              | Predicted from previous I/P frame; motion vector + residual           |
+| B-frame              | Bi-directional prediction from past and future I/P frames             |
+| GOP                  | Sequence between I-frames; unit of random access                      |
+| Motion estimation    | Find best matching block in reference frame                           |
+| Motion compensation  | Encode motion vector + prediction residual                            |
+| Macroblock           | 16×16 coding unit in MPEG; flexible partitions in H.264               |
+| H.264 improvements   | QPEL, intra-prediction, CABAC, deblocking filter, flexible partitions |
+| Rate-distortion      | Tradeoff between bits spent and quality achieved                      |
+| QP                   | Quantization parameter; lower = better quality, more bits             |
 
 ## Connections to Other Lectures
 - [[multimedia-databases-lecture-04]] — Lecture 04 covered text, video, audio media types; this lecture covers how to compress them

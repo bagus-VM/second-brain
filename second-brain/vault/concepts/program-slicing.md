@@ -111,6 +111,7 @@ Everything that `x` affects: {1, 3, 4, 5, 6, 8} — same result in this case.
 - [[system-dependence-graph]] — PDG extension for interprocedural slicing
 - [[dynamic-slicing]] — input-specific variant
 - [[points-to-analysis]] — resolves aliasing for precise slicing
+- [[software-analyse-lecture-8]] — Source lecture: Program Slicing (SSA → dominance frontiers → φ → PDG → slicing)
 
 ## Open Questions
 

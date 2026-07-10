@@ -76,7 +76,8 @@ The calling context tree collapses repeated calls:
 - [[fault-localization]] techniques (Tarantula, Ochiai) use execution matrices built from traces of passing and failing test runs
 - [[delta-debugging]] uses traces to isolate the minimal difference between working and failing inputs
 - [[static-vs-dynamic-analysis]] contrasts trace-based (dynamic) approaches with static (code-level) analysis
-- [[control-flow-graph]] underpins the call graph, call tree, and calling context tree structures derived from traces
+- [[control-flow-graph]] underpins the call graph, call tree, and calling context tree derived from traces
+- [[software-analyse-lecture-9]] — Source lecture: Dynamic Analysis (traces, instrumentation, AOP, fault localization, delta debugging)
 
 ## Open Questions
 

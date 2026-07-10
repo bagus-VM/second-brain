@@ -17,6 +17,8 @@ A pattern scan of all 7 Uebungsblaetter for SS 2026 MMDB, identifying the recurr
 ## Source Note (Important)
 > **Student intel (2026-06-15):** professor reportedly recycles Uebung material as exam questions. This is a common German-university Klausurarchitektur. Treat every Uebungsblatt as the de-facto syllabus, not optional practice.
 > ^[memory note: 2026-06-15 student report]
+>
+> **CONFIRMED (2026-07-09):** Student received direct confirmation that the exam is **based on the exercise sheets**. The lecture slides provide background; the exam questions come from the exercises. Strategy: master every Ex01–Ex09 task cold. The vault practice files (`study/practice/mmdb-ex01..09.md`) are now the primary study material, not the lecture topic pages.
 
 ## Method
 1. Extracted text from all 7 exercise sheets (`raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01..07.pdf`).

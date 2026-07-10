@@ -146,7 +146,8 @@ WHERE a.author = 'professor';
 [[sql-mm]] — SQL/MM Part 5 Still Image uses UDTs whose feature lists could be modeled as either collection type.
 [[multimedia-query-languages]] — whether a collection is queryable (nested table) affects what query expressions are possible.
 [[dominant-color]] — MPEG-7 DCD's bounded color list is a textbook VARRAY use case.
-[[mpqf]] — MPQF query conditions may need to join on feature values, favoring nested table storage.
+[[mpqf]] — MPQF query conditions may need to join on feature values, favoring nested tables' SQL-queryable property
+- [[multimedia-databases-lecture-08]] — Source lecture: Query Languages (MMQL, SQL/MM, MPQF, OR extensions; this is the implementation detail)
 
 ## Open Questions
 - Does Oracle's SQL/MM implementation (Oracle Multimedia) use VARRAYs or nested tables internally for SI_FeatureList? The standard defines the type but not the storage.

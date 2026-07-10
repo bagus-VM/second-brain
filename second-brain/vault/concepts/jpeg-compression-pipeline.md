@@ -13,7 +13,7 @@ JPEG compression uses a three-stage pipeline — forward DCT transform, quantiza
 
 ## Core Intuition
 The human eye is more sensitive to low-frequency changes (smooth gradients) than high-frequency details (sharp edges, noise). JPEG exploits this ==by transforming 8×8 pixel blocks into frequency space using the Discrete Cosine Transform (DCT), then aggressively quantizing the high-frequency coefficients (which the eye won't miss) while preserving low-frequency ones==. The result is dramatic compression with acceptable quality loss for photographs.
-
+![[Pasted image 20260708123921.png]]
 ## Formal Definition / Statement
 The JPEG compression pipeline consists of three stages:
 

@@ -47,9 +47,9 @@ Encode and decode the string `TATTARRATTAT` using the **Lempel–Ziv–Welch** a
 
 Generate the **Huffman code** (incl. code tree) for the following 8 symbols:
 
-| Symbol | A    | R    | Y    | O    | S    | T    | X    | U    |
-|--------|------|------|------|------|------|------|------|------|
-| Prob   | 30.1 | 17.5 | 21.5 | 14.9 | 9.3  | 2.2  | 2.3  | 2.2  |
+| Symbol | A    | R    | Y    | O    | S   | T   | X   | U   |
+| ------ | ---- | ---- | ---- | ---- | --- | --- | --- | --- |
+| Prob   | 30.1 | 17.5 | 21.5 | 14.9 | 9.3 | 2.2 | 2.3 | 2.2 |
 
 (Probabilities are in %; sum = 100%.)
 

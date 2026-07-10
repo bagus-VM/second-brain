@@ -46,6 +46,7 @@ Despite the **absolute** cone responses being very different (more L-cone stimul
 - [[cie-chromaticity-diagram]] — CIE defines standard illuminants (D50, D65, etc.) to account for chromatic adaptation in color measurement
 - [[lab-color-space]] — CIE L*a*b* includes chromatic adaptation to D50 for perceptual uniformity across viewing conditions
 - [[sensory-gap]] — Chromatic adaptation helps close the sensory gap by maintaining stable perception despite varying capture conditions
+- [[multimedia-databases-lecture-02]] — Source lecture: Color Models (perception, color spaces, metamerism, adaptation)
 
 ## Open Questions
 - How do computational color constancy algorithms model chromatic adaptation for image processing?

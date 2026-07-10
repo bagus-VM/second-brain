@@ -52,6 +52,7 @@ Two shirts appear identical under fluorescent store lighting (same cone response
 - [[rgb-color-model]] — Displays create metamers of real-world colors using RGB primaries
 - [[color-gamut]] — Different devices have different gamuts, so they can create different sets of metamers
 - [[sensory-gap]] — Metamerism contributes to the sensory gap: device-captured colors are metamers of real-world colors, not perfect reproductions
+- [[multimedia-databases-lecture-02]] — Source lecture: Color Models (perception, color spaces, metamerism, adaptation)
 
 ## Open Questions
 - How do color management systems (ICC profiles) handle metameric mismatches across devices?

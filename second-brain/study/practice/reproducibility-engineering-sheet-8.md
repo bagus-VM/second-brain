@@ -1,368 +1,290 @@
 ---
-title: "Exercise Sheet 8 — Hierarchical Data"
-tags:
-  - practice
-  - reproducibility-engineering
-  - semester-1
+title: "Exercise Sheet 8: Tidy Data with DuckDB"
+tags: [practice, reproducibility-engineering, semester-1]
 course: "Reproducibility Engineering"
 status: current
-last_updated: 2026-06-25
+last_updated: 2026-07-08
 ---
 
-# Exercise Sheet 8 — Hierarchical Data
+# Exercise Sheet 8: Tidy Data with DuckDB
 
 ## Exercises
 
-### Q1 Relational vs XML vs JSON
+### Q1 DuckDB Setup
 
-Fill in the comparison table for the three data formats.
-
-<details>
-<summary>Solution</summary>
-
-| Aspect | Relational | XML | JSON |
-|---|---|---|---|
-| Structure | Schema-based tables (rows and columns) | Hierarchical tree of elements | Nested key-value pairs (objects and arrays) |
-| Schema | Strict, predefined (DDL) | DTD or XSD | None by default (optional JSON Schema) |
-| Queries | SQL | XPath, XQuery | No standard query language |
-| Ordering | No inherent row order | Document order matters | No object order (array order matters) |
-| Implementation | RDBMS with a query engine | XML parsers (DOM, SAX) | JSON parsers (built into most languages) |
-
-Relational data is flat and rigid. XML and JSON are hierarchical and self-describing. JSON carries no schema unless you add one, which is why JSON Schema exists.
-
-</details>
-
-### Q2 JSON Structural Equivalence
-
-Consider the two JSON instances below.
-
-Left:
-```json
-{
-    "productId": 1,
-    "productName": "A green door",
-    "price": 12.50,
-    "tags": [ "home", "green" ]
-}
-```
-
-Right:
-```json
-{
-    "productId": 1,
-    "productName": "A green door",
-    "tags": [ "green", "home" ],
-    "price": 12.50
-}
-```
-
-Are they structurally equivalent?
+DuckDB is an embedded column-oriented OLAP database. Set up a Docker container to run DuckDB and load a CSV file.
 
 <details>
 <summary>Solution</summary>
 
-**Yes, they are structurally equivalent.** JSON is an unordered data format. The order of properties inside an object does not matter, so swapping `price` and `tags` changes nothing. A plain text `diff` will flag the lines as different, but that is a syntactic difference, not a structural one.
+DuckDB runs as an embedded process, meaning there is no separate server. The simplest way to use it in a reproducible environment is a Docker container:
 
-The order of array items does matter. In these two instances the `tags` arrays are `["home", "green"]` and `["green", "home"]`. For strict structural equivalence you would also need the array contents to match in order. The exercise focuses on the object-property ordering, and the intended answer is: yes, because JSON is unordered.
-
-</details>
-
-### Q3 Schema Validation Data Flow
-
-Label the chart that illustrates the data flow in schema validation.
-
-<details>
-<summary>Solution</summary>
-
-The flow has four parts:
-
-1. **Instance** (input): the JSON document being checked.
-2. **Schema** (input): the JSON Schema that defines the expected structure.
-3. **Validator** (process): the tool that checks the instance against the schema.
-4. **Result** (output): `valid` if the instance matches the schema, `invalid` otherwise.
-
+```bash
+docker run --rm -it -v $(pwd):/data duckdb/duckdb:latest
 ```
-Instance ─┐
-          ├─→ Validator ─→ valid / invalid
-Schema  ──┘
+
+This mounts your working directory into the container at `/data`. Once inside the DuckDB shell, load a CSV:
+
+```sql
+INSTALL csv;
+LOAD csv;
+CREATE TABLE tb AS SELECT * FROM read_csv_auto('/data/tb.csv');
+```
+
+DuckDB auto-detects column types with `read_csv_auto`. For reproducibility, you can also specify the schema explicitly to avoid type inference drift across versions:
+
+```sql
+CREATE TABLE tb AS SELECT * FROM read_csv('/data/tb.csv',
+    header=true,
+    columns={
+        'country': 'VARCHAR',
+        'year': 'INTEGER',
+        'cases': 'INTEGER',
+        'population': 'INTEGER'
+    }
+);
 ```
 
 </details>
 
-### Q4 Benefits of JSON Schema Validation
+### Q2 Tidy Data Principles
 
-What are the benefits of validating JSON instances against a JSON Schema?
+State the three tidy data principles from Wickham.
 
 <details>
 <summary>Solution</summary>
 
-- **Catch errors early**: invalid data is rejected before it reaches downstream code, so a missing field or wrong type fails fast instead of causing a silent bug.
-- **Machine-readable**: unlike a README, a schema can be checked automatically. You can run validation in tests and CI pipelines.
-- **API contracts**: a published schema documents what a service accepts and returns. Clients and servers agree on the structure.
-- **Reproducibility**: when an experiment outputs JSON, a schema pins the data format. A schema violation is a concrete bug, not a vague "the data looks wrong".
+Wickham's tidy data principles:
+
+1. **Each variable forms a column.** A variable is something you measure or record, like "cases" or "population". If a column header contains values (like years 1999, 2000), those are not variable names and the data is untidy.
+2. **Each observation forms a row.** An observation is one unit of analysis, like one country in one year. All values for that observation belong in a single row.
+3. **Each value forms a cell.** Every cell contains exactly one value. No cell should hold a compound string like "745/19987071" that encodes two values.
+
+These principles make data easier to manipulate, analyze, and feed into statistical tools. Most tools expect tidy data as input.
 
 </details>
 
-### Q5 Schema Validity
+### Q3 Identifying Untidy Data
 
-Given the product schema below, decide which statements about instance validity are true.
-
-```json
-{
-    "title": "Product",
-    "description": "A product from Acme's catalog",
-    "type": "object",
-    "properties": {
-        "productId": { "description": "The unique identifier for a product", "type": "integer" },
-        "productName": { "description": "Name of the product", "type": "string" },
-        "price": { "description": "The price of the product", "type": "number", "exclusiveMinimum": 0 },
-        "tags": { "description": "Tags for the product", "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true }
-    },
-    "required": [ "productId", "productName", "price" ]
-}
-```
+Consider the WHO tuberculosis dataset where columns are `country`, `year`, and pairs of columns like `m014`, `m1524`, `m2534`, `f014`, `f1524`, etc. Is this tidy? Why or why not?
 
 <details>
 <summary>Solution</summary>
 
-Work through the schema line by line. Lines 1 to 3 are just `title` and `description`, so they add no constraints. Line 4 adds `"type": "object"`. Lines 5 to 28 define `properties` (but properties are optional unless listed in `required`). Line 29 adds the `required` list: `productId`, `productName`, `price`. Note that `additionalProperties` is not set to `false`, so extra keys are allowed. JSON is case-sensitive, so `"ProductName"` is a different key from `"productName"`.
+**No, this is not tidy.** The column names `m014`, `m1524`, `m2534`, `f014`, `f1524` encode two variables: sex (`m`/`f`) and age group (`014`, `1524`, `2534`). The column headers contain values, not variable names.
 
-| Instance | Valid? | Reason |
-|---|---|---|
-| Left instance from Q2 (`productId` 1, `productName` "A green door", `price` 12.50, `tags` ["home", "green"]) | Yes (full schema) | All required fields present with correct types. `price` > 0. `tags` has 2 unique strings, satisfies `minItems` 1. |
-| `"Hello world!"`, valid up to line 3 | Yes | No constraints yet. |
-| `"Hello world!"`, valid up to line 4 | No | Line 4 requires `type: "object"`. A string is not an object. |
-| Left instance from Q2, valid up to line 4 | Yes | It is an object. |
-| `{ "foo": 42 }`, valid up to line 28 | Yes | It is an object. No `required` yet, and `foo` is an allowed additional property. |
-| `{ "ProductName": 42 }`, valid up to line 28 | Yes | Object with an additional property. `productName` is not required until line 29. |
-| `{ "ProductName": 42 }`, valid for the full schema | No | `productName` (lowercase) is required at line 29 and is missing. The capitalised `ProductName` does not satisfy it. |
-| Left instance from Q2, valid for the full schema | Yes | Passes every constraint. |
-| `tags: [ ]` (empty array) | No | `minItems: 1` fails. |
-| `tags: [ "special offer", "special offer" ]` | No | `uniqueItems: true` fails (duplicate values). |
-| Instance with an extra `discount: 0.1` | Yes | `additionalProperties` is not `false`, so extra keys are allowed. All required fields and constraints still pass. |
+To tidy this, you need to unpivot these columns into two new columns: `sex` and `age_group`, with a third column holding the count. The tidy form has columns `country`, `year`, `sex`, `age_group`, `cases`.
 
 </details>
 
-### Q6 allOf
+### Q4 Pivoting Columns to Rows (UNPIVOT)
 
-Schema:
-```json
-{
-    "allOf": [
-      { "type": "string" },
-      { "maxLength": 5 }
-    ]
-}
-```
-
-Which instances are valid: `"foo"`, `"a"`, `"1234567890"`, `42`?
+Given the untidy WHO data from Q3, use DuckDB's `UNPIVOT` to convert the sex-age columns into rows.
 
 <details>
 <summary>Solution</summary>
 
-`allOf` requires the instance to satisfy **all** subschemas.
+```sql
+SELECT * FROM who_tb
+UNPIVOT (
+    cases FOR sex_age IN ("m014", "m1524", "m2534", "f014", "f1524", "f2534")
+);
+```
 
-- `"foo"`: is a string and has length 3 ≤ 5. Valid.
-- `"a"`: is a string and has length 1 ≤ 5. Valid.
-- `"1234567890"`: is a string but has length 10 > 5. Fails `maxLength`. Invalid.
-- `42`: is not a string. Fails `{ "type": "string" }`. Invalid.
-
-**Valid:** `"foo"`, `"a"`. **Invalid:** `"1234567890"`, `42`.
+This produces one row per country-year-sex_age combination, with a `cases` column holding the counts. The `sex_age` column still encodes two variables in one string, so you would split it next (see Q6).
 
 </details>
 
-### Q7 anyOf
+### Q5 Pivoting Columns to Rows Without UNPIVOT
 
-Schema:
-```json
-{
-    "anyOf": [
-      { "type": "string" },
-      { "maxLength": 5 }
-    ]
-}
-```
-
-Which instances are valid: `"foo"`, `"a"`, `"1234567890"`, `42`?
+Perform the same unpivot operation without using DuckDB's `UNPIVOT` keyword.
 
 <details>
 <summary>Solution</summary>
 
-`anyOf` requires the instance to satisfy **at least one** subschema.
+Without `UNPIVOT`, use `UNION ALL` to stack each column into rows:
 
-- `"foo"`: is a string. Satisfies the first subschema. Valid.
-- `"a"`: is a string. Satisfies the first subschema. Valid.
-- `"1234567890"`: is a string. Satisfies the first subschema (it does not need to satisfy `maxLength`). Valid.
-- `42`: is not a string, so it fails `{ "type": "string" }`. The exercise treats `maxLength` as a string-length constraint, so a number does not satisfy `{ "maxLength": 5 }` either. Invalid.
+```sql
+SELECT country, year, 'm014' AS sex_age, m014 AS cases FROM who_tb
+UNION ALL
+SELECT country, year, 'm1524' AS sex_age, m1524 AS cases FROM who_tb
+UNION ALL
+SELECT country, year, 'm2534' AS sex_age, m2534 AS cases FROM who_tb
+UNION ALL
+SELECT country, year, 'f014' AS sex_age, f014 AS cases FROM who_tb
+UNION ALL
+SELECT country, year, 'f1524' AS sex_age, f1524 AS cases FROM who_tb
+UNION ALL
+SELECT country, year, 'f2534' AS sex_age, f2534 AS cases FROM who_tb;
+```
 
-**Valid:** `"foo"`, `"a"`, `"1234567890"`. **Invalid:** `42`.
-
-Note on the spec: strictly, JSON Schema ignores string-only keywords like `maxLength` for non-string instances, so `{ "maxLength": 5 }` alone would accept a number. The exercise frames `maxLength` as a string constraint, which is why `42` is treated as invalid here.
+Each `UNION ALL` branch selects one of the original columns and assigns its name to a new `sex_age` column. This is the manual approach that `UNPIVOT` automates.
 
 </details>
 
-### Q8 oneOf
+### Q6 Pivoting Rows to Columns (PIVOT)
 
-Schema:
-```json
-{
-    "oneOf": [
-      { "type": "string" },
-      { "maxLength": 5 }
-    ]
-}
-```
-
-Which instances are valid: `"foo"`, `"a"`, `"1234567890"`, `42`?
+Given tidy data with columns `country`, `year`, `sex`, `cases`, pivot the `sex` values into separate columns.
 
 <details>
 <summary>Solution</summary>
 
-`oneOf` requires the instance to satisfy **exactly one** subschema. If an instance matches zero or matches more than one, it is invalid.
+```sql
+SELECT * FROM tidy_tb
+PIVOT (
+    SUM(cases) FOR sex IN ('m', 'f')
+);
+```
 
-- `"foo"`: is a string (matches subschema 1) and has length 3 ≤ 5 (matches subschema 2). Matches **both**. Invalid.
-- `"a"`: is a string (matches subschema 1) and has length 1 ≤ 5 (matches subschema 2). Matches **both**. Invalid.
-- `"1234567890"`: is a string (matches subschema 1) but has length 10 > 5 (does not match subschema 2). Matches **exactly one**. Valid.
-- `42`: is not a string (fails subschema 1) and, under the exercise's string-length framing, does not satisfy `maxLength` (fails subschema 2). Matches **zero**. Invalid.
-
-**Valid:** `"1234567890"`. **Invalid:** `"foo"`, `"a"`, `42`.
-
-The trap here is the overlap between the two subschemas. Short strings satisfy both `{ "type": "string" }` and `{ "maxLength": 5 }`, so `oneOf` rejects them. Only a string that is too long for `maxLength` lands in exactly one subschema.
+This produces columns `country`, `year`, `m`, `f` where `m` and `f` hold the case counts for male and female respectively.
 
 </details>
 
-### Q9 Schema Equivalence
+### Q7 Pivoting Rows to Columns Without PIVOT
 
-Compare the two schemas:
-
-Left:
-```json
-{ "oneOf": [ { "type": "string" }, { "type": "integer" } ] }
-```
-
-Right:
-```json
-{ "anyOf": [ { "type": "integer" }, { "type": "string" } ] }
-```
-
-Which statements are true?
+Perform the same pivot without using DuckDB's `PIVOT` keyword.
 
 <details>
 <summary>Solution</summary>
 
-- "There exists a JSON instance valid for the right schema but not the left": **false**. Both schemas accept exactly the integers and the strings.
-- "The schemas are structurally equivalent": **false**. The left uses `oneOf`, the right uses `anyOf`, and the subschema order differs.
-- "The schemas are semantically equivalent": **true**. A value can never be both a string and an integer at once, so matching "at least one" and matching "exactly one" accept the same instances.
-- "None of these options": **false**.
+Use `CASE` with aggregation:
 
-**Answer:** the schemas are semantically equivalent but not structurally equivalent. `oneOf` and `anyOf` collapse to the same language whenever the subschemas describe disjoint types.
+```sql
+SELECT
+    country,
+    year,
+    SUM(CASE WHEN sex = 'm' THEN cases ELSE 0 END) AS m,
+    SUM(CASE WHEN sex = 'f' THEN cases ELSE 0 END) AS f
+FROM tidy_tb
+GROUP BY country, year;
+```
+
+The `CASE` expression filters rows by sex, and `SUM` aggregates the cases into a single value per group. This is the standard pre-`PIVOT` approach and works in any SQL dialect.
 
 </details>
 
-### Q10 HDF5 vs XML vs JSON
+### Q8 Splitting a Column
 
-When would you prefer HDF5 over XML or JSON, and when not?
+A `rate` column contains values like `745/19987071` (cases/population). Split this into two numeric columns: `cases` and `population`.
 
 <details>
 <summary>Solution</summary>
 
-**Prefer HDF5 for:**
-- Large numerical arrays, especially multi-dimensional ones (climate grids, detector reads, image volumes).
-- Scientific data with rich metadata that belongs in a hierarchy (groups for components, datasets for variables, attributes for units and provenance).
-- Datasets that need chunking, compression, or parallel I/O for efficient partial reads.
+```sql
+SELECT
+    country,
+    year,
+    CAST(SPLIT_PART(rate, '/', 1) AS INTEGER) AS cases,
+    CAST(SPLIT_PART(rate, '/', 2) AS INTEGER) AS population
+FROM tb_with_rate;
+```
 
-**Prefer XML or JSON for:**
-- Human-readable data that people will inspect or edit by hand.
-- Web APIs and configuration files, where text-based tools and broad language support matter.
-- Small to medium structured records exchanged between systems.
+`SPLIT_PART(rate, '/', 1)` extracts the part before the slash, and `SPLIT_PART(rate, '/', 2)` extracts the part after. The result is cast to integer.
 
-HDF5 is binary and compact but opaque to text tools. XML and JSON are readable and universal but inefficient for large numerical arrays. Pick the format that matches the data shape and the workflow.
+The original `rate` column violates the tidy data principle that each cell holds one value. Splitting it fixes that.
 
 </details>
 
-### Q11 Weather Station Data in HDF5
+### Q9 Concatenating Columns
 
-Temperature, wind, and metadata are collected from two weather stations and stored as CSV.
-
-(a) What are the benefits and drawbacks of the tabular layout?
-(b) Store the data in HDF5 with the structure below, completing the h5py code.
-
-```
-/
-+-- 15
-|   +-- temperature
-|   +-- wind
-|
-+-- 20
-    +-- temperature
-```
+Given `century` (e.g. `19`) and `year_within_century` (e.g. `99`), concatenate them back into a `year` column (e.g. `1999`).
 
 <details>
 <summary>Solution</summary>
 
-**(a) Benefits and drawbacks of the tabular CSV layout**
-
-Benefits:
-- Simple and human-readable. Any spreadsheet or text tool can open it.
-- Easy to inspect and diff.
-
-Drawbacks:
-- Three separate tables (temperature, wind, metadata) must be joined on `station` and `time`. The hierarchy is implicit, not structural.
-- Metadata sits in a long key-value table, which is awkward to query and easy to ignore.
-- Mixed units across stations (Celsius vs Fahrenheit) live only in the metadata table, so a careless reader can misread a value.
-- No type information, no compression, no partial I/O. Reading one station's temperature still scans the whole file.
-
-**(b) Completed h5py code**
-
-```python
-import numpy as np
-import h5py
-
-def main():
-    # Keeping things very simple here.
-    temperature_station_15 = np.array([18.2, 18.4, 18.7, 19.0, 19.1])
-    wind_station_15 = np.array([3.1, 3.3, 2.8, 4.0, 3.7])
-    temperature_station_20 = np.array([64.0, 65.0, 66.1, 65.8])
-    start_time = 0  # Should be a proper timestamp.
-
-    with h5py.File("weather.hdf5", "w") as f:
-
-        # Store data for weather station 15.
-        # h5py creates the intermediate group "/15" automatically.
-        f["/15/temperature"] = temperature_station_15
-        f["/15/temperature"].attrs["delta"] = 5.0
-        f["/15/temperature"].attrs["start time"] = start_time
-        f["/15/temperature"].attrs["temp unit"] = "degree Celsius"
-
-        f["/15/wind"] = wind_station_15
-        f["/15/wind"].attrs["delta"] = 5.0
-        f["/15/wind"].attrs["start time"] = start_time
-        f["/15/wind"].attrs["wind unit"] = "m/s"
-
-        # Store data for weather station 20.
-        f["/20/temperature"] = temperature_station_20
-        f["/20/temperature"].attrs["delta"] = 10.0
-        f["/20/temperature"].attrs["start time"] = start_time
-        f["/20/temperature"].attrs["temp unit"] = "degree Fahrenheit"
-
-        f.attrs["description"] = "Weather station data (temperature and wind)"
-
-if __name__ == "__main__":
-    main()
+```sql
+SELECT
+    country,
+    CAST(century || year_within_century AS INTEGER) AS year,
+    cases
+FROM tb_split;
 ```
 
-The hierarchy mirrors the physical setup: one group per station, one dataset per measurement, and attributes carrying `delta`, `start time`, and the unit. Units now travel with the data, so station 20's Fahrenheit values cannot be confused with station 15's Celsius values. The single self-describing file replaces three loosely coupled CSV tables.
+The `||` operator concatenates strings. If `century` and `year_within_century` are integers, cast them to strings first:
+
+```sql
+SELECT
+    country,
+    CAST(CAST(century AS VARCHAR) || LPAD(CAST(year_within_century AS VARCHAR), 2, '0') AS INTEGER) AS year,
+    cases
+FROM tb_split;
+```
+
+`LPAD` ensures single-digit years within a century are zero-padded (`9` becomes `09`, so `19` and `09` give `1909`, not `199`).
+
+</details>
+
+### Q10 Case Study: WHO Tuberculosis Data
+
+The WHO tuberculosis dataset has columns `country`, `year`, `m014`, `m1524`, `m2534`, `f014`, `f1524`, `f2534`, etc. Transform it into tidy form.
+
+<details>
+<summary>Solution</summary>
+
+Step 1: Unpivot all sex-age columns into rows:
+
+```sql
+CREATE TABLE tb_long AS
+SELECT * FROM who_tb
+UNPIVOT (
+    cases FOR sex_age IN ("m014", "m1524", "m2534", "f014", "f1524", "f2534")
+);
+```
+
+Step 2: Split `sex_age` into `sex` and `age_group`:
+
+```sql
+CREATE TABLE tb_tidy AS
+SELECT
+    country,
+    year,
+    LEFT(sex_age, 1) AS sex,
+    SUBSTRING(sex_age, 2) AS age_group,
+    cases
+FROM tb_long;
+```
+
+Step 3 (optional): If a `rate` column like `745/19987071` exists, split it:
+
+```sql
+SELECT
+    country,
+    year,
+    sex,
+    age_group,
+    CAST(SPLIT_PART(rate, '/', 1) AS INTEGER) AS cases,
+    CAST(SPLIT_PART(rate, '/', 2) AS INTEGER) AS population
+FROM tb_long_with_rate;
+```
+
+The final tidy table has columns: `country`, `year`, `sex`, `age_group`, `cases` (and optionally `population`). Each row is one observation. Each column is one variable. Each cell is one value.
+
+</details>
+
+### Q11 Tidy Data and Reproducibility
+
+Why does tidy data matter for reproducibility?
+
+<details>
+<summary>Solution</summary>
+
+Tidy data follows a consistent structure, so analysis scripts are simpler and less error-prone. When every column is a variable and every row is an observation, the same code works across datasets without manual adjustment. This consistency makes analysis pipelines reproducible.
+
+Untidy data invites ad-hoc transformations that are hard to document and easy to get wrong. A column named `m014` that encodes sex and age is ambiguous. A script that hard-codes column names breaks when the data changes. Tidy data makes the data structure explicit and the transformations systematic.
 
 </details>
 
 ## Key Takeaways
-- Relational data is flat and schema-strict. XML and JSON are hierarchical and self-describing. JSON has no schema unless you add JSON Schema.
-- JSON objects are unordered, so property order does not affect structural equivalence. Array order does matter.
-- JSON Schema combinators compose subschemas: `allOf` (all must match), `anyOf` (at least one), `oneOf` (exactly one). Watch for overlapping subschemas with `oneOf`.
-- `oneOf` and `anyOf` over disjoint types are semantically equivalent even when structurally different.
-- Pick HDF5 for large numerical arrays and metadata-rich scientific hierarchies. Pick XML or JSON for readable, text-tool-friendly data and APIs.
+
+- DuckDB is an embedded column-oriented OLAP database that runs in a Docker container with no separate server.
+- Tidy data: each variable is a column, each observation is a row, each value is a cell.
+- `PIVOT` converts rows to columns; `UNPIVOT` converts columns to rows. Both can be done manually with `CASE`/`SUM` and `UNION ALL` respectively.
+- Compound columns (like `745/19987071` or `m014`) violate tidy data and must be split.
+- Concatenation with `||` recombines split columns, but watch for zero-padding with `LPAD`.
+- Tidy data makes analysis scripts simpler and more reproducible.
 
 ## Related Vault Pages
-- [[json-schema]] — the validation vocabulary used in Q3 to Q9
-- [[hdf5]] — the hierarchical format used in Q11
-- [[reproducibility-engineering-lecture-8]] — the lecture this sheet accompanies
+
+- [[tidy-data]]: the principles behind this sheet's exercises
+- [[reproducibility-engineering-lecture-6]]: the lecture covering tidy data concepts
+- [[provenance-in-reproducibility]]: tidy data simplifies provenance tracking

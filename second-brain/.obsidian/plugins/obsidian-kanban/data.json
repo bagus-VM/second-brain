@@ -1,3 +1,4 @@
 {
-  "show-relative-date": true
+  "show-relative-date": true,
+  "show-checkboxes": false
 }

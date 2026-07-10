@@ -74,6 +74,7 @@ LZ77: 5 tokens with small values → significantly fewer bits
 - [[entropy-coding-huffman-arithmetic]] — Deflate (gzip) combines LZ77 with Huffman coding
 - [[run-length-encoding]] — RLE is simpler but less general than dictionary-based methods
 - [[ascii-unicode-character-encoding]] — dictionary-based methods operate on byte/character sequences
+- [[multimedia-databases-lecture-05]] — Source lecture: Coding and Compression (RLE → entropy → transform → JPEG → video)
 
 ## Open Questions
 - How do modern LZ variants (LZ4, Zstandard, Brotli) compare in speed vs. compression ratio?

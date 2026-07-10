@@ -4,39 +4,77 @@
     "type": "split",
     "children": [
       {
-        "id": "70af18396157792b",
+        "id": "f430a3ac6cd64f77",
         "type": "tabs",
         "children": [
           {
-            "id": "d83f685b4ba8fb33",
+            "id": "3ea458dafa742a28",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-04.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_9___LLMs.pdf",
+                "page": 1,
+                "left": -14,
+                "top": 846,
+                "zoom": 1.1162889147219106
               },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-04"
+              "icon": "lucide-file-text",
+              "title": "SoSe_2026_RepEng_IC_9___LLMs"
             }
           },
           {
-            "id": "33792c4b1191ae5d",
+            "id": "f2f62dd103947d26",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-06.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
+                "page": 5,
+                "left": -14,
+                "top": 77,
+                "zoom": 1.1162889147219106
               },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-06"
+              "icon": "lucide-file-text",
+              "title": "SoSe_2026_RepEng_IC_8___Hierarchical_Data"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "0427755730771adb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2115594d2935fc26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/topics/reproducibility-engineering-lecture-8.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reproducibility-engineering-lecture-8"
+            }
+          },
+          {
+            "id": "ef6345da0e2f894a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/topics/reproducibility-engineering-lecture-9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "reproducibility-engineering-lecture-9"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +131,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 383.5,
+    "collapsed": true
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -180,44 +219,44 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "33792c4b1191ae5d",
+  "active": "f2f62dd103947d26",
   "lastOpenFiles": [
-    "vault/concepts/path-profiling.md",
-    "vault/concepts/gdpr-compliance.md",
-    "vault/concepts/dynamic-analysis.md",
-    "vault/concepts/defense-in-depth.md",
-    "vault/concepts/pki.md",
-    "vault/concepts/program-traces.md",
-    "vault/concepts/debugging.md",
-    "vault/concepts/testing.md",
-    "vault/concepts/test-generation.md",
-    "vault/concepts/binary-search.md",
-    "vault/concepts/design-patterns.md",
-    "vault/concepts/iot-security-overview.md",
-    "vault/concepts/object-oriented-programming.md",
-    "vault/topics/software-analyse-lecture-9.md",
-    "vault/topics/software-analyse-lecture-10.md",
-    "vault/topics/iot-lecture-8.md",
-    "vault/concepts/symbolic-execution.md",
-    "vault/concepts/fault-localization.md",
-    "vault/concepts/delta-debugging.md",
-    "vault/concepts/concolic-execution.md",
-    "vault/concepts/aspect-oriented-programming.md",
-    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis_JupyterNotebookExport.pdf",
-    "raw/lectures/software_analyse/Vorlesung/9_Dynamic_Analysis.pdf",
-    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution_JupyterNotebookExport.pdf",
-    "raw/lectures/software_analyse/Vorlesung/10_DynamicSymbolicExecution.pdf",
-    "raw/lectures/iot_security/IoTsec8_2026.pdf",
-    "vault/concepts/mpeg-7-descriptors.md",
-    "vault/topics/multimedia-databases-lecture-06.md",
+    "vault/topics/reproducibility-engineering-lecture-8.md",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
+    "vault/concepts/weighted-summer.md",
+    "vault/concepts/voltage-follower.md",
+    "vault/concepts/sram-cell.md",
+    "vault/concepts/opamp-differentiator.md",
+    "vault/concepts/flash-memory.md",
+    "vault/concepts/dram-cell.md",
+    "vault/concepts/sense-amplifier.md",
+    "vault/concepts/opamp-integrator.md",
+    "vault/topics/microelectronics-lecture-9.md",
+    "study/practice/reproducibility-engineering-sheet-10.md",
+    "vault/concepts/artifact-packaging.md",
+    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQPolite_Reference_Project.url",
+    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQLite_Walkthrough.pdf",
+    "raw/lectures/introduction_to_microelectronics/Microelectronics9_2026.pdf",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_9___LLMs.pdf",
+    "vault/topics/reproducibility-engineering-lecture-9.md",
+    "Untitled 3.base",
+    "Untitled 2.base",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
+    "vault/topics/iot-lecture-9.md",
+    "study/practice/mmdb-ex09.md",
+    "vault/concepts/jpeg-compression-pipeline.md",
+    "vault/concepts/entropy-coding-huffman-arithmetic.md",
+    "vault/concepts/lossless-vs-lossy-compression.md",
+    "vault/topics/multimedia-databases-lecture-05.md",
+    "vault/concepts/run-length-encoding.md",
+    "vault/concepts/lz77-lzw-compression.md",
+    "Pasted image 20260708123921.png",
+    "vault/concepts/h264-avc-video-compression.md",
+    "study/practice/mmdb-ex06.md",
+    "study/practice/mmdb-ex08.md",
     "vault/topics/multimedia-databases-lecture-07.md",
-    "vault/concepts/cbir-systems-evaluation.md",
-    "vault/concepts/quadtree-and-kd-tree.md",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex09.rnote",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex05.rnote",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex04.rnote",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",
@@ -226,7 +265,6 @@
     "Pasted image 20260623142244.png",
     "projects/reproducibility-engineering/RepEng/LabSession7/benchbase/scripts/anonymization/architecture.png",
     "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/up.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif",
-    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/sort.gif"
+    "projects/software-analyse/ss26sareadability-practice-putra01/target/site/jacoco-ut/jacoco-resources/source.gif"
   ]
 }
