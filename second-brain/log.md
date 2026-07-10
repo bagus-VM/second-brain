@@ -405,3 +405,19 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 - `courses/multimedia-databases.md` — added exam format line
 
 **Strategy shift:** Practice files (`study/practice/mmdb-ex01..09.md`) are now the primary study material. 12 days to exam.
+
+## [2026-07-10] INGEST | New lecture sheets (Microelectronics L09, RepEng Sheet 10, SQLite Walkthrough)
+- Created: vault/topics/microelectronics-lecture-9.md (OpAmp integrators/differentiators, voltage adder, voltage follower, SRAM/DRAM/ROM/Flash)
+- Created: vault/concepts/opamp-integrator.md
+- Created: vault/concepts/opamp-differentiator.md
+- Created: vault/concepts/weighted-summer.md
+- Created: vault/concepts/voltage-follower.md
+- Created: vault/concepts/sram-cell.md
+- Created: vault/concepts/dram-cell.md
+- Created: vault/concepts/sense-amplifier.md
+- Created: vault/concepts/flash-memory.md
+- Created: vault/concepts/artifact-packaging.md (from SQLite Walkthrough supplement)
+- Created: study/practice/reproducibility-engineering-sheet-10.md (Docker secrets, LLM reproducibility, structured outputs)
+- Updated: vault/topics/reproducibility-engineering-lecture-8.md (added artifact-packaging cross-link, source count 1→2)
+- Updated: index.md (added Microelectronics section, RepEng Sheet 10, artifact-packaging)
+- Total: 11 new pages created, 2 existing pages updated

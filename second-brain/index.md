@@ -2,8 +2,8 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-07-08
-**Total pages:** 645 (vault + study; excluding raw/)
+**Last updated:** 2026-07-10
+**Total pages:** 656 (vault + study; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -13,10 +13,10 @@
 |--------|-----------|-----------|----------|
 | [[multimedia-databases]] | 21 July 2026 | ~13 | **9/9 lectures ✅** + Ex01–Ex09 practice complete ✅ (100+ pages) |
 | [[network-science]] | 28 July 2026 | ~20 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **9/9 lectures ✅** + Sheet 1–9 (66+ pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **9/9 lectures ✅** + Sheet 1–10 (75+ pages) |
 | [[software-analyse]] | 31 July 2026 | ~23 | **11/11 lectures ✅** (100+ pages) |
 | [[iot-security]] | 05 Aug 2026 | ~27 | **9/9 lectures ✅** (~80 pages) + 3 papers ingested |
-| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~28 | **8/8 lectures ✅** (~55 pages) |
+| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~28 | **9/9 lectures ✅** (~65 pages) |
 
 ---
 
@@ -165,8 +165,11 @@
 | [[video-hierarchy-shots-scenes]] | Digital video is hierarchically structured from frames (atomic units) through sh | current |
 | [[video-summarization-key-frames]] | Video summarization creates a concise overview of video content using key frames | current |
 | [[xml-structured-text]] | XML (Extensible Markup Language) is a platform-independent, ==self-describing ma | current |
+| [[artifact-packaging]] | Packaging research artifacts for reproducibility: fork+patches, Docker, doall.sh | current |
+
 ### Practice & Flashcards
 | Page | Summary | Status |
+| [[reproducibility-engineering-sheet-10]] | Exercise Sheet 10: Docker secrets, LLM reproducibility (temperature/seed), structured outputs | current |
 |------|---------|--------|
 | [[mmdb-ex01]] | Exercise sheet 1: multimedia fundamentals | current |
 | [[mmdb-ex02]] | Exercise sheet 2: color models | current |
@@ -498,3 +501,18 @@
 | [[vistrails]] | VisTrails is a scientific workflow management system that provides integrated pr | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
+
+## 📚 Introduction to Microelectronics (65 pages)
+
+### L09 — Integrators, Differentiators & Memories
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-9]] | OpAmp integrators/differentiators, voltage adder, voltage follower, SRAM/DRAM/ROM/Flash | current |
+| [[opamp-integrator]] | Inverting amplifier with capacitor feedback: Vout = -(1/RC) ∫ Vin dt | current |
+| [[opamp-differentiator]] | Inverting amplifier with capacitor input: Vout = -RC dVin/dt | current |
+| [[weighted-summer]] | Multiple inputs summed through resistors: Vout = -Rf × Σ(Vi/Ri) | current |
+| [[voltage-follower]] | Unity-gain buffer for impedance transformation (gain = 1) | current |
+| [[sram-cell]] | 6-transistor bistable latch: fast, volatile, used for caches | current |
+| [[dram-cell]] | 1-transistor + 1-capacitor: dense, volatile, needs refresh | current |
+| [[sense-amplifier]] | Detects tiny voltage differences on memory bit lines | current |
+| [[flash-memory]] | Floating gate transistor: non-volatile, block-erasable, limited endurance | current |
