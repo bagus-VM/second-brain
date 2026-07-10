@@ -3,7 +3,7 @@
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
 **Last updated:** 2026-07-10
-**Total pages:** 656 (vault + study; excluding raw/)
+**Total pages:** 657 (vault + study; excluding raw/)
 **Active courses:** 6
 
 ---
@@ -13,7 +13,7 @@
 |--------|-----------|-----------|----------|
 | [[multimedia-databases]] | 21 July 2026 | ~13 | **9/9 lectures ✅** + Ex01–Ex09 practice complete ✅ (100+ pages) |
 | [[network-science]] | 28 July 2026 | ~20 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **9/9 lectures ✅** + Sheet 1–10 (75+ pages) |
+| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **10/10 lectures ✅** + Sheet 1–10 (80+ pages) |
 | [[software-analyse]] | 31 July 2026 | ~23 | **11/11 lectures ✅** (100+ pages) |
 | [[iot-security]] | 05 Aug 2026 | ~27 | **9/9 lectures ✅** (~80 pages) + 3 papers ingested |
 | [[introduction-to-microelectronics]] | 06 Aug 2026 | ~28 | **9/9 lectures ✅** (~65 pages) |
@@ -165,7 +165,6 @@
 | [[video-hierarchy-shots-scenes]] | Digital video is hierarchically structured from frames (atomic units) through sh | current |
 | [[video-summarization-key-frames]] | Video summarization creates a concise overview of video content using key frames | current |
 | [[xml-structured-text]] | XML (Extensible Markup Language) is a platform-independent, ==self-describing ma | current |
-| [[artifact-packaging]] | Packaging research artifacts for reproducibility: fork+patches, Docker, doall.sh | current |
 
 ### Practice & Flashcards
 | Page | Summary | Status |
@@ -471,9 +470,19 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[reproducibility-engineering-lecture-8]] | XML/JSON, JSON Schema, HDF5, h5py, visitor pattern | current |
-| [[reproducibility-engineering-lecture-9]] | LLMs and reproducibility: local vs remote, structured outputs, constrained decoding, JSON Schema | current |
 | [[hdf5]] | Hierarchical data format: files/groups/datasets/attributes | current |
 | [[json-schema]] | Vocabulary for validating JSON document structure | current |
+
+### L09 — LLMs and Reproducibility
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-lecture-9]] | LLMs and reproducibility: local vs remote, structured outputs, constrained decoding, JSON Schema | current |
+
+### L10 — Remote Experiments
+| Page | Summary | Status |
+|------|---------|--------|
+| [[reproducibility-engineering-lecture-10]] | Remote experiment workflows, artifact packaging, SQPolite case study | current |
+| [[artifact-packaging]] | Packaging research artifacts for reproducibility: fork+patches, Docker, doall.sh | current |
 
 | [[reproducibility-engineering-lecture-1]] | Lecture 1 establishes the foundational vocabulary (repeat/reproduce/replicate),  | current |
 | [[reproducibility-engineering-lecture-2]] |  | current |

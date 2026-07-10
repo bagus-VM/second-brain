@@ -4,45 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "f430a3ac6cd64f77",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3ea458dafa742a28",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_9___LLMs.pdf",
-                "page": 1,
-                "left": -14,
-                "top": 846,
-                "zoom": 1.1162889147219106
-              },
-              "icon": "lucide-file-text",
-              "title": "SoSe_2026_RepEng_IC_9___LLMs"
-            }
-          },
-          {
-            "id": "f2f62dd103947d26",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
-                "page": 5,
-                "left": -14,
-                "top": 77,
-                "zoom": 1.1162889147219106
-              },
-              "icon": "lucide-file-text",
-              "title": "SoSe_2026_RepEng_IC_8___Hierarchical_Data"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "0427755730771adb",
         "type": "tabs",
         "children": [
@@ -50,14 +11,16 @@
             "id": "2115594d2935fc26",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "vault/topics/reproducibility-engineering-lecture-8.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQLite_Walkthrough.pdf",
+                "page": 14,
+                "left": -13,
+                "top": 149,
+                "zoom": 1.1254998750312422
               },
-              "icon": "lucide-file",
-              "title": "reproducibility-engineering-lecture-8"
+              "icon": "lucide-file-text",
+              "title": "SQLite_Walkthrough"
             }
           },
           {
@@ -131,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5,
-    "collapsed": true
+    "width": 383.5
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -219,10 +181,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "f2f62dd103947d26",
+  "active": "4ee5140815e153b0",
   "lastOpenFiles": [
+    "vault/topics/reproducibility-engineering-lecture-10.md",
+    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_10___Remote_Experiments.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_10___Remote_Experiments.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_9___LLMs.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_7___Tidy_Data.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_6___Architectures.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_5___Reproducible_Builds.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_4___git.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_3___Hypotheses.pdf",
+    "raw/assets/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_2___Levels_and_Provenance.pdf",
     "vault/topics/reproducibility-engineering-lecture-8.md",
-    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data.pdf",
     "vault/concepts/weighted-summer.md",
     "vault/concepts/voltage-follower.md",
     "vault/concepts/sram-cell.md",
@@ -234,16 +206,7 @@
     "vault/topics/microelectronics-lecture-9.md",
     "study/practice/reproducibility-engineering-sheet-10.md",
     "vault/concepts/artifact-packaging.md",
-    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQPolite_Reference_Project.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQLite_Walkthrough.pdf",
-    "raw/lectures/introduction_to_microelectronics/Microelectronics9_2026.pdf",
-    "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
-    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_9___LLMs.pdf",
     "vault/topics/reproducibility-engineering-lecture-9.md",
-    "Untitled 3.base",
-    "Untitled 2.base",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
     "vault/topics/iot-lecture-9.md",
     "study/practice/mmdb-ex09.md",
     "vault/concepts/jpeg-compression-pipeline.md",
