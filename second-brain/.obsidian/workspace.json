@@ -4,73 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "de5a7fcd1ce28b6c",
+        "id": "32165c95671944c7",
         "type": "tabs",
         "children": [
           {
-            "id": "c07d740f6ff97407",
+            "id": "7c12d326cafd3470",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
-                "page": 1,
-                "left": -4,
-                "top": 634,
-                "zoom": 1.7
+                "file": "study/practice/reproducibility-engineering-sheet-9.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Ex09"
-            }
-          },
-          {
-            "id": "47c7cfe0ac85c2ff",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
-                "page": 24,
-                "left": -13,
-                "top": 74,
-                "zoom": 1.2562499999999999
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex09_solutions"
+              "icon": "lucide-file",
+              "title": "reproducibility-engineering-sheet-9"
             }
           }
         ]
       },
       {
-        "id": "dd23bc93dbb4d4a1",
+        "id": "9f9bd83afe818927",
         "type": "tabs",
         "children": [
           {
-            "id": "78d39b643f178c61",
+            "id": "d7f5e0a8a191b7a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/topics/multimedia-databases-lecture-09.md",
+                "file": "study/practice/reproducibility-engineering-sheet-10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multimedia-databases-lecture-09"
-            }
-          },
-          {
-            "id": "aab6b93f42280fb1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/content-based-retrieval.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "content-based-retrieval"
+              "title": "reproducibility-engineering-sheet-10"
             }
           }
         ]
@@ -130,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5,
-    "collapsed": true
+    "width": 383.5
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -218,16 +185,34 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c07d740f6ff97407",
+  "active": "7c12d326cafd3470",
   "lastOpenFiles": [
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+    "study/practice/reproducibility-engineering-sheet-10.md",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_9.pdf",
+    "courses/Courses.md",
+    "study/practice/reproducibility-engineering-sheet-8.md",
+    "study/practice/reproducibility-engineering-sheet-9.md",
+    "study/practice/reproducibility-engineering-sheet-7.md",
     "study/practice/mmdb-ex09.md",
+    "study/practice/network-science-e01.md",
+    "study/practice/mmdb-ex07.md",
+    "study/practice/reproducibility-engineering-sheet-4.md",
+    "study/practice/reproducibility-engineering-sheet-3.md",
+    "study/practice/mmdb-ex08.md",
+    "raw/lectures/reproducibility_engineering/Uebung/Sheet_8.pdf",
+    "study/practice/reproducibility-engineering-sheet-1.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex02.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex09.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex08.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex07.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex05.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex04.pdf",
+    "vault/concepts/content-based-retrieval.md",
     "vault/topics/multimedia-databases-lecture-09.md",
     "SOUL.md",
     "AGENTS.md",
-    "vault/concepts/content-based-retrieval.md",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
     "vault/topics/reproducibility-engineering-lecture-10.md",
     "vault/topics/microelectronics-lecture-9.md",
     "vault/concepts/weighted-summer.md",
@@ -237,26 +222,7 @@
     "vault/concepts/opamp-integrator.md",
     "vault/concepts/opamp-differentiator.md",
     "vault/concepts/flash-memory.md",
-    "vault/concepts/dram-cell.md",
-    "vault/concepts/artifact-packaging.md",
-    "study/practice/reproducibility-engineering-sheet-10.md",
-    "raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_10___Remote_Experiments.pdf",
-    "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
-    "raw/lectures/introduction_to_microelectronics/Microelectronics9_2026.pdf",
-    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/OpenAI_API_Documentation_Text_Generation.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_llama.cpp.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_OpenAI.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Limitations_of_Structured_Outputs_Anthropic.url",
-    "raw/assets/reproducibility_engineering/Vorlesung/9_-_LLMs/Introduction_to_Structured_Outputs_in_the__OpenAI_API.url",
-    "vault/topics/iot-lecture-9.md",
-    "vault/concepts/jpeg-compression-pipeline.md",
-    "vault/concepts/entropy-coding-huffman-arithmetic.md",
-    "vault/concepts/lossless-vs-lossy-compression.md",
-    "vault/topics/multimedia-databases-lecture-05.md",
-    "vault/concepts/run-length-encoding.md",
-    "vault/concepts/lz77-lzw-compression.md",
     "Pasted image 20260708123921.png",
-    "vault/concepts/h264-avc-video-compression.md",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
     "Pasted image 20260623144539.png",

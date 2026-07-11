@@ -3,223 +3,250 @@ title: "Exercise Sheet 10: LLMs and Reproducibility"
 tags: [practice, reproducibility-engineering, semester-1]
 course: "Reproducibility Engineering"
 status: current
-last_updated: 2026-07-10
+last_updated: 2026-07-11
 ---
 
 # Exercise Sheet 10: LLMs and Reproducibility
 
-## Exercises
+## 2 Keeping a Secret
 
-### Q1: Passing API Keys via Environment Variable
-Set the OpenAI API key as an environment variable and pass it to a Docker container. What is the security problem with this approach?
+### 2.1 Secrets in an Environment Variable
 
-<details>
-<summary>Solution</summary>
+> [!note]- Solution
+> **(a)** Build and run with the API key passed as an environment variable:
+>
+> ```bash
+> cd secrets/1-env-var
+> export OPENAI_API_KEY=sk-dem...cdef
+> docker build -t env-demo-img .
+> docker run --name env-demo-1 -e OPENAI_API_KEY env-demo-img
+> ```
+>
+> **(b)** `docker inspect` reveals the API key in plain text inside the container's environment block. Anyone with Docker daemon access can read it.
+>
+> ```bash
+> docker inspect env-demo-1 2>/dev/null | grep -i openai
+> ```
+>
+> **(c)** With Docker Compose:
+>
+> ```bash
+> docker compose up -d
+> ```
+>
+> **(d)** `docker inspect` still reveals the key in the environment block — same problem as the `-e` flag approach. Docker Compose reads the variable from the host environment and injects it into the container, but `docker inspect` exposes it either way.
 
-Export the key and pass it with `-e`:
+### 2.2 Secrets in a .env File
 
-```bash
-export OPENAI_API_KEY=sk-...
-docker run -e OPENAI_API_KEY my-image
-```
+> [!note]- Solution
+> **(a)** Run with Docker Compose after setting up the `.env` file:
+>
+> ```bash
+> cd secrets/2-dotenv
+> cp .env.example .env
+> # edit .env to set OPENAI_API_KEY=sk-dem...cdef
+> docker compose up -d
+> ```
+>
+> **(b)** `docker inspect` still reveals the key in the environment block:
+>
+> ```bash
+> docker inspect dotenv-demo 2>/dev/null | grep -i openai
+> ```
+>
+> **(c)** Inside the container, the key is stored identically — it's still an environment variable. What the `.env` file improved: the key no longer appears in shell history or in `compose.yaml` (which might be committed). But it's still visible via `docker inspect` at runtime.
 
-**Problem:** Anyone with access to the Docker daemon can run `docker inspect` on the container and read the API key in plain text from the container's environment variables. This is a significant security risk on shared machines or CI runners.
+### 2.3 Secrets in a Mounted Secret File
 
-</details>
+> [!note]- Solution
+> **(a)** Run with Docker Compose after creating the secret file:
+>
+> ```bash
+> cd secrets/3-mounted-file
+> mkdir -p secrets
+> echo "sk-mou...cdef" > secrets/openai_api_key
+> docker compose up -d
+> ```
+>
+> **(b)** `docker inspect` only shows the mount point (source and destination paths) — it does **not** show the contents of the mounted file:
+>
+> ```bash
+> docker inspect mounted-file-demo-1 2>/dev/null | grep -i openai
+> ```
+>
+> **(c)** Inside the container, the key is read from a file path (e.g., `/run/secrets/openai_api_key`) instead of from `os.environ`. The improvement: the actual secret value is not visible in `docker inspect` output. An attacker with Docker daemon access can see *where* the file is mounted but not *what* it contains.
 
----
+### 2.4 Preventing Accidents
 
-### Q2: Using an .env File for Secrets
-How do you use a `.env` file to pass secrets to Docker Compose, and what limitation does it share with the environment variable approach?
+> [!note]- Solution
+> **(a)** Files that must never be committed:
+> - `.env` files (contain secrets in plain text)
+> - `secrets/` directories (contain API keys)
+> - Any file matching `*.key`, `secret-*`, etc.
+>
+> Enforcement: add these patterns to `.gitignore`:
+>
+> ```
+> .env
+> secrets/
+> *.key
+> secret-*
+> ```
+>
+> **(b)** Keep the same files out of the Docker build context by adding them to `.dockerignore`:
+>
+> ```
+> .env
+> secrets/
+> *.key
+> secret-*
+> ```
+>
+> Without `.dockerignore`, any `COPY . .` in the Dockerfile would embed secret files into the image layer. They persist in the image even if deleted in a later layer. Both `.gitignore` and `.dockerignore` should list the same secret patterns.
 
-<details>
-<summary>Solution</summary>
+## 3 Reproducible LLM Outputs
 
-1. Copy the example file and fill in your key:
-   ```bash
-   cp .env.example .env
-   # edit .env to set OPENAI_API_KEY=sk-...
-   ```
+### 3.2 Temperature and Seed
 
-2. In `docker-compose.yml`, reference the variable normally — Docker Compose reads `.env` automatically.
+#### 3.2.1 Experiments
 
-**Limitation:** The secret is still injected into the container's environment. `docker inspect` still reveals it in the environment block, just like the `-e` flag approach. The `.env` file prevents the secret from leaking into shell history or logs, but not from the container's runtime state.
+> [!note]- Solution
+> **(a) Temperature = 0, varying seed:**
+>
+> ```bash
+> python generate.py -t 0 -i 3
+> python generate.py -t 0 -s 1 -i 3
+> python generate.py -t 0 -s 999 -i 3
+> ```
+>
+> **Result:** All three produce identical outputs regardless of seed value.
+>
+> **Why:** `temperature=0` means greedy decoding — the model always selects the token with the highest probability at every step. The seed controls the random number generator used for sampling, but when temperature is 0, no sampling occurs. The seed is irrelevant.
+>
+> ---
+>
+> **(b) No temperature set, fixed seed:**
+>
+> ```bash
+> python generate.py -s 42 -i 3
+> ```
+>
+> **Result:** Outputs vary across runs, even with the same seed.
+>
+> **Why:** The default temperature in most LLM servers is not 0 (typically 0.7–1.0). At any temperature > 0, the model samples from the probability distribution. A fixed seed makes the sampling reproducible *given the same RNG state*, but the default temperature introduces randomness. The seed alone cannot guarantee reproducibility when temperature > 0 is the default.
+>
+> ---
+>
+> **(c) Fixed seed, varying temperature:**
+>
+> ```bash
+> python generate.py -s 42 -t 0.7 -i 3
+> python generate.py -s 42 -t 1.5 -i 3
+> ```
+>
+> **Result:** Higher temperature produces more variation in outputs.
+>
+> - At moderate temperature (0.7), there's noticeable variation.
+> - At high temperature (1.5), outputs are highly random and may be incoherent.
+>
+> **Key insight:** Temperature controls the "creativity" or randomness of generation. Even with a fixed seed, increasing temperature widens the sampling distribution, producing more diverse (and less reproducible) outputs.
+>
+> ---
+>
+> **Summary:** `temperature=0` makes output deterministic on the same hardware (CPU). Seed is irrelevant when temperature is 0. For reproducibility, always set `temperature=0`.
 
-</details>
+## 4 Structured Outputs from LLMs
 
----
-
-### Q3: Mounted Secret File
-Explain how mounting a secret as a read-only file improves security over environment variables. What does `docker inspect` reveal?
-
-<details>
-<summary>Solution</summary>
-
-Mount the API key as a file inside the container:
-
-```bash
-docker run -v ./secret-key.txt:/run/secrets/api-key:ro my-image
-```
-
-Inside the container, read the key from the file path instead of `os.environ`.
-
-**Improvement:** `docker inspect` only shows the mount point (source path and destination path) — it does **not** show the contents of the mounted file. This is better than environment variables, where the actual secret value is visible in the inspect output.
-
-</details>
-
----
-
-### Q4: Preventing Accidental Secret Exposure
-What two files help prevent API keys from leaking, and what does each protect against?
-
-<details>
-<summary>Solution</summary>
-
-- **`.dockerignore`** — prevents secret files (e.g., `.env`, `secret-key.txt`) from being copied into the Docker build context. Without this, any `COPY . .` in the Dockerfile would embed secrets into the image layer, where they persist even if later deleted.
-
-- **`.gitignore`** — prevents secret files from being committed to version control. Once a secret is in a Git history, removing it requires rewriting history (e.g., `git filter-branch` or BFG Repo Cleaner), and anyone who cloned before the fix still has it.
-
-Both files should list patterns like `.env`, `*.key`, `secret-*`, etc.
-
-</details>
-
----
-
-### Q5: Temperature and Seed — Identical Outputs
-With `temperature=0` and varying seeds, what happens to the LLM outputs? Why?
-
-<details>
-<summary>Solution</summary>
-
-**Result:** Outputs are identical regardless of seed value.
-
-**Why:** `temperature=0` means greedy decoding — the model always selects the token with the highest probability at every step. The seed controls the random number generator used for sampling, but when temperature is 0, no sampling occurs. The seed is irrelevant.
-
-```bash
-# All three produce identical output:
-curl http://localhost:8080/v1/chat/completions -d '{"messages":[{"role":"user","content":"Hello"}],"temperature":0,"seed":42}'
-curl http://localhost:8080/v1/chat/completions -d '{"messages":[{"role":"user","content":"Hello"}],"temperature":0,"seed":123}'
-curl http://localhost:8080/v1/chat/completions -d '{"messages":[{"role":"user","content":"Hello"}],"temperature":0,"seed":999}'
-```
-
-**Key insight:** `temperature=0` makes output deterministic on the same hardware (CPU). Seed is irrelevant when temperature is 0.
-
-</details>
-
----
-
-### Q6: Temperature and Seed — Default Temperature
-With no temperature specified and a fixed seed, do outputs stay the same across runs?
-
-<details>
-<summary>Solution</summary>
-
-**Result:** Outputs vary across runs, even with the same seed.
-
-**Why:** The default temperature in most LLM servers is not 0 (typically 0.7–1.0). At any temperature > 0, the model samples from the probability distribution. A fixed seed makes the sampling reproducible *given the same RNG state*, but the default temperature introduces randomness. The seed alone cannot guarantee reproducibility when temperature > 0 is the default.
-
-</details>
-
----
-
-### Q7: Temperature and Seed — Fixed Seed, Varying Temperature
-What happens when you fix the seed and vary the temperature?
-
-<details>
-<summary>Solution</summary>
-
-**Result:** Higher temperature produces more variation in outputs.
-
-- At very low temperature (e.g., 0.01), outputs are nearly deterministic — the distribution is sharply peaked around the most likely token.
-- At moderate temperature (e.g., 0.7), there's noticeable variation.
-- At high temperature (e.g., 1.5), outputs are highly random and may be incoherent.
-
-**Key insight:** Temperature controls the "creativity" or randomness of generation. Even with a fixed seed, increasing temperature widens the sampling distribution, producing more diverse (and less reproducible) outputs.
-
-</details>
-
----
-
-### Q8: Schema in Prompt vs Constrained Decoding
-Compare putting a JSON schema in the prompt versus using constrained decoding for structured outputs.
-
-<details>
-<summary>Solution</summary>
-
-**Schema in prompt:**
+The model must return a JSON instance matching this schema:
 ```json
 {
-  "messages": [
-    {"role": "system", "content": "Return valid JSON matching this schema: {\"name\": \"string\", \"age\": \"integer\"}"},
-    {"role": "user", "content": "My name is Alice and I am 30."}
+  "type": "integer",
+  "anyOf": [
+    { "type": "integer", "minimum": 3, "maximum": 1 },
+    { "type": "integer", "minimum": 12000, "maximum": 12002 }
   ]
 }
 ```
-- The model *may* return valid JSON, but there's no guarantee.
-- It might add extra text, use wrong types, or produce malformed JSON.
-- Parsing requires error handling and retry logic.
 
-**Constrained decoding:**
-```json
-{
-  "messages": [...],
-  "response_format": {
-    "type": "json_schema",
-    "json_schema": {"name": "person", "schema": {"type": "object", "properties": {"name": {"type": "string"}, "age": {"type": "integer"}}, "required": ["name", "age"]}}
-  }
-}
-```
-- The server enforces the schema during token generation using GBNF grammars or similar.
-- Output is **valid by construction** — the model physically cannot produce tokens that violate the schema.
-- No retry logic needed.
+The first branch (`minimum: 3, maximum: 1`) can never be satisfied, so the only valid instances are 12000, 12001, and 12002; the smallest valid answer is 12000.
 
-**For reproducibility:** Constrained decoding is strictly better — it eliminates an entire class of non-determinism (malformed output).
+### 4.1 Schema in the Prompt
 
-</details>
+> [!note]- Solution
+> Running the prompt-only variant:
+>
+> ```bash
+> python schema_in_prompt.py -i 5
+> ```
+>
+> **Result:** The model does **not** always return a valid instance. It may return malformed JSON, wrong types, extra text, or values outside the allowed range.
+>
+> **Why:** Putting the schema in the prompt is a *hint*, not a constraint. The model generates tokens freely — it may ignore the schema, misinterpret it, or produce invalid JSON. There is no enforcement mechanism; the model *may* comply, but it's not guaranteed.
 
----
+### 4.2 Constrained Decoding
 
-### Q9: oneOf vs anyOf in Constrained Decoding
-What is the practical difference between `oneOf` and `anyOf` in JSON Schema when using constrained decoding?
+> [!note]- Solution
+> Running the structured-outputs variant:
+>
+> ```bash
+> python structured_output.py -i 5
+> ```
+>
+> **Result:** Every output is valid JSON matching the schema. The server enforces the schema during token generation using GBNF grammars — the model physically cannot produce tokens that violate the schema.
+>
+> **Difference:** With constrained decoding, output is **valid by construction**. No retry logic needed. The guarantee is syntactic (the JSON structure matches), not semantic (the value is "meaningful").
+>
+> **However:** The tool's grammar conversion determines which schema features are actually enforced. If the tool doesn't support a feature (e.g., certain `anyOf` patterns), it may silently skip it.
 
-<details>
-<summary>Solution</summary>
+### 4.3 oneOf vs. anyOf
 
-In JSON Schema semantics:
-- `oneOf` — exactly one sub-schema must match
-- `anyOf` — one or more sub-schemas may match
+> [!note]- Solution
+> Converting both schemas to GBNF grammars:
+>
+> ```bash
+> python json_schema_to_grammar.py schemas/number_oneof.json oneof.gbnf
+> python json_schema_to_grammar.py schemas/number_anyof.json anyof.gbnf
+> diff oneof.gbnf anyof.gbnf
+> ```
+>
+> **Result:** The `diff` shows that the two grammars are **identical** (or functionally equivalent). The converter does not enforce the mutual exclusivity constraint of `oneOf` at the grammar level.
+>
+> **Implication for reproducibility:** If the tool treats `oneOf` and `anyOf` identically in its grammar conversion, the reproducibility guarantee is the same for both — the output will match at least one sub-schema, but the tool won't verify that *exactly* one matches. You should check your specific tool's behavior rather than assuming JSON Schema semantics are fully enforced.
 
-**In constrained decoding (GBNF grammar conversion):**
-The tool converts the schema to a grammar that the LLM must follow during generation. Depending on the tool:
-- Some tools produce **identical grammars** for `oneOf` and `anyOf` (they don't enforce the mutual exclusivity constraint of `oneOf` at the grammar level).
-- Other tools produce **different grammars** that correctly enforce the distinction.
+## 5 Reproducibility and LLMs (Multiple Choice)
 
-**Implication for reproducibility:** If the tool treats `oneOf` and `anyOf` identically in its grammar conversion, the reproducibility guarantee is the same for both — the output will match at least one sub-schema, but the tool won't verify that *exactly* one matches. You should check your specific tool's behavior rather than assuming the JSON Schema semantics are fully enforced.
-
-</details>
-
----
-
-### Q10: Multiple Choice — Reproducibility Scenarios
-
-**(a)** Is the output reproducible if you send the same request to the same machine running on CPU with `temperature=0`?
-
-**(b)** What does constrained decoding with `oneOf` and `min`/`max` constraints guarantee?
-
-<details>
-<summary>Solution</summary>
-
-**(a) Yes, the output is reproducible.**
-
-On CPU (no GPU), floating-point operations are deterministic — the same computation on the same hardware produces the same bits. With `temperature=0` (greedy decoding), the model always picks the highest-probability token. No randomness enters the process, so the same input always produces the same output.
-
-> Note: On GPU, minor non-determinism from floating-point ordering in parallel operations can cause slight differences even at temperature=0, unless deterministic mode is explicitly enabled.
-
-**(b) The output is only guaranteed to match the schema features the tool actually supports.**
-
-If the constrained decoding tool converts `oneOf` to the same grammar as `anyOf`, the mutual exclusivity of `oneOf` is not enforced. Similarly, `min`/`max` constraints on strings or arrays may or may not be enforced depending on the tool's GBNF grammar generator. You should verify which constraints your specific tool enforces rather than assuming full JSON Schema compliance.
-
-</details>
+> [!note]- Solution
+> **(a)** You send the following request to the local llama.cpp server (CPU) several times:
+>
+> ```python
+> client.chat.completions.create(
+>     model="gemma3:1b",
+>     messages=[{"role": "user", "content": "Name a colour."}],
+>     temperature=0.0,
+> )
+> ```
+>
+> Are the responses reproducible?
+>
+> - No – an LLM's output is always random.
+> - **Yes – at temperature=0 the result is deterministic on a local system if the model runs on a CPU.** ✓
+> - Only if a seed is also set.
+> - Only on a GPU.
+> - None of these options
+>
+> **Explanation:** On CPU, floating-point operations are deterministic — the same computation on the same hardware produces the same bits. With `temperature=0` (greedy decoding), the model always picks the highest-probability token. No randomness enters the process, so the same input always produces the same output. On GPU, minor non-determinism from parallel floating-point ordering can cause slight differences even at temperature=0.
+>
+> ---
+>
+> **(b)** A model call uses constrained decoding with a JSON Schema that includes numeric minimum/maximum bounds and a `oneOf`, and it returns successfully. Which statement is correct?
+>
+> - The instance is guaranteed to satisfy the full schema, regardless of the tool used.
+> - **The instance is only guaranteed to match the schema features the tool actually supports.** ✓
+> - The call cannot succeed, because minimum is never supported.
+> - Structured outputs guarantee that the value is semantically correct.
+> - None of these options
+>
+> **Explanation:** Constrained decoding is only as reliable as the tool's grammar conversion. If the tool doesn't enforce `oneOf` mutual exclusivity (as shown in 4.3) or silently skips `minimum`/`maximum` constraints, the output may violate those schema features. The guarantee is limited to what the tool actually translates into its grammar.
 
 ## Related Lectures
 - [[reproducibility-engineering-lecture-9]]
