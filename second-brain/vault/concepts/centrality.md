@@ -17,11 +17,32 @@ Not all nodes in a network are equal. Some sit at the crossroads of many paths, 
 A blogger with few personal posts but many incoming links from diverse communities can be more "important" than one with great content but no connections. A bank with moderate assets but many lending relationships can be the critical point of systemic failure.
 
 ## Formal Definition / Statement
-Centrality measures assign a score $c(v)$ to each node $v$ capturing some notion of structural importance:
+Centrality measures assign a score $c(v)$ to each node $v$ capturing some notion of structural importance.
 
-- **==Degree centrality==:** $c(v) = \deg(v)$ — ==number of connections==. Simple, local measure.
-- ==**Closeness centrality==:** $c(v) = \frac{1}{\sum_{u} d(v, u)}$ — inverse of average distance to all other nodes. ==Measures how quickly a node can reach the whole network.==
-- ==**Betweenness centrality==:** $c(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$ — fraction of shortest paths passing through $v$. Measures bridge/brokerage role.
+Below are the five core measures with compact formulas and quick intuition. Use the cheat-sheet table after these definitions for exam-ready recall.
+
+- **Degree centrality:** $c(v) = \deg(v)$ — number of direct connections (local exposure). Normalized form: $C_D(v)=\deg(v)/(n-1)$.
+- **Closeness centrality:** $c(v) = \frac{n-1}{\sum_{u\neq v} d(v,u)}$ — inverse average shortest-path distance to all other nodes (global access).
+- **Harmonic centrality:** $H(v) = \sum_{u\neq v} \frac{1}{d(v,u)}$ with $1/\infty=0$ — a disconnected-graph-safe variant of closeness.
+- **Betweenness centrality:** $c(v) = \sum_{s\neq v\neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$ — fraction of shortest paths between other nodes that pass through $v$ (brokerage/control).
+- **Eigenvector / PageRank:** Eigenvector: $Ax=\lambda x$ (leading eigenvector); PageRank: $PR(v)=(1-\alpha)/n + \alpha\sum_{u\to v} PR(u)/\text{outdeg}(u)$ — recursive prestige / random-surfer endorsement.
+
+## Cheat-sheet: five core centralities
+A compact table with formula, intuition, complexity, and quick notes for exam recall.
+
+| Measure | Formula | Theory (what it captures) | Complexity (all nodes) | Notes |
+|--------:|:--------|:-------------------------|:-----------------------:|:------|
+| Degree | $C_D(v)=\deg(v)/(n-1)$ | Exposure — direct contacts | $O(n+m)$ | Local, cheapest; distinguish in-/out-degree for directed graphs |
+| Closeness | $C_C(v)=(n-1)/\sum_{u\neq v} d(v,u)$ | Access — short-path reach to everyone | $O(n(n+m))$ | Fails on disconnected graphs; use Harmonic |
+| Harmonic | $H(v)=\sum_{u\neq v} 1/d(v,u)$ (1/\infty=0) | Reachability — handles disconnected graphs | $O(n(n+m))$ | Robust closeness alternative; unreachable nodes contribute 0 |
+| Betweenness | $C_B(v)=\sum_{s\neq v\neq t} \sigma_{st}(v)/\sigma_{st}$ | Brokerage/control — sits on shortest paths | $O(n(n+m))$ (Brandes) | Global; identifies bridges/brokers; expensive to compute |
+| Eigenvector / PageRank | $Ax=\lambda x$ ; $PR(v)=(1-\alpha)/n + \alpha\sum PR(u)/\text{outdeg}(u)$ | Recursive prestige / random-surfer endorsement | $O(k(n+m))$ per iteration | Prestige flows from important neighbors; PageRank adds damping and handles dangling nodes |
+
+How to pick quickly:
+- Exposure/spreaders → Degree
+- Fast reach or broadcast → Closeness / Harmonic
+- Brokers/bridges → Betweenness
+- Prestige/influence from important neighbors → Eigenvector / PageRank
 
 For directed networks, degree splits into **in-degree** (edges arriving) and **out-degree** (edges leaving), each with different meanings (popularity vs. activity).
 
