@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vault/topics/iot-lecture-1.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "iot-lecture-1"
+              "title": "index"
             }
           }
         ]
@@ -142,8 +142,14 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
-    "vault/concepts/iot-network-architecture.md",
+    "vault/concepts/dijkstras-algorithm.md",
+    "index.md",
+    "log.md",
+    "vault/concepts/graph-fundamentals.md",
+    "vault/concepts/graph-laplacian.md",
+    "vault/concepts/bipartite-graphs.md",
     "vault/topics/iot-lecture-1.md",
+    "vault/concepts/iot-network-architecture.md",
     "study/practice/mmdb-ex08.md",
     "study/practice/mmdb-ex01.md",
     "vault/concepts/image-representation-bitmap.md",
@@ -163,13 +169,7 @@
     "study/exams/network-science-exercise-prep.md",
     "log-2026.md",
     "vault/xml-structured-text.md",
-    "vault/ascii-unicode-character-encoding.md",
-    "vault/linear-convolution-filters.md",
-    "vault/image-point-operations.md",
     "raw/lectures/network_science/Vorlesung/l07-small-world-networks.pdf",
-    "study/Study Materials.md",
-    "vault/topics/software-analyse-lecture-5.md",
-    "vault/bezier-curves.md",
     "Pasted image 20260609110111.png"
   ]
 }
