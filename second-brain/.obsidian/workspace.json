@@ -8,17 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7c12d326cafd3470",
+            "id": "a46dcffd1da7b5eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "study/practice/reproducibility-engineering-sheet-9.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/lectures/network_science/Uebung/e03-strong-and-weak-ties.pdf",
+                "page": 15,
+                "left": -17,
+                "top": 496,
+                "zoom": 0.9063852995507716
               },
-              "icon": "lucide-file",
-              "title": "reproducibility-engineering-sheet-9"
+              "icon": "lucide-file-text",
+              "title": "e03-strong-and-weak-ties"
+            }
+          },
+          {
+            "id": "6608dc6a4a726239",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/network_science/Uebung/e03-strong-and-weak-ties-solutions.pdf",
+                "page": 26,
+                "left": -17,
+                "top": 496,
+                "zoom": 0.9063852995507716
+              },
+              "icon": "lucide-file-text",
+              "title": "e03-strong-and-weak-ties-solutions"
             }
           }
         ]
@@ -28,17 +46,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d7f5e0a8a191b7a9",
+            "id": "848fd3dc6bbae0b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/practice/reproducibility-engineering-sheet-10.md",
+                "file": "study/practice/network-science-e03.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "reproducibility-engineering-sheet-10"
+              "title": "network-science-e03"
+            }
+          },
+          {
+            "id": "dfc6a3312e184469",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vault/concepts/neighborhood-overlap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "neighborhood-overlap"
+            }
+          },
+          {
+            "id": "b7597f488368fca7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -73,7 +119,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "neighbourhood overlap",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,11 +140,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 383.5,
+    "collapsed": true
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -185,14 +233,26 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "7c12d326cafd3470",
+  "active": "848fd3dc6bbae0b2",
   "lastOpenFiles": [
+    "raw/handwritten_notes/network_science/Vorlesung/network-ex03.rnote",
+    "raw/lectures/network_science/Uebung/e03-strong-and-weak-ties.pdf",
+    "raw/lectures/network_science/Uebung/e03-strong-and-weak-ties-solutions.pdf",
+    "study/practice/network-science-e03.md",
+    "study/snippets/network-ex03/3.E.2.py",
+    "study/snippets/network-ex03/3.D.2.py",
+    "vault/concepts/neighborhood-overlap.md",
+    "index.md",
+    "vault/concepts/triadic-closure.md",
+    "study/snippets/network-ex03/3.B.2.py",
+    "study/snippets/network-ex03",
+    "vault/topics/network-science-l03.md",
     "study/practice/reproducibility-engineering-sheet-10.md",
+    "study/practice/reproducibility-engineering-sheet-9.md",
     "raw/lectures/reproducibility_engineering/Uebung/Sheet_10.pdf",
     "raw/lectures/reproducibility_engineering/Uebung/Sheet_9.pdf",
     "courses/Courses.md",
     "study/practice/reproducibility-engineering-sheet-8.md",
-    "study/practice/reproducibility-engineering-sheet-9.md",
     "study/practice/reproducibility-engineering-sheet-7.md",
     "study/practice/mmdb-ex09.md",
     "study/practice/network-science-e01.md",
@@ -203,12 +263,6 @@
     "raw/lectures/reproducibility_engineering/Uebung/Sheet_8.pdf",
     "study/practice/reproducibility-engineering-sheet-1.md",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex02.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex09.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex08.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex07.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex05.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex04.pdf",
     "vault/concepts/content-based-retrieval.md",
     "vault/topics/multimedia-databases-lecture-09.md",
     "SOUL.md",
@@ -217,11 +271,6 @@
     "vault/topics/microelectronics-lecture-9.md",
     "vault/concepts/weighted-summer.md",
     "vault/concepts/voltage-follower.md",
-    "vault/concepts/sram-cell.md",
-    "vault/concepts/sense-amplifier.md",
-    "vault/concepts/opamp-integrator.md",
-    "vault/concepts/opamp-differentiator.md",
-    "vault/concepts/flash-memory.md",
     "Pasted image 20260708123921.png",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",

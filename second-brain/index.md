@@ -317,62 +317,62 @@
 | [[network-science-l09]] | L09 shows how to map every node to a vector in R^d preserving graph structure —  | current |
 
 ### Additional Concepts
-| Page | Summary | Status |
-|------|---------|--------|
-| [[adjacency-matrix-factorization]] | A unifying view: spectral embeddings, DeepWalk, and node2vec all implicitly fact | current |
-| [[algebraic-connectivity]] | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-laplacian\|graph Laplacian]] | current |
-| [[betweenness-centrality]] | Betweenness centrality measures how often a node sits on shortest paths between  | current |
-| [[bipartite-graphs]] | A bipartite graph has two disjoint node sets where edges only connect nodes acro | current |
-| [[centrality-measures]] | Centrality measures quantify node importance — but each measure encodes a differ | current |
-| [[closeness-centrality]] | Closeness centrality measures how near a node is to all other nodes on average — | current |
-| [[community-detection]] | Community detection partitions a graph into groups of nodes that are densely con | current |
-| [[community-detection-overview]] | Community detection finds subsets of nodes with dense internal connections and s | current |
-| [[conductance]] | Conductance measures the fraction of edges that leave a community relative to it | current |
-| [[configuration-model]] | The configuration model generates random graphs with a prescribed degree sequenc | current |
-| [[connected-component]] | A connected component is a maximal set of nodes where every node can reach every | current |
-| [[degree-centrality]] | Degree centrality measures the number of direct contacts a node has — the simple | current |
-| [[diffusion-of-innovations]] | Diffusion of innovations studies how new ideas, technologies, and behaviors spre | current |
-| [[directed-and-undirected-graphs]] | ==Undirected graphs model symmetric relationships (friendship)==, while directed | current |
-| [[directed-connectivity]] | In directed graphs, strong connectivity requires mutual reachability between all | current |
-| [[edge-betweenness]] | Edge betweenness measures how often an edge lies on shortest paths between all p | current |
-| [[eigenvector-centrality]] | Eigenvector centrality measures recursive prestige — important nodes are connect | current |
-| [[embeddedness]] | Embeddedness describes a node whose neighbors are themselves densely interconnec | current |
-| [[embedding-based-community-detection]] | Embedding-based community detection uses node embeddings (from random walks or n | current |
-| [[global-email-experiment]] | ==Dodds, Muhamad & Watts (2003)== replicated Milgram's experiment using email ac | current |
-| [[granovetter-weak-ties]] | Granovetter's weak-tie hypothesis states that weak ties (acquaintances, not clos | current |
-| [[graph-laplacian]] | The graph Laplacian L = D - A encodes the structure of a graph — its eigenvalues | current |
-| [[graph-partitioning]] | Graph partitioning divides a graph into a fixed number of balanced clusters — un | current |
-| [[harmonic-centrality]] | Harmonic centrality is the disconnected-graph extension of [[closeness-centrality\|closeness centrality]] | current |
-| [[hierarchical-clustering]] | Divisive and agglomerative community detection methods produce dendrograms — tre | current |
-| [[hnsw-indexing]] | HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg' | current |
-| [[k-balance]] | k-balance is the partition structure guaranteed by weak structural balance: a co | current |
-| [[kernighan-lin-algorithm]] | Kernighan-Lin is a local-search algorithm for balanced graph partitioning — iter | current |
-| [[laplacian-eigenmaps]] | Laplacian eigenmaps embed each node as a point in R^d using the eigenvectors of  | current |
-| [[maxstc-complexity]] | Finding the edge labeling with the most strong edges that satisfies Strong Triad | current |
-| [[message-passing-framework]] | The message-passing framework defines how GNNs compute node embeddings: each lay | current |
-| [[min-cut-max-flow]] | Min-cut / Max-flow finds the smallest set of edges whose removal disconnects two | current |
-| [[modularity-resolution-limit]] | The resolution limit is a fundamental limitation of [[modularity]] — it cannot d | current |
-| [[neighborhood-overlap]] | Neighborhood overlap measures the fraction of neighbors shared by two connected  | current |
-| [[network-autocorrelation]] | Network autocorrelation is the statistical tendency for connected nodes to share | current |
-| [[network-effects]] | The structure of connections creates outcomes — visibility, influence, lock-in,  | current |
-| [[network-examples]] | Networks appear across every domain — social, communication, information, econom | current |
-| [[normalized-cut]] | Normalized cut balances the size of a cut against the total degree (volume) of t | current |
-| [[online-link-formation]] | Online data with timestamps turns link formation into a measurable process — emp | current |
-| [[pagerank]] | PageRank extends [[eigenvector-centrality]] with a damping factor — a random sur | current |
-| [[power-law-distribution]] | A power-law distribution is a heavy-tailed distribution where a few nodes have v | current |
-| [[process-structure-interaction-gap]] | The process-structure interaction gap is the sixth gap in the course: the same n | current |
-| [[product-space-network]] | The product space network connects exported products that require similar capabi | current |
-| [[random-walks]] | A random walk on a graph is a stochastic process where a walker moves from node  | current |
-| [[signed-laplacian]] | The signed Laplacian L_σ = D − A_σ extends the standard graph Laplacian to signe | current |
-| [[sparse-dense-and-random-graphs]] | Graphs differ quantitatively in edge density — from sparse (few edges) to dense  | current |
-| [[spectral-clustering-embeddings]] | Spectral clustering is k-means applied to Laplacian eigenmaps — nodes in the sam | current |
-| [[spectral-partitioning]] | Spectral partitioning uses the eigenvectors of the graph Laplacian to find a nat | current |
-| [[strong-triadic-closure]] | If a node has two strong ties, Strong Triadic Closure requires those endpoints t | current |
-| [[structural-holes-and-brokerage]] | Structural holes are missing connections between groups; brokers who span them g | current |
-| [[temporal-networks]] | Temporal networks assign activation times to edges, revealing that static aggreg | current |
-| [[weak-tie-paradox-contagion]] | The same weak ties and bridges that accelerate simple contagion (rumors, disease | current |
-| [[web-bow-tie-structure]] | Broder et al. (2000) found that the Web decomposes into a bow-tie: a strongly co | current |
-| [[weighted-graphs]] | ==A weighted graph assigns a numerical value w(e) to each edge, encoding strengt | current |
+| Page                                    | Summary                                                                                                   | Status  |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------- |
+| [[adjacency-matrix-factorization]]      | A unifying view: spectral embeddings, DeepWalk, and node2vec all implicitly fact                          | current |
+| [[algebraic-connectivity]]              | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-laplacian\|graph Laplacian]] | current |
+| [[betweenness-centrality]]              | Betweenness centrality measures how often a node sits on shortest paths between                           | current |
+| [[bipartite-graphs]]                    | A bipartite graph has two disjoint node sets where edges only connect nodes acro                          | current |
+| [[centrality-measures]]                 | Centrality measures quantify node importance — but each measure encodes a differ                          | current |
+| [[closeness-centrality]]                | Closeness centrality measures how near a node is to all other nodes on average —                          | current |
+| [[community-detection]]                 | Community detection partitions a graph into groups of nodes that are densely con                          | current |
+| [[community-detection-overview]]        | Community detection finds subsets of nodes with dense internal connections and s                          | current |
+| [[conductance]]                         | Conductance measures the fraction of edges that leave a community relative to it                          | current |
+| [[configuration-model]]                 | The configuration model generates random graphs with a prescribed degree sequenc                          | current |
+| [[connected-component]]                 | A connected component is a maximal set of nodes where every node can reach every                          | current |
+| [[degree-centrality]]                   | Degree centrality measures the number of direct contacts a node has — the simple                          | current |
+| [[diffusion-of-innovations]]            | Diffusion of innovations studies how new ideas, technologies, and behaviors spre                          | current |
+| [[directed-and-undirected-graphs]]      | ==Undirected graphs model symmetric relationships (friendship)==, while directed                          | current |
+| [[directed-connectivity]]               | In directed graphs, strong connectivity requires mutual reachability between all                          | current |
+| [[edge-betweenness]]                    | Edge betweenness measures how often an edge lies on shortest paths between all p                          | current |
+| [[eigenvector-centrality]]              | Eigenvector centrality measures recursive prestige — important nodes are connect                          | current |
+| [[embeddedness]]                        | Embeddedness describes a node whose neighbors are themselves densely interconnec                          | current |
+| [[embedding-based-community-detection]] | Embedding-based community detection uses node embeddings (from random walks or n                          | current |
+| [[global-email-experiment]]             | ==Dodds, Muhamad & Watts (2003)== replicated Milgram's experiment using email ac                          | current |
+| [[granovetter-weak-ties]]               | Granovetter's weak-tie hypothesis states that weak ties (acquaintances, not clos                          | current |
+| [[graph-laplacian]]                     | The graph Laplacian L = D - A encodes the structure of a graph — its eigenvalues                          | current |
+| [[graph-partitioning]]                  | Graph partitioning divides a graph into a fixed number of balanced clusters — un                          | current |
+| [[harmonic-centrality]]                 | Harmonic centrality is the disconnected-graph extension of [[closeness-centrality\|closeness centrality]] | current |
+| [[hierarchical-clustering]]             | Divisive and agglomerative community detection methods produce dendrograms — tre                          | current |
+| [[hnsw-indexing]]                       | HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg'                          | current |
+| [[k-balance]]                           | k-balance is the partition structure guaranteed by weak structural balance: a co                          | current |
+| [[kernighan-lin-algorithm]]             | Kernighan-Lin is a local-search algorithm for balanced graph partitioning — iter                          | current |
+| [[laplacian-eigenmaps]]                 | Laplacian eigenmaps embed each node as a point in R^d using the eigenvectors of                           | current |
+| [[maxstc-complexity]]                   | Finding the edge labeling with the most strong edges that satisfies Strong Triad                          | current |
+| [[message-passing-framework]]           | The message-passing framework defines how GNNs compute node embeddings: each lay                          | current |
+| [[min-cut-max-flow]]                    | Min-cut / Max-flow finds the smallest set of edges whose removal disconnects two                          | current |
+| [[modularity-resolution-limit]]         | The resolution limit is a fundamental limitation of [[modularity]] — it cannot d                          | current |
+| [[neighborhood-overlap]]                | Neighborhood overlap measures the fraction of neighbors shared by two connected                           | current |
+| [[network-autocorrelation]]             | Network autocorrelation is the statistical tendency for connected nodes to share                          | current |
+| [[network-effects]]                     | The structure of connections creates outcomes — visibility, influence, lock-in,                           | current |
+| [[network-examples]]                    | Networks appear across every domain — social, communication, information, econom                          | current |
+| [[normalized-cut]]                      | Normalized cut balances the size of a cut against the total degree (volume) of t                          | current |
+| [[online-link-formation]]               | Online data with timestamps turns link formation into a measurable process — emp                          | current |
+| [[pagerank]]                            | PageRank extends [[eigenvector-centrality]] with a damping factor — a random sur                          | current |
+| [[power-law-distribution]]              | A power-law distribution is a heavy-tailed distribution where a few nodes have v                          | current |
+| [[process-structure-interaction-gap]]   | The process-structure interaction gap is the sixth gap in the course: the same n                          | current |
+| [[product-space-network]]               | The product space network connects exported products that require similar capabi                          | current |
+| [[random-walks]]                        | A random walk on a graph is a stochastic process where a walker moves from node                           | current |
+| [[signed-laplacian]]                    | The signed Laplacian L_σ = D − A_σ extends the standard graph Laplacian to signe                          | current |
+| [[sparse-dense-and-random-graphs]]      | Graphs differ quantitatively in edge density — from sparse (few edges) to dense                           | current |
+| [[spectral-clustering-embeddings]]      | Spectral clustering is k-means applied to Laplacian eigenmaps — nodes in the sam                          | current |
+| [[spectral-partitioning]]               | Spectral partitioning uses the eigenvectors of the graph Laplacian to find a nat                          | current |
+| [[strong-triadic-closure]]              | If a node has two strong ties, Strong Triadic Closure requires those endpoints t                          | current |
+| [[structural-holes-and-brokerage]]      | Structural holes are missing connections between groups; brokers who span them g                          | current |
+| [[temporal-networks]]                   | Temporal networks assign activation times to edges, revealing that static aggreg                          | current |
+| [[weak-tie-paradox-contagion]]          | The same weak ties and bridges that accelerate simple contagion (rumors, disease                          | current |
+| [[web-bow-tie-structure]]               | Broder et al. (2000) found that the Web decomposes into a bow-tie: a strongly co                          | current |
+| [[weighted-graphs]]                     | ==A weighted graph assigns a numerical value w(e) to each edge, encoding strengt                          | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
 |------|---------|--------|

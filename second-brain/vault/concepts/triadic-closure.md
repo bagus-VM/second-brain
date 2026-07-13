@@ -15,7 +15,7 @@ If two people share a mutual friend, they are significantly more likely to becom
 Social networks are not random. When person A knows both B and C, there is an inherent opportunity, trust, and social pressure for B and C to meet. Over time, this mechanism causes graphs to accumulate triangles, shrink average distances, and produce increasingly clustered neighborhoods. Triadic closure is a *generative* theory — it predicts how edges appear over time, not just a static pattern.
 
 ## Formal Definition / Statement
-**Triadic Closure.** If a node A has edges to two distinct nodes B and C, the probability that an edge (B, C) forms over time is significantly higher than for two random nodes.
+**Triadic Closure.** ==If a node A has edges to two distinct nodes B and C, the probability that an edge (B, C) forms over time is significantly higher than for two random nodes.==
 
 An **open triad** is a triple (A, B, C) where edges A–B and A–C exist but B–C does not. Triadic closure predicts the B–C edge tends to appear.
 
