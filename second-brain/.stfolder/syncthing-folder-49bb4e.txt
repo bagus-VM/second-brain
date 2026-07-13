@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: scztc-e4hgl
-created: 2026-06-02T11:43:03+02:00

@@ -3,288 +3,264 @@ title: "Exercise Sheet 8: Tidy Data with DuckDB"
 tags: [practice, reproducibility-engineering, semester-1]
 course: "Reproducibility Engineering"
 status: current
-last_updated: 2026-07-08
+last_updated: 2026-07-11
 ---
 
 # Exercise Sheet 8: Tidy Data with DuckDB
 
-## Exercises
-
-### Q1 DuckDB Setup
-
-DuckDB is an embedded column-oriented OLAP database. Set up a Docker container to run DuckDB and load a CSV file.
-
-<details>
-<summary>Solution</summary>
-
-DuckDB runs as an embedded process, meaning there is no separate server. The simplest way to use it in a reproducible environment is a Docker container:
-
-```bash
-docker run --rm -it -v $(pwd):/data duckdb/duckdb:latest
-```
-
-This mounts your working directory into the container at `/data`. Once inside the DuckDB shell, load a CSV:
-
-```sql
-INSTALL csv;
-LOAD csv;
-CREATE TABLE tb AS SELECT * FROM read_csv_auto('/data/tb.csv');
-```
-
-DuckDB auto-detects column types with `read_csv_auto`. For reproducibility, you can also specify the schema explicitly to avoid type inference drift across versions:
-
-```sql
-CREATE TABLE tb AS SELECT * FROM read_csv('/data/tb.csv',
-    header=true,
-    columns={
-        'country': 'VARCHAR',
-        'year': 'INTEGER',
-        'cases': 'INTEGER',
-        'population': 'INTEGER'
-    }
-);
-```
-
-</details>
-
-### Q2 Tidy Data Principles
-
-State the three tidy data principles from Wickham.
-
-<details>
-<summary>Solution</summary>
-
-Wickham's tidy data principles:
-
-1. **Each variable forms a column.** A variable is something you measure or record, like "cases" or "population". If a column header contains values (like years 1999, 2000), those are not variable names and the data is untidy.
-2. **Each observation forms a row.** An observation is one unit of analysis, like one country in one year. All values for that observation belong in a single row.
-3. **Each value forms a cell.** Every cell contains exactly one value. No cell should hold a compound string like "745/19987071" that encodes two values.
-
-These principles make data easier to manipulate, analyze, and feed into statistical tools. Most tools expect tidy data as input.
-
-</details>
-
-### Q3 Identifying Untidy Data
-
-Consider the WHO tuberculosis dataset where columns are `country`, `year`, and pairs of columns like `m014`, `m1524`, `m2534`, `f014`, `f1524`, etc. Is this tidy? Why or why not?
-
-<details>
-<summary>Solution</summary>
-
-**No, this is not tidy.** The column names `m014`, `m1524`, `m2534`, `f014`, `f1524` encode two variables: sex (`m`/`f`) and age group (`014`, `1524`, `2534`). The column headers contain values, not variable names.
-
-To tidy this, you need to unpivot these columns into two new columns: `sex` and `age_group`, with a third column holding the count. The tidy form has columns `country`, `year`, `sex`, `age_group`, `cases`.
-
-</details>
-
-### Q4 Pivoting Columns to Rows (UNPIVOT)
-
-Given the untidy WHO data from Q3, use DuckDB's `UNPIVOT` to convert the sex-age columns into rows.
-
-<details>
-<summary>Solution</summary>
-
-```sql
-SELECT * FROM who_tb
-UNPIVOT (
-    cases FOR sex_age IN ("m014", "m1524", "m2534", "f014", "f1524", "f2534")
-);
-```
-
-This produces one row per country-year-sex_age combination, with a `cases` column holding the counts. The `sex_age` column still encodes two variables in one string, so you would split it next (see Q6).
-
-</details>
-
-### Q5 Pivoting Columns to Rows Without UNPIVOT
-
-Perform the same unpivot operation without using DuckDB's `UNPIVOT` keyword.
-
-<details>
-<summary>Solution</summary>
-
-Without `UNPIVOT`, use `UNION ALL` to stack each column into rows:
-
-```sql
-SELECT country, year, 'm014' AS sex_age, m014 AS cases FROM who_tb
-UNION ALL
-SELECT country, year, 'm1524' AS sex_age, m1524 AS cases FROM who_tb
-UNION ALL
-SELECT country, year, 'm2534' AS sex_age, m2534 AS cases FROM who_tb
-UNION ALL
-SELECT country, year, 'f014' AS sex_age, f014 AS cases FROM who_tb
-UNION ALL
-SELECT country, year, 'f1524' AS sex_age, f1524 AS cases FROM who_tb
-UNION ALL
-SELECT country, year, 'f2534' AS sex_age, f2534 AS cases FROM who_tb;
-```
-
-Each `UNION ALL` branch selects one of the original columns and assigns its name to a new `sex_age` column. This is the manual approach that `UNPIVOT` automates.
-
-</details>
-
-### Q6 Pivoting Rows to Columns (PIVOT)
-
-Given tidy data with columns `country`, `year`, `sex`, `cases`, pivot the `sex` values into separate columns.
-
-<details>
-<summary>Solution</summary>
-
-```sql
-SELECT * FROM tidy_tb
-PIVOT (
-    SUM(cases) FOR sex IN ('m', 'f')
-);
-```
-
-This produces columns `country`, `year`, `m`, `f` where `m` and `f` hold the case counts for male and female respectively.
-
-</details>
-
-### Q7 Pivoting Rows to Columns Without PIVOT
-
-Perform the same pivot without using DuckDB's `PIVOT` keyword.
-
-<details>
-<summary>Solution</summary>
-
-Use `CASE` with aggregation:
-
-```sql
-SELECT
-    country,
-    year,
-    SUM(CASE WHEN sex = 'm' THEN cases ELSE 0 END) AS m,
-    SUM(CASE WHEN sex = 'f' THEN cases ELSE 0 END) AS f
-FROM tidy_tb
-GROUP BY country, year;
-```
-
-The `CASE` expression filters rows by sex, and `SUM` aggregates the cases into a single value per group. This is the standard pre-`PIVOT` approach and works in any SQL dialect.
-
-</details>
-
-### Q8 Splitting a Column
-
-A `rate` column contains values like `745/19987071` (cases/population). Split this into two numeric columns: `cases` and `population`.
-
-<details>
-<summary>Solution</summary>
-
-```sql
-SELECT
-    country,
-    year,
-    CAST(SPLIT_PART(rate, '/', 1) AS INTEGER) AS cases,
-    CAST(SPLIT_PART(rate, '/', 2) AS INTEGER) AS population
-FROM tb_with_rate;
-```
-
-`SPLIT_PART(rate, '/', 1)` extracts the part before the slash, and `SPLIT_PART(rate, '/', 2)` extracts the part after. The result is cast to integer.
-
-The original `rate` column violates the tidy data principle that each cell holds one value. Splitting it fixes that.
-
-</details>
-
-### Q9 Concatenating Columns
-
-Given `century` (e.g. `19`) and `year_within_century` (e.g. `99`), concatenate them back into a `year` column (e.g. `1999`).
-
-<details>
-<summary>Solution</summary>
-
-```sql
-SELECT
-    country,
-    CAST(century || year_within_century AS INTEGER) AS year,
-    cases
-FROM tb_split;
-```
-
-The `||` operator concatenates strings. If `century` and `year_within_century` are integers, cast them to strings first:
-
-```sql
-SELECT
-    country,
-    CAST(CAST(century AS VARCHAR) || LPAD(CAST(year_within_century AS VARCHAR), 2, '0') AS INTEGER) AS year,
-    cases
-FROM tb_split;
-```
-
-`LPAD` ensures single-digit years within a century are zero-padded (`9` becomes `09`, so `19` and `09` give `1909`, not `199`).
-
-</details>
-
-### Q10 Case Study: WHO Tuberculosis Data
-
-The WHO tuberculosis dataset has columns `country`, `year`, `m014`, `m1524`, `m2534`, `f014`, `f1524`, `f2534`, etc. Transform it into tidy form.
-
-<details>
-<summary>Solution</summary>
-
-Step 1: Unpivot all sex-age columns into rows:
-
-```sql
-CREATE TABLE tb_long AS
-SELECT * FROM who_tb
-UNPIVOT (
-    cases FOR sex_age IN ("m014", "m1524", "m2534", "f014", "f1524", "f2534")
-);
-```
-
-Step 2: Split `sex_age` into `sex` and `age_group`:
-
-```sql
-CREATE TABLE tb_tidy AS
-SELECT
-    country,
-    year,
-    LEFT(sex_age, 1) AS sex,
-    SUBSTRING(sex_age, 2) AS age_group,
-    cases
-FROM tb_long;
-```
-
-Step 3 (optional): If a `rate` column like `745/19987071` exists, split it:
-
-```sql
-SELECT
-    country,
-    year,
-    sex,
-    age_group,
-    CAST(SPLIT_PART(rate, '/', 1) AS INTEGER) AS cases,
-    CAST(SPLIT_PART(rate, '/', 2) AS INTEGER) AS population
-FROM tb_long_with_rate;
-```
-
-The final tidy table has columns: `country`, `year`, `sex`, `age_group`, `cases` (and optionally `population`). Each row is one observation. Each column is one variable. Each cell is one value.
-
-</details>
-
-### Q11 Tidy Data and Reproducibility
-
-Why does tidy data matter for reproducibility?
-
-<details>
-<summary>Solution</summary>
-
-Tidy data follows a consistent structure, so analysis scripts are simpler and less error-prone. When every column is a variable and every row is an observation, the same code works across datasets without manual adjustment. This consistency makes analysis pipelines reproducible.
-
-Untidy data invites ad-hoc transformations that are hard to document and easy to get wrong. A column named `m014` that encodes sex and age is ambiguous. A script that hard-codes column names breaks when the data changes. Tidy data makes the data structure explicit and the transformations systematic.
-
-</details>
+## 1.2 DuckDB Setup
+
+> [!note]- Solution
+> DuckDB is an embedded column-oriented OLAP database. The simplest way to run it is via Docker Compose:
+>
+> ```bash
+> cd LabSession8/duckdb-local
+> docker compose up -d
+> ```
+>
+> The DuckDB GUI is then available at http://localhost:4213. You can create databases and notebooks from the sidebar.
+>
+> **Key difference from SQLite:** SQLite is row-oriented (OLTP), DuckDB is column-oriented (OLAP). DuckDB is optimised for analytical queries over large datasets, not transactional workloads.
+
+## 2 Data Restructuring: Tidy Data
+
+### 2.2.1 Pivoting Rows to Columns
+
+The table `countries_long` has columns `country`, `year`, `type`, `count` with rows like `(Afghanistan, 1999, cases, 745)` and `(Afghanistan, 1999, population, 19987071)`.
+
+> [!note]- Solution
+> **Why it's not tidy:** The `type` column contains values (`cases`, `population`) that should be variable names (column headers). Each observation (country-year) is spread across two rows instead of one.
+>
+> **(a) Using PIVOT:**
+>
+> ```sql
+> SELECT * FROM countries_long
+> PIVOT (
+>     SUM(count) FOR type IN ('cases', 'population')
+> );
+> ```
+>
+> **(b) Without PIVOT:**
+>
+> ```sql
+> SELECT
+>     country,
+>     year,
+>     SUM(CASE WHEN type = 'cases' THEN count ELSE 0 END) AS cases,
+>     SUM(CASE WHEN type = 'population' THEN count ELSE 0 END) AS population
+> FROM countries_long
+> GROUP BY country, year;
+> ```
+>
+> The tidy result has columns: `country`, `year`, `cases`, `population`. Each row is one observation.
+
+### 2.2.2 Pivoting Columns to Rows
+
+The table `countries_wide` has columns `country`, `year_1999`, `year_2000`.
+
+> [!note]- Solution
+> **Why it's not tidy:** The column headers `year_1999` and `year_2000` encode values (years), not variable names. The year should be a variable in its own column.
+>
+> **(a) Using UNPIVOT:**
+>
+> ```sql
+> SELECT * FROM countries_wide
+> UNPIVOT (
+>     cases FOR year_name IN ("year_1999", "year_2000")
+> );
+> ```
+>
+> Then clean up `year_name` to extract the actual year:
+>
+> ```sql
+> SELECT country,
+>        CAST(SUBSTRING(year_name, 6) AS INTEGER) AS year,
+>        cases
+> FROM countries_wide
+> UNPIVOT (
+>     cases FOR year_name IN ("year_1999", "year_2000")
+> );
+> ```
+>
+> **(b) Without UNPIVOT:**
+>
+> ```sql
+> SELECT country, 1999 AS year, year_1999 AS cases FROM countries_wide
+> UNION ALL
+> SELECT country, 2000 AS year, year_2000 AS cases FROM countries_wide;
+> ```
+>
+> The tidy result has columns: `country`, `year`, `cases`.
+
+### 2.3 Splitting
+
+The table `countries_rate` has a `rate` column with values like `745/19987071`.
+
+> [!note]- Solution
+> **Why it's not tidy:** The `rate` column encodes two values (cases and population) in one cell, violating the rule that each cell holds one value.
+>
+> Split the `rate` column and separate `year` into `century` and `year_within_century`:
+>
+> ```sql
+> SELECT
+>     country,
+>     CAST(LEFT(CAST(year AS VARCHAR), 2) AS INTEGER) AS century,
+>     CAST(SUBSTRING(CAST(year AS VARCHAR), 3) AS INTEGER) AS year_within_century,
+>     CAST(LEFT(rate, STRPOS(rate, '/') - 1) AS INTEGER) AS cases,
+>     CAST(SUBSTRING(rate, STRPOS(rate, '/') + 1) AS INTEGER) AS population
+> FROM countries_rate;
+> ```
+>
+> - `STRPOS(rate, '/')` finds the position of the slash.
+> - `LEFT(rate, pos - 1)` extracts the part before the slash (cases).
+> - `SUBSTRING(rate, pos + 1)` extracts the part after (population).
+> - `LEFT(CAST(year AS VARCHAR), 2)` extracts the century (`19`), and `SUBSTRING(..., 3)` extracts the year within century (`99`).
+
+### 2.4 Concatenation
+
+> [!note]- Solution
+> Reunite `century` and `year_within_century` back into `year`:
+>
+> ```sql
+> SELECT
+>     country,
+>     CAST(CAST(century AS VARCHAR)
+>         || LPAD(CAST(year_within_century AS VARCHAR), 2, '0')
+>         AS INTEGER) AS year,
+>     cases,
+>     population
+> FROM countries_split;
+> ```
+>
+> `LPAD` ensures single-digit years are zero-padded (`9` → `09`), so `19` + `09` gives `1909`, not `199`.
+
+### 2.5 Case Study
+
+Transform `countries_who` (WHO tuberculosis data with columns like `new_sp_m014`, `new_sp_f65`, etc.) into tidy form.
+
+> [!note]- Solution
+> The column names encode four variables: `new/old`, `type`, `sex`, and `age_group`. Tidy form requires unpivoting and splitting.
+>
+> **Step 1:** Identify the columns to unpivot (all except `country`, `iso2`, `iso3`, `year`):
+>
+> ```sql
+> -- List all the sex-age columns (abbreviated here)
+> CREATE TABLE who_long AS
+> SELECT * FROM countries_who
+> UNPIVOT (
+>     cases FOR scenario IN (
+>         "new_sp_m014", "new_sp_m1524", "new_sp_m2534",
+>         "new_sp_m3544", "new_sp_m4554", "new_sp_m5564",
+>         "new_sp_m65", "new_sp_f014", "new_sp_f1524",
+>         "new_sp_f2534", "new_sp_f3544", "new_sp_f4554",
+>         "new_sp_f5564", "new_sp_f65"
+>     )
+> );
+> ```
+>
+> **Step 2:** Parse the `scenario` column into components:
+>
+> ```sql
+> CREATE TABLE countries_who_tidy AS
+> SELECT
+>     country,
+>     iso2,
+>     iso3,
+>     year,
+>     SPLIT_PART(scenario, '_', 1) AS new_old,
+>     SPLIT_PART(scenario, '_', 2) AS type,
+>     CASE
+>         WHEN SUBSTRING(SPLIT_PART(scenario, '_', 3), 1, 1) = 'm' THEN 'm'
+>         ELSE 'f'
+>     END AS sex,
+>     SUBSTRING(SPLIT_PART(scenario, '_', 3), 2) AS age_group,
+>     cases
+> FROM who_long;
+> ```
+>
+> The tidy table has columns: `country`, `iso2`, `iso3`, `year`, `new_old`, `type`, `sex`, `age_group`, `cases`. Each row is one observation. Each cell is one value.
+
+## 3 Discretization, Binarization, and Dummy Variables
+
+Uses `countries_who_tidy` from Task 2.5.
+
+### 3.1 Discretization
+
+> [!note]- Solution
+> ```sql
+> SELECT *,
+>     CASE
+>         WHEN cases < 50 THEN 'Low'
+>         WHEN cases < 500 THEN 'Medium'
+>         ELSE 'High'
+>     END AS severity_level
+> FROM countries_who_tidy;
+> ```
+>
+> This maps the numeric case count into three categorical buckets. Discretization converts continuous values into a finite set of categories.
+
+### 3.2 Binarization and Dummy Variables
+
+> [!note]- Solution
+> **(a) Binarization** — `is_adult`: 1 if `age_group != '014'`, 0 otherwise.
+>
+> **(b) Dummy Variables** — `sex_m`: 1 if `sex = 'm'`, 0. `sex_f`: 1 if `sex = 'f'`, 0.
+>
+> ```sql
+> SELECT *,
+>     CASE WHEN age_group != '014' THEN 1 ELSE 0 END AS is_adult,
+>     CASE WHEN sex = 'm' THEN 1 ELSE 0 END AS sex_m,
+>     CASE WHEN sex = 'f' THEN 1 ELSE 0 END AS sex_f
+> FROM countries_who_tidy;
+> ```
+>
+> Binarization converts a condition into 0/1. One-hot encoding converts a categorical column into N binary columns (one per category).
+
+## 4 Tidy Data (Multiple Choice)
+
+> [!note]- Solution
+> **Question 1:** The transformation adds a `PreferenceCategory` column based on ranges of `Rating`:
+>
+> ```sql
+> SET PreferenceCategory = CASE
+>     WHEN Rating > 4.5 THEN 'loves'
+>     WHEN Rating > 2.5 THEN 'likes'
+>     WHEN Rating > 0.5 THEN 'dislikes'
+>     ELSE 'hates' END;
+> ```
+>
+> This maps numeric values into categorical buckets.
+>
+> - Discretization
+> - Pivoting
+> - Creating dummy values
+> - Normalization
+> - Binarization
+> - None of these options
+>
+> **Answer: Discretization** — the numeric `Rating` is being bucketed into categorical ranges (`loves`, `likes`, `dislikes`, `hates`). This is the same pattern as Task 3.1.
+>
+> ---
+>
+> **Question 2:** The table `cat_food_preference_dry_wet` has columns `cat`, `food_brand`, `rating_dry`, `rating_wet`.
+>
+> Is this tidy?
+>
+> - Yes
+> - No
+>
+> **Answer: No** — the column headers `rating_dry` and `rating_wet` encode a variable (`food_type`: dry/wet) as part of the column name. In tidy data, `food_type` should be its own column with a single `rating` column. This is the same untidy pattern as `year_1999`/`year_2000` in Task 2.2.2.
 
 ## Key Takeaways
 
-- DuckDB is an embedded column-oriented OLAP database that runs in a Docker container with no separate server.
 - Tidy data: each variable is a column, each observation is a row, each value is a cell.
-- `PIVOT` converts rows to columns; `UNPIVOT` converts columns to rows. Both can be done manually with `CASE`/`SUM` and `UNION ALL` respectively.
-- Compound columns (like `745/19987071` or `m014`) violate tidy data and must be split.
-- Concatenation with `||` recombines split columns, but watch for zero-padding with `LPAD`.
-- Tidy data makes analysis scripts simpler and more reproducible.
+- `PIVOT` converts rows to columns; `UNPIVOT` converts columns to rows. Both can be done manually with `CASE`/`SUM` and `UNION ALL`.
+- Compound columns (like `745/19987071`) violate tidy data and must be split.
+- Column headers that encode values (like `year_1999`, `rating_dry`) are a sign of untidy data.
+- Discretization buckets continuous values; binarization converts conditions to 0/1; one-hot encoding converts categories to binary columns.
 
 ## Related Vault Pages
 
-- [[tidy-data]]: the principles behind this sheet's exercises
-- [[reproducibility-engineering-lecture-6]]: the lecture covering tidy data concepts
-- [[provenance-in-reproducibility]]: tidy data simplifies provenance tracking
+- [[tidy-data]]
+- [[reproducibility-engineering-lecture-6]]
+- [[provenance-in-reproducibility]]

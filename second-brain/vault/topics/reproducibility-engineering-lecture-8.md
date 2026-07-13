@@ -2,11 +2,11 @@
 title: "Lecture 8: Hierarchical Data Formats"
 tags: [topic, reproducibility-engineering, semester-1, hdf5, json, xml, hierarchical-data, visitor-pattern]
 course: "Reproducibility Engineering"
-source_count: 2
+source_count: 1
 status: current
 last_updated: 2026-06-19
 prerequisites: ["[[reproducibility-engineering-lecture-7]]", "[[visitor-pattern]]", "[[xml-structured-text]]"]
-sources: ["raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data_Formats.pdf", "raw/assets/reproducibility_engineering/Vorlesung/8-Hierarchical_Dataformats/SQLite_Walkthrough.pdf"]
+sources: ["raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_8___Hierarchical_Data_Formats.pdf"]
 ---
 
 ## One-line Summary
@@ -227,7 +227,6 @@ Dataset: ocean/salinity, shape: (365, 180, 360)
 - [[hdf5]] — the concept page for HDF5
 - [[data-provenance]] — attributes are a natural place to store provenance metadata
 - [[tidy-data]] — hierarchical data can be tidy (each dataset = one variable)
-- [[artifact-packaging]] — the SQLite Walkthrough supplement demonstrates packaging research artifacts (SQPolite, patches, doall.sh)
 
 ## Open Questions
 - How do you version-control an HDF5 file? (It's binary — you need a separate versioning system or export to text.)

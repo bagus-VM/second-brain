@@ -421,3 +421,12 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 - Updated: vault/topics/reproducibility-engineering-lecture-8.md (added artifact-packaging cross-link, source count 1→2)
 - Updated: index.md (added Microelectronics section, RepEng Sheet 10, artifact-packaging)
 - Total: 11 new pages created, 2 existing pages updated
+
+## [2026-07-10] INGEST | RepEng Lecture 10 + resource corrections
+- Created: vault/topics/reproducibility-engineering-lecture-10.md (Remote Experiments, artifact workflows, SQPolite case study)
+- Updated: vault/concepts/artifact-packaging.md (added L10 cross-link, source count 1→2)
+- Fixed: vault/topics/reproducibility-engineering-lecture-8.md (removed SQLite Walkthrough reference — it's L10 material, reverted source count to 1)
+- Updated: index.md (added L10 section, reorganized L08/L09/L10 structure)
+- Note: L09 directory renamed from "9 - LLMs" to "9_-_LLMs" (naming convention, no content change)
+- Note: New resource URLs for L03 (Zobel ch4) and L06 (Docker Compose) — no new content to process
+- Total: 1 new page created, 3 existing pages updated

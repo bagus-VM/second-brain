@@ -2,7 +2,7 @@
 title: "Artifact Packaging for Reproducibility"
 tags: [concept, reproducibility-engineering, semester-1]
 course: "Reproducibility Engineering"
-source_count: 1
+source_count: 2
 status: current
 last_updated: 2026-07-10
 prerequisites: ["[[reproducible-builds]]", "[[containerization-for-builds]]", "[[git-for-reproducibility]]"]
@@ -97,6 +97,7 @@ The key insight: the patches document exactly what changed in SQLite. The fork p
 - [[workflow-reproducibility]] — the doall.sh script is a reproducible workflow
 - [[reproducibility-engineering-lecture-5]] — reproducible builds are the foundation for artifact packaging
 - [[reproducibility-engineering-lecture-6]] — database architectures affect how artifacts are packaged
+- [[reproducibility-engineering-lecture-10]] — remote experiments and the SQPolite case study
 
 ## Open Questions
 
