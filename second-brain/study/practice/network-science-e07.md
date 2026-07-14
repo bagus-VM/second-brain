@@ -6,7 +6,7 @@ tags:
   - semester-1
 course: "Network Science"
 status: current
-last_updated: 2026-06-14
+last_updated: 2026-07-14
 ---
 
 # Exercise Sheet 7 — Structural Balance
@@ -19,59 +19,121 @@ last_updated: 2026-06-14
 
 For each triangle, determine if balanced (B) or unbalanced (U). A triangle is balanced if the product of its edge signs is positive (even number of negative edges).
 
-1. (+, +, +) — **B** (the "all friends" pattern; no tension)
-2. (+, +, −) — **U** (the "two friends, one enemy" pattern; classic tension)
-3. (+, −, −) — **B** ("enemy of my enemy is my friend" pattern; in the strong-balance sense this is balanced)
-4. (−, −, −) — **U** (in strong balance; "three mutual enemies" cannot coexist; in weak balance this is **B**)
+1. (+, +, +) — all positive
+2. (+, +, −) — two positive, one negative
+3. (+, −, −) — one positive, two negative
+4. (−, −, −) — all negative
 
-**Most stable pattern**: (+, +, +) — mutual friends, no tension.
-**Most "socially unstable"**: (+, +, −) — the classic "enemy of my friend is my enemy" tension, which Heider identified as the source of cognitive dissonance.
+Which pattern is most stable, and which is "socially unstable"?
+
+> [!note]- Solution
+> A triangle is balanced iff the product of edge signs is positive (0 or 2 negatives).
+> 1. **(+,+,+):** Balanced. Three mutual friends — most stable.
+> 2. **(+,+,−):** Unbalanced. Classic "two of my friends hate each other" tension.
+> 3. **(−,−,+):** Balanced. Two allies sharing a common enemy.
+> 4. **(−,−,−):** Unbalanced. Three mutual enemies — no coalition possible.
+>
+> The (+,+,−) pattern is the most common source of social tension; (+,+,+) is the most stable.
 
 ### 7.B Weak Balance
 
 **Exercise 7.B.1: Strong vs Weak Balance**
 
-For the two triangles (A, B, C all positive; D, E, F all negative) connected by a negative edge C-D:
+For the two triangles (A, B, C all positive; D, E, F all negative) connected by a negative edge C–D:
 
-- **Triangle (A, B, C) with all positive edges**: balanced under both strong and weak balance (4 negative edges is even, so balanced in both). ✓
-- **Triangle (D, E, F) with all negative edges**: 
-  - **Strong balance**: unbalanced (3 negative edges is odd)
-  - **Weak balance**: balanced (weak balance only forbids the (+, +, −) pattern; all-negative is allowed)
-- **Global partition under strong balance**: a single partition into two camps: {A, B, C} vs {D, E, F} (with the negative C-D edge separating them). Under strong balance, all 6 nodes must fit into at most 2 camps.
-- **Global partition under weak balance**: {A, B, C}, {D, E, F} is one valid partition; alternatively, all 6 nodes could be in separate "enemy" camps (no requirement for positive within). The structure is more flexible.
-- **International relations meaning of all-negative triangle**: three countries that all mutually hate each other. Under strong balance, this is impossible (it would violate the two-camp structure); under weak balance, it represents a "tripolar" or "multipolar" world.
+1. Is A, B, C balanced under strong balance? Under weak balance?
+2. Is D, E, F balanced under strong balance? Under weak balance?
+3. What does the global partition look like under each?
+4. In international relations, what does an all-negative triangle represent?
+
+> [!note]- Solution
+> 1. **A, B, C — all positive:** Balanced under both strong and weak balance.
+> 2. **D, E, F — all negative:** Unbalanced under strong balance (product is −1). Weak balance forbids only (+,+,−) triangles, so all-negative is balanced (weakly).
+> 3. **Partition:**
+>    - Strong balance: impossible without resolving D, E, F (one edge must flip).
+>    - Weak balance: allows more than two camps, e.g. {A, B, C}, {D}, {E}, {F} — three mutual enemies form three separate factions.
+> 4. **Three mutually hostile countries.** Strong balance theory predicts an alliance forms (resolving to two camps). Weak balance treats multi-polar rivalry as stable.
+
+---
 
 **Exercise 7.B.2: Finding Camps in a Signed Network**
 
 Graph: 1, 2, 3 mutually friends (+); 4, 5, 6 mutually friends (+); all cross-group edges are negative.
 
-1. **All triangles balanced?** The within-group triangles (1,2,3) and (4,5,6) are all positive, balanced. The cross-group triangles (e.g., 1, 2, 4 with edges +, -, -) have two negatives, balanced. So yes, all triangles are balanced.
+1. Check every triangle for balance.
+2. Find the two-camp partition.
+3. Verify within-group edges are positive, between-group negative.
+4. Add a "rogue" positive edge 1–4. Which triangles become unbalanced?
 
-2. **Two-camp partition**: {1, 2, 3} vs {4, 5, 6}. All within-group edges positive, all cross-group edges negative.
-
-3. **Within-group positive, between-group negative**: confirmed.
-
-4. **Adding a "rogue" positive edge 1-4**: triangle (1, 4, 5) now has edges +, +, - (the new 1-4 is +, the existing 4-5 is +, the existing 1-5 is -). This is the (+, +, -) forbidden pattern → unbalanced. Similarly, triangles (1, 4, 6), (2, 4, 5), (2, 4, 6), (3, 4, 5), (3, 4, 6) all become unbalanced. The network is no longer perfectly balanced.
+> [!note]- Solution
+> ```python
+> import networkx as nx
+> from itertools import combinations
+>
+> G = nx.Graph()
+> G.add_edges_from([(1,2),(1,3),(2,3),(4,5),(4,6),(5,6)], sign=1)
+> G.add_edges_from([(1,4),(2,5),(3,6),(1,5),(2,6),(3,4)], sign=-1)
+>
+> def triangle_sign(G, t):
+>     a, b, c = t
+>     return G[a][b]["sign"] * G[b][c]["sign"] * G[a][c]["sign"]
+>
+> triangles = [t for t in combinations(G.nodes, 3)
+>              if all(G.has_edge(u, v) for u, v in combinations(t, 2))]
+> balanced = sum(1 for t in triangles if triangle_sign(G, t) > 0)
+> ```
+>
+> The partition {1, 2, 3} vs. {4, 5, 6} makes every triangle balanced. Adding the rogue edge 1–4 creates unbalanced triangles such as (1, 2, 4) and (1, 3, 4) — each becomes (+,+,−). The structural tension typically resolves either by breaking the rogue tie or by realigning groups.
 
 ### 7.C Relaxed Balance and Applications
 
 **Exercise 7.C.1: WWI Alliance Network**
 
-Allies: France, Britain, Russia (mutually +); Central Powers: Germany, Austria-Hungary (mutually +); all Allies-Central edges negative.
+Allies: France, Britain, Russia (mutually +); Central Powers: Germany, Austria-Hungary (mutually +); all Allies–Central edges negative.
 
-1. **Is the network perfectly balanced?** Yes, by the two-camp partition {Allies} vs {Central Powers}.
-2. **Match the two-camp Balance Theorem?** Yes — exactly two camps, all within-camp edges positive, all between-camp edges negative.
-3. **New country joining with positive ties to both camps**: this would create (+, +, -) triangles. E.g., if Italy joins and is friends with both France and Germany, then triangle (Italy, France, Germany) has +, +, - edges → unbalanced. The network becomes frustrated.
-4. **Italy switching from Germany to Allies in 1915**: this is *selection* / *realignment* — Italy was a former Central Power ally but switched sides. Under balance theory, this is exactly what you'd predict: an actor with conflicted ties to both camps will eventually align with one to reduce tension. Italy's switch is consistent with balance theory.
+1. Is this network perfectly balanced? Identify any unbalanced triangles.
+2. Does it match the two-camp Balance Theorem?
+3. What if a new country joins with positive ties to both camps?
+4. Italy switched from Germany to the Allies in 1915 — what does balance theory predict?
+
+> [!note]- Solution
+> 1. All within-camp triangles are (+,+,+). Cross-camp triangles like (France, Germany, Britain) are (−,−,+) — balanced. The network is **perfectly balanced**.
+> 2. **Yes** — exactly the two-camp realisation predicted by the Balance Theorem.
+> 3. A new country with positive ties to both camps creates (+,+,−) triangles immediately — unstable. Balance theory predicts the country must eventually choose a side.
+> 4. Italy initially had a positive tie to Germany while Allies–Germany was negative — straddling two hostile camps. The (+,+,−) tension is exactly what balance theory predicts must resolve, and the historical switch in 1915 eliminated the unbalanced triangles.
+
+---
 
 **Exercise 7.C.2: Approximate Balance in Real Networks**
 
-Using the karate club graph, sign edges by faction (within = +, cross = -).
+Using the karate club graph, sign edges by faction (within = +, cross = −).
 
-1. **Count balanced vs unbalanced triangles**: the original Zachary karate club graph has 78 triangles total. With faction-based signing, you'd count how many are balanced (even number of -) vs unbalanced (odd number of -).
-2. **Fraction balanced**: empirically, this is typically ~0.7-0.8 for the karate club — far above the 0.5 expected from random signing.
-3. **Removing top-5 cross-faction edges**: the fraction increases further (some cross-faction edges participate in many unbalanced triangles; removing them helps).
-4. **Plot fraction-balanced vs edges-removed**: shows a generally increasing trend, possibly with bumps. Used to identify "bridge" edges between factions.
+1. Count balanced vs unbalanced triangles.
+2. What fraction of triangles are balanced?
+3. Remove cross-faction edges in order of how many unbalanced triangles they participate in. After removing the top 5, how does the fraction change?
+4. Plot fraction-balanced vs edges-removed.
+
+> [!note]- Solution
+> ```python
+> import networkx as nx
+> from itertools import combinations
+>
+> G = nx.karate_club_graph()
+> factions = nx.get_node_attributes(G, "club")
+> for u, v in G.edges():
+>     G[u][v]["sign"] = 1 if factions[u] == factions[v] else -1
+>
+> def fraction_balanced(G):
+>     triangles = [t for t in combinations(G.nodes, 3)
+>                  if all(G.has_edge(u, v) for u, v in combinations(t, 2))]
+>     if not triangles:
+>         return 1.0
+>     pos = sum(1 for (a, b, c) in triangles
+>               if G[a][b]["sign"] * G[b][c]["sign"] * G[a][c]["sign"] > 0)
+>     return pos / len(triangles)
+> ```
+>
+> Real networks are typically approximately balanced (often ≥ 75%). Removing high-impact negative edges — those in many unbalanced triangles — improves the global balance fraction sharply, mirroring how social groups resolve tension by severing conflicting ties.
 
 ## Wrap-Up
 
