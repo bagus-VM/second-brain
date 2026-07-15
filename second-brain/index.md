@@ -9,14 +9,14 @@
 ---
 
 ## Exam Calendar
-| Course | Exam Date | Days Left | Progress |
-|--------|-----------|-----------|----------|
-| [[multimedia-databases]] | 21 July 2026 | ~13 | **9/9 lectures ✅** + Ex01–Ex09 practice complete ✅ (100+ pages) |
-| [[network-science]] | 28 July 2026 | ~20 | **9/9 lectures ✅** + Ex01–Ex08 (139 pages) |
-| [[reproducibility-engineering]] | 30 July 2026 | ~22 | **10/10 lectures ✅** + Sheet 1–10 (80+ pages) |
-| [[software-analyse]] | 31 July 2026 | ~23 | **11/11 lectures ✅** (100+ pages) |
-| [[iot-security]] | 05 Aug 2026 | ~27 | **9/9 lectures ✅** (~80 pages) + 3 papers ingested |
-| [[introduction-to-microelectronics]] | 06 Aug 2026 | ~28 | **9/9 lectures ✅** (~65 pages) |
+| Course                               | Exam Date    | Days Left | Progress                                                        |
+| ------------------------------------ | ------------ | --------- | --------------------------------------------------------------- |
+| [[multimedia-databases]]             | 21 July 2026 | ~13       | **9/9 lectures ✅** + Ex01–Ex09 practice complete ✅ (100+ pages) |
+| [[network-science]]                  | 28 July 2026 | ~20       | **9/9 lectures ✅** + Ex01–Ex08 (139 pages)                      |
+| [[reproducibility-engineering]]      | 30 July 2026 | ~22       | **10/10 lectures ✅** + Sheet 1–10 (80+ pages)                   |
+| [[software-analyse]]                 | 31 July 2026 | ~23       | **11/11 lectures ✅** (100+ pages)                               |
+| [[iot-security]]                     | 05 Aug 2026  | ~27       | **9/9 lectures ✅** (~80 pages) + 3 papers ingested              |
+| [[introduction-to-microelectronics]] | 06 Aug 2026  | ~28       | **9/9 lectures ✅** (~65 pages)                                  |
 
 ---
 
@@ -202,18 +202,18 @@
 | [[community-structure]] | Dense clusters, modularity | current |
 
 ### L02 — Graph Theory
-| Page | Summary | Status |
-|------|---------|--------|
-| [[graph-fundamentals]] | G=(V,E), modeling choices | current |
-| [[graph-representations]] | Edge list, adjacency list/matrix | current |
-| [[neighbourhood-and-degree]] | N(v), deg(v), handshaking lemma | current |
-| [[paths-walks-and-cycles]] | Walk → path → cycle hierarchy | current |
-| [[shortest-path-and-diameter]] | dist(u,v), diam(G) | current |
-| [[eulerian-path-and-circuit]] | Königsberg, degree parity | current |
-| [[breadth-first-search]] | BFS, FIFO, O(\|V\|+\|E\|) | current |
-| [[depth-first-search]] | DFS, LIFO, cycle detection | current |
-| [[dijkstras-algorithm]] | Weighted shortest paths | current |
-| [[connectivity-and-components]] | Connected, giant component | current |
+| Page                            | Summary                          | Status  |
+| ------------------------------- | -------------------------------- | ------- |
+| [[graph-fundamentals]]          | G=(V,E), modeling choices        | current |
+| [[graph-representations]]       | Edge list, adjacency list/matrix | current |
+| [[neighbourhood-and-degree]]    | N(v), deg(v), handshaking lemma  | current |
+| [[paths-walks-and-cycles]]      | Walk → path → cycle hierarchy    | current |
+| [[shortest-path-and-diameter]]  | dist(u,v), diam(G)               | current |
+| [[eulerian-path-and-circuit]]   | Königsberg, degree parity        | current |
+| [[breadth-first-search]]        | BFS, FIFO, O(\|V\|+\|E\|)        | current |
+| [[depth-first-search]]          | DFS, LIFO, cycle detection       | current |
+| [[dijkstras-algorithm]]         | Weighted shortest paths          | current |
+| [[connectivity-and-components]] | Connected, giant component       | current |
 
 ### L03 — Strong/Weak Ties
 | Page | Summary | Status |

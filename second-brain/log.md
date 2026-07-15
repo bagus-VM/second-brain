@@ -430,3 +430,5 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 - Note: L09 directory renamed from "9 - LLMs" to "9_-_LLMs" (naming convention, no content change)
 - Note: New resource URLs for L03 (Zobel ch4) and L06 (Docker Compose) — no new content to process
 - Total: 1 new page created, 3 existing pages updated
+
+## [2026-07-15] PREP | Network Science Exam (Jul 28) | Comprehensive exam prep created: 9 structured questions with equations, 9 open questions, quick-fire recall sheet, priority queue. Covers exercises 1-8, lectures 1-8. Focus on centrality equations, small-world formula, BFS/graph search algorithms.
