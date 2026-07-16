@@ -35,14 +35,14 @@ Based on Hadley Wickham's "Tidy Data" and SQL for Data Science.
 
 **Tidy version:**
 
-| student | exam   | grade |
-|---------|--------|-------|
-| Rozz    | midterm| 1.3   |
-| Andrew  | midterm| 2.0   |
-| Susie   | midterm| 1.7   |
-| Rozz    | final  | 2.3   |
-| Andrew  | final  | 1.7   |
-| Susie   | final  | 1.0   |
+| student | exam    | grade |
+| ------- | ------- | ----- |
+| Rozz    | midterm | 1.3   |
+| Andrew  | midterm | 2.0   |
+| Susie   | midterm | 1.7   |
+| Rozz    | final   | 2.3   |
+| Andrew  | final   | 1.7   |
+| Susie   | final   | 1.0   |
 
 **(b)** The table with columns student, stu_number, exam, grade → **Tidy.** Each row is an observation (student × exam), each column is a variable, each cell is a value.
 
