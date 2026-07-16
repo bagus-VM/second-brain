@@ -40,7 +40,7 @@ public class Dog {
 **Key rules:**
 - `public` = accessible from anywhere. `private` = only within this class.
 - `this.name` = the field. `name` = the parameter. Use `this.` to disambiguate.
-- Methods return a type (`String`, `int`, `void` for nothing).
+- Methods return a type (`String`, `int`, `void` for nothing). 
 
 ### Enums — Critical for Sign Analysis
 

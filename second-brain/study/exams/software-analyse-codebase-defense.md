@@ -3,12 +3,15 @@ title: "Software Analyse Exam — Codebase Defense Prep"
 tags: [exam-prep, software-analyse, codebase-explanation, semester-1]
 course: "Software Analyse"
 status: current
-last_updated: 2026-06-16
+last_updated: 2026-07-15
 prerequisites: ["[[sign-analysis]]", "[[readability-classifier]]"]
 ---
 
+> **See also:** [[software-analyse-exam-prep]] for the full MC exam topic map (10 topics, coverage analysis, MC strategy).
+
 ## Exam Intel
 
+**Format:** Multiple choice
 **Big part of exam:** Explain your own project codebases and the concepts inside them.
 
 This means:

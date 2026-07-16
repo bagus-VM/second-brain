@@ -432,3 +432,5 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 - Total: 1 new page created, 3 existing pages updated
 
 ## [2026-07-15] PREP | Network Science Exam (Jul 28) | Comprehensive exam prep created: 9 structured questions with equations, 9 open questions, quick-fire recall sheet, priority queue. Covers exercises 1-8, lectures 1-8. Focus on centrality equations, small-world formula, BFS/graph search algorithms.
+
+## [2026-07-10] CREATE | RepEng In-Class Exercise Solutions (IC_1-IC_10) | 10 practice pages created in study/practice/repeng-prof-ic{01-10}.md
