@@ -169,6 +169,8 @@
 ### Practice & Flashcards
 | Page | Summary | Status |
 | [[reproducibility-engineering-sheet-10]] | Exercise Sheet 10: Docker secrets, LLM reproducibility (temperature/seed), structured outputs | current |
+| [[reproducibility-engineering-sheet-11]] | Exercise Sheet 11: multi-stage Docker builds, remote experiment workflows, HDF5 storage | current |
+| [[repeng-prof-ic11]] | In-Class Exercise 11: FAIR principles, legal frameworks (copyright, GDPR, trade secrets, sui generis) | current |
 |------|---------|--------|
 | [[mmdb-ex01]] | Exercise sheet 1: multimedia fundamentals | current |
 | [[mmdb-ex02]] | Exercise sheet 2: color models | current |
@@ -453,6 +455,10 @@
 |------|---------|--------|
 | [[reproducibility-engineering-lecture-6]] | DB architectures (file-based, client/server), SQLite features, Docker Compose, foreign tables | current |
 | [[containerization-for-builds]] | Docker for reproducible environments (prereq from L05) | current |
+| [[multi-stage-docker-build]] | Separate build and runtime stages; ship only the artifact | current |
+| [[fair-data-principles]] | FAIR: Findable, Accessible, Interoperable, Reusable -- machine-actionable data | current |
+| [[legal-frameworks-research-data]] | Copyright, GDPR, trade secrets, sui generis -- layered legal protection for databases | current |
+| [[sui-generis-database-right]] | EU database right protecting substantial investment in data compilation | current |
 | [[binary-build-reproducibility]] | Bitwise-identical builds; the 4-snippet question (1 of 4 reproducible) | current |
 | [[c-preprocessor]] | `__FILE__`, `__LINE__`, `__TIME__`, `__DATE__` as build-time non-determinism sources | current |
 | [[out-of-source-build]] | Build artefacts in a separate dir; `mkdir build && cd build && ../configure` | current |

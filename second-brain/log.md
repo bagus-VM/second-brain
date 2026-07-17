@@ -434,3 +434,21 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 ## [2026-07-15] PREP | Network Science Exam (Jul 28) | Comprehensive exam prep created: 9 structured questions with equations, 9 open questions, quick-fire recall sheet, priority queue. Covers exercises 1-8, lectures 1-8. Focus on centrality equations, small-world formula, BFS/graph search algorithms.
 
 ## [2026-07-10] CREATE | RepEng In-Class Exercise Solutions (IC_1-IC_10) | 10 practice pages created in study/practice/repeng-prof-ic{01-10}.md
+
+## [2026-07-17] INGEST | RepEng Exercise Sheet 11 | 1 page created, 2 updated
+- Created: study/practice/reproducibility-engineering-sheet-11.md (multi-stage Docker builds, remote experiment workflows with SSH/tmux, HDF5 storage/inspection, MC solutions)
+- Created: vault/concepts/multi-stage-docker-build.md (new concept: separate build/runtime stages, scratch images, static linking)
+- Updated: vault/concepts/hdf5.md (added cross-link to sheet-11)
+- Updated: vault/concepts/containerization-for-builds.md (added cross-link to multi-stage-docker-build)
+- Updated: index.md (added sheet-11 and multi-stage-docker-build entries)
+
+## [2026-07-17] INGEST | RepEng IC_11 + HDF5 Cheatsheet | 3 pages created, 2 updated
+- Created: study/practice/repeng-prof-ic11.md (FAIR principles Q1-6, legal frameworks Q7-11, all solutions)
+- Created: vault/concepts/fair-data-principles.md (FAIR: Findable, Accessible, Interoperable, Reusable)
+- Created: vault/concepts/legal-frameworks-research-data.md (copyright, GDPR, trade secrets, sui generis)
+- Created: vault/concepts/sui-generis-database-right.md (EU database right, BHB v. William Hill, Toll Collect)
+- Updated: vault/concepts/hdf5.md (resolved FAIR open question, added cross-links)
+- Updated: vault/concepts/gdpr-compliance.md (added cross-link to legal-frameworks-research-data)
+- Updated: index.md (added IC_11 + 3 concept pages)
+- Note: HDF5_cheatsheet.pdf is supplementary reference for Sheet 11 HDF5 tasks, already covered by existing hdf5.md
+- Note: RepEng-ex09.rnote and RepEng-ex10.rnote are binary handwritten notes, not extractable

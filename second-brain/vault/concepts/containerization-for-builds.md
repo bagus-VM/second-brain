@@ -99,6 +99,7 @@ docker run --rm my-build-env sha256sum /build/tool
 - [[source-date-epoch]] -- Set in the container environment
 - [[package-manager-reproducibility]] -- Lock files complement container pinning
 - [[reproducibility-engineering-lecture-5]] -- Lecture context
+- [[multi-stage-docker-build]] -- an optimization technique that separates build and runtime stages
 
 ## Open Questions
 
