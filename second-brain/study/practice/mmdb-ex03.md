@@ -76,7 +76,24 @@ last_updated: 2026-06-02
 > - **CIE XYZ:** Additive, linear light color space useful for calculating color mixtures, but NOT perceptually uniform. Distance between two colors does not relate to how similar/different they appear. Chromatic adaptation not well represented.
 > - **CIE L\*a\*b\*:** Oriented towards physiological properties of human color perception. Distance between colors accurately predicts perceived similarity. All colors chromatically adapted to D50 (5000K) for consistent comparison across conditions.
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-03]]
-- [[multimedia-databases-lecture-04]]
+---
+
+## Related Resources
+
+### 📖 Lecture 02: Color Models
+- Lecture topic: [[multimedia-databases-lecture-02]]
+
+**Key concepts covered:**
+- [[color-perception]]
+- [[metamers]]
+- [[chromatic-adaptation]]
+- [[color-models-overview]]
+- [[color-gamut]]
+- [[rgb-color-model]]
+- [[cmyk-color-model]]
+- [[hsv-color-model]]
+- [[cie-chromaticity-diagram]]
+- [[lab-color-space]]
+- [[yuv-color-space]]
+- [[hmmd-color-space]]

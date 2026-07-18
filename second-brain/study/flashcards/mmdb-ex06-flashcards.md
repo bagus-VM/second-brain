@@ -25,3 +25,27 @@ last_updated: 2026-06-02
 
 > [!question]- Why are DC and AC coefficients entropy coded differently in JPEG?
 > [!answer]- DC coefficients change slowly between adjacent blocks → **DPCM** (differential coding) encodes the difference from the previous DC value. AC coefficients vary more → **RLE + Huffman** encoding is used to efficiently represent runs of zero values followed by non-zero coefficients.
+
+
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 05 (Coding and Compression)
+- Lecture topic: [[multimedia-databases-lecture-05]]
+
+**Key concepts covered:**
+- [[lossless-vs-lossy-compression]]
+- [[run-length-encoding]]
+- [[lz77-lzw-compression]]
+- [[entropy-coding-huffman-arithmetic]]
+- [[transform-coding]]
+- [[jpeg-compression-pipeline]]
+- [[color-space-conversion-ycbcr]]
+- [[mpeg-video-compression]]
+- [[h264-avc-video-compression]]
+- [[rate-distortion-theory]]
+- [[video-formats-container-vs-codec]]
+- [[jpeg2000-wavelet-compression]]
+- [[audio-quantization-pcm]]
+- [[color-quantization]]

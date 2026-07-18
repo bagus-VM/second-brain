@@ -227,7 +227,16 @@ response = client.responses.create(
 2. `False` — prevents extra properties not in schema
 3. `True` — enables strict schema enforcement
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-9]]
+## Related Resources
+
+### 📖 Lecture 9: LLMs and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-9]]
+
+**Key concepts covered:**
+- [[types-of-reproducibility]]
+- [[levels-of-reproducibility]]
+- [[reproducibility-crisis]]
+- [[json-schema]]

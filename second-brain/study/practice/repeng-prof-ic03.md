@@ -155,7 +155,19 @@ In both methods, the length of the study was the same (four months). However, Me
 
 Method B had **more** participants (421) than Method A (375). However, **fewer** words were learned actively in Method B (456) compared to Method A (500). Method A enabled learners to understand **many more** words (3,000 vs 1,500). On the other hand, Method B taught **more** tenses (8 vs 5) and led to **much** better writing ability. Method B also produced **fewer** speaking errors (**efficiently** reducing them to 15% vs 35%). Overall, Method A performed **significantly** better for vocabulary acquisition, while Method B worked **more** effectively for grammar and accuracy.
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-3]]
+## Related Resources
+
+### 📖 Reproducibility Engineering – Lecture 3: Hypotheses
+- Lecture topic: [[reproducibility-engineering-lecture-3]]
+
+**Key concepts covered:**
+- [[hypothesis-formulation]]
+- [[presenting-experiments]]
+- [[levels-of-equivalence]]
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[computational-reproducibility-in-ml]]
+- [[research-artifacts]]

@@ -27,3 +27,22 @@ last_updated: 2026-06-02
 
 > [!question]- What is `git reflog` used for?
 > [!answer]- `git reflog` lists all previous HEAD positions known to Git, including states before resets or rebases. It's a safety net: if you make a mistake during a rebase, you can find the previous good commit hash and reset to it with `git reset --hard <hash>`.
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 5: Reproducible Builds
+- Lecture topic: [[reproducibility-engineering-lecture-5]]
+
+**Key concepts covered:**
+- [[diffoscope]]
+- [[deterministic-builds]]
+- [[build-environment-isolation]]
+- [[source-date-epoch]]
+- [[ci-cd-for-reproducibility]]
+- [[containerization-for-builds]]
+- [[package-manager-reproducibility]]
+- [[make-and-build-systems]]
+- [[c-preprocessor]]

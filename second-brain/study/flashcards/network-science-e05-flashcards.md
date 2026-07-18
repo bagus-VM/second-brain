@@ -27,3 +27,20 @@ last_updated: 2026-06-02
 
 > [!question]- What is the difference between direct-link similarity and neighbourhood-overlap similarity in hierarchical clustering?
 > [!answer]- Direct-link similarity measures whether two nodes share an edge — it merges nearby nodes but ignores global structure. Neighbourhood-overlap similarity = |N(u)∩N(v)|/|N(u)∪N(v)| measures shared neighbours even without a direct link. It is more robust to missing edges and better captures social equivalence.
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L05: Social Context and Link Formation
+- Lecture topic: [[network-science-l05]]
+
+**Key concepts covered:**
+- [[homophily]]
+- [[echo-chambers]]
+- [[network-autocorrelation]]
+- [[selection-vs-socialization]]
+- [[affiliation-networks]]
+- [[schelling-segregation-model]]
+- [[modularity]]

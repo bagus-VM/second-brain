@@ -25,3 +25,28 @@ last_updated: 2026-06-02
 
 > [!question]- What are the two approaches to handle edge pixels in convolution filtering?
 > [!answer]- (1) **Redefine convolution at edges:** Output 0 or I(x,y) when kernel falls off boundary. (2) **Padding:** Zero padding (fill with 0s) or symmetric padding (mirror image at boundary).
+
+
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 04 (Media: Text, Video, Audio)
+- Lecture topic: [[multimedia-databases-lecture-04]]
+
+**Key concepts covered:**
+- [[ascii-unicode-character-encoding]]
+- [[xml-structured-text]]
+- [[video-hierarchy-shots-scenes]]
+- [[shot-segmentation]]
+- [[video-summarization-key-frames]]
+- [[video-formats-container-vs-codec]]
+- [[video-frame-rate-resolution]]
+- [[audio-sampling-nyquist-theorem]]
+- [[pcm-digital-audio]]
+- [[audio-quantization-pcm]]
+- [[multimedia-database-intro]]
+- [[multimedia-definition]]
+- [[image-point-operations]]
+- [[dithering]]
+- [[jpeg-compression-pipeline]]

@@ -109,7 +109,19 @@ Store and share the intermediate results (e.g., trained models, processed data) 
 **(i)** "Their attempts to solve this simple problem are unnecessarily **complicated**."
 **(j)** "An even greater source of **concern** is the fact that . . ."
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-2]]
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 2: Levels and Provenance
+- Lecture topic: [[reproducibility-engineering-lecture-2]]
+
+**Key concepts covered:**
+- [[levels-of-reproducibility]]
+- [[provenance-in-reproducibility]]
+- [[vistrails]]
+- [[workflow-reproducibility]]
+- [[reproducibility-standards-bronze-silver-gold]]
+- [[computational-reproducibility-in-ml]]
+- [[data-provenance]]

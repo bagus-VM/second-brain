@@ -192,9 +192,26 @@ Based on:
 >
 > The key insight: research institutions sit at the center, contracting with repository providers and managing consent/licenses with data providers. Legal protection is layered -- copyright for creative elements, sui generis for the database investment, GDPR for personal data, trade secrecy for confidential business data.
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-8]] -- HDF5 and data formats (data interoperability connects to FAIR)
-- [[reproducibility-engineering-lecture-10]] -- artifact packaging (FAIR applies to research artifacts)
-- [[fair-data-principles]] -- concept page for FAIR
-- [[legal-frameworks-research-data]] -- concept page for legal frameworks
-- [[sui-generis-database-right]] -- concept page for the EU database right
+
+---
+
+## Related Resources
+
+### 📖 Lecture 9: LLMs and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-9]]
+
+**Key concepts covered:**
+- [[types-of-reproducibility]]
+- [[levels-of-reproducibility]]
+- [[reproducibility-crisis]]
+- [[json-schema]]
+
+### 📖 Lecture 10: Remote Experiments and Artifact Packaging
+- Lecture topic: [[reproducibility-engineering-lecture-10]]
+
+**Key concepts covered:**
+- [[reproducible-builds]]
+- [[containerization-for-builds]]
+- [[artifact-packaging]]
+- [[git-for-reproducibility]]
+- [[git-patches-and-diffs]]

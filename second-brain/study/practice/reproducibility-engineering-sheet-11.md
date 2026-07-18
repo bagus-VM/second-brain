@@ -332,9 +332,17 @@ last_updated: 2026-07-17
 >
 > **Answer: 4** (statements ii, iii, iv, v are true)
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-10]] -- remote experiment workflows and artifact packaging
-- [[reproducibility-engineering-lecture-8]] -- HDF5, JSON, XML hierarchical data formats
-- [[multi-stage-docker-build]] -- concept page for multi-stage builds
-- [[hdf5]] -- concept page for HDF5
-- [[containerization-for-builds]] -- Docker for build isolation
+
+---
+
+## Related Resources
+
+### 📖 Lecture 10: Remote Experiments and Artifact Packaging
+- Lecture topic: [[reproducibility-engineering-lecture-10]]
+
+**Key concepts covered:**
+- [[reproducible-builds]]
+- [[containerization-for-builds]]
+- [[artifact-packaging]]
+- [[git-for-reproducibility]]
+- [[git-patches-and-diffs]]

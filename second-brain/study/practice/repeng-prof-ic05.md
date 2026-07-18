@@ -260,7 +260,21 @@ int init_result = someinitialization();
 assert(init_result == FALSE);
 ```
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-5]]
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 5: Reproducible Builds
+- Lecture topic: [[reproducibility-engineering-lecture-5]]
+
+**Key concepts covered:**
+- [[diffoscope]]
+- [[deterministic-builds]]
+- [[build-environment-isolation]]
+- [[source-date-epoch]]
+- [[ci-cd-for-reproducibility]]
+- [[containerization-for-builds]]
+- [[package-manager-reproducibility]]
+- [[make-and-build-systems]]
+- [[c-preprocessor]]

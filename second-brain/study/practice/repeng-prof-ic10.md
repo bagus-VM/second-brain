@@ -93,7 +93,17 @@ This exercise involves walking through the reproduction package at https://githu
 
 **Takeaway:** Even when the experiment itself can't be containerized (e.g., running on specialized hardware), you can still ensure reproducibility of the build process and the data analysis.
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-10]]
+## Related Resources
+
+### 📖 Lecture 10: Remote Experiments and Artifact Packaging
+- Lecture topic: [[reproducibility-engineering-lecture-10]]
+
+**Key concepts covered:**
+- [[reproducible-builds]]
+- [[containerization-for-builds]]
+- [[artifact-packaging]]
+- [[git-for-reproducibility]]
+- [[git-patches-and-diffs]]

@@ -141,12 +141,27 @@ Let `I` be a 12 × 12 RGB image.
 - Mixing up "color depth" (bits per pixel) with "bit depth per channel". A 24-bpp RGB image has 8 bits per channel.
 - Reporting PPI without showing the geometric step — the prof will dock points for "I just divided them."
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-03]]
-- [[multimedia-databases-lecture-04]]
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 03 (Image and Dithering)
+- Lecture topic: [[multimedia-databases-lecture-03]]
+
+**Key concepts covered:**
 - [[image-representation-bitmap]]
-- [[image-file-formats]]
-- [[color-quantization]]
-- [[dithering]]
+- [[image-resolution-dpi-ppi]]
+- [[image-interpolation]]
 - [[pixel-formats-and-bit-depth]]
+- [[color-quantization]]
+- [[color-lookup-table]]
+- [[dithering]]
+- [[floyd-steinberg-dithering]]
+- [[image-file-formats]]
+- [[jpeg-compression-pipeline]]
+- [[jpeg2000-wavelet-compression]]
+- [[vector-graphics-svg]]
+- [[bezier-curves]]
+- [[image-point-operations]]
+- [[linear-convolution-filters]]

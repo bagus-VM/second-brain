@@ -129,7 +129,18 @@ When querying a large CSV as a foreign table:
 
 **Answer:** All three queries require scanning the entire file because CSV is a flat, unindexed format. There's no way to skip rows or use an index.
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-6]]
+## Related Resources
+
+### 📖 Lecture 6: Database System Architectures and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-6]]
+
+**Key concepts covered:**
+- [[containerization-for-builds]]
+- [[reproducible-builds]]
+- [[sqlite-architecture]]
+- [[docker-compose]]
+- [[foreign-tables-postgresql]]
+- [[client-server-db-architecture]]

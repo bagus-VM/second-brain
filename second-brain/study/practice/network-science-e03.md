@@ -185,9 +185,22 @@ Assign synthetic strength values to karate-club edges (within-faction strong, ac
 > [!note]- Solution
 > Pearson correlation is typically > 0.6, confirming that tie strength and neighbourhood overlap are linked: close-knit groups share friends, while bridging ties remain socially isolated. High-strength ties with low overlap may indicate bridging relationships that involve significant social effort.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l03]]
-- [[network-science-l04]]
+### 📖 L03 — Strong and Weak Ties
+- Lecture topic: [[network-science-l03]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[triadic-closure]]
+- [[strong-triadic-closure]]
+- [[maxstc-complexity]]
+- [[clustering-coefficient]]
+- [[neighborhood-overlap]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
+- [[social-capital]]
+- [[structural-holes]]

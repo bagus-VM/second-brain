@@ -103,9 +103,27 @@ Using the two-triangle + node 7 graph from Exercise 4.B.1:
 >
 > **Pure bridges:** High betweenness with low clustering (like node 32 in the karate club) indicates a pure bridge connecting otherwise separate groups.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l04]]
-- [[network-science-l05]]
+### 📖 L04 — Communities and Graph Partitioning
+- Lecture topic: [[network-science-l04]]
+
+**Key concepts covered:**
+- [[structural-holes-and-brokerage]]
+- [[centrality-measures]]
+- [[modularity]]
+- [[community-detection-overview]]
+- [[girvan-newman-algorithm]]
+- [[louvain-algorithm]]
+- [[leiden-algorithm]]
+- [[hierarchical-clustering]]
+- [[graph-partitioning-cut-spectral]]
+- [[graph-partitioning]]
+- [[zacharys-karate-club]]
+- [[product-space-network]]
+- [[modularity-resolution-limit]]
+- [[edge-betweenness]]
+- [[embedding-based-community-detection]]

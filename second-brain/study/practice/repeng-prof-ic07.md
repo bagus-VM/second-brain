@@ -231,7 +231,19 @@ Better example: Moving a file to trash/recycle bin. The original location is los
 
 The table and all its data are permanently gone (without a backup). There is no way to undo this with SQL alone.
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-7]]
+## Related Resources
+
+### 📖 Lecture 7: Tidy Data
+- Lecture topic: [[reproducibility-engineering-lecture-7]]
+
+**Key concepts covered:**
+- [[data-provenance]]
+- [[workflow-reproducibility]]
+- [[client-server-db-architecture]]
+- [[sqlite-architecture]]
+- [[tidy-data]]
+- [[json-schema]]
+- [[hdf5]]

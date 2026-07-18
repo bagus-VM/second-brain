@@ -131,20 +131,21 @@ So 2 of 4 are bitwise reproducible: programs 1 and 4.
 - `results/results.csv` does NOT depend on `generate_chart.py` → not rebuilt
 - Answer: **results/chart.pdf and experiment.pdf** (both are rebuilt)
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-5]]
-- [[reproducibility-engineering-lecture-6]]
-- [[reproducible-builds]]
-- [[containerization-for-builds]]
-- [[source-date-epoch]]
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 5: Reproducible Builds
+- Lecture topic: [[reproducibility-engineering-lecture-5]]
+
+**Key concepts covered:**
 - [[diffoscope]]
+- [[deterministic-builds]]
 - [[build-environment-isolation]]
-- [[reprotest]]
-- [[binary-build-reproducibility]] — the umbrella concept: bitwise-identical builds
-- [[c-preprocessor]] — the `__FILE__`, `__TIME__`, `__LINE__` non-determinism sources
-- [[out-of-source-build]] — the hygiene practice (build/ separate from src/)
-- [[make-dependency-tracking]] — Make's mtime-based algorithm
-- [[sqlite-architecture]] — the file-based DB
-- [[docker-compose]] — the standard for multi-service DB stacks
-- [[client-server-db-architecture]] — the contrast to file-based
-- [[foreign-tables-postgresql]] — for capturing experiment metadata
+- [[source-date-epoch]]
+- [[ci-cd-for-reproducibility]]
+- [[containerization-for-builds]]
+- [[package-manager-reproducibility]]
+- [[make-and-build-systems]]
+- [[c-preprocessor]]

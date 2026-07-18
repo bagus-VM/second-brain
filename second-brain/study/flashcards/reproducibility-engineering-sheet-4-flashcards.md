@@ -27,3 +27,23 @@ last_updated: 2026-06-02
 
 > [!question]- How does using `pip install` without version pinning in a Dockerfile affect reproducibility?
 > [!answer]- `pip install` fetches the latest version of a package at build time. Over months, new releases may introduce breaking changes or API differences, causing the image to build differently. Pinning versions (e.g., `pip install pandas==2.2.0`) ensures deterministic builds.
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 4: Git
+- Lecture topic: [[reproducibility-engineering-lecture-4]]
+
+**Key concepts covered:**
+- [[git-dag-structure-and-internals]]
+- [[developer-certificate-of-origin]]
+- [[git-branching-and-merging]]
+- [[git-rebasing-and-history-rewriting]]
+- [[git-commit-hygiene]]
+- [[gitignore-and-gitattributes]]
+- [[git-patches-and-diffs]]
+- [[git-for-reproducibility]]
+- [[data-provenance]]
+- [[computational-reproducibility-in-ml]]

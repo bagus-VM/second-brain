@@ -50,7 +50,20 @@ last_updated: 2026-06-02
 > - **Video playlist:** Semi-structured data model → XPath, structured matching and limited indexing. Embedded links to video instances, provides structure and maintains hyperlinks.
 > - **Video recommender:** Semi-structured data model → semantic search, fuzzy matching. Result structure changes with underlying content.
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-01]]
-- [[multimedia-databases-lecture-02]]
+---
+
+## Related Resources
+
+### 📖 Multimedia Databases — Lecture 01 Overview
+- Lecture topic: [[multimedia-databases-lecture-01]]
+
+**Key concepts covered:**
+- [[multimedia-definition]]
+- [[media-types-discrete-continuous]]
+- [[data-streams]]
+- [[multimedia-system]]
+- [[multimedia-main-domains]]
+- [[multimedia-database-intro]]
+- [[structured-vs-unstructured-retrieval]]
+- [[multimedia-query-predicates]]

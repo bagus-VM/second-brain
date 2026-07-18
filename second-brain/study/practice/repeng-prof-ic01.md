@@ -101,7 +101,17 @@ Likely challenges: dependency rot (libraries updated/broken), missing environmen
 - Archive everything with a DOI at submission time
 - Write clear documentation *during* development, not after
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-1]]
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 1 Overview
+- Lecture topic: [[reproducibility-engineering-lecture-1]]
+
+**Key concepts covered:**
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[research-artifacts]]
+- [[artifact-availability]]
+- [[types-of-reproducibility]]

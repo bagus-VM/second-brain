@@ -209,7 +209,18 @@ if __name__ == "__main__":
     main()
 ```
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-8]]
+## Related Resources
+
+### 📖 Lecture 8: Hierarchical Data Formats
+- Lecture topic: [[reproducibility-engineering-lecture-8]]
+
+**Key concepts covered:**
+- [[visitor-pattern]]
+- [[xml-structured-text]]
+- [[json-schema]]
+- [[hdf5]]
+- [[data-provenance]]
+- [[tidy-data]]

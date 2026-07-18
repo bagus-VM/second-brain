@@ -130,9 +130,20 @@ Two scenarios:
 > 2. **Yes, in a connected network, both scenarios eventually reach all students.** The condition is connectivity — if every student is part of the same connected component, any starting point will eventually reach everyone.
 > 3. **Who receives the message first matters enormously for speed, not just for final reach.** A message that reaches a hub first spreads exponentially; one that starts at the periphery spreads linearly along chains. This is why marketing, public health, and influence campaigns all target structurally central individuals — structure shapes velocity of diffusion, independent of content.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l01]]
-- [[network-science-l02]]
+### 📖 Network Science L01: Introduction — Topic Overview
+- Lecture topic: [[network-science-l01]]
+
+**Key concepts covered:**
+- [[network-intro]]
+- [[network-examples]]
+- [[edge-types]]
+- [[network-effects]]
+- [[connected-component]]
+- [[community-structure]]
+- [[network-diffusion]]
+- [[centrality]]

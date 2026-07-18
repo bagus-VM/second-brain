@@ -148,10 +148,27 @@ HK point operation: `P_out = α · P_in + β`, with 8-bit grayscale (`P ∈ [0, 
 - Reporting 5×5 kernels without specifying that weights are normalized — the prof will ask "do they sum to 1?" and the answer needs to be yes.
 - Calling the Laplacian "for blurring." It's for **edge detection / sharpening**, not smoothing.
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-03]]
-- [[multimedia-databases-lecture-04]]
-- [[image-representation-bitmap]]
-- [[linear-convolution-filters]]
-- [[pixel-formats-and-bit-depth]]
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 04 (Media: Text, Video, Audio)
+- Lecture topic: [[multimedia-databases-lecture-04]]
+
+**Key concepts covered:**
+- [[ascii-unicode-character-encoding]]
+- [[xml-structured-text]]
+- [[video-hierarchy-shots-scenes]]
+- [[shot-segmentation]]
+- [[video-summarization-key-frames]]
+- [[video-formats-container-vs-codec]]
+- [[video-frame-rate-resolution]]
+- [[audio-sampling-nyquist-theorem]]
+- [[pcm-digital-audio]]
+- [[audio-quantization-pcm]]
+- [[multimedia-database-intro]]
+- [[multimedia-definition]]
+- [[image-point-operations]]
+- [[dithering]]
+- [[jpeg-compression-pipeline]]

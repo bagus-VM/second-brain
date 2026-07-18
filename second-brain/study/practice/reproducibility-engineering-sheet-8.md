@@ -264,3 +264,20 @@ Uses `countries_who_tidy` from Task 2.5.
 - [[tidy-data]]
 - [[reproducibility-engineering-lecture-6]]
 - [[provenance-in-reproducibility]]
+
+
+---
+
+## Related Resources
+
+### 📖 Lecture 7: Tidy Data
+- Lecture topic: [[reproducibility-engineering-lecture-7]]
+
+**Key concepts covered:**
+- [[data-provenance]]
+- [[workflow-reproducibility]]
+- [[client-server-db-architecture]]
+- [[sqlite-architecture]]
+- [[tidy-data]]
+- [[json-schema]]
+- [[hdf5]]

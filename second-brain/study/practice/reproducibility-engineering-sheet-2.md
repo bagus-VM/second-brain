@@ -84,8 +84,19 @@ Given a Dockerfile with specific issues, evaluate against the checklist:
 4. After fixing, are there still violations? → **Yes** (packages not sorted alphabetically)
 5. Can we guarantee the exact same image long-term? → **No** (unpinned package versions)
 
-## Related Lectures
 
-- [[reproducibility-engineering-lecture-2]]
-- [[reproducibility-engineering-lecture-3]]
-- [[reproducibility-engineering-lecture-4]]
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 2: Levels and Provenance
+- Lecture topic: [[reproducibility-engineering-lecture-2]]
+
+**Key concepts covered:**
+- [[levels-of-reproducibility]]
+- [[provenance-in-reproducibility]]
+- [[vistrails]]
+- [[workflow-reproducibility]]
+- [[reproducibility-standards-bronze-silver-gold]]
+- [[computational-reproducibility-in-ml]]
+- [[data-provenance]]

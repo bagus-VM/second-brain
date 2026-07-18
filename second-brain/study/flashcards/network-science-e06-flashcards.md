@@ -36,3 +36,25 @@ last_updated: 2026-06-02
 - [[ei-index]] — the (E−I)/(E+I) measure
 - [[triadic-focal-membership-closure]] — three mechanisms for new ties in projections
 - [[confounding]] — the third explanation beyond selection and socialisation
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L06: Structural Balance
+- Lecture topic: [[network-science-l06]]
+
+**Key concepts covered:**
+- [[balance-theorem]]
+- [[weak-structural-balance]]
+- [[frustration-index]]
+- [[signed-laplacian]]
+- [[signed-graphs]]
+- [[balanced-triads]]
+- [[structural-balance-theory]]
+- [[k-balance]]
+- [[cycle-criterion]]
+- [[schelling-segregation-model]]
+- [[homophily]]
+- [[algebraic-connectivity]]

@@ -25,3 +25,28 @@ last_updated: 2026-06-02
 
 > [!question]- What is noise dithering?
 > [!answer]- Adding uniformly distributed white noise to the input image before quantization to reduce visible effects like color banding. Formula: P(x,y) = Q(I(x,y) + noise(x,y)).
+
+
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 03 (Image and Dithering)
+- Lecture topic: [[multimedia-databases-lecture-03]]
+
+**Key concepts covered:**
+- [[image-representation-bitmap]]
+- [[image-resolution-dpi-ppi]]
+- [[image-interpolation]]
+- [[pixel-formats-and-bit-depth]]
+- [[color-quantization]]
+- [[color-lookup-table]]
+- [[dithering]]
+- [[floyd-steinberg-dithering]]
+- [[image-file-formats]]
+- [[jpeg-compression-pipeline]]
+- [[jpeg2000-wavelet-compression]]
+- [[vector-graphics-svg]]
+- [[bezier-curves]]
+- [[image-point-operations]]
+- [[linear-convolution-filters]]

@@ -46,3 +46,33 @@ last_updated: 2026-06-14
 
 > [!question]- Why is the frustration index NP-hard?
 > [!answer]- Computing the minimum number of edge sign flips to achieve balance is equivalent to finding the maximum cut of a related graph (a classical NP-hard problem). In practice, approximation algorithms and spectral methods (signed Laplacian) are used.
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L07 — Small-World Networks
+- Lecture topic: [[network-science-l07]]
+
+**Key concepts covered:**
+- [[milgrams-experiment-six-degrees]]
+- [[Pasted image 20260610105308.png]]
+- [[small-world-property]]
+- [[watts-strogatz-model]]
+- [[kleinberg-decentralized-search]]
+- [[global-email-experiment]]
+- [[random-graphs]]
+- [[scale-free-networks]]
+- [[preferential-attachment]]
+- [[power-law-distribution]]
+- [[web-bow-tie-structure]]
+- [[hnsw-indexing]]
+- [[graph-fundamentals]]
+- [[neighbourhood-and-degree]]
+- [[clustering-coefficient]]
+- [[triadic-closure]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
+- [[structural-balance-theory]]
+- [[signed-graphs]]

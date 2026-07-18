@@ -297,3 +297,196 @@ arr[top];  // index is ZERO_PLUS → isMaybeNegative=false → no warning
 - What other abstract domains could you use? (intervals, parity, nullness)
 - How would you add condition narrowing?
 - What's the difference between sound and complete analysis?
+
+
+---
+
+## Related Resources
+
+### 📖 Software Analyse - Lecture 1 Overview
+- Lecture topic: [[software-analyse-lecture-1]]
+
+**Key concepts covered:**
+- [[software-analysis]]
+- [[rices-theorem]]
+- [[soundness-and-completeness]]
+- [[abstract-interpretation]]
+- [[hierarchy-of-analysis]]
+- [[static-vs-dynamic-analysis]]
+- [[code-clones]]
+- [[software-analyse-projects-overview]]
+
+### 📖 Software Analyse — Lecture 2: Tokens and Naturalness of Code
+- Lecture topic: [[software-analyse-lecture-2]]
+
+**Key concepts covered:**
+- [[lexical-analysis]]
+- [[finite-automata-and-regular-expressions]]
+- [[tokenization-and-token-types]]
+- [[lex-and-flex]]
+- [[ccfinder]]
+- [[n-gram-language-models]]
+- [[perplexity-and-entropy]]
+- [[surprisal-and-code-prediction]]
+- [[smoothing-techniques]]
+- [[code-naturalness-hypothesis]]
+- [[buggy-code-naturalness]]
+- [[code-clones]]
+- [[abstract-interpretation]]
+
+### 📖 Lecture 3: Parsing – Topic Overview
+- Lecture topic: [[software-analyse-lecture-3]]
+
+**Key concepts covered:**
+- [[context-free-grammar]]
+- [[grammar-ambiguity]]
+- [[operator-precedence-associativity]]
+- [[parse-tree]]
+- [[abstract-syntax-tree]]
+- [[predictive-parsing]]
+- [[shift-reduce-parsing]]
+- [[first-sets]]
+- [[left-recursion-elimination]]
+- [[left-factoring]]
+- [[syntax-directed-translation]]
+
+### 📖 Lecture 4: Control Flow Analysis – Topic Overview
+- Lecture topic: [[software-analyse-lecture-4]]
+
+**Key concepts covered:**
+- [[control-flow-graph]]
+- [[basic-block]]
+- [[dominance]]
+- [[post-dominance]]
+- [[control-dependence]]
+- [[natural-loop]]
+- [[dominator-tree]]
+- [[abstract-syntax-tree]]
+- [[liveness-analysis]]
+- [[available-expressions]]
+- [[monotone-framework]]
+
+### 📖 Lecture 5: Data Flow Analysis – Topic Overview
+- Lecture topic: [[software-analyse-lecture-5]]
+
+**Key concepts covered:**
+- [[data-flow-analysis]]
+- [[gen-kill-analysis]]
+- [[iterative-data-flow-analysis]]
+- [[reaching-definitions]]
+- [[available-expressions]]
+- [[live-variable-analysis]]
+- [[very-busy-expressions]]
+- [[du-chains-ud-chains]]
+- [[control-flow-graph]]
+- [[dead-code-elimination]]
+- [[common-subexpression-elimination]]
+- [[register-allocation]]
+
+### 📖 Lecture 6: Data Flow Analysis Part 2 — Lattice-Theoretic Framework and Abstract Interpretation
+- Lecture topic: [[software-analyse-lecture-6]]
+
+**Key concepts covered:**
+- [[monotone-framework]]
+- [[data-flow-analysis]]
+- [[lattice]]
+- [[iterative-data-flow-analysis]]
+- [[mop-vs-mfp]]
+- [[distributive-framework]]
+- [[abstract-interpretation]]
+- [[zero-analysis-worked-example]]
+- [[minimal-fixed-point-algorithm]]
+- [[galois-connection]]
+- [[reaching-definitions]]
+- [[available-expressions]]
+- [[live-variable-analysis]]
+- [[very-busy-expressions]]
+- [[widening-narrowing]]
+
+### 📖 Lecture 7: Interprocedural and Heap Analysis
+- Lecture topic: [[software-analyse-lecture-7]]
+
+**Key concepts covered:**
+- [[monotone-framework]]
+- [[abstract-interpretation]]
+- [[mop-vs-mfp]]
+- [[data-flow-analysis]]
+- [[interprocedural-analysis]]
+- [[context-sensitivity]]
+- [[meet-over-valid-paths]]
+- [[points-to-analysis]]
+- [[steensgaards-points-to-analysis]]
+- [[andersens-points-to-analysis]]
+- [[heap-analysis]]
+- [[valid-paths]]
+- [[cloning-context-sensitivity]]
+- [[inlining-context-sensitivity]]
+- [[call-strings]]
+- [[procedure-summaries]]
+- [[aliasing]]
+- [[union-find-data-structure]]
+- [[zero-analysis-worked-example]]
+- [[iterative-data-flow-analysis]]
+
+### 📖 Lecture 8: Program Slicing
+- Lecture topic: [[software-analyse-lecture-8]]
+
+**Key concepts covered:**
+- [[control-flow-graph]]
+- [[points-to-analysis]]
+- [[dominance]]
+- [[dominator-tree]]
+- [[control-dependence]]
+- [[data-flow-analysis]]
+- [[interprocedural-analysis]]
+- [[basic-block]]
+- [[reaching-definitions]]
+- [[static-single-assignment]]
+- [[phi-function]]
+- [[program-dependence-graph]]
+- [[program-slicing]]
+- [[system-dependence-graph]]
+- [[dynamic-slicing]]
+
+### 📖 Software Analyse - Lecture 9: Dynamic Analysis
+- Lecture topic: [[software-analyse-lecture-9]]
+
+**Key concepts covered:**
+- [[control-flow-graph]]
+- [[aspect-oriented-programming]]
+- [[dynamic-slicing]]
+- [[program-slicing]]
+- [[fault-localization]]
+- [[delta-debugging]]
+- [[static-vs-dynamic-analysis]]
+- [[dynamic-analysis]]
+- [[program-traces]]
+- [[program-dependence-graph]]
+- [[hierarchy-of-analysis]]
+- [[software-analysis]]
+- [[abstract-interpretation]]
+- [[soundness-and-completeness]]
+
+### 📖 Software Analyse - Lecture 10: Dynamic Symbolic Execution
+- Lecture topic: [[software-analyse-lecture-10]]
+
+**Key concepts covered:**
+- [[static-vs-dynamic-analysis]]
+- [[control-flow-graph]]
+- [[symbolic-execution]]
+- [[concolic-execution]]
+- [[hierarchy-of-analysis]]
+- [[dynamic-slicing]]
+- [[software-analysis]]
+- [[abstract-interpretation]]
+- [[soundness-and-completeness]]
+
+### 📖 Lecture 11 - Agentic Coding and Software Quality
+- Lecture topic: [[software-analyse-lecture-11]]
+
+**Key concepts covered:**
+- [[static-vs-dynamic-analysis]]
+- [[testing]]
+- [[fault-localization]]
+- [[debugging]]
+- [[design-patterns]]

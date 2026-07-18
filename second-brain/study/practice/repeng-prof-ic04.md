@@ -158,7 +158,22 @@ The original history reads bottom-to-top as:
 
 **How:** `git rebase -i` to squash fixups into their parent commits. The result is 3 clean, logical commits instead of 5 messy ones.
 
+
 ---
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-4]]
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 4: Git
+- Lecture topic: [[reproducibility-engineering-lecture-4]]
+
+**Key concepts covered:**
+- [[git-dag-structure-and-internals]]
+- [[developer-certificate-of-origin]]
+- [[git-branching-and-merging]]
+- [[git-rebasing-and-history-rewriting]]
+- [[git-commit-hygiene]]
+- [[gitignore-and-gitattributes]]
+- [[git-patches-and-diffs]]
+- [[git-for-reproducibility]]
+- [[data-provenance]]
+- [[computational-reproducibility-in-ml]]

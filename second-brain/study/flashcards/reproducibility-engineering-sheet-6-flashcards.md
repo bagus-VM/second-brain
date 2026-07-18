@@ -61,3 +61,22 @@ last_updated: 2026-06-14
 
 > [!question]- When is SQLite *not* a good choice for a database?
 > [!answer]- (1) High-concurrency server workloads (file-level locking). (2) Very large databases (works up to ~1 TB, but server DBs scale further). (3) Network access (clients need filesystem access; no native network protocol). (4) When you need server-side features like stored procedures, triggers with rich logic, or fine-grained access control. (5) When you need replication or high availability (SQLite has limited replication options compared to PostgreSQL).
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 5: Reproducible Builds
+- Lecture topic: [[reproducibility-engineering-lecture-5]]
+
+**Key concepts covered:**
+- [[diffoscope]]
+- [[deterministic-builds]]
+- [[build-environment-isolation]]
+- [[source-date-epoch]]
+- [[ci-cd-for-reproducibility]]
+- [[containerization-for-builds]]
+- [[package-manager-reproducibility]]
+- [[make-and-build-systems]]
+- [[c-preprocessor]]

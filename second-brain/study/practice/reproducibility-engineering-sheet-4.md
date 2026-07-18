@@ -106,8 +106,22 @@ Run the package twice, compute MD5 hashes of both PDFs. Are they identical? Disc
 **(c)** How many Dockerfile snippets ensure long-term stability?
 - **1** (only snippet A with pinned Ubuntu version AND pinned package version, no pip)
 
-## Related Lectures
 
-- [[reproducibility-engineering-lecture-4]]
-- [[reproducibility-engineering-lecture-5]]
-- [[reproducibility-engineering-lecture-6]]
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 4: Git
+- Lecture topic: [[reproducibility-engineering-lecture-4]]
+
+**Key concepts covered:**
+- [[git-dag-structure-and-internals]]
+- [[developer-certificate-of-origin]]
+- [[git-branching-and-merging]]
+- [[git-rebasing-and-history-rewriting]]
+- [[git-commit-hygiene]]
+- [[gitignore-and-gitattributes]]
+- [[git-patches-and-diffs]]
+- [[git-for-reproducibility]]
+- [[data-provenance]]
+- [[computational-reproducibility-in-ml]]

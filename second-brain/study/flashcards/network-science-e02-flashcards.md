@@ -27,3 +27,28 @@ last_updated: 2026-06-02
 
 > [!question]- Why does BFS not give shortest paths when edges have weights?
 > [!answer]- BFS counts hops (unweighted edges), not accumulated weights. A path with fewer hops may have higher total weight than a path with more hops but lower weights. For weighted shortest paths, use Dijkstra's algorithm instead.
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L02 — Graph Theory
+- Lecture topic: [[network-science-l02]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[directed-and-undirected-graphs]]
+- [[weighted-graphs]]
+- [[bipartite-graphs]]
+- [[sparse-dense-and-random-graphs]]
+- [[graph-representations]]
+- [[neighbourhood-and-degree]]
+- [[paths-walks-and-cycles]]
+- [[shortest-path-and-diameter]]
+- [[eulerian-path-and-circuit]]
+- [[breadth-first-search]]
+- [[depth-first-search]]
+- [[dijkstras-algorithm]]
+- [[connectivity-and-components]]
+- [[directed-connectivity]]

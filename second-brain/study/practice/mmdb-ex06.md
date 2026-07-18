@@ -186,13 +186,26 @@ Generate the **Huffman code** (incl. code tree) for the following 8 symbols:
 - Writing a Huffman code where one symbol is a prefix of another — that's not a valid code.
 - Reporting the LZW output as the literal characters instead of the **dictionary codes** (you output the code for the prefix `P`, not for `P+z`).
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-05]]
-- [[jpeg-compression-pipeline]]
-- [[yuv-color-space]]
-- [[entropy-coding-huffman-arithmetic]]
+---
+
+## Related Resources
+
+### 📖 Topic: Multimedia Databases — Lecture 05 (Coding and Compression)
+- Lecture topic: [[multimedia-databases-lecture-05]]
+
+**Key concepts covered:**
+- [[lossless-vs-lossy-compression]]
 - [[run-length-encoding]]
 - [[lz77-lzw-compression]]
+- [[entropy-coding-huffman-arithmetic]]
 - [[transform-coding]]
-- [[lossless-vs-lossy-compression]]
+- [[jpeg-compression-pipeline]]
+- [[color-space-conversion-ycbcr]]
+- [[mpeg-video-compression]]
+- [[h264-avc-video-compression]]
+- [[rate-distortion-theory]]
+- [[video-formats-container-vs-codec]]
+- [[jpeg2000-wavelet-compression]]
+- [[audio-quantization-pcm]]
+- [[color-quantization]]

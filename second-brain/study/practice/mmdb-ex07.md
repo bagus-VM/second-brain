@@ -283,17 +283,43 @@ Using the two images and their histograms from Task 4:
 > 
 > Note: This formula differs from the one in the main solutions section (which uses f'(i) = (pᵢ + qᵢ)/2 and gives χ² ≈ 0.652). Both formulas are valid; the choice depends on the application.
 
-## Related Lectures
 
-- [[multimedia-databases-lecture-06]]
+---
+
+## Related Resources
+
+### 📖 Multimedia Databases - Lecture 06: Modeling
+- Lecture topic: [[multimedia-databases-lecture-06]]
+
+**Key concepts covered:**
+- [[multimedia-annotation]]
+- [[sensory-gap]]
+- [[semantic-gap]]
+- [[multimedia-metadata]]
+- [[mpeg-7]]
+- [[mpeg-7-ddl]]
+- [[mpeg-7-structural-description]]
+- [[mpeg-7-semantic-description]]
+- [[mpeg-7-indexing-pyramid]]
+- [[mpeg-7-descriptors]]
+- [[classification-schemes]]
+- [[feature-extraction]]
+- [[content-based-retrieval]]
+- [[similarity-measures]]
+- [[relevance-feedback]]
+
+### 📖 Multimedia Databases - Lecture 07: Content-Based Image Retrieval
+- Lecture topic: [[multimedia-databases-lecture-07]]
+
+**Key concepts covered:**
 - [[content-based-retrieval]]
 - [[feature-vector]]
-- [[feature-extraction]]
+- [[mpeg-7-descriptors]]
+- [[query-by-example-and-feature]]
+- [[color-histogram]]
 - [[minkowski-distance]]
 - [[chi-squared-distance]]
-- [[kolmogorov-smirnov-distance]]
-- [[curse-of-dimensionality]]
-- [[color-histogram]]
-- [[semantic-gap]]
-- [[mpeg-7-descriptors]]
+- [[cbir-systems-evaluation]]
 - [[dominant-color]]
+- [[spatial-coherency]]
+- [[kolmogorov-smirnov-distance]]

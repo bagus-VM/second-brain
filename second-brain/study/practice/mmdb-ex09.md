@@ -157,3 +157,23 @@ Describe the nearest neighbor query and the pruning strategy used with an R-tree
 - [[locality-sensitive-hashing]]
 - [[signature-vectors]]
 - [[multimedia-databases-lecture-09]]
+
+
+---
+
+## Related Resources
+
+### 📖 Multimedia Databases - Lecture 09: Indexing and Access Structures
+- Lecture topic: [[multimedia-databases-lecture-09]]
+
+**Key concepts covered:**
+- [[content-based-retrieval]]
+- [[curse-of-dimensionality]]
+- [[feature-vector]]
+- [[signature-vectors]]
+- [[dimensionality-reduction]]
+- [[r-tree]]
+- [[sr-tree]]
+- [[quadtree-and-kd-tree]]
+- [[locality-sensitive-hashing]]
+- [[gist-framework]]
