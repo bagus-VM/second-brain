@@ -4,214 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9a6736bc41a24dee",
+        "id": "93e1fc7ec7e798d9",
         "type": "tabs",
         "children": [
           {
-            "id": "456f0e087397a357",
+            "id": "75b23e47f2aede5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study/practice/mmdb-ex09.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "mmdb-ex09"
-            }
-          },
-          {
-            "id": "19664feb24e3abfb",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-                "page": 2,
-                "left": -21,
-                "top": 16,
-                "zoom": 0.7105966162065895
-              },
-              "icon": "lucide-file-text",
-              "title": "mmdb-ex06"
-            }
-          },
-          {
-            "id": "8dc4f1738cc7f86d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex06_solutions.pdf",
-                "page": 20,
-                "left": -14,
-                "top": 93,
-                "zoom": 1.1083333333333334
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex06_solutions"
-            }
-          },
-          {
-            "id": "4404140983d434d2",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
-                "page": 2,
-                "left": -11,
-                "top": 720,
-                "zoom": 1.3405546334809402
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex06"
-            }
-          },
-          {
-            "id": "fc51acc615379d40",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex07_solutions.pdf",
-                "page": 23,
-                "left": -14,
-                "top": 465,
-                "zoom": 1.1083333333333334
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex07_solutions"
-            }
-          },
-          {
-            "id": "9c6e436421b3f12b",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
-                "page": 11,
-                "left": -14,
-                "top": 462,
-                "zoom": 1.1083333333333334
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex03_solutions"
-            }
-          },
-          {
-            "id": "c502468b8b5c0980",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
-                "page": 16,
-                "left": -18,
-                "top": 139,
-                "zoom": 0.83125
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex04_solutions"
-            }
-          },
-          {
-            "id": "c4711bdba9be9906",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
-                "page": 19,
-                "left": -14,
-                "top": 187,
-                "zoom": 1.1083333333333334
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex08_solutions"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "65c6eb37a34dbb56",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "faaf4e541ad05999",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study/exams/mmdb-exam-simulation-ss25.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mmdb-exam-simulation-ss25"
-            }
-          },
-          {
-            "id": "2cd5aa647c104ca0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/color-quantization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "color-quantization"
-            }
-          },
-          {
-            "id": "17e8f51080821ac0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/transform-coding.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "transform-coding"
-            }
-          },
-          {
-            "id": "ef9ae07c181b66d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/entropy-coding-huffman-arithmetic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "entropy-coding-huffman-arithmetic"
-            }
-          },
-          {
-            "id": "62de290815136569",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -352,15 +158,21 @@
       "obsidian-kanban:Create new board": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "translate:Open translation view": false
     }
   },
-  "active": "19664feb24e3abfb",
+  "active": "75b23e47f2aede5a",
   "lastOpenFiles": [
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex06_solutions.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
     "index.md",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex07_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex06_solutions.pdf",
+    "study/practice/german-a2-goethe-practice.md",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
     "vault/concepts/lz77-lzw-compression.md",
     "vault/algorithms/r-tree.md",
     "study/practice/mmdb-ex09.md",
@@ -369,14 +181,9 @@
     "vault/concepts/entropy-coding-huffman-arithmetic.md",
     "vault/concepts/transform-coding.md",
     "vault/concepts/color-quantization.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex07_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
     "raw/lectures/multimedia_databases/Uebung/solutions/Ex05_solutions.pdf",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex05.pdf",
     "study/exams/MMDB.pdf",
-    "raw/lectures/software_analyse/Vorlesung/1_Introduction.pdf",
     "raw/lectures/Lectures.md",
     "study/practice/mmdb-ex05.md",
     "study/flashcards/mmdb-ex01-flashcards.md",
@@ -392,7 +199,6 @@
     "vault/topics/reproducibility-engineering-lecture-8.md",
     "study/practice/repeng-prof-ic08.md",
     "study/practice/repeng-prof-ic07.md",
-    "study/practice/repeng-prof-ic05.md",
     "Pasted image 20260708123921.png",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",
