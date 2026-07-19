@@ -217,3 +217,134 @@ where:
 - Are there any NetworkX functions from the exercises that aren't listed here?
 - What other calculations might appear? (e.g., assortativity, degree correlation)
 - Will the exam provide NetworkX documentation, or do you need to memorize function signatures?
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L01: Introduction — Topic Overview
+- Lecture topic: [[network-science-l01]]
+
+**Key concepts covered:**
+- [[network-intro]]
+- [[network-examples]]
+- [[edge-types]]
+- [[centrality]]
+- [[community-structure]]
+- [[connected-component]]
+- [[network-effects]]
+- [[network-diffusion]]
+
+### 📖 Network Science L02 — Graph Theory
+- Lecture topic: [[network-science-l02]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[directed-and-undirected-graphs]]
+- [[weighted-graphs]]
+- [[graph-representations]]
+- [[neighbourhood-and-degree]]
+- [[paths-walks-and-cycles]]
+- [[connectivity-and-components]]
+- [[bipartite-graphs]]
+- [[eulerian-path-and-circuit]]
+- [[breadth-first-search]]
+- [[depth-first-search]]
+- [[dijkstras-algorithm]]
+- [[shortest-path-and-diameter]]
+- [[sparse-dense-and-random-graphs]]
+- [[directed-connectivity]]
+
+### 📖 Network Science L03 — Strong and Weak Ties
+- Lecture topic: [[network-science-l03]]
+
+**Key concepts covered:**
+- [[triadic-closure]]
+- [[clustering-coefficient]]
+- [[strong-triadic-closure]]
+- [[bridges-and-local-bridges]]
+- [[neighborhood-overlap]]
+- [[weak-ties-hypothesis]]
+- [[social-capital]]
+- [[structural-holes]]
+- [[maxstc-complexity]]
+- [[graph-fundamentals]]
+
+### 📖 Network Science L04 — Communities and Graph Partitioning
+- Lecture topic: [[network-science-l04]]
+
+**Key concepts covered:**
+- [[community-detection-overview]]
+- [[modularity]]
+- [[louvain-algorithm]]
+- [[leiden-algorithm]]
+- [[girvan-newman-algorithm]]
+- [[edge-betweenness]]
+- [[graph-partitioning]]
+- [[graph-partitioning-cut-spectral]]
+- [[hierarchical-clustering]]
+- [[modularity-resolution-limit]]
+- [[zacharys-karate-club]]
+- [[centrality-measures]]
+- [[embedding-based-community-detection]]
+- [[structural-holes-and-brokerage]]
+- [[product-space-network]]
+
+### 📖 Network Science L05: Social Context and Link Formation
+- Lecture topic: [[network-science-l05]]
+
+**Key concepts covered:**
+- [[homophily]]
+- [[selection-vs-socialization]]
+- [[affiliation-networks]]
+- [[network-autocorrelation]]
+- [[schelling-segregation-model]]
+- [[echo-chambers]]
+- [[modularity]]
+
+### 📖 Network Science L06: Structural Balance
+- Lecture topic: [[network-science-l06]]
+
+**Key concepts covered:**
+- [[structural-balance-theory]]
+- [[balanced-triads]]
+- [[balance-theorem]]
+- [[weak-structural-balance]]
+- [[signed-graphs]]
+- [[frustration-index]]
+- [[cycle-criterion]]
+- [[k-balance]]
+- [[algebraic-connectivity]]
+- [[signed-laplacian]]
+
+### 📖 Network Science L07 — Small-World Networks
+- Lecture topic: [[network-science-l07]]
+
+**Key concepts covered:**
+- [[small-world-property]]
+- [[watts-strogatz-model]]
+- [[milgrams-experiment-six-degrees]]
+- [[kleinberg-decentralized-search]]
+- [[random-graphs]]
+- [[scale-free-networks]]
+- [[preferential-attachment]]
+- [[power-law-distribution]]
+- [[web-bow-tie-structure]]
+
+### 📖 Network Science L08: Network Dynamics
+- Lecture topic: [[network-science-l08]]
+
+**Key concepts covered:**
+- [[simple-contagion]]
+- [[sir-model-network-epidemics]]
+- [[basic-reproduction-number-r0]]
+- [[scale-free-epidemic-threshold-vanishes]]
+- [[complex-contagion]]
+- [[threshold-cascades]]
+- [[weak-tie-paradox-contagion]]
+- [[centola-2010-experiment]]
+- [[temporal-networks]]
+- [[process-structure-interaction-gap]]
+- [[diffusion-of-innovations]]
+- [[weak-ties-hypothesis]]

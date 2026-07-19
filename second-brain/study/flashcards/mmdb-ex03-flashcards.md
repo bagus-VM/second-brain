@@ -25,3 +25,25 @@ last_updated: 2026-06-02
 
 > [!question]- How does CIE L*a*b* differ from CIE XYZ?
 > [!answer]- **CIE XYZ:** Additive, linear, good for color mixtures but NOT perceptually uniform — distance doesn't predict perceived similarity. **CIE L*a*b*:** Oriented to human perception, distance accurately predicts perceived similarity, chromatically adapted to D50 (5000K) for consistent comparison.
+
+
+---
+
+## Related Resources
+
+### 📖 Lecture 02: Color Models
+- Lecture topic: [[multimedia-databases-lecture-02]]
+
+**Key concepts covered:**
+- [[color-perception]]
+- [[metamers]]
+- [[chromatic-adaptation]]
+- [[color-models-overview]]
+- [[color-gamut]]
+- [[rgb-color-model]]
+- [[cmyk-color-model]]
+- [[hsv-color-model]]
+- [[cie-chromaticity-diagram]]
+- [[lab-color-space]]
+- [[yuv-color-space]]
+- [[hmmd-color-space]]

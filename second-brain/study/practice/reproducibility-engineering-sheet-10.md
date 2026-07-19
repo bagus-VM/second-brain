@@ -248,5 +248,16 @@ The first branch (`minimum: 3, maximum: 1`) can never be satisfied, so the only 
 >
 > **Explanation:** Constrained decoding is only as reliable as the tool's grammar conversion. If the tool doesn't enforce `oneOf` mutual exclusivity (as shown in 4.3) or silently skips `minimum`/`maximum` constraints, the output may violate those schema features. The guarantee is limited to what the tool actually translates into its grammar.
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-9]]
+
+---
+
+## Related Resources
+
+### 📖 Lecture 9: LLMs and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-9]]
+
+**Key concepts covered:**
+- [[types-of-reproducibility]]
+- [[levels-of-reproducibility]]
+- [[reproducibility-crisis]]
+- [[json-schema]]

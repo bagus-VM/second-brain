@@ -27,3 +27,18 @@ last_updated: 2026-06-02
 
 > [!question]- Why do Alice and Bob get the same output when running the same Docker container on different host machines?
 > [!answer]- Because the container provides a consistent, isolated environment. The script is deterministic, and the container bundles all dependencies (OS packages, libraries). The host hardware/OS differences don't affect the containerized execution.
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 1 Overview
+- Lecture topic: [[reproducibility-engineering-lecture-1]]
+
+**Key concepts covered:**
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[research-artifacts]]
+- [[artifact-availability]]
+- [[types-of-reproducibility]]

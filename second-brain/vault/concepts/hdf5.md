@@ -2,9 +2,9 @@
 title: "HDF5"
 tags: [concept, reproducibility-engineering, semester-1, hierarchical-data, scientific-computing, metadata]
 course: "Reproducibility Engineering"
-source_count: 2
+source_count: 3
 status: current
-last_updated: 2026-06-25
+last_updated: 2026-07-17
 prerequisites: ["[[reproducibility-engineering-lecture-8]]", "[[visitor-pattern]]"]
 ---
 
@@ -186,9 +186,10 @@ Units now travel with the data, so station 20's Fahrenheit values cannot be conf
 - [[json-schema]] — validates JSON structure, analogous to HDF5's self-describing nature
 - [[tidy-data]] — hierarchical data can be tidy (each dataset = one variable)
 - [[reproducibility-engineering-sheet-8]] — Exercise Sheet 8 builds the weather station HDF5 file
+- [[reproducibility-engineering-sheet-11]] — Exercise Sheet 11 stores Mentos experiment data in HDF5
 
 ## Open Questions
 - How does HDF5 compare to Parquet for columnar data? (Parquet is better for tabular data; HDF5 is better for multi-dimensional arrays.)
 - Can you version-control an HDF5 file? (No — it's binary. You need a separate versioning system or export to text.)
-- What is the relationship between HDF5 and the FAIR data principles (Findable, Accessible, Interoperable, Reusable)?
+- What is the relationship between HDF5 and the FAIR data principles (Findable, Accessible, Interoperable, Reusable)? → Answered by [[fair-data-principles]]: HDF5's self-describing nature (groups/datasets/attributes) directly supports FAIR's metadata requirements (F2, R1).
 - How do you handle schema evolution in HDF5? (If you add a new dataset to a group, old code may break.)

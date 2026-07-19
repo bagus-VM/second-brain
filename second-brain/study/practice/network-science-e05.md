@@ -160,9 +160,19 @@ Using `nx.karate_club_graph()` and scipy:
 > [!note]- Solution
 > The dendrogram shows two main branches merging at the highest height — these correspond to the two factions. Average linkage with shortest-path distances is robust for capturing social proximity. Some fringe bridge-nodes may be misclassified if they sit equidistant from both centers in terms of hops.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l05]]
-- [[network-science-l06]]
+### 📖 Network Science L05: Social Context and Link Formation
+- Lecture topic: [[network-science-l05]]
+
+**Key concepts covered:**
+- [[homophily]]
+- [[echo-chambers]]
+- [[network-autocorrelation]]
+- [[selection-vs-socialization]]
+- [[affiliation-networks]]
+- [[schelling-segregation-model]]
+- [[modularity]]

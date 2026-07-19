@@ -262,16 +262,24 @@ Implement a 1D Schelling model: agents in a line; each needs at least threshold 
 >
 > **At what threshold does strong segregation emerge?** Typically around **threshold ≈ 0.3–0.4**. Below this, the grid remains mostly mixed. Above it, run lengths increase sharply — even a 30% same-type preference produces visually striking clusters.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l06]]
-- [[network-science-l07]]
-- [[network-science-l08]]
-- [[ei-index]] — the (E−I)/(E+I) measure of homophily
-- [[triadic-focal-membership-closure]] — three mechanisms for projected-edge formation
-- [[confounding]] — the third explanation for observed similarity
-- [[selection-vs-socialization]] — the two causal mechanisms being disentangled
-- [[homophily]] — the broader phenomenon
-- [[affiliation-networks]] — the bipartite source for focal/membership closure
+### 📖 Network Science L06: Structural Balance
+- Lecture topic: [[network-science-l06]]
+
+**Key concepts covered:**
+- [[balance-theorem]]
+- [[weak-structural-balance]]
+- [[frustration-index]]
+- [[signed-laplacian]]
+- [[signed-graphs]]
+- [[balanced-triads]]
+- [[structural-balance-theory]]
+- [[k-balance]]
+- [[cycle-criterion]]
+- [[schelling-segregation-model]]
+- [[homophily]]
+- [[algebraic-connectivity]]

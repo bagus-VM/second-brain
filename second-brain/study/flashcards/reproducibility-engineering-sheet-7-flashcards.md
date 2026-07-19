@@ -42,3 +42,19 @@ last_updated: 2026-06-19
 
 > [!question]- Why is the write-only throughput the same for SQLite and PostgreSQL (~10,000 ops/s)?
 > [!answer]- The write-only throughput is bounded by disk I/O, not the DBMS. Both SQLite and PostgreSQL are writing to disk at the same rate, so they hit the same limit. The bottleneck is the disk, not the DBMS. To increase write throughput, you would need faster storage (SSD, NVMe) or a different benchmark configuration (e.g., batch inserts, asynchronous commits).
+
+
+---
+
+## Related Resources
+
+### 📖 Lecture 6: Database System Architectures and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-6]]
+
+**Key concepts covered:**
+- [[containerization-for-builds]]
+- [[reproducible-builds]]
+- [[sqlite-architecture]]
+- [[docker-compose]]
+- [[foreign-tables-postgresql]]
+- [[client-server-db-architecture]]

@@ -27,3 +27,20 @@ last_updated: 2026-06-02
 
 > [!question]- Why should installed apt packages be sorted alphabetically in a Dockerfile?
 > [!answer]- Alphabetical sorting improves readability and makes it easy to check whether a package is already listed, preventing accidental duplicates. It's a best-practice convention for maintainable Dockerfiles.
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 2: Levels and Provenance
+- Lecture topic: [[reproducibility-engineering-lecture-2]]
+
+**Key concepts covered:**
+- [[levels-of-reproducibility]]
+- [[provenance-in-reproducibility]]
+- [[vistrails]]
+- [[workflow-reproducibility]]
+- [[reproducibility-standards-bronze-silver-gold]]
+- [[computational-reproducibility-in-ml]]
+- [[data-provenance]]

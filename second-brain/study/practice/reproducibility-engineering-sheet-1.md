@@ -99,7 +99,17 @@ Given a Dockerfile and `experiment.sh` script, Alice (Debian 13, Intel i7) and B
 **(c)** After `docker cp exp-cont:/usr/local/bin/experiment.sh experiment_copy.sh`, which command shows the file?
 - `user@host$ ls experiment_copy.sh`
 
-## Related Lectures
 
-- [[reproducibility-engineering-lecture-1]]
-- [[reproducibility-engineering-lecture-2]]
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering — Lecture 1 Overview
+- Lecture topic: [[reproducibility-engineering-lecture-1]]
+
+**Key concepts covered:**
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[research-artifacts]]
+- [[artifact-availability]]
+- [[types-of-reproducibility]]

@@ -46,3 +46,44 @@ last_updated: 2026-06-14
 
 > [!question]- What is the difference between a query by example and a query by sketch?
 > [!answer]- QBE: provide an existing image, the system extracts its features and finds similar images. Query by sketch: provide a hand-drawn sketch, the system extracts shape/edge features and finds images matching the sketch structure (regardless of colour). Both bypass text annotation.
+
+
+---
+
+## Related Resources
+
+### 📖 Multimedia Databases - Lecture 06: Modeling
+- Lecture topic: [[multimedia-databases-lecture-06]]
+
+**Key concepts covered:**
+- [[multimedia-annotation]]
+- [[sensory-gap]]
+- [[semantic-gap]]
+- [[multimedia-metadata]]
+- [[mpeg-7]]
+- [[mpeg-7-ddl]]
+- [[mpeg-7-structural-description]]
+- [[mpeg-7-semantic-description]]
+- [[mpeg-7-indexing-pyramid]]
+- [[mpeg-7-descriptors]]
+- [[classification-schemes]]
+- [[feature-extraction]]
+- [[content-based-retrieval]]
+- [[similarity-measures]]
+- [[relevance-feedback]]
+
+### 📖 Multimedia Databases - Lecture 07: Content-Based Image Retrieval
+- Lecture topic: [[multimedia-databases-lecture-07]]
+
+**Key concepts covered:**
+- [[content-based-retrieval]]
+- [[feature-vector]]
+- [[mpeg-7-descriptors]]
+- [[query-by-example-and-feature]]
+- [[color-histogram]]
+- [[minkowski-distance]]
+- [[chi-squared-distance]]
+- [[cbir-systems-evaluation]]
+- [[dominant-color]]
+- [[spatial-coherency]]
+- [[kolmogorov-smirnov-distance]]

@@ -98,8 +98,21 @@ Tasks:
 **(f)** After committing and checking out `other-branch`, how many of these lines are present?
 - `2018-2020, Federation Starship Atlantis - Communications Ensign`, `Routed incoming subspace communications to the correct officer` — **2 lines** (other-branch has the original content)
 
-## Related Lectures
 
-- [[reproducibility-engineering-lecture-6]]
-- [[reproducibility-engineering-lecture-7]]
-- [[reproducibility-engineering-lecture-8]]
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering - Lecture 5: Reproducible Builds
+- Lecture topic: [[reproducibility-engineering-lecture-5]]
+
+**Key concepts covered:**
+- [[diffoscope]]
+- [[deterministic-builds]]
+- [[build-environment-isolation]]
+- [[source-date-epoch]]
+- [[ci-cd-for-reproducibility]]
+- [[containerization-for-builds]]
+- [[package-manager-reproducibility]]
+- [[make-and-build-systems]]
+- [[c-preprocessor]]

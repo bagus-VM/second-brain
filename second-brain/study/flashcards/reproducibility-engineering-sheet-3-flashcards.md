@@ -27,3 +27,20 @@ last_updated: 2026-06-02
 
 > [!question]- What is the purpose of encoding experiment parameters in the result directory name?
 > [!answer]- It makes results self-documenting: the directory name (e.g., `recipe_runs_10_seed_42_exp1`) encodes all parameters, so you can identify the experiment configuration without opening any files. This aids organization and traceability.
+
+
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering – Lecture 3: Hypotheses
+- Lecture topic: [[reproducibility-engineering-lecture-3]]
+
+**Key concepts covered:**
+- [[hypothesis-formulation]]
+- [[presenting-experiments]]
+- [[levels-of-equivalence]]
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[computational-reproducibility-in-ml]]
+- [[research-artifacts]]

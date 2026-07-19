@@ -603,3 +603,150 @@ $$C_C(v) = \frac{n - 1}{\sum_{u \neq v} d(v, u)}$$
 8. **Community detection** — Girvan-Newman vs greedy modularity vs hierarchical
 9. **E-I index** — formula, interpretation
 10. **Web bow-tie** — SCC/IN/OUT/tendril classification
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L01: Introduction — Topic Overview
+- Lecture topic: [[network-science-l01]]
+
+**Key concepts covered:**
+- [[network-intro]]
+- [[network-examples]]
+- [[edge-types]]
+- [[network-effects]]
+- [[connected-component]]
+- [[community-structure]]
+- [[network-diffusion]]
+- [[centrality]]
+
+### 📖 Network Science L02 — Graph Theory
+- Lecture topic: [[network-science-l02]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[directed-and-undirected-graphs]]
+- [[weighted-graphs]]
+- [[bipartite-graphs]]
+- [[sparse-dense-and-random-graphs]]
+- [[graph-representations]]
+- [[neighbourhood-and-degree]]
+- [[paths-walks-and-cycles]]
+- [[shortest-path-and-diameter]]
+- [[eulerian-path-and-circuit]]
+- [[breadth-first-search]]
+- [[depth-first-search]]
+- [[dijkstras-algorithm]]
+- [[connectivity-and-components]]
+- [[directed-connectivity]]
+
+### 📖 L03 — Strong and Weak Ties
+- Lecture topic: [[network-science-l03]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[triadic-closure]]
+- [[strong-triadic-closure]]
+- [[maxstc-complexity]]
+- [[clustering-coefficient]]
+- [[neighborhood-overlap]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
+- [[social-capital]]
+- [[structural-holes]]
+
+### 📖 L04 — Communities and Graph Partitioning
+- Lecture topic: [[network-science-l04]]
+
+**Key concepts covered:**
+- [[structural-holes-and-brokerage]]
+- [[centrality-measures]]
+- [[modularity]]
+- [[community-detection-overview]]
+- [[girvan-newman-algorithm]]
+- [[louvain-algorithm]]
+- [[leiden-algorithm]]
+- [[hierarchical-clustering]]
+- [[graph-partitioning-cut-spectral]]
+- [[graph-partitioning]]
+- [[zacharys-karate-club]]
+- [[product-space-network]]
+- [[modularity-resolution-limit]]
+- [[edge-betweenness]]
+- [[embedding-based-community-detection]]
+
+### 📖 Network Science L05: Social Context and Link Formation
+- Lecture topic: [[network-science-l05]]
+
+**Key concepts covered:**
+- [[homophily]]
+- [[echo-chambers]]
+- [[network-autocorrelation]]
+- [[selection-vs-socialization]]
+- [[affiliation-networks]]
+- [[schelling-segregation-model]]
+- [[modularity]]
+
+### 📖 Network Science L06: Structural Balance
+- Lecture topic: [[network-science-l06]]
+
+**Key concepts covered:**
+- [[balance-theorem]]
+- [[weak-structural-balance]]
+- [[frustration-index]]
+- [[signed-laplacian]]
+- [[signed-graphs]]
+- [[balanced-triads]]
+- [[structural-balance-theory]]
+- [[k-balance]]
+- [[cycle-criterion]]
+- [[schelling-segregation-model]]
+- [[homophily]]
+- [[algebraic-connectivity]]
+
+### 📖 Network Science L07 — Small-World Networks
+- Lecture topic: [[network-science-l07]]
+
+**Key concepts covered:**
+- [[milgrams-experiment-six-degrees]]
+- [[Pasted image 20260610105308.png]]
+- [[small-world-property]]
+- [[watts-strogatz-model]]
+- [[kleinberg-decentralized-search]]
+- [[global-email-experiment]]
+- [[random-graphs]]
+- [[scale-free-networks]]
+- [[preferential-attachment]]
+- [[power-law-distribution]]
+- [[web-bow-tie-structure]]
+- [[hnsw-indexing]]
+- [[graph-fundamentals]]
+- [[neighbourhood-and-degree]]
+- [[clustering-coefficient]]
+- [[triadic-closure]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
+- [[structural-balance-theory]]
+- [[signed-graphs]]
+
+### 📖 Network Science L08: Network Dynamics
+- Lecture topic: [[network-science-l08]]
+
+**Key concepts covered:**
+- [[simple-contagion]]
+- [[sir-model-network-epidemics]]
+- [[basic-reproduction-number-r0]]
+- [[scale-free-epidemic-threshold-vanishes]]
+- [[complex-contagion]]
+- [[threshold-cascades]]
+- [[weak-tie-paradox-contagion]]
+- [[centola-2010-experiment]]
+- [[temporal-networks]]
+- [[process-structure-interaction-gap]]
+- [[community-structure]]
+- [[kleinberg-decentralized-search]]
+- [[weak-ties-hypothesis]]
+- [[centrality]]
+- [[diffusion-of-innovations]]

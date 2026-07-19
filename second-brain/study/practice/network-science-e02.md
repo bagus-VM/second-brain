@@ -376,10 +376,27 @@ G = nx.karate_club_graph()
 > [!note]- Solution
 > **Robustness vs fragility:** Hub-based networks are resilient to random failure (most nodes are peripheral) but fragile under targeted attack (hubs are critical). Removing the instructor (0) or administrator (33) disrupts connectivity far more than removing an average student. This principle explains why internet backbones and social hubs are high-value targets.
 
+
 ---
 
-## Related Lectures
+## Related Resources
 
-- [[network-science-l02]]
-- [[network-science-l03]]
-- [[network-science-l04]]
+### 📖 Network Science L02 — Graph Theory
+- Lecture topic: [[network-science-l02]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[directed-and-undirected-graphs]]
+- [[weighted-graphs]]
+- [[bipartite-graphs]]
+- [[sparse-dense-and-random-graphs]]
+- [[graph-representations]]
+- [[neighbourhood-and-degree]]
+- [[paths-walks-and-cycles]]
+- [[shortest-path-and-diameter]]
+- [[eulerian-path-and-circuit]]
+- [[breadth-first-search]]
+- [[depth-first-search]]
+- [[dijkstras-algorithm]]
+- [[connectivity-and-components]]
+- [[directed-connectivity]]

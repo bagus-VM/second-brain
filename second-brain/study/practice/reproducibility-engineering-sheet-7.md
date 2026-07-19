@@ -148,10 +148,18 @@ volumes:
 4. **Write-only workloads are I/O-bound**: both SQLite and PostgreSQL hit the same write limit, suggesting the bottleneck is disk I/O, not the DBMS.
 5. **Foreign tables are lazy**: they don't validate the source at creation time. This is by design but can surprise new users.
 
-## Related Lectures
-- [[reproducibility-engineering-lecture-6]] — database architectures
-- [[reproducibility-engineering-lecture-7]] — tidy data (data cleaning for benchmark results)
-- [[client-server-db-architecture]] — the PostgreSQL architecture
-- [[sqlite-architecture]] — the SQLite architecture
-- [[docker-compose]] — the standard for multi-service reproducible setups
-- [[foreign-tables-postgresql]] — for capturing experiment metadata
+
+---
+
+## Related Resources
+
+### 📖 Lecture 6: Database System Architectures and Reproducibility
+- Lecture topic: [[reproducibility-engineering-lecture-6]]
+
+**Key concepts covered:**
+- [[containerization-for-builds]]
+- [[reproducible-builds]]
+- [[sqlite-architecture]]
+- [[docker-compose]]
+- [[foreign-tables-postgresql]]
+- [[client-server-db-architecture]]

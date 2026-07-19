@@ -69,7 +69,8 @@ A fitness tracker company deploys an IoT wearable:
 - **Confusing GDPR with security**: GDPR mandates appropriate security but is fundamentally about data protection rights, not cybersecurity
 
 ## Connections
-- [[privacy-by-design]] — GDPR Article 25 mandates privacy by design and by default
+- [[legal-frameworks-research-data]] -- GDPR as one of four legal frameworks for research data
+- [[privacy-by-design]] -- GDPR Article 25 mandates privacy by design and by default
 - [[iot-privacy-concerns]] — IoT-specific privacy challenges beyond GDPR
 - [[iot-identity-lifecycle]] — device and user identity management for compliance
 - [[data-provenance]] — tracking data origin and processing for accountability

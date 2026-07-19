@@ -27,3 +27,23 @@ last_updated: 2026-06-02
 
 > [!question]- What is the relationship between tie strength and neighbourhood overlap?
 > [!answer]- There is a strong positive correlation: edges with high tie strength tend to have high neighbourhood overlap (close-knit groups share friends), while weak ties have low overlap (bridging ties remain socially isolated). This empirical pattern confirms Granovetter's theory that strong ties are embedded in dense clusters while weak ties span structural holes.
+
+
+---
+
+## Related Resources
+
+### 📖 L03 — Strong and Weak Ties
+- Lecture topic: [[network-science-l03]]
+
+**Key concepts covered:**
+- [[graph-fundamentals]]
+- [[triadic-closure]]
+- [[strong-triadic-closure]]
+- [[maxstc-complexity]]
+- [[clustering-coefficient]]
+- [[neighborhood-overlap]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
+- [[social-capital]]
+- [[structural-holes]]

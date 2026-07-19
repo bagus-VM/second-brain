@@ -154,6 +154,27 @@ For reproducibility, this means:
 - Metadata travels with the data — if you copy the file, you copy the context
 - Metadata is machine-readable — you can validate it, search it, process it programmatically
 
+## HDF5 vs JSON vs XML
+| Feature                              | **JSON**                                             | **XML**                                                          | **HDF5**                                                                                |
+| ------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Type**                             | Text                                                 | Text                                                             | Binary                                                                                  |
+| **Human-readable**                   | Yes                                                  | Yes                                                              | No (needs a viewer/library)                                                             |
+| **Primary use case**                 | Web APIs, config files, lightweight data interchange | Documents, config files, data interchange with strict schemas    | Large scientific/numerical datasets                                                     |
+| **Data model**                       | Objects, arrays, key-value pairs                     | Tree of nested elements/attributes                               | Filesystem-like: groups + datasets + attributes                                         |
+| **Schema/validation**                | Optional (JSON Schema)                               | Strong native support (XSD, DTD)                                 | Implicit via datatypes; no formal schema language                                       |
+| **Native array/matrix support**      | Basic (nested arrays, no typed multi-dim arrays)     | None (must simulate with repeated tags)                          | Excellent — true n-dimensional typed arrays                                             |
+| **Metadata support**                 | Awkward (must nest as regular fields)                | Native (attributes on elements)                                  | Native (attributes on groups/datasets)                                                  |
+| **File size for large numeric data** | Large, inefficient                                   | Large, very verbose                                              | Compact, supports compression                                                           |
+| **Partial/random data access**       | No — must parse whole file                           | No — must parse whole file                                       | Yes — read slices of a dataset without loading it all                                   |
+| **Compression support**              | No (external, e.g. gzip the whole file)              | No (external)                                                    | Built-in (chunking + gzip/szip/etc.)                                                    |
+| **Typed data**                       | Loose (string, number, bool, null)                   | Untyped (everything is text unless schema-enforced)              | Strongly typed (int8–int64, float32/64, strings, compound types)                        |
+| **Namespaces/mixed vocabularies**    | No                                                   | Yes (XML namespaces)                                             | No                                                                                      |
+| **Comments**                         | Not supported                                        | Supported (`<!-- -->`)                                           | Not applicable (binary)                                                                 |
+| **Ecosystem / tooling**              | Ubiquitous in web dev (every language)               | Strong in enterprise/document systems (SOAP, config, publishing) | Scientific computing (Python, MATLAB, C, Fortran; NASA, climate, genomics, ML datasets) |
+| **Editability by hand**              | Easy                                                 | Easy (but verbose)                                               | Not possible — needs code/tools                                                         |
+| **Streaming large files**            | Difficult                                            | Difficult                                                        | Designed for it                                                                         |
+
+
 ## Worked Example: HDF5 Climate Simulation
 
 ```python

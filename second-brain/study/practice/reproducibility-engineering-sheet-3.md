@@ -74,8 +74,19 @@ Given a Dockerfile pinning Ubuntu packages and a Python script `experiment.py` t
 **(c)** If the external time service is offline, reproduction may fail in:
 - **Both the binary and the source container** (the script makes a network call at runtime regardless of container type)
 
-## Related Lectures
 
-- [[reproducibility-engineering-lecture-3]]
-- [[reproducibility-engineering-lecture-4]]
-- [[reproducibility-engineering-lecture-5]]
+---
+
+## Related Resources
+
+### 📖 Reproducibility Engineering – Lecture 3: Hypotheses
+- Lecture topic: [[reproducibility-engineering-lecture-3]]
+
+**Key concepts covered:**
+- [[hypothesis-formulation]]
+- [[presenting-experiments]]
+- [[levels-of-equivalence]]
+- [[reproducibility-crisis]]
+- [[repeat-reproduce-replicate]]
+- [[computational-reproducibility-in-ml]]
+- [[research-artifacts]]

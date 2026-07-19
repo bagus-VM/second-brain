@@ -142,13 +142,31 @@ Using the karate club graph, sign edges by faction (within = +, cross = −).
 - Weak balance permits more than two camps and is often more realistic
 - Real networks are rarely perfectly balanced — approximate balance is the typical regime
 
-## Related Lectures
-- [[network-science-l06]]
-- [[balance-theorem]]
+
+---
+
+## Related Resources
+
+### 📖 Network Science L07 — Small-World Networks
+- Lecture topic: [[network-science-l07]]
+
+**Key concepts covered:**
+- [[milgrams-experiment-six-degrees]]
+- [[small-world-property]]
+- [[watts-strogatz-model]]
+- [[kleinberg-decentralized-search]]
+- [[global-email-experiment]]
+- [[random-graphs]]
+- [[scale-free-networks]]
+- [[preferential-attachment]]
+- [[power-law-distribution]]
+- [[web-bow-tie-structure]]
+- [[hnsw-indexing]]
+- [[graph-fundamentals]]
+- [[neighbourhood-and-degree]]
+- [[clustering-coefficient]]
+- [[triadic-closure]]
+- [[bridges-and-local-bridges]]
+- [[weak-ties-hypothesis]]
 - [[structural-balance-theory]]
-- [[balanced-triads]]
-- [[weak-structural-balance]]
-- [[signed-networks]]
-- [[frustration-index]]
-- [[cycle-criterion]]
-- [[signed-laplacian]]
+- [[signed-graphs]]

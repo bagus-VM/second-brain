@@ -91,3 +91,184 @@ Example: "Explain how a digital signature works."
 - [ ] Which specific security solutions are in scope? (Digital signatures confirmed; others TBD)
 - [ ] Are there past exam papers available for practice?
 - [ ] Does the "use case scenario" section allow choosing which scenario to answer, or is it assigned?
+
+
+---
+
+## Related Resources
+
+### 📖 IoT Security Landscape
+- Lecture topic: [[iot-lecture-1]]
+
+**Key concepts covered:**
+- [[networking-fundamentals]]
+- [[security-principles]]
+- [[information-assurance]]
+- [[iot-device-fundamentals]]
+- [[iot-communication-protocols]]
+- [[iot-network-architecture]]
+- [[cia-triad]]
+- [[firmware-security]]
+- [[privacy-by-design]]
+- [[risk-assessment-frameworks]]
+- [[secure-development-lifecycle]]
+- [[ota-updates]]
+- [[iot-data-lifecycle]]
+- [[smart-home-security]]
+- [[industrial-iot-security]]
+- [[healthcare-iot-security]]
+- [[smart-city-infrastructure]]
+- [[devops-security]]
+- [[operational-security-lifecycle]]
+- [[mirai-botnet]]
+- [[krack-attack]]
+- [[physical-unclonable-functions]]
+
+### 📖 IoT Common Attacks
+- Lecture topic: [[iot-lecture-2]]
+
+**Key concepts covered:**
+- [[networking-fundamentals]]
+- [[mqtt-security]]
+- [[coap-security]]
+- [[zigbee-security-model]]
+- [[ble-security]]
+- [[mirai-botnet]]
+- [[krack-attack]]
+- [[zigbee-pairing-vulnerability]]
+- [[attack-surface-analysis]]
+- [[security-by-design]]
+- [[information-assurance]]
+- [[network-security-fundamentals]]
+
+### 📖 IoT Attack Surfaces
+- Lecture topic: [[iot-lecture-3]]
+
+**Key concepts covered:**
+- [[attack-surface-analysis]]
+- [[mirai-botnet]]
+- [[owasp-iot-top-10]]
+- [[web-interface-vulnerabilities]]
+- [[physical-interface-attack-surface]]
+- [[threat-modeling]]
+- [[penetration-testing-methodology]]
+- [[firmware-security]]
+- [[zigbee-pairing-vulnerability]]
+- [[nist-iot-cybersecurity]]
+
+### 📖 IoT Secure Design
+- Lecture topic: [[iot-lecture-4]]
+
+**Key concepts covered:**
+- [[resilience-iot]]
+- [[iot-compliance-frameworks]]
+- [[iot-firewalling]]
+- [[ota-updates]]
+- [[iec-62443]]
+- [[security-by-design]]
+- [[devops-security]]
+- [[operational-security-lifecycle]]
+- [[digital-signatures]]
+- [[firmware-security]]
+- [[web-interface-vulnerabilities]]
+- [[mirai-botnet]]
+- [[krack-attack]]
+- [[nist-iot-cybersecurity]]
+- [[etsi-en-303-645]]
+- [[threat-modeling]]
+- [[principle-of-least-privilege]]
+- [[zero-trust-architecture]]
+- [[information-assurance]]
+
+### 📖 IoT Security Hardware
+- Lecture topic: [[iot-lecture-5]]
+
+**Key concepts covered:**
+- [[physical-unclonable-functions]]
+- [[semiconductor]]
+- [[transistor]]
+- [[threshold-voltage]]
+- [[secure-boot-chain]]
+- [[trusted-platform-module]]
+- [[tcg-specifications]]
+- [[silicon]]
+- [[common-criteria]]
+- [[key-management-lifecycle]]
+- [[fips-140-2]]
+- [[firmware-security]]
+- [[side-channel-attacks]]
+- [[device-provisioning]]
+- [[operational-security-lifecycle]]
+
+### 📖 Cryptography and Lightweight Security Primitives for IoT
+- Lecture topic: [[iot-lecture-6]]
+
+**Key concepts covered:**
+- [[information-assurance]]
+- [[physical-unclonable-functions]]
+- [[trusted-platform-module]]
+- [[random-number-generator]]
+- [[lightweight-cryptography]]
+- [[ascon]]
+- [[cia-triad]]
+- [[authentication]]
+- [[non-repudiation]]
+- [[resilience-iot]]
+- [[digital-signatures]]
+- [[ota-updates]]
+- [[firmware-security]]
+- [[secure-boot-chain]]
+- [[nist-iot-cybersecurity]]
+- [[key-management-lifecycle]]
+- [[iot-secure-design]]
+- [[mqtt-security]]
+- [[zigbee-security-model]]
+- [[ble-security]]
+
+### 📖 Identity Life Cycle and Privacy in IoT
+- Lecture topic: [[iot-lecture-7]]
+
+**Key concepts covered:**
+- [[trusted-platform-module]]
+- [[iot-architecture]]
+- [[iot-compliance-frameworks]]
+- [[privacy-by-design]]
+- [[secure-boot-chain]]
+- [[asymmetric-encryption]]
+- [[iot-2-0]]
+- [[iot-data-lifecycle]]
+- [[iot-secure-design]]
+- [[nist-iot-cybersecurity]]
+- [[authentication]]
+- [[key-management-lifecycle]]
+
+### 📖 IoT Security - Lecture 8: Compliance, IoT 2.0, and Advanced Threats
+- Lecture topic: [[iot-lecture-8]]
+
+**Key concepts covered:**
+- [[attack-tree]]
+- [[fault-tree]]
+- [[resilience-iot]]
+- [[iot-identity-lifecycle]]
+- [[privacy-by-design]]
+- [[defense-in-depth]]
+- [[threat-modeling]]
+- [[security-by-design]]
+- [[secure-development-lifecycle]]
+- [[operational-security-lifecycle]]
+- [[iot-compliance-frameworks]]
+- [[iot-2.0]]
+- [[mirai-botnet]]
+- [[zero-trust-architecture]]
+- [[iot-security-overview]]
+- [[pki]]
+- [[gdpr-compliance]]
+- [[information-assurance]]
+
+### 📖 DRAM-PUF Based IoT Security Protocol
+- Lecture topic: [[iot-lecture-9]]
+
+**Key concepts covered:**
+- [[physical-unclonable-functions]]
+- [[trusted-platform-module]]
+- [[device-provisioning]]

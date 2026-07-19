@@ -27,3 +27,21 @@ last_updated: 2026-06-02
 
 > [!question]- What is the condition that determines whether a rumour eventually reaches the same students regardless of starting point?
 > [!answer]- Connectivity. If every student is part of the same connected component, any starting point will eventually reach everyone. The difference is only in speed, not final reach — hubs spread information exponentially while periphery nodes spread linearly along chains.
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L01: Introduction — Topic Overview
+- Lecture topic: [[network-science-l01]]
+
+**Key concepts covered:**
+- [[network-intro]]
+- [[network-examples]]
+- [[edge-types]]
+- [[network-effects]]
+- [[connected-component]]
+- [[community-structure]]
+- [[network-diffusion]]
+- [[centrality]]

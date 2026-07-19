@@ -25,3 +25,21 @@ last_updated: 2026-06-02
 
 > [!question]- In a video platform, what database component is relevant for a video recommender?
 > [!answer]- Semi-structured data model with semantic search (fuzzy matching), embedded links to video instances, linking unstructured data models. The result structure changes with underlying content.
+
+
+---
+
+## Related Resources
+
+### 📖 Multimedia Databases — Lecture 01 Overview
+- Lecture topic: [[multimedia-databases-lecture-01]]
+
+**Key concepts covered:**
+- [[multimedia-definition]]
+- [[media-types-discrete-continuous]]
+- [[data-streams]]
+- [[multimedia-system]]
+- [[multimedia-main-domains]]
+- [[multimedia-database-intro]]
+- [[structured-vs-unstructured-retrieval]]
+- [[multimedia-query-predicates]]

@@ -169,3 +169,28 @@ Directed graph with 9 nodes:
 - [[milgrams-experiment-six-degrees]] — the empirical baseline for 8.A.1
 - [[web-bow-tie-structure]] — the structure classified in 8.D
 - [[random-graphs]] — the C_rand and L_rand baseline for 8.A.2
+
+
+---
+
+## Related Resources
+
+### 📖 Network Science L08: Network Dynamics
+- Lecture topic: [[network-science-l08]]
+
+**Key concepts covered:**
+- [[simple-contagion]]
+- [[sir-model-network-epidemics]]
+- [[basic-reproduction-number-r0]]
+- [[scale-free-epidemic-threshold-vanishes]]
+- [[complex-contagion]]
+- [[threshold-cascades]]
+- [[weak-tie-paradox-contagion]]
+- [[centola-2010-experiment]]
+- [[temporal-networks]]
+- [[process-structure-interaction-gap]]
+- [[community-structure]]
+- [[kleinberg-decentralized-search]]
+- [[weak-ties-hypothesis]]
+- [[centrality]]
+- [[diffusion-of-innovations]]

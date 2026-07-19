@@ -27,3 +27,28 @@ last_updated: 2026-06-02
 
 > [!question]- What does it mean when centrality measures disagree for the same node?
 > [!answer]- It reveals nuanced structural positions. A node with high eigenvector but low betweenness is embedded in a dense core with redundant paths. A node with high betweenness but low eigenvector is a bridge connecting separate groups but without strong local connections. Different measures capture different aspects of "importance."
+
+
+---
+
+## Related Resources
+
+### 📖 L04 — Communities and Graph Partitioning
+- Lecture topic: [[network-science-l04]]
+
+**Key concepts covered:**
+- [[structural-holes-and-brokerage]]
+- [[centrality-measures]]
+- [[modularity]]
+- [[community-detection-overview]]
+- [[girvan-newman-algorithm]]
+- [[louvain-algorithm]]
+- [[leiden-algorithm]]
+- [[hierarchical-clustering]]
+- [[graph-partitioning-cut-spectral]]
+- [[graph-partitioning]]
+- [[zacharys-karate-club]]
+- [[product-space-network]]
+- [[modularity-resolution-limit]]
+- [[edge-betweenness]]
+- [[embedding-based-community-detection]]
