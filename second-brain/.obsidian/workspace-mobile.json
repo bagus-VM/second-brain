@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "study/practice/mmdb-ex08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "mmdb-ex08"
             }
           }
         ]
@@ -142,6 +142,11 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "vault/topics/microelectronics-lecture-1.md",
+    "vault/concepts/iot-device-fundamentals.md",
+    "vault/topics/iot-lecture-1.md",
+    "raw/lectures/network_science/Vorlesung/l03-strong-and-weak-ties.pdf",
+    "index.md",
     "vault/topics/reproducibility-engineering-lecture-10.md",
     "study/snippets/network-ex04/4.B.2.py",
     "study/snippets/network-ex04/4.A.2.py",
@@ -152,14 +157,11 @@
     "study/snippets/network-ex02/2.D.2.py",
     "study/snippets/network-ex02/2.C.3.py",
     "study/snippets/network-ex02/2.B.3.py",
-    "study/snippets/network-ex02/2.B.2.py",
     "vault/concepts/dijkstras-algorithm.md",
-    "index.md",
     "log.md",
     "vault/concepts/graph-fundamentals.md",
     "vault/concepts/graph-laplacian.md",
     "vault/concepts/bipartite-graphs.md",
-    "vault/topics/iot-lecture-1.md",
     "vault/concepts/iot-network-architecture.md",
     "study/practice/mmdb-ex08.md",
     "study/practice/mmdb-ex01.md",
@@ -176,8 +178,6 @@
     "vault/topics/network-science-l02.md",
     "study/exams/vault-lint-report-2026-06-16.md",
     "study/exams/software-analyse-codebase-defense.md",
-    "study/exams/network-science-exercise-prep.md",
-    "log-2026.md",
     "Pasted image 20260609110111.png"
   ]
 }
