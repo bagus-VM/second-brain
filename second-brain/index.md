@@ -23,15 +23,15 @@
 ## 📚 Multimedia Databases (95 pages)
 
 ### L01 — Introduction
-| Page | Summary | Status |
-|------|---------|--------|
-| [[multimedia-definition]] | MHEG classification, strict vs loose multimedia | current |
-| [[media-types-discrete-continuous]] | Discrete (text, images) vs continuous (audio, video) | current |
-| [[multimedia-system]] | Herrtwich/Steinmetz definition | current |
-| [[data-streams]] | Async/sync/isochronous, FBR vs VBR | current |
-| [[multimedia-database-intro]] | MMDBMS = DBMS + IR | current |
-| [[structured-vs-unstructured-retrieval]] | DBMS vs IR, object-relational unifier | current |
-| [[multimedia-query-predicates]] | Attribute, structure, spatial, semantic | current |
+| Page                                     | Summary                                              | Status  |
+| ---------------------------------------- | ---------------------------------------------------- | ------- |
+| [[multimedia-definition]]                | MHEG classification, strict vs loose multimedia      | current |
+| [[media-types-discrete-continuous]]      | Discrete (text, images) vs continuous (audio, video) | current |
+| [[multimedia-system]]                    | Herrtwich/Steinmetz definition                       | current |
+| [[data-streams]]                         | Async/sync/isochronous, FBR vs VBR                   | current |
+| [[multimedia-database-intro]]            | MMDBMS = DBMS + IR                                   | current |
+| [[structured-vs-unstructured-retrieval]] | DBMS vs IR, object-relational unifier                | current |
+| [[multimedia-query-predicates]]          | Attribute, structure, spatial, semantic              | current |
 
 ### L02 — Colors
 | Page | Summary | Status |

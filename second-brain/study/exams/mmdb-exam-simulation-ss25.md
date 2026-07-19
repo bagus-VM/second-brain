@@ -508,22 +508,22 @@ Write the SQL CREATE statements to define a type hierarchy for a multimedia data
 
 ## Vault Page References
 
-| Question | Related Vault Pages |
-|----------|-------------------|
-| Q1 | [[cmyk-color-model]], [[jpeg-compression-pipeline]], [[audio-sampling-nyquist-theorem]], [[r-tree]], [[dithering]], [[entropy-coding-huffman-arithmetic]], [[color-space-conversion-ycbcr]], [[run-length-encoding]] |
-| Q2 | (ML/deep learning — not in vault scope, but relevant for multimedia) |
-| Q3 | [[jpeg-compression-pipeline]], [[transform-coding]], [[lossless-vs-lossy-compression]] |
-| Q4 | [[entropy-coding-huffman-arithmetic]] |
-| Q5 | [[color-quantization]], [[dithering]] |
-| Q6 | [[cmyk-color-model]] |
-| Q7 | [[run-length-encoding]], [[jpeg-compression-pipeline]] |
-| Q8 | [[color-space-conversion-ycbcr]], [[transform-coding]], [[jpeg-compression-pipeline]] |
-| Q9 | [[transform-coding]] |
-| Q10 | [[color-quantization]] |
-| Q11 | [[r-tree]] |
-| Q12 | [[r-tree]] |
-| Q13 | [[object-relational-databases]] |
-| Q14 | [[nested-tables-vs-varrays]], [[object-relational-databases]] |
+| Question | Related Vault Pages                                                                                                                                                                                                  |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Q1       | [[cmyk-color-model]], [[jpeg-compression-pipeline]], [[audio-sampling-nyquist-theorem]], [[r-tree]], [[dithering]], [[entropy-coding-huffman-arithmetic]], [[color-space-conversion-ycbcr]], [[run-length-encoding]] |
+| Q2       | (ML/deep learning — not in vault scope, but relevant for multimedia)                                                                                                                                                 |
+| Q3       | [[jpeg-compression-pipeline]], [[transform-coding]], [[lossless-vs-lossy-compression]]                                                                                                                               |
+| Q4       | [[entropy-coding-huffman-arithmetic]]                                                                                                                                                                                |
+| Q5       | [[color-quantization]], [[dithering]]                                                                                                                                                                                |
+| Q6       | [[cmyk-color-model]]                                                                                                                                                                                                 |
+| Q7       | [[run-length-encoding]], [[jpeg-compression-pipeline]]                                                                                                                                                               |
+| Q8       | [[color-space-conversion-ycbcr]], [[transform-coding]], [[jpeg-compression-pipeline]]                                                                                                                                |
+| Q9       | [[transform-coding]]                                                                                                                                                                                                 |
+| Q10      | [[color-quantization]]                                                                                                                                                                                               |
+| Q11      | [[r-tree]]                                                                                                                                                                                                           |
+| Q12      | [[r-tree]]                                                                                                                                                                                                           |
+| Q13      | [[object-relational-databases]]                                                                                                                                                                                      |
+| Q14      | [[nested-tables-vs-varrays]], [[object-relational-databases]]                                                                                                                                                        |
 
 ---
 

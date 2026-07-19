@@ -21,14 +21,14 @@ An **R-tree** is a height-balanced generalization of the B-tree for multidimensi
 
 **Variants covered in the lecture**:
 
-| Variant | Region | Key idea | Trade-off |
-| ------- | ------ | -------- | --------- |
-| R+ | Rectangle, no overlap | Object added to every node whose MBR it overlaps | Better search, taller tree |
-| R* | Rectangle, overlap allowed | Modified add and split; forced re-add on overflow | More efficient than R-tree |
-| SS | Bounding circle | Tree ordered by similarity of circular regions | Better than R* |
-| SR | Rectangle and circle | Region is the intersection of both; see [[sr-tree]] | Low volume and low diameter |
-| TV | Rectangle, varying dims | Telescope function selects active dimensions per height | Fewer dims near root |
-| X | Rectangle, supernodes | Double-capacity supernodes; split history for minimal overlap | More efficient than TV and R* |
+| Variant | Region                     | Key idea                                                      | Trade-off                     |
+| ------- | -------------------------- | ------------------------------------------------------------- | ----------------------------- |
+| R+      | Rectangle, no overlap      | Object added to every node whose MBR it overlaps              | Better search, taller tree    |
+| R*      | Rectangle, overlap allowed | Modified add and split; forced re-add on overflow             | More efficient than R-tree    |
+| SS      | Bounding circle            | Tree ordered by similarity of circular regions                | Better than R*                |
+| SR      | Rectangle and circle       | Region is the intersection of both; see [[sr-tree]]           | Low volume and low diameter   |
+| TV      | Rectangle, varying dims    | Telescope function selects active dimensions per height       | Fewer dims near root          |
+| X       | Rectangle, supernodes      | Double-capacity supernodes; split history for minimal overlap | More efficient than TV and R* |
 
 **Multi-feature access structures** index several feature vectors in one structure rather than one tree per feature: the **M-tree** and **M2-tree**. **TempoM2** extends this to temporal video search with two levels (an M2-tree for content plus container nodes enforcing a total order over video segments).
 
