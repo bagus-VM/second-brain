@@ -2,7 +2,7 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-07-10
+**Last updated:** 2026-07-20
 **Total pages:** 657 (vault + study; excluding raw/)
 **Active courses:** 6
 
@@ -188,6 +188,7 @@
 | [[mmdb-ex07-flashcards]] | Flashcards for Ex07 | current |
 | [[mmdb-ex08]] | Exercise sheet 8: querying, object-relational DBs, SQL/MM, MPQF | current |
 | [[mmdb-ex09]] | Exercise sheet 9: indexing (B-tree, hash, R-tree, search algorithms) | current |
+| [[multimedia-databases-cheat-sheet]] | **Condensed one-page cheat sheet: all formulas, definitions, algorithms from Ex01–Ex09** | current |
 | [[mmdb-exam-prediction]] | Exam prediction: 11 archetypes, top-3 targets | current |
 | | [[mmdb-exam-simulation-ss25]] | Answer each sub-question with exactly one choice. | current |
 

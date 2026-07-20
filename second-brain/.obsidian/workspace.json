@@ -4,25 +4,96 @@
     "type": "split",
     "children": [
       {
-        "id": "65c6eb37a34dbb56",
+        "id": "9965ba61c3c8fffd",
         "type": "tabs",
         "children": [
           {
-            "id": "fe778cc238a8bcb9",
+            "id": "9265598f872b0d86",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf",
+                "page": 1,
+                "left": -121,
+                "top": 846,
+                "zoom": 1
+              },
+              "icon": "lucide-file-text",
+              "title": "Ex01"
+            }
+          },
+          {
+            "id": "71ea45728994132a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "study/exams/MMDB.pdf",
+                "page": 1,
+                "left": -11,
+                "top": 207,
+                "zoom": 1.3404917226163835
+              },
+              "icon": "lucide-file-text",
+              "title": "MMDB"
+            }
+          },
+          {
+            "id": "e20b6ba893d7ac74",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+                "page": 1,
+                "left": -11,
+                "top": 720,
+                "zoom": 1.3405546334809402
+              },
+              "icon": "lucide-file-text",
+              "title": "Ex09"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "d62abf6c8f13a9d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c43ffa20a71d5ca3",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
+                "page": 29,
+                "left": -14,
+                "top": 262,
+                "zoom": 1.1083333333333334
+              },
+              "icon": "lucide-file-text",
+              "title": "Ex08_solutions"
+            }
+          },
+          {
+            "id": "062d47c4673d63c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/exams/mmdb-exam-prep-exercises.md",
+                "file": "study/exams/multimedia-databases-cheat-sheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mmdb-exam-prep-exercises"
+              "title": "multimedia-databases-cheat-sheet"
             }
           },
           {
-            "id": "ec19ce27612aaf5f",
+            "id": "be9cf3238d0891fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,181 +105,9 @@
               "icon": "lucide-file",
               "title": "mmdb-exam-simulation-ss25"
             }
-          },
-          {
-            "id": "b58377624e417d16",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-                "page": 1,
-                "left": -21,
-                "top": 1590,
-                "zoom": 0.7105966162065895
-              },
-              "icon": "lucide-file-text",
-              "title": "mmdb-ex06"
-            }
-          },
-          {
-            "id": "0701dc95f98fced1",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex07.pdf",
-                "page": 2,
-                "left": -21,
-                "top": 903,
-                "zoom": 0.7105966162065896
-              },
-              "icon": "lucide-file-text",
-              "title": "mmdb-ex07"
-            }
-          },
-          {
-            "id": "704e93d7b9f7d398",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex07_solutions.pdf",
-                "page": 24,
-                "left": -14,
-                "top": 325,
-                "zoom": 1.1083333333333334
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex07_solutions"
-            }
-          },
-          {
-            "id": "ccaac072148ec7a0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-                "page": 4,
-                "left": -21,
-                "top": 1363,
-                "zoom": 0.7105966162065895
-              },
-              "icon": "lucide-file-text",
-              "title": "mmdb-ex06"
-            }
-          }
-        ]
-      },
-      {
-        "id": "027d09c73b858783",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "58999e56896a97c2",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex05_solutions.pdf",
-                "page": 11,
-                "left": -18,
-                "top": 282,
-                "zoom": 0.83125
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex05_solutions"
-            }
-          },
-          {
-            "id": "9e93674309c0a4b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/image-file-formats.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "image-file-formats"
-            }
-          },
-          {
-            "id": "9a4f86043c94a3d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/image-file-formats.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "image-file-formats"
-            }
-          },
-          {
-            "id": "a74559a3eb2ea5fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/image-point-operations.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "image-point-operations"
-            }
-          },
-          {
-            "id": "037afaa8c0f1c141",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/pixel-formats-and-bit-depth.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "pixel-formats-and-bit-depth"
-            }
-          },
-          {
-            "id": "b19fab3bb1820dc8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
-                "page": 10,
-                "left": -18,
-                "top": 363,
-                "zoom": 0.83125
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex04_solutions"
-            }
-          },
-          {
-            "id": "69c73e207ee21baf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vault/concepts/jpeg-compression-pipeline.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jpeg-compression-pipeline"
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -352,28 +251,30 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "fe778cc238a8bcb9",
+  "active": "062d47c4673d63c1",
   "lastOpenFiles": [
-    "vault/concepts/opamp-basics.md",
-    "vault/concepts/negative-feedback.md",
-    "vault/concepts/impedance-matching.md",
-    "study/exams/vault-lint-report-2026-07-20.md",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-examprep2.rnote",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex06.pdf",
     "study/exams/mmdb-exam-prep-exercises.md",
     "study/exams/mmdb-exam-simulation-ss25.md",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex07.pdf",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex07_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
+    "study/exams/exam-prep-network-science-2026-07-28.md",
+    "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
+    "study/exams/MMDB.pdf",
+    "study/exams/multimedia-databases-cheat-sheet.md",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
+    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf",
+    "Untitled 1.base",
+    "Untitled.base",
     "vault/concepts/jpeg-compression-pipeline.md",
     "raw/lectures/multimedia_databases/Uebung/solutions/Ex04_solutions.pdf",
     "vault/concepts/pixel-formats-and-bit-depth.md",
     "vault/concepts/image-point-operations.md",
     "vault/concepts/image-file-formats.md",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex05_solutions.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex05.pdf",
-    "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex04.pdf",
-    "raw/lectures/multimedia_databases/Uebung/solutions/Ex03_solutions.pdf",
+    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
+    "vault/concepts/opamp-basics.md",
+    "vault/concepts/negative-feedback.md",
+    "vault/concepts/impedance-matching.md",
+    "study/exams/vault-lint-report-2026-07-20.md",
     "index.md",
     "study/exams/network-science-exam-battle-plan.md",
     "study/exams/reproducibility-engineering-exam-battle-plan.md",
@@ -387,9 +288,6 @@
     "vault/concepts/color-quantization.md",
     "raw/lectures/Lectures.md",
     "study/practice/mmdb-ex05.md",
-    "study/flashcards/mmdb-ex01-flashcards.md",
-    "study/practice/repeng-prof-ic09.md",
-    "study/practice/repeng-prof-ic10.md",
     "Pasted image 20260708123921.png",
     "Pasted image 20260623144712.png",
     "Pasted image 20260623144601.png",

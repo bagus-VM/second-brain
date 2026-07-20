@@ -458,3 +458,5 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 ## [2026-07-20] PREP | Network Science Exam Battle Plan | Delegated: covering L01-L09, 8 exercise sheets, day-by-day schedule for Jul 20-27
 
 ## [2026-07-20] PREP | Reproducibility Engineering Exam Battle Plan | Delegated: covering sheets 1-11, IC 01-11, day-by-day schedule for Jul 20-29
+
+## [2026-07-20] QUERY | "Condensed multimedia exercise sheet" | Created multimedia-databases-cheat-sheet.md — one-page reference covering all 9 exercise sheets (signal processing, color models, image processing, JPEG compression, CBR, querying, indexing). Formulas, definitions, algorithm steps.
