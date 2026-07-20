@@ -25,7 +25,7 @@ For a graph G = (V, E):
 | Representation   | Strength                                                                                                                        | Limitation                                  | Best use cases                 |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------ |
 | Edge list        | Lean, simple, good for import/export                                                                                            | Slow to test whether a specific edge exists | Kruskal's MST, I/O, Streaming  |
-| Adjacency list   | Best default for [[breadth-first-search\|BFS]]/[[depth-first-search\|DFS]] on [[sparse-dense-and-random-graphs\|sparse]] graphs | Less convenient for matrix-based methods    | BFS/DFS, Sparse Graphs         |
+| Adjacency list   | Best default for [[breadth-first-search|BFS]]/[[depth-first-search|DFS]] on [[sparse-dense-and-random-graphs|sparse]] graphs | Less convenient for matrix-based methods    | BFS/DFS, Sparse Graphs         |
 | Adjacency matrix | Fast edge lookup (O(1)), linear algebra friendly                                                                                | Uses O(\|V\|²) space even for sparse graphs | Dense Graphs, Matrix Ops, GNNs |
 ![[Pasted image 20260623144601.png]]![[Pasted image 20260623144321.png|383]]![[Pasted image 20260623144712.png]]
 - For undirected graphs, the adjacency matrix is symmetric: A[i][j] = A[j][i]

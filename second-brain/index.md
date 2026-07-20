@@ -189,6 +189,8 @@
 | [[mmdb-ex08]] | Exercise sheet 8: querying, object-relational DBs, SQL/MM, MPQF | current |
 | [[mmdb-ex09]] | Exercise sheet 9: indexing (B-tree, hash, R-tree, search algorithms) | current |
 | [[mmdb-exam-prediction]] | Exam prediction: 11 archetypes, top-3 targets | current |
+| | [[mmdb-exam-simulation-ss25]] | Answer each sub-question with exactly one choice. | current |
+
 
 ---
 
@@ -322,7 +324,7 @@
 | Page                                    | Summary                                                                                                   | Status  |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------- |
 | [[adjacency-matrix-factorization]]      | A unifying view: spectral embeddings, DeepWalk, and node2vec all implicitly fact                          | current |
-| [[algebraic-connectivity]]              | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-laplacian\|graph Laplacian]] | current |
+| [[algebraic-connectivity]]              | Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-laplacian|graph Laplacian]] | current |
 | [[betweenness-centrality]]              | Betweenness centrality measures how often a node sits on shortest paths between                           | current |
 | [[bipartite-graphs]]                    | A bipartite graph has two disjoint node sets where edges only connect nodes acro                          | current |
 | [[centrality-measures]]                 | Centrality measures quantify node importance — but each measure encodes a differ                          | current |
@@ -344,7 +346,7 @@
 | [[granovetter-weak-ties]]               | Granovetter's weak-tie hypothesis states that weak ties (acquaintances, not clos                          | current |
 | [[graph-laplacian]]                     | The graph Laplacian L = D - A encodes the structure of a graph — its eigenvalues                          | current |
 | [[graph-partitioning]]                  | Graph partitioning divides a graph into a fixed number of balanced clusters — un                          | current |
-| [[harmonic-centrality]]                 | Harmonic centrality is the disconnected-graph extension of [[closeness-centrality\|closeness centrality]] | current |
+| [[harmonic-centrality]]                 | Harmonic centrality is the disconnected-graph extension of [[closeness-centrality|closeness centrality]] | current |
 | [[hierarchical-clustering]]             | Divisive and agglomerative community detection methods produce dendrograms — tre                          | current |
 | [[hnsw-indexing]]                       | HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg'                          | current |
 | [[k-balance]]                           | k-balance is the partition structure guaranteed by weak structural balance: a co                          | current |
@@ -398,6 +400,11 @@
 | Page | Summary | Status |
 |------|---------|--------|
 | [[network-science-exercise-prep]] | Exercise-based exam prep: NetworkX functions, hand calculations, key formulas | current |
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[exam-prep-network-science-2026-07-28]] | - Format: Open questions + structured questions | current |
 
 ---
 
@@ -516,18 +523,481 @@
 | [[vistrails]] | VisTrails is a scientific workflow management system that provides integrated pr | current |
 ### Practice & Flashcards
 | Page | Summary | Status |
+| Page | Summary | Status |
+| [[repeng-prof-ic01]] | Based on the Nature article on "Reproducibility Crisis" and ACM "Artifact Review | current |
+| [[repeng-prof-ic02]] | Based on the VisTrails article and Heil et al. "Reproducibility standards for ma | current |
+| [[repeng-prof-ic03]] | Based on Justin Zobel's "Writing for Computer Science". | current |
+| [[repeng-prof-ic04]] | Norm committed incomplete/broken code (work-in-progress) and then committed the  | current |
+| [[repeng-prof-ic05]] | Reassembled code: | current |
+| [[repeng-prof-ic06]] | - User Application → DB Client Library → Network → RDBMS Server | current |
+| [[repeng-prof-ic07]] | Based on Hadley Wickham's "Tidy Data" and SQL for Data Science. | current |
+| [[repeng-prof-ic08]] | | Feature       | Relational        | XML               | JSON              | | current |
+| [[repeng-prof-ic09]] | | Criterion                | Local LLM inside container | Remote API             | current |
+| [[repeng-prof-ic10]] | Based on "Nullius in Verba" by Mauerer & Scherzinger, ICDE 2021. | current |
+| [[reproducibility-engineering-sheet-1]] | Lab Sessions: April 23/24, 2026 | current |
+| [[reproducibility-engineering-sheet-2]] | Lab Sessions: April 30 / May 8, 2026 | current |
+| [[reproducibility-engineering-sheet-3]] | Lab Sessions: May 7/15, 2026 | current |
+| [[reproducibility-engineering-sheet-4]] | Lab Sessions: May 21/22, 2026 | current |
+| [[reproducibility-engineering-sheet-5]] | Lab Sessions: May 28/29, 2026 | current |
+| [[reproducibility-engineering-sheet-6]] | 2.2 Comparing different Compilers | current |
+| [[reproducibility-engineering-sheet-7]] | The task is to compare the performance of an embedded DBMS (sqlite-architecture) | current |
+| [[reproducibility-engineering-sheet-8]] | The table  has columns , , ,  with rows like  and . | current |
+| [[reproducibility-engineering-sheet-9]] | -  pretty-prints JSON.  produces compact output.  sorts keys for reliable compar | current |
+| Page | Summary | Status |
+| [[reproducibility-engineering-sheet-1-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-1 | current |
+| [[reproducibility-engineering-sheet-2-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-2 | current |
+| [[reproducibility-engineering-sheet-3-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-3 | current |
+| [[reproducibility-engineering-sheet-4-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-4 | current |
+| [[reproducibility-engineering-sheet-5-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-5 | current |
+| [[reproducibility-engineering-sheet-6-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-5 | current |
+| [[reproducibility-engineering-sheet-7-flashcards]] | - Lecture topic: reproducibility-engineering-lecture-6 | current |
+
 
 ## 📚 Introduction to Microelectronics (65 pages)
+
+### L01 — Semiconductors
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-1]] | Semiconductors are materials whose electrical conductivity lies between conductors and insulators, d | current |
+
+### L02 — Doping
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-2]] | doping is the deliberate introduction of impurity atoms into a semiconductor crystal to control its  | current |
+
+### L03 — P-N Junctions
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-3]] | A p-n-junction forms when p-type and n-type semiconductor regions meet, creating a built-in electric | current |
+
+### L04 — Diode Circuits
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-4]] | diode circuits are used for rectifier (AC to DC), signal shaping via limiter-circuit and clamper-cir | current |
+
+### L05 — MOSFETs
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-5]] | The mosfet (Metal-Oxide-Semiconductor Field-Effect Transistor) uses a gate-controlled electric field | current |
+
+### L06 — CMOS
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-6]] | CMOS (Complementary MOS) combines an nmos-transistor pull-down network and a pmos-transistor pull-up | current |
+
+### L07 — CMOS Applications
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-7]] | CMOS circuits can store bits (memory) and amplify signals (analog), not just compute logic. | draft |
+
+### L08 — OpAmps
+| Page | Summary | Status |
+|------|---------|--------|
+| [[microelectronics-lecture-8]] | Two OpAmp circuits (inverting and non-inverting) set their gain using external resistors, thanks to  | draft |
 
 ### L09 — Integrators, Differentiators & Memories
 | Page | Summary | Status |
 |------|---------|--------|
-| [[microelectronics-lecture-9]] | OpAmp integrators/differentiators, voltage adder, voltage follower, SRAM/DRAM/ROM/Flash | current |
-| [[opamp-integrator]] | Inverting amplifier with capacitor feedback: Vout = -(1/RC) ∫ Vin dt | current |
-| [[opamp-differentiator]] | Inverting amplifier with capacitor input: Vout = -RC dVin/dt | current |
-| [[weighted-summer]] | Multiple inputs summed through resistors: Vout = -Rf × Σ(Vi/Ri) | current |
-| [[voltage-follower]] | Unity-gain buffer for impedance transformation (gain = 1) | current |
-| [[sram-cell]] | 6-transistor bistable latch: fast, volatile, used for caches | current |
-| [[dram-cell]] | 1-transistor + 1-capacitor: dense, volatile, needs refresh | current |
-| [[sense-amplifier]] | Detects tiny voltage differences on memory bit lines | current |
-| [[flash-memory]] | Floating gate transistor: non-volatile, block-erasable, limited endurance | current |
+| [[microelectronics-lecture-9]] | By swapping resistors for capacitors in OpAmp feedback networks you get integrators and differentiat | draft |
+| [[opamp-integrator]] | Replace the feedback resistor with a capacitor, and the OpAmp outputs the integral of the input sign | current |
+| [[opamp-differentiator]] | Replace the input resistor with a capacitor, and the OpAmp outputs the derivative of the input signa | current |
+| [[weighted-summer]] | Multiple input signals, each with its own resistor, are summed by the OpAmp into a single output. | current |
+| [[voltage-follower]] | The output follows the input exactly — no amplification, no inversion — but it isolates the source f | current |
+| [[sram-cell]] | Six transistors form a bistable latch that holds one bit as long as power is supplied — fast but lar | current |
+| [[dram-cell]] | One transistor and one capacitor store a bit as charge — tiny, dense, but the charge leaks and needs | current |
+| [[sense-amplifier]] | A sense amplifier detects the tiny voltage difference on a memory's bit lines and amplifies it to fu | current |
+| [[flash-memory]] | A floating gate traps electrons to store data permanently — no power needed, but writes wear out the | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[analog-amplifier]] | A circuit that increases the amplitude of an analog signal using active components like transistors  | current |
+| [[avalanche-breakdown]] | Avalanche breakdown is a carrier multiplication mechanism that occurs at high reverse voltages, wher | current |
+| [[band-theory]] | Band theory explains how electrons in solids occupy continuous ranges of allowed energies (bands) se | current |
+| [[bandgap]] | The bandgap is the energy difference between the valence band and conduction band that determines wh | current |
+| [[bridge-rectifier]] | A full-wave rectifier using four diodes in a bridge configuration that eliminates the need for a cen | current |
+| [[capacitor]] | A capacitor is a two-terminal component that stores energy in an electric field between two conducti | current |
+| [[clamper-circuit]] | A clamper (DC restorer) shifts the DC level of a signal without changing its waveform shape, using a | current |
+| [[cmos-inverter]] | The fundamental building block of CMOS digital circuits: an NMOS and PMOS transistor that switch com | current |
+| [[cmos-logic-gates]] | The CMOS logic family builds every Boolean function as a complementary pair of networks: an nMOS pul | current |
+| [[cmos-nand-gate]] | A CMOS NAND gate uses two nMOS in series (pull-down) and two pMOS in parallel (pull-up) to compute ¬ | current |
+| [[cmos-nor-gate]] | A CMOS NOR gate uses two nMOS in parallel (pull-down) and two pMOS in series (pull-up) to compute ¬( | current |
+| [[cmos-xor-gate]] | The XOR function (A ⊕ B = AB̄ + ĀB) cannot be implemented in a single stage of static complementary  | current |
+| [[common-source-amplifier]] | A MOSFET amplifier configuration where the source is grounded, providing voltage gain with 180° phas | current |
+| [[conduction-band]] | The conduction band is the energy band above the valence band where excited electrons become free to | current |
+| [[conductor]] | A material with high electrical conductivity due to free charge carriers (typically electrons) that  | current |
+| [[depletion-region]] | The depletion region is the charge-carrier-free zone at a p-n junction where electrons and holes hav | current |
+| [[digital-circuit-design]] | Digital circuit design is the art of combining MOS transistors into logic gates, and logic gates int | current |
+| [[digital-logic]] | The representation and manipulation of information using discrete voltage levels (HIGH/LOW) through  | current |
+| [[diode]] | A diode is a two-terminal semiconductor device based on a p-n junction that allows current to flow p | current |
+| [[diode-applications]] | Diodes are one-way valves for current — by combining them with resistors and capacitors, you can con | current |
+| [[doping]] | Doping is the process of intentionally introducing impurity atoms into a semiconductor to modify its | current |
+| [[doping-and-extrinsic-semiconductors]] | Doping means adding tiny amounts of specific impurity atoms to silicon to create an excess of either | current |
+| [[electricity]] | Electricity is the flow of electric charge (carried by electrons or holes), governed by fundamental  | current |
+| [[electron-hole]] | A hole is the absence of an electron in the valence band that behaves like a positively charged part | current |
+| [[electronics]] | Electronics is the scientific field concerned with manipulating electrons and other electrically cha | current |
+| [[etching]] | The process of selectively removing material from a wafer surface using chemical or physical methods | current |
+| [[full-wave-rectifier]] | A full-wave rectifier uses two or four diodes to pass both halves of the AC waveform, producing puls | current |
+| [[germanium]] | Germanium was the first semiconductor used in transistors but was largely replaced by silicon due to | current |
+| [[half-wave-rectifier]] | A half-wave rectifier uses a single diode to pass only one half of the AC waveform, producing pulsat | current |
+| [[impedance-matching]] | Impedance matching means designing circuits so that a source can deliver maximum power to a load, or | current |
+| [[insulator]] | A material with very low electrical conductivity due to a large bandgap that prevents free charge ca | current |
+| [[intrinsic-semiconductor]] | An intrinsic semiconductor is a pure semiconductor material with no added impurities, where charge c | current |
+| [[ion-implantation]] | Ion implantation is a doping technique that uses an electron gun to accelerate dopant ions to high e | current |
+| [[limiter-circuit]] | A limiter clips the voltage waveform at a specified threshold, preventing it from exceeding a maximu | current |
+| [[mask-alignment]] | The process of precisely positioning a photomask over a wafer so that new patterns align correctly w | current |
+| [[microelectronics]] | Microelectronics is the subfield of electronics dealing with very small electronic components at the | current |
+| [[mos-capacitor]] | The MOS capacitor is the fundamental structure beneath the MOSFET gate — a metal-oxide-semiconductor | current |
+| [[mos-transistors]] | A MOSFET is a transistor where a voltage on a gate electrode controls current flow between two termi | current |
+| [[mosfet]] | A MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor) is a voltage-controlled transistor wher | current |
+| [[mosfet-operating-regions]] | MOSFETs operate in three distinct regions — Cutoff, Linear (Triode), and Saturation — determined by  | current |
+| [[n-type-semiconductor]] | An n-type semiconductor is a semiconductor doped with electron donor atoms (P, As), creating an abun | current |
+| [[nanoelectronics]] | Nanoelectronics is the subfield of electronics that exploits nanotechnology and quantum mechanical p | current |
+| [[negative-feedback]] | Negative feedback takes a portion of the output signal and feeds it back to the input in opposite ph | current |
+| [[nmos-transistor]] | An nMOS transistor has N-type source and drain regions in a P-type substrate, using electrons as cha | current |
+| [[opamp-basics]] | An operational amplifier is a high-gain differential amplifier that, combined with negative feedback | current |
+| [[p-n-junction]] | A p-n junction is the boundary formed when p-type and n-type semiconductors meet, creating a depleti | current |
+| [[p-n-junction-overview]] | A p-n junction is where p-type and n-type semiconductors meet — the built-in electric field at this  | current |
+| [[p-type-semiconductor]] | A p-type semiconductor is a semiconductor doped with electron acceptor atoms (B, Al), creating an ab | current |
+| [[photolithography]] | Photolithography is the pattern-transfer process in semiconductor fabrication that uses light to sel | current |
+| [[pmos-transistor]] | A pMOS transistor has P-type source and drain regions in an N-type substrate, using holes as charge  | current |
+| [[pmtransistor]] | A pMOS transistor has P-type source and drain regions in an N-type substrate, using holes as charge  | current |
+| [[power-supply]] | The source of electrical energy that powers electronic circuits, converting AC mains or battery volt | current |
+| [[rectifier]] | A rectifier is a circuit that converts alternating current (AC) to direct current (DC) using diodes  | current |
+| [[semiconductor]] | A semiconductor is a material with medium resistivity that can act as either a conductor or insulato | current |
+| [[semiconductor-physics]] | Semiconductors are materials whose electrical conductivity falls between conductors and insulators,  | current |
+| [[silicon]] | Silicon is the dominant semiconductor material in microelectronics due to its abundance, controllabl | current |
+| [[thermal-diffusion]] | Thermal diffusion is a doping method where silicon wafers are heated in the presence of dopant vapor | current |
+| [[threshold-voltage]] | The threshold voltage (VTH) is the minimum gate-to-source voltage required to create a conducting in | current |
+| [[transistor]] | A transistor is a three-terminal semiconductor device that can amplify signals or act as a switch, f | current |
+| [[valence-band]] | The valence band is the highest energy band occupied by electrons in a non-excited atom, representin | current |
+| [[vlsi-design]] | VLSI (Very Large Scale Integration) is the discipline of designing chips with millions to billions o | current |
+| [[zener-breakdown]] | Zener breakdown is a quantum mechanical tunnelling mechanism that occurs in heavily doped p-n juncti | current |
+| [[zener-diode]] | A Zener diode is a heavily doped diode designed to operate reliably in the reverse breakdown region, | current |
+
+---
+## 📚 IoT Security (~80 pages)
+
+### L01 — Introduction to IoT Security
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-1]] | A comprehensive overview of the IoT security domain spanning fundamentals, applications, information | current |
+
+### L02 — Attack Taxonomy
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-2]] | A comprehensive taxonomy of attack types targeting IoT systems, organized into nine categories spann | current |
+
+### L03 — Attack Surfaces
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-3]] | A systematic enumeration of IoT attack-surface-analysis based on Daniel Miessler's 15 attack surface | current |
+
+### L04 — Secure Design
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-4]] | Design goals and best practices for building secure IoT systems, covering automated attack mitigatio | current |
+
+### L05 — Hardware Security
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-5]] | Hardware-based security mechanisms for IoT devices, covering physical-unclonable-functions (PUFs) fo | current |
+
+### L06 — Cryptography for IoT
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-6]] | Cryptography gives IoT devices the four basic security services — confidentiality (encryption), inte | current |
+
+### L07 — Identity & Privacy
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-7]] | Identity lifecycle management (from device bootstrapping through deactivation) and privacy engineeri | current |
+
+### L08 — Compliance & Monitoring
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-8]] | IoT security requires ongoing compliance monitoring, periodic risk assessments, and defence-in-depth | current |
+
+### L09 — DRAM-PUF Protocol
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-lecture-9]] | A concrete IoT authentication protocol that uses DRAM retention decay as a Physical Unclonable Funct | current |
+
+### Papers
+| Page | Summary | Status |
+|------|---------|--------|
+| [[paper-iot-lightweight-hardware-architecture]] | Mexis, Anagnostopoulos, Chen, Bambach, Arul, Katzenbeisser (2021), "A Lightweight Architecture for H | current |
+| [[paper-iot-mexis-2021-poster]] | Mexis, Anagnostopoulos, Chen, Bambach, Arul, Katzenbeisser (2021), "A Design for a Secure Network of | current |
+| [[paper-zhou-iot-2-0]] | Zhou, Makhdoom, Shariati, Raza, Keshavarz, Lipman, Abolhasan, Jamalipour (2021), "Internet of Things | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[actuators]] | Actuators are IoT components that perform physical actions in response to commands — motors, valves, | current |
+| [[aes]] | AES is the dominant symmetric block cipher, standardised as FIPS 197 in 2001 after winning the NIST  | current |
+| [[ascon]] | ASCON is the algorithm family selected by NIST in February 2023 as the winner of the lightweight cry | current |
+| [[asymmetric-encryption]] | Asymmetric encryption uses a public/private key pair — the public key encrypts, the private key decr | current |
+| [[attack-surface-analysis]] | Daniel Miessler's 15 attack surface classes (DefCon 2023) provide a comprehensive framework for syst | current |
+| [[attack-tree]] | An attack tree is a structured diagram modelling how an attacker could achieve a specific security g | current |
+| [[authentication]] | Authentication is the process of verifying the identity of a user, device, or system — proving you a | current |
+| [[availability]] | The assurance that systems and data are accessible to authorized users when needed, forming the 'A'  | current |
+| [[ble-security]] | Bluetooth Low Energy (BLE) security covers the pairing modes, encryption mechanisms, and known vulne | current |
+| [[cia-triad]] | The CIA Triad — Confidentiality, Integrity, Availability — is the foundational model of information  | current |
+| [[coap-security]] | CoAP (Constrained Application Protocol) security covers DTLS for transport encryption, OSCORE for en | current |
+| [[common-criteria]] | An international standard for evaluating the security properties of IT products through structured a | current |
+| [[course]] | This course covers security solutions for the Internet of Things (IoT), spanning from foundational c | current |
+| [[defense-in-depth]] | Defence-in-depth layers multiple defensive mechanisms so that if one layer fails, others remain — fo | current |
+| [[denial-of-service]] | Attacks that make IoT devices or services unavailable to legitimate users, ranging from simple resou | current |
+| [[device-memory-attack-surface]] | The device memory attack surface class covers sensitive data stored in IoT device memory — including | current |
+| [[device-provisioning]] | Device provisioning is the process of giving each IoT device its unique identity, credentials, and i | current |
+| [[devops-security]] | DevOps blends development, QA, and operations into rapid, collaborative delivery — and in IoT securi | current |
+| [[digital-signatures]] | A digital signature is a cryptographic mechanism that proves a message was created by a specific sen | current |
+| [[dolev-yao-attacker-model]] | The Dolev-Yao attacker model (1983) is the standard adversary model for cryptographic protocol analy | current |
+| [[ecosystem-communications-security]] | Ecosystem communications security covers the attack surface of inter-component messaging in IoT ecos | current |
+| [[etsi-en-303-645]] | A European standard defining 13 provisions for consumer IoT security, forming the basis for the EU C | current |
+| [[fault-tree]] | A fault tree is a structured diagram modelling how system failures can lead to a hazardous state — u | current |
+| [[fips-140-2]] | US government standard for validating the security of cryptographic modules in hardware and software | current |
+| [[firmware-security]] | Firmware security covers vulnerabilities in IoT device firmware — including hardcoded passwords, sen | current |
+| [[gdpr-compliance]] | GDPR is EU law governing personal data processing — for IoT, it mandates data minimization, purpose  | current |
+| [[hashing]] | A cryptographic hash H maps arbitrary-length input to a fixed-length digest with three security prop | current |
+| [[healthcare-iot-security]] | Healthcare IoT (IoMT) security covers connected medical devices — insulin pumps, pacemakers, patient | current |
+| [[hmac]] | HMAC (Hash-based MAC, RFC 2104) is the standard construction for a message-authentication-code using | current |
+| [[iec-62443]] | The international standard series for securing industrial automation and control systems (IACS), cov | current |
+| [[industrial-iot-security]] | Industrial IoT (IIoT) security covers SCADA systems, PLCs, and operational technology networks where | current |
+| [[information-assurance]] | Information Assurance extends the CIA Triad with Authentication, Non-repudiation, Resilience, and Sa | current |
+| [[internet-of-things]] | The Internet of Things is a network of physical devices embedded with sensors, software, and connect | current |
+| [[iot-2-0]] | IoT 2.0 is the next generation of the Internet of Things, integrating 5G/6G, machine learning, edge  | current |
+| [[iot-2.0]] | IoT 2.0 is the next-generation IoT concept integrating 5G/6G connectivity, machine learning and AI,  | current |
+| [[iot-applications]] | IoT applications span a wide range of domains — smart home, smart city, industrial automation, healt | current |
+| [[iot-architecture]] | IoT architecture consists of three main segments — sensors/data aggregators, actuators/agents, and p | current |
+| [[iot-attack-surfaces]] | Systematic enumeration of all points where an IoT system can be attacked, from physical interfaces t | current |
+| [[iot-attack-taxonomy]] | IoT attacks span nine major categories — from scanning and eavesdropping to physical tampering and p | current |
+| [[iot-common-attacks]] | A taxonomy of the most frequently observed attack types targeting IoT devices, networks, and ecosyst | current |
+| [[iot-communication-protocols]] | IoT communication protocols — MQTT, CoAP, Zigbee, BLE, LoRaWAN, and Thread/Matter — are the language | current |
+| [[iot-compliance-frameworks]] | IoT compliance frameworks — including the US IoT Cybersecurity Improvement Act, ENISA recommendation | current |
+| [[iot-connectivity-protocols]] | IoT uses a huge diversity of connectivity solutions — Wi-Fi, LoRaWAN, Bluetooth, Ethernet, Serial, C | current |
+| [[iot-data-lifecycle]] | The IoT data lifecycle — collection, transmission, storage, processing, and retention — defines wher | current |
+| [[iot-device-fundamentals]] | IoT device fundamentals covers the hardware and software building blocks — microcontrollers, SBCs, R | current |
+| [[iot-firewalling]] | IoT firewalling filters network traffic directed at resource-constrained IoT devices that cannot run | current |
+| [[iot-identity-lifecycle]] | The cradle-to-grave management of device identities from bootstrapping through deactivation. | current |
+| [[iot-network-architecture]] | IoT network architecture is the three-tier model — perception (devices), network (connectivity), and | current |
+| [[iot-privacy-concerns]] | The unique privacy challenges posed by IoT's pervasive sensing, metadata leakage, and complex data s | current |
+| [[iot-secure-design]] | Security-by-design principles and practices for building IoT systems that are resistant to attacks f | current |
+| [[iot-security-exam-format]] | Written exam (60–90 min) with three question types: definitions, use-case scenarios, and security so | current |
+| [[iot-security-hardware]] | Hardware security components and architectures that provide root of trust, secure storage, and tampe | current |
+| [[iot-security-landscape]] | A comprehensive overview of the IoT security domain spanning device fundamentals, communication prot | current |
+| [[iot-security-overview]] | IoT security spans the full lifecycle of connected devices — from threat modeling and secure design  | current |
+| [[key-management-lifecycle]] | The complete lifecycle of cryptographic keys from generation through distribution, storage, use, rot | current |
+| [[krack-attack]] | The Key Reinstallation Attack (KRACK, 2017) exploits the WPA2 protocol itself, forcing devices to re | current |
+| [[lightweight-cryptography]] | Lightweight cryptography is the design space of cryptographic primitives that fit on the most resour | current |
+| [[message-authentication-code]] | A Message Authentication Code (MAC) is a symmetric-key tag that proves a message came from a holder  | current |
+| [[mirai-botnet]] | The Mirai Botnet (2016) exploited default passwords on IP cameras and routers to build a botnet of m | current |
+| [[mqtt-security]] | MQTT security covers TLS encryption, authentication methods, access control lists, and broker harden | current |
+| [[network-security-fundamentals]] | Network security fundamentals — firewalls, IDS/IPS, VPNs, and segmentation — are the defensive tools | current |
+| [[networking-fundamentals]] | Networking fundamentals — the OSI model, TCP/IP, addressing, and routing — are the prerequisite know | current |
+| [[nist-iot-cybersecurity]] | NIST's framework for IoT device cybersecurity, defining baseline capabilities and a labeling approac | current |
+| [[non-repudiation]] | Non-repudiation ensures that a party cannot deny having performed an action — providing cryptographi | current |
+| [[operational-security-lifecycle]] | The operational security life cycle for IoT spans four phases — Define, Implement/Integrate, Operate | current |
+| [[ota-updates]] | Over-The-Air (OTA) updates are the mechanism for remotely updating IoT device firmware and software  | current |
+| [[owasp-iot-top-10]] | The ten most critical IoT security vulnerabilities, providing a prioritized taxonomy for threat mode | current |
+| [[penetration-testing-methodology]] | IoT penetration testing methodology covers the phases — reconnaissance, enumeration, exploitation, a | current |
+| [[physical-interface-attack-surface]] | The physical interface attack surface covers all hardware interfaces (JTAG, UART, USB, serial) on Io | current |
+| [[physical-unclonable-functions]] | Physical Unclonable Functions (PUFs) are hardware security primitives that exploit manufacturing var | current |
+| [[pki]] | PKI is a framework for managing digital certificates and public-key encryption — enabling device aut | current |
+| [[principle-of-least-privilege]] | Every component, user, and process should have only the minimum permissions necessary to perform its | current |
+| [[privacy-by-design]] | Privacy by Design embeds data minimization, consent, and anonymization into IoT systems from the sta | current |
+| [[random-number-generator]] | Cryptographic keys, nonces, and IVs must come from unpredictable, high-entropy sources — True Random | current |
+| [[resilience-iot]] | Resilience in IoT means maintaining state awareness and an accepted level of operational normalcy in | current |
+| [[risk-assessment-frameworks]] | Structured methodologies for identifying, analyzing, and evaluating security risks specific to IoT s | current |
+| [[secure-boot-chain]] | A verification chain from ROM bootloader through OS to application where each stage cryptographicall | current |
+| [[secure-development-lifecycle]] | The Secure Development Life Cycle (SDLC) integrates security into every phase of software/system dev | current |
+| [[security-by-design]] | Security by Design means integrating security from the very beginning of system design rather than a | current |
+| [[security-principles]] | The foundational principles that guide all security design decisions: defense in depth, least privil | current |
+| [[sensors]] | Sensors are IoT components that detect and measure physical phenomena — temperature, motion, pressur | current |
+| [[side-channel-attacks]] | Side-channel attacks extract cryptographic keys and internal state from IoT devices by measuring phy | current |
+| [[smart-city-infrastructure]] | Smart city infrastructure covers IoT deployments in traffic management, utilities, surveillance, and | current |
+| [[smart-home-security]] | Smart home security covers consumer IoT threat models — voice assistants, smart locks, cameras, and  | current |
+| [[symmetric-encryption]] | Symmetric encryption uses a single shared secret key to both encrypt and decrypt data — it is fast ( | current |
+| [[tcg-specifications]] | TCG defines hardware-based security standards including TPM, DICE, and TRNG for establishing root of | current |
+| [[threat-modeling]] | Threat modeling — using frameworks like STRIDE, DREAD, and attack trees — systematically identifies  | current |
+| [[trusted-platform-module]] | A Trusted Platform Module (TPM) is a dedicated security hardware chip (or firmware implementation) p | current |
+| [[web-interface-vulnerabilities]] | IoT web interface vulnerabilities — SQL injection, XSS, username enumeration, weak passwords, accoun | current |
+| [[zero-trust-architecture]] | Zero Trust Architecture — "never trust, always verify" — replaces perimeter-based security with iden | current |
+| [[zigbee-pairing-vulnerability]] | ZigBee's device pairing procedure was designed for ease of setup but lacked security configuration,  | current |
+| [[zigbee-security-model]] | Zigbee security relies on a Trust Center that distributes network keys and AES-128-CCM encryption, b | current |
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[iot-security-exam-format]] | Written exam (60–90 min) with three question types: definitions, use-case scenarios, and security so | current |
+
+---
+## 📚 Software Analyse (110 pages)
+
+### L01 — Introduction
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-1]] | Lecture 1 introduces software analysis as a field, its fundamental limitations (Rice's theorem), the | current |
+
+### L10 — Dynamic Symbolic Execution
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-10]] | Symbolic execution explores all program paths by treating inputs as symbols rather than concrete val | current |
+
+### L11 — Agentic Coding
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-11]] | AI coding agents can write and fix code autonomously, but they make quality assurance more important | draft |
+
+### L02 — Lexical Analysis & NLP
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-2]] | Lecture 2 bridges compiler front-ends (lexical analysis, tokenization) with NLP applied to source co | current |
+
+### L03 — Syntax-Based Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-3]] | Lecture 3 covers syntax-based analysis: defining language structure with context-free grammars, buil | current |
+
+### L04 — Control Flow Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-4]] | Lecture 4 introduces control flow analysis: representing program execution as directed graphs (contr | current |
+
+### L05 — Data Flow Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-5]] | Lecture 5 introduces data flow analysis — a family of compile-time techniques that track how informa | current |
+
+### L06 — Abstract Interpretation
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-6]] | The monotone-framework is grounded in a lattice of facts, a join operator, and monotone transfer fun | current |
+
+### L07 — Interprocedural Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-7]] | Lecture 7 extends data-flow-analysis beyond a single function: it explains why intraprocedural analy | current |
+
+### L08 — Program Slicing
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-8]] | Program slicing extracts the subset of program statements that may affect (backward slice) or be aff | current |
+
+### L09 — Dynamic Analysis
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-lecture-9]] | Dynamic analysis observes actual program executions to collect traces, enabling instrumentation, fau | current |
+
+### Additional Concepts
+| Page | Summary | Status |
+|------|---------|--------|
+| [[SOFTWARE_ANALYSE_PROJECTS]] | You have two distinct projects in this course: | current |
+| [[abstract-interpretation]] | Abstract interpretation is the general theoretical framework for soundly approximating the semantics | current |
+| [[abstract-syntax-tree]] | An abstract syntax tree (AST) is a condensed form of the parse tree that discards syntactic details  | current |
+| [[aliasing]] | Aliasing occurs when multiple names (variables, references, pointers) refer to the same memory locat | current |
+| [[andersens-points-to-analysis]] | Andersen's points-to analysis is a precise, subset-based (inclusion-based) algorithm for points-to-a | current |
+| [[aspect-oriented-programming]] | Aspect-oriented programming modularizes crosscutting concerns (logging, security, database access) t | current |
+| [[available-expressions]] | Available expressions determines, for each program point, which expressions have been computed on ev | current |
+| [[basic-block]] | A basic block is a maximal sequence of statements that must execute consecutively — control enters o | current |
+| [[buggy-code-naturalness]] | Buggy code tends to be less "natural" (higher cross-entropy) than non-buggy code, suggesting that co | current |
+| [[call-strings]] | A call string is a sequence of call sites that records the calling context of a procedure invocation | current |
+| [[ccfinder]] | CCFinder is a token-based code-clones detection tool that converts programs to token sequences and f | current |
+| [[cloning-context-sensitivity]] | Cloning is the most precise context-sensitivity technique: physically duplicate a procedure's body,  | current |
+| [[code-clones]] | Code clones are identical or similar code fragments in source files, detected using text, token, gra | current |
+| [[code-naturalness-hypothesis]] | Source code written by humans exhibits statistical regularities similar to natural language — it is  | current |
+| [[common-subexpression-elimination]] | If the same calculation appears twice and nothing changed in between, the compiler reuses the first  | current |
+| [[concolic-execution]] | Concolic execution (concrete + symbolic) combines real program execution with symbolic constraint co | current |
+| [[constant-propagation]] | Constant propagation is a data-flow-analysis that tracks, for each variable, whether its value is a  | current |
+| [[context-free-grammar]] | A context-free grammar (CFG) is a 4-tuple (tokens, nonterminals, productions, start symbol) that def | current |
+| [[context-sensitivity]] | Context sensitivity is the property of an interprocedural-analysis that distinguishes different call | current |
+| [[control-dependence]] | Statement b is control dependent on statement a if a's evaluation directly determines whether b will | current |
+| [[control-flow-graph]] | A Control Flow Graph (CFG) is a directed graph G=(N,E) where nodes represent statements (or basic-bl | current |
+| [[data-flow-analysis]] | Data flow analysis is a compile-time technique that tracks how data (definitions, expressions, varia | current |
+| [[dead-code-elimination]] | Dead code elimination removes statements that can never affect the program's output — code that comp | current |
+| [[debugging]] | Debugging is the process of finding and fixing defects, supported by automated techniques like dynam | current |
+| [[delta-debugging]] | Delta debugging is an automated technique that finds the minimal set of changes responsible for a fa | current |
+| [[design-patterns]] | Design patterns are reusable, catalogued solutions to common software design problems, categorized i | current |
+| [[distributive-framework]] | A data flow framework is distributive when its transfer functions distribute over the join operator  | current |
+| [[dominance]] | Node a dominates node b (a dom b) if every path from the entry node to b passes through a — a founda | current |
+| [[dominator-tree]] | The dominator tree is a tree where each node's parent is its dominance, providing a compact represen | current |
+| [[du-chains-ud-chains]] | DU-chains (definition-use chains) connect each variable definition to all uses it can reach; UD-chai | current |
+| [[dynamic-analysis]] | Dynamic analysis observes actual program executions to collect traces, enabling instrumentation, fau | current |
+| [[dynamic-slicing]] | Slice computed for a specific input and execution trace, capturing only statements that actually aff | current |
+| [[fault-localization]] | Fault localization ranks program statements by suspiciousness based on which statements are executed | current |
+| [[finite-automata]] | Abstract computational models with a finite set of states, used in compiler design, pattern matching | current |
+| [[finite-automata-and-regular-expressions]] | Regular expressions define token patterns formally, and finite automata (state diagrams) implement t | current |
+| [[first-sets]] | FIRST(α) is the set of terminal symbols that can appear as the first token of any string derived fro | current |
+| [[galois-connection]] | A Galois connection C ⇄ A between a concrete domain C and an abstract domain A is a pair of monotone | current |
+| [[gen-kill-analysis]] | Gen and kill sets are the local transfer functions that describe how each statement creates or inval | current |
+| [[grammar-ambiguity]] | A grammar is ambiguous if at least one string in its language has more than one valid parse tree, me | current |
+| [[heap-analysis]] | Heap analysis is the family of static analyses that reason about heap-allocated memory — determining | current |
+| [[hierarchy-of-analysis]] | Program analysis uses four reasoning paradigms — deduction (static), observation (dynamic), inductio | current |
+| [[inlining-context-sensitivity]] | Inlining is a context-sensitivity technique that substitutes a procedure's body at every call site,  | current |
+| [[interprocedural-analysis]] | Interprocedural analysis extends data-flow-analysis beyond a single function so that information flo | current |
+| [[iterative-data-flow-analysis]] | Iterative data flow analysis is the standard worklist algorithm that solves data flow equations by r | current |
+| [[java-for-software-analysis]] | Everything you need to know about Java, Maven, and the libraries used in both Software Analyse proje | current |
+| [[lattice]] | A lattice is a partially ordered set in which every two elements have a unique least upper bound (jo | current |
+| [[left-factoring]] | Left factoring is a grammar transformation that eliminates common prefixes among alternatives of a p | current |
+| [[left-recursion-elimination]] | Left recursion elimination is a grammar transformation that rewrites left-recursive productions into | current |
+| [[lex-and-flex]] | Lex (and its GNU successor Flex) are lexer generators that automatically convert regular expression  | current |
+| [[lexical-analysis]] | Lexical analysis is the first phase of compilation that converts a character stream into a sequence  | current |
+| [[live-variable-analysis]] | Live variable analysis determines, for each program point, which variables may be read on some futur | current |
+| [[liveness-analysis]] | Liveness analysis figures out, for every point in a program, which variables still have a future use | current |
+| [[machine-learning-basics]] | Machine learning is the practice of training algorithms on data to learn patterns and make predictio | current |
+| [[meet-over-valid-paths]] | The Meet Over Valid Paths (MVP) is the interprocedural analogue of mop-vs-mfp — the precise but unde | current |
+| [[minimal-fixed-point-algorithm]] | The Minimal Fixed Point (MFP) algorithm is the iterative, worklist-based implementation of the monot | current |
+| [[monotone-framework]] | The monotone framework is the abstract mathematical skeleton that all data flow analyses share — it  | current |
+| [[mop-vs-mfp]] | The Meet Over All Paths (MOP) is the precise but undecidable data flow solution (join over the exact | current |
+| [[n-gram-language-models]] | N-gram language models estimate the probability of a token sequence by conditioning each token on th | current |
+| [[natural-loop]] | A natural loop is a set of nodes in a control-flow-graph identified by a back edge (an edge from a n | current |
+| [[object-oriented-programming]] | Object-oriented programming organizes code around objects — instances of classes that bundle data (f | current |
+| [[operator-precedence-associativity]] | Operator precedence and associativity are encoded into a grammar by introducing separate nonterminal | current |
+| [[parse-tree]] | A parse tree (concrete syntax tree) is a tree representation of a derivation where the root is the s | current |
+| [[path-profiling]] | Path profiling counts how often each execution path through a function runs, using the Ball-Larus al | current |
+| [[perplexity-and-entropy]] | Perplexity and cross-entropy are metrics for evaluating language models — perplexity measures how "c | current |
+| [[points-to-analysis]] | Points-to analysis computes, for every pointer variable, the set of heap objects it may point to — t | current |
+| [[post-dominance]] | Node d post-dominates node n (d pdom n) if every path from n to the exit node passes through d — the | current |
+| [[predictive-parsing]] | Predictive parsing is a top-down parsing method where a single lookahead token unambiguously determi | current |
+| [[procedure-summaries]] | A procedure summary is a single transfer function that captures a procedure's net effect on the abst | current |
+| [[program-slicing]] | Extract the subset of statements that may affect (backward) or be affected by (forward) a variable a | current |
+| [[program-traces]] | Program traces record the executed instructions and runtime attributes (data state, call stack, obje | current |
+| [[reaching-definitions]] | Reaching definitions determines, for each program point, which variable definitions may have occurre | current |
+| [[readability-classifier]] | Extract static metrics from code snippets, train a logistic regression classifier, predict whether h | current |
+| [[register-allocation]] | Register allocation maps program variables to a limited number of CPU registers, and when there aren | current |
+| [[rices-theorem]] | Rice's theorem states that all non-trivial semantic properties of programs are undecidable — no algo | current |
+| [[shift-reduce-parsing]] | Shift-reduce parsing is a bottom-up parsing strategy that builds the parse tree from leaves to root  | current |
+| [[sign-analysis]] | Track the sign (−, 0, +) of every integer value in Java bytecode to find division-by-zero and negati | current |
+| [[smoothing-techniques]] | Smoothing techniques redistribute probability mass from seen to unseen n-grams, preventing zero prob | current |
+| [[software-analyse-projects-overview]] | An overview of the two Software Analyse projects: a readability classifier that predicts code qualit | current |
+| [[software-analysis]] | Software analysis is the process of automatically extracting information about a program from its so | current |
+| [[soundness-and-completeness]] | Sound analysis reports all errors (but may include false alarms); complete analysis reports only rea | current |
+| [[static-vs-dynamic-analysis]] | Static analysis examines code without running it (reasoning about all possible executions); dynamic  | current |
+| [[steensgaards-points-to-analysis]] | Steensgaard's points-to analysis is a fast, equality-based algorithm for points-to-analysis that run | current |
+| [[surprisal-and-code-prediction]] | Surprisal (information content) measures how unexpected a specific token is given its context — high | current |
+| [[symbolic-execution]] | Symbolic execution treats program inputs as symbolic variables rather than concrete values, explorin | current |
+| [[syntax-directed-translation]] | Syntax-directed translation augments a CFG with attributes and semantic rules so that parsing also c | current |
+| [[test-generation]] | Test generation creates concrete input values that exercise specific program paths, primarily throug | current |
+| [[testing]] | Software testing validates program behaviour against expected outcomes and provides the oracle that  | current |
+| [[tokenization-and-token-types]] | Tokenization splits source code into categorized units (tokens) such as identifiers, literals, opera | current |
+| [[union-find-data-structure]] | Union-Find (also called Disjoint Set Union) is a data structure that maintains a partition of elemen | current |
+| [[valid-paths]] | A valid path in an interprocedural control flow graph is a path that respects call-return matching — | current |
+| [[very-busy-expressions]] | Very busy expressions determines, for each program point, which expressions will definitely be evalu | current |
+| [[visitor-pattern]] | The Visitor pattern separates an algorithm from the object structure it operates on by letting you d | current |
+| [[widening-narrowing]] | Operators in abstract interpretation that accelerate fixpoint computation (widening) and improve pre | current |
+| [[zero-analysis-worked-example]] | Zero Analysis is the lecture's running example of abstract-interpretation: track for each variable w | current |
+| [[binary-search]] | Binary search finds a target value in a sorted array by repeatedly dividing the search interval in h | current |
+| [[phi-function]] | Pseudo-assignment in SSA form that merges variable definitions from different control flow paths. | current |
+| [[program-dependence-graph]] | Graph combining control and data dependence edges over CFG nodes — the complete dependence map of a  | current |
+| [[static-single-assignment]] | Intermediate representation where each variable is assigned exactly once, making data dependencies e | current |
+| [[system-dependence-graph]] | Extension of PDG to multiple procedures, enabling interprocedural slicing. | current |
+
+
+### Exam Prep
+| Page | Summary | Status |
+|------|---------|--------|
+| [[software-analyse-codebase-defense]] | Format: Multiple choice | current |
+| [[software-analyse-exam-prep]] | Format: Multiple choice | current |
+| [[zero-analysis-worked-example]] | Zero Analysis is the lecture's running example of abstract-interpretation: track for each variable w | current |
+
+---

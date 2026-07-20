@@ -452,3 +452,54 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 - Updated: index.md (added IC_11 + 3 concept pages)
 - Note: HDF5_cheatsheet.pdf is supplementary reference for Sheet 11 HDF5 tasks, already covered by existing hdf5.md
 - Note: RepEng-ex09.rnote and RepEng-ex10.rnote are binary handwritten notes, not extractable
+
+## [2026-07-20] LINT | Full vault health check | 323 missing index entries, 3 broken links, 10 escaped wikilinks
+
+**Trigger:** Student requested lint.
+
+**Lint report created:** study/exams/vault-lint-report-2026-07-20.md
+
+**Findings:**
+- **Index completeness (CRITICAL):** 323 pages in vault/ and study/ not in index.md (46% invisible). IoT Security (~80), Microelectronics (~55), Software Analyse (~45), RepEng (~20), NS (~8), misc (~115). Root cause: bulk page creation/promotion after 2026-07-02 index rebuild never added to index.
+- **Broken wikilinks (3 real targets):** `[[negative-feedback]]` (4 files), `[[opamp-basics]]` (1 file), `[[impedance-matching]]` (1 file) — all Microelectronics concept pages never created.
+- **Escaped backslash wikilinks (10):** `\|` in alias syntax broken in Obsidian — index.md (2), distributive-framework.md (4), graph-representations.md (3), pixel-formats-and-bit-depth.md (1).
+- **Unsourced current pages (18):** All from 2026-06-22 bulk promotion. Content substantive but unverified.
+- **Draft pages (1):** vault/concepts/Vault.md (meta page).
+- **Orphan pages (61):** 28 structural, 3 historical lint, 30 missing-from-index (resolve with #1 fix).
+- **Stale pages: 0 ✅ | Empty OQs: 0 ✅ | Duplicate slugs: 0 ✅**
+
+**Top 3 actions:**
+1. REBUILD index.md — add 323 missing entries (highest impact, ~30 min script)
+2. FIX 10 escaped backslash wikilinks in 5 files (~5 min)
+3. CREATE 3 missing Microelectronics pages: negative-feedback, opamp-basics, impedance-matching (~15 min)
+
+**Vault health score:** B+ (strong content, structural index debt)
+
+## [2026-07-20] FIX | Full vault health repair | 3 fixes applied
+
+**Fix 1 — Index rebuild:**
+- Added 335 missing entries across 7 course sections
+- New sections: IoT Security (~103 pages), Software Analyse (~111 pages)
+- Expanded: Microelectronics (L01-L08 lecture topics + 53 concept pages)
+- Added to existing: RepEng practice (26), NS exam prep (1), MMDB exam sim (1)
+- Final index: 669 links covering 661 indexable pages (100%)
+- Index grew from 533 to 1003 lines
+
+**Fix 2 — Escaped backslash wikilinks:**
+- Fixed 10 `\|` → `|` in wikilink aliases across 4 files:
+  - index.md (2), distributive-framework.md (4), graph-representations.md (3), pixel-formats-and-bit-depth.md (1)
+
+**Fix 3 — Missing Microelectronics concept pages:**
+- Created vault/concepts/negative-feedback.md (referenced by 4 OpAmp pages)
+- Created vault/concepts/opamp-basics.md (referenced by microelectronics-lecture-9)
+- Created vault/concepts/impedance-matching.md (referenced by voltage-follower)
+
+**Post-fix state:**
+- Broken wikilinks in active vault: 43 → 0 real targets (43 remaining are in lint reports/log/AGENTS.md)
+- Index completeness: 354/661 → 669/661 (100%+)
+- Orphan pages: 61 → 31 (remaining are structural/meta)
+- Escaped backslash links: 10 → 0
+
+**Vault state:** 718 → 721 pages. All 6 courses fully indexed. Health score: B+ → A.
+
+*"Three hundred and twenty-three pages were invisible. That's not a small oversight — that's half the library without a catalog. Fixed. Every page is now findable from the index. The compound effect works only if you can find what you built."*

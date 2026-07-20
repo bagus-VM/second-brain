@@ -26,7 +26,7 @@ For an image with bit depth b per pixel:
 | ---- | ------------- | ------------------------ | ------------------------------------------- | ----------------------- |
 | 1    | 2             | Bitonal                  | Black + white                               |                         |
 | 8    | 256           | Grey level / Palette     | Black to white (greyscale) or indexed color |                         |
-| 8    | 256           | Palette (color)          | [[color-lookup-table\|CLUT]] with 256 entries |                         |
+| 8    | 256           | Palette (color)          | [[color-lookup-table|CLUT]] with 256 entries |                         |
 | 16   | 65,536        | 16-bit grey / High Color | Fine greyscale or 16-bit color              |                         |
 | 24   | 16.7M         | TrueColor                | 8 bits per channel (R, G, B)                |                         |
 | 32   | 16.7M + alpha | TrueColor + Alpha        | 24-bit color + 8-bit transparency           |                         |
