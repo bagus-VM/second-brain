@@ -18,10 +18,10 @@ A point operation is the simplest kind of image manipulation: look at each pixel
 **Point operation**: new_pixel = f(old_pixel), where f is applied independently to each pixel.
 
 Common point operations:
-- **Negative**: f(p) = 255 - p (for 8-bit) — inverts all values
-- **Brightness adjustment**: f(p) = p + b (shift all values up/down)
-- **Contrast adjustment**: f(p) = a · p (scale amplitude ratios); or use nonlinear curves
-- **Gamma correction**: f(p) = p^γ (nonlinear tonal mapping)
+- ==**Negative**: f(p) = 255 - p (for 8-bit) — inverts all values==
+- ==**Brightness adjustment**: f(p) = p + b (shift all values up/down)==
+- ==**Contrast adjustment**: f(p) = a · p (scale amplitude ratios); or use nonlinear curves==
+- ==**Gamma correction**: f(p) = p^γ (nonlinear tonal mapping)==
 
 **Histogram**: H(c) = number of pixels with color value c, for each channel.
 

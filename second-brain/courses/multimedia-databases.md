@@ -34,6 +34,8 @@ status: active
 | 5 | Ex05.pdf | Ex05_solutions.pdf | **ingested** ✅ |
 | 6 | Ex06.pdf | — | **ingested** ✅ |
 | 7 | Ex07.pdf | — | **ingested** ✅ |
+| 8 | Ex08.pdf | — | **ingested** ✅ |
+| 9 | Ex09.pdf | — | **ingested** ✅ |
 
 ## Raw Paths
 
