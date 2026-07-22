@@ -205,6 +205,63 @@ prerequisites: []
 - **Dot operator:** Navigate schema without JOINs: s.address.street
 
 **SQL/MM:** Features have SI_Score method returning 0-1 distance. Query by example using image features.
+Example : 
+```sql
+-- UDT for image with MPEG-7 descriptors
+CREATE TYPE ZooImageType AS (
+    image_data BLOB,
+    width INTEGER,
+    height INTEGER,
+    dominant_color DominantColorType,
+    color_layout ColorLayoutType,
+    edge_histogram EdgeHistogramType
+);
+
+-- UDT for dominant color (MPEG-7)
+CREATE TYPE DominantColorType AS (
+    colors ColorValue ARRAY[8],
+    percentages FLOAT ARRAY[8],
+    spatial_coherency FLOAT
+);
+
+-- Animal type with photo
+CREATE TYPE AnimalType AS (
+    animal_id INTEGER,
+    name VARCHAR(50),
+    species VARCHAR(50),
+    birth_date DATE,
+    photo ZooImageType
+);
+
+-- Keeper type with references to animals
+CREATE TYPE KeeperType AS (
+    keeper_id INTEGER,
+    name VARCHAR(50),
+    assigned_animals REF(AnimalType) ARRAY[]
+);
+
+-- Cage type
+CREATE TYPE CageType AS (
+    cage_id INTEGER,
+    location VARCHAR(100),
+    capacity INTEGER,
+    occupants REF(AnimalType) ARRAY[]
+);
+
+-- Create tables
+CREATE TABLE animals OF AnimalType (
+    oid REF(AnimalType) SYSTEM GENERATED,
+    PRIMARY KEY (animal_id)
+);
+
+CREATE TABLE keepers OF KeeperType (
+    PRIMARY KEY (keeper_id)
+);
+
+CREATE TABLE cages OF CageType (
+    PRIMARY KEY (cage_id)
+);
+```
 
 **MPEG Query Format (MPQF):** XML-based. Three parts: QFDeclaration (define resources), OutputDescription (what to return, max items, sort), QueryCondition (similarity, spatial, freetext, arithmetic filters). Uses preferenceValue for weighting conditions.
 
