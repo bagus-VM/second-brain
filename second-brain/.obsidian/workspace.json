@@ -4,110 +4,48 @@
     "type": "split",
     "children": [
       {
-        "id": "9965ba61c3c8fffd",
+        "id": "f2188f9d8a4eaf0d",
         "type": "tabs",
         "children": [
           {
-            "id": "9265598f872b0d86",
+            "id": "7bb2fa5f4b1af69d",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf",
+                "file": "raw/handwritten_notes/network_science/Vorlesung/network-ex01.pdf",
                 "page": 1,
-                "left": -121,
-                "top": 846,
-                "zoom": 1
+                "left": -22,
+                "top": 1590,
+                "zoom": 0.6792074799643811
               },
               "icon": "lucide-file-text",
-              "title": "Ex01"
-            }
-          },
-          {
-            "id": "71ea45728994132a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "study/exams/MMDB.pdf",
-                "page": 1,
-                "left": -11,
-                "top": 207,
-                "zoom": 1.3404917226163835
-              },
-              "icon": "lucide-file-text",
-              "title": "MMDB"
-            }
-          },
-          {
-            "id": "e20b6ba893d7ac74",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
-                "page": 1,
-                "left": -11,
-                "top": 720,
-                "zoom": 1.3405546334809402
-              },
-              "icon": "lucide-file-text",
-              "title": "Ex09"
+              "title": "network-ex01"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
-        "id": "d62abf6c8f13a9d6",
+        "id": "0ce7db3c1ac09359",
         "type": "tabs",
         "children": [
           {
-            "id": "c43ffa20a71d5ca3",
+            "id": "06e09b05885adb55",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
-                "page": 29,
-                "left": -14,
-                "top": 262,
-                "zoom": 1.1083333333333334
+                "file": "raw/lectures/network_science/Uebung/e01-what-is-a-network.pdf",
+                "page": 2,
+                "left": -20,
+                "top": 309,
+                "zoom": 0.7643398421584865
               },
               "icon": "lucide-file-text",
-              "title": "Ex08_solutions"
-            }
-          },
-          {
-            "id": "062d47c4673d63c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study/exams/multimedia-databases-cheat-sheet.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "multimedia-databases-cheat-sheet"
-            }
-          },
-          {
-            "id": "be9cf3238d0891fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "study/exams/mmdb-exam-simulation-ss25.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mmdb-exam-simulation-ss25"
+              "title": "e01-what-is-a-network"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -164,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 378.5
   },
   "right": {
     "id": "98c5f4b9b4985579",
@@ -251,16 +189,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "062d47c4673d63c1",
+  "active": "7bb2fa5f4b1af69d",
   "lastOpenFiles": [
-    "study/exams/mmdb-exam-prep-exercises.md",
+    "raw/lectures/network_science/Uebung/e01-what-is-a-network.pdf",
+    "raw/handwritten_notes/network_science/Vorlesung/network-ex01.pdf",
     "study/exams/mmdb-exam-simulation-ss25.md",
+    "study/exams/multimedia-databases-cheat-sheet.md",
+    "study/exams/mmdb-exam-prep-exercises.md",
     "raw/lectures/multimedia_databases/Uebung/solutions/Ex08_solutions.pdf",
     "study/exams/exam-prep-network-science-2026-07-28.md",
     "raw/lectures/multimedia_databases/Uebung/solutions/Ex09_solutions.pdf",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex09.pdf",
     "study/exams/MMDB.pdf",
-    "study/exams/multimedia-databases-cheat-sheet.md",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex08.pdf",
     "raw/lectures/multimedia_databases/Uebung/exercise_sheets/Ex01.pdf",
     "Untitled 1.base",
@@ -270,7 +210,6 @@
     "vault/concepts/pixel-formats-and-bit-depth.md",
     "vault/concepts/image-point-operations.md",
     "vault/concepts/image-file-formats.md",
-    "raw/handwritten_notes/multimedia_databases/Vorlesung/mmdb-ex06.pdf",
     "vault/concepts/opamp-basics.md",
     "vault/concepts/negative-feedback.md",
     "vault/concepts/impedance-matching.md",

@@ -5,7 +5,7 @@ course: "Software Analyse"
 exam_date: "2026-07-31"
 exam_format: "Multiple choice questions"
 status: current
-last_updated: 2026-07-15
+last_updated: 2026-07-22
 prerequisites: []
 ---
 
@@ -13,7 +13,150 @@ prerequisites: []
 
 **Format:** Multiple choice
 **Date:** July 31, 2026
-**Content:** Covers all 10 lecture topics below + all 3 projects (readability, sign analysis, slicing)
+**Content:** Covers lectures 2–10 topics below + all 3 projects (readability, sign analysis, slicing)
+**Note:** Lecture 11 (Agentic Coding) is not in scope for the exam.
+
+---
+
+## ⛔ EXCLUDED Topics (Confirmed by Professor)
+
+These topics will **NOT** appear on the exam:
+
+| Lecture | Excluded Topic |
+|---------|---------------|
+| 2. Syntax | Naturalness (Language models) |
+| 2. Syntax | General Compiler workflow |
+| 2. Syntax | Lexical analysis |
+| 3. Parsing | Grammars |
+| 3. Parsing | Predictive Parsing |
+| 3. Parsing | Syntax directed translation |
+| 4. Control flow | Loop Detection |
+| 5. Dataflow | DU/UD chains |
+| 5. Dataflow | Available expressions, Live variables, Very busy expressions |
+| 6. Abstract interpretation | Meet over all paths (MOP) |
+| 7. Interprocedural | Meet over valid paths |
+| 7. Interprocedural | Heap analysis |
+| 8. Slicing | SSA (Static Single Assignment) |
+| 8. Slicing | Interprocedural slicing |
+| 9. Dynamic analysis | Trace levels |
+| 9. Dynamic analysis | AOP (Aspect-Oriented Programming) |
+| 9. Dynamic analysis | Fault localization |
+| 9. Dynamic analysis | Delta debugging |
+| 10. Symbolic Execution | Symbolic execution |
+| 10. Symbolic Execution | Dynamic symbolic execution |
+
+---
+
+## ✅ What IS Actually in the Exam
+
+After removing excluded topics, here's what remains:
+
+### 0. Intro — Soundness & Completeness
+- Soundness: if the analysis says X, X is actually true (no false negatives for the property being checked)
+- Completeness: if X is true, the analysis says X (no false positives)
+- Rice's theorem: non-trivial semantic properties of programs are undecidable
+- Static analysis is always an approximation — tradeoff between soundness and completeness
+- **Vault:** [[soundness-and-completeness]], [[rices-theorem]], [[software-analysis]]
+
+---
+
+### 1. JVM & Bytecode (Full)
+- Stack-based vs register-based VM
+- JVM instruction types (load/store, arithmetic, control, stack manipulation)
+- Bytecode for method calls (INVOKEVIRTUAL, INVOKESTATIC, INVOKESPECIAL)
+- How local variables map to slots
+- Operand stack before/after specific instructions
+- **Vault:** [[java-for-software-analysis]]
+
+### 2. Readability
+- Tokens and lexemes: tokenization process, token types, lexeme vs token distinction
+- **Vault:** [[tokenization-and-token-types]], [[lexical-analysis]]
+
+#### Readability (Full)
+- Shannon entropy: H = -Σ p·log₂(p)
+- Halstead Volume: V = N × log₂(n) (operators vs operands)
+- Cyclomatic Complexity: M = E - N + 2P
+- Feature standardization (z-score), 10-fold cross-validation, threshold 3.6
+- **Vault:** [[readability-classifier]]
+- **Project connection:** Readability classifier project
+
+### 3. Parsing — AST
+- Abstract Syntax Tree: structure, how it differs from parse tree
+- AST nodes represent program constructs (expressions, statements, declarations)
+- **Vault:** [[abstract-syntax-tree]], [[parse-tree]]
+
+---
+
+### 3. Sign Analysis (Full)
+- Sign lattice: {⊥, -, 0, +, -0, -+, 0+, ⊤}
+- Bitmask encoding, join = bitwise OR
+- Pairwise decomposition for binary operations
+- Java integer division truncates toward zero
+- Division by zero → BOTTOM
+- **Vault:** [[sign-analysis]]
+- **Project connection:** Sign analysis project
+
+### 4. Control Flow Analysis
+- Control flow graphs (CFG)
+- Basic blocks
+- Dominance & post-dominance
+- Control dependence
+- Natural loops (structure only — no loop detection algorithms)
+- Dominator tree
+- **Vault:** [[control-flow-graph]], [[basic-block]], [[dominance]], [[post-dominance]], [[control-dependence]], [[natural-loop]], [[dominator-tree]]
+- ❌ ~~Loop Detection~~ (excluded)
+
+### 5. Data Flow Analysis
+- Gen/kill analysis framework
+- Iterative dataflow algorithm (forward/backward, must/may)
+- Reaching definitions (forward, may)
+- Dead code elimination
+- Common subexpression elimination
+- Register allocation
+- **Vault:** [[data-flow-analysis]], [[gen-kill-analysis]], [[iterative-data-flow-analysis]], [[reaching-definitions]], [[dead-code-elimination]], [[common-subexpression-elimination]], [[register-allocation]]
+- ❌ ~~DU/UD chains~~ (excluded)
+- ❌ ~~Available expressions, Live variables, Very busy expressions~~ (excluded)
+
+### 6. Abstract Interpretation
+- Monotone framework
+- Lattice-theoretic framework
+- Galois connection: (α, γ)
+- Minimal fixpoint algorithm
+- Distributive framework (when MOP = MFP)
+- Widening/narrowing for infinite-height lattices
+- **Vault:** [[monotone-framework]], [[lattice]], [[galois-connection]], [[minimal-fixed-point-algorithm]], [[distributive-framework]], [[abstract-interpretation]], [[widening-narrowing]]
+- ❌ ~~Meet over all paths (MOP)~~ (excluded — but know MOP vs MFP relationship for distributive framework)
+
+### 7. Interprocedural Analysis
+- Context-insensitive vs context-sensitive analysis
+- Cloning/inlining context sensitivity
+- Call strings
+- Points-to analysis (Steensgaard's, Andersen's)
+- **Vault:** [[context-sensitivity]], [[cloning-context-sensitivity]], [[inlining-context-sensitivity]], [[call-strings]], [[points-to-analysis]], [[steensgaards-points-to-analysis]], [[andersens-points-to-analysis]], [[aliasing]]
+- ❌ ~~Meet over valid paths~~ (excluded)
+- ❌ ~~Heap analysis~~ (excluded)
+
+### 8. Program Slicing
+- Forward/backward slicing
+- Program Dependence Graph (PDG = CDG ∪ DDG)
+- Dynamic slicing (execution trace based)
+- **Vault:** [[program-slicing]], [[program-dependence-graph]], [[dynamic-slicing]]
+- ❌ ~~SSA~~ (excluded)
+- ❌ ~~Interprocedural slicing / SDG~~ (excluded)
+
+### 9. Dynamic Analysis
+- Static vs dynamic analysis tradeoffs
+- Instrumentation (bytecode modification)
+- Method call instrumentation
+- **Vault:** [[dynamic-analysis]], [[static-vs-dynamic-analysis]], [[program-traces]]
+- ❌ ~~Trace levels~~ (excluded)
+- ❌ ~~AOP~~ (excluded)
+- ❌ ~~Fault localization~~ (excluded)
+- ❌ ~~Delta debugging~~ (excluded)
+
+### 10. Symbolic Execution — ENTIRELY EXCLUDED
+- ❌ ~~Symbolic execution~~ (excluded)
+- ❌ ~~Dynamic symbolic execution / Concolic execution~~ (excluded)
 
 ---
 
@@ -79,51 +222,45 @@ prerequisites: []
 
 ---
 
-### 4. Static & Dynamic Slicing
+### 4. Control Flow Analysis
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| General | [[program-slicing]], [[dynamic-slicing]] | ✅ Good |
 | CFG | [[control-flow-graph]] | ✅ Good |
-| PDT | [[post-dominance]], [[dominator-tree]] | ✅ Good |
-| CDG | [[control-dependence]] | ✅ Good |
-| DDG | (in [[program-dependence-graph]]) | ✅ Covered |
-| Data dependence | [[du-chains-ud-chains]] | ✅ Good |
+| Basic blocks | [[basic-block]] | ✅ Good |
+| Dominance | [[dominance]], [[dominator-tree]] | ✅ Good |
+| Post-dominance | [[post-dominance]] | ✅ Good |
 | Control dependence | [[control-dependence]] | ✅ Good |
-| Slicing applied | [[program-slicing]] | ✅ Good |
+| Natural loops | [[natural-loop]] | ✅ Good |
 
 **Key MC angles:**
-- Post-dominator tree construction (reverse CFG, find dominators)
-- CDG: node B is control-dependent on node A if A post-dominates B's predecessor but not B
-- DDG: variable v at node n2 depends on node n1 if there's a path where v is not redefined
-- PDG = CDG ∪ DDG
-- Backward slice: all nodes that affect a variable at a point
-- Forward slice: all nodes affected by a variable at a point
-
-**Project connection:** Slicing project. MC questions on CFG construction, dependence graphs, and how slicing uses them.
+- CFG construction from code
+- Identifying basic blocks (single entry, single exit)
+- Dominator tree: node A dominates B if every path to B goes through A
+- Post-dominator tree: reverse CFG, find dominators
+- Control dependence: B is control-dependent on A if A post-dominates B's predecessor but not B
+- ❌ ~~Loop detection algorithms~~ (excluded)
 
 ---
 
-### 5. Dataflow Analysis
+### 5. Data Flow Analysis
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| Data dependence | [[du-chains-ud-chains]] | ✅ Good |
+| Gen/kill framework | [[gen-kill-analysis]] | ✅ Good |
+| Iterative algorithm | [[iterative-data-flow-analysis]] | ✅ Good |
 | Reaching definitions | [[reaching-definitions]] | ✅ Good |
-| Reachable uses | [[liveness-analysis]], [[live-variable-analysis]] | ✅ Good |
-| Du/UD chains | [[du-chains-ud-chains]] | ✅ Good |
-| Iterative dataflow (forward/backward, must/may) | [[iterative-data-flow-analysis]], [[data-flow-analysis]] | ✅ Good |
-| Available expressions | [[available-expressions]] | ✅ Good |
-| Live variables | [[live-variable-analysis]] | ✅ Good |
-| Very busy expressions | [[very-busy-expressions]] | ✅ Good |
+| Dead code elimination | [[dead-code-elimination]] | ✅ Good |
+| CSE | [[common-subexpression-elimination]] | ✅ Good |
+| Register allocation | [[register-allocation]] | ✅ Good |
 
 **Key MC angles:**
-- Forward vs backward analysis: reaching defs (forward), live variables (backward)
-- Must vs may: available expressions (must), reaching defs (may)
+- Forward vs backward analysis (reaching defs = forward)
+- Must vs may analyses (reaching defs = may → union)
 - Gen/kill sets for each analysis type
 - Iterative algorithm: initialize, iterate until fixpoint
-- DU chains: definition → all uses; UD chains: use → all definitions
-- Union for may analyses, intersection for must analyses
+- ❌ ~~DU/UD chains~~ (excluded)
+- ❌ ~~Available expressions, Live variables, Very busy expressions~~ (excluded)
 
 ---
 
@@ -131,18 +268,21 @@ prerequisites: []
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| Lattice theoretic framework | [[lattice]], [[galois-connection]] | ✅ Good |
-| Minimal fixpoint algorithm | [[minimal-fixed-point-algorithm]] | ✅ Good |
-| Meet over all paths | [[mop-vs-mfp]] | ✅ Good |
-| Abstract interpretation (zero/sign analysis) | [[abstract-interpretation]], [[zero-analysis-worked-example]] | ✅ Good |
+| Monotone framework | [[monotone-framework]] | ✅ Good |
+| Lattice theory | [[lattice]] | ✅ Good |
+| Galois connection | [[galois-connection]] | ✅ Good |
+| Minimal fixpoint | [[minimal-fixed-point-algorithm]] | ✅ Good |
+| Distributive framework | [[distributive-framework]] | ✅ Good |
+| Abstract interpretation | [[abstract-interpretation]], [[zero-analysis-worked-example]] | ✅ Good |
+| Widening/narrowing | [[widening-narrowing]] | ✅ Good |
 
 **Key MC angles:**
-- Galois connection: (α, γ) between concrete and abstract domains
-- α (abstraction): concrete → abstract; γ (concretization): abstract → concrete
-- MOP (meet over all paths) vs MFP (minimal fixpoint)
-- When MOP = MFP: distributive framework condition
+- Galois connection: α (abstraction) concrete→abstract, γ (concretization) abstract→concrete
+- MFP (minimal fixpoint) — what the iterative algorithm computes
+- Distributive framework: when MOP = MFP (know the condition)
 - Height of lattice determines convergence speed
 - Widening/narrowing for infinite-height lattices
+- ❌ ~~MOP itself~~ (excluded — but the MOP=MFP condition is still in scope)
 
 ---
 
@@ -150,36 +290,47 @@ prerequisites: []
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| Limitations | [[context-sensitivity]] | ✅ Good |
-| Meet over valid paths | [[valid-paths]] | ✅ Good |
-| Context sensitivity (cloning, inlining, call strings) | [[context-sensitivity]], [[cloning-context-sensitivity]], [[call-strings]] | ✅ Good |
-| Heap analysis | [[aliasing]], [[andersens-points-to-analysis]] | ✅ Good |
+| Context sensitivity | [[context-sensitivity]] | ✅ Good |
+| Cloning/inlining | [[cloning-context-sensitivity]], [[inlining-context-sensitivity]] | ✅ Good |
+| Call strings | [[call-strings]] | ✅ Good |
+| Points-to analysis | [[points-to-analysis]], [[steensgaards-points-to-analysis]], [[andersens-points-to-analysis]] | ✅ Good |
+| Aliasing | [[aliasing]] | ✅ Good |
 
 **Key MC angles:**
 - Context-insensitive: analyze each method once regardless of caller
 - Call strings: track call context as sequence of call sites
 - Cloning/inlining: duplicate method analysis per call context
-- Valid paths vs all paths (exclude infeasible interprocedural paths)
-- Procedure summaries: abstract effect of a method (NOTE: excluded from exam per your list)
-- Heap analysis: points-to sets, Andersen's analysis
+- Steensgaard (union-find, fast, unification) vs Andersen's (subset-based, more precise)
+- ❌ ~~Meet over valid paths~~ (excluded)
+- ❌ ~~Heap analysis~~ (excluded)
 
 ---
 
-### 8. Slicing (Advanced)
+### 8. Program Slicing
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| SSA | [[static-single-assignment]], [[phi-function]] | ✅ Good |
-| Forward/backward slicing | [[program-slicing]] | ✅ Good |
-| Interprocedural slicing | [[system-dependence-graph]] | ✅ Good |
+| General slicing | [[program-slicing]] | ✅ Good |
+| CFG | [[control-flow-graph]] | ✅ Good |
+| PDT | [[post-dominance]], [[dominator-tree]] | ✅ Good |
+| CDG | [[control-dependence]] | ✅ Good |
+| DDG | [[program-dependence-graph]] | ✅ Good |
+| Data dependence | [[du-chains-ud-chains]] | ✅ Good |
+| Control dependence | [[control-dependence]] | ✅ Good |
+| Slicing applied | [[program-slicing]] | ✅ Good |
 | Dynamic slicing | [[dynamic-slicing]] | ✅ Good |
 
 **Key MC angles:**
-- SSA: each variable assigned exactly once; φ-functions at join points
 - Backward slice criterion: (p, V) — at program point p, which statements affect V?
 - Forward slice criterion: (p, V) — which statements are affected by V at p?
-- SDG = PDGs + parameter-in/parameter-out edges + call edges
+- PDT construction: reverse CFG, find dominators
+- CDG: identify control dependence edges
+- DDG: trace variable definitions to uses
+- PDG = CDG ∪ DDG — combines both dependence types
 - Dynamic slicing uses execution trace, not just program structure
+- Slicing applied: given code, compute the slice for a given criterion
+- ❌ ~~SSA / φ-functions~~ (excluded)
+- ❌ ~~Interprocedural slicing / SDG~~ (excluded)
 
 ---
 
@@ -187,50 +338,25 @@ prerequisites: []
 
 | Subtopic | Vault Page | Coverage |
 |----------|-----------|----------|
-| Problems of static analysis | [[static-vs-dynamic-analysis]] | ✅ Good |
-| Components of dynamic analysis | [[dynamic-analysis]] | ✅ Good |
-| Trace levels | [[program-traces]] | ✅ Good |
-| Method call instrumentation | (in [[dynamic-analysis]]) | ⚠️ Check |
-| AOP | [[aspect-oriented-programming]] | ✅ Good |
-| Fault localization | [[fault-localization]] | ✅ Good |
-| Delta debugging | [[delta-debugging]] | ✅ Good |
+| Static vs dynamic | [[static-vs-dynamic-analysis]] | ✅ Good |
+| Dynamic analysis | [[dynamic-analysis]] | ✅ Good |
+| Instrumentation | [[dynamic-analysis]] | ⚠️ Check |
+| Method call instrumentation | [[dynamic-analysis]] | ⚠️ Check |
 
 **Key MC angles:**
 - Static: over-approximation, sound but imprecise; Dynamic: exact but incomplete
 - Instrumentation: bytecode modification to record execution
-- Trace levels: method entry/exit, statement, instruction
-- AOP: aspects, pointcuts, join points, advice
-- Delta debugging: binary search for minimal failing input
-- Fault localization: spectrum-based (suspiciousness = failed_with / total_with)
+- Method call instrumentation: how to hook into JVM execution
+- ❌ ~~Trace levels~~ (excluded)
+- ❌ ~~AOP~~ (excluded)
+- ❌ ~~Fault localization~~ (excluded)
+- ❌ ~~Delta debugging~~ (excluded)
 
 ---
 
-### 10. Symbolic Execution & SE
+### 10. Symbolic Execution — ENTIRELY EXCLUDED
 
-| Subtopic | Vault Page | Coverage |
-|----------|-----------|----------|
-| Symbolic Execution | [[symbolic-execution]] | ✅ Good |
-| Dynamic Symbolic Execution | [[concolic-execution]] | ✅ Good |
-
-**Key MC angles:**
-- Symbolic execution: replace concrete values with symbols, build path conditions
-- Path explosion problem: exponential paths through loops/branches
-- Constraint solving: SMT solver (Z3) checks path feasibility
-- DSE (concolic): combine concrete + symbolic execution
-- DSE uses concrete values to simplify constraints, then symbolically explores variations
-
----
-
-## Coverage Gap Analysis
-
-**Vault coverage: 45+ concept pages for SA topics.** Almost everything is covered.
-
-**Check these pages for completeness (flagged ⚠️ above):**
-1. Stack calculation — verify [[java-for-software-analysis]] covers stack-based execution model
-2. Method call instrumentation — verify [[dynamic-analysis]] covers bytecode-level instrumentation details
-
-**Missing pages (create if needed):**
-- None critical — all major topics have vault pages
+~~Symbolic execution~~ and ~~Dynamic symbolic execution / Concolic execution~~ are **NOT on the exam.**
 
 ---
 
@@ -238,16 +364,44 @@ prerequisites: []
 
 The exam is MC but tests understanding of concepts as implemented in your projects:
 
-1. **Readability** (Project 1) → Tests §2 (Readability metrics), §10 (ML pipeline understanding)
+1. **Readability** (Project 1) → Tests §2 (Readability metrics)
 2. **Sign Analysis** (Project 2) → Tests §3 (Sign lattice, transfer functions), §6 (Abstract interpretation), §7 (Interprocedural)
-3. **Slicing** (Project 3) → Tests §4 (Static slicing, CFG/PDT/CDG/DDG), §5 (Dataflow), §8 (SSA, interprocedural slicing), §9 (Dynamic analysis concepts)
+3. **Slicing** (Project 3) → Tests §4 (CFG/PDT/CDG/DDG), §5 (Dataflow), §8 (Static + Dynamic slicing)
 
 **MC strategy:** Many questions will describe a code snippet or analysis scenario and ask you to identify the correct result, concept, or limitation. You need to be able to:
 - Trace sign analysis lattice operations by hand
 - Identify which dataflow analysis is being described (forward/backward, must/may)
-- Recognize graph types (CFG vs PDT vs CDG vs DDG vs PDG vs SDG)
+- Recognize graph types (CFG vs PDT vs CDG vs DDG vs PDG)
 - Know the tradeoffs of static vs dynamic analysis
-- Understand AOP concepts and instrumentation
+- Understand context sensitivity techniques and points-to analysis
+
+---
+
+## Coverage Gap Analysis
+
+**Vault coverage: ~35 concept pages in scope.** Everything excluded is cleanly removable.
+
+**Check these pages for completeness (flagged ⚠️ above):**
+1. Stack calculation — verify [[java-for-software-analysis]] covers stack-based execution model
+2. Instrumentation & method call instrumentation — verify [[dynamic-analysis]] covers bytecode-level instrumentation details
+
+**Vault pages now OUT OF EXAM SCOPE (study these only if time permits):**
+- [[n-gram-language-models]], [[perplexity-and-entropy]], [[surprisal-and-code-prediction]], [[smoothing-techniques]], [[code-naturalness-hypothesis]], [[buggy-code-naturalness]] — Naturalness
+- [[lexical-analysis]], [[finite-automata-and-regular-expressions]], [[tokenization-and-token-types]], [[lex-and-flex]] — Lexical analysis
+- [[context-free-grammar]], [[grammar-ambiguity]], [[operator-precedence-associativity]], [[parse-tree]] — Grammars
+- [[predictive-parsing]], [[first-sets]], [[left-recursion-elimination]], [[left-factoring]] — Predictive parsing
+- [[syntax-directed-translation]] — SDT
+- [[du-chains-ud-chains]] — DU/UD chains
+- [[available-expressions]], [[live-variable-analysis]], [[very-busy-expressions]] — excluded dataflow analyses
+- [[mop-vs-mfp]] — MOP (but know MOP=MFP condition)
+- [[meet-over-valid-paths]], [[valid-paths]] — valid paths
+- [[heap-analysis]] — heap analysis
+- [[static-single-assignment]], [[phi-function]] — SSA
+- [[system-dependence-graph]] — interprocedural slicing
+- [[program-traces]] — trace levels (but keep for general understanding)
+- [[aspect-oriented-programming]] — AOP
+- [[fault-localization]], [[delta-debugging]] — fault loc / delta debugging
+- [[symbolic-execution]], [[concolic-execution]] — symbolic execution
 
 ---
 
@@ -268,196 +422,3 @@ The exam is MC but tests understanding of concepts as implemented in your projec
 - Verify stack calculation coverage in java-for-software-analysis page
 - Verify method call instrumentation coverage in dynamic-analysis page
 - Check if any lecture slides contain MC-style examples worth practicing
-
-
----
-
-## Related Resources
-
-### 📖 Software Analyse - Lecture 1 Overview
-- Lecture topic: [[software-analyse-lecture-1]]
-
-**Key concepts covered:**
-- [[software-analysis]]
-- [[rices-theorem]]
-- [[soundness-and-completeness]]
-- [[abstract-interpretation]]
-- [[hierarchy-of-analysis]]
-- [[static-vs-dynamic-analysis]]
-- [[code-clones]]
-- [[software-analyse-projects-overview]]
-
-### 📖 Software Analyse — Lecture 2: Tokens and Naturalness of Code
-- Lecture topic: [[software-analyse-lecture-2]]
-
-**Key concepts covered:**
-- [[lexical-analysis]]
-- [[finite-automata-and-regular-expressions]]
-- [[tokenization-and-token-types]]
-- [[lex-and-flex]]
-- [[ccfinder]]
-- [[n-gram-language-models]]
-- [[perplexity-and-entropy]]
-- [[surprisal-and-code-prediction]]
-- [[smoothing-techniques]]
-- [[code-naturalness-hypothesis]]
-- [[buggy-code-naturalness]]
-- [[code-clones]]
-- [[abstract-interpretation]]
-
-### 📖 Lecture 3: Parsing – Topic Overview
-- Lecture topic: [[software-analyse-lecture-3]]
-
-**Key concepts covered:**
-- [[context-free-grammar]]
-- [[grammar-ambiguity]]
-- [[operator-precedence-associativity]]
-- [[parse-tree]]
-- [[abstract-syntax-tree]]
-- [[predictive-parsing]]
-- [[shift-reduce-parsing]]
-- [[first-sets]]
-- [[left-recursion-elimination]]
-- [[left-factoring]]
-- [[syntax-directed-translation]]
-
-### 📖 Lecture 4: Control Flow Analysis – Topic Overview
-- Lecture topic: [[software-analyse-lecture-4]]
-
-**Key concepts covered:**
-- [[control-flow-graph]]
-- [[basic-block]]
-- [[dominance]]
-- [[post-dominance]]
-- [[control-dependence]]
-- [[natural-loop]]
-- [[dominator-tree]]
-- [[abstract-syntax-tree]]
-- [[liveness-analysis]]
-- [[available-expressions]]
-- [[monotone-framework]]
-
-### 📖 Lecture 5: Data Flow Analysis – Topic Overview
-- Lecture topic: [[software-analyse-lecture-5]]
-
-**Key concepts covered:**
-- [[data-flow-analysis]]
-- [[gen-kill-analysis]]
-- [[iterative-data-flow-analysis]]
-- [[reaching-definitions]]
-- [[available-expressions]]
-- [[live-variable-analysis]]
-- [[very-busy-expressions]]
-- [[du-chains-ud-chains]]
-- [[control-flow-graph]]
-- [[dead-code-elimination]]
-- [[common-subexpression-elimination]]
-- [[register-allocation]]
-
-### 📖 Lecture 6: Data Flow Analysis Part 2 — Lattice-Theoretic Framework and Abstract Interpretation
-- Lecture topic: [[software-analyse-lecture-6]]
-
-**Key concepts covered:**
-- [[monotone-framework]]
-- [[data-flow-analysis]]
-- [[lattice]]
-- [[iterative-data-flow-analysis]]
-- [[mop-vs-mfp]]
-- [[distributive-framework]]
-- [[abstract-interpretation]]
-- [[zero-analysis-worked-example]]
-- [[minimal-fixed-point-algorithm]]
-- [[galois-connection]]
-- [[reaching-definitions]]
-- [[available-expressions]]
-- [[live-variable-analysis]]
-- [[very-busy-expressions]]
-- [[widening-narrowing]]
-
-### 📖 Lecture 7: Interprocedural and Heap Analysis
-- Lecture topic: [[software-analyse-lecture-7]]
-
-**Key concepts covered:**
-- [[monotone-framework]]
-- [[abstract-interpretation]]
-- [[mop-vs-mfp]]
-- [[data-flow-analysis]]
-- [[interprocedural-analysis]]
-- [[context-sensitivity]]
-- [[meet-over-valid-paths]]
-- [[points-to-analysis]]
-- [[steensgaards-points-to-analysis]]
-- [[andersens-points-to-analysis]]
-- [[heap-analysis]]
-- [[valid-paths]]
-- [[cloning-context-sensitivity]]
-- [[inlining-context-sensitivity]]
-- [[call-strings]]
-- [[procedure-summaries]]
-- [[aliasing]]
-- [[union-find-data-structure]]
-- [[zero-analysis-worked-example]]
-- [[iterative-data-flow-analysis]]
-
-### 📖 Lecture 8: Program Slicing
-- Lecture topic: [[software-analyse-lecture-8]]
-
-**Key concepts covered:**
-- [[control-flow-graph]]
-- [[points-to-analysis]]
-- [[dominance]]
-- [[dominator-tree]]
-- [[control-dependence]]
-- [[data-flow-analysis]]
-- [[interprocedural-analysis]]
-- [[basic-block]]
-- [[reaching-definitions]]
-- [[static-single-assignment]]
-- [[phi-function]]
-- [[program-dependence-graph]]
-- [[program-slicing]]
-- [[system-dependence-graph]]
-- [[dynamic-slicing]]
-
-### 📖 Software Analyse - Lecture 9: Dynamic Analysis
-- Lecture topic: [[software-analyse-lecture-9]]
-
-**Key concepts covered:**
-- [[control-flow-graph]]
-- [[aspect-oriented-programming]]
-- [[dynamic-slicing]]
-- [[program-slicing]]
-- [[fault-localization]]
-- [[delta-debugging]]
-- [[static-vs-dynamic-analysis]]
-- [[dynamic-analysis]]
-- [[program-traces]]
-- [[program-dependence-graph]]
-- [[hierarchy-of-analysis]]
-- [[software-analysis]]
-- [[abstract-interpretation]]
-- [[soundness-and-completeness]]
-
-### 📖 Software Analyse - Lecture 10: Dynamic Symbolic Execution
-- Lecture topic: [[software-analyse-lecture-10]]
-
-**Key concepts covered:**
-- [[static-vs-dynamic-analysis]]
-- [[control-flow-graph]]
-- [[symbolic-execution]]
-- [[concolic-execution]]
-- [[hierarchy-of-analysis]]
-- [[dynamic-slicing]]
-- [[software-analysis]]
-- [[abstract-interpretation]]
-- [[soundness-and-completeness]]
-
-### 📖 Lecture 11 - Agentic Coding and Software Quality
-- Lecture topic: [[software-analyse-lecture-11]]
-
-**Key concepts covered:**
-- [[static-vs-dynamic-analysis]]
-- [[testing]]
-- [[fault-localization]]
-- [[debugging]]
-- [[design-patterns]]

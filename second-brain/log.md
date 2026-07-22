@@ -460,3 +460,16 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 ## [2026-07-20] PREP | Reproducibility Engineering Exam Battle Plan | Delegated: covering sheets 1-11, IC 01-11, day-by-day schedule for Jul 20-29
 
 ## [2026-07-20] QUERY | "Condensed multimedia exercise sheet" | Created multimedia-databases-cheat-sheet.md — one-page reference covering all 9 exercise sheets (signal processing, color models, image processing, JPEG compression, CBR, querying, indexing). Formulas, definitions, algorithm steps.
+
+## [2026-07-22] UPDATE | Software Analyse Exam Prep | Professor excluded 20 topics from exam
+Exam prep page updated with professor's exclusions:
+- Lecture 2: Naturalness, Compiler workflow, Lexical analysis
+- Lecture 3: Grammars, Predictive Parsing, SDT
+- Lecture 4: Loop Detection
+- Lecture 5: DU/UD chains, Available/Live/Very Busy expressions
+- Lecture 6: MOP
+- Lecture 7: Meet over valid paths, Heap analysis
+- Lecture 8: SSA, Interprocedural slicing
+- Lecture 9: Trace levels, AOP, Fault localization, Delta debugging
+- Lecture 10: Entirely excluded (Symbolic + Dynamic symbolic execution)
+~20 vault pages now out of exam scope. ~35 concept pages remain in scope.
