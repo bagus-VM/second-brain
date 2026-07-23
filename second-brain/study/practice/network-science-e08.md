@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-07-11
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 8.A The Small-World Concept | [[small-world-property]] · [[milgrams-experiment-six-degrees]] · [[watts-strogatz-model]] |
+| 8.B Rewiring and Path Lengths | [[watts-strogatz-model]] · [[random-graphs]] · [[clustering-coefficient]] |
+| 8.D Web Bow-Tie | [[web-bow-tie-structure]] · [[scale-free-networks]] · [[power-law-distribution]] |
+
 # Exercise Sheet 8 — Small-World Networks
 
 ## Exercises

@@ -6,6 +6,15 @@ status: current
 last_updated: 2026-07-11
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 1.2 DuckDB Setup | [[tidy-data]] |
+| 2 Data Restructuring: Tidy Data | [[tidy-data]] · [[data-provenance]] |
+| 3 Discretization, Binarization, Dummy Variables | [[tidy-data]] |
+| 4 Tidy Data MC | [[tidy-data]] · [[workflow-reproducibility]] |
+
 # Exercise Sheet 8: Tidy Data with DuckDB
 
 ## 1.2 DuckDB Setup

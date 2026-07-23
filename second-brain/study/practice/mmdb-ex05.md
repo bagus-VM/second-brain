@@ -9,6 +9,13 @@ status: current
 last_updated: 2026-06-15
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Point Operations | [[image-point-operations]] · [[dithering]] |
+| Task 2: Linear Filter | [[linear-convolution-filters]] · [[jpeg-compression-pipeline]] |
+
 ## Exercises
 
 ### Task 1: Point Operations

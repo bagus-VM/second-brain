@@ -9,6 +9,16 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 3.A Triadic Closure | [[triadic-closure]] · [[strong-triadic-closure]] · [[clustering-coefficient]] |
+| 3.B Bridges and Brokers | [[bridges-and-local-bridges]] · [[structural-holes]] |
+| 3.C Weak Ties Theorem | [[weak-ties-hypothesis]] · [[maxstc-complexity]] |
+| 3.D Evidence and Overlap | [[neighborhood-overlap]] · [[social-capital]] |
+| 3.E Tie Strength in Practice | [[weak-ties-hypothesis]] · [[neighborhood-overlap]] |
+
 # Exercise Sheet 3 — Strong and Weak Ties
 
 ## Exercises

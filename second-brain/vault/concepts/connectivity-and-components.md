@@ -12,7 +12,7 @@ prerequisites: [graph-fundamentals, paths-walks-and-cycles, breadth-first-search
 A graph is connected if every pair of nodes has a path between them; connected components are maximal connected subgraphs, and a giant component dominates many real networks.
 
 ## Core Intuition
-Connectivity answers the question: "Is this network still one system, or has it split apart?" A connected graph means you can get from any node to any other. Connected components partition a disconnected graph into isolated islands. Many real networks have one giant component containing most nodes, plus several small peripheral groups.
+Connectivity answers the question: "==Is this network still one system, or has it split apart?==" A connected graph means you can get from any node to any other. Connected components partition a disconnected graph into isolated islands. Many real networks have one giant component containing most nodes, plus several small peripheral groups.
 
 ## Formal Definition / Statement
 - **Connected** (undirected): G is connected if for every pair u, v ∈ V there exists a path from u to v.

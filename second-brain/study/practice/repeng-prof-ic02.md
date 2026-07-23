@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 1 — VisTrails | [[levels-of-reproducibility]] · [[provenance-in-reproducibility]] · [[vistrails]] |
+| Exercise 2 — ML Reproducibility Standards | [[reproducibility-standards-bronze-silver-gold]] · [[computational-reproducibility-in-ml]] · [[data-provenance]] |
+| Exercises 3 & 4 — Academic English | [[workflow-reproducibility]] |
+
 # In-Class Exercise Sheet 2 — Levels of Reproducibility & Provenance
 
 Based on the VisTrails article and Heil et al. "Reproducibility standards for machine learning in the life sciences".

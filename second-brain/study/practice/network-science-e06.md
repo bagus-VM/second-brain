@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-14
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 6.A Homophily and Measurement | [[homophily]] · [[echo-chambers]] |
+| 6.B Affiliation and Similarity | [[affiliation-networks]] · [[selection-vs-socialization]] |
+| 6.C Social Dynamics and Causal Inference | [[network-autocorrelation]] · [[selection-vs-socialization]] |
+| 6.D Spatial Segregation | [[schelling-segregation-model]] |
+
 # Exercise Sheet 6 — Social Context
 
 ## Exercises

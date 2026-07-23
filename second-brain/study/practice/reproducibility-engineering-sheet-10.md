@@ -6,6 +6,15 @@ status: current
 last_updated: 2026-07-11
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 2 Keeping a Secret | [[types-of-reproducibility]] · [[containerization-for-builds]] |
+| 3 Reproducible LLM Outputs | [[types-of-reproducibility]] · [[levels-of-reproducibility]] |
+| 4 Structured Outputs from LLMs | [[json-schema]] |
+| 5 Reproducibility and LLMs MC | [[reproducibility-crisis]] · [[json-schema]] |
+
 # Exercise Sheet 10: LLMs and Reproducibility
 
 ## 2 Keeping a Secret

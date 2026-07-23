@@ -13,6 +13,14 @@ status: current
 last_updated: 2026-06-19
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — BenchBase with SQLite & PostgreSQL | [[sqlite-architecture]] · [[client-server-db-architecture]] |
+| Exercises 3–4 — Throughput & Image Size Comparison | [[docker-compose]] · [[containerization-for-builds]] |
+| Exercise 5 — MC Questions | [[reproducible-builds]] · [[foreign-tables-postgresql]] |
+
 # Exercise Sheet 7 — BenchBase Lab: SQLite vs PostgreSQL
 
 ## Overview

@@ -61,8 +61,8 @@ f = 10 / e; // ⊤ (no definite error)
 **Dynamic analysis** with concrete values: sees c = 2, e = 2, f = 5. No error. But only for these specific inputs.
 
 ## Common Pitfalls
-- Thinking sound means "correct" — sound means "complete coverage, possible false alarms"
-- Thinking complete means "good" — complete means "no false alarms, possible missed errors"
+- Thinking sound means "correct" — ==sound means "complete coverage, possible false alarms"==
+- Thinking complete means "good" — ==complete means "no false alarms, possible missed errors"==
 - Forgetting that soundness is relative to the abstraction — if the abstraction is too coarse, you get more false alarms but never miss real bugs
 - Confusing soundiness with soundness — soundy tools are NOT sound in the formal sense
 

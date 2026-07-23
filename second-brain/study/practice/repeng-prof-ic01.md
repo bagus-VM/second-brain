@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 1 — Survey Interpretation | [[reproducibility-crisis]] |
+| Exercise 2 — Repeatability / Reproduction / Replication | [[repeat-reproduce-replicate]] · [[types-of-reproducibility]] |
+| Exercise 3 — Artifact Availability | [[artifact-availability]] · [[research-artifacts]] |
+| Exercise 4 — Bachelor Thesis Reflection | [[repeat-reproduce-replicate]] · [[artifact-availability]] |
+
 # In-Class Exercise Sheet 1 — Reproducibility Crisis & Terminology
 
 Based on the Nature article on "Reproducibility Crisis" and ACM "Artifact Review and Badging".

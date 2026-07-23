@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — Data Formats & JSON Equivalence | [[json-schema]] · [[xml-structured-text]] |
+| Exercises 3–5 — JSON Schema Validation | [[json-schema]] |
+| Exercises 6–9 — allOf, anyOf, oneOf | [[json-schema]] |
+| Exercises 10–11 — HDF5 | [[hdf5]] · [[data-provenance]] |
+
 # In-Class Exercise Sheet 8 — Hierarchical Data (JSON, XML, HDF5)
 
 ---

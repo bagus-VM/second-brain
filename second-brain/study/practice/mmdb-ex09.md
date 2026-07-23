@@ -6,6 +6,23 @@ status: current
 last_updated: 2026-07-11
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Q1 General index structure drawbacks | [[curse-of-dimensionality]] |
+| Q2 CBIR-specific requirements | [[content-based-retrieval]] · [[feature-vector]] |
+| Q3 B-tree properties | [[r-tree]] |
+| Q4 Hash indexing | [[locality-sensitive-hashing]] · [[signature-vectors]] |
+| Q5 K-d tree and Point Quadtree | [[quadtree-and-kd-tree]] |
+| Q6 R-tree key idea | [[r-tree]] |
+| Q7 R-tree properties | [[r-tree]] |
+| Q8 R-tree insert algorithm | [[r-tree]] |
+| Q9 R-tree delete and condense | [[r-tree]] |
+| Q10 Exact query with/without index | [[r-tree]] · [[locality-sensitive-hashing]] |
+| Q11 Range query | [[r-tree]] · [[sr-tree]] |
+| Q12 NNQ and k-NNQ | [[r-tree]] · [[gist-framework]] · [[dimensionality-reduction]] |
+
 # Exercise Sheet 9: Indexing
 
 ## Exercises

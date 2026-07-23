@@ -9,6 +9,18 @@ status: current
 last_updated: 2026-06-15
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: JPEG Baseline Process | [[jpeg-compression-pipeline]] · [[transform-coding]] |
+| Task 2: Pre-processing | [[color-space-conversion-ycbcr]] · [[jpeg-compression-pipeline]] |
+| Task 3: Discrete Cosine Transform | [[transform-coding]] · [[jpeg-compression-pipeline]] |
+| Task 4: Quantization | [[color-quantization]] · [[jpeg-compression-pipeline]] |
+| Task 5: Entropy Coding | [[entropy-coding-huffman-arithmetic]] |
+| Task 6: LZW Compression | [[lz77-lzw-compression]] |
+| Task 7: Huffman Coding | [[entropy-coding-huffman-arithmetic]] |
+
 ## Exercises
 
 ### Task 1: JPEG Baseline Process

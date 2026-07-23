@@ -9,6 +9,13 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Semantic Gap | [[semantic-gap]] · [[multimedia-query-predicates]] |
+| Task 2: Components of MMDB | [[multimedia-database-intro]] · [[multimedia-system]] · [[data-streams]] |
+
 ## Exercises
 
 ### Task 1: Semantic Gap

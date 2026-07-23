@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 1.A What Is a Network? | [[network-intro]] · [[network-examples]] · [[edge-types]] |
+| 1.B Why Do Networks Matter? | [[network-effects]] · [[centrality]] · [[community-structure]] · [[connectivity-and-components]] · [[bridges-and-local-bridges]] · [[network-diffusion]] |
+| 1.C What Can We Analyse? | [[network-diffusion]] · [[connected-component]] · [[community-structure]] |
+
 # Exercise Sheet 1 — What Is a Network?
 
 ## Exercises

@@ -9,6 +9,16 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 2.A Properties of Networks | [[graph-fundamentals]] · [[bipartite-graphs]] · [[directed-and-undirected-graphs]] |
+| 2.B Representing Graphs | [[graph-representations]] · [[sparse-dense-and-random-graphs]] · [[weighted-graphs]] |
+| 2.C Paths and Cycles | [[paths-walks-and-cycles]] · [[eulerian-path-and-circuit]] · [[shortest-path-and-diameter]] |
+| 2.D Breadth-First Search (BFS) | [[breadth-first-search]] · [[dijkstras-algorithm]] |
+| 2.E Connectivity and Components | [[connectivity-and-components]] · [[directed-connectivity]] |
+
 # Exercise Sheet 2 — Graph Theory
 
 ## Exercises

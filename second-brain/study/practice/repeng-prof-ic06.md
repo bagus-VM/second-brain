@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — DB Architectures & SQLite | [[client-server-db-architecture]] · [[sqlite-architecture]] |
+| Exercises 3–4 — SQLite Public Domain & Limitations | [[sqlite-architecture]] · [[reproducible-builds]] |
+| Exercise 5 — Docker Compose File | [[docker-compose]] · [[containerization-for-builds]] |
+| Exercises 6–7 — SQL Views and Foreign Tables | [[foreign-tables-postgresql]] · [[client-server-db-architecture]] |
+
 # In-Class Exercise Sheet 6 — Database Architectures & SQLite
 
 ---
