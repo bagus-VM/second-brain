@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 1 — Preparation | [[computational-reproducibility-in-ml]] |
+| Exercise 2 — Dealing with Randomness | [[levels-of-reproducibility]] · [[computational-reproducibility-in-ml]] |
+| Exercise 3 — Reproducibility Package | [[data-provenance]] · [[workflow-reproducibility]] |
+| Exercise 4 — Dockerfile Review | [[containerization-for-builds]] · [[reproducibility-standards-bronze-silver-gold]] |
+
 # Exercise Sheet 2 — Dealing with Randomness & Reproducibility Packages
 
 > **Note:** No official solutions available.

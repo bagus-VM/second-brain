@@ -9,9 +9,18 @@ status: current
 last_updated: 2026-06-19
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Relational vs Object-Relational DB | [[object-relational-databases]] |
+| Task 2: DB Definitions (UDTs, Inheritance, OID) | [[object-relational-databases]] · [[sql-mm]] · [[nested-tables-vs-varrays]] |
+| Task 3: Content-Based Image Search Using SQL/MM | [[sql-mm]] · [[content-based-retrieval]] · [[query-by-example-and-feature]] |
+| Task 4: MPEG Query Format (MPQF) | [[mpqf]] · [[multimedia-query-languages]] · [[moql]] · [[oql]] |
+
 ## Overview
 
-Exercise 8 covers the transition from relational to object-relational databases for multimedia data, and introduces standardized query formats (SQL/MM, MPQF) for content-based retrieval.
+## Task 1:
 
 ## Task 1: Relational vs Object-Relational DB Differences
 

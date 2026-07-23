@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — Structural Equivalence | [[data-provenance]] |
+| Exercise 3 — LaTeX in Docker | [[containerization-for-builds]] · [[workflow-reproducibility]] |
+| Exercises 4–5 — Automated Reporting & XPath | [[workflow-reproducibility]] · [[git-for-reproducibility]] |
+
 # Exercise Sheet 4 — Structural Equivalence, LaTeX & Automated Reporting
 
 > **Note:** No official solutions available.

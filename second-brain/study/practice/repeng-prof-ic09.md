@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–4 — LLM Reproducibility | [[types-of-reproducibility]] · [[levels-of-reproducibility]] |
+| Exercises 5–7 — Prompt Components & Structured Output | [[json-schema]] |
+| Exercises 8–10 — Constrained Decoding | [[json-schema]] · [[reproducibility-crisis]] |
+| Exercises 11–12 — OpenAI API & Structured Outputs | [[json-schema]] · [[types-of-reproducibility]] |
+
 # In-Class Exercise Sheet 9 — LLMs Through the Lens of Reproducibility
 
 ---

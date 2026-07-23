@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Signal Processing | [[audio-sampling-nyquist-theorem]] · [[pcm-digital-audio]] · [[audio-quantization-pcm]] |
+| Task 2: Structured and Unstructured Data | [[structured-vs-unstructured-retrieval]] · [[multimedia-query-predicates]] |
+| Task 3: Compact Discs (Rainbow Books) | [[multimedia-definition]] · [[media-types-discrete-continuous]] · [[multimedia-main-domains]] |
+
 ## Exercises
 
 ### Task 1: Signal Processing

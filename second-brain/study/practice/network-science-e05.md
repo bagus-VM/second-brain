@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 5.A Basic Measures and Modularity | [[modularity]] · [[community-detection-overview]] |
+| 5.B Girvan-Newman Algorithm | [[girvan-newman-algorithm]] · [[edge-betweenness]] |
+| 5.C Hierarchical Clustering | [[hierarchical-clustering]] |
+
 # Exercise Sheet 5 — Community Detection
 
 ## Exercises

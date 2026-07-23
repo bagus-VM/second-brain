@@ -9,6 +9,16 @@ status: current
 last_updated: 2026-06-15
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Content-Based Retrieval (CBR) | [[content-based-retrieval]] · [[semantic-gap]] · [[sensory-gap]] |
+| Task 2: CBR Terminology | [[multimedia-annotation]] · [[multimedia-metadata]] · [[feature-extraction]] |
+| Task 3: CBR Systems | [[cbir-systems-evaluation]] · [[query-by-example-and-feature]] |
+| Task 4: Image Indexing by Colours | [[color-histogram]] · [[dominant-color]] · [[mpeg-7-descriptors]] |
+| Task 5: Similarity by Colour Distribution | [[minkowski-distance]] · [[chi-squared-distance]] · [[similarity-measures]] · [[kolmogorov-smirnov-distance]] |
+
 ## Exercises
 
 ### Task 1: Content-Based Retrieval (CBR)

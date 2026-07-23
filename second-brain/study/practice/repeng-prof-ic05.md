@@ -9,6 +9,16 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — Compilation Basics | [[c-preprocessor]] · [[make-and-build-systems]] |
+| Exercise 3 — File Update Timestamps | [[deterministic-builds]] · [[source-date-epoch]] |
+| Exercises 4–5 — Makefiles | [[make-and-build-systems]] · [[deterministic-builds]] |
+| Exercise 6 — C Preprocessor Macros | [[c-preprocessor]] |
+| Exercise 7 — Heisenbug | [[build-environment-isolation]] |
+
 # In-Class Exercise Sheet 5 — C Programming, Makefiles & Reproducible Builds
 
 ---

@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-06-14
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 2 — Reproducing Binary Builds | [[deterministic-builds]] · [[diffoscope]] |
+| Exercise 3 — Reproducible Toolchains | [[deterministic-builds]] · [[build-environment-isolation]] |
+| Exercises 4–5 — ReproTest & Make | [[make-and-build-systems]] · [[ci-cd-for-reproducibility]] |
+| Exercise 6 — Reproducible Builds MC | [[source-date-epoch]] · [[package-manager-reproducibility]] |
+
 # Exercise Sheet 6 — Reproducible Binary Builds & Make
 
 ## Exercises

@@ -9,6 +9,13 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–3 — Docker Setup | [[containerization-for-builds]] · [[artifact-availability]] |
+| Exercises 4–5 — Image Comparison & MC | [[types-of-reproducibility]] · [[repeat-reproduce-replicate]] |
+
 # Exercise Sheet 1 — Docker Basics & Image Comparison
 
 > **Note:** No official solutions available.

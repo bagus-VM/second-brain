@@ -9,6 +9,16 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 1 — Commit History Problem | [[git-commit-hygiene]] · [[git-for-reproducibility]] |
+| Exercise 2 — Reconstructing File from git log | [[git-patches-and-diffs]] · [[git-dag-structure-and-internals]] |
+| Exercise 3 — Commit Metadata & Patch Structure | [[git-patches-and-diffs]] · [[git-commit-hygiene]] |
+| Exercise 4 — Snapshot vs Clone vs Fork | [[git-branching-and-merging]] · [[git-for-reproducibility]] |
+| Exercise 5 — Restructuring Git History | [[git-rebasing-and-history-rewriting]] · [[developer-certificate-of-origin]] |
+
 # In-Class Exercise Sheet 4 — Git Best Practices
 
 ---

@@ -9,6 +9,15 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–3 — Tidy Data Principles | [[tidy-data]] |
+| Exercise 4 — Contingency Table SQL | [[tidy-data]] · [[data-provenance]] |
+| Exercise 5 — Earthquakes Table | [[tidy-data]] |
+| Exercises 6–10 — Metadata, Workflows, Destructive Ops | [[workflow-reproducibility]] · [[data-provenance]] |
+
 # In-Class Exercise Sheet 7 — Tidy Data & Metadata
 
 Based on Hadley Wickham's "Tidy Data" and SQL for Data Science.

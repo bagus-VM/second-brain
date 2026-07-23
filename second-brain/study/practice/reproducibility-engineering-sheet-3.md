@@ -9,6 +9,13 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–3 — Experiment Dispatching & Binary Container | [[containerization-for-builds]] · [[computational-reproducibility-in-ml]] |
+| Exercise 4 — Dependency Management | [[containerization-for-builds]] · [[hypothesis-formulation]] |
+
 # Exercise Sheet 3 — Experiment Dispatching & Binary Containers
 
 > **Note:** No official solutions available.

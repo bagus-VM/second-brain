@@ -19,7 +19,7 @@ You can't build a perfect bug finder. Not because we're not smart enough, but be
 
 Definitions:
 - **Non-trivial**: there exists at least one program that has the property and at least one that does not
-- **Semantic property**: a property about what the program does (behaviour), not how it looks (syntax)
+- **Semantic property**: ==a property about what the program does (behaviour)==, not how it looks (syntax)
 - **Undecidable**: no automated method can determine whether the property holds for *any* program
 
 Proof sketch (constant-value analysis):

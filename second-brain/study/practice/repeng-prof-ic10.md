@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercise 1 — Workflow Labeling | [[reproducible-builds]] · [[workflow-reproducibility]] |
+| Exercise 2 — Dependency and Temporal Flow | [[artifact-packaging]] · [[containerization-for-builds]] |
+| Exercise 3 — SQPolite Project | [[git-for-reproducibility]] · [[git-patches-and-diffs]] |
+
 # In-Class Exercise Sheet 10 — Remote Experiments & Workflow
 
 Based on "Nullius in Verba" by Mauerer & Scherzinger, ICDE 2021.

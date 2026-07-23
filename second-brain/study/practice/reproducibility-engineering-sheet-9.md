@@ -6,6 +6,13 @@ status: current
 last_updated: 2026-07-11
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 2 JSON and JSON Schema | [[json-schema]] · [[containerization-for-builds]] |
+| 3 JSON and JSON Schema MC | [[json-schema]] · [[data-provenance]] |
+
 # Exercise Sheet 9: JSON and JSON Schema
 
 ## 2 JSON and JSON Schema

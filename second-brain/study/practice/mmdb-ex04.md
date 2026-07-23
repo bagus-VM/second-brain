@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-15
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Image Formats | [[image-file-formats]] · [[vector-graphics-svg]] · [[bezier-curves]] |
+| Task 2: Image Processing and Resolution | [[image-representation-bitmap]] · [[image-resolution-dpi-ppi]] · [[image-interpolation]] · [[pixel-formats-and-bit-depth]] |
+| Task 3: Quantization and Dithering | [[color-quantization]] · [[color-lookup-table]] · [[dithering]] · [[floyd-steinberg-dithering]] |
+
 ## Exercises
 
 ### Task 1: Image Formats

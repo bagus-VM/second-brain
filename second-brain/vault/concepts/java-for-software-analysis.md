@@ -50,7 +50,7 @@ public enum SignValue {
 }
 ```
 
-An enum is a type with a fixed set of constants. Each constant has an `ordinal()` (its position, starting from 0).
+==An enum is a type with a fixed set of constants==. Each constant has an `ordinal()` (its position, starting from 0).
 
 **Why enums are perfect for lattices:**
 - Fixed set of values (you can't add new ones at runtime)
@@ -65,7 +65,7 @@ Map<String, Integer> counts = new HashMap<>();  // maps Strings to Integers
 List<SignValue> values = new ArrayList<>();      // a list of SignValues
 ```
 
-Generics are Java's way of saying "this collection holds X type." The `<>` is the diamond operator — it infers the type from context.
+==Generics are Java's way of saying "this collection holds X type."== The `<>` is the diamond operator — it infers the type from context.
 
 ### Interfaces and Abstract Classes
 
@@ -81,8 +81,8 @@ public abstract class FeatureMetric {
 }
 ```
 
-- **Interface:** A contract. Any class that "implements" it must provide all methods. Multiple interfaces allowed.
-- **Abstract class:** A partial implementation. Can have both abstract and concrete methods. Only one parent allowed.
+- **Interface:** ==A contract. Any class that "implements" it must provide all methods==. Multiple interfaces allowed.
+- **Abstract class:** ==A partial implementation. Can have both abstract and concrete methods==. Only one parent allowed.
 - In the projects: `TransferRelation` is an interface. `FeatureMetric` is an abstract class. `SignTransferRelation` implements `TransferRelation`. `NumberLinesFeature` extends `FeatureMetric`.
 
 ### Static Methods and Fields
@@ -96,7 +96,7 @@ public class MathUtils {
 // Usage: MathUtils.add(2, 3) — no 'new MathUtils()'
 ```
 
-Static methods belong to the class, not an instance. They can't access `this` or instance fields.
+==Static methods belong to the class, not an instance.== They can't access `this` or instance fields.
 
 ### Annotations
 
@@ -124,7 +124,7 @@ names.stream()
 // Result: [ALICE, CHARLIE]
 ```
 
-**In the projects:** You'll see `.stream().map().collect()` patterns for transforming collections. The `::` is a method reference — shorthand for `s -> s.toUpperCase()`.
+**In the projects:** You'll see ==`.stream().map().collect()` patterns for transforming collections==. The `::` is a method reference — shorthand for `s -> s.toUpperCase()`.
 
 ### Exceptions
 
@@ -136,7 +136,7 @@ try {
 }
 ```
 
-Java forces you to handle checked exceptions (like `IOException`). Unchecked exceptions (like `NullPointerException`) don't need explicit handling.
+==Java forces you to handle checked exceptions (like `IOException`)==. Unchecked exceptions (like `NullPointerException`) don't need explicit handling.
 
 ---
 
@@ -201,7 +201,7 @@ project/
     └── test-classes/                ← compiled test .class files
 ```
 
-**Non-standard layout:** Normally Maven uses `src/main/java/` and `src/test/java/`. These projects use `src/` and `test/` directly. This is configured in the pom.xml.
+==**Non-standard layout:** Normally Maven uses `src/main/java/` and `src/test/java/`. These projects use `src/` and `test/` directly==. This is configured in the pom.xml.
 
 ---
 
@@ -209,11 +209,12 @@ project/
 
 ### 1. JavaParser — AST Parsing (Used in Readability Project)
 
-**What it does:** Parses Java source code into an Abstract Syntax Tree (AST).
+**What it does:** ==Parses Java source code into an Abstract Syntax Tree (AST)==, so that the program's meaning is easier to understand (Internal Representation).
 
 **Why you need it:** You can't compute metrics like cyclomatic complexity by counting characters. You need to understand the STRUCTURE of the code — which parts are if-statements, which are loops, which are operators. JavaParser gives you that structure.
 
-**Key concept — the Visitor Pattern:**
+**Key concept — ==the Visitor Pattern==:**
+The Visitor pattern is a ==behavioral design pattern in Java that lets you add new operations to a fixed class hierarchy without changing the existing classes==.
 
 ```java
 public class CyclomaticComplexityVisitor extends VoidVisitorAdapter<Void> {
@@ -256,11 +257,11 @@ public class CyclomaticComplexityVisitor extends VoidVisitorAdapter<Void> {
 ```java
 StaticJavaParser.parse(code, ParseStart.CLASS_BODY);
 ```
-This tells JavaParser to parse the code as a class body (methods, fields, inner classes), NOT as a full compilation unit (which would require package declaration, imports, etc.). The `.jsnp` files are class body fragments.
+==This tells JavaParser to parse the code as a class body (methods, fields, inner classes), NOT as a full compilation unit== (which would require package declaration, imports, etc.). The `.jsnp` files are class body fragments.
 
 ### 2. ASM — Bytecode Framework (Used in Sign Analysis)
 
-**What it does:** Reads and manipulates Java bytecode (`.class` files).
+**What it does:** ==Reads and manipulates Java bytecode== (`.class` files).
 
 **Why you need it:** Sign analysis operates on BYTECODE, not source code. Bytecode is what the JVM actually executes. ASM gives you:
 - `ClassReader`: reads a `.class` file into memory

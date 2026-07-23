@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Task 1: Color Perception | [[color-perception]] · [[metamers]] · [[chromatic-adaptation]] |
+| Task 2: Color Models | [[color-models-overview]] · [[rgb-color-model]] · [[cmyk-color-model]] · [[hsv-color-model]] |
+| Task 3: Color Spaces | [[cie-chromaticity-diagram]] · [[lab-color-space]] · [[yuv-color-space]] · [[hmmd-color-space]] · [[color-gamut]] |
+
 ## Exercises
 
 ### Task 1: Color Perception

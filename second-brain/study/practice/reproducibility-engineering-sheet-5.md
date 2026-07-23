@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 2–3 — Basic Git & Tracking Contributions | [[git-commit-hygiene]] · [[git-dag-structure-and-internals]] |
+| Exercises 4–5 — Rewriting Histories & Patches | [[git-rebasing-and-history-rewriting]] · [[git-patches-and-diffs]] |
+| Exercise 6 — Git MC | [[git-for-reproducibility]] · [[git-branching-and-merging]] |
+
 # Exercise Sheet 5 — Git Basics, History Rewriting & Patches
 
 > **Note:** No official solutions available.

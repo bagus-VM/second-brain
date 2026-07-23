@@ -9,6 +9,14 @@ status: current
 last_updated: 2026-07-14
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 7.A Triadic Balance Theory | [[structural-balance-theory]] · [[balanced-triads]] · [[balance-theorem]] |
+| 7.B Weak Balance | [[weak-structural-balance]] · [[k-balance]] · [[cycle-criterion]] |
+| 7.C Relaxed Balance and Applications | [[frustration-index]] · [[signed-laplacian]] · [[signed-graphs]] |
+
 # Exercise Sheet 7 — Structural Balance
 
 ## Exercises

@@ -9,6 +9,13 @@ status: current
 last_updated: 2026-06-02
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 4.A Centrality Measures | [[centrality-measures]] · [[structural-holes-and-brokerage]] |
+| 4.B Structural Roles | [[structural-holes-and-brokerage]] · [[edge-betweenness]] · [[clustering-coefficient]] |
+
 # Exercise Sheet 4 — Centrality and Structural Roles
 
 ## Exercises

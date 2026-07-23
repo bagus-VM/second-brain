@@ -9,6 +9,17 @@ status: current
 last_updated: 2026-07-10
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–2 — Hypotheses | [[hypothesis-formulation]] |
+| Exercises 3–4 — Case Studies & Occam's Razor | [[hypothesis-formulation]] · [[presenting-experiments]] |
+| Exercises 5–6 — Presenting Experiments | [[presenting-experiments]] |
+| Exercises 7–9 — Levels of Equivalence | [[levels-of-equivalence]] |
+| Exercise 10 — Algorithm Runtime Comparison | [[levels-of-equivalence]] · [[presenting-experiments]] |
+| Exercise 11 — Comparing Methods | [[presenting-experiments]] |
+
 # In-Class Exercise Sheet 3 — Hypotheses & Experimental Design
 
 Based on Justin Zobel's "Writing for Computer Science".

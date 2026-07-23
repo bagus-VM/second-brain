@@ -6,6 +6,15 @@ status: current
 last_updated: 2026-07-17
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| 2 Multi-Stage Builds | [[containerization-for-builds]] · [[reproducible-builds]] |
+| 3 Working with Remote Containers | [[artifact-packaging]] · [[git-for-reproducibility]] |
+| 4 Storing and Inspecting HDF5 | [[hdf5]] · [[data-provenance]] |
+| 5 Reproducible Workflows MC | [[workflow-reproducibility]] · [[reproducible-builds]] |
+
 # Exercise Sheet 11: Reproducible Experiment Workflows
 
 ## 2 Multi-Stage Builds

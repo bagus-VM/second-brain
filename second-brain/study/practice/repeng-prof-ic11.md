@@ -6,6 +6,14 @@ status: current
 last_updated: 2026-07-17
 ---
 
+## Topic Map
+
+| Exercise | Key Vault Pages |
+|----------|----------------|
+| Exercises 1–3 — FAIR Scope & Stakeholders | [[artifact-availability]] · [[research-artifacts]] |
+| Exercises 4–6 — Data Stewardship & FAIR Categories | [[artifact-packaging]] · [[data-provenance]] |
+| Exercises 7–11 — Legal & Copyright | [[reproducible-builds]] |
+
 # In-Class Exercise Sheet 11: FAIR Principles & Legal Aspects of Research Data
 
 Based on:
