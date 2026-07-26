@@ -263,7 +263,7 @@ StaticJavaParser.parse(code, ParseStart.CLASS_BODY);
 
 **What it does:** ==Reads and manipulates Java bytecode== (`.class` files).
 
-**Why you need it:** Sign analysis operates on BYTECODE, not source code. Bytecode is what the JVM actually executes. ASM gives you:
+**Why you need it:** ==Sign analysis operates on BYTECODE==, not source code. Bytecode is what the JVM actually executes. ASM gives you:
 - `ClassReader`: reads a `.class` file into memory
 - `ClassNode` / `MethodNode`: in-memory representation
 - `Analyzer`: generic fixpoint dataflow engine
@@ -333,7 +333,7 @@ int y = x + 3;  →  ILOAD_1   →  [5]
 
 ### 3. WEKA — Machine Learning (Used in Readability Project)
 
-**What it does:** A Java ML library with classifiers, filters, and evaluation tools.
+**What it does:** ==A Java ML library with classifiers, filters, and evaluation tools.==
 
 **Why you need it:** You've extracted features from code snippets. Now you need to train a model. WEKA does this in Java.
 
@@ -342,7 +342,7 @@ int y = x + 3;  →  ILOAD_1   →  [5]
 - `Logistic`: Logistic regression classifier
 - `Standardize`: Z-score normalization filter
 - `Evaluation`: Cross-validation and metrics
-
+z
 **The pipeline:**
 ```java
 // 1. Load CSV
@@ -372,7 +372,7 @@ eval.crossValidateModel(fc, dataset, 10, new Random(1));
 
 ### 4. picocli — CLI Framework
 
-**What it does:** Parses command-line arguments into Java objects.
+**What it does:** ==Parses command-line arguments into Java objects.==
 
 **Why you need it:** Both projects have CLI entry points. Instead of manually parsing `args[]`, picocli does it with annotations.
 

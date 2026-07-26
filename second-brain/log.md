@@ -4,6 +4,15 @@
 > Format: `## [YYYY-MM-DD] OPERATION | title | details`
 > When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
 
+## [2026-07-26] PREP | Mock Exam SA + RepEng (Antwort-Wahl-Verfahren) | 2 dedicated files, 40Q each
+- `study/exams/mock-exam-software-analyse-2026-07-26.md` — 40 MC questions across 11 sections (Foundations, JVM/Bytecode, Readability, Parsing/AST, Sign Analysis, Control Flow, Data Flow, Abstract Interpretation, Interprocedural, Slicing, Dynamic Analysis). Scope: lectures 2-10 + all 3 projects. All professor-excluded topics removed.
+- `study/exams/mock-exam-reproducibility-engineering-2026-07-26.md` — 40 MC questions across 11 sections (Reproducibility Crisis & Terminology, Levels/Provenance/Standards, Hypotheses & Equivalence, Git Internals, Reproducible Builds, Database Architectures, Tidy Data & SQL, Hierarchical Data, LLMs & Reproducibility, FAIR Principles, Legal Aspects). Scope: all 11 lectures + 11 sheets + 11 IC sheets.
+- Format: Antwort-Wahl-Verfahren — single-best-answer (Einfachauswahl) + multi-select (Mehrfachauswahl) marked explicitly
+- Solutions in `> [!note]- Solution` callouts per vault convention
+- Removed the earlier combined `mock-exam-sa-repeng-2026-07-26.md` (superseded by the two dedicated files)
+- Key traps planted (SA): Java int division toward zero (Q17), BOTTOM vs TOP for div-by-zero (Q18), +1 in cyclomatic complexity (Q11), forward-may = union (Q25), Steensgaard speed vs. Andersen precision (Q33), PDG = CDG ∪ DDG (Q37)
+- Key traps planted (RepEng): __LINE__ vs __TIME__/__FILE__ reproducibility (Q22), transitive Make rebuilds (Q29), BHB ruling = creation vs. obtaining (Q62), oneOf XOR vs. anyOf OR (Q39/Q40), temperature=0 CPU vs GPU (Q43), Docker secrets gradient vs docker inspect (Q48)
+
 ---
 
 
