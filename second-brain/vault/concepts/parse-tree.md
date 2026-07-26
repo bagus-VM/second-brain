@@ -25,8 +25,8 @@ Given CFG G = (T, N, P, S), a parse tree is a rooted tree such that:
 4. If an interior node A has children X₁, X₂, …, Xₙ, then A → X₁ X₂ … Xₙ is a production in P
 
 The **yield** of the tree is the concatenation of leaf labels (left to right), which is a string in L(G).
-
-## Key Properties
+![[Pasted image 20260726214022.png|654]]
+## Key Properties / Complexity
 
 - A parse tree corresponds to a **rightmost** or **leftmost** derivation (depending on the order of expansion)
 - For an unambiguous grammar, every string in L(G) has exactly one parse tree

@@ -29,7 +29,7 @@ Edges with high edge-betweenness are exactly the bridges and weak ties that span
 σ_st = total number of shortest s-t paths
 Edge betweenness = Σ_{s≠t} σ_st(e) / σ_st
 
-## Key Properties
+## Key Properties / Complexity
 - Produces a full hierarchy (dendrogram) — every cut is a valid partition
 - No pre-given k needed — choose the cut that maximizes Q
 - The algorithm is **didactic** but expensive — not scalable to large graphs
@@ -41,12 +41,12 @@ On a graph with two main clusters connected by a bridge, plus a small triangle w
 - **Step 0**: the bridge edge has highest betweenness (all inter-cluster paths cross it)
 - **Step 1**: removing the bridge reveals two main clusters
 - **Step 2**: the next high-betweenness edge links the triangle — removing it isolates the third community
-- **Final**: three communities, chosen by maximizing Q across all possible cuts
+- **Final**: three communities, chosen by maximising Q across all possible cuts
 
 ## Common Pitfalls
 - O(|V|·|E|²) makes GN infeasible on large graphs — use [[louvain-algorithm]] or [[leiden-algorithm]] instead
 - Edge betweenness must be **recomputed** after each removal (not just decremented)
-- The Q-maximizing cut may not match ground-truth labels (see [[zacharys-karate-club]])
+- The Q-maximising cut may not match ground-truth labels (see [[zacharys-karate-club]])
 - GN can produce many small communities at fine-grained cuts before the Q-optimal one
 
 ## Connections

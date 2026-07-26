@@ -12,7 +12,7 @@ prerequisites: ["[[strong-triadic-closure]]", "[[bridges-and-local-bridges]]"]
 Granovetter's weak-tie theorem: if a node satisfies STC and has at least two strong ties, then any incident local bridge must be a weak tie — making weak ties the critical carriers of novel information across communities.
 
 ## Core Intuition
-Strong ties connect you to people who already know each other (high [[neighborhood-overlap]], high [[clustering-coefficient]]). Weak ties connect you to people in different social circles. The theorem proves this isn't just an observation — it's a *logical consequence* of [[strong-triadic-closure|STC]]. If a local bridge were strong, STC would force the endpoints' other strong neighbors to connect, creating shared neighbors and destroying the local-bridge condition. Therefore, local bridges *must* be weak. Since local bridges carry non-redundant information between communities, weak ties are structurally essential.
+Strong ties connect you to people who already know each other (high [[neighborhood-overlap]], high [[clustering-coefficient]]). Weak ties connect you to people in different social circles. The theorem proves this isn't just an observation — it's a *logical consequence* of [[strong-triadic-closure|STC]]. If a local bridge were strong, STC would force the endpoints' other strong neighbours to connect, creating shared neighbours and destroying the local-bridge condition. Therefore, local bridges *must* be weak. Since local bridges carry non-redundant information between communities, weak ties are structurally essential.
 
 ## Formal Definition / Statement
 **Theorem (Granovetter).** If a node a satisfies [[strong-triadic-closure|Strong Triadic Closure]] and is incident to at least two strong ties, then any [[bridges-and-local-bridges|local bridge]] incident to a must be labeled Weak.
@@ -21,13 +21,13 @@ Strong ties connect you to people who already know each other (high [[neighborho
 1. Assume A–D is strong AND a local bridge
 2. A also has a strong tie to B (given: at least 2 strong ties)
 3. STC at A forces B–D to exist
-4. Now B is a shared neighbor of A and D
+4. Now B is a shared neighbour of A and D
 5. But A–D was a local bridge → N(A) ∩ N(D) = ∅ → contradiction
 6. Therefore A–D cannot be both strong and a local bridge ∎
 
-## Key Properties
+## Key Properties / Complexity
 - The theorem is an if-then statement: STC + ≥ 2 strong ties → local bridges are weak
-- It links an unobservable property (edge labels) to a measurable one (neighborhood overlap)
+- It links an unobservable property (edge labels) to a measurable one (neighbourhood overlap)
 - It makes a testable prediction: low-overlap edges should be weak
 - The prediction is confirmed empirically at scale (Onnela et al. 2007; Facebook; Twitter)
 - Weak ties carry *novel* information because they bridge otherwise disconnected communities
@@ -36,7 +36,7 @@ Strong ties connect you to people who already know each other (high [[neighborho
 **Empirical validation — Onnela et al. (2007):**
 - Data: 18 months of cell-phone logs, ~7M users
 - Tie strength proxy: call duration (percentile)
-- Structural proxy: neighborhood overlap O(u, v)
+- Structural proxy: neighbourhood overlap O(u, v)
 - **Result:** Clear monotone relationship — weakest ties have O ≈ 0, strongest ties have high O
 - **Knockout experiment:** Removing weakest ties first fragments the giant component far faster than removing strongest ties first
 - **Interpretation:** Weak ties are the network's connective tissue; local bridges hold the global network together

@@ -51,7 +51,7 @@ A new generation of IoT characterised by:
 **Architectural evolution:**
 - Conventional 6-layer: physical, perception, network, middleware/cloud, application, business
 - Recent 3-layer (with edge): end device, fog/edge, cloud
-- Recent 5-layer: end device, communication, fog/edge, network core, cloud, application
+- Recent 6-layer: end device, communication, fog/edge, network core, cloud, application
 - 8-layer (proposed): end device, communication, fog/edge, data storage, collaboration/process, cloud, application, security (cross-cutting)
 
 **Examples of IoT 2.0 systems:**
@@ -62,9 +62,9 @@ A new generation of IoT characterised by:
 
 **IoT 2.0 security challenges:**
 - Massive attack surface (billions of devices)
-- Constrained devices (can't run heavy crypto)
+- Constrained devices (cannot run heavy crypto)
 - Heterogeneous protocols (no one-size-fits-all security)
-- Real-time requirements (can't afford multi-second crypto)
+- Real-time requirements (cannot afford multi-second crypto)
 - Long device lifetimes (security must age well over 10+ years)
 - Physical exposure (sensors in open fields, smart meters in basements)
 

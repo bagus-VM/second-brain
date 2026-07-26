@@ -42,7 +42,7 @@ The **interprocedural MFP** is the least fixed point of the global interprocedur
 
 **Theorem (Distributivity)**: MFP = MVP iff the interprocedural transfer functions are distributive.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why MVP is undecidable
 - Programs with loops have infinitely many execution paths

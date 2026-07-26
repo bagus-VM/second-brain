@@ -10,7 +10,7 @@ prerequisites: []
 
 ## One-line Summary
 
-Make is a build automation tool that uses file timestamps and dependency rules to determine what needs rebuilding, but its implicit behaviors can introduce non-determinism into builds.
+Make is a build automation tool that uses file timestamps and dependency rules to determine what needs rebuilding, but its implicit behaviours can introduce non-determinism into builds.
 
 ## Core Intuition
 
@@ -31,7 +31,7 @@ target: dependency1 dependency2
     command to create target
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Timestamp-based rebuilds**: Make compares modification times to decide what to rebuild.
 - **Wildcard expansion**: `$(wildcard *.c)` expands to files in filesystem-dependent order.
@@ -93,10 +93,10 @@ Note: the recipe lines must start with a TAB character, not spaces. This is a cl
 
 ## Connections
 
-- [[reproducible-builds]] -- Make's implicit behaviors are a major source of non-reproducibility
+- [[reproducible-builds]] -- Make's implicit behaviours are a major source of non-reproducibility
 - [[deterministic-builds]] -- Wildcard ordering and parallel builds affect determinism
 - [[c-preprocessor]] -- Make compiles C programs; the preprocessor runs first
-- [[build-environment-isolation]] -- Make's behavior depends on the host filesystem
+- [[build-environment-isolation]] -- Make's behaviour depends on the host filesystem
 - [[ci-cd-for-reproducibility]] -- CI systems must handle Make's quirks correctly
 - [[reproducibility-engineering-lecture-5]] -- Lecture context (Exercises 3-5)
 

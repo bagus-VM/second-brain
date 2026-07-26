@@ -23,7 +23,7 @@ Internet of Medical Things (IoMT) encompasses connected medical devices that col
 **Regulatory Framework:**
 
 **FDA Premarket Cybersecurity Guidance (2023):**
-- Threat modeling required during device design
+- Threat modelling required during device design
 - Cybersecurity management plan throughout device lifecycle
 - Vulnerability disclosure process (coordinated disclosure)
 - Software Bill of Materials (SBOM) required
@@ -89,7 +89,7 @@ Internet of Medical Things (IoMT) encompasses connected medical devices that col
 
 - [[industrial-iot-security]] — Both are safety-critical IoT domains
 - [[privacy-by-design]] — HIPAA requires privacy-by-design for health data
-- [[threat-modeling]] — FDA requires threat modeling for premarket submission
+- [[threat-modeling]] — FDA requires threat modelling for premarket submission
 - [[secure-boot-chain]] — Medical devices need firmware integrity verification
 - [[ota-updates]] — Critical for patching medical devices post-deployment
 - [[risk-assessment-frameworks]] — Healthcare-specific risk assessment

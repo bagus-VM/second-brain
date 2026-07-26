@@ -26,7 +26,7 @@ During development, you often accumulate messy commits: "WIP", "fix typo", "oops
   - Reorder lines to change commit order
 - **`--autosquash`**: Automatically arranges `fixup!` and `squash!` prefixed commits next to their targets.
 
-## Key Properties
+## Key Properties / Complexity
 - **Rewrites history**: All replayed commits get new SHA-1s. Never rebase commits that others have already pulled.
 - **Linearizes history**: Removes merge commits, creating a straight line.
 - **Atomic presentation**: Development noise (fixes, WIPs) can be consolidated into meaningful commits.

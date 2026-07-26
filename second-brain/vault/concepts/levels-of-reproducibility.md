@@ -25,7 +25,7 @@ From VisTrails (Freire et al.), reproducibility is characterized by three orthog
 
 These dimensions are not a strict hierarchy; an experiment can score high on availability but low on confirmability if the method is not documented clearly enough for independent verification.
 
-## Key Properties
+## Key Properties / Complexity
 - **Orthogonal dimensions**: increasing availability does not guarantee confirmability.
 - **Practical example**: an experiment requiring special hardware can achieve *computational reproducibility* by providing the hardware-produced data plus the analysis workflow, even if the hardware itself is not shareable.
 - **Spectrum, not binary**: real experiments occupy a point in a 3D space, not a simple "reproducible / not reproducible" label.

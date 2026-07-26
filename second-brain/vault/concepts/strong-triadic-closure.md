@@ -15,17 +15,17 @@ If a node has two strong ties, Strong Triadic Closure requires those endpoints t
 Plain [[triadic-closure]] says open triads tend to close. STC goes further: it introduces a *type system* for edges (strong vs. weak) and says that strong ties impose a stronger closure pressure. If A has strong ties to both B and C, then B–C must exist. The label of B–C doesn't matter — just its existence. This makes STC a constraint on which edge labelings are valid, not a property of the graph itself.
 
 ## Formal Definition / Statement
-**Edge labeling.** Given a graph G = (V, E), a labeling is a function ℓ: E → {Strong, Weak}. We write S(v) for the set of strong neighbors of node v under ℓ.
+**Edge labeling.** Given a graph G = (V, E), a labeling is a function ℓ: E → {Strong, Weak}. We write S(v) for the set of strong neighbours of node v under ℓ.
 
-**Strong Triadic Closure (STC).** A labeling ℓ satisfies STC if, for every node v and every pair u₁, u₂ ∈ S(v) of strong neighbors of v, the edge (u₁, u₂) exists in E — with any label (Strong or Weak).
+**Strong Triadic Closure (STC).** A labeling ℓ satisfies STC if, for every node v and every pair u₁, u₂ ∈ S(v) of strong neighbours of v, the edge (u₁, u₂) exists in E — with any label (Strong or Weak).
 
 Key point: STC constrains which pairs *must be connected*, not how the closing edge is labeled. The question "does the graph satisfy STC?" is ill-posed — the right question is "which labelings of this graph satisfy STC?"
 
-## Key Properties
+## Key Properties / Complexity
 - STC is a property of a *labeling*, not of a graph
 - The same graph can admit both valid and invalid STC labelings
 - If a node has only one strong tie, STC imposes no constraint
-- If a node has ≥ 2 strong ties, all pairs among those strong neighbors must be connected
+- If a node has ≥ 2 strong ties, all pairs among those strong neighbours must be connected
 - The closing edge can be Strong or Weak — STC doesn't care
 
 ## Worked Example

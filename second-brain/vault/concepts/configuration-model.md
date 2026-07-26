@@ -28,7 +28,7 @@ where k_i, k_j are node degrees and m is the total number of edges.
 **Use in modularity:**
 [[modularity]] Q compares observed edges A_ij to expected edges k_i k_j / (2m) under the configuration model. Q is the surplus of within-community edges over this random expectation.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Preserves degree sequence**: the random graph has the same degrees as the original
 2. **Null model**: isolates the effect of degree from community structure
 3. **Expected edge probability**: k_i k_j / (2m) — proportional to the product of degrees

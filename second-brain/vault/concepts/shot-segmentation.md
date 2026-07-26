@@ -9,7 +9,7 @@ prerequisites: [video-hierarchy-shots-scenes]
 ---
 
 ## One-line Summary
-Shot segmentation automatically detects shot boundaries in video by analyzing visual differences between consecutive frames, using pixel-based, histogram-based, edge-based, or compressed-domain methods.
+Shot segmentation automatically detects shot boundaries in video by analysing visual differences between consecutive frames, using pixel-based, histogram-based, edge-based, or compressed-domain methods.
 
 ## Core Intuition
 To build a video database that supports content-based search, you first need to decompose video into its structural units — shots. This is the shot segmentation problem. The basic idea is simple: if two consecutive frames look very different, there's probably a shot boundary between them. The challenge is defining "very different" robustly — object motion, camera movement, lighting changes, and gradual transitions (fades, dissolves) can all cause false positives or missed detections.
@@ -27,7 +27,7 @@ To build a video database that supports content-based search, you first need to 
 **Detection methods:**
 
 1. **Pixel-based** (uncompressed): Compare raw pixel values between consecutive frames.
-2. **Histogram-based** (uncompressed): Compare color distributions — more robust to motion than pixel comparison.
+2. **Histogram-based** (uncompressed): Compare colour distributions — more robust to motion than pixel comparison.
 3. **Edge-based** (uncompressed): Apply edge detection (Canny, Sobel), compare edge maps between frames.
 4. **Macroblock-based** (compressed domain, MPEG):
    - **I-macroblocks**: coded independently (intra-coded).
@@ -47,16 +47,16 @@ To build a video database that supports content-based search, you first need to 
 - Adjust threshold values.
 - Empirical constraints (e.g., a shot must last at least 100 frames).
 
-## Key Properties
+## Key Properties / Complexity
 - **Hard cuts** are easiest to detect (large sudden change); **gradual transitions** (dissolves, fades) are harder.
 - **Compressed-domain methods** avoid full decompression — more efficient for large video databases.
-- **Color histograms** are more robust to camera/object motion than raw pixel comparison, because motion changes pixel positions but not overall color distribution.
+- **Colour histograms** are more robust to camera/object motion than raw pixel comparison, because motion changes pixel positions but not overall colour distribution.
 - **Edge detection** methods are robust to lighting changes but sensitive to camera zoom.
 - The twin-comparison method uses two thresholds: a high threshold for hard cuts and a lower threshold for gradual transitions.
 
 ## Worked Example
-Detecting a hard cut using color histograms:
-1. For each frame t, compute the color histogram H(t) (e.g., 256 bins per channel).
+Detecting a hard cut using colour histograms:
+1. For each frame t, compute the colour histogram H(t) (e.g., 256 bins per channel).
 2. Compute the difference: D(t) = Σ |H(t)[i] − H(t-1)[i]| for all bins i.
 3. If D(t) > T_high (e.g., threshold = 0.4), mark frame t as a hard cut.
 4. Result: Frames 1–150 = Shot 1, Frame 151 = boundary, Frames 151–300 = Shot 2.

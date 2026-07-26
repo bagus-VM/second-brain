@@ -9,10 +9,10 @@ prerequisites: [programming-basics]
 ---
 
 ## One-line Summary
-Object-oriented programming organizes code around objects — instances of classes that bundle data (fields) and behavior (methods) — structured around four pillars: encapsulation, inheritance, polymorphism, and abstraction.
+Object-oriented programming organizes code around objects — instances of classes that bundle data (fields) and behaviour (methods) — structured around four pillars: encapsulation, inheritance, polymorphism, and abstraction.
 
 ## Core Intuition
-OOP models software the way we model the real world: as interacting objects. A `BankAccount` has a balance (data) and can `deposit()` or `withdraw()` (behavior). The balance is private — you can't reach in and change it directly — you must use the interface. This "black box" thinking is the essence of encapsulation. Objects form hierarchies (a `SavingsAccount` IS-A `BankAccount`) and can be used interchangeably through polymorphism.
+OOP models software the way we model the real world: as interacting objects. A `BankAccount` has a balance (data) and can `deposit()` or `withdraw()` (behaviour). The balance is private — you can't reach in and change it directly — you must use the interface. This "black box" thinking is the essence of encapsulation. Objects form hierarchies (a `SavingsAccount` IS-A `BankAccount`) and can be used interchangeably through polymorphism.
 
 ## Formal Definition / Statement
 **Four Pillars of OOP:**
@@ -87,7 +87,7 @@ System.out.println(s.area()); // calls Circle.area() at runtime
 - **God objects**: Classes that do too much, violating Single Responsibility Principle
 - **Inheritance abuse**: Deep inheritance hierarchies create tight coupling; prefer composition over inheritance
 - **Liskov Substitution violation**: Subclass breaks the contract of the superclass
-- **Anemic domain model**: Classes with only getters/setters and no real behavior — just data bags
+- **Anemic domain model**: Classes with only getters/setters and no real behaviour — just data bags
 - **Over-engineering**: Using OOP patterns where simple functions would suffice
 
 ## Connections

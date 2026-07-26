@@ -31,9 +31,9 @@ The output is the negative scaled integral of the input, plus an initial conditi
 **For a constant input Vin = V:**
 Vout(t) = -(V/RC) · t — a linear ramp (the integral of a constant is a linear function).
 
-## Key Properties
+## Key Properties / Complexity
 
-- Low-pass behavior: gain magnitude |1/(ωRC)| decreases with frequency
+- Low-pass behaviour: gain magnitude |1/(ωRC)| decreases with frequency
 - At DC (ω=0), gain is infinite (capacitor is open circuit → no feedback → OpAmp saturates)
 - Practical fix: add a large resistor Rf in parallel with C to limit DC gain to -Rf/R
 - The output is 90° phase-shifted from the input (integration adds -90°)

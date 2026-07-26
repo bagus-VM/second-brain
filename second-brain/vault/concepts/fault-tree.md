@@ -15,7 +15,7 @@ A fault tree is a structured diagram modelling how system failures can lead to a
 While attack trees ask "how could an attacker succeed?", fault trees ask "how could the system fail?" In IoT, these overlap: a security breach can cause a system failure that leads to a hazard (e.g., a hacked medical device causing patient harm).
 
 ## Formal Definition / Statement
-**Fault Tree:** A structured diagram modeling how system failures can lead to a hazardous state. Used as part of hazard analysis in the Safety required property of IoT development.
+**Fault Tree:** A structured diagram modelling how system failures can lead to a hazardous state. Used as part of hazard analysis in the Safety required property of IoT development.
 
 - **Root node:** The hazardous state (top-level undesired event)
 - **Intermediate nodes:** System failure modes

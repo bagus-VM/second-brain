@@ -53,7 +53,7 @@ External dependencies are the enemy of long-term reproducibility:
 
 Goal: build self-contained, complete environments. Be ready to build even when trapped on an island without internet, or 20 years after all repositories have gone.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Self-contained**: no external downloads required at build time
 - **Documented**: every step is explicit, no tribal knowledge

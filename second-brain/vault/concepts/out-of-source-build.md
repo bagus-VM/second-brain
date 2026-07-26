@@ -46,7 +46,7 @@ The build directory is typically named `build/`, `out/`, `_build/`, `cmake-build
 - **Go**: always out-of-source, `$GOPATH/pkg/` and binary in `bin/`
 - **Python distutils / pip**: not really applicable — Python doesn't compile by default; the equivalent is `python -m build --outdir dist/`
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why out-of-source is the standard
 - **Clean source tree**: `git status` shows only your changes, not the build's litter.

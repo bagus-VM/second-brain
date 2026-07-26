@@ -26,7 +26,7 @@ A Git repository is a content-addressable object store containing four object ty
 
 The commit history forms a DAG: if commit C has parent P, there is a directed edge C → P. The root commit has no parent. A merge commit has two or more parents.
 
-## Key Properties
+## Key Properties / Complexity
 - **Content-addressable**: Objects are identified by the SHA-1 hash of their content. Identical content always produces the same hash.
 - **Immutable**: Once written, objects never change. "Editing" a file creates a new blob; amending a commit creates a new commit object.
 - **Snapshots, not diffs**: Each commit stores a complete snapshot via its tree, not a delta. (Packfiles compress this for storage.)

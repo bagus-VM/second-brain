@@ -25,7 +25,7 @@ Network security encompasses mechanisms that protect networked systems from unau
 **Intrusion Detection/Prevention Systems (IDS/IPS):**
 - **Signature-based**: Match traffic patterns against known attack signatures. Fast but cannot detect zero-day attacks.
 - **Anomaly-based**: Build baseline of normal traffic, alert on deviations. Can detect novel attacks but generates false positives.
-- **IoT-specific**: Detect anomalous device behavior (sensor sending data at unusual rates, device communicating with unexpected endpoints).
+- **IoT-specific**: Detect anomalous device behaviour (sensor sending data at unusual rates, device communicating with unexpected endpoints).
 
 **VPN (Virtual Private Network):**
 - **IPsec**: Network-layer encryption, strong authentication. Common for site-to-site connections.
@@ -48,7 +48,7 @@ Network security encompasses mechanisms that protect networked systems from unau
 
 - **IoT devices cannot run host-based firewalls** — network-level defenses are the primary control
 - **Segmentation is the single most impactful** network security measure for IoT
-- **Anomaly detection for IoT** requires understanding normal device behavior (many devices have very predictable communication patterns)
+- **Anomaly detection for IoT** requires understanding normal device behaviour (many devices have very predictable communication patterns)
 - **VPN overhead** may be too high for constrained devices — use gateway-level VPN instead
 - **Firewall rules must be protocol-aware**: blocking port 1883 entirely breaks MQTT; you need to allow specific topics and clients
 - **NAC/802.1X** is challenging for headless IoT devices without user interfaces for certificate management

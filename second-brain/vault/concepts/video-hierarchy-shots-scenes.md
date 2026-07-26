@@ -12,7 +12,7 @@ prerequisites: [video-frame-rate-resolution]
 Digital video is hierarchically structured from frames (atomic units) through shots (continuous recordings) to scenes (semantically coherent sequences), with increasing levels of semantic interpretation required at each level.
 
 ## Core Intuition
-A video is not just a flat sequence of frames — it has structure. At the lowest level, a **frame** is a single image. A **shot** is a continuous sequence of frames captured without interruption (one camera take). A **scene** is a higher-level grouping of shots that are semantically coherent (e.g., a conversation in a room). Understanding this hierarchy is essential for video databases: you can't meaningfully search or summarize video without decomposing it into these units. The higher the level, the more semantic (subjective) information is needed.
+A video is not just a flat sequence of frames — it has structure. At the lowest level, a **frame** is a single image. A **shot** is a continuous sequence of frames captured without interruption (one camera take). A **scene** is a higher-level grouping of shots that are semantically coherent (e.g., a conversation in a room). Understanding this hierarchy is essential for video databases: you can't meaningfully search or summarise video without decomposing it into these units. The higher the level, the more semantic (subjective) information is needed.
 
 ## Formal Definition / Statement
 - **Frame**: A single image in the video sequence. The atomic unit.
@@ -33,11 +33,11 @@ The higher the level of a video unit, the more semantic information is required.
 - **Static shot**: Camera does not move during the shot.
 - **Dynamic shot**: Camera position changes (zoom, panning, tracking).
 
-## Key Properties
+## Key Properties / Complexity
 - **Shot detection is automatable** (pixel comparison, histogram comparison, edge detection, macroblock analysis).
 - **Scene detection is much harder** — requires understanding narrative context, not just visual changes.
 - **Screenplay**: The written description of all scenes, dialogs, and camera setups — the "blueprint" of a video's structure.
-- **Key frame**: A representative frame selected from a shot/scene to summarize its content (used for video thumbnails, storyboards).
+- **Key frame**: A representative frame selected from a shot/scene to summarise its content (used for video thumbnails, storyboards).
 
 ## Worked Example
 Consider a 2-minute scene from a movie:

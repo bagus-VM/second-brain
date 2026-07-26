@@ -20,10 +20,10 @@ Think of a container like a shipping box and the codec like the way the contents
 - A container can hold streams encoded with *different* codecs (e.g., an MKV file might contain H.265 video + AAC audio + SRT subtitles).
 - Some formats blur the line (e.g., MPEG can refer to both the container and the codec family).
 
-## Key Properties
+## Key Properties / Complexity
 - **Container responsibilities**: multiplexing streams, storing metadata (duration, chapters), enabling seeking/random access, supporting subtitles and multiple audio tracks.
 - **Codec responsibilities**: reducing file size through compression (lossy or lossless), encoding/decoding the actual pixel and audio data.
-- **WebM**: Open standard by Google (BSD license). Uses VP8 video codec + Vorbis audio codec. Available as a free codec for the HTML5 `<video>` tag.
+- **WebM**: Open standard by Google (BSD licence). Uses VP8 video codec + Vorbis audio codec. Available as a free codec for the HTML5 `<video>` tag.
 - **Common container-codec pairings**:
   - MP4 container + H.264 video + AAC audio (most common on the web)
   - MKV container + H.265 video + AAC/FLAC audio (flexible, open)

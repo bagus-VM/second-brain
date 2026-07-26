@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-==Dodds, Muhamad & Watts (2003)== replicated Milgram's experiment using email across 166 countries, confirming short paths exist but ==revealing that motivation — not topology — is the primary bottleneck (1.6% completion rate).==
+**Dodds, Muhamad & Watts (2003)** replicated Milgram's experiment using email across 166 countries, confirming short paths exist but **revealing that motivation — not topology — is the primary bottleneck (1.6% completion rate).**
 
 ## Core Intuition
 Milgram's 1967 experiment was limited: US-only, postal mail, small sample. Dodds et al. (2003) ran a global version using email — no geographic constraints, 60,000 participants, 18 targets in 13 countries.
@@ -32,7 +32,7 @@ The results confirmed Milgram: completed chains had median length 4–7 steps, c
 2. Most chains die early — the bottleneck is motivation, not topology
 3. Successful chains use geography and profession as search dimensions — consistent with [[kleinberg-decentralized-search|Kleinberg's model]] where search exploits multiple distance dimensions
 
-## Key Properties
+## Key Properties / Complexity
 - Confirmed the [[small-world-property]] at global scale
 - Revealed the **navigational gap**: short paths exist but are rarely found in practice
 - Forwarders who brought the letter closer in geographic or professional distance were more effective

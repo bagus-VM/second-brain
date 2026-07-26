@@ -160,5 +160,5 @@ This is the cheapest TRNG possible: every microcontroller has SRAM, and the powe
 
 ## Open Questions
 - The lecture lists seven memory-based TRNG constructions. Are all seven equally practical, or is one dominant in commercial IoT?
-- How do you certify the entropy of a TRNG? (NIST SP 800-90B process, statistical tests, modeling the physical source.)
+- How do you certify the entropy of a TRNG? (NIST SP 800-90B process, statistical tests, modelling the physical source.)
 - For an IoT device with no dedicated hardware TRNG, can a memory-based PUF (PUFMem) be certified for cryptographic use?

@@ -83,5 +83,5 @@ Silicon at 300K, intrinsic carrier concentration n_i = 1.5 × 10¹⁰ cm⁻³:
 
 ## Open Questions
 - How does hole velocity saturation differ from electron velocity saturation at high fields?
-- What is the role of heavy holes vs light holes (split valence bands) in realistic semiconductor modeling?
+- What is the role of heavy holes vs light holes (split valence bands) in realistic semiconductor modelling?
 - How does the hole concept extend to direct vs indirect bandgap semiconductors?

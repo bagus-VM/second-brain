@@ -35,7 +35,7 @@ MPEG-7 — "Multimedia Content Description Interface" — is an ISO/IEC standard
 11. Profile Schemas
 12. Query Format
 
-## Key Properties
+## Key Properties / Complexity
 - **DDL (Description Definition Language)**: Based on XML-Schema with MPEG-7 specific extensions (array/matrix types, temporal types like timePoint)
 - **Description Tools**: Descriptors (syntax & semantics of single metadata pieces) + Description Schemes (structures combining multiple descriptors)
 - **Three description pillars**: Visual, Audio, Multimedia Description Schemes
@@ -68,7 +68,7 @@ Describing a video with MPEG-7:
   </Description>
 </Mpeg7>
 ```
-This describes a 1m30s soccer video with its title and color features.
+This describes a 1m30s soccer video with its title and colour features.
 
 ## Common Pitfalls
 - Confusing MPEG-7 with video compression standards (MPEG-1/2/4) — MPEG-7 describes content, not encodes it
@@ -78,7 +78,7 @@ This describes a 1m30s soccer video with its title and color features.
 
 ## Connections
 - [[mpeg-7-indexing-pyramid]] — the 10-level pyramid organizes MPEG-7 descriptors from syntactic to semantic
-- [[mpeg-7-descriptors]] — specific low-level descriptors (color, texture, shape, motion)
+- [[mpeg-7-descriptors]] — specific low-level descriptors (colour, texture, shape, motion)
 - [[mpeg-7-structural-description]] — how MPEG-7 describes the structure of multimedia content
 - [[mpeg-7-semantic-description]] — how MPEG-7 describes meaning
 - [[multimedia-metadata]] — MPEG-7 is the primary standardized metadata format

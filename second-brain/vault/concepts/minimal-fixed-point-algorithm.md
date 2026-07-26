@@ -55,7 +55,7 @@ Key properties:
 - The condition `trans_n(analysis[n]) ⊐ analysis[n']` checks whether anything actually changed
 - The update `analysis[n'] := analysis[n'] ⊔ trans_n(analysis[n])` performs the join
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Termination guarantee
 - The lattice is finite-height (h(L) < ∞)

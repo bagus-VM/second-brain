@@ -27,7 +27,7 @@ Denial of Service (DoS) attacks against IoT:
 **Against IoT Infrastructure:**
 - **Amplification attacks**: Use IoT devices to amplify traffic (e.g., CoAP amplification: small request → large response)
 - **Botnet DDoS**: Compromised IoT devices coordinated to flood a target (Mirai generated 1.2 Tbps)
-- **DNS tunneling abuse**: Use IoT devices as DNS relay for DDoS amplification
+- **DNS tunnelling abuse**: Use IoT devices as DNS relay for DDoS amplification
 - **API flooding**: Overwhelm the cloud backend with requests from thousands of devices
 
 **Against IoT Ecosystem:**
@@ -44,7 +44,7 @@ Denial of Service (DoS) attacks against IoT:
 - DoS on safety-critical IoT (medical, industrial) can cause physical harm
 
 ## Worked Example
-DoS attack and defense for an IoT fleet:
+DoS attack and defence for an IoT fleet:
 
 **Attack**: Attacker targets a smart building's HVAC control system
 1. Scan: Find 200 HVAC controllers on the building's Wi-Fi network
@@ -54,7 +54,7 @@ DoS attack and defense for an IoT fleet:
 5. Building management system loses visibility into HVAC status
 6. Temperature rises to dangerous levels server room
 
-**Defense:**
+**Defence:**
 1. **Rate limiting**: Each controller accepts max 10 requests/second per source IP
 2. **Network segmentation**: HVAC controllers on isolated VLAN, accessible only from management subnet
 3. **CoAP rate limiting**: Response size limited to prevent amplification
@@ -63,11 +63,11 @@ DoS attack and defense for an IoT fleet:
 6. **Graceful degradation**: Controllers continue local operation even when network is saturated
 
 ## Common Pitfalls
-- **DoS is easy, defense is hard**: DoS attacks require minimal sophistication; defending against them is complex
+- **DoS is easy, defence is hard**: DoS attacks require minimal sophistication; defending against them is complex
 - **DDoS from IoT is growing**: As more insecure IoT devices are deployed, botnet capacity grows
 - **False positives**: Rate limiting can block legitimate traffic during peak usage
-- **Physical layer jamming**: No software defense against RF jamming — requires physical security
-- **Cost of defense**: DDoS mitigation services are expensive for small IoT vendors
+- **Physical layer jamming**: No software defence against RF jamming — requires physical security
+- **Cost of defence**: DDoS mitigation services are expensive for small IoT vendors
 - **Cascading failures**: DoS on one component can cascade through interconnected systems
 
 ## Connections

@@ -24,7 +24,7 @@ In undirected graphs, "connected" is straightforward. But in directed graphs, A 
   - **OUT**: pages reachable from the SCC but unable to link back
   - **Tendrils/tubes**: side regions attached to IN or OUT
 
-## Key Properties
+## Key Properties / Complexity
 - Every strongly connected graph is also weakly connected, but not vice versa
 - Strongly connected components partition the node set (like undirected components)
 - The SCC is often much smaller than the weakly connected component

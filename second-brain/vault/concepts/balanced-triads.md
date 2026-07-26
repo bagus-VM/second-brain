@@ -33,7 +33,7 @@ For a signed triangle (three nodes A, B, C with signs σ(A,B), σ(B,C), σ(A,C))
 
 **Balance test (general graph)**: see [[cycle-criterion]] — every cycle must have an even number of negative edges.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The four patterns
 - **(+ ,+, +) "all friends"**: trivially balanced. No conflict. The "ideal" state.

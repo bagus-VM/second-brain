@@ -30,11 +30,11 @@ The key insight: at $r = d$, each "ring" of nodes at distance $2^i$ from the tar
 
 The exponent $r = d$ is **unique** — it is the only value at which decentralized search is polylogarithmic. Any fixed positive power $n^c$ eventually grows faster than $\log^2 n$, even if $c$ is small.
 
-**Setup:** Each node has local grid neighbors + one long-range link drawn with $P(\text{link to } u) \propto d(v, u)^{-r}$.
+**Setup:** Each node has local grid neighbours + one long-range link drawn with $P(\text{link to } u) \propto d(v, u)^{-r}$.
 
-==**Greedy routing:** At each step, forward to the neighbor (local or long-range) closest to the target in grid distance.==
+****Greedy routing:** At each step, forward to the neighbour (local or long-range) closest to the target in grid distance.**
 
-## Key Properties
+## Key Properties / Complexity
 - $r = d$ is the **navigability sweet spot**: links exist at every distance scale, giving the algorithm a "ladder" to descend
 - At $r = 0$ (uniform): short paths exist but search is $\Omega(n^{2/3})$ — the algorithm can't find them
 - At $r \gg d$ (too clustered): short paths exist but "shortcuts" are too local to help
@@ -48,7 +48,7 @@ The exponent $r = d$ is **unique** — it is the only value at which decentraliz
 | ------------ | ------------ | ------------------ | ---------------------------------------------- |
 | $r = 0$      | Yes          | $\Omega(n^{2/3})$  | Random links provide no gradient toward target |
 | $r = 2$      | Yes          | $O(\log^2 n)$      | Links at every scale → hierarchical descent    |
-| $r \gg 2$    | Yes          | $\Omega(n^c)$      | =="Shortcuts" are effectively local==          |
+| $r \gg 2$    | Yes          | $\Omega(n^c)$      | **"Shortcuts" are effectively local**          |
 
 The simulation shows a sharp minimum at $r = 2$: delivery time drops from polynomial to polylogarithmic and back up again.
 
@@ -56,7 +56,7 @@ The simulation shows a sharp minimum at $r = 2$: delivery time drops from polyno
 - **"Watts-Strogatz explains Milgram"** — W-S gives short paths but NOT navigable short paths. Uniform rewiring ($r = 0$) doesn't support greedy search. Milgram's participants actually found short paths, which requires $r = d$.
 - **$r = d$ is just a nice number** — It's a unique, provably optimal exponent. Any deviation (even small) causes polynomial slowdown.
 - **This requires a grid** — The grid is a toy model, but the principle (mix short-range and long-range links at every scale) generalizes. HNSW indexing in vector search uses the same multi-scale idea.
-- **Decentralized search = BFS** — No, greedy routing at each step picks the neighbor closest to the target. It has no memory of the full frontier.
+- **Decentralized search = BFS** — No, greedy routing at each step picks the neighbour closest to the target. It has no memory of the full frontier.
 
 ## Connections
 - [[watts-strogatz-model]] — Provides existence of short paths; Kleinberg provides findability

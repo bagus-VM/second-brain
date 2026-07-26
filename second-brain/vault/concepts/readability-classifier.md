@@ -29,10 +29,10 @@ This is the standard supervised learning pattern. Nothing exotic. The interestin
 
 ### 1. Number of Lines (LOC)
 
-**What it measures:** Raw size of the code snippet.
+**What it measures:** ==Raw size of the code snippet==.
 
 **Why it matters for readability:**
-- Longer code = more cognitive load (working memory is limited to ~7 chunks)
+- Longer code = ==more cognitive load== (working memory is limited to ~7 chunks)
 - Longer methods are harder to understand than shorter ones
 - But it's a crude proxy — 100 lines of simple code may be more readable than 10 lines of dense code
 
@@ -44,7 +44,7 @@ This is the standard supervised learning pattern. Nothing exotic. The interestin
 
 ### 2. Token Entropy (Shannon Entropy of Token Distribution)
 
-**What it measures:** How diverse/uniform the vocabulary of the code is.
+**What it measures:** ==How diverse/uniform the vocabulary of the code is==.
 
 **Formula:**
 ```
@@ -85,7 +85,7 @@ Tokens: `int`, `x`, `=`, `1`, `;`, `int`, `y`, `=`, `2`, `;`, `int`, `z`, `=`, `
 
 ### 3. Halstead Volume
 
-**What it measures:** A 1970s-era software complexity metric that combines code length with vocabulary size.
+**What it measures:** A 1970s-era software complexity metric that ==combines code length with vocabulary size==.
 
 **Background:** Maurice Halstead proposed four base measures:
 - **η₁** (eta-1): number of *unique* operators
@@ -94,9 +94,9 @@ Tokens: `int`, `x`, `=`, `1`, `;`, `int`, `y`, `=`, `2`, `;`, `int`, `z`, `=`, `
 - **N₂**: total number of operands
 
 **Derived measures:**
-- **Vocabulary:** η = η₁ + η₂
-- **Length:** N = N₁ + N₂
-- **Volume:** V = N × log₂(η)
+- ==**Vocabulary:** η = η₁ + η₂==
+- ==**Length:** N = N₁ + N₂==
+- ==**Volume:** V = N × log₂(η)==
 
 **Intuition:** Volume balances how MUCH code there is (N) against how DIVERSE its vocabulary is (η). A program that's long but uses few unique symbols has low volume. A program that's short but uses many unique symbols has high volume.
 
@@ -126,7 +126,7 @@ int result = a + b;
 
 ### 4. Cyclomatic Complexity (McCabe's)
 
-**What it measures:** The number of independent paths through the code's control flow graph.
+**What it measures:** ==The number of independent paths through the code's control flow graph==.
 
 **Formula:** M = E - N + 2P
 - E = edges in control flow graph

@@ -34,7 +34,7 @@ $$PC(\pi) = \bigwedge_{i=1}^{k} \begin{cases} c_i & \text{if } b_i \text{ takes 
 
 A satisfying assignment $\sigma \models PC(\pi)$ gives concrete values for the program's inputs that force execution along $\pi$.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Path explosion** — programs with loops or nested conditionals have exponentially many paths, making exhaustive exploration infeasible
 - **Constraint complexity** — some path conditions involve non-linear arithmetic, floating-point operations, or string manipulations that are undecidable or expensive for solvers

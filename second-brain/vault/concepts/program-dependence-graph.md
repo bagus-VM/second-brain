@@ -52,7 +52,7 @@ Intuitively: "If I change the outcome of the branch at `s₁`, does `s₂` somet
 - **Backward slice** of `v` at `s`: all nodes from which there is a path to the use of `v` at `s`
 - **Forward slice** of `v` at `s`: all nodes reachable from the definition of `v` at `s`
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|

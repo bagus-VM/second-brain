@@ -31,7 +31,7 @@ For node u in partition A and node v in partition B:
 
 **Limitation:** converges to a local optimum; different initial partitions yield different results.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Local search**: iteratively improves a candidate solution
 2. **Balanced partition**: maintains equal-sized partitions
 3. **Fast in practice**: O(n²) per pass is manageable for moderate graphs

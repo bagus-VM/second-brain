@@ -32,7 +32,7 @@ Where:
 
 **Join operator**: ∪ (union) — variable is live if live on *any* path
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Direction**: Backward (data flows from successors to predecessors)
 - **Kind**: May (union at join points)

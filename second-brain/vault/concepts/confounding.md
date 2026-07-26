@@ -38,7 +38,7 @@ To identify the *causal effect* of A on B (selection vs. socialisation), block a
 
 In practice: measure C, condition on it (stratify or regress), and the residual A–B correlation is the *direct* causal effect.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why it's hard
 - **Unobserved confounders**: in a real network, the true confounder set is rarely fully known. Proximity, shared history, shared genetics, shared unmeasured preferences — all are potential confounders.

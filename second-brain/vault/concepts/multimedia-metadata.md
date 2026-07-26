@@ -17,7 +17,7 @@ Raw multimedia data (pixels, audio samples) is meaningless to a system without c
 ## Formal Definition / Statement
 Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource (NISO, 2004).
 
-==Multimedia metadata formats support the description of multimedia data in terms of: what the content is, who created it, how it can be processed==, etc. (W3C, 2007).
+**Multimedia metadata formats support the description of multimedia data in terms of: what the content is, who created it, how it can be processed**, etc. (W3C, 2007).
 
 **Categories of multimedia metadata:**
 1. **Content description** — general description, keywords, summaries
@@ -25,9 +25,9 @@ Metadata is structured information that describes, explains, locates, or otherwi
 3. **Structural** — content segmentation
 4. **Legal** — copyright, usage rights
 5. **Technical** — file format, codec, encryption, resolution
-6. **Low-level features** — color histogram, texture characterization
+6. **Low-level features** — colour histogram, texture characterization
 
-## Key Properties
+## Key Properties / Complexity
 - **Storage**: Extrinsic (independent of primary data, e.g., in a database) vs. Intrinsic (embedded in the data, e.g., EXIF in JPEG)
 - **Interoperability**: Different formats have different expressiveness; integration is complex
 - **Digital preservation**: Metadata must remain readable over long periods (100+ years)
@@ -39,7 +39,7 @@ Metadata is structured information that describes, explains, locates, or otherwi
 A JPEG photograph might carry:
 - **Intrinsic metadata (EXIF)**: camera model, shutter speed, GPS coordinates, date/time
 - **Extrinsic metadata (database)**: photographer name, copyright, keywords ("sunset", "beach"), usage rights
-- **Low-level features**: color histogram, dominant colors
+- **Low-level features**: colour histogram, dominant colours
 - **Structural metadata**: this image is part of a collection/album
 
 ## Common Pitfalls

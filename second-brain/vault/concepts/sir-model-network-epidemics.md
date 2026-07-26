@@ -9,10 +9,10 @@ prerequisites: []
 ---
 
 ## One-line Summary
-The SIR model partitions nodes into Susceptible, Infected, and Recovered states, modeling disease spread on networks with epidemic threshold R₀ = (β/γ) × ⟨k⟩.
+The SIR model partitions nodes into Susceptible, Infected, and Recovered states, modelling disease spread on networks with epidemic threshold R₀ = (β/γ) × ⟨k⟩.
 
 ## Core Intuition
-Each node is in one of three compartments. Infected nodes transmit the disease to susceptible neighbors with probability β per time step, and recover (gaining immunity) with probability γ per time step. Whether the disease becomes an epidemic depends on the balance between transmission rate and recovery rate, amplified by network connectivity (average degree).
+Each node is in one of three compartments. Infected nodes transmit the disease to susceptible neighbours with probability β per time step, and recover (gaining immunity) with probability γ per time step. Whether the disease becomes an epidemic depends on the balance between transmission rate and recovery rate, amplified by network connectivity (average degree).
 
 ## Formal Definition / Statement
 **SIR model on a network:**
@@ -31,7 +31,7 @@ where T is transmissibility across an edge. If T > T_c, a macroscopic outbreak i
 
 **Scale-free result (Pastor-Satorras & Vespignani, 2001):** In idealized infinite scale-free networks with P(k) ∝ k^(-γ) and γ ≤ 3, ⟨k²⟩ diverges, so T_c → 0 — no finite epidemic threshold.
 
-## Key Properties
+## Key Properties / Complexity
 1. Three-state compartmental model (S → I → R)
 2. R₀ > 1 is the epidemic threshold — depends on both β/γ ratio and ⟨k⟩
 3. Hubs are superspreaders — they create disproportionately many transmission opportunities

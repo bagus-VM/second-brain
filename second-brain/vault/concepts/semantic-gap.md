@@ -12,16 +12,16 @@ prerequisites: []
 The semantic gap is the disconnect between low-level features extractable from multimedia data and the high-level meaning a human associates with that data.
 
 ## Core Intuition
-A computer can compute that an image has 40% blue pixels and rough textures, but a human sees "a stormy ocean." The semantic gap is the chasm between pixels/bytes and meaning. Low-level features (color histogram, texture, motion, shape) live on one side; high-level knowledge (keywords, descriptions, classification, ontologies) lives on the other. Bridging this gap is the central problem of multimedia retrieval.
+A computer can compute that an image has 40% blue pixels and rough textures, but a human sees "a stormy ocean." The semantic gap is the chasm between pixels/bytes and meaning. Low-level features (colour histogram, texture, motion, shape) live on one side; high-level knowledge (keywords, descriptions, classification, ontologies) lives on the other. Bridging this gap is the central problem of multimedia retrieval.
 
 ## Formal Definition / Statement
 "The semantic gap is the lack of coincidence between the information that one can extract from the visual data and the interpretation that the same data have for a user in a given situation." — Smeulders et al. (2000)
 
 The gap exists between two levels:
-- **Low-level features**: ==size, resolution, color, texture, motion, shape==
-- **High-level features**: ==keywords, description, classification, ontologies==
+- **Low-level features**: **size, resolution, colour, texture, motion, shape**
+- **High-level features**: **keywords, description, classification, ontologies**
 
-## Key Properties
+## Key Properties / Complexity
 - Fundamental challenge in content-based image/video retrieval
 - Cannot be fully solved by feature engineering alone
 - Approaches to bridge it: machine learning, [[relevance-feedback]], ontologies, annotation
@@ -29,7 +29,7 @@ The gap exists between two levels:
 - Context-dependent: the same low-level features may have different meanings in different contexts
 
 ## Worked Example
-Two images with nearly identical color histograms:
+Two images with nearly identical colour histograms:
 1. A sunset over the ocean
 2. A forest fire at dusk
 

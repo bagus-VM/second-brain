@@ -25,7 +25,7 @@ For a community of size s in a graph with m edges:
 
 **Example:** in a graph with m = 10,000 edges, communities smaller than √20,000 ≈ 141 nodes may be invisible.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Scale-dependent**: the resolution limit depends on the total number of edges
 2. **Small communities are invisible**: below a threshold, communities cannot be detected
 3. **Merging effect**: modularity may merge small communities to increase Q

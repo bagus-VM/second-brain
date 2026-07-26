@@ -44,7 +44,7 @@ At reverse bias VR = 5V: W increases to ≈ √(5.697/0.697) × 0.43 ≈ 1.23 μ
 
 ## Connections
 - [[p-n-junction]] — the depletion region forms at the junction
-- [[diode]] — device behavior depends on depletion region width
+- [[diode]] — device behaviour depends on depletion region width
 - [[zener-breakdown]] — occurs when electric field in depletion region is very high
 - [[avalanche-breakdown]] — carrier multiplication in depletion region
 - [[mosfet]] — depletion region forms under the gate in some operating modes

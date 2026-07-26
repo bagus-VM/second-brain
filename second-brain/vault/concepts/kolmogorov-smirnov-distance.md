@@ -36,7 +36,7 @@ Properties:
 
 The KS distance is also the basis of the **Kolmogorov-Smirnov test**, a statistical test for whether two samples come from the same distribution.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why KS is useful
 - **Captures worst-case cumulative difference**: robust to a few outlier bins

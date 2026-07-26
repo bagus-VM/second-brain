@@ -8,7 +8,7 @@ last_updated: 2026-06-22
 prerequisites: []
 ---
 ## One-line Summary
-*An epidemic model with temporary immunity: Susceptible → Infected → Recovered → Susceptible, modeling diseases where immunity wanes over time.*
+*An epidemic model with temporary immunity: Susceptible → Infected → Recovered → Susceptible, modelling diseases where immunity wanes over time.*
 
 ## Core Intuition
 SIR assumes permanent immunity, SIS assumes no immunity. Reality is usually in between — you recover from the flu, have immunity for months, then become susceptible again. SIRS models this waning immunity. It creates oscillatory dynamics: an epidemic sweeps through, most people become immune, the disease dies down, immunity wanes, and the cycle repeats. This is why we have flu seasons.
@@ -38,7 +38,7 @@ The SIRS model extends SIR with waning immunity:
 
 **On networks:**
 - Heterogeneous mean-field: degree-dependent equations
-- Oscillatory behavior: epidemic waves with period ~ 1/δ
+- Oscillatory behaviour: epidemic waves with period ~ 1/δ
 - Network structure affects amplitude and frequency of oscillations
 
 **Key parameter: 1/δ = average immunity duration**
@@ -55,7 +55,7 @@ The SIRS model extends SIR with waning immunity:
 - More realistic than SIR/SIS for many real diseases
 
 ## Worked Example
-Modeling influenza in a city (population 1M, contact network):
+Modelling influenza in a city (population 1M, contact network):
 1. Parameters: β = 0.05/day, γ = 1/5 (5-day illness), δ = 1/180 (6-month immunity)
 2. R₀ = β⟨k⟩/γ = 0.05 × 15 / 0.2 = 3.75
 3. Simulate on the contact network:
@@ -72,15 +72,15 @@ Modeling influenza in a city (population 1M, contact network):
 - **Strain diversity**: Real diseases have multiple strains; SIRS models a single strain
 - **Network evolution**: Contact patterns change seasonally (school terms, holidays)
 - **Age structure**: Immunity duration varies by age; homogeneous δ is a simplification
-- **Behavioral response**: People change behavior during outbreaks, affecting β dynamically
+- **Behavioral response**: People change behaviour during outbreaks, affecting β dynamically
 
 ## Connections
 - [[network-diffusion]] — General framework for epidemic dynamics
 - [[sis-model]] — Limiting case as δ → ∞ (no immunity)
 - [[basic-reproduction-number-r0]] — R₀ determines epidemic potential
 - [[community-structure]] — Communities create localized waves before global spread
-- [[scale-free-epidemic-threshold-vanishes]] — Threshold behavior in heterogeneous networks
-- [[signed-networks]] — Signed network dynamics have analogous oscillatory behavior
+- [[scale-free-epidemic-threshold-vanishes]] — Threshold behaviour in heterogeneous networks
+- [[signed-networks]] — Signed network dynamics have analogous oscillatory behaviour
 
 ## Open Questions
 - How does this concept apply in practice with real-world constraints?

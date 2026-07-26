@@ -15,7 +15,7 @@ The sensory gap is the fundamental gap between a real-world object and the infor
 When a camera captures a scene, it collapses 3D reality into 2D pixels, losing depth, occlusion, and lighting information. Two completely different objects (a red ball, a red sun) can produce identical recordings. Without knowledge of recording conditions, even human interpretation can be wrong — e.g., counting how many arms a person has in a photograph with occlusion.
 
 ## Formal Definition / Statement
-"==The sensory gap is the gap between the object in the world and the information in a description derived from a recording of that scene==" — Smeulders et al. (2000).
+"**The sensory gap is the gap between the object in the world and the information in a description derived from a recording of that scene**" — Smeulders et al. (2000).
 
 Key aspects:
 - Uncertainty about the status of objects in a scene
@@ -23,8 +23,8 @@ Key aspects:
 - 2D recordings of different 3D objects can be identical
 - Human interpretation may be wrong due to missing information
 
-## Key Properties
-- ==Arises from physical limitations of sensors== (cameras, microphones)
+## Key Properties / Complexity
+- **Arises from physical limitations of sensors** (cameras, microphones)
 - Cannot be fully eliminated — only mitigated with better sensors or multiple viewpoints
 - Different from the [[semantic-gap]] (which is about meaning, not perception)
 - Affects all media types: visual (2D→3D ambiguity), audio (source separation), etc.

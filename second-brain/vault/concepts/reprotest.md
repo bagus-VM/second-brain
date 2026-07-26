@@ -31,7 +31,7 @@ It runs the build command in two different environments:
 
 It compares the two resulting artifacts using `sha256sum` (or similar). If they match: the build is reproducible. If not: the differences are reported.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### What ReproTest can detect
 - **Embedded timestamps**: `__TIME__`, `__DATE__` macros, build-time `date` commands

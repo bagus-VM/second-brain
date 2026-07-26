@@ -27,7 +27,7 @@ A **containerized build** is a build executed inside a container where:
 
 The Dockerfile serves as both the build recipe and the environment specification, making it a single source of truth for both what is built and how.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Image pinning**: Use `FROM ubuntu:22.04@sha256:abc...` for exact reproducibility.
 - **Layered builds**: Each Dockerfile instruction creates a layer that can be cached and verified.

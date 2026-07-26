@@ -17,8 +17,8 @@ Bolt-on security doesn't work for IoT. You can't add a firewall to a device with
 IoT secure design encompasses security considerations at every stage of the development lifecycle:
 
 **Architecture Level:**
-- Minimize attack surface: disable unnecessary services, ports, protocols
-- Defense in depth: multiple security layers (hardware, firmware, network, cloud)
+- Minimise attack surface: disable unnecessary services, ports, protocols
+- Defence in depth: multiple security layers (hardware, firmware, network, cloud)
 - Separation of concerns: isolate security-critical functions from general application logic
 - Zero trust: authenticate and authorize every interaction, even within the device
 
@@ -56,7 +56,7 @@ IoT secure design encompasses security considerations at every stage of the deve
 ## Key Properties / Complexity
 - Secure design adds 10-30% to development cost but reduces incident response costs by orders of magnitude
 - The 'shift left' principle: address security early in design, not late in testing
-- Threat modeling (STRIDE, PASTA) should be the first step
+- Threat modelling (STRIDE, PASTA) should be the first step
 - Security requirements should be in the product requirements document, not an afterthought
 - Regulatory requirements (ETSI EN 303 645, NISTIR 8259) define minimum secure design baselines
 - Trade-offs exist: security vs power consumption, security vs latency, security vs cost

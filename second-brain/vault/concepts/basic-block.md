@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-A basic block is a maximal sequence of statements that must execute consecutively — control enters only at the first statement and exits only at the last, making it the fundamental unit of [[control-flow-graph|control flow analysis]].
+A basic block is a ==maximal sequence of statements that must execute consecutively== — control enters only at the first statement and exits only at the last, making it the fundamental unit of [[control-flow-graph|control flow analysis]].
 
 ## Core Intuition
 
@@ -29,7 +29,7 @@ A **basic block** is a maximal sequence of consecutive statements such that:
 2. Every statement that is the target of a branch (conditional or unconditional)
 3. Every statement that immediately follows a branch or return
 
-## Key Properties
+## Key Properties / Complexity
 
 - Every statement in a program belongs to exactly one basic block
 - Basic blocks partition the [[control-flow-graph|CFG]] into a smaller graph where nodes are blocks and edges represent control flow between blocks

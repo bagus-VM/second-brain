@@ -30,7 +30,7 @@ A Lex/Flex specification has three sections separated by `%%`:
 
 Each rule consists of a **regular expression** and a **C action** (in braces). When the input matches a pattern, the corresponding action executes. The longest match wins; ties broken by rule order.
 
-## Key Properties
+## Key Properties / Complexity
 - Lex generates a **DFA-based scanner** — guaranteed O(n) performance
 - The generated code uses the function `yylex()` which the parser calls when it needs the next token
 - `yytext` contains the matched lexeme; `yyleng` its length

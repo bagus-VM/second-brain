@@ -15,14 +15,14 @@ prerequisites:
 *Semiconductors are materials whose electrical conductivity falls between conductors and insulators, and can be precisely controlled — which is why every chip in the world is made from silicon.*
 
 ## Core Intuition
-Why silicon? Not because it's the best conductor or the cheapest material, but because its bandgap (1.12 eV) is the sweet spot: large enough that thermal noise at room temperature doesn't flood the material with carriers, yet small enough that modest doping or applied voltage can switch conductivity by orders of magnitude. This controllability is what makes transistors possible. Understanding semiconductor physics means understanding why carriers exist, how many there are, and what controls their behavior.
+Why silicon? Not because it's the best conductor or the cheapest material, but because its bandgap (1.12 eV) is the sweet spot: large enough that thermal noise at room temperature doesn't flood the material with carriers, yet small enough that modest doping or applied voltage can switch conductivity by orders of magnitude. This controllability is what makes transistors possible. Understanding semiconductor physics means understanding why carriers exist, how many there are, and what controls their behaviour.
 
 ## Formal Definition / Statement
 A semiconductor is a crystalline material whose electronic band structure features a valence band separated from a conduction band by a bandgap E_g that is neither zero (metal) nor very large (insulator). For silicon at 300K:
 
 - **Bandgap:** E_g = 1.12 eV (indirect bandgap)
 - **Intrinsic carrier concentration:** n_i = 1.5 × 10¹⁰ cm⁻³
-- **Crystal structure:** Diamond cubic, each Si atom covalently bonded to 4 neighbors
+- **Crystal structure:** Diamond cubic, each Si atom covalently bonded to 4 neighbours
 
 **Carrier concentration in intrinsic semiconductors:**
 - n_i² = N_c × N_v × exp(-E_g / kT)

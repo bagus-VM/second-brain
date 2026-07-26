@@ -33,7 +33,7 @@ CREATE TABLE images (
 );
 ```
 - Bounded: you declare a maximum size at type creation. `VARRAY(8)` means at most 8 elements.
-- Ordered: element position is preserved. `palette(1)` is always the first color.
+- Ordered: element position is preserved. `palette(1)` is always the first colour.
 - Index-accessed: access elements by position `palette(i)`.
 - Stored inline (for small sizes) or as a LOB (for larger declared sizes). No separate storage table.
 
@@ -56,7 +56,7 @@ CREATE TABLE images (
 - SQL-queryable: use the `TABLE()` operator to treat the collection as a table and run SQL against it.
 - Stored in a separate storage table (`features_tab`). The parent row holds a pointer to this storage table.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Comparison table
 | Property | VARRAY | Nested Table |
@@ -72,8 +72,8 @@ CREATE TABLE images (
 | Use when | Bounded, ordered, small, no SQL needed | Unbounded, need SQL, need joins |
 
 ### When to use VARRAY
-- You know the maximum size at design time (e.g., MPEG-7 dominant color has at most 8 colors)
-- Order is meaningful (e.g., key frames in video sequence, color palette entries ranked by dominance)
+- You know the maximum size at design time (e.g., MPEG-7 dominant colour has at most 8 colours)
+- Order is meaningful (e.g., key frames in video sequence, colour palette entries ranked by dominance)
 - The collection is small and accessed as a whole (read all, write all)
 - You do not need to query individual elements with SQL
 - You want inline storage for fewer I/O operations on small data
@@ -88,9 +88,9 @@ CREATE TABLE images (
 
 ## Worked Example
 
-Scenario: modeling an image database with MPEG-7 descriptors.
+Scenario: modelling an image database with MPEG-7 descriptors.
 
-**VARRAY for dominant colors** (at most 8, order matters by dominance):
+**VARRAY for dominant colours** (at most 8, order matters by dominance):
 ```sql
 CREATE TYPE DominantColor AS OBJECT (
     color_value VARCHAR(20),
@@ -106,7 +106,7 @@ CREATE TABLE images (
     dominant_colors DominantColorList
 );
 ```
-Why VARRAY: MPEG-7 DCD has at most N dominant colors. The order reflects dominance ranking. You always read the whole palette at once. No need to SQL-query individual colors.
+Why VARRAY: MPEG-7 DCD has at most N dominant colours. The order reflects dominance ranking. You always read the whole palette at once. No need to SQL-query individual colours.
 
 **Nested table for annotations** (unbounded, need SQL, need joins):
 ```sql
@@ -135,7 +135,7 @@ WHERE a.author = 'professor';
 
 ## Common Pitfalls
 - **Using VARRAY when you need SQL access**: VARRAYs cannot be queried with `TABLE()` directly in standard SQL. If you later need to filter or join on collection elements, you are stuck. Choose nested table if there is any chance you will need SQL access.
-- **Using nested table when the collection is tiny and fixed-size**: the separate storage table adds I/O overhead. For a fixed 8-element color palette, VARRAY inline storage is faster.
+- **Using nested table when the collection is tiny and fixed-size**: the separate storage table adds I/O overhead. For a fixed 8-element colour palette, VARRAY inline storage is faster.
 - **Forgetting the STORE AS clause**: nested table columns require `NESTED TABLE ... STORE AS <storage_tab>`. Without it, Oracle rejects the DDL.
 - **Assuming nested table order is stable**: nested tables are unordered. If you insert elements and then read them back, the order is not guaranteed. If order matters, use VARRAY or add a sequence column.
 - **Confusing VARRAY bound with actual size**: `VARRAY(100)` declares a maximum of 100. You can store 0 to 100 elements. The bound is a ceiling, not a fixed length.
@@ -145,7 +145,7 @@ WHERE a.author = 'professor';
 [[object-relational-databases]] — VARRAYs and nested tables are Oracle's two collection types for ORDBMS columns.
 [[sql-mm]] — SQL/MM Part 5 Still Image uses UDTs whose feature lists could be modeled as either collection type.
 [[multimedia-query-languages]] — whether a collection is queryable (nested table) affects what query expressions are possible.
-[[dominant-color]] — MPEG-7 DCD's bounded color list is a textbook VARRAY use case.
+[[dominant-color]] — MPEG-7 DCD's bounded colour list is a textbook VARRAY use case.
 [[mpqf]] — MPQF query conditions may need to join on feature values, favoring nested tables' SQL-queryable property
 - [[multimedia-databases-lecture-08]] — Source lecture: Query Languages (MMQL, SQL/MM, MPQF, OR extensions; this is the implementation detail)
 

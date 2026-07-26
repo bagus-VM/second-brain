@@ -22,18 +22,18 @@ H = -Σ pᵢ × log₂(pᵢ)    (bits per symbol)
 
 Shannon's source coding theorem: no uniquely decodable code can have average length less than H. Entropy coding methods aim to approach this bound.
 
-==**Huffman Coding**:==
-1. ==Sort symbols by frequency==
-2. ==Build a binary tree bottom-up: repeatedly merge the two least-frequent nodes==
-3. ==Assign 0/1 to left/right branches==
+****Huffman Coding**:**
+1. **Sort symbols by frequency**
+2. **Build a binary tree bottom-up: repeatedly merge the two least-frequent nodes**
+3. **Assign 0/1 to left/right branches**
 4. ==Code for each symbol = path from root to leaf==
 
-==**Arithmetic Coding**:==
-- ==Represents the entire message as a single floating-point number in [0, 1)==
-- ==Successively narrows the interval based on symbol probabilities==
-- ==More efficient than Huffman for short messages and can achieve fractional bit lengths==
+****Arithmetic Coding**:**
+- **Represents the entire message as a single floating-point number in [0, 1)**
+- **Successively narrows the interval based on symbol probabilities**
+- **More efficient than Huffman for short messages and can achieve fractional bit lengths**
 
-## Key Properties
+## Key Properties / Complexity
 - **Huffman coding** is optimal among prefix-free codes (no codeword is a prefix of another)
 - **Prefix-free property** ensures unique decodability without explicit separators
 - **Static Huffman**: two passes — first to count frequencies, second to encode. Requires storing the code tree with the data (overhead, negligible for large data, or use standard codebook like JPEG)
@@ -70,7 +70,7 @@ Encoded: AABAACDAAEABACD → 0|0|100|0|0|101|0|0|111|0|100|0|101|110 = 29 bits
 - Confusing Huffman (optimal prefix-free codes) with arithmetic coding (optimal sequential codes) — arithmetic can be better for small alphabets or skewed distributions
 - Forgetting that the code tree/codebook must be stored or agreed upon — constant overhead
 - Assuming Huffman coding works well on random data — it doesn't (no redundancy to exploit)
-- Not recognizing that Huffman requires two passes (static version), making it unsuitable for streaming without adaptation
+- Not recognising that Huffman requires two passes (static version), making it unsuitable for streaming without adaptation
 - Thinking entropy coding alone is sufficient for multimedia compression — it's always combined with source coding (transform, prediction, motion compensation)
 
 ## Connections

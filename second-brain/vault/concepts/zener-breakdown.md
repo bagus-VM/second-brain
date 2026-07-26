@@ -27,7 +27,7 @@ Zener breakdown occurs in heavily doped p-n junctions when the reverse voltage r
 
 ## Key Properties / Complexity
 - Dominant at low breakdown voltages (< 5V)
-- Based on quantum tunnelling (not impact ionization)
+- Based on quantum tunnelling (not impact ionisation)
 - Requires heavy doping → thin depletion region → high electric field
 - Negative temperature coefficient (VZ decreases with temperature)
 - Very fast response (tunnelling is nearly instantaneous)
@@ -41,8 +41,8 @@ Zener breakdown occurs in heavily doped p-n junctions when the reverse voltage r
 - [[depletion-region]] — must be thin for Zener breakdown
 - [[avalanche-breakdown]] — the other breakdown mechanism
 - [[bandgap]] — electrons tunnel across the bandgap
-- [[valence-band]] — source of tunneling electrons
-- [[conduction-band]] — destination of tunneling electrons
+- [[valence-band]] — source of tunnelling electrons
+- [[conduction-band]] — destination of tunnelling electrons
 
 ## Open Questions
 - How does the transition between Zener and avalanche breakdown occur around 5V?

@@ -36,7 +36,7 @@ Where kp' = μpCox (process transconductance parameter for holes).
 - Must have VGS < VTH (negative) to turn on
 - Typically ~2–3× slower than nMOS for the same dimensions (due to lower hole mobility)
 - Body effect: |VTH| increases when |VSB| > 0
-- Passes a strong "1" but weak "0" (complementary to nMOS behavior)
+- Passes a strong "1" but weak "0" (complementary to nMOS behaviour)
 - Speed depends on W/L ratio and oxide thickness — pMOS devices are often sized wider (2–3×) to match nMOS speed in CMOS designs
 
 ## Worked Example
@@ -57,7 +57,7 @@ pMOS with kp' = 40 μA/V², W/L = 10, VTH = -0.7V, λ = 0 (all quantities in abs
 - [[threshold-voltage]] determines the ON/OFF switching point (negative for pMOS).
 - Uses [[p-type-semiconductor]] for source/drain regions.
 - Combined with [[nmos-transistor]] to form CMOS logic.
-- Operating behavior described by [[mosfet-operating-regions]].
+- Operating behaviour described by [[mosfet-operating-regions]].
 
 ## Open Questions
 - How does the body effect differ between pMOS and nMOS in practice?

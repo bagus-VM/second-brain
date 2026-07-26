@@ -24,7 +24,7 @@ A result is statistically significant when the p-value falls below a pre-defined
 - **Type II error (false negative):** Failing to reject H₀ when it is false. Probability = β.
 - **Power = 1 - β:** Probability of correctly rejecting a false H₀.
 
-## Key Properties
+## Key Properties / Complexity
 - α is chosen *before* the experiment, not after seeing the data.
 - Common values: α = 0.05 (5%), α = 0.01 (1%), α = 0.001 (0.1%).
 - Multiple testing: if you run 20 tests at α = 0.05, you expect ~1 false positive by chance.

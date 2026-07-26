@@ -46,7 +46,7 @@ The IoT data lifecycle consists of five stages, each with distinct security conc
 - **Data minimization** is the strongest security principle: data you do not collect cannot be stolen
 - **Edge processing** reduces transmission exposure but increases device-side attack surface
 - **Data aggregation** at gateways creates high-value targets (concentrated data)
-- **Sensor data can be PII**: accelerometer data reveals keystrokes, smart meter data reveals occupancy patterns, GPS reveals movements
+- **Sensor data can be PII**: accelerometer data reveals keystrokes, smart metre data reveals occupancy patterns, GPS reveals movements
 - **Retention vs. utility trade-off**: More historical data improves analytics but increases breach impact
 - **Cross-border data flows**: IoT data may transit jurisdictions with different privacy laws (GDPR vs. CCPA vs. China PIPL)
 - **Data integrity** is often more critical than confidentiality for industrial IoT (a spoofed temperature reading could cause physical damage)

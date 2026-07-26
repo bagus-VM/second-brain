@@ -26,7 +26,7 @@ Where:
 
 The AGG function must be permutation-invariant because node neighbourhoods are sets (no ordering).
 
-## Key Properties
+## Key Properties / Complexity
 1. One GNN layer = one hop of information propagation
 2. Stacking L layers → receptive field of L hops
 3. AGG must be permutation-invariant (sum, mean, max, attention)

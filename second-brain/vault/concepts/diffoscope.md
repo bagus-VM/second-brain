@@ -27,7 +27,7 @@ Diffoscope is a recursive archive/comparison tool that:
 
 It supports hundreds of file formats and can compare: ELF binaries, static libraries, archives (tar, zip), packages (deb, rpm), documents (PDF, DOCX), images, and more.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Recursive unpacking**: Decomposes nested formats (e.g., a `.deb` containing `.tar.gz` containing ELF binaries).
 - **Format-aware comparison**: Understands the internal structure of binary formats, not just raw bytes.

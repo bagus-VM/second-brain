@@ -21,7 +21,7 @@ Equivalently: no cycle has an odd number of negative edges.
 
 This is equivalent to saying there exists a partition of nodes into two sets (A, B) such that every positive edge stays within a set and every negative edge crosses between sets — but this partition may not be unique or meaningful on sparse graphs.
 
-## Key Properties
+## Key Properties / Complexity
 - On complete graphs, cycle criterion ⟺ triangle criterion (triangles generate all cycles)
 - On sparse graphs, triangles may not exist but longer cycles can still be unbalanced
 - The cycle criterion is the *general* definition of balance; the triangle test is a special case for complete graphs

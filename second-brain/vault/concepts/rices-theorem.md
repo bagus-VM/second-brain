@@ -19,7 +19,7 @@ You can't build a perfect bug finder. Not because we're not smart enough, but be
 
 Definitions:
 - **Non-trivial**: there exists at least one program that has the property and at least one that does not
-- **Semantic property**: ==a property about what the program does (behaviour)==, not how it looks (syntax)
+- **Semantic property**: **a property about what the program does (behaviour)**, not how it looks (syntax)
 - **Undecidable**: no automated method can determine whether the property holds for *any* program
 
 Proof sketch (constant-value analysis):
@@ -29,7 +29,7 @@ Proof sketch (constant-value analysis):
 - If the constant-value analyser exists, we have a decision procedure for the halting problem
 - The halting problem is known to be impossible → contradiction
 
-## Key Properties
+## Key Properties / Complexity
 - Applies to *all* programs — there will always be some program the analysis gets wrong
 - Applies to *semantic* properties — syntactic properties (like "does the code contain a semicolon?") are decidable
 - Does NOT say analysis is useless — it says perfect analysis is impossible
@@ -47,7 +47,7 @@ if (TURING_MACHINE_HALTS(j))
 If x = 17 always, then TM(j) never halts. If x could be 18, then TM(j) halts. Deciding constancy = deciding the halting problem = impossible.
 
 ## Common Pitfalls
-- Thinking Rice's theorem means "we can't analyze programs" — we can, just not perfectly
+- Thinking Rice's theorem means "we can't analyse programs" — we can, just not perfectly
 - Confusing "undecidable" with "useless" — approximate analysis catches most real bugs
 - Forgetting the "non-trivial" condition — trivial properties (always true/false) are decidable
 - Applying Rice's theorem to syntactic properties — it only applies to semantic ones

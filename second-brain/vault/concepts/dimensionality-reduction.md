@@ -49,7 +49,7 @@ Two families do this. Transformations change the coordinate basis so that a few 
 - **Distance preservation is the success criterion**: if reduced vectors distort the original distances, similarity search results degrade.
 - **Transformations are lossy by design**: deleting low-influence coefficients discards information, but only the information that barely affects distances.
 - **Choice of transform is data-driven**: periodic data suits FFT, locally correlated data suits DCT, clustered data suits Karhunen-Loeve. See [[transform-coding]] for how these same transforms behave in compression.
-- **Space-filling curves trade precision for 1D simplicity**: the curve cannot perfectly preserve all multidimensional neighborhood relations, but it lets you reuse B*-tree machinery.
+- **Space-filling curves trade precision for 1D simplicity**: the curve cannot perfectly preserve all multidimensional neighbourhood relations, but it lets you reuse B*-tree machinery.
 - **Z-Ordering stores regions in B*-tree pages**: divide the space into regions, store the four regions into the pages of a B*-tree.
 - **Output feeds the index**: the dimension-reduced signature vectors are the input to the index computation step and the actual access structure, such as an [[r-tree]].
 
@@ -87,6 +87,6 @@ For a space-filling curve approach, a 2D point (x, y) with binary coordinates x 
 - [[locality-sensitive-hashing]]: an alternative that fights high dimensionality by hashing rather than by reducing dimensions first.
 
 ## Open Questions
-- How many dimensions can you safely drop before nearest-neighbor results become unreliable for a given feature set?
+- How many dimensions can you safely drop before nearest-neighbour results become unreliable for a given feature set?
 - When is a space-filling curve preferable to a transformation, given the curve's imperfect ordering?
 - Do learned reductions (autoencoders) preserve the metric properties the access structures assume, or do they distort distances in ways that break pruning?

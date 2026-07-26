@@ -9,22 +9,22 @@ prerequisites: []
 ---
 
 ## One-line Summary
-Multimedia is any combination of digitally manipulable media types (text, sound, image, animation, video), where a "medium" is ==classified along axes of perception, representation, presentation, storage, and transmission (MHEG/ISO)==.
+Multimedia is any combination of digitally manipulable media types (text, sound, image, animation, video), where a "medium" is **classified along axes of perception, representation, presentation, storage, and transmission (MHEG/ISO)**.
 
 ## Core Intuition
-The word "multimedia" is deceptively simple — "multi" + "medium." But "medium" itself is overloaded. The MHEG standard (ISO) disambiguates by classifying media along five axes: how we *==perceive==* it (sight, hearing), how it's ==*represented* internally== (formats), how it's *==presented==* (screen, speakers), how it's *==stored==* (disk, paper), and how it's *==transmitted==* (cable, fiber). Multimedia then means combining media across at least one of these axes. The stricter academic definition (Steinmetz) requires mixing both [[media-types-discrete-continuous|discrete and continuous media]] with some independence between them; the looser practical definition accepts any digital media combination.
+The word "multimedia" is deceptively simple — "multi" + "medium." But "medium" itself is overloaded. The MHEG standard (ISO) disambiguates by classifying media along five axes: how we ***perceive*** it (sight, hearing), how it's ***represented* internally** (formats), how it's ***presented*** (screen, speakers), how it's ***stored*** (disk, paper), and how it's ***transmitted*** (cable, fiber). Multimedia then means combining media across at least one of these axes. The stricter academic definition (Steinmetz) requires mixing both [[media-types-discrete-continuous|discrete and continuous media]] with some independence between them; the looser practical definition accepts any digital media combination.
 
 ## Formal Definition / Statement
 - **MHEG Medium classification** (ISO): A medium is a means of distributing and presenting information, classified by perception, presentation, representation, storage, and transmission.
 - **General multimedia**: Any combination of digitally manipulable types of media (text, sound, image, animation, video).
 - **Strict multimedia**: Requires mixing of both continuous and discrete media with a significant degree of independence between them.
 
-## Key Properties
+## Key Properties / Complexity
 - **Interactivity**: User controls what is delivered and when (not passive consumption).
 - **Linear vs Non-linear**: Linear = single continuous flow (film, radio); non-linear = navigable structure (games, hypermedia).
 - **Hypermedia**: Interactive multimedia where elements are linked and navigable (e.g., web pages).
 - **Digital-first**: Delivered through web, apps, streaming, AR/VR.
-- **AI integration**: Modern multimedia adapts to user behavior (personalized feeds, adaptive learning).
+- **AI integration**: Modern multimedia adapts to user behaviour (personalized feeds, adaptive learning).
 - **Cross-platform**: Accessible on phones, tablets, VR headsets, smart TVs.
 
 ## Worked Example

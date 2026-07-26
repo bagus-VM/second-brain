@@ -25,7 +25,7 @@ Three strategies for incorporating upstream code into a reproduction package:
 
 The lecture emphasizes that for research reproducibility, the choice affects how reviewers and future researchers can understand, verify, and build upon the work.
 
-## Key Properties
+## Key Properties / Complexity
 - **Exact versioning**: A commit SHA-1 uniquely identifies the exact state of every file.
 - **Provenance**: `git log` documents who changed what, when, and why.
 - **Tamper-evident**: Any modification to history changes hashes, making tampering detectable.

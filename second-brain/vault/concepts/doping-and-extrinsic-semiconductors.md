@@ -22,15 +22,15 @@ Doping is the intentional introduction of impurity atoms into a semiconductor cr
 
 **n-type doping (donors):**
 - Group V elements: P, As, Sb (5 valence electrons)
-- 4 electrons bond with Si neighbors, 5th electron is loosely bound
-- Donor ionization energy: E_D ≈ 0.045 eV for P in Si (easily ionized at room temp)
+- 4 electrons bond with Si neighbours, 5th electron is loosely bound
+- Donor ionisation energy: E_D ≈ 0.045 eV for P in Si (easily ionized at room temp)
 - Result: n ≈ N_D (donor concentration), p = n_i²/N_D (minority holes)
 - Fermi level shifts up toward conduction band
 
 **p-type doping (acceptors):**
 - Group III elements: B, Al, Ga (3 valence electrons)
 - Accepts an electron from the valence band → creates a hole
-- Acceptor ionization energy: E_A ≈ 0.045 eV for B in Si
+- Acceptor ionisation energy: E_A ≈ 0.045 eV for B in Si
 - Result: p ≈ N_A (acceptor concentration), n = n_i²/N_A (minority electrons)
 - Fermi level shifts down toward valence band
 
@@ -68,10 +68,10 @@ Step 3: Fermi level shift
             = 0.0259 × 13.41
             = 0.347 eV
 
-  So E_F is 0.347 eV above midgap, closer to the conduction band — confirming n-type behavior.
+  So E_F is 0.347 eV above midgap, closer to the conduction band — confirming n-type behaviour.
 
 Step 4: Check if fully ionized
-  Donor ionization energy E_D = 0.045 eV >> kT = 0.0259 eV? Not quite, but at room temp the fraction ionized is still ~97% because the density of states in the conduction band is much larger than N_D.
+  Donor ionisation energy E_D = 0.045 eV >> kT = 0.0259 eV? Not quite, but at room temp the fraction ionized is still ~97% because the density of states in the conduction band is much larger than N_D.
 
 **What if we add boron, N_A = 5×10¹⁵ cm⁻³?**
   Net donor effect: N_D - N_A = 10¹⁶ - 5×10¹⁵ = 5×10¹⁵ cm⁻³
@@ -82,7 +82,7 @@ Step 4: Check if fully ionized
 - **"n-type means negative charge"**: No — n-type means excess electrons (negative carriers), but the material is electrically neutral overall (donor ions are fixed positive charges in the lattice).
 - **Adding dopants increases conductivity forever**: Past ~10²⁰ cm⁻³, solubility limits kick in and dopants form clusters instead of activating. Mobility also drops significantly.
 - **Confusing concentration with density**: N_D is in atoms/cm³ (a concentration), not atoms/cm² (areal density). Ion implantation doses are in atoms/cm².
-- **Room temperature always means full ionization**: True for Si with shallow dopants (0.045 eV), but not for wide-bandgap semiconductors like SiC where dopant activation energy can be >0.1 eV.
+- **Room temperature always means full ionisation**: True for Si with shallow dopants (0.045 eV), but not for wide-bandgap semiconductors like SiC where dopant activation energy can be >0.1 eV.
 - **Forgetting minority carriers**: In n-type, holes are rare (2.25×10⁴ cm⁻³) but they're critical for p-n junction physics and BJT operation.
 
 ## Connections

@@ -33,7 +33,7 @@ Good commit hygiene follows conventions:
 - `Tested-by:` — testing attribution
 - `Co-authored-by:` — multi-author attribution
 
-## Key Properties
+## Key Properties / Complexity
 - **Bisectable**: Atomic commits enable `git bisect` to find the exact commit that introduced a bug.
 - **Revertible**: A single logical change can be reverted cleanly.
 - **Readable**: Good messages make `git log --oneline` a useful overview.

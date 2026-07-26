@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-Node a dominates node b (a dom b) if every path from the entry node to b passes through a — a foundational relation for [[control-flow-graph|CFG]] analysis, loop identification, and SSA construction.
+==Node a dominates node b (a dom b) if every path from the entry node to b passes through a== — a foundational relation for [[control-flow-graph|CFG]] analysis, loop identification, and SSA construction.
 
 ## Core Intuition
 
@@ -44,7 +44,7 @@ repeat:
     until no D(n) changes
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 - The dominator relation forms a partial order on N
 - The **dominator tree**: parent(n) = idom(n); if a is an ancestor of b in the tree, then a dom b

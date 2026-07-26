@@ -13,7 +13,7 @@ The unique privacy challenges posed by IoT's pervasive sensing, metadata leakage
 
 ## Core Intuition
 
-IoT devices are sensors that observe human behaviour — often passively, often continuously, often without meaningful user consent. A smart thermostat knows when you're home. A smart speaker records your conversations. A fitness tracker monitors your health. A smart meter reveals your daily routine. Unlike a website that collects data you explicitly enter, IoT devices *passively observe* your life.
+IoT devices are sensors that observe human behaviour — often passively, often continuously, often without meaningful user consent. A smart thermostat knows when you're home. A smart speaker records your conversations. A fitness tracker monitors your health. A smart metre reveals your daily routine. Unlike a website that collects data you explicitly enter, IoT devices *passively observe* your life.
 
 The privacy challenge is not just "don't leak data to attackers" — it's "don't violate user privacy even when the system is working as designed." Privacy must be engineered in, not bolted on after a regulatory fine.
 
@@ -90,7 +90,7 @@ Even encrypted traffic reveals metadata:
 - How often (frequency of communication)
 - Message sizes (can infer content type)
 
-**Smart meter example**: electricity consumption at 1-second resolution can identify individual appliances (non-intrusive load monitoring). Even at 15-minute intervals, occupancy patterns and daily routines can be inferred.
+**Smart metre example**: electricity consumption at 1-second resolution can identify individual appliances (non-intrusive load monitoring). Even at 15-minute intervals, occupancy patterns and daily routines can be inferred.
 
 ## Key Properties / Complexity
 
@@ -101,7 +101,7 @@ Users say they care about privacy but behave as if they don't (accept all cookie
 ### De-anonymization Attacks
 
 "Anonymous" data can often be re-identified:
-- Smart meter data → occupancy patterns → identify the household
+- Smart metre data → occupancy patterns → identify the household
 - Wi-Fi probe requests → device MAC address → track movement
 - Accelerometer data → keystroke patterns → infer passwords
 - Combine "anonymous" IoT data with public datasets → re-identification
@@ -173,14 +173,14 @@ IoT devices used by children (smart toys, kids' smartwatches) must comply.
 ## Common Pitfalls
 
 - **Collecting all data "just in case"**: violates data minimization; creates liability
-- **Treating sensor data as non-PII**: smart meter data, accelerometer data, and Wi-Fi probes can all reveal personal information
+- **Treating sensor data as non-PII**: smart metre data, accelerometer data, and Wi-Fi probes can all reveal personal information
 - **Consent by obscurity**: burying data collection in a 50-page privacy policy nobody reads
 - **Function creep**: collecting data for one purpose, then using it for another without consent
 - **Ignoring metadata**: encrypting the payload but leaking traffic patterns, timing, and message sizes
 - **No data retention policy**: keeping all data forever "just in case" — violates GDPR storage limitation
 - **Assuming anonymization is sufficient**: de-anonymization attacks are well-documented
 - **No user control**: users cannot view, export, or delete their data
-- **Default settings that maximize data collection**: opt-out instead of opt-in
+- **Default settings that maximise data collection**: opt-out instead of opt-in
 - **Ignoring children's data**: COPPA and GDPR Article 8 requirements
 
 ## Connections

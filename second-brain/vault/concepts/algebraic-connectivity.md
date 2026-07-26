@@ -30,7 +30,7 @@ Algebraic connectivity (λ₂) is the second-smallest eigenvalue of the [[graph-
 
 **Interpretation:** λ₂ is the algebraic connectivity — a measure of how well-connected the graph is.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Zero if disconnected**: λ₂ = 0 ⟺ graph has multiple components
 2. **Positive if connected**: λ₂ > 0 ⟺ graph is connected
 3. **Larger means harder to disconnect**: high λ₂ means robust connectivity

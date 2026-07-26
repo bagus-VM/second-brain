@@ -17,7 +17,7 @@ You can know every person in a city and still not know how information travels. 
 This insight applies to economics (platform power), epidemiology (disease spread), computer science (web search), and sociology (influence). Companies like Google, Amazon, and Facebook survived the dot-com bubble precisely because they understood and exploited network effects — their users became part of their value-creation process.
 
 ## Formal Definition / Statement
-**Network effects:** ==The value or behavior of a system depends not just on the properties of its components but on the *pattern of connections* between them.==
+**Network effects:** **The value or behaviour of a system depends not just on the properties of its components but on the *pattern of connections* between them.**
 
 Formally: for a system $S$ with entities $\{e_1, \dots, e_n\}$ and relationships $R$,
 $$\text{Outcome}(S) \neq f(e_1) + f(e_2) + \dots + f(e_n)$$
@@ -25,15 +25,15 @@ The outcome depends on the relational structure $R$, not just individual attribu
 
 **Historical note:** Vannevar Bush's MEMEX (1945) anticipated this idea — that information becomes valuable through *connections* (associative trails), not just through storage. This was the intellectual ancestor of hypertext and the World Wide Web.
 
-## Key Properties
+## Key Properties / Complexity
 - **Visibility** is shaped by network position: a webpage linked by many others is more visible (see [[centrality]]).
 - **Coordination** emerges from network structure: who talks to whom determines group outcomes.
-- **Influence** propagates through connections: opinions, behaviors, and innovations spread along edges ([[network-diffusion]]).
+- **Influence** propagates through connections: opinions, behaviours, and innovations spread along edges ([[network-diffusion]]).
 - **Lock-in** occurs when network structure makes switching costly (e.g., social platform where all your contacts are).
 - **Cascading failure** happens when one node's failure propagates through connections (economic networks, power grids).
 
 ## Worked Example
-**The Dot-Com Bubble (1995–2005):** Many early web companies failed despite having good individual products. The survivors — Google, Amazon, Facebook — were those that understood network effects. Facebook's value wasn't its interface; it was that *everyone you knew was on it*. The network of users was the product. This is an outcome invisible at the individual level — ==knowing every Facebook user tells you nothing about Facebook's power; knowing that they're all *connected* tells you everything.==
+**The Dot-Com Bubble (1995–2005):** Many early web companies failed despite having good individual products. The survivors — Google, Amazon, Facebook — were those that understood network effects. Facebook's value wasn't its interface; it was that *everyone you knew was on it*. The network of users was the product. This is an outcome invisible at the individual level — **knowing every Facebook user tells you nothing about Facebook's power; knowing that they're all *connected* tells you everything.**
 
 ## Common Pitfalls
 - **Reducing network outcomes to individual properties.** "Influential people are just charismatic" ignores that influence requires a network to propagate through.
@@ -50,4 +50,4 @@ The outcome depends on the relational structure $R$, not just individual attribu
 ## Open Questions
 - How do we quantify the magnitude of network effects in a given system?
 - When do network effects lead to winner-take-all outcomes vs. stable equilibria?
-- Can we design networks to maximize positive effects and minimize negative ones (e.g., cascading failures)?
+- Can we design networks to maximise positive effects and minimise negative ones (e.g., cascading failures)?

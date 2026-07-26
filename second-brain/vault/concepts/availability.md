@@ -81,4 +81,5 @@ Incident: Cloud region us-east-1 goes down at 3 AM. DNS health checks detect fai
 - [[network-security-fundamentals]] — Network redundancy and failover for availability
 
 ## Open Questions
-- How does this concept interact with other security or system properties in practice?
+- How do availability requirements interact with confidentiality and integrity when they conflict in practice (e.g., strict access controls that block legitimate failover)?
+- What is the right availability target for resource-constrained IoT devices with intermittent connectivity?

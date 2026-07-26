@@ -9,10 +9,10 @@ prerequisites: ["[[feature-vector]]", "[[content-based-retrieval]]"]
 ---
 
 ## One-line Summary
-A signature vector is a numerical description of a multimedia object's low-level features (color, texture) that a computer extracts automatically and feeds into an index structure for similarity search.
+A signature vector is a numerical description of a multimedia object's low-level features (colour, texture) that a computer extracts automatically and feeds into an index structure for similarity search.
 
 ## Core Intuition
-To search images by content rather than by hand-written captions, the database needs a numerical fingerprint of each object. That fingerprint is the signature vector. It captures low-level properties like color distribution or texture, and the system computes it straight from the raw pixels or samples with no human in the loop.
+To search images by content rather than by hand-written captions, the database needs a numerical fingerprint of each object. That fingerprint is the signature vector. It captures low-level properties like colour distribution or texture, and the system computes it straight from the raw pixels or samples with no human in the loop.
 
 The greyscale histogram is the canonical example. Count how many pixels fall into each grey level, write the counts as a vector, and you have a signature. Two images with similar brightness profiles produce similar histograms, so comparing vectors approximates comparing visual content.
 
@@ -37,9 +37,9 @@ The query side mirrors this: a content-based query goes through signature extrac
 
 ## Key Properties / Complexity
 - **Automatic extraction**: computed from the data, no manual annotation. This is what makes content-based retrieval scale.
-- **Low-level by nature**: color distributions, texture, and similar properties, not high-level semantics. See the [[semantic-gap]] for why this matters.
+- **Low-level by nature**: colour distributions, texture, and similar properties, not high-level semantics. See the [[semantic-gap]] for why this matters.
 - **Distance equals dissimilarity**: the index structures assume that close vectors mean similar content under some [[similarity-measures|similarity measure]].
-- **High dimensionality is the norm**: a fine color histogram or texture descriptor easily reaches tens to hundreds of dimensions, which triggers the [[curse-of-dimensionality]].
+- **High dimensionality is the norm**: a fine colour histogram or texture descriptor easily reaches tens to hundreds of dimensions, which triggers the [[curse-of-dimensionality]].
 - **Reduction is usually required**: raw signature vectors are fed into [[dimensionality-reduction]] before an index is built, because index efficiency drops as dimensionality grows.
 
 ## Worked Example
@@ -50,7 +50,7 @@ Grey level:  0    1    2    3    4    5    6    7
 Count:     120  340  900 1500 2100 1800  700  140
 ```
 
-Normalize by the total pixel count (7600) to get a distribution vector:
+Normalise by the total pixel count (7600) to get a distribution vector:
 
 ```
 s(I) = [0.016, 0.045, 0.118, 0.197, 0.276, 0.237, 0.092, 0.018]
@@ -62,7 +62,7 @@ A second image with a similar mid-grey bias produces a close vector. An L1 or L2
 - Treating signature vectors as semantic. Two pictures with identical grey histograms can show completely different scenes (a sunset and a forest fire at dusk). Low-level features do not capture meaning.
 - Skipping dimensionality reduction. Feeding full-resolution signature vectors straight into a tree index makes the index slower than a sequential scan past roughly 20 dimensions.
 - Confusing the signature vector with the [[feature-vector]] concept in general. In this lecture, "signature vector" is the pipeline-specific term for the automatically extracted representation fed into access structures.
-- Assuming one signature is enough. Real systems combine several signatures (color, texture, shape), which is why multi-feature structures like the M-tree exist.
+- Assuming one signature is enough. Real systems combine several signatures (colour, texture, shape), which is why multi-feature structures like the M-tree exist.
 
 ## Connections
 - [[feature-vector]]: the general numerical representation; a signature vector is the pipeline-specific instance used for MMDB indexing.

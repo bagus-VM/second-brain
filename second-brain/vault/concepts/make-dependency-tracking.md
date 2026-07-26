@@ -69,7 +69,7 @@ Make's correctness depends on the file system's mtime being a reliable proxy for
 - The granularity is too coarse (FAT32 has 2-second granularity; two files in the same second are "equal").
 - The build tool writes to a file with an older mtime (e.g., a generator that preserves mtime from the input).
 
-## Key Properties
+## Key Properties / Complexity
 
 ### What Make gives you
 - **Incremental builds**: change one file, rebuild only what's downstream.

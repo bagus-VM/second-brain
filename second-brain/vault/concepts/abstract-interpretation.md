@@ -55,7 +55,7 @@ This guarantees: if the abstract analysis says "property P holds", then property
 
 **Transfer function as abstract operation**: for [[data-flow-analysis|data flow analysis]], the transfer function f_b of block b is the abstract counterpart of the concrete semantics step. The lattice of abstract facts and the monotone transfer functions together form an instance of the [[monotone-framework|monotone framework]].
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why abstract interpretation is sound by construction
 - Every abstract fact γ(a) is a *set* of concrete facts

@@ -29,7 +29,7 @@ Given a [[control-flow-graph|CFG]] G = (N, E) with dominance relation computed:
 2. For each node p in IDOM(n), check if p has a dominator (other than itself) that is also in IDOM(n). If so, remove p from IDOM(n).
 3. The remaining element is idom(n) — the strict dominator closest to n.
 
-## Key Properties
+## Key Properties / Complexity
 
 - The dominator tree is unique for a given CFG
 - The entry node is always the root

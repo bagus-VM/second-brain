@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-MPEG-7 defines standardized low-level visual descriptors for color (7), texture (3), shape (3), motion (4), localization (2), and face recognition (1) — totaling 20 descriptor types.
+MPEG-7 defines standardized low-level visual descriptors for colour (7), texture (3), shape (3), motion (4), localization (2), and face recognition (1) — totaling 20 descriptor types.
 
 ## Core Intuition
 To search and compare multimedia content, you need to reduce complex visual information to compact, comparable numerical representations. MPEG-7 descriptors are exactly that: standardized mathematical representations of visual properties that enable content-based comparison without requiring semantic understanding.
@@ -17,13 +17,13 @@ To search and compare multimedia content, you need to reduce complex visual info
 ## Formal Definition / Statement
 MPEG-7 Visual Descriptors (ISO/IEC 15938-3) cover:
 
-**Color (7 descriptors):**
-- Color Space & Color Quantization
-- Scalable Color (HSV color space + Haar transformation)
-- Dominant Color
-- Color Layout
-- Color Structure
-- Group-of-Frames/Group-of-Pictures (GoF/GoP) Color
+**Colour (7 descriptors):**
+- Colour Space & Colour Quantization
+- Scalable Colour (HSV colour space + Haar transformation)
+- Dominant Colour
+- Colour Layout
+- Colour Structure
+- Group-of-Frames/Group-of-Pictures (GoF/GoP) Colour
 
 **Texture (3 descriptors):**
 - Homogeneous Texture (directionality, coarseness, regularity of patterns)
@@ -48,23 +48,23 @@ MPEG-7 Visual Descriptors (ISO/IEC 15938-3) cover:
 **Face Recognition (1 descriptor):**
 - Face Recognition
 
-## Key Properties
+## Key Properties / Complexity
 - Descriptors are compact numerical representations (not raw pixels)
-- Scalable Color uses Haar transform for multi-resolution representation
-- Dominant Color reduces an image to its few most prominent colors
+- Scalable Colour uses Haar transform for multi-resolution representation
+- Dominant Colour reduces an image to its few most prominent colours
 - Edge Histogram captures spatial distribution of edges (5 types: vertical, horizontal, 45°, 130°, non-directional)
-- GoF/GoP Color extends single-frame color descriptors to video sequences
+- GoF/GoP Colour extends single-frame colour descriptors to video sequences
 - All descriptors are part of the [[mpeg-7]] standard
 
 ## Worked Example
-Scalable Color Descriptor for an image:
+Scalable Colour Descriptor for an image:
 ```xml
 <VisualDescriptor xsi:type="ScalableColorType" numOfCoeff="16"
   numOfBitplanesDiscarded="0">
   <Coeff>1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6</Coeff>
 </VisualDescriptor>
 ```
-This encodes the color distribution of an image using 16 Haar coefficients in HSV color space. The descriptor is "scalable" — you can discard bitplanes to reduce precision/bandwidth.
+This encodes the colour distribution of an image using 16 Haar coefficients in HSV colour space. The descriptor is "scalable" — you can discard bitplanes to reduce precision/bandwidth.
 
 ## Common Pitfalls
 - Confusing descriptors with features — descriptors are standardized representations, features are the underlying properties

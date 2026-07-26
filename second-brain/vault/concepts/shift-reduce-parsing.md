@@ -14,7 +14,7 @@ Shift-reduce parsing is a bottom-up parsing strategy that builds the parse tree 
 
 ## Core Intuition
 
-Imagine you have a stack and an input stream. You can do two things: **shift** (push the next token onto the stack) or **reduce** (if the top of the stack matches the right-hand side of a production A → α, pop α and push A). Keep going until the stack contains only the start symbol and the input is empty. This is the mirror image of top-down parsing — instead of expanding nonterminals downward, you're recognizing and collapsing them upward.
+Imagine you have a stack and an input stream. You can do two things: **shift** (push the next token onto the stack) or **reduce** (if the top of the stack matches the right-hand side of a production A → α, pop α and push A). Keep going until the stack contains only the start symbol and the input is empty. This is the mirror image of top-down parsing — instead of expanding nonterminals downward, you're recognising and collapsing them upward.
 
 ## Formal Definition / Statement
 
@@ -30,7 +30,7 @@ A successful parse ends with the start symbol on the stack and empty input.
 
 The key challenge is deciding **when** to shift vs. reduce — this is what distinguishes different bottom-up parsing methods (LR, SLR, LALR).
 
-## Key Properties
+## Key Properties / Complexity
 
 - Bottom-up parsers handle a larger class of grammars than top-down (LL) parsers
 - Left-recursive grammars are naturally handled (no elimination needed)
@@ -72,7 +72,7 @@ Each reduce step pops the RHS and pushes the LHS nonterminal, building the parse
 ## Common Pitfalls
 
 - Confusing shift-reduce with recursive descent — they are opposite directions (bottom-up vs. top-down)
-- Not realizing that left recursion is **natural** for shift-reduce (unlike [[predictive-parsing|predictive parsing]] which requires [[left-recursion-elimination]])
+- Not realising that left recursion is **natural** for shift-reduce (unlike [[predictive-parsing|predictive parsing]] which requires [[left-recursion-elimination]])
 - Forgetting that the parser needs a **lookahead** to decide shift vs. reduce (LR(k) uses k lookahead tokens)
 - Assuming shift-reduce handles all CFGs — it only works for unambiguous grammars that are LR-parseable
 

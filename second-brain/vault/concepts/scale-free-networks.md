@@ -36,7 +36,7 @@ where $\gamma$ is the degree exponent (typically $2 < \gamma < 3$ for real netwo
 | Citation networks | ~3.0 |
 | Actor collaboration | ~2.3 |
 
-## Key Properties
+## Key Properties / Complexity
 - **Hubs**: a small number of nodes with very high degree act as shortcuts, reducing average path length
 - **Robustness to random failure**: removing random nodes rarely hits hubs, so the network stays connected
 - **Vulnerability to targeted attack**: removing hubs fragments the network rapidly

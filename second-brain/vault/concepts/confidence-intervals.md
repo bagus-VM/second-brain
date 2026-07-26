@@ -22,7 +22,7 @@ Instead of just asking "is there an effect?" (hypothesis testing), a confidence 
 - Computed as: estimate ± (critical value × standard error).
 - For a 95% CI with a normal distribution: estimate ± 1.96 × SE.
 
-## Key Properties
+## Key Properties / Complexity
 - Wider intervals → less precision (smaller sample, more variability).
 - Narrower intervals → more precision (larger sample, less variability).
 - If a 95% CI for a difference does not include 0, the result is significant at α = 0.05.

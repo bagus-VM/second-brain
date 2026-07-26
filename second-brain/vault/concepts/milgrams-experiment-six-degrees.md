@@ -25,7 +25,7 @@ Not a formal theorem but an empirical observation: in a social network of $n \ap
 
 The key insight is the **navigational gap**: short paths may exist in the graph, but finding them with only local information is a separate (and harder) problem. Only ~25% of chains completed — the rest died when intermediaries refused or couldn't figure out who to forward to.
 
-## Key Properties
+## Key Properties / Complexity
 - Demonstrated that social networks have surprisingly short average path lengths
 - The experiment required only local knowledge — each person saw only their own contacts
 - ~75% of chains failed, revealing the gap between path existence and path findability

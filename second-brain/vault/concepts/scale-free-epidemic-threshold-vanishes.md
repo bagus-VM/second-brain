@@ -34,7 +34,7 @@ The epidemic threshold τ is the critical transmission rate below which an epide
 **Implications:**
 - Immunization strategies must target hubs (targeted vaccination) rather than random nodes
 - Random vaccination cannot achieve herd immunity in scale-free networks (requires vaccinating ~100% of nodes)
-- Internet worms, social media misinformation, and biological epidemics all exhibit this behavior
+- Internet worms, social media misinformation, and biological epidemics all exhibit this behaviour
 
 ## Key Properties / Complexity
 - Threshold vanishes in the thermodynamic limit (N → ∞); for finite networks, it's very small
@@ -65,7 +65,7 @@ Comparing epidemic spread on random vs scale-free networks (N = 100,000):
 ## Common Pitfalls
 - **Thermodynamic limit**: The threshold truly vanishes only as N → ∞. For finite networks, it's very small but nonzero.
 - **Degree correlation**: Assortative mixing (hubs connect to hubs) can modify the threshold
-- **SIS vs SIR**: The threshold behavior differs between models; SIR has additional complications
+- **SIS vs SIR**: The threshold behaviour differs between models; SIR has additional complications
 - **Dynamic networks**: If the network changes faster than the epidemic, the static analysis breaks down
 - **Practical immunization**: Identifying hubs requires global network knowledge, which may not be available
 

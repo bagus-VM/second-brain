@@ -36,7 +36,7 @@ When you want to understand a program, you can: (1) read the code and reason abo
 - Cause must precede effect and be a minimal difference
 - Example: "buf contains 'a = 0' because format is '%d' but a is a float"
 
-## Key Properties
+## Key Properties / Complexity
 - Deduction is purely static (no execution needed)
 - Observation is purely dynamic (execution required)
 - Induction bridges dynamic to static (from concrete runs to general rules)
@@ -50,7 +50,7 @@ int a = compute_value(); // returns a float
 sprintf(buf, format, a);
 ```
 
-**Deduction**: analyze the code statically — "format expects %d but a might be a float → type mismatch"
+**Deduction**: analyse the code statically — "format expects %d but a might be a float → type mismatch"
 **Observation**: run the program — "buf contains 'a = 0' (error!)"
 **Induction**: run many times — "a < 2054567 || a % 2 == 1 (invariant)"
 **Experimentation**: change format to "%f" — error disappears → "a = %d" is the cause

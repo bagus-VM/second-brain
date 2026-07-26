@@ -34,7 +34,7 @@ The intuition: three mutual enemies can coexist. The "enemy of my enemy is my fr
 
 **k-balance**: a generalisation that explicitly tracks the number of camps. k = 1: all-positive graph. k = 2: bipolar (strong balance). k ≥ 3: multipolar (weak balance). k = n: all-negative graph (each node is its own camp).
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why weak balance is more realistic
 - Most real signed networks are NOT perfectly bipolar. They have multiple camps.

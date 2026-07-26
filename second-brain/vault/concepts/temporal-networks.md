@@ -23,7 +23,7 @@ A **time-respecting path** from u to v is a sequence of edges e₁, e₂, …, e
 
 A path that exists in the aggregated static network may not exist as a time-respecting path — the edges may activate in the wrong order.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Reachability shrinks:** Node pairs connected by static paths may lack time-respecting paths
 2. **Speed depends on timing:** A contagion may reach a node in 2 static hops but require 5 time steps for edges to activate in order
 3. **Aggregation hides bottlenecks:** A brief bridge may appear permanent in the aggregated graph, masking its role as a temporal bottleneck

@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-A network is a collection of ==entities (nodes)== and the ==relationships (edges)== between them — the fundamental abstraction for studying connected systems.
+A network is a collection of **entities (nodes)** and the **relationships (edges)** between them — the fundamental abstraction for studying connected systems.
 
 ## Core Intuition
 The world is full of systems where individual things matter less than how they connect. A network strips away everything except "who is connected to whom." This simple abstraction is powerful because the same math applies whether the nodes are people, web pages, banks, or cities. The pattern of connections creates structure that determines outcomes — information flow, vulnerability, influence — that you cannot see by studying any single entity alone.
@@ -23,7 +23,7 @@ An edge $(u, v)$ represents a connection between node $u$ and node $v$. The enti
 
 **Key principle:** A network is always a *model* — an abstraction that intentionally leaves out details. The same real-world situation can be modeled as different networks depending on the question being asked.
 
-## Key Properties
+## Key Properties / Complexity
 - Networks are **domain-general**: the same formalism covers social, biological, technical, and economic systems.
 - Networks are **lossy abstractions**: by design, they omit details. This is a feature (focus on structure) and a limitation (context is lost).
 - The **same relational setting** can yield different network models (e.g., affiliation networks vs. projected people networks).
@@ -33,7 +33,7 @@ An edge $(u, v)$ represents a connection between node $u$ and node $v$. The enti
 **Zachary's Karate Club (1977):** 34 club members (nodes), friendships between them (edges). The club split into two factions after a dispute. The network structure — two dense clusters with a thin bridge — predicted the split. You could not predict this from knowing each member individually; only the pattern of friendships made it visible.
 
 ## Common Pitfalls
-- **Thinking a network captures everything.** It doesn't. Choosing what counts as a node and what counts as an edge is a modeling decision that always loses information.
+- **Thinking a network captures everything.** It doesn't. Choosing what counts as a node and what counts as an edge is a modelling decision that always loses information.
 - **Confusing the map with the territory.** The network is a model of reality, not reality itself.
 - **Assuming edges are always symmetric.** They can be directed (see [[edge-types]]).
 - **One-mode thinking.** The same system might be better modeled as a bipartite network (e.g., people belonging to groups) rather than a simple one-mode graph.

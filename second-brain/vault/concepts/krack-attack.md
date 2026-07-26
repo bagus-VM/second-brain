@@ -37,7 +37,7 @@ See: https://www.krackattacks.com/
 ### Why It's Fundamental
 - **Protocol-level flaw** — not a bug in any specific implementation
 - Affects ALL WPA2 implementations (Windows, Linux, Android, iOS, IoT devices)
-- The WPA2 standard itself mandated the vulnerable behavior
+- The WPA2 standard itself mandated the vulnerable behaviour
 - Android 6.0 was especially vulnerable (using wpa_supplicant that installed an all-zero key)
 
 ### Impact on IoT

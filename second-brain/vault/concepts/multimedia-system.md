@@ -23,8 +23,8 @@ Four key characteristics:
 3. **Computer-aided integration**: Not just recording/presentation but also synchronization (temporal, spatial, content-related)
 4. **Communicating systems**: Realization in distributed environments
 
-## Key Properties
-- **Quality of Service (QoS)**: Defined, controllable system behavior with measurable parameters — central to multimedia systems.
+## Key Properties / Complexity
+- **Quality of Service (QoS)**: Defined, controllable system behaviour with measurable parameters — central to multimedia systems.
 - **Processing**: Operating system and programming environment provide abstracted interfaces to hardware for media handling.
 - **Storage**: Specific storage devices; media managed by media servers or DBMS.
 - **Communication**: Requires high bandwidth and high reliability to meet time constraints (especially for video streaming).

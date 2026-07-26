@@ -77,7 +77,7 @@ SERVER server_name
 - **No pushdown (in general)**: predicates are evaluated *after* the file is read.
 - **Latency dominated by I/O**: reading `/proc/meminfo` is cheap; reading a 100 GB CSV is slow.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Strengths
 - **No data movement**: query the external source in place. No ETL, no staging table.

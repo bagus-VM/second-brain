@@ -27,8 +27,8 @@ The key insight: homophily (similarity → friendship) and these closure mechani
 
 Given an evolving network $G_t = (V, E_t)$ observed at discrete time steps, a new tie $(i, j) \in E_{t+1} \setminus E_t$ is attributed to:
 
-- **Triadic closure** if $i$ and $j$ share a common neighbor at time $t$: $\exists k: (i,k), (j,k) \in E_t$
-- **Focal closure** if $i$ and $j$ share a focus (class, dorm, department) at time $t$ but no common neighbor
+- **Triadic closure** if $i$ and $j$ share a common neighbour at time $t$: $\exists k: (i,k), (j,k) \in E_t$
+- **Focal closure** if $i$ and $j$ share a focus (class, dorm, department) at time $t$ but no common neighbour
 - **Membership closure** if $i$ joins a focus that $j$ already belongs to between $t$ and $t+1$
 
 The study measures the **conditional probability** of tie formation given each mechanism, controlling for the others.
@@ -38,7 +38,7 @@ The study measures the **conditional probability** of tie formation given each m
 - **Scale**: ~43,000 nodes, ~600,000 edges over the year. Large enough for statistical power, small enough to compute triadic/focal overlaps.
 - **Main findings**:
   - Homophily (shared attributes) and triadic/focal closure are **both** significant and **interact**: shared foci amplify triadic closure, and vice versa.
-  - The probability of tie formation increases sharply with the number of shared foci and shared neighbors.
+  - The probability of tie formation increases sharply with the number of shared foci and shared neighbours.
   - Network evolves through a combination of selection (homophily drives who meets whom) and opportunity (shared context creates the chance to meet).
 - **Limitation**: email is a proxy for social ties — not all emails are friendships, not all friendships produce emails. The mapping is noisy.
 
@@ -55,7 +55,7 @@ This is the paper's central empirical finding: the mechanisms are not independen
 
 ## Common Pitfalls
 - **Treating this as proof of causation.** Even with longitudinal data, Kossinets & Watts measure conditional probabilities, not causal effects. The [[manski-reflection-problem]] applies — unmeasured confounders could drive both the shared context and the tie formation.
-- **Generalizing from one university's email network.** Email behavior at one institution in the 2000s is not universal. Cultural, technological, and institutional context matters.
+- **Generalizing from one university's email network.** Email behaviour at one institution in the 2000s is not universal. Cultural, technological, and institutional context matters.
 - **Ignoring the temporal window.** The study uses one academic year. Tie formation mechanisms may differ over longer timescales or in different lifecycle stages of a network.
 - **Exams:** A question may ask "what are the three closure mechanisms in Kossinets & Watts?" — answer: triadic, focal, membership. Or "why is longitudinal data necessary?" — answer: to separate selection from socialization, you need the temporal order of events.
 

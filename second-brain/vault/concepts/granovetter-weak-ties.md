@@ -25,7 +25,7 @@ Strong ties connect people within the same community (high [[clustering-coeffici
 - [[betweenness-centrality]] quantifies how much an edge is a bridge
 - [[girvan-newman-algorithm]] is the algorithmic version: remove high-betweenness edges (weak ties) to find communities
 
-## Key Properties
+## Key Properties / Complexity
 1. **Bridging function**: weak ties connect otherwise separated groups
 2. **Information advantage**: novel information comes from outside one's community
 3. **Community detection**: weak ties are the boundaries between communities

@@ -42,7 +42,7 @@ dir/             # trailing slash = only match directories
 *.py diff=python
 ```
 
-## Key Properties
+## Key Properties / Complexity
 - **Prevents accidental commits**: Ignored files are not staged by `git add .`
 - **Does not affect already-tracked files**: Adding a tracked file to `.gitignore` does not untrack it. Use `git rm --cached`.
 - **Shareable**: Committed `.gitignore` is shared with all collaborators.

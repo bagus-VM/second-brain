@@ -9,19 +9,19 @@ prerequisites: []
 ---
 
 ## One-line Summary
-A graph G = (V, E) is the formal mathematical structure for modeling networks, consisting of vertices (nodes) and edges (links).
+A graph G = (V, E) is the formal mathematical structure for modelling networks, consisting of vertices (nodes) and edges (links).
 
 ## Core Intuition
-==Every network — social, technical, economic — can be abstracted as a graph. The key step is choosing what counts as a node and what counts as an edge==. This modeling choice is never neutral; it determines what you can see and what you miss.
+**Every network — social, technical, economic — can be abstracted as a graph. The key step is choosing what counts as a node and what counts as an edge**. This modelling choice is never neutral; it determines what you can see and what you miss.
 
 ## Formal Definition / Statement
 A **graph** G = (V, E) consists of:
 - A set of **vertices** (nodes) V
 - A set of **edges** (links) E ⊆ V × V
 
-The modeling process goes: **Reality → Choose nodes → Choose edges → Graph model → Analysis**.
+The modelling process goes: **Reality → Choose nodes → Choose edges → Graph model → Analysis**.
 
-## Key Properties
+## Key Properties / Complexity
 - Nodes represent entities (people, pages, cities, institutions)
 - Edges represent relationships (friendship, hyperlinks, roads, transactions)
 - Edges can be [[directed-and-undirected-graphs|directed or undirected]]
@@ -52,4 +52,4 @@ A university course enrollment system:
 
 ## Open Questions
 - When is a graph model "good enough"? What criteria determine the right abstraction?
-- How do we handle the epistemic choice of modeling when multiple valid graph representations exist for the same system?
+- How do we handle the epistemic choice of modelling when multiple valid graph representations exist for the same system?

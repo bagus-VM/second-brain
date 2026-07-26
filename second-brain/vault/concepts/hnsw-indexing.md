@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-HNSW is a graph-based approximate nearest-neighbor index that applies Kleinberg's multi-scale search principle: sparse upper layers enable large jumps, dense lower layers enable local refinement, giving $O(\log n)$ search time over millions of vectors.
+HNSW is a graph-based approximate nearest-neighbour index that applies Kleinberg's multi-scale search principle: sparse upper layers enable large jumps, dense lower layers enable local refinement, giving $O(\log n)$ search time over millions of vectors.
 
 ## Core Intuition
 [[kleinberg-decentralized-search|Kleinberg's theorem]] shows that efficient greedy search requires links at multiple scales. HNSW (Hierarchical Navigable Small World) is the practical engineering realization of this idea for vector databases.
@@ -23,20 +23,20 @@ Search starts at the top layer (coarse), greedily descends through layers, and f
 ## Formal Definition / Statement
 **HNSW construction:**
 1. Each inserted element is assigned to a maximum layer $\ell$ with probability $\propto m^{-\ell}$ (exponential decay)
-2. At each layer, the element is connected to its $M$ nearest neighbors in that layer
+2. At each layer, the element is connected to its $M$ nearest neighbours in that layer
 3. The entry point for search is the highest-layer node
 
 **HNSW search (greedy):**
 1. Start at the entry point in the top layer
-2. Greedily move to the nearest neighbor in the current layer until convergence
+2. Greedily move to the nearest neighbour in the current layer until convergence
 3. Drop down one layer and repeat from the current position
-4. At layer 0 (bottom), return the $k$ nearest neighbors found
+4. At layer 0 (bottom), return the $k$ nearest neighbours found
 
-**Complexity:** $O(\log n)$ for approximate nearest-neighbor search, comparable to Kleinberg's $O(\log^2 n)$ bound.
+**Complexity:** $O(\log n)$ for approximate nearest-neighbour search, comparable to Kleinberg's $O(\log^2 n)$ bound.
 
-## Key Properties
+## Key Properties / Complexity
 - **Multi-scale structure**: mirrors Kleinberg's insight that efficient search needs links at every scale
-- **Greedy routing**: no global knowledge needed — each step picks the locally closest neighbor
+- **Greedy routing**: no global knowledge needed — each step picks the locally closest neighbour
 - **Practical performance**: searches 100M+ embeddings in <10 ms on modern hardware
 - **Not literally Kleinberg's grid**: the embedding space is learned, not a geometric grid; the analogy is the hierarchical search structure
 - **Used in RAG pipelines**: every retrieval-augmented generation system uses HNSW (or similar) for vector search
@@ -46,12 +46,12 @@ Search starts at the top layer (coarse), greedily descends through layers, and f
 1. Embed each chunk into $\mathbb{R}^d$ (e.g., $d = 768$)
 2. Build HNSW graph: ~20 layers, each sparser than the one below
 3. Query: embed the question, start at the top-layer entry point
-4. Greedy descent: ~$\log(10^8) \approx 20$ layer transitions, each with ~$M = 16$ neighbor checks
+4. Greedy descent: ~$\log(10^8) \approx 20$ layer transitions, each with ~$M = 16$ neighbour checks
 5. Total: ~320 distance computations (vs. 100M for brute force)
 
 ## Common Pitfalls
 - **"HNSW is Kleinberg's algorithm"** — HNSW is an engineering system inspired by Kleinberg's theory. The distance metric is learned, not given by a grid. The multi-scale structure is the shared principle.
-- **"HNSW finds exact nearest neighbors"** — It's approximate: greedy search can miss neighbors that require non-monotonic paths. The trade-off is speed vs. recall.
+- **"HNSW finds exact nearest neighbours"** — It's approximate: greedy search can miss neighbours that require non-monotonic paths. The trade-off is speed vs. recall.
 - **"The layer assignment is arbitrary"** — The exponential decay probability ensures that each layer has ~$m^{-\ell}$ nodes, creating the right density gradient for hierarchical search.
 
 ## Connections

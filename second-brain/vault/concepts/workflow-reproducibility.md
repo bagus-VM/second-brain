@@ -25,7 +25,7 @@ A computational workflow is a directed acyclic graph (DAG) of processing modules
 
 Tools like [[vistrails]] automate the capture and management of all these components.
 
-## Key Properties
+## Key Properties / Complexity
 - **Explicit structure**: every step and data flow is declared, not implicit.
 - **Automation**: reduces human error compared to manual re-execution scripts.
 - **Composability**: workflows can be shared, extended, and combined.

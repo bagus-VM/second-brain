@@ -12,7 +12,7 @@ prerequisites: [multimedia-definition, media-types-discrete-continuous]
 A Multimedia Database Management System (MMDBMS) combines traditional DBMS capabilities (structured data, exact matching, SQL) with Information Retrieval capabilities (unstructured data, similarity-based fuzzy matching, ranked results) to store, index, search, and stream multimedia objects.
 
 ## Core Intuition
-Traditional databases excel at structured data — you can query "SELECT * FROM employees WHERE salary > 50000" and get exact results. Information Retrieval systems excel at unstructured data — you search "mountain photos" and get a ranked list of similar documents. Multimedia data is *both*: an image has structured metadata (date, photographer, GPS) *and* unstructured content (pixel patterns, visual features). ==An MMDBMS must bridge these two worlds, using the [[multimedia-query-predicates|full range of query predicates]] — attribute-based, structure-based, spatial, and semantic.==
+Traditional databases excel at structured data — you can query "SELECT * FROM employees WHERE salary > 50000" and get exact results. Information Retrieval systems excel at unstructured data — you search "mountain photos" and get a ranked list of similar documents. Multimedia data is *both*: an image has structured metadata (date, photographer, GPS) *and* unstructured content (pixel patterns, visual features). **An MMDBMS must bridge these two worlds, using the [[multimedia-query-predicates|full range of query predicates]] — attribute-based, structure-based, spatial, and semantic.**
 
 ## Formal Definition / Statement
 An MMDBMS must provide:
@@ -26,7 +26,7 @@ An MMDBMS must provide:
 8. **Cross-media** and **composite media** support
 9. **Real-time capacities** and **streaming**
 
-## Key Properties
+## Key Properties / Complexity
 - **Hybrid retrieval**: Combines exact matching (structured attributes) with fuzzy/similarity matching (unstructured content).
 - **Object-relational model**: Best candidate data model — extends relational DBMS with user-defined types and OO extensions to SQL.
 - **Ranked results**: Unlike traditional DBMS (which returns exact matches), MMDBMS returns results ordered by similarity.
@@ -63,4 +63,4 @@ A multimedia object representing an accident contains:
 ## Open Questions
 - How do modern vector databases (Pinecone, Milvus, Weaviate) relate to the MMDBMS concept? Are they a specialized form?
 - What is the role of deep learning embeddings in content-based retrieval — do they replace traditional feature extraction?
-- How does MPEG-7 address the metadata modeling challenge for multimedia databases?
+- How does MPEG-7 address the metadata modelling challenge for multimedia databases?

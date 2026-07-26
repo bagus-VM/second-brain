@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-Gen and kill sets are the local transfer functions that describe how each statement creates or invalidates data flow facts, forming the building blocks of every data flow equation.
+Gen and kill sets are the local transfer functions that describe ==how each statement creates or invalidates data flow facts==, forming the building blocks of every data flow equation.
 
 ## Core Intuition
 
@@ -39,7 +39,7 @@ The specific definitions of gen and kill depend on the analysis:
 - [[live-variable-analysis]]: gen = {v | v used at s}, kill = {v | v modified at s}
 - [[very-busy-expressions]]: gen = {e | e evaluated at s}, kill = {e | e contains variable modified at s}
 
-## Key Properties
+## Key Properties / Complexity
 
 - Gen and kill are purely *local* properties — they depend only on the statement itself, not on surrounding context
 - For **must** analyses (available expressions, very busy), gen and kill have opposite semantics: gen means "definitely produced", kill means "possibly invalidated"

@@ -26,7 +26,7 @@ Research artifacts encompass all **author-created** materials relevant to a publ
 
 The ACM considers an artifact "relevant" if it's necessary to reproduce the key results claimed in the paper.
 
-## Key Properties
+## Key Properties / Complexity
 - **Completeness**: Missing one artifact (e.g., a preprocessing script) can make the whole chain unreproducible
 - **Specificity**: Artifacts should be pinned to exact versions (commit hashes, DOIs, not "latest")
 - **Self-contained**: A well-packaged artifact can be understood and run by someone not involved in the original research

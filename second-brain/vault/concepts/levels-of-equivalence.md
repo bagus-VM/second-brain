@@ -11,7 +11,7 @@ prerequisites: []
 # Levels of Equivalence
 
 ## One-line Summary
-When comparing computational experiments, different levels of equivalence define what "the same result" means—from byte-for-byte identity to merely observable behavior.
+When comparing computational experiments, different levels of equivalence define what "the same result" means—from byte-for-byte identity to merely observable behaviour.
 
 ## Core Intuition
 Two programs can be "the same" in different ways. Understanding these levels is crucial for reproducibility: when someone claims they reproduced your result, what exactly do they mean?
@@ -23,15 +23,15 @@ Two programs can be "the same" in different ways. Understanding these levels is 
 
 **For comparing programs:**
 - **Functional equivalence:** Same outputs for the same inputs. The programs compute the same function.
-- **Behavioral equivalence:** Same observable behavior under a given observation model (including I/O, timing, side effects). Stronger than functional equivalence.
+- **Behavioral equivalence:** Same observable behaviour under a given observation model (including I/O, timing, side effects). Stronger than functional equivalence.
 
-## Key Properties
+## Key Properties / Complexity
 | Level | What it checks | Example |
 |-------|---------------|---------|
 | Bitwise identity | Byte-for-byte identical | Two files with same MD5 hash |
 | Structural equivalence | Same content, different format | JSON with same keys, different order |
 | Functional equivalence | Same input→output mapping | Java and Python programs producing same results |
-| Behavioral equivalence | Same observable behavior | Same output, I/O, timing, side effects |
+| Behavioral equivalence | Same observable behaviour | Same output, I/O, timing, side effects |
 
 ## Worked Example
 - f(x) = x · 2 and g(x) = x + x are **functionally equivalent** (same output for all inputs).

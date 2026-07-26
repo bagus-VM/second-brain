@@ -27,7 +27,7 @@ where D is the degree matrix (diagonal, D_ii = degree of node i) and A_σ is the
 
 The magnitude of λ₁ provides a continuous measure of imbalance: λ₁ > 0 indicates the graph is not balanced, and larger λ₁ means greater imbalance.
 
-## Key Properties
+## Key Properties / Complexity
 - Generalizes the standard Laplacian (where all edges are positive, so A_σ = A)
 - λ₁ = 0 ⟺ graph is balanced (exact characterization)
 - Provides a *continuous* relaxation of the binary balance question

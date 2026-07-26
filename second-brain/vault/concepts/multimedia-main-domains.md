@@ -26,7 +26,7 @@ Four layers (bottom-up):
 - Goal: fully digital systems
 
 **2. System**
-- Central aspect: **Quality of Service (QoS)** — defined, controllable system behavior with measurable parameters
+- Central aspect: **Quality of Service (QoS)** — defined, controllable system behaviour with measurable parameters
 - Three basic functionalities:
   - **Processing**: OS and programming environment provide abstracted hardware interfaces; abstraction via MM-OS, programming language, or OO class hierarchy
   - **Storage**: Specific storage devices; media managed by media servers or DBMS
@@ -47,7 +47,7 @@ Ready-to-use integrated functions for applications:
 - Growing areas: MM application development tools, project management for MM development
 - Note: MM systems encompass more than just application development
 
-## Key Properties
+## Key Properties / Complexity
 - **Bottom-up dependency**: Each layer builds on the one below. You can't do content analysis without storage; you can't do storage without encoding.
 - **QoS is the system layer's central concept**: It bridges technical implementation with user-perceivable quality.
 - **Content analysis is the bridge to [[multimedia-database-intro|databases]]**: Extracting and indexing content features is what enables retrieval.

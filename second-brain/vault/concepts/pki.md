@@ -44,7 +44,7 @@ Certificate:
     Key Usage: digitalSignature, keyEncipherment
 ```
 
-## Key Properties
+## Key Properties / Complexity
 | Property | Detail |
 |----------|--------|
 | Trust hierarchy | Root CA → Intermediate CA → Device certificates |

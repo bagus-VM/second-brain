@@ -14,7 +14,7 @@ The Balance Theorem (Cartwright & Harary 1956) states that a complete signed gra
 ## Core Intuition
 The theorem says: if every triangle in your signed graph is balanced (even number of negative edges), then the *whole* graph must have a very specific structure — at most two camps. Conversely, if the graph has at most two camps (with the right sign pattern), then every triangle is automatically balanced.
 
-The proof is short and elegant. Pick any node v. Partition the remaining nodes into v's friends (positive edge) and v's enemies (negative edge). Now consider any two of v's friends, u and w. The triangle (v, u, w) must be balanced, so the edge u-w must be positive (you can't have 2 negatives in this triangle). So all of v's friends are friends with each other. Similarly, all of v's enemies are enemies with each other. Finally, the edge between a friend u and an enemy w must be negative (the triangle v-u-w has one positive edge v-u, one negative v-w, and must balance to one more positive, but wait — let me recount: v-u is +, v-w is -, balance requires 0 or 2 negatives, so u-w must be -). So friends are friends with each other, enemies are enemies with each other, and friends are enemies with enemies. The two-camp structure is forced.
+The proof is short and elegant. Pick any node v. Partition the remaining nodes into v's friends (positive edge to v) and v's enemies (negative edge to v). Consider any two of v's friends, u and w. The triangle (v, u, w) must be balanced, so the edge u-w must be positive — a second negative edge would give two negatives, but both v-u and v-w are positive, so the only balanced count is zero negatives, meaning u-w must be positive. Hence all of v's friends are friends with each other. By a symmetric argument, all of v's enemies are friends with each other (the triangle v-u-w with both v-u and v-w negative requires u-w to be positive for balance). Finally, the edge between a friend u and an enemy w must be negative: the triangle v-u-w has v-u positive and v-w negative, so balance requires exactly one more negative, meaning u-w is negative. Thus friends form a positively-linked camp, enemies form a second positively-linked camp, and all cross-camp edges are negative. The two-camp structure is forced.
 
 ## Formal Definition / Statement
 
@@ -31,7 +31,7 @@ The "only if" direction is the proof above. The "if" direction: if the graph has
 - 2 negative: two in different camps, third in one of them
 So the only possibilities are 0 or 2 negative edges, which is balanced.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why the theorem is profound
 - It connects a *local* property (every triangle balanced) to a *global* property (two-camp partition)

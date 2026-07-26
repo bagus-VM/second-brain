@@ -41,7 +41,7 @@ The design space for α is parameterised by choices about:
 
 For [[points-to-analysis|points-to analysis]], the most important design choice is the *naming* of abstract objects. The simplest model: every `new A()` call site is one abstract object. A more precise model: every call site × call context is one abstract object.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The three flavours of memory locations
 - **Static locations**: uniquely identified by name. `int global_x` is always the same location.

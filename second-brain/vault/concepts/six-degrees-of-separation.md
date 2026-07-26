@@ -60,7 +60,6 @@ Milgram's experiment wasn't just about shortest paths — it was about *navigati
 2. Merchant → client in Boston
 3. Client → target person's neighbourhood
 4. Neighbour → target person
-
 **Modern equivalent (LinkedIn):**
 1. You → your former colleague
 2. Former colleague → their university classmate

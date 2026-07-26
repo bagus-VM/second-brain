@@ -25,7 +25,7 @@ Key challenges:
 3. **Dependency complexity**: deep learning stacks have hundreds of transitive dependencies.
 4. **Compute cost**: reproducing a large ML experiment may require expensive GPU clusters.
 
-## Key Properties
+## Key Properties / Complexity
 - **Narrative vs computational reproducibility**: reporting results ≠ enabling re-computation.
 - **Hardware problem**: even with identical code and data, different GPU architectures may produce slightly different results due to non-deterministic floating-point operations.
 - **Compute-intensive reproducibility**: the article recommends providing pre-computed intermediate results for expensive analyses.

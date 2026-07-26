@@ -9,10 +9,10 @@ prerequisites: [code-clones]
 ---
 
 ## One-line Summary
-Lexical analysis is the first phase of compilation that converts a character stream into a sequence of tokens, using pattern matching based on regular expressions and finite automata.
+Lexical analysis is the first phase of compilation that ==converts a character stream into a sequence of tokens==, using pattern matching based on regular expressions and finite automata.
 
 ## Core Intuition
-Before a compiler can understand the *structure* of a program (syntax), it must first group raw characters into meaningful chunks. Just as reading words requires recognizing letter groups as units, a lexer recognizes character sequences like `result`, `=`, `100`, and `;` as distinct tokens. This separation of concerns — characters to tokens, then tokens to syntax — makes both phases simpler and more efficient.
+Before a compiler can understand the *structure* of a program (syntax), it must first group raw characters into meaningful chunks. Just as reading words requires recognising letter groups as units, a lexer recognizes character sequences like `result`, `=`, `100`, and `;` as distinct tokens. This separation of concerns — characters to tokens, then tokens to syntax — makes both phases simpler and more efficient.
 
 ## Formal Definition / Statement
 A **lexical analyser** (lexer/scanner) is a pattern matcher for character strings that:
@@ -28,7 +28,7 @@ The lexer is typically implemented as a function called by the parser when it ne
 - **Low-level**: Lexical analyser — mathematically, a [[finite-automata]] based on a regular grammar
 - **High-level**: Syntax analyser (parser) — mathematically, a push-down automaton based on a context-free grammar (BNF)
 
-## Key Properties
+## Key Properties / Complexity
 - **Simplicity**: Separating lexical from syntactic analysis allows simpler approaches for each phase
 - **Efficiency**: The lexer can be independently optimized (it's called most frequently)
 - **Portability**: The lexer handles platform-specific character sets; the parser is always portable
@@ -39,16 +39,16 @@ The lexer is typically implemented as a function called by the parser when it ne
 ## Worked Example
 Input: `result = oldsum - value / 100;`
 
-| Token | Lexeme |
-|-------|--------|
-| IDENT | result |
-| ASSIGN-OP | = |
-| IDENT | oldsum |
-| SUBTRACT-OP | - |
-| IDENT | value |
-| DIVISION-OP | / |
-| INT-LIT | 100 |
-| SEMICOLON | ; |
+| Token       | Lexeme |
+| ----------- | ------ |
+| IDENT       | result |
+| ASSIGN-OP   | =      |
+| IDENT       | oldsum |
+| SUBTRACT-OP | -      |
+| IDENT       | value  |
+| DIVISION-OP | /      |
+| INT-LIT     | 100    |
+| SEMICOLON   | ;      |
 
 The lexer scans left-to-right, matching each character sequence against token patterns. Reserved words (like `while`, `if`) are typically recognized as IDENT tokens first, then looked up in a reserved-word table — this is simpler and faster than having separate patterns for each keyword.
 

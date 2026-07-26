@@ -30,7 +30,7 @@ This means:
 - Same build environment (paths, locale, timezone)
 - Same ordering of inputs
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Bit-for-bit identity**: The output must be byte-identical, not just functionally equivalent.
 - **Build environment specification**: The entire build environment must be fully described and reproducible.

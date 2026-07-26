@@ -39,7 +39,7 @@ Computation: Start at the definition of `v` at `s` in the PDG. Follow all outgoi
 
 **Slice extraction**: Remove all statements not in the slice. The resulting program computes the same value for the slicing criterion.
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|

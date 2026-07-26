@@ -35,7 +35,7 @@ Positive clamper with a 10Vpk sinusoidal input and silicon diode (Vd = 0.7V):
 ## Common Pitfalls
 - Forgetting the diode drop shifts the clamping level slightly.
 - Assuming the capacitor is a short circuit — it only acts as a DC source after charging.
-- Not realizing that the output waveform is inverted relative to the input for a negative clamper.
+- Not realising that the output waveform is inverted relative to the input for a negative clamper.
 
 ## Connections
 - Uses the same [[diode]] and [[depletion-region]] physics as rectifiers.

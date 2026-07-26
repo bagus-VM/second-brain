@@ -9,26 +9,26 @@ prerequisites: []
 ---
 
 ## One-line Summary
-A bitmap (raster) image is a 2D array of pixels where each pixel stores a color value, forming the fundamental representation for digital images.
+A bitmap (raster) image is a 2D array of pixels where each pixel stores a colour value, forming the fundamental representation for digital images.
 
 ## Core Intuition
-Think of a bitmap image as a grid of tiny colored squares — like a mosaic. Each square (pixel) has a specific color value. When viewed from far enough away, the grid blends into a continuous image. The more squares you have and the more colors each can represent, the more detailed and realistic the image looks. Sources include scanners, digital cameras, and drawing programs (which simulate analog tools like brushes and spray cans).
+Think of a bitmap image as a grid of tiny colored squares — like a mosaic. Each square (pixel) has a specific colour value. When viewed from far enough away, the grid blends into a continuous image. The more squares you have and the more colours each can represent, the more detailed and realistic the image looks. Sources include scanners, digital cameras, and drawing programs (which simulate analog tools like brushes and spray cans).
 
 ## Formal Definition / Statement
-A bitmap image is defined as a 2D matrix of dimensions N × M, where each element P(x, y) at row x and column y stores a color value. The color value's representation depends on the [[pixel-formats-and-bit-depth|bit depth]] and color model used.
+A bitmap image is defined as a 2D matrix of dimensions N × M, where each element P(x, y) at row x and column y stores a colour value. The colour value's representation depends on the [[pixel-formats-and-bit-depth|bit depth]] and colour model used.
 
 Image operations fall into two categories:
 - **Editing**: Modification of digital images using specialized software (e.g., Photoshop) — improvement, alteration, manipulation.
-- **Processing**: Mathematical algorithms for professionally modifying/analyzing digital images.
+- **Processing**: Mathematical algorithms for professionally modifying/analysing digital images.
 
 Further applications include:
 - Image improvement: restoration, retouching
 - Image analysis: segmentation, texture analysis, contour extraction
 - Image classification, recognition, sorting
 
-## Key Properties
-- Each pixel stores a discrete color value (determined by [[pixel-formats-and-bit-depth|bit depth]])
-- Requires significant memory: memory = ==width × height × bits_per_pixel==
+## Key Properties / Complexity
+- Each pixel stores a discrete colour value (determined by [[pixel-formats-and-bit-depth|bit depth]])
+- Requires significant memory: memory = **width × height × bits_per_pixel**
 - Quality degrades when scaled up (requires [[image-interpolation|interpolation]])
 - Can represent any photographic or scanned content
 - Disadvantages: high memory usage, quality loss on scaling
@@ -49,9 +49,9 @@ A 24-bit TrueColor image at 1280 × 1024 requires:
 
 ## Connections
 - [[image-resolution-dpi-ppi]] — determines the pixel density of a bitmap
-- [[pixel-formats-and-bit-depth]] — determines how color is stored per pixel
+- [[pixel-formats-and-bit-depth]] — determines how colour is stored per pixel
 - [[image-interpolation]] — required when scaling bitmaps
-- [[color-lookup-table]] — alternative to storing full color per pixel
+- [[color-lookup-table]] — alternative to storing full colour per pixel
 - [[image-file-formats]] — how bitmaps are stored on disk (TIFF, PNG, GIF, JPEG)
 
 ## Open Questions

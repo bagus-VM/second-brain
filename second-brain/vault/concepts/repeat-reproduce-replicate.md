@@ -21,7 +21,7 @@ According to the ACM's Artifact Review and Badging terminology:
 - **Reproducibility** (Different team, same experiment setup): The measurement can be obtained by a different team using the same experimental setup and procedure, obtaining the same results.
 - **Replicability** (Different team, different experiment setup): The measurement can be obtained by a different team using a different experimental setup and procedure, obtaining the same results.
 
-## Key Properties
+## Key Properties / Complexity
 - **Repeatability** is the weakest check—only confirms internal consistency
 - **Reproducibility** tests whether the procedure is documented well enough for others to follow
 - **Replicability** is the strongest check—tests whether the underlying phenomenon is real regardless of how you measure it

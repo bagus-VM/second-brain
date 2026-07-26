@@ -25,7 +25,7 @@ VisTrails (Freire & Silva) is an open-source system that combines:
 
 It was designed to address the problem that scientists iterate on workflows many times but typically only keep the final version, losing valuable exploratory history.
 
-## Key Properties
+## Key Properties / Complexity
 - **Version tree**: a DAG of workflow versions, enabling comparison and rollback.
 - **Change-based provenance**: records diffs between workflow versions, not just snapshots.
 - **Mashups**: lightweight "apps" that parameterise workflows for non-expert users.

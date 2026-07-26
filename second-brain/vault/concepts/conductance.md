@@ -33,10 +33,10 @@ where:
 
 **NP-hard to compute exactly:** finding the set S that minimizes conductance is NP-hard. Spectral methods provide approximations.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Normalized**: accounts for cluster size, not just cut size
 2. **Sensitive to the smaller cluster**: uses min(vol(S), vol(S̄)) to avoid trivial solutions
-3. **NP-hard to minimize**: finding the exact minimum conductance is computationally hard
+3. **NP-hard to minimise**: finding the exact minimum conductance is computationally hard
 4. **Connects to spectral methods**: the Fiedler vector approximates the minimum conductance cut
 5. **Used in community quality**: lower conductance means better community
 
@@ -51,7 +51,7 @@ Interpretation: 16.7% of S's edges leave the community — S is reasonably well-
 1. **Confusing conductance with [[modularity]]**: modularity compares observed to expected edges; conductance compares cut to volume
 2. **Confusing conductance with [[normalized-cut]]**: normalized cut sums both sides; conductance uses the minimum
 3. **Assuming low conductance always means a good community**: a single node with one edge has conductance 0, but isn't a meaningful community
-4. **Ignoring that conductance is NP-hard to minimize**: spectral methods are approximations
+4. **Ignoring that conductance is NP-hard to minimise**: spectral methods are approximations
 
 ## Connections
 - [[normalized-cut]] — related but distinct normalized measure

@@ -1,5 +1,5 @@
 ---
-title: "Dominant Colour"
+title: "Dominant Color"
 tags: [concept, multimedia-databases, semester-1, dominant-color, mpeg-7, feature]
 course: "Multimedia Databases"
 source_count: 1
@@ -26,7 +26,7 @@ where:
 - Σ p_i = 1 (the percentages sum to 100%)
 - k is small (typically 1-8)
 
-MPEG-7's Dominant Color Descriptor (DCD) standardises this with up to 8 dominant colours per descriptor.
+MPEG-7's Dominant Colour Descriptor (DCD) standardises this with up to 8 dominant colours per descriptor.
 
 **Computation** (one common method):
 1. Quantise the image's colours to a small palette (e.g., 32 or 64 colours)
@@ -35,7 +35,7 @@ MPEG-7's Dominant Color Descriptor (DCD) standardises this with up to 8 dominant
 4. Take the top k
 5. Optionally, merge similar colours (e.g., two shades of red)
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why dominant colour is useful
 - **Compact**: 8 colours × (3 colour components + 1 percentage) = 32 numbers per descriptor
@@ -58,7 +58,7 @@ MPEG-7's Dominant Color Descriptor (DCD) standardises this with up to 8 dominant
 | Comparison | Custom distance (DCD) | L1, L2, chi-squared, EMD |
 | Use | Compact retrieval, summarisation | Detailed retrieval |
 
-### MPEG-7's Dominant Color Descriptor
+### MPEG-7's Dominant Colour Descriptor
 - **Up to 8 dominant colours** per descriptor
 - Each colour in a quantised colour space (e.g., 5-bit per channel for RGB)
 - Spatial coherency flag (whether the colour forms a coherent region)

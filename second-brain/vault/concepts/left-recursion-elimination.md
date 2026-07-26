@@ -60,7 +60,7 @@ stmt     → if expr then stmt opt_else
 opt_else → else stmt endif | endif
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 - The transformation preserves the language L(G)
 - The transformed grammar is right-recursive (suitable for top-down parsing)
@@ -118,7 +118,7 @@ This grammar generates the same language and is suitable for [[predictive-parsin
 
 - Applying the transformation when there is indirect left recursion (A → Bα, B → Aβ) — must resolve indirect recursion first (topological sort of nonterminals)
 - Forgetting that the transformation changes the parse tree shape (the new nonterminal R adds a layer)
-- Not recognizing that left recursion in a top-down parser causes an **infinite loop**, not just wrong results
+- Not recognising that left recursion in a top-down parser causes an **infinite loop**, not just wrong results
 - Confusing left recursion elimination with left factoring — they solve different problems (looping vs. FIRST set overlap)
 
 ## Connections

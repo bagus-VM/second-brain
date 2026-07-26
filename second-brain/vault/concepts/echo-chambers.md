@@ -19,7 +19,7 @@ An echo chamber is not just "people who disagree online" — it is a structural 
 - Four platforms: Facebook, Twitter, Reddit, Gab
 - >100 million interactions, hundreds of news outlets coded by political leaning
 - For each user i, infer leaning score xᵢ as average leaning of scored posts, links, pages, or sources they produce or endorse
-- Compute average leaning of interaction neighborhood: xᴺᵢ = (1/k_out) Σⱼ A_ij xⱼ
+- Compute average leaning of interaction neighbourhood: xᴺᵢ = (1/k_out) Σⱼ A_ij xⱼ
 
 **Echo chamber signal**: if xᵢ ≈ xᴺᵢ, the user mostly interacts with like-minded peers
 
@@ -31,7 +31,7 @@ An echo chamber is not just "people who disagree online" — it is a structural 
 - Twitter: ~0.82 (retweet bias to like-minded, follow + algorithmic feed)
 - Reddit: ~0.40 (topic-centered subreddits, less segregated interaction)
 
-## Key Properties
+## Key Properties / Complexity
 1. **Architecture matters**: same homophily concept, dramatically different intensities across platforms
 2. **Behavioral estimate**: xᵢ summarizes the political leaning of content a user chooses to post, like, share, or link to
 3. **Network + diffusion signals**: echo chambers require both homophilic ties and within-group information circulation
@@ -41,7 +41,7 @@ An echo chamber is not just "people who disagree online" — it is a structural 
 ## Worked Example
 **Facebook study** (Cinelli et al. 2021):
 - User with leaning score xᵢ = 0.2 (slightly left-leaning)
-- Interaction neighborhood average xᴺᵢ = 0.18 (very similar)
+- Interaction neighbourhood average xᴺᵢ = 0.18 (very similar)
 - Gap of 0.02 indicates strong echo chamber — user mostly interacts with like-minded peers
 
 **Reddit contrast**:

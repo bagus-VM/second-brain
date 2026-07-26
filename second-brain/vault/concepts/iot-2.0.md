@@ -12,7 +12,7 @@ prerequisites: ["[[internet-of-things]]"]
 IoT 2.0 is the next-generation IoT concept integrating 5G/6G connectivity, machine learning and AI, edge computing, Industry 4.0, and blockchain — bringing both new capabilities and new security challenges.
 
 ## Core Intuition
-IoT 1.0 connected devices to the internet. IoT 2.0 makes them intelligent, autonomous, and deeply integrated with advanced infrastructure. But more connectivity and intelligence means more attack surface and more sophisticated threats.
+IoT 1.0 connected devices to the internet. IoT 2.0 makes them intelligent, autonomous, and deeply integrated with advanced infrastructure. More connectivity and intelligence mean a larger attack surface and more sophisticated threats.
 
 ## Formal Definition / Statement
 **IoT 2.0:** Next-generation IoT concept connecting to:
@@ -20,7 +20,7 @@ IoT 1.0 connected devices to the internet. IoT 2.0 makes them intelligent, auton
 - **Machine Learning and AI** — On-device inference, federated learning
 - **Edge Computing** — Processing data near the source, reducing cloud dependency
 - **Industry 4.0** — Smart manufacturing, digital twins, cyber-physical systems
-- **Blockchain** — Decentralized trust, immutable audit trails
+- **Blockchain** — Decentralised trust, immutable audit trails
 
 ## Key Properties / Complexity
 
@@ -28,10 +28,10 @@ IoT 1.0 connected devices to the internet. IoT 2.0 makes them intelligent, auton
 - Real-time decision-making at the edge
 - Autonomous device coordination
 - Massive-scale device deployment (millions per network slice)
-- Decentralized trust without central authority
+- Decentralised trust without central authority
 
 ### New Security Challenges
-- **5G attack surface:** Network slicing isolation, SIM-based attacks, signaling attacks
+- **5G attack surface:** Network slicing isolation, SIM-based attacks, signalling attacks
 - **AI/ML attacks:** Adversarial inputs, model poisoning, data poisoning
 - **Edge computing:** Distributed trust, physical access to edge nodes
 - **Blockchain:** Smart contract vulnerabilities, key management at scale
@@ -68,5 +68,5 @@ Attack vectors: adversarial input to AI model → defective products; 5G network
 ## Open Questions
 - How do we secure AI models running on resource-constrained edge devices?
 - What are the security implications of 5G network slicing for IoT?
-- Can blockchain truly provide decentralized trust for IoT at scale?
+- Can blockchain truly provide decentralised trust for IoT at scale?
 - How do we handle the massive attack surface of millions of devices per km²?

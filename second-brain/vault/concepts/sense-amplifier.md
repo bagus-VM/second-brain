@@ -32,7 +32,7 @@ When a memory cell is read, it creates only a small voltage change on the bit li
 - This ensures the sense amplifier starts from a known state
 - Without equalization, residual charge from previous reads would corrupt the result
 
-## Key Properties
+## Key Properties / Complexity
 
 - Converts tiny analog signals (mV) to digital logic levels (V)
 - Cross-coupled latch topology: fast, low power, self-timing

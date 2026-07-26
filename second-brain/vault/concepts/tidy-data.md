@@ -24,7 +24,7 @@ A dataset is **tidy** if and only if:
 
 A dataset satisfying all three rules is in "tidy form." A dataset violating any rule is "untidy."
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Wickham's three rules
 1. Each variable = one column

@@ -9,17 +9,17 @@ prerequisites: [object-oriented-programming]
 ---
 
 ## One-line Summary
-Aspect-oriented programming modularizes crosscutting concerns (logging, security, database access) that span multiple modules, separating them from core business logic using aspects, pointcuts, and advice.
+Aspect-oriented programming modularises crosscutting concerns (logging, security, database access) that span multiple modules, separating them from core business logic using aspects, pointcuts, and advice.
 
 ## Core Intuition
 In object-oriented programming, some concerns don't fit neatly into a single class — logging, security checks, transaction management cut across many modules. OOP forces you to scatter these concerns throughout the code (code tangling) or duplicate them (code scattering). AOP solves this by creating a new unit of modularity: the aspect. Aspects encapsulate crosscutting concerns and weave them into core modules at specific join points, keeping core logic clean and concerns separated.
 
 ## Formal Definition / Statement
 **Core concepts:**
-- **Crosscutting concerns**: system-wide behaviors spanning multiple modules (logging, security, transactions)
+- **Crosscutting concerns**: system-wide behaviours spanning multiple modules (logging, security, transactions)
 - **Core concerns**: primary business functionality
 - **Aspect**: unit of modularity implementing a crosscutting concern (like a class, but cannot be instantiated)
-- **Join point**: identifiable execution point in program (method call, field access, object creation)
+- **Join point**: identifiable execution point in the program (method call, field access, object creation)
 - **Pointcut**: declaration selecting join points and capturing context
 - **Advice**: code executed at join points (before, after, around)
 - **Weaving**: process of linking aspects with core modules
@@ -32,7 +32,7 @@ In object-oriented programming, some concerns don't fit neatly into a single cla
 ## Key Properties / Complexity
 - **Separation of concerns**: crosscutting concerns separated from core logic
 - **Reusability**: aspects can be reused across modules
-- **Encapsulation**: aspects encapsulate crosscutting behavior
+- **Encapsulation**: aspects encapsulate crosscutting behaviour
 - **Controlled encapsulation breaking**: aspects can access private members (breaks encapsulation between classes, preserves it within classes)
 - **Modularity**: additional unit of modularity beyond classes
 

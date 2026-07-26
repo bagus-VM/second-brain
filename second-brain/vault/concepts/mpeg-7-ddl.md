@@ -30,7 +30,7 @@ The DDL defines:
 - **Description Tools**: Descriptors (single piece of metadata syntax & semantics) and Description Schemes (structures combining multiple descriptors)
 - **Root Element**: `<Mpeg7>` — topmost element containing either a `DescriptionUnit` (partial) or `Description` (complete)
 
-## Key Properties
+## Key Properties / Complexity
 - Based on W3C XML Schema with custom extensions
 - Enables validation of MPEG-7 documents
 - Supports extensibility through XML-Schema extension mechanisms

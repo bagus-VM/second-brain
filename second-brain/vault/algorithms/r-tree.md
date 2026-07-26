@@ -37,7 +37,7 @@ An **R-tree** is a height-balanced generalization of the B-tree for multidimensi
 - **Overlap hurts**: overlapping MBRs reduce efficiency because the search must follow every overlapping branch.
 - **R+ eliminates overlap at a cost**: objects land in all overlapping nodes, which raises the tree height but improves search efficiency.
 - **R* avoids splits when possible**: when a node is full, it tries to delete and re-add existing entries (forced re-add) before splitting, which reorganizes the tree incrementally.
-- **SS uses circles, ordered by similarity**: bounding circles tend to have lower diameter than rectangles, helping nearest-neighbor pruning.
+- **SS uses circles, ordered by similarity**: bounding circles tend to have lower diameter than rectangles, helping nearest-neighbour pruning.
 - **TV telescopes dimensions**: nodes near the root index fewer dimensions (computed by the telescope function), but overlaps and repeated first-dimension values cause problems.
 - **X avoids splits with supernodes**: a supernode has double the normal capacity, and split history is used to find the split with minimal overlap.
 - **All variants still suffer the curse of dimensionality**: in high dimensions, MBRs overlap heavily and pruning loses power. Reduction ([[dimensionality-reduction]]) or approximate methods ([[locality-sensitive-hashing]]) are the usual escapes.

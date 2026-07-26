@@ -12,7 +12,7 @@ prerequisites: [network-intro]
 Edges can be undirected (symmetric), directed (asymmetric), and/or weighted (carrying numerical values) — the choice of edge type shapes what the network can model.
 
 ## Core Intuition
-Not all relationships are the same. "Alice is friends with Bob" is symmetric — if Alice considers Bob a friend, the reverse is likely true too. But "Alice follows Bob on Twitter" is asymmetric — Bob might not follow back. And "Alice emails Bob 50 times a month" carries a strength that a simple binary edge misses. Choosing the right edge type is a modeling decision that determines what questions you can ask.
+Not all relationships are the same. "Alice is friends with Bob" is symmetric — if Alice considers Bob a friend, the reverse is likely true too. But "Alice follows Bob on Twitter" is asymmetric — Bob might not follow back. And "Alice emails Bob 50 times a month" carries a strength that a simple binary edge misses. Choosing the right edge type is a modelling decision that determines what questions you can ask.
 
 ## Formal Definition / Statement
 Let $G = (V, E)$.
@@ -25,7 +25,7 @@ Let $G = (V, E)$.
 
 Edges can combine properties: a network can be *directed and weighted* simultaneously.
 
-## Key Properties
+## Key Properties / Complexity
 - **Undirected:** The adjacency matrix $A$ is symmetric ($A = A^T$). Each node's degree counts all incident edges.
 - **Directed:** The adjacency matrix is generally asymmetric. Nodes have separate **in-degree** (edges arriving) and **out-degree** (edges leaving).
 - **Weighted:** The adjacency matrix entries are real numbers (not just 0/1). Weight can represent strength, distance, cost, or frequency — interpretation depends on context.
@@ -51,7 +51,7 @@ Consider three people: Alice, Bob, Carol.
 
 ## Open Questions
 - When is it appropriate to symmetrize a directed network (e.g., treat mutual follows as undirected)? 
-	- You should symmetrize only if the underlying phenomenon is truly symmetric — i.e., the direction doesn't carry meaning for your question. If mutual edges already exist in the data and you only care about 'is there a relationship?' (not direction), then symmetrizing simplifies analysis. But this is a modeling choice that throws away information. For most social networks (Twitter follows, email), keeping direction is safer.
+	- You should symmetrize only if the underlying phenomenon is truly symmetric — i.e., the direction doesn't carry meaning for your question. If mutual edges already exist in the data and you only care about 'is there a relationship?' (not direction), then symmetrizing simplifies analysis. But this is a modelling choice that throws away information. For most social networks (Twitter follows, email), keeping direction is safer.
 - How does weighting affect algorithmic analysis compared to binary edges? 
 	- Weights change which algorithms work and what they compute:
 	    - Shortest paths: BFS stops working; Dijkstra's algorithm is needed (assuming non-negative weights).

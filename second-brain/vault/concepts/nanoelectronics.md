@@ -24,9 +24,18 @@ Nanoelectronics is the subfield of [[electronics]] that uses nanotechnology in e
 - Key technologies: quantum dots, single-electron transistors, tunnel FETs, spintronics
 - Represents the frontier beyond conventional CMOS scaling
 
+## Worked Example
+A single-electron transistor (SET) illustrates the shift from classical to quantum behaviour:
+
+- **Classical MOSFET** (gate length ~5 nm): the channel conducts or blocks based on a continuous threshold voltage. Current is a smooth function of gate voltage.
+- **SET** (island diameter ~1–3 nm): a single electron tunnels onto a conductive island, raising its energy by e²/(2C), where C is the island capacitance. At sufficiently low temperature (kT < e²/(2C)), adding one electron blocks further tunnelling — the **Coulomb blockade**. Current flows only at discrete gate-voltage peaks, one electron at a time.
+
+This is qualitatively different from a MOSFET: the SET exhibits **discrete charge states** and requires energy quantisation, not continuous drift current.
+
 ## Common Pitfalls
 - Confusing nanoelectronics with simply "smaller microelectronics" — the physics fundamentally changes at this scale
 - Assuming nanoelectronics replaces microelectronics — it extends and complements it
+- Forgetting that quantum effects (tunnelling, discrete energy levels) require cryogenic temperatures for many devices
 
 ## Connections
 - [[electronics]] — parent field

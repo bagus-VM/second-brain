@@ -12,7 +12,7 @@ prerequisites: [lossless-vs-lossy-compression, transform-coding]
 Rate-distortion theory formalizes the fundamental tradeoff in lossy compression: how many bits (rate) are needed to represent a signal with at most a given amount of distortion (quality loss)?
 
 ## Core Intuition
-You can't have both perfect quality and tiny file size — there's always a tradeoff. Rate-distortion theory mathematically describes this tradeoff: ==for any given acceptable distortion level D, there's a minimum rate R(D) below which you cannot go==. In practice, this means encoders must choose: spend more bits for better quality, or save bits and accept more distortion. The quantization parameter (QP) is the primary knob that controls this tradeoff in video codecs.
+You can't have both perfect quality and tiny file size — there's always a tradeoff. Rate-distortion theory mathematically describes this tradeoff: **for any given acceptable distortion level D, there's a minimum rate R(D) below which you cannot go**. In practice, this means encoders must choose: spend more bits for better quality, or save bits and accept more distortion. The quantization parameter (QP) is the primary knob that controls this tradeoff in video codecs.
 
 ## Formal Definition / Statement
 **Rate-Distortion Function R(D)**:
@@ -30,19 +30,19 @@ where I(X; X̂) is the mutual information between source X and reconstruction X�
 - Each frame/macroblock gets a quantization parameter (QP)
 - Lower QP → lower distortion (higher quality) but more bits
 - Higher QP → more distortion (lower quality) but fewer bits
-- Rate control = choosing QP to meet a target bitrate while minimizing distortion
+- Rate control = choosing QP to meet a target bitrate while minimising distortion
 - Can be viewed as a constrained optimization problem
 
 **Symmetric vs. Asymmetric Compression**:
 - Symmetric: encode and decode take equal time (e.g., video conferencing, end-to-end delay ≤ 150ms)
 - Asymmetric: encode once, decode many times (e.g., multimedia distribution) — encoder can be more complex
 
-## Key Properties
+## Key Properties / Complexity
 - **Fundamental limit**: no lossy codec can beat R(D) — it's an information-theoretic bound
 - **Convex tradeoff**: R(D) curve is convex — small quality gains cost many bits at high quality; small bit savings yield large quality drops at low rates
 - **Content-dependent**: flat/textured/edge-heavy regions have different rate-distortion characteristics
 - **Per-block optimization**: modern encoders (H.264, H.265) assign different QP to different regions based on content complexity
-- **Lagrange optimization**: λ parameter balances rate vs. distortion: minimize D + λR
+- **Lagrange optimization**: λ parameter balances rate vs. distortion: minimise D + λR
 - **ML approaches**: recent work uses reinforcement learning (e.g., MuZero) for adaptive rate control
 
 ## Worked Example

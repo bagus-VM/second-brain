@@ -31,7 +31,7 @@ where:
 
 **Power iteration:** repeatedly update all scores until they converge. Each iteration is sparse: O(n + m), often written O(m) on connected graphs.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Probabilistic interpretation**: scores are visit probabilities
 2. **Damping factor**: prevents traps in dead-end nodes or cycles
 3. **Scales well**: power iteration is efficient for large graphs

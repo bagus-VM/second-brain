@@ -1,6 +1,5 @@
 [
   "templater-obsidian",
-  "dataview",
   "obsidian-clipper",
   "calendar",
   "oz-image-plugin",
@@ -8,5 +7,6 @@
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-kanban",
   "obsidian-outliner",
-  "pdf-plus"
+  "pdf-plus",
+  "dataview"
 ]

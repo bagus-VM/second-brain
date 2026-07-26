@@ -26,7 +26,7 @@ The full retrieval pipeline:
 3. Query z_q → top-k nearest z_v in O(log n)
 4. Use for link prediction, recommendation, RAG, semantic search
 
-## Key Properties
+## Key Properties / Complexity
 1. Embedding quality determines prediction quality
 2. Any embedding method works: spectral, random-walk, or GNN
 3. HNSW indexing makes retrieval O(log n) instead of O(n²)

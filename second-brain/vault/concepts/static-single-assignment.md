@@ -45,7 +45,7 @@ DF(X) = {Y | X dominates a predecessor of Y, but X does not strictly dominate Y}
 
 Intuitively: "Y is a point where control flow from X might merge with flow from somewhere else."
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|

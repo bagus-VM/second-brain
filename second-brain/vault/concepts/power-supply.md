@@ -8,10 +8,10 @@ last_updated: 2026-06-22
 prerequisites: []
 ---
 ## One-line Summary
-*The source of electrical energy that powers electronic circuits, converting AC mains or battery voltage to the regulated DC voltages needed by components.*
+*A source of electrical energy that converts AC mains or battery voltage into the regulated DC voltages required by electronic components.*
 
 ## Core Intuition
-Every circuit needs power. A power supply converts raw energy (wall outlet, battery, solar panel) into the clean, stable DC voltage that transistors and ICs require. The quality of the power supply directly affects circuit performance — noisy power means noisy signals, unstable voltage means unreliable operation.
+Every circuit needs power. A power supply converts raw energy (mains outlet, battery, solar panel) into the clean, stable DC voltage that transistors and ICs require. The quality of the supply directly affects circuit performance: noisy power produces noisy signals, and unstable voltage produces unreliable operation.
 
 ## Formal Definition / Statement
 A power supply provides regulated DC voltage to electronic circuits.
@@ -67,11 +67,11 @@ Power supply for an IoT sensor node:
 - Battery life: 500mAh / (2μA + 1.6μA) = 138,889 hours ≈ 15.8 years (sleep only)
 
 ## Common Pitfalls
-- **Insufficient decoupling**: Missing or wrong capacitors cause oscillation or noise
-- **Thermal management**: Linear regulators dissipate (V_in - V_out) × I as heat
-- **Ground loops**: Multiple ground paths can introduce noise
-- **Input voltage range**: Exceeding V_in max destroys the regulator
-- **Load transients**: Sudden current changes (radio TX) cause voltage dips
+- **Insufficient decoupling**: Missing or incorrectly specified capacitors cause oscillation or noise
+- **Thermal management**: Linear regulators dissipate $(V_\text{in} - V_\text{out}) \times I$ as heat
+- **Ground loops**: Multiple ground paths introduce noise
+- **Input voltage range**: Exceeding $V_\text{in,max}$ destroys the regulator
+- **Load transients**: Sudden current changes (e.g. radio transmission) cause voltage dips
 - **Efficiency at light load**: Switching regulators can be inefficient at very low currents
 
 ## Connections
@@ -83,5 +83,5 @@ Power supply for an IoT sensor node:
 - [[mosfet]] — MOSFETs used in switching regulator circuits
 
 ## Open Questions
-- How does this concept apply in practice with real-world constraints?
-- What are the deeper implications that aren't immediately obvious?
+- How do real-world constraints (line and load tolerances, thermal limits) shape the choice between LDO and SMPS topologies for a given IoT load profile?
+- How does power-supply rejection ratio degrade across frequency, and what design choices mitigate this at high-frequency noise?

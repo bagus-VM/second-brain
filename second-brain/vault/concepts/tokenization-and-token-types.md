@@ -34,7 +34,7 @@ Common token types:
 
 The **symbol table** stores lexemes for identifiers for later phases (semantic analysis, code generation).
 
-## Key Properties
+## Key Properties / Complexity
 - Tokens form a **finite alphabet** — the vocabulary of the programming language at the token level
 - The token sequence is a **lossy** representation: whitespace, comments, and exact formatting are discarded
 - Reserved words (keywords) are typically handled as special cases of IDENT tokens via table lookup, not as separate token types

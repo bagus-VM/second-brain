@@ -49,4 +49,4 @@ A MOSFET as a digital switch:
 
 ## Open Questions
 - What are the fundamental physical limits on transistor switching speed?
-- How does miniaturization (Moore's Law) affect transistor behavior at nanometer scales?
+- How does miniaturization (Moore's Law) affect transistor behaviour at nanometer scales?

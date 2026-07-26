@@ -22,7 +22,7 @@ Given a procedure f with body blocks b_0, b_1, ..., b_n, called from call sites 
 
 After inlining, the call graph no longer contains edges to f (or any of its transitive callees that are fully inlined). The result is a single (large) procedure.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Precision: perfect (same as cloning)
 Each call site gets the body's analysis with its own arguments. There is no merging of information. Equivalent to cloning, but with a different representation.

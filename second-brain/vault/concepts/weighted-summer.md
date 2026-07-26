@@ -28,7 +28,7 @@ Each input Vi is weighted by the ratio Rf/Ri.
 - Rf = R: Vout = -(V1 + V2 + ... + Vn) — pure summation (inverted)
 - Different Rf/Ri ratios: each input has a different weight
 
-## Key Properties
+## Key Properties / Complexity
 
 - Each input is independent (virtual ground isolates inputs from each other)
 - The output is inverted (negative sum)

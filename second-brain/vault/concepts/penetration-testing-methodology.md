@@ -7,11 +7,12 @@ status: current
 last_updated: 2026-06-22
 prerequisites: ["[[threat-modeling]]", "[[attack-surface-analysis]]"]
 ---
+
 ## One-line Summary
 IoT penetration testing methodology covers the phases — reconnaissance, enumeration, exploitation, and reporting — applied specifically to embedded devices, wireless protocols, and IoT ecosystems.
 
 ## Core Intuition
-Threat modeling tells you what could go wrong. Penetration testing proves it. IoT pentesting is different from web or network pentesting because the attack surface spans hardware (JTAG, UART), wireless protocols (BLE, Zigbee), firmware, cloud APIs, and mobile apps — all in one engagement. A comprehensive IoT pentest must cover every component and every interface.
+Threat modelling tells you what could go wrong. Penetration testing proves it. IoT pentesting differs from web or network pentesting because the attack surface spans hardware (JTAG, UART), wireless protocols (BLE, Zigbee), firmware, cloud APIs, and mobile apps — all in one engagement. A comprehensive IoT pentest must cover every component and every interface.
 
 ## Formal Definition / Statement
 IoT penetration testing follows a structured methodology adapted from traditional pentesting for the unique characteristics of IoT systems:
@@ -20,12 +21,12 @@ IoT penetration testing follows a structured methodology adapted from traditiona
 - **Passive**: Identify device manufacturer, model, firmware version from public sources (FCC filings, product manuals, Shodan, Censys)
 - **Active**: Network scanning (Nmap, Masscan), wireless discovery (Kismet, Wireshark), Bluetooth scanning (hcitool, nRF Connect)
 - **Firmware discovery**: Download firmware from vendor website, FTP, or update servers
-- **Documentation review**: Analyze FCC internal photos, patent filings, open-source components
+- **Documentation review**: Analyse FCC internal photos, patent filings, open-source components
 
 **Phase 2: Enumeration and Analysis**
 - **Network enumeration**: Port scanning, service identification, banner grabbing
 - **Wireless enumeration**: BLE service discovery (GATT), Zigbee network discovery (KillerBee), Wi-Fi probe analysis
-- **Firmware analysis**: Extract with binwalk, analyze filesystem, search for hardcoded credentials (strings, regex), identify libraries and versions
+- **Firmware analysis**: Extract with binwalk, analyse filesystem, search for hardcoded credentials (strings, regex), identify libraries and versions
 - **Hardware enumeration**: Identify ICs on PCB, locate debug interfaces (JTAG, UART, SPI), probe test points
 - **Cloud/mobile enumeration**: API endpoint discovery, mobile app reverse engineering (jadx, Frida), cloud service mapping
 
@@ -36,7 +37,7 @@ IoT penetration testing follows a structured methodology adapted from traditiona
 - **Known vulnerability mapping**: CVE matching against identified software components
 
 **Phase 4: Exploitation**
-- **Network exploitation**: Default credential attacks, protocol exploitation (MQTT without auth, Zigbee key sniffing), MITM attacks
+- **Network exploitation**: Default credential attacks, protocol exploitation (MQTT without authentication, Zigbee key sniffing), MITM attacks
 - **Firmware exploitation**: Hardcoded credential extraction, buffer overflow exploitation, firmware modification and reflashing
 - **Hardware exploitation**: JTAG/UART shell access, flash memory dumping, side-channel key extraction, fault injection
 - **Cloud/mobile exploitation**: API abuse, authentication bypass, insecure data storage, mobile app hooking (Frida)
@@ -82,7 +83,7 @@ IoT penetration testing follows a structured methodology adapted from traditiona
 - Testing only the network layer and ignoring firmware, hardware, and wireless
 - Not testing the full ecosystem (device alone is insufficient)
 - Using automated scanners without manual analysis (IoT vulnerabilities are often logic flaws)
-- Not documenting the attack chain (individual vulns may be low severity, but chains are critical)
+- Not documenting the attack chain (individual vulnerabilities may be low severity, but chains are critical)
 - Bricking devices during testing without having recovery mechanisms
 - Not considering the impact of testing on production IoT systems
 

@@ -44,7 +44,7 @@ The four algorithms differ in how they treat these constraints:
 - **Steensgaard**: equality-based, pts(b) = pts(a) after aliasing
 - **Andersen**: subset-based, pts(b) ⊆ pts(a) after aliasing
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why this matters
 Consider:

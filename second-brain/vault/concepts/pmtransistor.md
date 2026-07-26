@@ -56,7 +56,7 @@ pMOS with kp' = 40 μA/V², W/L = 25, |VTH| = 0.7V, λ = 0:
 - [[threshold-voltage]] is negative for pMOS.
 - Uses [[p-type-semiconductor]] for source/drain regions.
 - Combined with nMOS to form CMOS (Complementary MOS) logic.
-- Operating behavior described by [[mosfet-operating-regions]].
+- Operating behaviour described by [[mosfet-operating-regions]].
 
 ## Open Questions
 - What process innovations improve pMOS hole mobility (strained silicon, SiGe)?

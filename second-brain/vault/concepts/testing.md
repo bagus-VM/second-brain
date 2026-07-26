@@ -35,7 +35,7 @@ Testing levels:
 - **System testing** — the whole program end-to-end
 - **Acceptance testing** — validation against user requirements
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Oracle problem** — testing requires knowing the expected output, which is not always available
 - **Incompleteness** — testing can show the presence of bugs but never their absence (Dijkstra)

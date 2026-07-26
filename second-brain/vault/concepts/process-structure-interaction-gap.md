@@ -12,15 +12,15 @@ prerequisites: []
 The process-structure interaction gap is the sixth gap in the course: the same network structure produces different outcomes depending on the spreading process, so neither structure nor process alone determines the result.
 
 ## Core Intuition
-Network science has accumulated a series of gaps between what theory promises and what data or practice can deliver. L08 adds the sixth: even if we perfectly know the network structure, we cannot predict spreading outcomes without also knowing the process (spreading rule). A bridge that accelerates a rumor blocks a behavior adoption. Structure is necessary but not sufficient — the process matters.
+Network science has accumulated a series of gaps between what theory promises and what data or practice can deliver. L08 adds the sixth: even if we perfectly know the network structure, we cannot predict spreading outcomes without also knowing the process (spreading rule). A bridge that accelerates a rumor blocks a behaviour adoption. Structure is necessary but not sufficient — the process matters.
 
 ## Formal Definition / Statement
 The **process-structure interaction gap** states that network structure alone does not determine dynamical outcomes. The same structural feature (e.g., a bridge, a hub, a cluster) can have opposite effects depending on whether the spreading process is simple contagion (single exposure suffices) or complex contagion (social reinforcement required).
 
-## Key Properties
+## Key Properties / Complexity
 1. Not about missing data or computational limits — it's about the interaction between structure and process
 2. Weak ties accelerate [[simple-contagion]] but block [[complex-contagion]]
-3. Hubs are superspreaders for diseases but may not trigger behavior cascades
+3. Hubs are superspreaders for diseases but may not trigger behaviour cascades
 4. Dense clusters sustain [[complex-contagion]] but are not necessary for [[simple-contagion]]
 5. Intervention strategies (vaccination, blocking) must account for the process type
 
@@ -44,7 +44,7 @@ Same edge, opposite effects. This gap cannot be resolved by better measurement o
 ## Common Pitfalls
 - Assuming better network data resolves all gaps — this gap is fundamental, not data-driven
 - Treating all spreading processes as equivalent — simple and complex contagion have opposite structural requirements
-- Ignoring the gap when designing interventions — vaccination strategies for diseases may backfire for behavior change campaigns
+- Ignoring the gap when designing interventions — vaccination strategies for diseases may backfire for behaviour change campaigns
 
 ## Connections
 - Core theme of [[network-diffusion]]

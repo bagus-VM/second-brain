@@ -27,7 +27,7 @@ Given a [[context-sensitivity|context-insensitive]] analysis on a procedure f ca
 
 The result is the same as running the analysis C times, once per call context.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Precision: perfect
 Each call site gets its own procedure analysis, so the contexts are completely separate. There is no merging of information across call sites. This is the most precise context-sensitivity technique.

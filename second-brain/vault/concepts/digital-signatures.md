@@ -55,7 +55,7 @@ A digital signature scheme consists of three algorithms:
 
 **In IoT context:** The lectures reference **RSA-2048**, **ECDSA-P256**, and **Ed25519** for firmware signing. ECDSA and Ed25519 are preferred for resource-constrained devices due to smaller key and signature sizes.
 
-## Key Properties
+## Key Properties / Complexity
 - **Provides:** Authentication, Integrity, Non-repudiation
 - **Does NOT provide:** Confidentiality (the message is sent in plaintext; combine with encryption for secrecy)
 - **Asymmetric:** Requires public/private key pair (unlike MACs which use a shared secret)

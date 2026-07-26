@@ -8,7 +8,7 @@ last_updated: 2026-06-22
 prerequisites: ["[[iot-communication-protocols]]"]
 ---
 ## One-line Summary
-Bluetooth Low Energy (BLE) security covers the pairing modes, encryption mechanisms, and known vulnerabilities of the protocol that connects billions of wearables, sensors, and smart home devices.
+Bluetooth Low Energy (BLE) security covers the pairing modes, encryption mechanisms, and known vulnerabilities of the protocol that connects billions of wearables, sensors, and smart-home devices.
 
 ## Core Intuition
 BLE was designed for low power, not high security. Its "Just Works" pairing mode — the most commonly used — provides zero authentication, making it trivially vulnerable to man-in-the-middle attacks. Even with stronger pairing modes, BLE has a history of implementation-level vulnerabilities (KNOB, BIAS, SweynTooth) that undermine the protocol's cryptographic guarantees. Understanding BLE security means understanding both the protocol spec and the gap between spec and real-world implementations.
@@ -50,7 +50,7 @@ BLE (Bluetooth Low Energy, Bluetooth 4.0+) is a wireless protocol operating in t
 - **MAC address tracking**: BLE devices often use static MAC addresses, enabling physical tracking even without breaking encryption.
 - **BLE has no native authentication** — identity is based on stored bonding keys, which can be stolen from device storage.
 - **Range extension attacks**: Directional antennas can extend BLE range to 1km+, defeating proximity assumptions.
-- **GATT profile manipulation**: Unauthorized modification of GATT service characteristics can alter device behavior.
+- **GATT profile manipulation**: Unauthorized modification of GATT service characteristics can alter device behaviour.
 
 ## Worked Example
 

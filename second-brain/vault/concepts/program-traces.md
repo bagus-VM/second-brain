@@ -30,7 +30,7 @@ Traces can be collected at different granularity levels:
 - **Virtual Machine level** — built-in language tracing facilities
 - **Operating System level** — system-level tracers (e.g., DTrace on BSD/Linux/macOS)
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Faithfulness** — a trace faithfully represents one specific execution on one specific input
 - **Completeness** — traces can record every executed instruction (full trace) or a subset (sampled trace)

@@ -9,7 +9,7 @@ prerequisites: [media-types-discrete-continuous]
 ---
 
 ## One-line Summary
-A data stream is a sequence of packets transmitted under time-dependent constraints, classified by ==transmission mode== (asynchronous, synchronous, isochronous), ==periodicity== (strongly/weakly/aperiodic), and ==bitrate regularity== (FBR/VBR).
+A data stream is a sequence of packets transmitted under time-dependent constraints, classified by **transmission mode** (asynchronous, synchronous, isochronous), **periodicity** (strongly/weakly/aperiodic), and **bitrate regularity** (FBR/VBR).
 
 ## Core Intuition
 Continuous media like audio and video can't just be sent as bulk files — they must arrive at the right *rate* and at the right *time*. Data streams formalize these timing requirements. The three transmission modes form a spectrum from "send whenever" (asynchronous) to "arrive within a tight window" (isochronous). The tighter the constraint, the less buffer the receiver needs, but the harder it is for the network to guarantee delivery. Periodicity and bitrate regularity further characterize how predictable the stream pattern is — crucial for buffer sizing and network provisioning.
@@ -32,7 +32,7 @@ A **data stream** is a sequence of individual packets transmitted under time-dep
 - **Weakly regular**: Fixed recurring pattern with varying sizes (e.g., MPEG I/B/P frame pattern)
 - **Irregular (VBR — Variable Bitrate)**: No fixed pattern
 
-## Key Properties
+## Key Properties / Complexity
 - Buffer requirements at the receiver are inversely related to timing precision: tighter delay bounds → smaller buffers.
 - FBR is simpler to manage but wastes bandwidth; VBR is efficient but harder to schedule.
 - Strongly periodic streams are the easiest to provision for; aperiodic streams require adaptive mechanisms.

@@ -12,15 +12,15 @@ prerequisites: [graph-fundamentals]
 Graphs can be stored as edge lists, adjacency lists, or adjacency matrices — each encoding the same structure but supporting different operations and scales.
 
 ## Core Intuition
-The same graph can be written down in multiple ways. An edge list is compact and easy to exchange. An adjacency list stores neighbors directly, making traversal fast. An adjacency matrix enables constant-time edge lookup and algebraic operations. The choice depends on what operations you need and how [[sparse-dense-and-random-graphs|sparse]] the graph is.
+The same graph can be written down in multiple ways. An edge list is compact and easy to exchange. An adjacency list stores neighbours directly, making traversal fast. An adjacency matrix enables constant-time edge lookup and algebraic operations. The choice depends on what operations you need and how [[sparse-dense-and-random-graphs|sparse]] the graph is.
 
 ## Formal Definition / Statement
 For a graph G = (V, E):
 - **Edge list**: A list of all edges, e.g., [(u₁,v₁), (u₁,v₂), ...]
-- **Adjacency list**: For each node, a list of its neighbors, e.g., {u₁: [v₁, v₂], u₂: [v₂], ...}
+- **Adjacency list**: For each node, a list of its neighbours, e.g., {u₁: [v₁, v₂], u₂: [v₂], ...}
 - **Adjacency matrix**: An |V|×|V| matrix A where A[i][j] = 1 if (i,j) ∈ E, else 0
 
-## ==Key Properties==
+## Key Properties / Complexity
 
 | Representation   | Strength                                                                                                                        | Limitation                                  | Best use cases                 |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------ |
@@ -45,11 +45,11 @@ Stanford: [SRI, UCLA]
 Utah:   [SRI, SDC, MIT]
 ...
 ```
-This compact representation makes neighbor lookup O(1) per node — ideal for [[breadth-first-search|BFS]] traversal.
+This compact representation makes neighbour lookup O(1) per node — ideal for [[breadth-first-search|BFS]] traversal.
 
 ## Common Pitfalls
 - Using an adjacency matrix for a sparse graph with millions of nodes — it wastes O(|V|²) space
-- Using an edge list when you need frequent neighbor lookups — each lookup requires scanning the entire list
+- Using an edge list when you need frequent neighbour lookups — each lookup requires scanning the entire list
 - Forgetting that undirected edges must be stored symmetrically in an adjacency list (both u→v and v→u)
 
 ## Connections

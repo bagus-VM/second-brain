@@ -25,10 +25,10 @@ Key requirements:
 - **DOI or persistent identifier**: Ensures the artifact can be cited and found even if the hosting platform changes
 - **Unique identifier**: Specific version of the artifact, not just a general project page
 
-## Key Properties
+## Key Properties / Complexity
 - **Distinguish from "available on request"**: Artifacts must be proactively shared, not just promised
 - **Version-specific**: The artifact should correspond to the exact version used in the paper
-- **Includes metadata**: Description, license, dependencies, how to run
+- **Includes metadata**: Description, licence, dependencies, how to run
 - **Enables badges**: ACM awards badges (Artifacts Available, Artifacts Evaluated, Results Reproduced) to incentivize sharing
 
 ## Worked Example

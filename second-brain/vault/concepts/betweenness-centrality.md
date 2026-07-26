@@ -30,7 +30,7 @@ where:
 
 **Difference from closeness:** Closeness asks "How near is v to everyone?" Betweenness asks "How many shortest paths between other nodes depend on v?"
 
-## Key Properties
+## Key Properties / Complexity
 1. **Brokerage theory**: importance from sitting on paths between others
 2. **Global measure**: requires all-pairs shortest paths
 3. **Brandes algorithm**: computes all nodes in O(n(n + m))

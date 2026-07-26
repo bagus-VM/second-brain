@@ -33,7 +33,7 @@ Where:
 
 **Join operator**: ∩ (intersection) — expression is very busy only if very busy on *all* paths
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Direction**: Backward (data flows from successors to predecessors)
 - **Kind**: Must (intersection at join points)

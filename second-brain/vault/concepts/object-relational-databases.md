@@ -12,7 +12,7 @@ prerequisites: ["[[structured-vs-unstructured-retrieval]]", "[[multimedia-databa
 Extension of relational databases supporting objects, inheritance, and user-defined types for complex multimedia data.
 
 ## Core Intuition
-Relational databases are great for structured data (tables of numbers and strings), but multimedia data is complex: an image isn't just a BLOB, it has structure (color histogram, texture descriptors, spatial layout), behavior (methods to extract features), and relationships (an image belongs to a collection, has annotations, links to related images).
+Relational databases are great for structured data (tables of numbers and strings), but multimedia data is complex: an image isn't just a BLOB, it has structure (colour histogram, texture descriptors, spatial layout), behaviour (methods to extract features), and relationships (an image belongs to a collection, has annotations, links to related images).
 
 **Object-relational databases** extend the relational model with object-oriented concepts:
 - **User-defined types (UDTs)**: define complex types like `Image`, `Video`, `AudioClip` with their own attributes and methods
@@ -20,7 +20,7 @@ Relational databases are great for structured data (tables of numbers and string
 - **Polymorphism**: the same query can work on different types (e.g., `extract_features()` works on images, videos, and audio)
 - **Object identifiers (OIDs)**: each object has a unique, system-generated identifier (like a primary key, but immutable and system-managed)
 
-This allows you to store multimedia objects with their full structure and behavior, not just as opaque BLOBs.
+This allows you to store multimedia objects with their full structure and behaviour, not just as opaque BLOBs.
 
 ## Formal Definition / Statement
 
@@ -89,26 +89,26 @@ FROM images i
 WHERE i.format = 'JPEG';
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 ### UDTs vs Relational Types
 | Aspect        | Relational                     | Object-Relational                       |
 | ------------- | ------------------------------ | --------------------------------------- |
 | Data types    | Primitive (INT, VARCHAR, DATE) | Primitive + User-defined (Image, Video) |
 | Structure     | Flat tables                    | Nested, hierarchical                    |
-| Behavior      | None (data only)               | Methods attached to types               |
+| Behaviour      | None (data only)               | Methods attached to types               |
 | Identity      | Primary key (user-defined)     | OID (system-generated)                  |
 | Relationships | Foreign keys                   | REF (typed object references)           |
 
 ### Advantages
-- **Complex data modeling**: can represent multimedia objects with their full structure
+- **Complex data modelling**: can represent multimedia objects with their full structure
 - **Encapsulation**: data + methods together (e.g., `image.extract_features()`)
 - **Reusability**: inheritance allows type hierarchies (MediaObject → Image → SatelliteImage)
 - **Polymorphism**: queries work across type hierarchies
 - **Type safety**: the database enforces type constraints
 
 ### Disadvantages
-- **Complexity**: harder to design, query, and optimize
+- **Complexity**: harder to design, query, and optimise
 - **Performance**: object navigation (following REFs) can be slower than joins
 - **Tool support**: fewer OR-DBMS tools compared to pure RDBMS
 - **Standardization**: SQL/MM is still evolving, vendor implementations vary
@@ -180,7 +180,7 @@ WHERE a.get_age() > 5;  -- works for AnimalType and all subtypes
 - **Overusing inheritance**: deep type hierarchies are hard to query and maintain. Prefer composition over inheritance for multimedia types.
 - **Ignoring OID overhead**: system-generated OIDs add storage and indexing overhead. For simple applications, a primary key may suffice.
 - **Forgetting to dereference**: `SELECT annotated_image FROM annotations` returns a REF (pointer), not the actual image. Use `DEREF(annotated_image)` to get the object.
-- **Nested table performance**: nested tables can be slow for large collections. Consider normalizing into separate tables with foreign keys for better query performance.
+- **Nested table performance**: nested tables can be slow for large collections. Consider normalising into separate tables with foreign keys for better query performance.
 
 ## Connections
 - [[structured-vs-unstructured-retrieval]] — OR-DBMS bridges the gap between structured metadata and unstructured media

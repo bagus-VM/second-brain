@@ -56,7 +56,7 @@ A summary edge connects actual-inᵢ to actual-outⱼ at a call site if there is
 
 The two phases prevent **unrealizable paths** — paths that don't correspond to any actual call sequence.
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|

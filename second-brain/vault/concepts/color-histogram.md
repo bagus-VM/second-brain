@@ -1,5 +1,5 @@
 ---
-title: "Colour Histogram"
+title: "Color Histogram"
 tags: [concept, multimedia-databases, semester-1, color-histogram, feature, cbr]
 course: "Multimedia Databases"
 source_count: 2
@@ -40,7 +40,7 @@ The histogram h_I ∈ ℝ^k is the colour-based feature vector of I.
 - Kolmogorov-Smirnov ([[kolmogorov-smirnov-distance]])
 - Earth Mover's Distance (EMD) — accounts for bin adjacency
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why histograms are useful
 - **Translation-invariant**: shifting the image doesn't change the histogram
@@ -65,7 +65,7 @@ The histogram h_I ∈ ℝ^k is the colour-based feature vector of I.
 
 ### Range quantization vs bin quantization
 Two separate quantization steps control the histogram size:
-- **Range quantization** (color space quantization): reduces the number of bins. A typical JPG has 256 values per RGB channel = 16.7M colors. Range quantization distributes these into n bins (e.g., 512 bins, each containing 32,768 colors). The histogram is a vector of bin values (pixel counts or percentages).
+- **Range quantization** (colour space quantization): reduces the number of bins. A typical JPG has 256 values per RGB channel = 16.7M colours. Range quantization distributes these into n bins (e.g., 512 bins, each containing 32,768 colours). The histogram is a vector of bin values (pixel counts or percentages).
 - **Bin quantization**: defines the bit-coding of values in each bin. For an image with 65,536 pixels, 16 bits are theoretically needed per bin. In practice, 15 bits may be precise enough, saving ~50% space (15 bits * 512 bins = 7,680 bits vs 16 * 512 = 8,192).
 - **Adaptive (individual) binning**: adapts bin definitions to each image (e.g., several shades of blue for a sea image). Equalizes the distribution of bin values. Tends to provide more accurate content representation.
 - **Regular (uniform) binning**: fixed, uniform bin definitions across all images.
@@ -77,7 +77,7 @@ Two separate quantization steps control the histogram size:
 
 ### MPEG-7 colour descriptors
 MPEG-7 standardises several colour features:
-- **Dominant Color Descriptor (DCD)**: a small set of (colour, percentage) pairs
+- **Dominant Colour Descriptor (DCD)**: a small set of (colour, percentage) pairs
 - **Colour Structure Descriptor (CSD)**: captures both colour distribution and spatial structure
 - **Colour Layout Descriptor (CLD)**: a compact representation of spatial colour distribution
 - **Scalable Colour Descriptor (SCD)**: a Haar-transform-based histogram in HSV space

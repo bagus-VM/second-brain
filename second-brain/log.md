@@ -4,6 +4,13 @@
 > Format: `## [YYYY-MM-DD] OPERATION | title | details`
 > When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
 
+## [2026-07-26] PREP | Mock Exam Network Science | 1 file, 46 MC + 5 essay
+
+- `study/exams/mock-exam-network-science-2026-07-26.md` — 50% Antwort-Wahl-Verfahren (46 questions across 8 sections: Fundamentals & Graph Theory, Centrality, Strong/Weak Ties, Communities, Social Context, Structural Balance, Small-World, Network Dynamics) + 50% essay (5 open questions with model answers). Scope: Lectures 1-8, Exercise Sheets 1-8. Solutions in `> [!note]- Solution` callouts per vault convention.
+- Key traps planted: (b) harmonic vs closeness on disconnected graphs (Q10, E1d), (c) C_D normalisation by n-1 (Q8), (d) betweenness normalisation (n-1)(n-2)/2 for undirected (Q11), (b) STC requires *strong* ties, not any ties (Q17), (c) weak tie paradox direction (Q45), (c) Kleinberg's navigability exponent α = d (Q42), (c) resolution limit is modularity-property, not Louvain-specific (Q24c false), (b) W-S produces Poisson degree distribution, not scale-free (Q38).
+
+---
+
 ## [2026-07-26] PREP | Mock Exam SA + RepEng (Antwort-Wahl-Verfahren) | 2 dedicated files, 40Q each
 - `study/exams/mock-exam-software-analyse-2026-07-26.md` — 40 MC questions across 11 sections (Foundations, JVM/Bytecode, Readability, Parsing/AST, Sign Analysis, Control Flow, Data Flow, Abstract Interpretation, Interprocedural, Slicing, Dynamic Analysis). Scope: lectures 2-10 + all 3 projects. All professor-excluded topics removed.
 - `study/exams/mock-exam-reproducibility-engineering-2026-07-26.md` — 40 MC questions across 11 sections (Reproducibility Crisis & Terminology, Levels/Provenance/Standards, Hypotheses & Equivalence, Git Internals, Reproducible Builds, Database Architectures, Tidy Data & SQL, Hierarchical Data, LLMs & Reproducibility, FAIR Principles, Legal Aspects). Scope: all 11 lectures + 11 sheets + 11 IC sheets.

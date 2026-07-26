@@ -43,7 +43,7 @@ For each statement kind, Andersen's analysis generates a *subset* (inclusion) co
 
 **Termination**: pts(v) only grows; there are finitely many objects, so the analysis terminates.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why Andersen's is more precise than Steensgaard's
 For the program:

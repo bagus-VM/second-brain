@@ -25,7 +25,7 @@ Different methods define "similarity" differently:
 - [[node2vec]]: biased walk co-occurrence (community vs. role)
 - [[graph-neural-networks]]: learned similarity via message passing
 
-## Key Properties
+## Key Properties / Complexity
 1. Dimensionality reduction: d ≪ |V| — compresses graph to a dense representation
 2. Enables downstream ML: any vector-space algorithm applies to embeddings
 3. Three generations: spectral → random-walk → GNN (each adds capabilities)

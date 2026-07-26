@@ -30,7 +30,7 @@ $$\Pi(k_i) = \frac{k_i}{\sum_j k_j}$$
 - Average path length: $\bar{d} \sim \frac{\log n}{\log \log n}$ (even shorter than random graphs!)
 - Clustering coefficient: $C \sim \frac{(\log n)^2}{n}$ (decreases with $n$, but higher than random graphs)
 
-## Key Properties
+## Key Properties / Complexity
 - **Power-law degree**: $P(k) \sim k^{-3}$, the hallmark of [[scale-free-networks|scale-free networks]]
 - **Ultra-small distances**: $\bar{d} \sim \log n / \log \log n$ — shorter than the $\log n / \log k$ of random graphs, because hubs provide direct shortcuts
 - **No community structure**: the model doesn't produce the high clustering seen in real networks

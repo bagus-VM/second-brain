@@ -12,7 +12,7 @@ prerequisites: [lexical-analysis]
 Regular expressions define token patterns formally, and finite automata (state diagrams) implement them — together they form the mathematical foundation of [[lexical-analysis]].
 
 ## Core Intuition
-A lexer needs to recognize patterns like "a letter followed by zero or more letters or digits" (IDENT) or "one or more digits" (INT-LIT). Regular expressions provide a concise mathematical notation for these patterns, and finite automata provide the execution model. The key insight: every regular expression can be converted to a finite automaton, and every finite automaton can be converted to a regular expression — they are equivalent in expressive power.
+A lexer needs to recognise patterns like "a letter followed by zero or more letters or digits" (IDENT) or "one or more digits" (INT-LIT). Regular expressions provide a concise mathematical notation for these patterns, and finite automata provide the execution model. The key insight: every regular expression can be converted to a finite automaton, and every finite automaton can be converted to a regular expression — they are equivalent in expressive power.
 
 ## Formal Definition / Statement
 **Regular expressions** over an alphabet Σ are built from:
@@ -29,7 +29,7 @@ A lexer needs to recognize patterns like "a letter followed by zero or more lett
 
 **Key theorem**: For every regular expression, there exists an equivalent DFA, and vice versa. This means regular expressions and DFAs characterize exactly the **regular languages**.
 
-## Key Properties
+## Key Properties / Complexity
 - Lexical grammars are regular (not context-free) — this is why simpler DFA-based tools suffice
 - DFAs are guaranteed to run in **O(n)** time where n = input length
 - NFAs may require backtracking but are easier to construct from regular expressions
@@ -65,7 +65,7 @@ case LETTER:
     return lookup(lexeme);  // check if it's a reserved word
 ```
 
-The `lookup()` function checks a reserved-word table — it's simpler to recognize all names with one pattern and disambiguate afterward than to have separate patterns for each keyword.
+The `lookup()` function checks a reserved-word table — it's simpler to recognise all names with one pattern and disambiguate afterward than to have separate patterns for each keyword.
 
 ## Common Pitfalls
 - Regular expressions cannot handle nested structures (like matching parentheses) — that requires a context-free grammar

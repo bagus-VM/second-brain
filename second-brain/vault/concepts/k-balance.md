@@ -23,7 +23,7 @@ Strong balance forces k ≤ 2 (at most two camps). Weak balance relaxes this to 
 
 The strong balance theorem is the special case k ≤ 2.
 
-## Key Properties
+## Key Properties / Complexity
 - k = 1: all-positive graph (trivially balanced)
 - k = 2: two hostile camps (strong balance)
 - k = n: all-negative graph (every node is its own camp)

@@ -64,7 +64,7 @@ return outer
 - Status: deprecated in modern protocols (TLS 1.3 removes HMAC-MD5 and reduces HMAC-SHA1 use)
 
 **Security property (RFC 2104, Bellare et al. 1996):**
-HMAC is a secure PRF (pseudorandom function) if the compression function of H is a secure PRF. This is a weaker assumption than collision resistance on H, which is why HMAC-HMAC-SHA1 remains secure in some contexts even after SHA-1 collisions were found.
+HMAC is a secure PRF (pseudorandom function) if the compression function of H is a secure PRF. This is a weaker assumption than collision resistance on H, which is why HMAC-SHA1 remains secure in some contexts even after SHA-1 collisions were found.
 
 ## Key Properties / Complexity
 - **Provable security**: as secure as a PRF built from the compression function of the hash

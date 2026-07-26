@@ -12,9 +12,9 @@ prerequisites: []
 A network has the small-world property if its average shortest-path distance grows at most logarithmically with the number of nodes: $\bar{d} \propto \log |V|$.
 
 ## Core Intuition
-Even in networks with billions of nodes, you can reach any other node in just a handful of hops. This is because ==each step you take "multiplies" the number of people you can reach== — like a branching tree. In a network with average degree $k$, after $d$ steps you can potentially reach $k^d$ nodes. Setting $k^d = n$ gives $d = \frac{\log n}{\log k}$.
+Even in networks with billions of nodes, you can reach any other node in just a handful of hops. This is because **each step you take "multiplies" the number of people you can reach** — like a branching tree. In a network with average degree $k$, after $d$ steps you can potentially reach $k^d$ nodes. Setting $k^d = n$ gives $d = \frac{\log n}{\log k}$.
 
-This ==logarithmic scaling== is a robust empirical fact across social, communication, and collaboration networks. Microsoft's Instant Messenger network (180 million users) has median distance ~7. Mathematical collaboration networks have Erdős numbers rarely exceeding 5.
+This **logarithmic scaling** is a robust empirical fact across social, communication, and collaboration networks. Microsoft's Instant Messenger network (180 million users) has median distance ~7. Mathematical collaboration networks have Erdős numbers rarely exceeding 5.
 
 ## Formal Definition / Statement
 **Small-world property.** A network exhibits the small-world property if:
@@ -28,7 +28,7 @@ and $d_G(u, v)$ is the graph distance (number of edges in a shortest path) betwe
 In a [[random-graphs|random graph]] $G(n, p)$ with average degree $k$, the typical distance is:
 $$\bar{d} \approx \frac{\log n}{\log k}$$
 
-## Key Properties
+## Key Properties / Complexity
 - Logarithmic growth is extremely slow: doubling $n$ adds only $\frac{1}{\log k}$ to the average distance
 - For moderate $k$ (say $k = 100$), even $n = 10^9$ gives $\bar{d} \approx 4.5$
 - The property holds for [[random-graphs|Erdős-Rényi random graphs]], many real-world networks, and [[watts-strogatz-model|Watts-Strogatz]] small-world networks

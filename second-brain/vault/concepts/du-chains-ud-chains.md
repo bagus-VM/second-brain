@@ -28,7 +28,7 @@ Data flow analyses tell us *which* facts hold at each point. Chains make this in
 
 **Definition-clear path**: A path from a definition to a use where the variable is not redefined along the path.
 
-## Key Properties
+## Key Properties / Complexity
 
 - A DU/UD *pair* is a (definition, use) combination with at least one definition-clear path
 - A single DU-pair can have *multiple* definition-clear paths

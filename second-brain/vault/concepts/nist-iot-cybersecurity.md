@@ -20,7 +20,7 @@ NIST has published several documents on IoT cybersecurity:
 - Defines six foundational cybersecurity activities manufacturers should perform:
   1. Identify customers and their cybersecurity needs
   2. Determine intended use and operating environment
-  3. Design for security (threat modeling, secure development)
+  3. Design for security (threat modelling, secure development)
   4. Implement appropriate cybersecurity controls
   5. Test and validate cybersecurity
   6. Provide documentation and instructions

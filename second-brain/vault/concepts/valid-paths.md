@@ -38,7 +38,7 @@ MVP(b) = ⊔ { trans_{p_k} ∘ ... ∘ trans_{p_0} (⊥) | [p_0, ..., p_k] ∈ v
 
 MVP is the interprocedural analogue of [[mop-vs-mfp|MOP]] — precise but undecidable in general.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why valid paths matter
 - "Real" interprocedural executions respect call-return matching

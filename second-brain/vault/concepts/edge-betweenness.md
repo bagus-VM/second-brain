@@ -30,7 +30,7 @@ where:
 
 **Use in [[girvan-newman-algorithm]]:** iteratively remove the edge with highest edge betweenness to find communities.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Edge-level measure**: quantifies how much an edge is a bridge
 2. **Connects to weak ties**: high-betweenness edges are local bridges
 3. **Foundation of Girvan-Newman**: the algorithm removes high-betweenness edges

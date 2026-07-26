@@ -15,7 +15,7 @@ The Secure Development Life Cycle (SDLC) integrates security into every phase of
 Security can't be tested in at the end. Each SDLC model has different strengths and weaknesses for security, but all must include security activities at every phase. The choice of model affects how quickly you can respond to discovered vulnerabilities.
 
 ## Formal Definition / Statement
-**Secure Development Life Cycle (SDLC):** Development of security from scratch in the framework of a system, essentially the same as software development from scratch but with security integrated at every phase.
+**Secure Development Life Cycle (SDLC):** Development of security from scratch in the framework of a system — essentially the same as software development from scratch, but with security integrated at every phase.
 
 ### SDLC Models
 

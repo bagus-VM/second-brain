@@ -12,7 +12,7 @@ prerequisites: []
 Eigenvector centrality measures recursive prestige — important nodes are connected to important nodes, formalized as the leading eigenvector of the adjacency matrix.
 
 ## Core Intuition
-A node's importance depends on the importance of its neighbors. This recursive definition leads to the eigenvector equation: Ax = λx, where x is the centrality vector and λ is the leading eigenvalue.
+A node's importance depends on the importance of its neighbours. This recursive definition leads to the eigenvector equation: Ax = λx, where x is the centrality vector and λ is the leading eigenvalue.
 
 ## Formal Definition / Statement
 **Node equation:**
@@ -37,8 +37,8 @@ PR(v) = (1-α)/n + α Σ_{u→v} PR(u)/outdeg(u)
 - Random surfer: with probability α, follow a link; with probability 1-α, jump to a random page
 - Range: PageRank scores are probabilities (sum to 1)
 
-## Key Properties
-1. **Recursive prestige**: importance flows from important neighbors
+## Key Properties / Complexity
+1. **Recursive prestige**: importance flows from important neighbours
 2. **Leading eigenvector**: the centrality vector is the eigenvector of the largest eigenvalue
 3. **Power iteration**: converges quickly for connected graphs
 4. **PageRank**: adds a damping factor to handle dangling nodes and disconnected components
@@ -49,7 +49,7 @@ Workplace graph — Team A (Ana, Ben, Cai, Dia):
 
 **Eigenvector centrality of Ana:**
 - Connected to Ben, Cai, Dia (all in Team A's dense core)
-- High centrality because neighbors are also well-connected
+- High centrality because neighbours are also well-connected
 
 **Eigenvector centrality of Dia:**
 - Connected to Ana, Ben, Cai (Team A) and Fin (Team B)
@@ -66,7 +66,7 @@ Workplace graph — Team A (Ana, Ben, Cai, Dia):
 ## Connections
 - [[centrality-measures]] — one of the main centrality measures
 - [[pagerank]] — extension with damping factor
-- [[degree-centrality]] — local measure, ignores neighbor importance
+- [[degree-centrality]] — local measure, ignores neighbour importance
 - [[betweenness-centrality]] — measures brokerage, not prestige
 - [[network-science-l04]] — lecture overview
 

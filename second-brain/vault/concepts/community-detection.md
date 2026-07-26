@@ -12,7 +12,7 @@ prerequisites: []
 Community detection partitions a graph into groups of nodes that are densely connected internally but sparsely connected to other groups.
 
 ## Core Intuition
-A community is a subset of nodes with relatively many internal edges and relatively few external edges — a region of the graph where connection density is meaningfully higher than the surrounding network. The challenge is defining "meaningfully higher" precisely enough for an algorithm to optimize.
+A community is a subset of nodes with relatively many internal edges and relatively few external edges — a region of the graph where connection density is meaningfully higher than the surrounding network. The challenge is defining "meaningfully higher" precisely enough for an algorithm to optimise.
 
 ## Formal Definition / Statement
 A **community** is a subset S ⊆ V such that:
@@ -23,7 +23,7 @@ The canonical formalization is [[modularity]] Q, which compares observed interna
 
 **NP-hardness result** (Brandes et al. 2008): Finding the partition that maximizes Q on a general graph is NP-hard. No polynomial-time algorithm for the exact optimum is known.
 
-## Key Properties
+## Key Properties / Complexity
 1. **No unique definition**: different formalizations (modularity, conductance, normalized cut) can yield different communities
 2. **Resolution limit**: modularity can miss small communities in large graphs (Fortunato & Barthélemy 2007)
 3. **NP-hard optimization**: all practical methods are heuristics

@@ -50,7 +50,7 @@ Anything *outside* the contract is a potential source of non-determinism.
 7. **Compiler-internal randomness**: link-time optimisation, profile-guided optimisation.
 8. **Filesystem metadata**: order of directory listings, inode numbers.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why bitwise identical matters
 - **Verifiability**: anyone can `sha256sum` the binary and compare against a published reference. No "trust me, it's the same code" step.

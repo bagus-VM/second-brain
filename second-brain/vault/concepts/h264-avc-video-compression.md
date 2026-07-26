@@ -23,19 +23,19 @@ Key technical improvements over MPEG-2:
 
 2. **Skipped (S) macroblocks**: Only a motion vector is stored (no residual) — for static or slowly moving regions. Motion vector prediction from neighboring blocks reduces overhead.
 
-3. **Intra-prediction** (9 modes): ==Instead of coding blocks independently, predicts each block from already-decoded neighboring pixels. Only the prediction residual is coded==. Modes include: vertical, horizontal, DC (average), diagonal directions (45° left/right, 26.6° variations).
+3. **Intra-prediction** (9 modes): **Instead of coding blocks independently, predicts each block from already-decoded neighboring pixels. Only the prediction residual is coded**. Modes include: vertical, horizontal, DC (average), diagonal directions (45° left/right, 26.6° variations).
 
 4. **Quarter-pixel (QPEL) motion estimation**: Image is upsampled 4× using a 6-tap FIR filter for luma. Motion vectors can point to ¼-pixel positions, enabling smoother motion compensation. Example: object moving 1 pixel over 4 frames = ¼ pixel/frame.
 
-5. **Motion vector prediction**: Neighboring blocks have similar motion vectors. ==Predict MV from median of neighboring blocks; only the difference (MVD) is stored==.
+5. **Motion vector prediction**: Neighboring blocks have similar motion vectors. **Predict MV from median of neighboring blocks; only the difference (MVD) is stored**.
 
 6. **Integer transform**: 4×4 integer approximation of DCT (avoids floating-point rounding errors).
 
-7. **CABAC** (Context-Adaptive Binary Arithmetic Coding): better compression than Huffman by ==adapting probability models based on context==.
+7. **CABAC** (Context-Adaptive Binary Arithmetic Coding): better compression than Huffman by **adapting probability models based on context**.
 
 8. **In-loop deblocking filter**: Applied at block boundaries during decoding to reduce blocking artifacts.
 
-## Key Properties
+## Key Properties / Complexity
 - **~2× compression improvement over MPEG-2** at same quality
 - **Flexible block sizes**: from 16×16 down to 4×4 — adapts to image content
 - **Macroblock types**: I (intra), P (inter forward), B (inter bi-directional), S (skipped)
@@ -71,7 +71,7 @@ Comparison (1920×1080, 24 fps, 654 seconds):
 
 ## Common Pitfalls
 - Confusing H.264 (codec) with MP4 (container format) — they are independent
-- Forgetting that H.264's intra-prediction is fundamentally different from JPEG's independent block coding — H.264 predicts from neighbors
+- Forgetting that H.264's intra-prediction is fundamentally different from JPEG's independent block coding — H.264 predicts from neighbours
 - Thinking QPEL is "free" — the 6-tap filter is computationally expensive
 - Not understanding that the standard specifies decoding (syntax), not encoding — encoders can use any motion estimation strategy
 - Overlooking the deblocking filter's role — it's applied *during* decoding (in-loop), not as a post-processing step

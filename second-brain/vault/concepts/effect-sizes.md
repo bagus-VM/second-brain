@@ -22,7 +22,7 @@ Statistical significance tells you *if* there's an effect; effect size tells you
 - **R²:** Proportion of variance explained. 0.01 (small), 0.09 (medium), 0.25 (large).
 - **Relative improvement:** (new - baseline) / baseline × 100%. E.g., "23% reduction in latency."
 
-## Key Properties
+## Key Properties / Complexity
 - Effect sizes are independent of sample size (unlike p-values).
 - They enable comparison across studies with different sample sizes.
 - They are essential for meta-analysis and power analysis.

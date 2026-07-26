@@ -49,14 +49,14 @@ MOS capacitor (the core of a [[mosfet]]):
 - For a gate area of 1 μm × 10 μm = 10 μm²: C_gate = 69 fF
 - With V_gs = 1.2 V: Q = CV = 69 × 10⁻¹⁵ × 1.2 = 82.8 fC of charge on the gate
 
-This gate capacitance determines switching speed (τ = C/I) and is why thinner oxides give faster transistors — but too thin causes quantum tunneling leakage.
+This gate capacitance determines switching speed (τ = C/I) and is why thinner oxides give faster transistors — but too thin causes quantum tunnelling leakage.
 
 ## Common Pitfalls
 - Assuming capacitors store charge "on" the plates — they actually store energy in the electric field between the plates
 - Forgetting that current through a capacitor is I = C(dV/dt), not I = V/R — there's no DC current through an ideal capacitor
 - Ignoring dielectric breakdown — exceeding the breakdown voltage causes permanent damage (this is relevant to [[avalanche-breakdown]] in semiconductor junctions)
 - Confusing capacitance (a fixed geometric/material property) with charge (which varies with voltage)
-- Neglecting parasitic capacitance in high-frequency circuits — every wire has some capacitance to its neighbors
+- Neglecting parasitic capacitance in high-frequency circuits — every wire has some capacitance to its neighbours
 
 ## Connections
 - [[mos-capacitor]] — The MOS structure (metal-oxide-semiconductor) that forms the gate of a [[mosfet]]
@@ -70,4 +70,4 @@ This gate capacitance determines switching speed (τ = C/I) and is why thinner o
 ## Open Questions
 - What are the fundamental limits of energy density in dielectric capacitors?
 - Can negative-capacitance ferroelectric gate stacks break the 60 mV/dec subthreshold swing limit?
-- How does quantum capacitance in 2D materials (graphene) affect MOS device modeling?
+- How does quantum capacitance in 2D materials (graphene) affect MOS device modelling?

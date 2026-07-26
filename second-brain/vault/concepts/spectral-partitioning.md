@@ -30,7 +30,7 @@ where D is the diagonal degree matrix and A is the adjacency matrix.
 
 **Time complexity:** O(n³) for full eigendecomposition; faster sparse approximations exist.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Principled**: based on the mathematical structure of the Laplacian
 2. **Global structure**: captures the graph's overall connectivity, not just local patterns
 3. **Natural 2-partition**: the Fiedler vector finds the sparsest cut (under certain conditions)
@@ -50,13 +50,13 @@ The Fiedler vector "sees" the global structure: even if two nodes are far apart 
 ## Common Pitfalls
 1. **Expensive for large graphs**: O(n³) for full eigendecomposition
 2. **Needs k in advance**: for k > 2, must specify the number of communities
-3. **Assuming the Fiedler vector always finds the best cut**: it finds the sparsest cut, which may not maximize [[modularity]]
+3. **Assuming the Fiedler vector always finds the best cut**: it finds the sparsest cut, which may not maximise [[modularity]]
 4. **Confusing spectral partitioning with spectral clustering**: spectral clustering uses eigenvectors as features for k-means; spectral partitioning uses the sign of the Fiedler vector directly
 
 ## Connections
 - [[graph-laplacian]] — the matrix being decomposed
 - [[algebraic-connectivity]] — λ₂, the second-smallest eigenvalue
-- [[normalized-cut]] — related objective that spectral methods approximately minimize
+- [[normalized-cut]] — related objective that spectral methods approximately minimise
 - [[conductance]] — related community quality measure
 - [[community-detection]] — the overarching problem
 - [[network-science-l04]] — lecture overview

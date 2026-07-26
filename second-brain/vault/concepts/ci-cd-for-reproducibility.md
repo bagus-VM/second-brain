@@ -27,7 +27,7 @@ A **reproducibility CI check** is a pipeline stage that:
 
 This transforms reproducibility from a manual verification step into an automated quality gate.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Automated verification**: No manual intervention needed; runs on every commit/PR.
 - **Independent builds**: Each build runs in a fresh, isolated container to catch environment leaks.

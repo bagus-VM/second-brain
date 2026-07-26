@@ -28,7 +28,7 @@ Two variants of the Laplacian:
 - Combinatorial: L = D - A
 - Normalised: L_sym = I - D^{-1/2} A D^{-1/2}
 
-## Key Properties
+## Key Properties / Complexity
 1. L is symmetric positive semi-definite with eigenvalues 0 = λ_1 ≤ λ_2 ≤ ... ≤ λ_n
 2. Multiplicity of λ = 0 equals the number of connected components
 3. The eigenvectors for the smallest non-zero eigenvalues are most informative (encode large-scale structure)

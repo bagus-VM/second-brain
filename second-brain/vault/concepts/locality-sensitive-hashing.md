@@ -9,7 +9,7 @@ prerequisites: ["[[curse-of-dimensionality]]", "[[signature-vectors]]"]
 ---
 
 ## One-line Summary
-Locality-sensitive hashing finds approximate nearest neighbors in high dimensions by hashing similar vectors into the same bucket with high probability, so search only examines a small candidate set instead of the whole database.
+Locality-sensitive hashing finds approximate nearest neighbours in high dimensions by hashing similar vectors into the same bucket with high probability, so search only examines a small candidate set instead of the whole database.
 
 ## Core Intuition
 Exact tree indexes lose to the [[curse-of-dimensionality]] in high dimensions. LSH gives up on exactness and bets on probability. If you hash vectors repeatedly, and the hash function sends nearby vectors to the same bucket more often than distant ones, then similar vectors will collide at least once across the runs. You only compare pairs that shared a bucket.
@@ -32,7 +32,7 @@ The trick is tuning. Split the signature matrix into bands and rows so that genu
 **Query flow**: hash the query vector with the same functions, retrieve the small set of vectors sharing a bucket, and search only that set instead of all N vectors.
 
 ## Key Properties / Complexity
-- **Approximate, not exact**: LSH returns near neighbors with high probability, not a guaranteed nearest neighbor.
+- **Approximate, not exact**: LSH returns near neighbours with high probability, not a guaranteed nearest neighbour.
 - **Candidate filtering is the win**: a query touches a small set of candidates instead of N points, so search is sublinear in practice.
 - **Tuning b and r controls the precision and recall trade-off**: more bands catch more similar pairs but also more false positives; more rows per band demand stricter agreement, cutting false positives but missing some true pairs.
 - **Space cost is the main drawback**: the original scheme builds hundreds of hash tables, which causes a huge space requirement.
@@ -67,7 +67,7 @@ Hash each band's 3-bit column signature to k buckets:
 Candidate pairs (shared bucket in at least one band): (C1,C2) from both bands, (C1,C4) from band 1, (C2,C4) from band 1, and (C3,C4) from band 2. C1 and C2 collide twice, so they are probably identical or near-identical. C3 and C4 collide only in band 2 and differ in band 1, so they are weaker candidates. The system then computes exact distances only on this candidate set rather than all pairs.
 
 ## Common Pitfalls
-- Treating LSH as exact nearest-neighbor search. It is approximate; the true nearest neighbor may miss every bucket.
+- Treating LSH as exact nearest-neighbour search. It is approximate; the true nearest neighbour may miss every bucket.
 - Picking b and r without thought. Too few bands miss similar pairs; too many drown the candidate set in false positives.
 - Ignoring the space blowup of the original scheme. Hundreds of hash tables are expensive; pick a variant (Multi-Probe, C2LSH, SK-LSH) to cut the count.
 - Forgetting that the query must be hashed with the same functions and bands used at build time.

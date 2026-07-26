@@ -23,7 +23,7 @@ Key difference in coverage:
 - Static: over-approximates — covers all behaviours of P (including impossible ones)
 - Dynamic: under-approximates — covers only the behaviours exercised by test cases
 
-## Key Properties
+## Key Properties / Complexity
 | Aspect | Static | Dynamic |
 |--------|--------|---------|
 | Execution required? | No | Yes |
@@ -58,7 +58,7 @@ def foo(a):
 - [[software-analysis]] — the overarching field
 - [[soundness-and-completeness]] — the formal framework for understanding the tradeoff
 - [[abstract-interpretation]] — the mathematical foundation enabling static analysis
-- [[hierarchy-of-analysis]] — deduction (static) vs observation (dynamic) vs induction (summarizing dynamic into static)
+- [[hierarchy-of-analysis]] — deduction (static) vs observation (dynamic) vs induction (summarising dynamic into static)
 - [[code-clones]] — clone detection can be both static (text/token matching) and dynamic
 
 ## Open Questions

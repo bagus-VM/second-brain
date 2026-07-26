@@ -12,7 +12,7 @@ prerequisites: []
 Divisive and agglomerative community detection methods produce dendrograms — tree structures where each horizontal cut yields a different clustering, and the analyst chooses the level.
 
 ## Core Intuition
-Both [[girvan-newman-algorithm|Girvan–Newman]] (divisive) and [[louvain-algorithm|Louvain]]/[[leiden-algorithm|Leiden]] (agglomerative) produce a **hierarchy** rather than a single flat partition. The dendrogram encodes all possible clusterings at once. The "right" number of communities depends on where you cut — this is a modeling decision, not an algorithm output.
+Both [[girvan-newman-algorithm|Girvan–Newman]] (divisive) and [[louvain-algorithm|Louvain]]/[[leiden-algorithm|Leiden]] (agglomerative) produce a **hierarchy** rather than a single flat partition. The dendrogram encodes all possible clusterings at once. The "right" number of communities depends on where you cut — this is a modelling decision, not an algorithm output.
 
 ## Formal Definition / Statement
 A **dendrogram** is a tree where:
@@ -24,7 +24,7 @@ A **dendrogram** is a tree where:
 **Agglomerative**: start with n singleton clusters, repeatedly merge the closest pair.
 **Divisive**: start with one cluster, repeatedly split or remove inter-cluster edges.
 
-## Key Properties
+## Key Properties / Complexity
 - Every horizontal cut is a valid clustering
 - The "right" cut is the analyst's choice — often guided by Q or domain knowledge
 - Different cuts reveal structure at different scales (nested communities)
@@ -37,7 +37,7 @@ A dendrogram with nodes A through G:
 - Cut at distance d2 → 2 clusters (e.g., {A,B,C,D} and {E,F,G})
 - Cut at max distance → 1 cluster (whole graph)
 
-Each level reveals different community structure. The Q-maximizing cut is typically the default choice.
+Each level reveals different community structure. The Q-maximising cut is typically the default choice.
 
 ## Common Pitfalls
 - The dendrogram doesn't tell you which cut is "right" — it shows all options

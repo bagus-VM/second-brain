@@ -12,7 +12,7 @@ prerequisites: []
 Graph partitioning divides a graph into a fixed number of balanced clusters — unlike community detection, it requires specifying k in advance and optimizes for balanced cut size.
 
 ## Core Intuition
-Graph partitioning asks: given a graph and a number k, how do we split it into k balanced clusters that minimize the total cut size? This is different from community detection, which discovers the number of communities automatically.
+Graph partitioning asks: given a graph and a number k, how do we split it into k balanced clusters that minimise the total cut size? This is different from community detection, which discovers the number of communities automatically.
 
 ## Formal Definition / Statement
 **Graph partitioning:**
@@ -24,10 +24,10 @@ Given a graph G = (V, E) and a number k, find a partition of V into k sets V₁,
 - [[spectral-partitioning]]: uses Laplacian eigenvectors
 
 **Difference from community detection:**
-- Partitioning: fixed k, balanced clusters, minimize cut size
-- Community detection: discover k, optimize [[modularity]] or [[conductance]]
+- Partitioning: fixed k, balanced clusters, minimise cut size
+- Community detection: discover k, optimise [[modularity]] or [[conductance]]
 
-## Key Properties
+## Key Properties / Complexity
 1. **Fixed k**: must specify the number of clusters in advance
 2. **Balanced clusters**: optimizes for equal-sized partitions
 3. **Cut-based objective**: minimizes edges between clusters

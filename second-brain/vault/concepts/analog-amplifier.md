@@ -70,5 +70,5 @@ Common-emitter BJT amplifier design:
 - [[diode]] — Diode biasing and temperature compensation in amplifier circuits
 
 ## Open Questions
-- How does this concept apply in practice with real-world constraints?
-- What are the deeper implications that aren't immediately obvious?
+- How do real-world amplifier design constraints (finite output swing, non-ideal transistor characteristics, PCB parasitics) affect the idealised model presented here?
+- What are the deeper implications of the gain-bandwidth tradeoff for multi-stage amplifier cascades?

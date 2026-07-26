@@ -35,7 +35,7 @@ The lecture mentions several techniques:
 - **Kneser-Ney smoothing**: best known method — uses continuation probabilities instead of raw counts
 - **Modified Kneser-Ney**: variant with multiple discount values
 
-## Key Properties
+## Key Properties / Complexity
 - Add-one is simple but too aggressive — it gives too much probability to unseen events
 - **Backoff** uses lower-order models when higher-order counts are zero (fall back from trigram to bigram to unigram)
 - **Interpolation** blends all orders simultaneously (weighted average)

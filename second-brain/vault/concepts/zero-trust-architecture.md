@@ -19,7 +19,7 @@ Zero Trust Architecture (ZTA) is a security framework based on the principle tha
 **Core Principles:**
 1. **All resources are accessed securely regardless of network location**: No distinction between "inside" and "outside" the network
 2. **Access is granted on a per-session basis**: No persistent trust; every request evaluated independently
-3. **Access is determined by dynamic policy**: Based on device health, user identity, behavior patterns, and context
+3. **Access is determined by dynamic policy**: Based on device health, user identity, behaviour patterns, and context
 4. **Enterprise monitors and measures integrity and security posture of all assets**: Continuous verification
 5. **Authentication and authorization are dynamic and strictly enforced before access is allowed**: No implicit trust
 
@@ -27,7 +27,7 @@ Zero Trust Architecture (ZTA) is a security framework based on the principle tha
 - **Device identity**: Every IoT device has a unique, verifiable cryptographic identity (certificate, TPM attestation)
 - **Microsegmentation**: Each device or device group is isolated; communication requires explicit policy
 - **Least privilege**: Devices can only access the specific resources they need (e.g., sensor can publish to its own topic only)
-- **Continuous verification**: Device health checked continuously (firmware attestation, behavior monitoring)
+- **Continuous verification**: Device health checked continuously (firmware attestation, behaviour monitoring)
 - **Encryption everywhere**: All communication encrypted, even within the "internal" network
 
 **Implementation Approaches:**

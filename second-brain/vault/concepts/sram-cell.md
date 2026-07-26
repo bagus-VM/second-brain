@@ -26,7 +26,7 @@ An SRAM cell is two cross-coupled CMOS inverters. Inverter A's output feeds inve
 - **Read:** Word line goes high → M5, M6 turn on → cell drives bit lines (BL and BL̄) → sense amplifier detects the small voltage difference
 - **Write:** Word line goes high → driver transistors force BL and BL̄ to desired values → overpower the cell's inverters → cell flips to new state
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Volatile:** loses data when power is removed
 - **Fast:** access time ~1-10 ns (no refresh needed, inverters actively drive lines)

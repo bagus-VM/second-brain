@@ -12,7 +12,7 @@ prerequisites: ["[[modularity]]"]
 Community detection finds subsets of nodes with dense internal connections and sparse external connections, using divisive, agglomerative, cut-based, or embedding-based strategies.
 
 ## Core Intuition
-A community is a subset S ⊆ V with relatively many edges inside S and relatively few edges leaving S. Different formal definitions instantiate this intuition differently. The most influential is [[modularity]], which compares observed internal density against a random null model. Since maximizing modularity is NP-hard (Brandes et al. 2008), all practical methods are polynomial-time heuristics.
+A community is a subset S ⊆ V with relatively many edges inside S and relatively few edges leaving S. Different formal definitions instantiate this intuition differently. The most influential is [[modularity]], which compares observed internal density against a random null model. Since maximising modularity is NP-hard (Brandes et al. 2008), all practical methods are polynomial-time heuristics.
 
 ## Formal Definition / Statement
 **Working definition**: A community is a subset S ⊆ V where the internal edge density is meaningfully higher than the surrounding graph.
@@ -20,12 +20,12 @@ A community is a subset S ⊆ V with relatively many edges inside S and relative
 Four families of approaches:
 1. **Divisive** (top-down): start with whole graph, repeatedly remove inter-community edges → [[girvan-newman-algorithm]]
 2. **Agglomerative** (bottom-up): start with each node alone, repeatedly merge pairs that increase [[modularity]] → [[louvain-algorithm]], [[leiden-algorithm]]
-3. **Cut-based**: minimize edge cuts or use spectral methods → [[graph-partitioning-cut-spectral]]
+3. **Cut-based**: minimise edge cuts or use spectral methods → [[graph-partitioning-cut-spectral]]
 4. **Embedding-based**: learn node representations, then cluster (node2vec + k-means, GNNs)
 
-## Key Properties
+## Key Properties / Complexity
 - Divisive and agglomerative methods produce a **hierarchy** (dendrogram), not a single flat partition
-- Where to cut the [[hierarchical-clustering|dendrogram]] is the analyst's modeling choice
+- Where to cut the [[hierarchical-clustering|dendrogram]] is the analyst's modelling choice
 - No fixed k is needed for Louvain/Leiden — the number of communities emerges from greedy moves
 - Cut-based methods (spectral, min-cut) typically require specifying k in advance
 - Embedding-based methods can handle overlapping memberships and node features

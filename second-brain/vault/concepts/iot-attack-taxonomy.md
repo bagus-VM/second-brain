@@ -61,6 +61,6 @@ This is an endless cycle; security is never "done."
 - [[information-assurance]] — IA properties violated by each attack type
 
 ## Open Questions
-- How do we prioritize defense against 9+ attack categories with limited resources?
+- How do we prioritize defence against 9+ attack categories with limited resources?
 - What new attack categories will emerge with IoT 2.0 (5G, AI, blockchain)?
 - How do we share threat intelligence across IoT domains?

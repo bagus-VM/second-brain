@@ -11,7 +11,7 @@ prerequisites: ["[[iot-device-fundamentals]]", "[[physical-unclonable-functions]
 Side-channel attacks extract cryptographic keys and internal state from IoT devices by measuring physical phenomena — power consumption, electromagnetic emissions, timing, and sound — rather than breaking the math.
 
 ## Core Intuition
-Cryptography is mathematically secure, but physical implementations leak information. A processor consuming different amounts of power when computing a 1 versus a 0 creates a measurable side channel. By analyzing thousands of power traces during cryptographic operations, an attacker can recover the secret key. IoT devices are especially vulnerable because they often lack side-channel countermeasures (they cost money and power) and because attackers can buy them for $5 and take them home to attack at leisure.
+Cryptography is mathematically secure, but physical implementations leak information. A processor consuming different amounts of power when computing a 1 versus a 0 creates a measurable side channel. By analysing thousands of power traces during cryptographic operations, an attacker can recover the secret key. IoT devices are especially vulnerable because they often lack side-channel countermeasures (they cost money and power) and because attackers can buy them for $5 and take them home to attack at leisure.
 
 ## Formal Definition / Statement
 Side-channel attacks exploit information leaked through physical implementation characteristics rather than mathematical weaknesses in cryptographic algorithms.
@@ -60,7 +60,7 @@ Side-channel attacks exploit information leaked through physical implementation 
 ## Worked Example
 
 **DPA attack on AES-128 in a smart card:**
-1. Attacker has physical access to IoT device (e.g., smart meter)
+1. Attacker has physical access to IoT device (e.g., smart metre)
 2. Connects oscilloscope probe to VCC pin and ground
 3. Sends 10,000 random plaintexts to the device, triggering AES encryption
 4. Records power trace for each encryption (10,000 traces × 10,000 samples each)

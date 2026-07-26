@@ -16,7 +16,7 @@ Charles Manski (1993) posed a brutal question for social-effects research: suppo
 
 1. **Endogenous effect**: your classmates' grades *cause* your grades (you learn from them, or compete with them).
 2. **Exogenous (contextual) effect**: your classmates' *background* (parental income, prior preparation) causes your grades — and their background also caused their grades, creating a spurious correlation.
-3. **Correlated effect**: you and your classmates share the same teacher, school, or neighborhood — the shared environment causes everyone's grades to be similar.
+3. **Correlated effect**: you and your classmates share the same teacher, school, or neighbourhood — the shared environment causes everyone's grades to be similar.
 
 Manski showed that with standard observational data (one snapshot, no experiment), these three effects are **linearly dependent** — you cannot separate them. The "reflection" metaphor: if person A's outcome depends on person B's, and B's depends on A's, the regression sees one blurred shadow and can't tell which way the light is coming from.
 
@@ -44,7 +44,7 @@ The data identifies $\frac{\alpha}{1-\beta}$, $\frac{\gamma + \delta\beta}{1-\be
   - **Partial identification**: Manski himself advocates bounding rather than point-estimating the effects.
   - **Network structure**: if peers are not all in the same symmetric group (e.g., each person has a different friend set), the reflection problem can be partially broken (Bramoullé, Djebbari, and Fortin 2009).
   - **Temporal variation**: if you observe the network over time and can assume peer effects are lagged, you can separate cause from effect.
-- **SUTVA violation amplifies the problem**: in networks, one person's treatment spills over to neighbors, creating an even harder identification problem.
+- **SUTVA violation amplifies the problem**: in networks, one person's treatment spills over to neighbours, creating an even harder identification problem.
 
 ## Worked Example
 You observe a classroom where students with high-achieving friends get higher grades. The regression of $y_i$ on $\bar{y}_{peers}$ gives a coefficient of 0.5. You conclude: "peer achievement raises your achievement by 0.5."

@@ -38,11 +38,11 @@ The FAIR Guiding Principles (Findable, Accessible, Interoperable, Reusable) were
 
 ### R -- Reusable
 - R1: (Meta)data are richly described with accurate and relevant attributes
-- R1.1: (Meta)data are released with a clear and accessible data usage license
+- R1.1: (Meta)data are released with a clear and accessible data usage licence
 - R1.2: (Meta)data are associated with detailed provenance
 - R1.3: (Meta)data meet domain-relevant community standards
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Stakeholders
 FAIR identifies five stakeholder groups:
@@ -65,10 +65,10 @@ FAIR directly supports [[computational-reproducibility-in-ml|computational repro
 
 ## Worked Example
 A climate research group publishes temperature data:
-- **Findable**: each dataset gets a DOI (persistent identifier). Metadata includes spatial/temporal coverage, measurement method, and the DOI itself. The dataset is indexed in a data catalog.
+- **Findable**: each dataset gets a DOI (persistent identifier). Metadata includes spatial/temporal coverage, measurement method, and the DOI itself. The dataset is indexed in a data catalogue.
 - **Accessible**: data is retrievable via HTTPS (open protocol). Metadata persists even if the dataset is deprecated.
 - **Interoperable**: data uses NetCDF format (standard in climate science) with CF conventions (community vocabulary). References link to related datasets (ocean salinity, atmospheric pressure).
-- **Reusable**: CC-BY 4.0 license. Provenance records show raw sensor data, calibration steps, and quality flags. Follows CMIP6 community standards.
+- **Reusable**: CC-BY 4.0 licence. Provenance records show raw sensor data, calibration steps, and quality flags. Follows CMIP6 community standards.
 
 ## Common Pitfalls
 - **FAIR is not open data.** FAIR data can be behind authentication (A1.2). "Accessible" means retrievable via a standard protocol, not necessarily publicly available.
@@ -88,4 +88,4 @@ A climate research group publishes temperature data:
 ## Open Questions
 - How do you measure FAIR compliance quantitatively? (Several metrics exist -- FAIRmetrics, F-UJI -- but none are universally accepted.)
 - How does FAIR apply to AI/ML models, not just data? (Model cards and datasheets are emerging as the FAIR equivalent for ML.)
-- What happens when FAIR principles conflict with privacy (GDPR)? (A1 says accessible, but GDPR says minimize. The resolution is authentication-gated access.)
+- What happens when FAIR principles conflict with privacy (GDPR)? (A1 says accessible, but GDPR says minimise. The resolution is authentication-gated access.)

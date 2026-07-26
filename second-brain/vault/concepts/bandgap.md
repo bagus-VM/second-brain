@@ -9,10 +9,10 @@ prerequisites: ["[[valence-band]]", "[[conduction-band]]"]
 ---
 
 ## One-line Summary
-The bandgap is the energy difference between the valence band and conduction band that determines whether a material is a conductor, semiconductor, or insulator.
+The bandgap is the energy difference between the top of the [[valence-band]] and the bottom of the [[conduction-band]] in a solid material. It determines whether a material is a conductor, semiconductor, or insulator.
 
 ## Core Intuition
-The bandgap is like a "jump" electrons must make to become free and carry current. In conductors, there's no jump needed (bands overlap). In semiconductors, it's a small jump (~1 eV). In insulators, it's a huge jump that electrons rarely make.
+The bandgap is like a "jump" electrons must make to become free and carry current. In conductors, there is no jump needed (bands overlap). In semiconductors, it is a small jump (~1 eV). In insulators, it is a huge jump that electrons rarely make.
 
 ## Formal Definition / Statement
 The bandgap (Eg) is the energy difference between the top of the [[valence-band]] and the bottom of the [[conduction-band]] in a solid material. It determines the material's electrical conductivity:
@@ -31,7 +31,7 @@ For [[silicon]], Eg ≈ 1.12 eV at room temperature.
 - Direct vs. indirect bandgap affects optical properties
 
 ## Worked Example
-Silicon (Eg ≈ 1.12 eV): At room temperature, thermal energy kT ≈ 0.026 eV. Since Eg >> kT, only a small fraction of electrons are thermally excited across the bandgap. This makes silicon a controlled semiconductor — not too conductive, not too insulating.
+Silicon (Eg ≈ 1.12 eV): At room temperature, thermal energy kT ≈ 0.026 eV. Since Eg ≫ kT, only a small fraction of electrons are thermally excited across the bandgap. This makes silicon a controlled semiconductor — not too conductive, not too insulating.
 
 Germanium (Eg ≈ 0.66 eV): Smaller bandgap means more thermal carriers → higher leakage current. This is why silicon is preferred over germanium in most applications.
 

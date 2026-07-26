@@ -15,7 +15,7 @@ If two people share a mutual friend, they are significantly more likely to becom
 Social networks are not random. When person A knows both B and C, there is an inherent opportunity, trust, and social pressure for B and C to meet. Over time, this mechanism causes graphs to accumulate triangles, shrink average distances, and produce increasingly clustered neighborhoods. Triadic closure is a *generative* theory — it predicts how edges appear over time, not just a static pattern.
 
 ## Formal Definition / Statement
-**Triadic Closure.** ==If a node A has edges to two distinct nodes B and C, the probability that an edge (B, C) forms over time is significantly higher than for two random nodes.==
+**Triadic Closure.** **If a node A has edges to two distinct nodes B and C, the probability that an edge (B, C) forms over time is significantly higher than for two random nodes.**
 
 An **open triad** is a triple (A, B, C) where edges A–B and A–C exist but B–C does not. Triadic closure predicts the B–C edge tends to appear.
 
@@ -24,7 +24,7 @@ An **open triad** is a triple (A, B, C) where edges A–B and A–C exist but B�
 - **Trust:** B and C trust each other via A's endorsement
 - **Social pressure:** It is awkward for A if B and C don't get along
 
-## Key Properties
+## Key Properties / Complexity
 - Predicts triangle accumulation over time
 - Predicts shrinking average path lengths
 - Predicts increasingly clustered neighborhoods for high-degree nodes
@@ -48,8 +48,8 @@ An **open triad** is a triple (A, B, C) where edges A–B and A–C exist but B�
 
 ## Connections
 - Leads to: [[strong-triadic-closure]] (adding edge labels to the closure model)
-- Measured by: [[clustering-coefficient]] (fraction of closed neighbor pairs)
-- Measured by: [[neighborhood-overlap]] (shared neighbors of edge endpoints)
+- Measured by: [[clustering-coefficient]] (fraction of closed neighbour pairs)
+- Measured by: [[neighborhood-overlap]] (shared neighbours of edge endpoints)
 - Foundation for: [[weak-ties-hypothesis]] (closure + edge labels → weak-tie theorem)
 - Empirical validation: Kossinets & Watts (2006) university email network
 

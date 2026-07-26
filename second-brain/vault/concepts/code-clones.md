@@ -30,7 +30,7 @@ Detection strategies:
 - **Graph matching**: AST, CFG, PDG (Type-1 through Type-3, some Type-4). Uses syntactic/semantic structure.
 - **Metrics-based**: compares code metrics rather than raw text.
 
-## Key Properties
+## Key Properties / Complexity
 - 7-23% of code in typical software systems is cloned
 - Clone detection is a prerequisite for clone management (refactoring, merging)
 - Different detection strategies trade off precision vs. type coverage

@@ -22,7 +22,7 @@ A **signed graph** is a pair (G, σ) where G = (V, E) is a graph and σ : E → 
 
 A **complete signed graph** has an edge (with some sign) between every pair of nodes. The [[balance-theorem]] applies specifically to complete signed graphs.
 
-## Key Properties
+## Key Properties / Complexity
 - The sign is a single bit per edge, yet it constrains global structure
 - Signed graphs are the foundation for [[structural-balance-theory]]
 - Triangle-level sign patterns determine network-level stability (see [[balanced-triads]])

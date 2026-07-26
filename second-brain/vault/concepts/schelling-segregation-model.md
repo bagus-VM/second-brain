@@ -9,27 +9,27 @@ prerequisites: [homophily]
 ---
 
 ## One-line Summary
-Schelling's threshold model shows that mild local preferences for similar neighbors (τ ≈ 1/3) can produce sharp global segregation — a powerful demonstration of how micro-level rules generate macro-level patterns.
+Schelling's threshold model shows that mild local preferences for similar neighbours (τ ≈ 1/3) can produce sharp global segregation — a powerful demonstration of how micro-level rules generate macro-level patterns.
 
 ## Core Intuition
-No one needs to be a segregationist for segregation to emerge. Schelling's insight (1971): if each agent just wants *some* fraction of their neighbors to be like them (say, 1/3), and unhappy agents relocate to where they're satisfied, the iterated process produces stark global separation. The key is the gap between local preference (mild) and global outcome (extreme). This is an emergent property: no agent intends the macro pattern, but the dynamics of local adjustment produce it anyway. In networks, "moving" becomes rewiring — dropping ties to dissimilar contacts and forming ties to similar ones.
+No one needs to be a segregationist for segregation to emerge. Schelling's insight (1971): if each agent just wants *some* fraction of their neighbours to be like them (say, 1/3), and unhappy agents relocate to where they're satisfied, the iterated process produces stark global separation. The key is the gap between local preference (mild) and global outcome (extreme). This is an emergent property: no agent intends the macro pattern, but the dynamics of local adjustment produce it anyway. In networks, "moving" becomes rewiring — dropping ties to dissimilar contacts and forming ties to similar ones.
 
 ## Formal Definition / Statement
-**Setup**: Agents of two types on a grid (or network). Each agent i has threshold τ ∈ [0,1] — minimum fraction of same-type neighbors for satisfaction.
+**Setup**: Agents of two types on a grid (or network). Each agent i has threshold τ ∈ [0,1] — minimum fraction of same-type neighbours for satisfaction.
 
 **Update rule**:
-1. Identify all unsatisfied agents (fraction of same-type neighbors < τ)
+1. Identify all unsatisfied agents (fraction of same-type neighbours < τ)
 2. Each unsatisfied agent moves to a random vacant cell (grid) or rewires a random tie (network)
 3. Repeat until no agent wants to move (equilibrium) or stable oscillation
 
 **Key result**: Even τ as low as 1/3 produces sharply segregated patterns.
 
 **Network version**:
-- "Neighbors" = graph-adjacent nodes
+- "Neighbours" = graph-adjacent nodes
 - "Moving" = dropping a tie to a dissimilar contact, forming a new tie to a similar contact
 - Threshold τ controls how much same-type concentration triggers rewiring
 
-## Key Properties
+## Key Properties / Complexity
 1. **Micro-macro gap**: mild local preferences (τ ≈ 1/3) produce extreme global segregation
 2. **Emergent pattern**: no agent intends segregation; it arises from iterated local adjustments
 3. **Threshold sensitivity**: small changes in τ can dramatically change the equilibrium pattern
@@ -39,11 +39,11 @@ No one needs to be a segregationist for segregation to emerge. Schelling's insig
 
 ## Worked Example
 **Grid example** (τ = 3/8):
-- Blue agent at (1,1) has 1/8 same-type neighbors — below τ = 3/8
-- Agent relocates to vacant cell (4,3), where 3/5 neighbors are same-type — satisfied
+- Blue agent at (1,1) has 1/8 same-type neighbours — below τ = 3/8
+- Agent relocates to vacant cell (4,3), where 3/5 neighbours are same-type — satisfied
 - Repeat across all unsatisfied agents until equilibrium
 
-**Empirical motivation**: Residential segregation in Chicago by race/ethnicity. Sharp neighborhood boundaries are consistent with Schelling dynamics: each household's mild preference for "some" same-type neighbors, iterated over decades of moves, produces stark global segregation.
+**Empirical motivation**: Residential segregation in Chicago by race/ethnicity. Sharp neighbourhood boundaries are consistent with Schelling dynamics: each household's mild preference for "some" same-type neighbours, iterated over decades of moves, produces stark global segregation.
 
 **Network implication**: If a platform suggests contacts similar to your current contacts, it acts as an automated Schelling rewirer — accelerating homophily-driven segregation beyond what individual preferences alone would produce.
 

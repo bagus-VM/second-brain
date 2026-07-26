@@ -32,7 +32,7 @@ This makes random graphs the natural comparison point: they have short paths but
 - Degree distribution: Binomial (approximately Poisson for large $n$, small $p$)
 - Giant component threshold: $k = 1$ (i.e., $p = 1/n$)
 
-## Key Properties
+## Key Properties / Complexity
 - **Threshold phenomena**: sharp transitions at critical values of $p$ (giant component, connectivity)
 - **Small-world**: $\bar{d} \sim \log n / \log k$ — but NOT clustered
 - **Homogeneous degree**: all nodes have approximately the same degree $\approx k$
@@ -43,7 +43,7 @@ This makes random graphs the natural comparison point: they have short paths but
 For $n = 1000$, $p = 0.01$ ($k \approx 10$):
 - Expected edges: $\binom{1000}{2} \times 0.01 \approx 4995$
 - Average path length: $\bar{d} \approx \frac{\log 1000}{\log 10} = 3$
-- Clustering: $C = 0.01$ (very low — most neighbor pairs are NOT connected)
+- Clustering: $C = 0.01$ (very low — most neighbour pairs are NOT connected)
 - Giant component: YES ($k = 10 \gg 1$)
 
 Compare to a real social network with $k = 10$: $C \approx 0.1\text{–}0.5$ (much higher), $\bar{d} \approx 3\text{–}5$ (similar).
@@ -66,4 +66,4 @@ Compare to a real social network with $k = 10$: $C \approx 0.1\text{–}0.5$ (mu
 ## Open Questions
 - How do random graph results change when edges are not independent (e.g., triadic closure)?
 - What is the "right" null model for networks with community structure?
-- How do directed random graphs differ in their threshold behavior?
+- How do directed random graphs differ in their threshold behaviour?

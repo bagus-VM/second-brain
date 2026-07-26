@@ -48,7 +48,7 @@ The dominance frontier DF(X) captures "where control flow from X might merge wit
 
 But placing a phi creates a *new* definition, which might need another phi at a higher merge point. Hence the iteration.
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|

@@ -12,7 +12,7 @@ prerequisites: ["[[p-n-junction]]", "[[depletion-region]]"]
 A diode is a two-terminal semiconductor device based on a p-n junction that allows current to flow primarily in one direction (from anode to cathode).
 
 ## Core Intuition
-A diode is an electrical "check valve" — it lets current flow easily in one direction (forward bias) but blocks it in the other (reverse bias). This one-way behavior comes from the [[depletion-region]] at the [[p-n-junction]].
+A diode is an electrical "check valve" — it lets current flow easily in one direction (forward bias) but blocks it in the other (reverse bias). This one-way behaviour comes from the [[depletion-region]] at the [[p-n-junction]].
 
 ## Formal Definition / Statement
 A diode is a two-terminal electronic component formed by a [[p-n-junction]]. The p-type side is the **anode** and the n-type side is the **cathode**.
@@ -50,7 +50,7 @@ Silicon diode with Is = 10⁻¹² A, n = 1, at 300K:
 
 ## Connections
 - [[p-n-junction]] — the physical structure of a diode
-- [[depletion-region]] — controls diode behavior
+- [[depletion-region]] — controls diode behaviour
 - [[zener-diode]] — special diode for voltage regulation
 - [[rectifier]] — converts AC to DC using diodes
 - [[clamper-circuit]] — shifts DC level using diodes

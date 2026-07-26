@@ -28,7 +28,7 @@ The maximum flow from s to t equals the minimum cut separating s and t.
 
 **Limitation:** minimizes raw cut size, not normalized density. This means the min-cut may be trivially small (cutting off a single node).
 
-## Key Properties
+## Key Properties / Complexity
 1. **Exact**: finds the true minimum cut
 2. **Polynomial time**: efficient algorithms exist
 3. **Raw cut size**: doesn't account for cluster size

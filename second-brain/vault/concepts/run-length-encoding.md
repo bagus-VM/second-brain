@@ -9,7 +9,7 @@ prerequisites: [lossless-vs-lossy-compression]
 ---
 
 ## One-line Summary
-Run-length encoding ==compresses data by replacing consecutive identical bytes (runs) with a single byte plus a count==, achieving high compression on data with long repetitive sequences.
+Run-length encoding **compresses data by replacing consecutive identical bytes (runs) with a single byte plus a count**, achieving high compression on data with long repetitive sequences.
 
 ## Core Intuition
 Many data types contain long stretches of identical values — think of a black-and-white fax image with large white areas, or the many zero-valued high-frequency DCT coefficients after JPEG quantization. Instead of storing each repeated byte individually, RLE stores the byte once along with how many times it repeats. The simpler the repetition pattern, the better RLE works.
@@ -31,7 +31,7 @@ Output: ABC!6DEFG!0H
 C has 10 repetitions, exceeds offset 4: stored as C!6 (10-4=6)
 G has 4 repetitions, equals offset 4: stored as G!0 (4-4=0)
 
-## Key Properties
+## Key Properties / Complexity
 - **Lossless**: decode(encode(x)) = x exactly
 - **Simple and fast**: O(n) encoding and decoding
 - **Best case**: data with very long runs → compression ratio up to ~259:3 (as in the example)
@@ -57,7 +57,7 @@ In JPEG specifically, after DCT and quantization, many high-frequency AC coeffic
 - Assuming RLE always compresses — for data with no runs (e.g., natural text, random data), RLE increases size
 - Forgetting the overhead: each run requires a flag character and count, so short runs (below offset) must be handled
 - Confusing JPEG's specialized RLE (which encodes zero-run + coefficient pairs) with generic byte-level RLE
-- Not realizing RLE is almost always combined with other methods (Huffman, arithmetic coding) in practice
+- Not realising RLE is almost always combined with other methods (Huffman, arithmetic coding) in practice
 - Thinking RLE is only for images — it's also used in fax transmission (ITU T.4), BMP files, and PCX format
 
 ## Connections

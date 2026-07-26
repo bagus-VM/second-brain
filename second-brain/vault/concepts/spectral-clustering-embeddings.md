@@ -23,7 +23,7 @@ The spectral gap λ_{k+1} - λ_k indicates the "natural" number of communities:
 - Large gap at position k → graph has exactly k clear clusters
 - Small gap → partition is ambiguous
 
-## Key Properties
+## Key Properties / Complexity
 1. Reduces graph clustering to linear algebra + k-means
 2. The spectral gap reveals the natural number of clusters
 3. Used in image segmentation (NCut), community detection, and graph partitioning

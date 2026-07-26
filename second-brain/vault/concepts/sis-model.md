@@ -8,7 +8,7 @@ last_updated: 2026-06-22
 prerequisites: []
 ---
 ## One-line Summary
-*The Susceptible-Infected-Susceptible model where nodes cycle between infected and healthy states, modeling diseases without permanent immunity.*
+*The Susceptible-Infected-Susceptible model where nodes cycle between infected and healthy states, modelling diseases without permanent immunity.*
 
 ## Core Intuition
 Some diseases don't give lasting immunity — you get sick, recover, and can get sick again (common cold, flu, STIs). The SIS model captures this: nodes alternate between susceptible (S) and infected (I) states forever. The key question is whether the disease becomes endemic (persists indefinitely) or dies out. On networks, the answer depends critically on the network structure.
@@ -17,7 +17,7 @@ Some diseases don't give lasting immunity — you get sick, recover, and can get
 The SIS model is a compartmental epidemic model where nodes are either Susceptible (S) or Infected (I).
 
 **Dynamics:**
-- Infected nodes infect susceptible neighbors with rate β per contact per unit time
+- Infected nodes infect susceptible neighbours with rate β per contact per unit time
 - Infected nodes recover and become susceptible again with rate γ
 - No immunity: recovered nodes can be reinfected
 
@@ -32,7 +32,7 @@ The SIS model is a compartmental epidemic model where nodes are either Susceptib
 
 **On networks (heterogeneous mean-field):**
 - dρ_k/dt = -γρ_k + βk(1 - ρ_k) Θ
-- Where ρ_k is the probability a degree-k node is infected, and Θ is the probability a random neighbor is infected
+- Where ρ_k is the probability a degree-k node is infected, and Θ is the probability a random neighbour is infected
 - Epidemic threshold: τ = γ/β = ⟨k⟩/⟨k²⟩
 - On scale-free networks: τ → 0 (any disease can persist)
 
@@ -44,13 +44,13 @@ The SIS model is a compartmental epidemic model where nodes are either Susceptib
 ## Key Properties / Complexity
 - Endemic equilibrium exists only when R₀ > 1
 - On scale-free networks, the threshold vanishes (τ → 0)
-- High-degree nodes are superspreaders: infected more often and infecting more neighbors
+- High-degree nodes are superspreaders: infected more often and infecting more neighbours
 - SIS is a Markov process on the network state space
 - Metastability: even below threshold, the disease can persist for O(N) time in finite networks
 - Reinfection creates positive feedback: more infected → more contacts → more infection
 
 ## Worked Example
-Modeling common cold spread in a university (1,000 students, contact network):
+Modelling common cold spread in a university (1,000 students, contact network):
 1. Parameters: β = 0.03/day, γ = 1/7 (7-day average illness)
 2. R₀ = 0.03 × 7 × ⟨k⟩ = 0.21 × 12 = 2.52 > 1 → endemic
 3. Simulate SIS on the student contact network:

@@ -28,7 +28,7 @@ The IoT Security course works through several application scenarios to make the 
 - **Retail IoT**: inventory, customer analytics, supply chain
 - **Wearables IoT**: fitness, health, AR/VR
 
-Each domain has its own security requirements. A smart meter in a basement has different threats than a satellite in orbit. A medical device in a hospital has different regulatory requirements than a consumer fitness tracker.
+Each domain has its own security requirements. A smart metre in a basement has different threats than a satellite in orbit. A medical device in a hospital has different regulatory requirements than a consumer fitness tracker.
 
 ## Formal Definition / Statement
 

@@ -34,7 +34,7 @@ Cross-entropy measures **how surprised** a model is by a document (in bits).
 
 **Relationship**: PP = 2^H — perplexity is 2 raised to the cross-entropy power.
 
-## Key Properties
+## Key Properties / Complexity
 - **Lower is better** for both metrics — a good model is less surprised
 - Perplexity = 1 means perfect prediction (zero surprise)
 - Perplexity = |V| (vocabulary size) means uniform random guessing

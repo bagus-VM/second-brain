@@ -14,7 +14,7 @@ Node d post-dominates node n (d pdom n) if every path from n to the exit node pa
 
 ## Core Intuition
 
-[[dominance|Dominance]] answers "what must I pass through to *reach* this node?" — post-dominance answers "what must I pass through *after* this node?" If every execution path from node n eventually goes through d, then d post-dominates n. The exit node post-dominates everything, just as the entry node dominates everything.
+[[dominance|Dominance]] answers "what must I pass through to *reach* this node?" — post-dominance answers "what must I pass through *after* this node?" ==If every execution path from node n eventually goes through d, then d post-dominates n==. The exit node post-dominates everything, just as the entry node dominates everything.
 
 ## Formal Definition / Statement
 
@@ -37,11 +37,11 @@ Given a [[control-flow-graph|CFG]] G = (N, E) with exit node n_f:
 3. Run the [[dominance]] algorithm on the reversed graph
 4. The result gives the post-dominator sets and post-dominator tree
 
-Best practice: start from nodes closest to the exit and work backwards for faster convergence.
+Best practice: ==start from nodes closest to the exit and work backwards for faster convergence.==
 
-## Key Properties
+## Key Properties / Complexity
 
-- Post-dominance is the exact dual/fmirror of dominance
+- Post-dominance is the exact dual/mirror of dominance
 - The post-dominator tree has the exit node as its root
 - If a node has two outgoing edges (branch node), its immediate post-dominator is the merge point — where control flow rejoins
 - Post-dominance is essential for computing [[control-dependence]]
@@ -84,14 +84,14 @@ Which nodes are post-dominated by 190?
 
 - Forgetting to reverse the CFG before computing — post-dominance is dominance of the reversed graph
 - Confusing post-dominance with dominance: they are different relations (one looks forward from entry, the other backward from exit)
-- Not recognizing that branch nodes and their post-dominators define the "merge points" in control flow
+- Not recognising that branch nodes and their post-dominators define the "merge points" in control flow
 
 ## Connections
 
-- [[dominance]] – post-dominance is the mirror; same algorithm, reversed graph
-- [[control-dependence]] – CDG construction requires the post-dominator tree
-- [[dominator-tree]] – the post-dominator tree is the analogous structure (exit as root instead of entry)
-- [[control-flow-graph]] – post-dominance is defined on the CFG
+- [[dominance]] — post-dominance is the mirror; same algorithm, reversed graph
+- [[control-dependence]] — CDG construction requires the post-dominator tree
+- [[dominator-tree]] — the post-dominator tree is the analogous structure (exit as root instead of entry)
+- [[control-flow-graph]] — post-dominance is defined on the CFG
 - Used in compiler optimisations: if a branch post-dominates a computation, that computation is only needed on one side of the branch
 
 ## Open Questions

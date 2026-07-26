@@ -35,7 +35,7 @@ Special cases:
 
 For histograms, the Lp distances are common but not always the best choice. Alternatives include chi-squared, KL-divergence, and Earth Mover's Distance.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### When to use L1 vs L2
 - **L1 is more robust to outliers**: a single large coordinate difference doesn't dominate

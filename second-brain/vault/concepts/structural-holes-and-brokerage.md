@@ -19,13 +19,13 @@ Brokerage confers two kinds of social capital:
 - **Control advantage**: the broker mediates flows between groups that cannot communicate directly.
 
 ## Formal Definition / Statement
-- **Embedded node**: high clustering coefficient — neighbors are themselves densely interconnected.
+- **Embedded node**: high clustering coefficient — neighbours are themselves densely interconnected.
 - **Broker (structural hole spanner)**: low clustering coefficient, high [[centrality-measures|betweenness centrality]] — sole link between two separated clusters.
 - The structural hole is the empty region in the network that the brokerage position spans (Burt, 1992).
 
-## Key Properties
-- Embedded nodes have redundant information (neighbors know each other)
-- Brokers have novel information (neighbors belong to different groups)
+## Key Properties / Complexity
+- Embedded nodes have redundant information (neighbours know each other)
+- Brokers have novel information (neighbours belong to different groups)
 - Removing a broker can disconnect otherwise separate communities
 - The same node can be both embedded locally and a broker globally
 

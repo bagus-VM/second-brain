@@ -31,7 +31,7 @@ GDPR (Regulation (EU) 2016/679) establishes principles for lawful processing of 
 
 For high-risk processing (most IoT systems), a **Data Protection Impact Assessment (DPIA)** is mandatory before deployment.
 
-## Key Properties
+## Key Properties / Complexity
 | Property | Detail |
 |----------|--------|
 | Scope | Any entity processing EU residents' personal data |

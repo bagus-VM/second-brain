@@ -9,18 +9,18 @@ prerequisites: [paths-walks-and-cycles, graph-fundamentals]
 ---
 
 ## One-line Summary
-==An Eulerian path traverses every edge exactly onc==e; an Eulerian circuit does so while returning to the start — existence depends purely on vertex degrees.
+**An Eulerian path traverses every edge exactly onc**e; an Eulerian circuit does so while returning to the start — existence depends purely on vertex degrees.
 
 ## Core Intuition
-==The Königsberg bridges problem (1736) asked: can you walk through the city crossing each bridge exactly once? Euler proved it impossible== — and in doing so, founded graph theory. The answer depends entirely on the degrees of the nodes: ==if too many nodes have odd degree, no such path exists.==
+**The Königsberg bridges problem (1736) asked: can you walk through the city crossing each bridge exactly once? Euler proved it impossible** — and in doing so, founded graph theory. The answer depends entirely on the degrees of the nodes: **if too many nodes have odd degree, no such path exists.**
 
 ## Formal Definition / Statement
-- **Eulerian Path**: A walk traversing every edge exactly once. ==Exists iff exactly 0 or 2 vertices have odd degree.==
-- **Eulerian Circuit**: ==An Eulerian path that starts and ends on the same vertex. Exists iff every vertex has even degree.==
+- **Eulerian Path**: A walk traversing every edge exactly once. **Exists iff exactly 0 or 2 vertices have odd degree.**
+- **Eulerian Circuit**: **An Eulerian path that starts and ends on the same vertex. Exists iff every vertex has even degree.**
 
 **Intuitive proof**: Think of rooms with doors (=edges). If a room has an even number of doors, you can enter and leave it an equal number of times. If it has an odd number of doors, you must start or end in that room. With no odd-door rooms, you must start and end at the same room.
 
-## Key Properties
+## Key Properties / Complexity
 - An Eulerian circuit is a special case of an Eulerian path (with 0 odd-degree vertices)
 - The existence condition is purely about [[neighbourhood-and-degree|degree]], not about the graph's topology otherwise
 - In Königsberg: all four land masses had odd degrees (3, 3, 3, 5), violating both conditions

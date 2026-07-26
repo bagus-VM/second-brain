@@ -34,7 +34,7 @@ H = (1/N) × Σᵢ surprisal(aᵢ)
 ```
 Cross-entropy is the **average surprisal** across the document.
 
-## Key Properties
+## Key Properties / Complexity
 - Surprisal is the building block of [[perplexity-and-entropy]]: perplexity = 2^(average surprisal)
 - In NLP, surprisal correlates with reading time (higher surprisal = slower reading)
 - In code, high surprisal locations may correspond to:

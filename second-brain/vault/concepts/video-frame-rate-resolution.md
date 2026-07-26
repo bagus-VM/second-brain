@@ -31,14 +31,14 @@ Video is a sequence of still images (frames) displayed rapidly enough to create 
 | 4K (UHD) | 3840×2160 or 4096×2160 | 24–60 fps | Consumer and cinema |
 | 8K (UHDTV) | 7680×4320 | 60 fps | Next-gen broadcast |
 
-## Key Properties
+## Key Properties / Complexity
 - **Interlacing artifact**: Fast-moving objects appear with a "comb" or "staircase" effect because odd and even lines are captured at slightly different times (wrong alignment effect).
 - **Temporal resolution vs. bandwidth**: Interlacing doubles perceived temporal resolution (50 fields/s vs 25 frames/s) using the same bandwidth — a clever analog-era optimization.
-- **Film vs. video frame rates**: Cinema uses 24 fps (film look); PAL TV uses 25 fps; NTSC uses 29.97 fps (slightly off 30 for historical color TV compatibility reasons).
+- **Film vs. video frame rates**: Cinema uses 24 fps (film look); PAL TV uses 25 fps; NTSC uses 29.97 fps (slightly off 30 for historical colour TV compatibility reasons).
 - **Deinterlacing**: Converting interlaced video to progressive for modern displays. Methods include line doubling, interpolation, and motion-adaptive algorithms.
 
 ## Worked Example
-Calculating uncompressed video data rate for 1080p at 30 fps with 24-bit color:
+Calculating uncompressed video data rate for 1080p at 30 fps with 24-bit colour:
 - Resolution: 1920 × 1080 = 2,073,600 pixels/frame
 - Bits per frame: 2,073,600 × 24 = 49,766,400 bits = ~5.93 MB/frame
 - Data rate: 5.93 MB × 30 fps = **177.9 MB/s** ≈ **1.42 Gbps**

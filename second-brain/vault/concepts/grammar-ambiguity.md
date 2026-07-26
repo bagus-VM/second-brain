@@ -22,7 +22,7 @@ A context-free grammar G is **ambiguous** if there exists at least one string w 
 
 An **unambiguous grammar** for the same language guarantees exactly one parse tree per string.
 
-## Key Properties
+## Key Properties / Complexity
 
 - Ambiguity is a property of the **grammar**, not the language — the same language can be described by both ambiguous and unambiguous grammars
 - The ambiguity problem (determining if a CFG is ambiguous) is **undecidable** in general

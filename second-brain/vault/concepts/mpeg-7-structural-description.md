@@ -43,7 +43,7 @@ The structural description uses the **SegmentType** (Segment DS) as its root ele
 - Connected segments (single region/object)
 - Non-connected segments (multiple regions treated as one entity)
 
-## Key Properties
+## Key Properties / Complexity
 - Spatial segments use SpatialMask with polygon coordinates
 - Temporal segments use MediaTimePoint and MediaDuration
 - Spatio-temporal segments track objects across frames
@@ -72,7 +72,7 @@ Image with spatial decomposition:
   </Image>
 </MultimediaContent>
 ```
-This describes an image decomposed into two still regions (AlexSR and AnaSR), each with its own color descriptor.
+This describes an image decomposed into two still regions (AlexSR and AnaSR), each with its own colour descriptor.
 
 ## Common Pitfalls
 - Confusing structural description with semantic description — structure is about "where/when", semantics is about "what it means"

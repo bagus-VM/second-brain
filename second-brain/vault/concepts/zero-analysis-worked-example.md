@@ -65,7 +65,7 @@ L_Z = L_ZI^Var, with pointwise order, join, meet, top, bottom.
 - Iterate: at each block, IN = ⊔ OUT(pred), OUT = transfer(IN)
 - Stabilises when no change
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Abstract addition table (lecture slide 66)
 ```

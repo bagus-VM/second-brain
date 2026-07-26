@@ -19,7 +19,7 @@ In Git, branching is cheap because a branch is just a 41-byte file containing a 
 - **Fast-forward merge**: If the target branch is an ancestor of the source branch, Git simply moves the target pointer forward — no new commit is created.
 - **Three-way merge**: Git finds the merge base (most recent common ancestor), computes diffs from base to each branch tip, and applies both sets of changes. If conflicts exist, the user must resolve them manually. The result is a merge commit with two parents.
 
-## Key Properties
+## Key Properties / Complexity
 - **Cheap creation**: Creating a branch is O(1) — just write a file.
 - **Isolation**: Changes on one branch don't affect others until merged.
 - **Non-destructive merging**: Merge commits preserve the complete history of both branches.

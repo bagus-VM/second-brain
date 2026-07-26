@@ -67,7 +67,7 @@ printf("Built on: %s\n", __DATE__);
 ```
 **Fix:** Same as `__TIME__` — `SOURCE_DATE_EPOCH` controls this too.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why these macros exist
 They serve legitimate purposes:

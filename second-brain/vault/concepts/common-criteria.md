@@ -25,7 +25,7 @@ EAL Levels:
 - **EAL2**: Structurally tested — some access to design docs
 - **EAL3**: Methodically tested and checked — development environment review
 - **EAL4**: Methodically designed, tested, and reviewed — most common for commercial products
-- **EAL5**: Semiformally designed and tested — formal security modeling
+- **EAL5**: Semiformally designed and tested — formal security modelling
 - **EAL6**: Semiformally verified design and tested — sophisticated attackers
 - **EAL7**: Formally verified design and tested — highest assurance, rare and expensive
 

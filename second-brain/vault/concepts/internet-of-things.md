@@ -61,6 +61,6 @@ The relationship between security investment, cost of damages, ease of use, user
 - [[resilience-iot]] — Maintaining operations under threat
 
 ## Open Questions
-- How do we standardize security across such heterogeneous ecosystems?
+- How do we standardise security across such heterogeneous ecosystems?
 - What is the "acceptable level of security" for critical infrastructure IoT?
 - How will the projected doubling of devices by 2030 affect the threat landscape?

@@ -34,7 +34,7 @@ Where do people meet? Through shared classes, clubs, workplaces, neighborhoods �
 | Focal | person → focus → person | New friendship | "We sit in the same elective and start talking" |
 | Membership | person → friend → focus | New membership | "My friend invites me to the robotics club" |
 
-## Key Properties
+## Key Properties / Complexity
 1. **Bipartite structure**: edges only between P and F, never within P or within F
 2. **Projection creates dense cliques**: a focus with s members adds C(s,2) edges in projection
 3. **Co-occurrence ≠ relationship**: shared context is opportunity, not confirmed tie

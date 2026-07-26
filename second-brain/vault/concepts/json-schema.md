@@ -30,7 +30,7 @@ Key keywords:
 - `pattern`: regex pattern for strings
 - `enum`: allowed values
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Schema keywords
 - **`type`**: specifies the JSON type. Can be a single type (`"type": "string"`) or an array of types (`"type": ["string", "null"]`).

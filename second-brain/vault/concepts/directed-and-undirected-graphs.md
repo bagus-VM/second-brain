@@ -9,16 +9,16 @@ prerequisites: [graph-fundamentals]
 ---
 
 ## One-line Summary
-==Undirected graphs model symmetric relationships (friendship)==, while directed graphs model asymmetric ones (following, citing).
+**Undirected graphs model symmetric relationships (friendship)**, while directed graphs model asymmetric ones (following, citing).
 
 ## Core Intuition
-The same set of nodes can yield very different models depending on whether edges have direction. Friendship is symmetric — if A is friends with B, then B is friends with A. But "A follows B" on Twitter does not imply "B follows A." The choice of directed vs. undirected is a fundamental modeling decision.
+The same set of nodes can yield very different models depending on whether edges have direction. Friendship is symmetric — if A is friends with B, then B is friends with A. But "A follows B" on Twitter does not imply "B follows A." The choice of directed vs. undirected is a fundamental modelling decision.
 
 ## Formal Definition / Statement
 - **Undirected graph**: An edge {u, v} connects two vertices without orientation. {u, v} = {v, u}. Source and target are not distinguished.
 - **Directed graph (digraph)**: An edge (u, v) ∈ E has strict orientation from u to v. (u, v) does **not** imply (v, u).
 
-## Key Properties
+## Key Properties / Complexity
 - In undirected graphs, edges have no arrows; the relation is symmetric
 - In directed graphs, edges have arrows indicating direction
 - The [[neighbourhood-and-degree|degree]] splits into **in-degree** and **out-degree** for directed graphs

@@ -21,11 +21,11 @@ Start with each node as its own community. Visit each node and move it to the ne
 3. **Aggregation**: collapse each community into a super-node; edges become weighted edges between super-nodes
 4. **Repeat** steps 2–3 on the coarser graph until modularity no longer improves
 
-**Candidate communities** for node v: the current communities of v's neighbors, plus v's current community.
+**Candidate communities** for node v: the current communities of v's neighbours, plus v's current community.
 
 **Complexity**: near-linear in m empirically — much faster than [[girvan-newman-algorithm]]'s O(|V|·|E|²).
 
-## Key Properties
+## Key Properties / Complexity
 - No pre-given k needed — community count emerges from greedy decisions
 - Scalable to graphs with millions of nodes and edges
 - Produces a hierarchy of aggregation levels

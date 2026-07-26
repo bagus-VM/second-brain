@@ -12,21 +12,21 @@ prerequisites: ["[[message-passing-framework]]"]
 Over-smoothing is the phenomenon where stacking too many GNN layers causes all node embeddings to collapse to nearly identical vectors, destroying discriminative power.
 
 ## Core Intuition
-Each GNN layer averages a node's representation with its neighbours'. After L layers, each node's embedding is an average over its L-hop neighbourhood. For typical graphs, L = 3-5 means every node has seen most of the graph. The embeddings converge to the same vector — the graph-level average.
+Each GNN layer averages a node's representation with those of its neighbours. After L layers, each node's embedding is an average over its L-hop neighbourhood. For typical graphs, L = 3-5 means every node has seen most of the graph. The embeddings converge to the same vector — the graph-level average.
 
 ## Formal Definition / Statement
 After L layers of message passing with mean aggregation:
-h_v^{(L)} ≈ (1/|V|) Σ_u h_u^{(0)}  for all v
+$$h_v^{(L)} \approx \frac{1}{|V|} \sum_{u \in V} h_u^{(0)} \quad \text{for all } v$$
 
 as L → ∞ on connected graphs. All nodes collapse to the same representation, making downstream tasks (classification, clustering) impossible.
 
 This happens already at L = 3-5 for typical benchmarks (citation networks, social networks).
 
-## Key Properties
-1. Deeper ≠ better: 1-3 layers is often optimal
+## Key Properties / Complexity
+1. **Deeper ≠ better**: 1–3 layers is often optimal
 2. Affects all GNN variants that use neighbourhood averaging (GCN, GraphSAGE, GAT)
 3. Root cause: repeated averaging smooths out node-specific information
-4. Related to random walks: after many steps, a random walk converges to the stationary distribution regardless of starting node
+4. Related to random walks: after many steps, a random walk converges to the stationary distribution regardless of the starting node
 
 ## Worked Example
 Citation network with 10 layers:

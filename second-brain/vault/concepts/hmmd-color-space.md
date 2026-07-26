@@ -9,30 +9,30 @@ prerequisites: [hsv-color-model, rgb-color-model]
 ---
 
 ## One-line Summary
-HMMD (Hue-Max-Min-Diff) is a color space designed to be closer to perceptual uniformity (how close a color space is perceived to the human eye) than HSV, using hue plus four derived intensity/chrominance components.
+HMMD (Hue-Max-Min-Diff) is a colour space designed to be closer to perceptual uniformity (how close a colour space is perceived to the human eye) than HSV, using hue plus four derived intensity/chrominance components.
 
 ## Core Intuition
-HSV has known perceptual non-uniformities. HMMD improves on it by decomposing intensity into multiple components that better correlate with human perception. Max indicates darkness, Min indicates pallor, Diff indicates chrominance (proximity to a pure color), and Sum represents overall brightness.
+HSV has known perceptual non-uniformities. HMMD improves on it by decomposing intensity into multiple components that better correlate with human perception. Max indicates darkness, Min indicates pallor, Diff indicates chrominance (proximity to a pure colour), and Sum represents overall brightness.
 
 ## Formal Definition / Statement
-Given an RGB color:
-- **Hue**: Same as in HSV, derived from the dominant color direction
-- **Max** = ==max(R, G, B) — indicates how dark the color is (higher = less dark)==
-- **Min** = ==min(R, G, B) — indicates how pale the color is (higher = more pale)==
+Given an RGB colour:
+- **Hue**: Same as in HSV, derived from the dominant colour direction
+- **Max** = ==max(R, G, B) — indicates how dark the colour is (higher = less dark)==
+- **Min** = ==min(R, G, B) — indicates how pale the colour is (higher = more pale)==
 - **Diff** = ==Max − Min — indicates chrominance; 0 = achromatic (gray), higher = more saturated==
-- **Sum** = ==(Max + Min) / 2 — represents overall brightness==
+- **Sum** = **(Max + Min) / 2 — represents overall brightness**
 
-## Key Properties
+## Key Properties / Complexity
 - Closer to perceptual uniformity than HSV/HSL
 - Diff component directly measures saturation intensity
-- Used in MPEG-7 color descriptor standard for image/video retrieval
+- Used in MPEG-7 colour descriptor standard for image/video retrieval
 - Decomposition into Max, Min, Diff gives more control over perceptual attributes
 
 ## Worked Example
 For RGB(200, 100, 50):
 - Max = 200, Min = 50, Diff = 150, Sum = 125
 - Hue ≈ 20° (orange-red)
-- The high Diff value indicates a strongly saturated color; high Max/low Min indicates a moderately bright, warm color
+- The high Diff value indicates a strongly saturated colour; high Max/low Min indicates a moderately bright, warm colour
 
 ## Common Pitfalls
 - Confusing HMMD with HSV — the key difference is the decomposition of intensity into Max/Min/Diff/Sum rather than a single Value
@@ -45,4 +45,4 @@ For RGB(200, 100, 50):
 - Less perceptually uniform than [[lab-color-space]] but simpler
 
 ## Open Questions
-- Why did MPEG-7 choose HMMD over L*a*b* for color descriptors?
+- Why did MPEG-7 choose HMMD over L*a*b* for colour descriptors?

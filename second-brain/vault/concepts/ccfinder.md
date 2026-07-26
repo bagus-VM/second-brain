@@ -22,7 +22,7 @@ CCFinder's algorithm (from the lecture):
 
 The key innovation is **parameterized tokenization** — replacing all identifiers with placeholder tokens (`$p`) so that structurally identical code with different variable names is detected as a clone.
 
-## Key Properties
+## Key Properties / Complexity
 - Operates at the **token level** — handles type-1 and type-2 clones
 - Parameterized abstraction (`$p` for identifiers) enables type-2 detection
 - Converts entire programs to flat token sequences (lossy — whitespace, comments discarded)
