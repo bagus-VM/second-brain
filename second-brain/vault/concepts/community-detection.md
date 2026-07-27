@@ -4,7 +4,7 @@ tags: [concept, network-science, semester-1]
 course: "Network Science"
 source_count: 1
 status: current
-last_updated: 2026-06-01
+last_updated: 2026-07-27
 prerequisites: []
 ---
 
@@ -37,6 +37,27 @@ Consider a workplace graph with two dense teams (A and B) connected by a single 
 - The Dia↔Fin edge is the bridge between communities
 
 The algorithm discovers this boundary without being told the team labels — it finds the structural gap.
+
+## Algorithm Comparison
+
+Four widely-taught community detection algorithms, compared along the dimensions that matter for choosing one in practice.
+
+| Dimension | [[girvan-newman-algorithm\|Girvan–Newman]] | Greedy Modularity Maximisation | [[louvain-algorithm\|Louvain]] | [[leiden-algorithm\|Leiden]] |
+|---|---|---|---|---|
+| **Approach** | Divisive: remove highest-betweenness edges one by one | Agglomerative: merge community pairs greedily by ΔQ | Agglomerative: local node moves + community aggregation | Agglomerative: local moves + refinement + aggregation |
+| **Objective** | Maximise Q at best dendrogram cut | Maximise Q greedily | Maximise Q greedily | Maximise Q (or CPM) with connectedness guarantee |
+| **Complexity** | O(\|V\|·\|E\|²) — recompute betweenness each removal | O(\|E\|·\|V\|) typical for efficient implementations | Near-linear in \|E\| empirically | Near-linear, small overhead over Louvain |
+| **Scalability** | Small graphs only (hundreds of nodes) | Moderate (thousands of nodes) | Millions of nodes/edges | Millions of nodes/edges |
+| **Hierarchy** | Full dendrogram — every cut is a partition | Dendrogram of merges | Implicit multi-level hierarchy | Implicit multi-level hierarchy |
+| **Determinism** | Deterministic (ties aside) | Deterministic (ties aside) | Non-deterministic — depends on node visit order | Non-deterministic — depends on node visit order |
+| **k given?** | No — choose best cut by Q | No — merges until merge stops improving Q | No — emerges from greedy moves | No — emerges from greedy moves + refinement |
+| **Community quality** | High quality on small graphs | Good, but greedy merges can lock in early mistakes | Can produce internally disconnected communities | Guarantees connectedness via refinement |
+| **Resolution limit** | Inherited from Q (dendrogram cut) | Yes — merges small communities | Yes — merges small communities | Yes, but refinement mitigates some cases |
+| **Best for** | Teaching, small networks, theoretical clarity | Medium graphs where a simple merge suffices | Large networks, standard research default | Large networks needing reliable, connected communities |
+
+Girvan–Newman is the reference algorithm textbooks teach first because the edge-betweenness mechanic is easy to explain and the dendrogram makes every intermediate partition visible. Greedy modularity maximisation (Clauset, Newman, Moore 2004) is the middle ground: faster than GN, slower than Louvain, and it can lock in bad early merges without any repair step. Louvain is the practical default for large graphs. Leiden is what you reach for when you need Louvain's speed but cannot tolerate disconnected communities.
+
+All four are heuristics — Q maximisation is NP-hard (Brandes et al. 2008), so none can promise the global optimum.
 
 ## Common Pitfalls
 1. **Assuming communities are unique**: different methods and parameters yield different partitions
