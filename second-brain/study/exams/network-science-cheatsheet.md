@@ -3,7 +3,7 @@ title: "Network Science — Exam Cheatsheet"
 tags: [network-science, exam, cheatsheet, semester-1]
 course: "Network Science"
 status: current
-last_updated: 2026-07-24
+last_updated: 2026-07-27
 ---
 
 # Network Science — Exam Cheatsheet
@@ -32,11 +32,34 @@ All formulas written out with full variable names for quick recall.
 | In-degree(v) = \|{u : (u,v) ∈ E}\| | Number of edges pointing TO v (directed graphs) |
 | Out-degree(v) = \|{u : (v,u) ∈ E}\| | Number of edges pointing FROM v (directed graphs) |
 
+### Density
+| Formula | Plain English |
+|---------|--------------|
+| density = 2\|E\| / (\|V\|(\|V\| − 1)) | Actual edges / possible edges for undirected simple graph |
+| density = \|E\| / (\|V\|(\|V\| − 1)) | For directed graphs (no factor of 2) |
+| density = 1 → complete graph | Every possible edge present |
+| density = 0 → no edges | Isolated nodes only |
+
 ### Neighbourhood
 | Term | Definition |
 |------|-----------|
 | N(v) = {u ∈ V : {u, v} ∈ E} | The set of all nodes directly connected to v |
 | Bipartite graph | G = (U, V, E) — edges only between U and V, never within U or within V |
+
+### Walk, Path, Cycle Hierarchy
+| Term | Definition |
+|------|-----------|
+| **Walk** | Any sequence of nodes connected by edges (nodes and edges may repeat) |
+| **Path** | Walk with no repeated nodes (edges also don't repeat) |
+| **Cycle** | Path that returns to its starting node (no repeated nodes except start = end) |
+| **Trail** | Walk with no repeated edges (nodes may repeat) |
+
+### Eulerian Conditions
+| Condition | Meaning |
+|-----------|---------|
+| Eulerian **circuit** exists ⟺ every vertex has **even** degree | Traverse every edge exactly once and return to start |
+| Eulerian **path** exists ⟺ exactly **0 or 2** vertices have odd degree | Traverse every edge exactly once (circuit if 0 odd, path if 2 odd) |
+| Königsberg: all 4 vertices odd → no Eulerian path or circuit | |
 
 ---
 
@@ -48,6 +71,10 @@ All formulas written out with full variable names for quick recall.
 | dist(u, v) = ∞ if no path exists | Unreachable nodes have infinite distance |
 | diam(G) = max_{u,v ∈ V} dist(u, v) | **Diameter** = the longest shortest path in the entire graph |
 | d̄ = (1 / \|V\|(\|V\|-1)) Σ_{u≠v} d(u, v) | **Average shortest-path distance** = mean of all pairwise distances |
+| ecc(v) = max_{u ∈ V} d(v, u) | **Eccentricity** of v = distance to the farthest node from v |
+| radius = min_{v ∈ V} ecc(v) | **Radius** = minimum eccentricity (the "most central" node's farthest distance) |
+| diameter = max_{v ∈ V} ecc(v) | **Diameter** = maximum eccentricity = longest shortest path |
+| centre = {v : ecc(v) = radius} | **Centre** = nodes whose eccentricity equals the radius |
 
 ### Connected Components
 | Term | Definition |
@@ -62,6 +89,15 @@ All formulas written out with full variable names for quick recall.
 |------|-----------|
 | **Bridge** | An edge whose removal increases the number of connected components (lies on no cycle) |
 | **Local bridge** | An edge (u, v) where N(u) ∩ N(v) = ∅ — endpoints share NO common neighbors |
+
+### Graph Search Algorithms
+| Algorithm | Key Property | Complexity |
+|-----------|-------------|------------|
+| **BFS** (Breadth-First Search) | Finds shortest paths in UNWEIGHTED graphs; explores layer by layer (FIFO queue); Layer k = all nodes at distance exactly k | O(\|V\| + \|E\|) |
+| **Dijkstra** | Finds shortest paths in WEIGHTED graphs with non-negative weights; uses min-heap priority queue | O((\|V\| + \|E\|) log \|V\|) |
+| **Bellman-Ford** | Shortest paths with NEGATIVE weights (no negative cycles) | O(\|V\| · \|E\|) |
+| BFS = Dijkstra when all edge weights = 1 | | |
+| BFS from node s discovers all nodes at distance k before any at distance k+1 | | |
 
 ---
 
@@ -309,6 +345,22 @@ All formulas written out with full variable names for quick recall.
 | Giant component threshold: k = 1 (i.e. p = 1/n) | Below this: many small components; above: one giant component |
 | Connectivity threshold: p > ln(n)/n | Above this: graph is almost surely connected |
 
+### Small-World Index (σ)
+| Formula | Plain English |
+|---------|--------------|
+| σ = (C / C_rand) / (L / L_rand) | Small-world index = (clustering ratio) / (path length ratio) |
+| C = average clustering of real graph | C_rand = average clustering of random graph with same n and m |
+| L = average shortest path length of real graph | L_rand = average shortest path length of the random graph |
+| σ >> 1 (typically > 3) → small-world | High clustering + short paths |
+| σ ≈ 1 → random-like | No small-world structure |
+
+### Average Path Length Estimation
+| Formula | Plain English |
+|---------|--------------|
+| d ≈ log(N) / log(k) | Random-graph approximation: N = nodes, k = average degree |
+| Example: N = 10⁹, k = 200 → d ≈ 20.7/5.3 ≈ 3.9 hops | |
+| Real networks often slightly longer than random prediction | Clustering creates dead ends that trap walks |
+
 ### Watts–Strogatz Small-World Model
 | Property | Value |
 |----------|-------|
@@ -336,6 +388,16 @@ All formulas written out with full variable names for quick recall.
 | Hubs act as shortcuts | Distances shorter than log(n)/log(k) |
 | Robust to random failure | Random removal rarely hits hubs |
 | Vulnerable to targeted attack | Removing hubs fragments the network |
+
+### Kleinberg's Navigability Theorem
+| Formula | Plain English |
+|---------|--------------|
+| Grid: d-dimensional grid + long-range links with probability ∝ r^(−α) | Long-range links decay with distance r |
+| Greedy routing achieves O((log N)²) delivery **iff α = d** | Exponent must equal grid dimension for navigability |
+| α < d: links too uniform — not enough local bias | Greedy routing gets lost |
+| α > d: links too clustered — not enough reach | Greedy routing can't escape locally |
+| 2D grid: α = 2 is optimal | Small-world but ALSO efficiently navigable |
+| Key insight: short paths exist (small-world) but aren't always locally findable | Navigability requires the right link distribution |
 
 ### Distance Formulas Comparison
 | Network Type | Average Path Length |
@@ -585,6 +647,33 @@ All formulas written out with full variable names for quick recall.
 | Socialization: B → A | Tie causes attribute |
 | Confounding: C → A and C → B | Shared environment causes both |
 | Cross-sectional data cannot distinguish these | Need longitudinal/experimental design |
+
+---
+
+## 18. SCHELLING SEGREGATION MODEL
+
+| Term | Definition |
+|------|-----------|
+| **Schelling model** | Agents on a grid, each with a type and a threshold τ for same-type neighbours |
+| Threshold τ ≈ 30–40% | Agent is satisfied if ≥ τ fraction of neighbours are same-type; otherwise moves |
+| Key result | **Mild** individual preferences (30–40%) cascade into **strong** global segregation |
+| Mechanism | One agent's move changes neighbourhood composition → triggers further moves → cascade |
+| Macro >> micro | Aggregate segregation far exceeds any individual's preference |
+| **Identification problem** | Cannot infer individual preferences from aggregate outcomes |
+| Recommendation algorithms | Act as automated Schelling rewirers, accelerating amplification |
+
+---
+
+## 19. THE SIX GAPS OF THE COURSE
+
+| Gap | Lectures | Core Tension |
+|-----|----------|-------------|
+| **Computational** | L03–L04 | NP-hard ideals (modularity max, frustration index) vs. polynomial heuristics |
+| **Causal** | L05 | Selection vs. socialisation — mechanism unidentifiable from cross-sectional snapshots |
+| **Structural** | L06 | Balance theory assumes complete graphs, but real data is sparse |
+| **Navigational** | L07 | Short paths exist (small-world) but aren't locally findable without the right structure (Kleinberg) |
+| **Process-Structure** | L08 | Same network structure produces different outcomes for different spreading processes |
+| **Temporal** | L08 | Static aggregation hides causal ordering, creating phantom paths |
 
 ---
 

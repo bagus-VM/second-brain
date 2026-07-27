@@ -4,6 +4,26 @@
 > Format: `## [YYYY-MM-DD] OPERATION | title | details`
 > When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
 
+## [2026-07-27] UPDATE | Network Science Cheatsheet — gap fill from mock exam cross-reference | 10 concepts added
+
+- Cross-referenced cheatsheet against both mock exams (Mock 1: 46 MCQ + 5 essay, Mock 2: 48 MCQ + 5 essay). Found 10 concepts tested in the mocks but missing from the cheatsheet. Patched all gaps:
+- §1 GRAPH FUNDAMENTALS: Added density formula (2|E|/(|V|(|V|-1))), walk/path/cycle/trail hierarchy, Eulerian path/circuit conditions (even degree / 0 or 2 odd vertices, Königsberg).
+- §2 PATHS: Added eccentricity, radius, centre definitions (ecc(v) = max d(v,u), radius = min ecc, centre = {v : ecc(v) = radius}).
+- §2 CONNECTIVITY: Added BFS / Dijkstra / Bellman-Ford comparison table (shortest path algorithms — unweighted / non-negative weighted / negative weights).
+- §9 RANDOM GRAPHS: Added small-world index sigma formula (sigma = (C/C_rand)/(L/L_rand), sigma >> 1 means small-world), average path length estimation (d approx log(N)/log(k) with N=10^9, k=200 example).
+- §9: Added Kleinberg's navigability theorem (greedy routing O((log N)^2) iff alpha = d; 2D grid alpha = 2 optimal; navigability != small-world).
+- §18 NEW: Schelling segregation model — mild preferences (30-40%) cascade into strong global segregation, identification problem.
+- §19 NEW: Six gaps of the course — computational, causal, structural, navigational, process-structure, temporal.
+- last_updated bumped to 2026-07-27.
+
+## [2026-07-27] PREP | Mock Exam 2 — Network Science | 1 file, 48 MCQ + 5 essay
+
+- `study/exams/mock-exam-network-science-2026-07-27.md` — second mock exam, 50% Antwort-Wahl-Verfahren (48 questions across 8 sections) + 50% essay (5 open questions with model answers). Deliberately covers areas Mock 1 underweighted: spectral partitioning (Fiedler vector, Laplacian eigenmaps), Erdős–Rényi thresholds (giant component, connectivity), SIS vs SIR distinction, temporal networks (time-respecting paths, phantom paths), hierarchical clustering (dendrogram cut), homophily index r computation, cycle criterion for incomplete graphs, power iteration for eigenvector centrality.
+- Fresh graph examples: 3×2 grid for spectral bisection (E1), 6-node signed graph for camp partitioning (E5), 3-group researcher network for E-I + homophily r (E4).
+- Key traps planted: λ₂ = 0 ⟺ disconnected (not λ₁) (Q22), bipartite ⟺ no odd cycles (Q4), ER degree ≈ Poisson not power-law (Q6e false), signed Laplacian tests F=0 but doesn't compute F (Q37d false), BA distances log(N)/log(log(N)) (Q41), time-respecting paths need chronological edge order (Q46b), complex contagion needs clustered seeding not bridges (E3c).
+
+---
+
 ## [2026-07-26] PREP | Mock Exam Network Science | 1 file, 46 MC + 5 essay
 
 - `study/exams/mock-exam-network-science-2026-07-26.md` — 50% Antwort-Wahl-Verfahren (46 questions across 8 sections: Fundamentals & Graph Theory, Centrality, Strong/Weak Ties, Communities, Social Context, Structural Balance, Small-World, Network Dynamics) + 50% essay (5 open questions with model answers). Scope: Lectures 1-8, Exercise Sheets 1-8. Solutions in `> [!note]- Solution` callouts per vault convention.

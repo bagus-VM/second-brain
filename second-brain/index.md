@@ -405,6 +405,7 @@
 | [[network-science-exam-battle-plan]] | Day-by-day battle schedule Jul 20-27, coverage map, Professor White mock exam | current |
 | [[network-science-cheatsheet]] | Condensed cheatsheet: all formulas, definitions, algorithms from L01-L08 | current |
 | [[mock-exam-network-science-2026-07-26]] | Mock exam: 50% Antwort-Wahl-Verfahren (46 Q) + 50% essay (5 Q), solutions in callouts | current |
+| [[mock-exam-network-science-2026-07-27]] | Mock exam 2: 48 MCQ + 5 essay, emphasises spectral methods, ER thresholds, SIS, temporal networks, homophily index r | current |
 
 ---
 
