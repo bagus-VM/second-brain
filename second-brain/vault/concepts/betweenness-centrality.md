@@ -22,7 +22,7 @@ where:
 - σ_st = number of shortest paths from s to t
 - σ_st(v) = number of shortest paths from s to t that pass through v
 
-**Normalized form:** divide by (n-1)(n-2)/2 for undirected graphs (number of pairs excluding v).
+**Normalized form:** ==divide by (n-1)(n-2)/2 for undirected graphs== (number of pairs excluding v).
 
 **Range:** 0 to 1 (normalized). 1 means all shortest paths between other nodes use v.
 

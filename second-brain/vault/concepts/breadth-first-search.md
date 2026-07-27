@@ -23,9 +23,9 @@ BFS explores a graph layer by layer using a FIFO queue, guaranteeing shortest pa
    - For each neighbour v of u: if v is not visited, mark v as visited and add v to the back of Q
 
 ## Key Properties / Complexity
-- Uses a FIFO (First-In, First-Out) queue
+- ==Uses a FIFO (First-In, First-Out)== queue
 - Discovers nodes strictly layer by layer
-- Runs in **O(|V| + |E|)** time — each vertex and edge visited at most once
+- Runs in ==**O(|V| + |E|)**== time — each vertex and edge visited at most once
 - Guarantees **shortest paths** in unweighted graphs
 - Works identically on [[directed-and-undirected-graphs|directed graphs]] — follows edges in their given direction
 - Does **NOT** give shortest paths in [[weighted-graphs|weighted graphs]] — use [[dijkstras-algorithm|Dijkstra]] instead

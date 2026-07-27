@@ -35,13 +35,13 @@ x^(t+1) = Ax^(t) / ||Ax^(t)||
 PR(v) = (1-α)/n + α Σ_{u→v} PR(u)/outdeg(u)
 
 - Random surfer: with probability α, follow a link; with probability 1-α, jump to a random page
-- Range: PageRank scores are probabilities (sum to 1)
+- Range: PageRank ==scores are probabilities (sum to 1)==
 
 ## Key Properties / Complexity
 1. **Recursive prestige**: importance flows from important neighbours
 2. **Leading eigenvector**: the centrality vector is the eigenvector of the largest eigenvalue
 3. **Power iteration**: converges quickly for connected graphs
-4. **PageRank**: adds a damping factor to handle dangling nodes and disconnected components
+4. **PageRank**: ==adds a damping factor to handle dangling nodes and disconnected components==
 5. **Cheatable**: link farms can manufacture endorsements (unlike harmonic centrality)
 
 ## Worked Example
