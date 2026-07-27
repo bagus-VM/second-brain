@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Program Dependence Graph (PDG)
 
 ## One-line Summary
 
@@ -147,3 +146,7 @@ Now `y` is not used in either branch. PDG edges from 2 go nowhere useful.
 3. What is the relationship between PDGs and **program dependency networks** in machine learning?
 4. How do we visualize large PDGs effectively? (Graph layout, abstraction)
 5. Can PDGs capture **information flow** for security analysis? (Tainted data, declassification)
+
+## Formal Definition / Statement
+
+*To be filled.*

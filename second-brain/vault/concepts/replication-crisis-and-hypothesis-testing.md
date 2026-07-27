@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [p-values, statistical-significance, effect-sizes]
 ---
 
-# Replication Crisis and Hypothesis Testing
 
 ## One-line Summary
 The replication crisis is largely driven by misuse of hypothesis testing: p-hacking, publication bias, and overreliance on p < 0.05 without considering effect sizes or power.

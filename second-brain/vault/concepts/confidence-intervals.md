@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [statistical-significance]
 ---
 
-# Confidence Intervals
 
 ## One-line Summary
 A confidence interval gives a range of plausible values for a parameter, providing more information than a binary significant/not-significant decision.

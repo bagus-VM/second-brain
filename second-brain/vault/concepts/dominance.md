@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-==Node a dominates node b (a dom b) if every path from the entry node to b passes through a== — a foundational relation for [[control-flow-graph|CFG]] analysis, loop identification, and SSA construction.
+**Node a dominates node b (a dom b) if every path from the entry node to b passes through a** — a foundational relation for [[control-flow-graph|CFG]] analysis, loop identification, and SSA construction.
 
 ## Core Intuition
 

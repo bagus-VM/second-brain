@@ -151,3 +151,7 @@ No server to set up. No configuration. The file *is* the experiment.
 - For large-scale experiments (terabytes of data), is SQLite still the right choice? (Probably not — but the file-format approach is still useful for archival.)
 - How does SQLite handle concurrent writers in practice? (File-level locking; can become a bottleneck for write-heavy workloads.)
 - Are there alternatives to SQLite for embedded/reproducible databases? (DuckDB for analytics, LevelDB for key-value, etc.)
+
+## Formal Definition / Statement
+
+*To be filled.*

@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Reproducibility Standards: Bronze, Silver, Gold
 
 ## One-line Summary
 A tiered framework (Bronze / Silver / Gold) from Heil et al. (2021) that defines progressively stricter reproducibility standards for machine learning in the life sciences.

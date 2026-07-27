@@ -100,3 +100,7 @@ This prevents: (a) an attacker pushing malicious firmware, (b) a MITM modifying 
 - [ ] Does the exam expect the RSA-specific "sign = encrypt with private key" explanation, or the general hash-then-sign model?
 - [ ] Are we expected to know the math behind ECDSA or Ed25519, or just the conceptual workflow?
 - [ ] Are certificate chains and PKI in scope for the exam?
+
+## Worked Example
+
+*To be filled.*

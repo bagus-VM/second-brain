@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-A basic block is a ==maximal sequence of statements that must execute consecutively== — control enters only at the first statement and exits only at the last, making it the fundamental unit of [[control-flow-graph|control flow analysis]].
+A basic block is a **maximal sequence of statements that must execute consecutively** — control enters only at the first statement and exits only at the last, making it the fundamental unit of [[control-flow-graph|control flow analysis]].
 
 ## Core Intuition
 

@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# VisTrails
 
 ## One-line Summary
 VisTrails is a scientific workflow management system that provides integrated provenance capture, version control, and visualisation to support [[workflow-reproducibility]].

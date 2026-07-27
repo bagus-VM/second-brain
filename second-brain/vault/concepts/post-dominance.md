@@ -14,7 +14,7 @@ Node d post-dominates node n (d pdom n) if every path from n to the exit node pa
 
 ## Core Intuition
 
-[[dominance|Dominance]] answers "what must I pass through to *reach* this node?" — post-dominance answers "what must I pass through *after* this node?" ==If every execution path from node n eventually goes through d, then d post-dominates n==. The exit node post-dominates everything, just as the entry node dominates everything.
+[[dominance|Dominance]] answers "what must I pass through to *reach* this node?" — post-dominance answers "what must I pass through *after* this node?" **If every execution path from node n eventually goes through d, then d post-dominates n**. The exit node post-dominates everything, just as the entry node dominates everything.
 
 ## Formal Definition / Statement
 
@@ -37,7 +37,7 @@ Given a [[control-flow-graph|CFG]] G = (N, E) with exit node n_f:
 3. Run the [[dominance]] algorithm on the reversed graph
 4. The result gives the post-dominator sets and post-dominator tree
 
-Best practice: ==start from nodes closest to the exit and work backwards for faster convergence.==
+Best practice: **start from nodes closest to the exit and work backwards for faster convergence.**
 
 ## Key Properties / Complexity
 

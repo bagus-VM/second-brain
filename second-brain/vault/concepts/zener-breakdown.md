@@ -46,3 +46,7 @@ Zener breakdown occurs in heavily doped p-n junctions when the reverse voltage r
 
 ## Open Questions
 - How does the transition between Zener and avalanche breakdown occur around 5V?
+
+## Worked Example
+
+*To be filled.*

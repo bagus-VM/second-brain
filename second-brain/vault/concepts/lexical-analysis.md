@@ -9,7 +9,7 @@ prerequisites: [code-clones]
 ---
 
 ## One-line Summary
-Lexical analysis is the first phase of compilation that ==converts a character stream into a sequence of tokens==, using pattern matching based on regular expressions and finite automata.
+Lexical analysis is the first phase of compilation that **converts a character stream into a sequence of tokens**, using pattern matching based on regular expressions and finite automata.
 
 ## Core Intuition
 Before a compiler can understand the *structure* of a program (syntax), it must first group raw characters into meaningful chunks. Just as reading words requires recognising letter groups as units, a lexer recognizes character sequences like `result`, `=`, `100`, and `;` as distinct tokens. This separation of concerns — characters to tokens, then tokens to syntax — makes both phases simpler and more efficient.

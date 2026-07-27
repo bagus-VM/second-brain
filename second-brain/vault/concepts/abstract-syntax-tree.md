@@ -10,11 +10,11 @@ prerequisites: [parse-tree, context-free-grammar]
 
 ## One-line Summary
 
-An abstract syntax tree (AST) is a condensed form of the parse tree that ==discards syntactic details (parentheses, keywords, punctuation) and resolves ambiguity, keeping only semantically meaningful structure.==
+An abstract syntax tree (AST) is a condensed form of the parse tree that **discards syntactic details (parentheses, keywords, punctuation) and resolves ambiguity, keeping only semantically meaningful structure.**
 
 ## Core Intuition
 
-A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: ==operators become internal nodes, operands become children, and chains of single productions are collapsed==. This makes the AST the ideal input for semantic analysis and code generation.
+A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: **operators become internal nodes, operands become children, and chains of single productions are collapsed**. This makes the AST the ideal input for semantic analysis and code generation.
 
 ## Formal Definition / Statement
 

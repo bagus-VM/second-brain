@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Provenance in Reproducibility
 
 ## One-line Summary
 Provenance is the documented record of where data originated, how it was transformed, and what occurred during execution — the essential audit trail that makes experiments reproducible.

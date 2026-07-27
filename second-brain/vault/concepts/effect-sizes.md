@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [confidence-intervals]
 ---
 
-# Effect Sizes
 
 ## One-line Summary
 An effect size quantifies the magnitude of a difference or relationship, complementing p-values which only indicate whether an effect exists.

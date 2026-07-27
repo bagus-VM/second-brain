@@ -10,11 +10,11 @@ prerequisites: [abstract-syntax-tree]
 
 ## One-line Summary
 
-A Control Flow Graph (CFG) is a directed graph G=(N,E) where ==nodes represent statements== (or [[basic-block|basic blocks]]) and ==edges model the possible transfer of control between them== during program execution.
+A Control Flow Graph (CFG) is a directed graph G=(N,E) where **nodes represent statements** (or [[basic-block|basic blocks]]) and **edges model the possible transfer of control between them** during program execution.
 
 ## Core Intuition
 
-Source code executes in a sequence — that sequence is the control flow. A CFG strips away syntactic details (types, declarations, expressions) and captures only ==*what can execute next after what*==. This abstraction makes it tractable to reason about reachability, optimisation, and testing.
+Source code executes in a sequence — that sequence is the control flow. A CFG strips away syntactic details (types, declarations, expressions) and captures only ***what can execute next after what***. This abstraction makes it tractable to reason about reachability, optimisation, and testing.
 
 ## Formal Definition / Statement
 

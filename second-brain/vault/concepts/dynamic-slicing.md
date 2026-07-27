@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Dynamic Slicing
 
 ## One-line Summary
 
@@ -126,3 +125,7 @@ Now statement 4 is excluded (then-branch not taken), and statement 6 is included
 4. What is the relationship between dynamic slicing and **delta debugging**?
 5. Can we use dynamic slicing for **test case minimization**?
 6. How do we compute dynamic slices **online** (during execution, not post-mortem)?
+
+## Formal Definition / Statement
+
+*To be filled.*

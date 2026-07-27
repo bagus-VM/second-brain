@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [null-and-alternative-hypothesis]
 ---
 
-# P-Values
 
 ## One-line Summary
 A p-value is the probability of observing data as extreme as the result, assuming the null hypothesis is true.

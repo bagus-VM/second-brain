@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [hypothesis-formulation]
 ---
 
-# Presenting Experiments
 
 ## One-line Summary
 A well-structured experiments section separates setup, results, and discussion, enabling readers to understand, evaluate, and reproduce the work.

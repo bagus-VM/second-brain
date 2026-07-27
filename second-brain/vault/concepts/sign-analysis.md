@@ -380,3 +380,19 @@ arr[top];  // 0+ is never negative → no warning
 - What's the difference between context-sensitive and context-insensitive inter-procedural analysis?
 - How does this analysis relate to typing systems (which also use lattices)?
 - What other abstract domains could you use instead of signs? (e.g., intervals, parity, nullness)
+
+## Formal Definition / Statement
+
+*To be filled.*
+
+## Key Properties / Complexity
+
+*To be filled.*
+
+## Worked Example
+
+*To be filled.*
+
+## Common Pitfalls
+
+*To be filled.*

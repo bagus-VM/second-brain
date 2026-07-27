@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Computational Reproducibility in Machine Learning
 
 ## One-line Summary
 Machine learning experiments face unique reproducibility challenges -- stochastic training, hardware-dependent floating-point behaviour, and complex dependency chains -- that require deliberate standards and practices to overcome.

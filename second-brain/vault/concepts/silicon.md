@@ -41,3 +41,7 @@ Silicon (Si) is a group-IV semiconductor element with electron configuration 1sÂ
 ## Open Questions
 - Will silicon remain the dominant material as feature sizes shrink below 3 nm?
 - How do wide-bandgap semiconductors (SiC, GaN) compare for power electronics?
+
+## Worked Example
+
+*To be filled.*

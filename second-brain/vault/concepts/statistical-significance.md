@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [p-values]
 ---
 
-# Statistical Significance
 
 ## One-line Summary
 A result is statistically significant when the p-value falls below a pre-defined significance level α, indicating the data is unlikely under the null hypothesis.

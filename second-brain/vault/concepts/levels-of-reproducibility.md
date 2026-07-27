@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Levels of Reproducibility
 
 ## One-line Summary
 Reproducibility can be assessed along three independent dimensions: *availability* (how much of the experiment is accessible), *repeatability* (whether it can be re-executed), and *confirmability* (how much of the result can be independently verified).

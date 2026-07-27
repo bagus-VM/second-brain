@@ -160,3 +160,7 @@ Join across loop iterations propagates the MZ forward. After 2 iterations, the l
 - For real programs, what is the typical lattice height? How does it scale with the number of tracked variables?
 - The lecture assumes the abstract operations are sound but does not prove it. How do we *verify* that Z ⊕ NZ = NZ is a sound over-approximation of concrete 0 + n (n ≠ 0)?
 - How do we extend Zero Analysis to handle floating point, pointers, and dynamic memory?
+
+## Worked Example
+
+*To be filled.*

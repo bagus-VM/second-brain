@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Data Provenance
 
 ## One-line Summary
 Data provenance is the documented lineage of data -- where it came from, how it was collected and transformed, and every step that produced the current version.

@@ -44,3 +44,7 @@ Avalanche breakdown occurs at higher reverse voltages (compared to [[zener-break
 
 ## Open Questions
 - How does the transition voltage between Zener and avalanche mechanisms vary with doping?
+
+## Worked Example
+
+*To be filled.*

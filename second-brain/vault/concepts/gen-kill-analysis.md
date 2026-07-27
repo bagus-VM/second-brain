@@ -10,7 +10,7 @@ prerequisites: [control-flow-graph]
 
 ## One-line Summary
 
-Gen and kill sets are the local transfer functions that describe ==how each statement creates or invalidates data flow facts==, forming the building blocks of every data flow equation.
+Gen and kill sets are the local transfer functions that describe **how each statement creates or invalidates data flow facts**, forming the building blocks of every data flow equation.
 
 ## Core Intuition
 

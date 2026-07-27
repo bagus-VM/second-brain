@@ -91,3 +91,19 @@ They share the same Java toolchain (Maven, JUnit, picocli) and demonstrate two m
 - How do the two approaches complement each other in a real software quality workflow?
 - Could dataflow analysis improve the readability classifier (e.g., by adding control flow metrics)?
 - What other static analysis techniques could be applied to the same course projects?
+
+## Formal Definition / Statement
+
+*To be filled.*
+
+## Key Properties / Complexity
+
+*To be filled.*
+
+## Worked Example
+
+*To be filled.*
+
+## Common Pitfalls
+
+*To be filled.*

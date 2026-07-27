@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Levels of Equivalence
 
 ## One-line Summary
 When comparing computational experiments, different levels of equivalence define what "the same result" means—from byte-for-byte identity to merely observable behaviour.

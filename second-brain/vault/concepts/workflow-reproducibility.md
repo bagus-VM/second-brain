@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Workflow Reproducibility
 
 ## One-line Summary
 A workflow is reproducible when its complete specification (modules, connections, inputs) and execution environment can be shared and re-executed by others to produce equivalent results.

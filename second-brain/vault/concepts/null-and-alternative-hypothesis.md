@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [hypothesis-formulation]
 ---
 
-# Null and Alternative Hypothesis
 
 ## One-line Summary
 The null hypothesis (H₀) assumes no effect; the alternative hypothesis (H₁) claims an effect exists. Statistical testing evaluates evidence against H₀.

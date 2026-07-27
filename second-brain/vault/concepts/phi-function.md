@@ -10,7 +10,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Phi Function (φ)
 
 ## One-line Summary
 
@@ -146,3 +145,7 @@ B5: x₄ = φ(x₂, x₃)   // x₂ from B3, x₃ from B4
 3. Can phi functions be **eliminated** efficiently when converting back from SSA? (Coalescing)
 4. What is the relationship between phi functions and **μ-η forms** in other IRs?
 5. How do phi functions interact with **speculative execution** in hardware?
+
+## Formal Definition / Statement
+
+*To be filled.*

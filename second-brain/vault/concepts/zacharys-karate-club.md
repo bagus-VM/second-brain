@@ -56,3 +56,7 @@ The ~1 misclassified node genuinely sat on the boundary — even Zachary noted i
 - Are there better benchmarks than Zachary's for modern community detection?
 - How would temporal/longitudinal data change the "ground truth"?
 - Can we quantify the uncertainty in the ground-truth labels themselves?
+
+## Worked Example
+
+*To be filled.*
