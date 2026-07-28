@@ -514,3 +514,9 @@ Exam prep page updated with professor's exclusions:
 - Lecture 9: Trace levels, AOP, Fault localization, Delta debugging
 - Lecture 10: Entirely excluded (Symbolic + Dynamic symbolic execution)
 ~20 vault pages now out of exam scope. ~35 concept pages remain in scope.
+## [2026-07-28] PREP | RepEng condensed exam prep + SA concepts-by-project | 2 files created
+- Created `study/exams/repeng-exam-prep-condensed.md` — all 10 lectures + 11 lab sheets + 11 ICs distilled into condensed exam prep with formulas, trap questions, and quick-reference table
+- Created `study/exams/software-analyse-concepts-by-project.md` — all in-scope exam concepts grouped under the 3 projects (readability, sign analysis, slicing) with cross-cutting concepts, project interconnection diagram, and exam checklists
+## [2026-07-28] PREP | Cheatsheets for RepEng + SA | 2 files created
+- Created `study/exams/repeng-cheatsheet.md` — definitions and formulas only: terminology, levels/provenance, Heil Bronze/Silver/Gold, hypothesis properties, equivalence levels, Git object types, reproducible build non-determinism sources, DB architectures, JSON Schema keywords/combinators, HDF5 limits, LLM reproducibility package, remote experiment stages, FAIR principles, legal frameworks
+- Created `study/exams/software-analyse-cheatsheet.md` — definitions and formulas only: Rice's theorem, soundness/completeness, readability metrics (entropy, Halstead, cyclomatic), JVM instructions, sign lattice bitmask encoding + transfer rules, Galois connection, dataflow framework (forward/backward × must/may), reaching definitions equations, interprocedural techniques, PDG/slicing algorithms, dynamic slicing workflow, instrumentation

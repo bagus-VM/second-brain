@@ -15,11 +15,11 @@ prerequisites: ["[[java-for-software-analysis]]"]
 
 The question: can a machine predict whether a human will find a piece of code "readable"?
 
-The answer from Scalabrino et al.'s research: yes, but only with ~70-80% accuracy using static metrics alone. The trick is that "readability" isn't one thing — it's a combination of code length, vocabulary diversity, structural complexity, and control flow complexity. No single metric captures it, but combining them with machine learning gets you reasonable predictions.
+The answer from Scalabrino et al.'s research: yes, but only with ~70-80% accuracy using static metrics alone. The trick is that "readability" isn't one thing — it's a ==combination of code length, vocabulary diversity, structural complexity, and control flow complexity==. No single metric captures it, but combining them with machine learning gets you reasonable predictions.
 
 The pipeline has two phases:
-1. **Feature extraction** — turn each code snippet into a vector of numbers
-2. **Classification** — train a model to map vectors to Y/N labels
+1. **Feature extraction** — ==turn each code snippet into a vector of numbers==
+2. **Classification** — ==train a model to map vectors to Y/N labels==
 
 This is the standard supervised learning pattern. Nothing exotic. The interesting part is *which* features matter and *why*.
 
@@ -44,7 +44,7 @@ This is the standard supervised learning pattern. Nothing exotic. The interestin
 
 ### 2. Token Entropy (Shannon Entropy of Token Distribution)
 
-**What it measures:** **How diverse/uniform the vocabulary of the code is**.
+**What it measures:** ==**How diverse/uniform the vocabulary of the code is**.==
 
 **Formula:**
 ```
@@ -85,7 +85,7 @@ Tokens: `int`, `x`, `=`, `1`, `;`, `int`, `y`, `=`, `2`, `;`, `int`, `z`, `=`, `
 
 ### 3. Halstead Volume
 
-**What it measures:** A 1970s-era software complexity metric that **combines code length with vocabulary size**.
+**What it measures:** A 1970s-era software complexity metric that ==**combines code length with vocabulary size**.==
 
 **Background:** Maurice Halstead proposed four base measures:
 - **η₁** (eta-1): number of *unique* operators
@@ -126,14 +126,14 @@ int result = a + b;
 
 ### 4. Cyclomatic Complexity (McCabe's)
 
-**What it measures:** **The number of independent paths through the code's control flow graph**.
+**What it measures:** ==**The number of independent paths through the code's control flow graph**.==
 
 **Formula:** M = E - N + 2P
 - E = edges in control flow graph
 - N = nodes in control flow graph
 - P = connected components (usually 1 for a single method)
 
-**Simplified formula:** M = (number of decision points) + 1
+**Simplified formula:** M = ==(number of decision points) + 1==
 
 **What counts as a decision point:**
 - `if` statements
