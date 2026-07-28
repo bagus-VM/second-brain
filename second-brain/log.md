@@ -497,6 +497,11 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 
 ## [2026-07-20] QUERY | "Condensed multimedia exercise sheet" | Created multimedia-databases-cheat-sheet.md — one-page reference covering all 9 exercise sheets (signal processing, color models, image processing, JPEG compression, CBR, querying, indexing). Formulas, definitions, algorithm steps.
 
+## [2026-07-27] PREP | IoT Security + Microelectronics Exam Prep | 2 files created
+
+- `study/exams/exam-prep-iot-security-2026-08-05.md` (38 KB) — condensed exam prep for IoT Security (exam Aug 5). Covers L1-L9: IoT definitions, CIA triad, attack case studies (Mirai, KRACK, ZigBee), Miessler 15 attack surface classes, SDLC/DevOps, operational security lifecycle, crypto fundamentals (symmetric/asymmetric, hashing, MAC, signatures), PUFs/TPM/TRNG, ASCON lightweight crypto, identity lifecycle, PKI/OAuth 2.0, compliance frameworks, DRAM-PUF protocol. 3 question types: definitions, use-case scenarios (assets/threats/attacks/countermeasures mapped to CIA), mechanism explanations. Mock questions included.
+- `study/exams/exam-prep-microelectronics-2026-08-06.md` (40 KB) — condensed exam prep for Introduction to Microelectronics (exam Aug 6). Covers L1-L10: semiconductor physics, p-n junction, diode applications (rectifiers, clampers, limiters, Zener), MOS transistors (nMOS/pMOS, operating regions, I-V characteristics, threshold voltage), CMOS logic gates (inverter, NAND, NOR, XOR), op-amps (inverting, non-inverting, integrator, differentiator, voltage adder, follower), SRAM/DRAM/Flash memory, beyond silicon (graphene, CNTs, memristors). Key formulas, mock questions, weak spot map included.
+
 ## [2026-07-22] UPDATE | Software Analyse Exam Prep | Professor excluded 20 topics from exam
 Exam prep page updated with professor's exclusions:
 - Lecture 2: Naturalness, Compiler workflow, Lexical analysis

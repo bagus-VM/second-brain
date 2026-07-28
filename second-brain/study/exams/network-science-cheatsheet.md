@@ -33,12 +33,12 @@ All formulas written out with full variable names for quick recall.
 | Out-degree(v) = \|{u : (v,u) ∈ E}\| | Number of edges pointing FROM v (directed graphs) |
 
 ### Density
-| Formula | Plain English |
-|---------|--------------|
+| Formula                               | Plain English                                             |
+| ------------------------------------- | --------------------------------------------------------- |
 | density = 2\|E\| / (\|V\|(\|V\| − 1)) | Actual edges / possible edges for undirected simple graph |
-| density = \|E\| / (\|V\|(\|V\| − 1)) | For directed graphs (no factor of 2) |
-| density = 1 → complete graph | Every possible edge present |
-| density = 0 → no edges | Isolated nodes only |
+| density = \|E\| / (\|V\|(\|V\| − 1))  | For directed graphs (no factor of 2)                      |
+| density = 1 → complete graph          | Every possible edge present                               |
+| density = 0 → no edges                | Isolated nodes only                                       |
 
 ### Neighbourhood
 | Term | Definition |
