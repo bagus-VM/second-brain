@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "study/exams/network-science-cheatsheet.md",
+                "file": "study/exams/exam-prep-network-science-2026-07-28.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "network-science-cheatsheet"
+              "title": "exam-prep-network-science-2026-07-28"
             }
           }
         ]
@@ -142,9 +142,9 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "study/exams/network-science-cheatsheet.md",
     "study/exams/exam-prep-network-science-2026-07-28.md",
     "study/practice/mmdb-ex07.md",
-    "study/exams/network-science-cheatsheet.md",
     "study/exams/multimedia-databases-cheat-sheet.md",
     "study/practice/mmdb-ex08.md",
     "vault/concepts/sui-generis-database-right.md",
