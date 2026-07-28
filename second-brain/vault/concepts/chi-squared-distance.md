@@ -42,7 +42,7 @@ Properties:
 - **Zero only when equal**: χ²(P, Q) = 0 iff P = Q
 - **Does not satisfy the triangle inequality** in general, so it's a "divergence" not a strict metric
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why chi-squared is good for histograms
 - **Scale-sensitive**: bins with small counts are penalised more (relative to their magnitude)

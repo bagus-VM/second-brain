@@ -22,7 +22,7 @@ A voltage follower is the simplest OpAmp circuit: connect the output directly to
 
 **Alternative derivation:** Non-inverting amplifier gain = 1 + R2/R1. Set R2 = 0 → gain = 1. Or equivalently, connect output directly to inverting input → 100% negative feedback → output must equal input.
 
-## Key Properties
+## Key Properties / Complexity
 
 - Gain = 1 (unity gain, no amplification)
 - No phase inversion (output in phase with input)

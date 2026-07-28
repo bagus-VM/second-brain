@@ -38,7 +38,7 @@ Equivalently: every finite subset has a join and a meet.
 
 **Knaster-Tarski fixed-point theorem**: on a complete lattice, every monotone function f has both a least fixed point lfp(f) and a greatest fixed point gfp(f). lfp(f) = ⊔{fⁿ(⊥) : n ≥ 0}.
 
-## Key Properties / Common Lattices
+## Key Properties / Complexity
 
 ### Two-point lattice {⊥, ⊤}
 - Models a single boolean property (true/false, known/unknown, possible/certain)

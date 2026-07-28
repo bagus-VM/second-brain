@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Workflow Reproducibility
 
 ## One-line Summary
 A workflow is reproducible when its complete specification (modules, connections, inputs) and execution environment can be shared and re-executed by others to produce equivalent results.
@@ -25,7 +24,7 @@ A computational workflow is a directed acyclic graph (DAG) of processing modules
 
 Tools like [[vistrails]] automate the capture and management of all these components.
 
-## Key Properties
+## Key Properties / Complexity
 - **Explicit structure**: every step and data flow is declared, not implicit.
 - **Automation**: reduces human error compared to manual re-execution scripts.
 - **Composability**: workflows can be shared, extended, and combined.

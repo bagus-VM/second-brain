@@ -26,7 +26,7 @@ A context-free grammar is a 4-tuple G = (T, N, P, S) where:
 
 A **sentential form** is any string derivable from S. A **sentence** is a sentential form containing only terminals. The **language** L(G) is the set of all sentences.
 
-## Key Properties
+## Key Properties / Complexity
 
 - Every regular grammar is context-free, but not vice versa
 - CFGs can describe nested/balanced structures (e.g., matching parentheses) that regular grammars cannot

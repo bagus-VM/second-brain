@@ -16,16 +16,16 @@ The Watts-Strogatz model (1998) resolves the clustering/path-length paradox: sta
 
 ## Core Intuition
 Real social networks have two seemingly contradictory properties:
-- **High clustering** ($C \sim 0.1\text{–}0.5$): ==your friends tend to know each other==
-- **Short paths** ($L \sim \log n$): ==you're only a few hops from anyone==
+- **High clustering** ($C \sim 0.1\text{–}0.5$): **your friends tend to know each other**
+- **Short paths** ($L \sim \log n$): **you're only a few hops from anyone**
 
 A regular lattice has high clustering but long paths ($L \sim n/2k$). A [[random-graphs|random graph]] has short paths but low clustering ($C \sim k/n$). Neither captures reality.
 
-Watts and Strogatz showed that ==adding just a *tiny* fraction of random long-range shortcuts to a regular lattice collapses the path length while barely affecting clustering== (adding weak link). This is because $L(p)$ drops much faster than $C(p)$ as $p$ increases from 0.
+Watts and Strogatz showed that **adding just a *tiny* fraction of random long-range shortcuts to a regular lattice collapses the path length while barely affecting clustering** (adding weak link). This is because $L(p)$ drops much faster than $C(p)$ as $p$ increases from 0.
 
 ## Formal Definition / Statement
 **Watts-Strogatz model (1998):**
-1. Start with a ring of $n$ nodes, each connected to its $k$ nearest neighbors ($k/2$ on each side)
+1. Start with a ring of $n$ nodes, each connected to its $k$ nearest neighbours ($k/2$ on each side)
 2. For each edge, with probability $p$, rewire one endpoint to a uniformly random node (avoiding self-loops and duplicates)
 
 The parameter $p \in [0, 1]$ controls the interpolation:
@@ -36,7 +36,7 @@ The parameter $p \in [0, 1]$ controls the interpolation:
 | $0 < p \ll 1$ | High | Short ($\sim \log n$) | **Small-world** |
 | $p = 1$ | Low ($\sim k/n$) | Short ($\sim \log n / \log k$) | Random graph |
 
-## Key Properties
+## Key Properties / Complexity
 - The small-world regime exists because $L(p)$ falls much faster than $C(p)$ as $p$ increases
 - Even $p = 0.01$ (1% of edges rewired) is often enough to collapse $L$ to near-random-graph levels
 - The model preserves the local lattice structure — most neighborhoods remain intact
@@ -44,7 +44,7 @@ The parameter $p \in [0, 1]$ controls the interpolation:
 - The model does NOT guarantee navigability — short paths exist but may not be findable with local information (see [[kleinberg-decentralized-search]])
 
 ## Worked Example
-Regular lattice: $n = 1000$ nodes, $k = 10$ neighbors per node.
+Regular lattice: $n = 1000$ nodes, $k = 10$ neighbours per node.
 
 - Total edges: $nk/2 = 5000$
 - At $p = 0$: $L \sim n/2k = 50$ (lattice scale), $C$ is high

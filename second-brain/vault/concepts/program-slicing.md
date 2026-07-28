@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Program Slicing
 
 ## One-line Summary
 
@@ -39,7 +38,7 @@ Computation: Start at the definition of `v` at `s` in the PDG. Follow all outgoi
 
 **Slice extraction**: Remove all statements not in the slice. The resulting program computes the same value for the slicing criterion.
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|
@@ -121,3 +120,7 @@ Everything that `x` affects: {1, 3, 4, 5, 6, 8} — same result in this case.
 4. Can we slice **concurrent programs** soundly? (Thread slicing, happens-before slicing)
 5. How do **IDE features** (find all references, refactor) relate to slicing?
 6. What is **conditioned slicing**? (Slice parameterized by input conditions)
+
+## Formal Definition / Statement
+
+*To be filled.*

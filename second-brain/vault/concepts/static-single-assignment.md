@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Static Single Assignment (SSA) Form
 
 ## One-line Summary
 
@@ -45,7 +44,7 @@ DF(X) = {Y | X dominates a predecessor of Y, but X does not strictly dominate Y}
 
 Intuitively: "Y is a point where control flow from X might merge with flow from somewhere else."
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|
@@ -120,3 +119,7 @@ y₁ = x₄
 3. How does SSA interact with **register allocation**? (Coalescing, live range splitting)
 4. Can SSA be extended to **concurrent programs** with shared memory?
 5. What is the relationship between SSA and **continuation-passing style** (CPS)?
+
+## Formal Definition / Statement
+
+*To be filled.*

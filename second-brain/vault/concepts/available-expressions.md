@@ -33,7 +33,7 @@ Where:
 
 **Join operator**: ∩ (intersection) — expression available only if available on *all* paths
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Direction**: Forward (data flows along CFG edges)
 - **Kind**: Must (intersection at join points)

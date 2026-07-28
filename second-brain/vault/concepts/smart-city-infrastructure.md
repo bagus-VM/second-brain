@@ -19,13 +19,13 @@ Smart city IoT encompasses connected systems managing urban infrastructure:
 **Domain Categories:**
 - **Traffic Management**: Adaptive traffic signals, connected vehicle infrastructure (V2I), parking sensors, electronic tolling, public transit tracking
 - **Utilities**: Smart grid (AMI — Advanced Metering Infrastructure), water distribution monitoring, wastewater management, gas leak detection
-- **Surveillance**: CCTV networks, license plate recognition, gunshot detection, crowd monitoring
+- **Surveillance**: CCTV networks, licence plate recognition, gunshot detection, crowd monitoring
 - **Public Safety**: Emergency response systems, environmental monitoring (air quality, flood sensors), disaster warning systems
 - **Street Lighting**: Smart路灯 with dimming control, environmental sensors, and communication nodes (often used as LoRaWAN/gateway infrastructure)
 - **Waste Management**: Smart bins with fill-level sensors, route optimization for collection vehicles
 
 **Architecture Patterns:**
-- Centralized: All data flows to a city operations center (single point of failure)
+- Centralized: All data flows to a city operations centre (single point of failure)
 - Federated: Each department manages its own systems (inconsistent security)
 - Hybrid: Central monitoring with departmental autonomy (most common)
 
@@ -59,7 +59,7 @@ Smart city IoT encompasses connected systems managing urban infrastructure:
 1. Encrypt and authenticate all signal controller communication
 2. Physical tamper detection on intersection controllers
 3. Anomaly detection: flag impossible signal states (all green)
-4. Manual override capability at operations center
+4. Manual override capability at operations centre
 5. Network segmentation between traffic systems and other city infrastructure
 
 ## Common Pitfalls

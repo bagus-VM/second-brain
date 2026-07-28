@@ -11,7 +11,7 @@ prerequisites: ["[[live-variable-analysis]]", "[[control-flow-graph]]"]
 Register allocation maps program variables to a limited number of CPU registers, and when there aren't enough registers, it decides which values to temporarily store in memory (spilling).
 
 ## Core Intuition
-CPUs have a small, fixed number of registers (e.g., 16 on x86-64 general purpose). A program may have hundreds of variables. The compiler must decide which variables live in which registers at each point in time. The key insight: two variables can share the same register if they are never **live simultaneously** — meaning there's no program point where both might be needed in the future. This is where [[live-variable-analysis]] comes in: it tells us which variables are live at each point, allowing us to build an **interference graph** where two variables are connected iff they are simultaneously live somewhere. Coloring this graph with k colors (k = number of registers) gives the allocation. If the graph isn't k-colorable, some variables must be **spilled** to memory.
+CPUs have a small, fixed number of registers (e.g., 16 on x86-64 general purpose). A program may have hundreds of variables. The compiler must decide which variables live in which registers at each point in time. The key insight: two variables can share the same register if they are never **live simultaneously** — meaning there's no program point where both might be needed in the future. This is where [[live-variable-analysis]] comes in: it tells us which variables are live at each point, allowing us to build an **interference graph** where two variables are connected iff they are simultaneously live somewhere. Coloring this graph with k colours (k = number of registers) gives the allocation. If the graph isn't k-colorable, some variables must be **spilled** to memory.
 
 ## Formal Definition / Statement
 
@@ -22,13 +22,13 @@ CPUs have a small, fixed number of registers (e.g., 16 on x86-64 general purpose
    - Edge (u, v) ∈ E iff u and v are **interfering**: there exists a program point where both are live simultaneously
    - Interference is computed from [[live-variable-analysis]]: u and v interfere iff u ∈ OUT(n) and v ∈ OUT(n) for some statement n, OR one is defined at n while the other is in OUT(n)
 
-2. **Color the graph** with k colors (k = number of registers):
-   - Adjacent nodes must have different colors (interfering variables cannot share a register)
+2. **Colour the graph** with k colours (k = number of registers):
+   - Adjacent nodes must have different colours (interfering variables cannot share a register)
    - Graph k-coloring is NP-hard for k ≥ 3 in general
 
 3. **Simplify** (heuristic for coloring):
    - While the graph has a node with degree < k: remove it (push onto stack)
-   - When all nodes removed: pop and assign colors greedily
+   - When all nodes removed: pop and assign colours greedily
    - If no node has degree < k: **spill** a node (assign to memory)
 
 4. **Spill** a variable v:
@@ -42,11 +42,11 @@ CPUs have a small, fixed number of registers (e.g., 16 on x86-64 general purpose
 
 - **Graph k-coloring**: NP-hard for k ≥ 3 (Karp, 1972) — all practical allocators use heuristics
 - **Chordal graphs**: if the interference graph is chordal, optimal coloring is polynomial (perfect elimination ordering)
-- **Spill cost heuristic**: spill the variable with (use_count + def_count) / degree — minimize the number of memory accesses per interference edge removed
+- **Spill cost heuristic**: spill the variable with (use_count + def_count) / degree — minimise the number of memory accesses per interference edge removed
 - **Linear scan** (alternative): O(n log n) allocation without graph coloring — used in JIT compilers
 - **SSA-based allocation**: in SSA form, interference graphs are chordal → polynomial-time optimal allocation possible
 - Spilling is expensive: each spill adds a memory access (~100 cycles vs. ~1 cycle for register)
-- Coalescing reduces MOV instructions but can make the graph harder to color
+- Coalescing reduces MOV instructions but can make the graph harder to colour
 
 ## Worked Example
 
@@ -85,7 +85,7 @@ With 2 registers (k=2):
 - Node b has degree 1 (connected to a). Remove b.
 - Node a has degree 1 (connected to c). Remove a.
 - Node c has degree 0. Remove c.
-- Color: c=R1, a=R2, b=R1, d=R2
+- Colour: c=R1, a=R2, b=R1, d=R2
 
 Result: a→R2, b→R1, c→R1, d→R2. No spills needed!
 
@@ -94,7 +94,7 @@ Result: a→R2, b→R1, c→R1, d→R2. No spills needed!
 - Confusing **interference** with **adjacency**: interference means "simultaneously live," not "connected in the CFG"
 - Forgetting that a variable defined at statement n interferes with all variables in OUT(n) (the definition happens while others are still live)
 - Not iterating after spilling: inserting loads/stores changes liveness, which changes the interference graph
-- Coalescing can make the graph harder to color (increases degree) — must be done carefully
+- Coalescing can make the graph harder to colour (increases degree) — must be done carefully
 - Register allocation is for *variables within a function*; calling conventions handle inter-function register usage
 - Modern compilers use **SSA form** first, then convert out of SSA during or after register allocation
 

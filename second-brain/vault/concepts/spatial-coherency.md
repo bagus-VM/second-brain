@@ -9,7 +9,7 @@ prerequisites: ["[[content-based-retrieval]]", "[[color-histogram]]"]
 ---
 
 ## One-line Summary
-Spatial coherency is the property that neighbouring pixels in a natural image tend to have similar values — exploited in image compression (JPEG's DCT on 8×8 blocks), in segmentation (regions of similar colour), and as a flag in MPEG-7's Dominant Color Descriptor to indicate whether a colour forms a coherent region.
+Spatial coherency is the property that neighbouring pixels in a natural image tend to have similar values — exploited in image compression (JPEG's DCT on 8×8 blocks), in segmentation (regions of similar colour), and as a flag in MPEG-7's Dominant Colour Descriptor to indicate whether a colour forms a coherent region.
 
 ## Core Intuition
 Natural images are not random. Pixels next to each other are usually similar — sky is uniformly blue, grass is uniformly green, faces have smooth skin tones. This is **spatial coherency**. It's the reason image compression works (JPEG can compress natural images 10:1 with little visible loss), and the reason segmentation algorithms can find regions.
@@ -33,7 +33,7 @@ A block is "coherent" if its pixels are similar; "incoherent" if they vary widel
 
 **MPEG-7's spatial coherency flag**: for each dominant colour, a flag indicating whether the colour forms a spatially coherent region (1) or is scattered (0). This helps distinguish "blue sky region" (coherent) from "blue dots scattered across the image" (incoherent).
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why spatial coherency matters
 - **Compression**: natural images are compressible because of spatial coherency. Random images are not.

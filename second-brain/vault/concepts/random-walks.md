@@ -12,13 +12,13 @@ prerequisites: []
 A random walk on a graph is a stochastic process where a walker moves from node to node following edges with probabilities proportional to edge weights — the foundation of [[pagerank]] and many centrality measures.
 
 ## Core Intuition
-Imagine a walker on a graph. At each step, it chooses a random neighbor and moves there. The long-run visit probability of each node reveals its structural importance — nodes that are visited more often are more central.
+Imagine a walker on a graph. At each step, it chooses a random neighbour and moves there. The long-run visit probability of each node reveals its structural importance — nodes that are visited more often are more central.
 
 ## Formal Definition / Statement
 **Random walk:**
 - Start at a random node
-- At each step, choose a neighbor uniformly at random (or proportional to edge weight)
-- Move to the chosen neighbor
+- At each step, choose a neighbour uniformly at random (or proportional to edge weight)
+- Move to the chosen neighbour
 - Repeat indefinitely
 
 **Transition matrix:**
@@ -37,7 +37,7 @@ PR(v) = (1-α)/n + α Σ_{u→v} PR(u)/outdeg(u)
 - With probability α: follow a link
 - With probability 1-α: jump to a random page
 
-## Key Properties
+## Key Properties / Complexity
 1. **Stationary distribution**: long-run visit probability is proportional to degree
 2. **Foundation of PageRank**: PageRank is the stationary distribution of a modified random walk
 3. **Connects to centrality**: nodes visited more often are more central

@@ -12,7 +12,7 @@ prerequisites: ["[[oql]]", "[[multimedia-query-languages]]", "[[object-relationa
 An extension of OQL that adds spatial relations, temporal interval logic, a contains predicate, and a presentation clause to the WHERE clause.
 
 ## Core Intuition
-OQL already handles objects, identity, and path expressions. What it cannot express is multimedia specific structure: "is this lake inside this region," "does this clip come before that clip," or "show the result video in this window layout." MOQL bolts these onto OQL's WHERE clause rather than inventing a new query shape. The idea is that users already know OQL or SQL syntax, and object orientation is a good fit for modeling media objects, so extending the familiar language beats starting over.
+OQL already handles objects, identity, and path expressions. What it cannot express is multimedia specific structure: "is this lake inside this region," "does this clip come before that clip," or "show the result video in this window layout." MOQL bolts these onto OQL's WHERE clause rather than inventing a new query shape. The idea is that users already know OQL or SQL syntax, and object orientation is a good fit for modelling media objects, so extending the familiar language beats starting over.
 
 The extensions target four gaps: where things are in space (spatial_expression), when things happen in time (temporal_expression), what an object contains (contains_predicate), and how results are shown (the present clause). VisualMOQL, part of the DISIMA project, implements the image portion. The language is a prototype, runs on ObjectStore, and notably has no audio support.
 

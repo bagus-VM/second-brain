@@ -26,7 +26,7 @@ Given a control-flow graph (CFG) with entry and exit nodes, a path is a sequence
 
 **Path reconstruction:** Given a path sum R at exit, start at entry and walk the CFG. At each branch, follow the edge whose value v satisfies v ≤ R, then set R := R − v.
 
-## Key Properties
+## Key Properties / Complexity
 - **Unique encoding**: each path through the DAG gets a distinct integer
 - **Minimal instrumentation**: only chord edges need instrumentation (not all edges)
 - **Overhead**: O(chords) per function, typically much less than total edges

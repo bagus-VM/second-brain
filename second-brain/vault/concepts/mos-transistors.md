@@ -103,7 +103,7 @@ Step 4: What if V_GS drops to 0.3V?
 - [[threshold-voltage]] — The critical gate voltage that turns the transistor on
 - [[nmos-transistor]] — Electron-channel transistor used in pull-down networks
 - [[pmos-transistor]] — Hole-channel transistor used in pull-up networks
-- [[mosfet-operating-regions]] — Cutoff, triode, and saturation regions define transistor behavior
+- [[mosfet-operating-regions]] — Cutoff, triode, and saturation regions define transistor behaviour
 - [[cmos-inverter]] — Combines nMOS and pMOS for rail-to-rail digital switching
 - [[common-source-amplifier]] — Basic analog amplifier using MOSFET in saturation
 - [[electron-hole]] — Electrons carry current in nMOS, holes in pMOS

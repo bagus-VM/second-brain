@@ -37,7 +37,7 @@ Programs accumulate cruft. Variables are assigned but never read. Code follows b
 
 ## Key Properties / Complexity
 
-- **Safe**: Removing dead code never changes program behavior (by definition, it has no effect)
+- **Safe**: Removing dead code never changes program behaviour (by definition, it has no effect)
 - **Backward analysis dependency**: requires [[live-variable-analysis]] (may analysis, union at joins)
 - **Iterative**: Removing one dead assignment may expose others — may require multiple passes
 - Dead assignment elimination and unreachable code elimination are independent optimizations
@@ -87,7 +87,7 @@ if (false) {          // compiler detects this is always false
 - Side effects: `x = foo()` is not dead if `foo()` has side effects (I/O, state changes). Only pure assignments can be removed.
 - In languages with exceptions, an "unused" assignment may have a side effect that throws — must be careful
 - Unreachable code elimination and dead assignment elimination are separate passes — don't conflate them
-- DCE can change the behavior of debugging tools (breakpoints on removed code)
+- DCE can change the behaviour of debugging tools (breakpoints on removed code)
 
 ## Connections
 

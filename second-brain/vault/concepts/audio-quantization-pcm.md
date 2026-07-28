@@ -34,7 +34,7 @@ After sampling captures the signal's amplitude at regular time intervals, each m
 2. **Sample**: Measure amplitude at regular intervals → discrete time, continuous amplitude.
 3. **Quantize**: Round each measurement to nearest level → discrete time, discrete amplitude (4-bit in the lecture example).
 
-## Key Properties
+## Key Properties / Complexity
 - Quantization is **lossy** — information is permanently lost. You cannot recover the original continuous signal from quantized samples (though the error can be made arbitrarily small with more bits).
 - **Uniform quantization** (linear PCM): All levels are equally spaced. Simple but wastes bits on quiet signals where fine precision matters most.
 - **Non-uniform quantization** (μ-law, A-law): Levels are closer together near zero (quiet sounds) and farther apart at extremes (loud sounds). Better perceptual quality at the same bit depth.
@@ -66,7 +66,7 @@ With 16 bits: SQNR ≈ 6.02 × 16 + 1.76 = 98.08 dB (CD quality — noise below 
 ## Connections
 - [[audio-sampling-nyquist-theorem]] — sampling determines temporal resolution; quantization determines amplitude resolution. Both are needed for PCM.
 - [[pcm-digital-audio]] — quantization is the second step of PCM encoding
-- [[multimedia-databases-lecture-03]] — color quantization in images is directly analogous (reducing color palette ≈ reducing amplitude levels)
+- [[multimedia-databases-lecture-03]] — colour quantization in images is directly analogous (reducing colour palette ≈ reducing amplitude levels)
 - [[dithering]] — audio dithering and image dithering share the same underlying principle
 - [[video-formats-container-vs-codec]] — lossy codecs exploit quantization to achieve compression (both audio and video)
 

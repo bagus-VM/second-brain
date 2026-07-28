@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-Diffusion of innovations studies how new ideas, technologies, and behaviors spread through social networks, often as [[complex-contagion]] processes requiring social reinforcement.
+Diffusion of innovations studies how new ideas, technologies, and behaviours spread through social networks, often as [[complex-contagion]] processes requiring social reinforcement.
 
 ## Core Intuition
 Not all innovations spread like diseases. Many require social reinforcement — people need to see multiple peers using a technology before adopting it themselves. This makes innovation diffusion a [[complex-contagion]] process where network structure (especially clustering and bridge width) determines whether adoption cascades globally or stalls locally. The classic S-curve of adoption (slow start, rapid growth, saturation) emerges from threshold dynamics.
@@ -24,8 +24,8 @@ Not all innovations spread like diseases. Many require social reinforcement — 
 
 In network terms, these categories map to different adoption thresholds q in the [[complex-contagion]] model. The S-curve of cumulative adoption emerges from the cascade dynamics of [[threshold-cascades]].
 
-## Key Properties
-1. Adoption often requires social reinforcement — multiple adopting neighbors
+## Key Properties / Complexity
+1. Adoption often requires social reinforcement — multiple adopting neighbours
 2. Network clustering accelerates adoption (see [[centola-2010-experiment]])
 3. Weak ties spread awareness but may not trigger adoption (see [[weak-tie-paradox-contagion]])
 4. The S-curve shape reflects threshold dynamics: slow start while clusters form, rapid growth as cascades link clusters, saturation as remaining nodes have high thresholds

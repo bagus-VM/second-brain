@@ -37,7 +37,7 @@ A complete signed graph is **balanced** if and only if its nodes can be partitio
 - Frustration index: NP-hard to compute (Sintos & Tsaparas 2014)
 - Signed Laplacian test: λ₁ = 0 iff balanced — O(|E| · d) with Lanczos
 - In real signed networks (Epinions, Slashdot, Wikipedia): (+, +, −) triangles are massively underrepresented (~8% vs. ~37.5% expected) — strong empirical evidence for balance
-- The two-camp structure is a global consequence of a *local* constraint — emergent behavior
+- The two-camp structure is a global consequence of a *local* constraint — emergent behaviour
 - Balance theory applies to trust/distrust, alliance/rivalry, friend/enemy, positive/negative ratings
 
 ## Worked Example

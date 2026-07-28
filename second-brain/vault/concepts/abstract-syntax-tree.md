@@ -10,11 +10,11 @@ prerequisites: [parse-tree, context-free-grammar]
 
 ## One-line Summary
 
-An abstract syntax tree (AST) is a condensed form of the parse tree that discards syntactic details (parentheses, keywords, punctuation) and resolves ambiguity, keeping only semantically meaningful structure.
+An abstract syntax tree (AST) is a condensed form of the parse tree that **discards syntactic details (parentheses, keywords, punctuation) and resolves ambiguity, keeping only semantically meaningful structure.**
 
 ## Core Intuition
 
-A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: operators become internal nodes, operands become children, and chains of single productions are collapsed. This makes the AST the ideal input for semantic analysis and code generation.
+A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: **operators become internal nodes, operands become children, and chains of single productions are collapsed**. This makes the AST the ideal input for semantic analysis and code generation.
 
 ## Formal Definition / Statement
 
@@ -28,8 +28,8 @@ Nodes are typically represented as records:
 - `mknode(op, left, right)` — operator node
 - `mkleaf(id, entry)` — identifier leaf pointing to symbol table
 - `mkleaf(num, val)` — numeric literal leaf
-
-## Key Properties
+![[Pasted image 20260726214349.png]]
+## Key Properties / Complexity
 
 - ASTs are **smaller** than parse trees (collapsed chains, no punctuation nodes)
 - ASTs are **unambiguous** — even if the underlying grammar is ambiguous, the AST for a specific parse is unique
@@ -76,7 +76,7 @@ F := num       →  F.ptr = mkleaf(num, val)
 
 - Thinking the AST is "just a smaller parse tree" — it's a fundamentally different abstraction that encodes semantic meaning, not derivation steps
 - Forgetting that parentheses disappear in the AST (their role is captured by tree structure)
-- Not realizing that a chain-collapse rule like `E.ptr = T.ptr` means no node is created for E in that case
+- Not realising that a chain-collapse rule like `E.ptr = T.ptr` means no node is created for E in that case
 
 ## Connections
 

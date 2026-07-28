@@ -26,10 +26,10 @@ Build(source, E) = Build(source, E')  whenever E = E'
 
 Where E and E' are instantiations of the same environment specification on different hosts. The environment specification must include: OS version, compiler version and flags, library versions, environment variables, filesystem layout, locale, timezone, and any other system state that could affect the build.
 
-## Key Properties
+## Key Properties / Complexity
 
-- **Containerization**: Docker, Podman, or VMs encapsulate the build environment.
-- **Minimal base images**: Reducing the environment to essentials minimizes hidden dependencies.
+- **Containerisation**: Docker, Podman, or VMs encapsulate the build environment.
+- **Minimal base images**: Reducing the environment to essentials minimises hidden dependencies.
 - **Pinned versions**: All tools, libraries, and dependencies must be version-pinned.
 - **Environment variable control**: Variables like `LANG`, `TZ`, `PATH` must be explicitly set.
 - **Filesystem isolation**: Build paths should not leak from the host system.
@@ -80,13 +80,13 @@ export PATH=/usr/bin:/bin  # vs different paths -- affects tool resolution
 
 ## Connections
 
-- [[reproducible-builds]] -- Isolation is a prerequisite for reproducibility
-- [[containerization-for-builds]] -- Containers as the primary isolation mechanism
-- [[deterministic-builds]] -- Isolation enables determinism by controlling variables
-- [[ci-cd-for-reproducibility]] -- CI systems use isolation to ensure consistent builds
-- [[package-manager-reproducibility]] -- Lock files ensure dependency versions are pinned
-- [[source-date-epoch]] -- Mechanism to control timestamp injection
-- [[reproducibility-engineering-lecture-5]] -- Lecture context
+- [[reproducible-builds]] — Isolation is a prerequisite for reproducibility
+- [[containerization-for-builds]] — Containers as the primary isolation mechanism
+- [[deterministic-builds]] — Isolation enables determinism by controlling variables
+- [[ci-cd-for-reproducibility]] — CI systems use isolation to ensure consistent builds
+- [[package-manager-reproducibility]] — Lock files ensure dependency versions are pinned
+- [[source-date-epoch]] — Mechanism to control timestamp injection
+- [[reproducibility-engineering-lecture-5]] — Lecture context
 
 ## Open Questions
 

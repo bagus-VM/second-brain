@@ -25,7 +25,7 @@ Different methods factorise different matrices:
 
 Qiu et al. (2018) proved that DeepWalk with long walks is implicitly factorising the log of a shifted Positive Pointwise Mutual Information (PPMI) matrix built from the random-walk co-occurrence matrix.
 
-## Key Properties
+## Key Properties / Complexity
 1. Connects spectral and random-walk methods on the same theoretical spectrum
 2. Spectral: factorises the Laplacian (algebraic, global)
 3. DeepWalk: factorises walk PPMI (sampled, local)

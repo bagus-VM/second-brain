@@ -9,10 +9,10 @@ prerequisites: [image-point-operations, image-representation-bitmap]
 ---
 
 ## One-line Summary
-Linear convolution filters replace each pixel with a weighted sum of its neighborhood values using a kernel matrix; they perform spatial frequency filtering — smoothing (low-pass) or sharpening/edge detection (high-pass).
+Linear convolution filters replace each pixel with a weighted sum of its neighbourhood values using a kernel matrix; they perform spatial frequency filtering — smoothing (low-pass) or sharpening/edge detection (high-pass).
 
 ## Core Intuition
-Imagine sliding a small grid (the kernel) across every pixel of an image. At each position, multiply the kernel values with the underlying pixel values, sum them up, and that's the new pixel value. A kernel with all positive values that sum to 1 averages nearby pixels → blurring. A kernel that subtracts neighbors from the center → edge detection. It's the spatial-domain equivalent of frequency filtering: removing high frequencies smooths, removing low frequencies reveals edges.
+Imagine sliding a small grid (the kernel) across every pixel of an image. At each position, multiply the kernel values with the underlying pixel values, sum them up, and that's the new pixel value. A kernel with all positive values that sum to 1 averages nearby pixels → blurring. A kernel that subtracts neighbours from the centre → edge detection. It's the spatial-domain equivalent of frequency filtering: removing high frequencies smooths, removing low frequencies reveals edges.
 
 ## Formal Definition / Statement
 **Convolution** of image B with kernel K at position (x,y):
@@ -39,19 +39,19 @@ The kernel K is a small matrix (3×3, 5×5, etc.) defining the weights.
 
 **Two levels of image operations** (beyond point ops):
 1. **Point operations** (K=1×1): scale amplitude values (see [[image-point-operations]])
-2. **Neighborhood operations / convolution filters**: scale spectral (frequency) ratios
+2. **Neighbourhood operations / convolution filters**: scale spectral (frequency) ratios
 
-## Key Properties
+## Key Properties / Complexity
 - **Linearity**: convolving with kernel A then B = convolving with A*B (associativity)
 - **Commutativity**: A*B = B*A
 - **Separability**: some kernels (e.g., Gaussian) can be decomposed into two 1D passes — much faster (O(n·k) vs O(n·k²))
 - **Border handling**: pixels outside the image must be handled (zero-padding, mirror, wrap)
-- **Kernel size vs. quality**: larger kernels = larger neighborhood = stronger effect but slower
+- **Kernel size vs. quality**: larger kernels = larger neighbourhood = stronger effect but slower
 - **Low-pass** (blurring) removes noise and detail; **high-pass** (sharpening) enhances edges and noise
 - Common applications: enhancement, blurring, denoising, edge detection
 
 ## Worked Example
-Applying a 3×3 box blur to a pixel with neighborhood:
+Applying a 3×3 box blur to a pixel with neighbourhood:
 ```
 10  20  30
 40 [50] 60
@@ -70,7 +70,7 @@ New value = 255/9 ≈ **28** — the bright pixel is dramatically reduced, smoot
 
 ## Common Pitfalls
 - Confusing convolution with correlation (convolution flips the kernel; for symmetric kernels they're identical)
-- Forgetting to normalize the kernel (dividing by sum of weights for blurs) — without it, the image gets brighter or darker
+- Forgetting to normalise the kernel (dividing by sum of weights for blurs) — without it, the image gets brighter or darker
 - Applying a high-pass filter to a noisy image — it amplifies noise
 - Not handling image borders properly — creates artifacts at edges
 - Thinking convolution can do everything — it's linear and spatially invariant; nonlinear operations (median filter) need different approaches

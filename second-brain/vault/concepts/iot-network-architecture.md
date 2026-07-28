@@ -37,7 +37,7 @@ The standard IoT architecture is a three-tier model:
 - Security concerns: API abuse, data breaches, unauthorized access, insecure cloud configuration
 
 **Extended architectures:**
-- **Fog Computing**: Processing at the network edge (gateways, routers) to reduce latency and bandwidth. Security challenge: fog nodes are more accessible than cloud data centers.
+- **Fog Computing**: Processing at the network edge (gateways, routers) to reduce latency and bandwidth. Security challenge: fog nodes are more accessible than cloud data centres.
 - **Edge Computing**: Processing on the device itself or a nearby edge server. Security challenge: limited physical security, constrained management.
 - **Gateway Patterns**: Protocol translation (Zigbee-to-IP), local data aggregation, local rule execution, security enforcement point.
 

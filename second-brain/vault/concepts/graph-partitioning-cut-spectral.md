@@ -9,15 +9,15 @@ prerequisites: ["[[network-science-l02]]"]
 ---
 
 ## One-line Summary
-Graph partitioning splits a graph into k groups by minimizing edge cuts (min-cut, Kernighan–Lin) or using spectral properties of the Laplacian (Fiedler vector), typically requiring k to be specified in advance.
+Graph partitioning splits a graph into k groups by minimising edge cuts (min-cut, Kernighan–Lin) or using spectral properties of the Laplacian (Fiedler vector), typically requiring k to be specified in advance.
 
 ## Core Intuition
-Unlike [[modularity|maximizing modularity]] (which finds communities of any size), partitioning methods aim to split the graph into a **fixed number of balanced groups** while minimizing the number of edges cut. This is useful for parallel computing, VLSI design, and network analysis where balanced splits matter.
+Unlike [[modularity|maximizing modularity]] (which finds communities of any size), partitioning methods aim to split the graph into a **fixed number of balanced groups** while minimising the number of edges cut. This is useful for parallel computing, VLSI design, and network analysis where balanced splits matter.
 
 ## Formal Definition / Statement
 
 ### Min-Cut / Max-Flow
-Find the smallest set of edges whose removal disconnects two specified groups. Exact in polynomial time (Ford–Fulkerson) but minimizes raw cut size, not normalized density — can favor trivially small groups.
+Find the smallest set of edges whose removal disconnects two specified groups. Exact in polynomial time (Ford–Fulkerson) but minimizes raw cut size, not normalized density — can favour trivially small groups.
 
 ### Kernighan–Lin (1970)
 Local search: initialize a balanced 2-partition at random; iteratively swap node pairs to decrease cut size. Fast in practice; converges to a local optimum. Complexity: O(n²) per pass.
@@ -30,7 +30,7 @@ Local search: initialize a balanced 2-partition at random; iteratively swap node
 - λ₂ is the **algebraic connectivity**: λ₂ = 0 means the graph is already disconnected
 - Generalizes to k communities using the k smallest eigenvectors → **spectral clustering**
 
-## Key Properties
+## Key Properties / Complexity
 - Min-cut: exact for 2-partition but ignores density, favors small cuts
 - Kernighan–Lin: fast local search but stuck at local optimum, requires fixed k
 - Spectral: principled global structure, but O(n³) exact; needs k in advance
@@ -47,11 +47,11 @@ For a graph with two clear clusters connected by a few bridge edges:
 - Min-cut can produce trivially unbalanced partitions (one node vs. rest) unless normalized
 - Spectral partitioning requires computing eigenvectors — expensive for large graphs without sparse approximations
 - All methods require specifying k — unlike [[louvain-algorithm]] where k emerges naturally
-- Cut-based methods optimize a different objective than [[modularity]] — answers may differ
+- Cut-based methods optimise a different objective than [[modularity]] — answers may differ
 - Conductance (normalized cut) is related but distinct from modularity
 
 ## Connections
-- [[modularity]] — alternative objective; cut methods optimize cuts, modularity optimizes density surplus
+- [[modularity]] — alternative objective; cut methods optimise cuts, modularity optimizes density surplus
 - [[girvan-newman-algorithm]] — also a partitioning method but uses edge betweenness
 - [[graph-partitioning]] — the general problem of dividing a graph into balanced clusters
 - [[louvain-algorithm]] — doesn't need k; partitioning methods do

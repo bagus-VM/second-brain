@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [hypothesis-formulation]
 ---
 
-# Null and Alternative Hypothesis
 
 ## One-line Summary
 The null hypothesis (H₀) assumes no effect; the alternative hypothesis (H₁) claims an effect exists. Statistical testing evaluates evidence against H₀.
@@ -22,7 +21,7 @@ In reproducible science, we don't "prove" our method works—we gather evidence 
 - A statistical test produces a **p-value**: the probability of observing data as extreme as what we got, *if H₀ were true*.
 - If p-value < α (significance level, typically 0.05), we reject H₀.
 
-## Key Properties
+## Key Properties / Complexity
 - H₀ is always the "no effect" claim.
 - H₁ can be one-tailed (directional) or two-tailed (any difference).
 - Rejecting H₀ does *not* prove H₁; it just means the data is unlikely under H₀.

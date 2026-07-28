@@ -40,3 +40,7 @@ A semiconductor is a material with electrical resistivity between that of a [[co
 ## Open Questions
 - What new semiconductor materials will complement silicon for specific applications?
 - How does bandgap engineering enable new device capabilities?
+
+## Worked Example
+
+*To be filled.*

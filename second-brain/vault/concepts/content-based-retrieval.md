@@ -31,7 +31,7 @@ The distance function depends on the feature type:
 - **Shape features**: L2 on the shape descriptor vectors, or specialised shape-distance metrics
 - **Deep embeddings**: cosine distance, L2
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why CBR
 - **No manual annotation needed** — the system extracts features automatically

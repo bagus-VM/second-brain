@@ -75,7 +75,7 @@ Smart home IoT encompasses connected devices in residential environments:
 - Buying the cheapest devices with no update support
 - Not considering that smart TVs and voice assistants are always listening
 - Trusting cloud-only devices that stop working when the manufacturer shuts down servers
-- Not realizing that a compromised smart plug can be used to pivot to the entire home network
+- Not realising that a compromised smart plug can be used to pivot to the entire home network
 
 ## Connections
 

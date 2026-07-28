@@ -65,7 +65,7 @@ The OSI (Open Systems Interconnection) model defines seven layers of network com
 5. Attacker captures sensor data and injects false commands
 6. Even with TLS, attacker can see which devices communicate (metadata)
 
-**Defense:**
+**Defence:**
 1. Static ARP entries for critical devices (not scalable but effective for gateways)
 2. 802.1X port-based authentication on switches
 3. DHCP snooping and dynamic ARP inspection on managed switches

@@ -8,8 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Hypothesis Formulation
-
 ## One-line Summary
 A research hypothesis must be precise, specific, unambiguous, and state its limitations to be testable and reproducible.
 
@@ -25,7 +23,7 @@ Following Zobel (*Writing for Computer Science*), a good research hypothesis has
 
 A bad hypothesis is **LOOSE** (too vague to test) or **CONTRADICTORY** (internally inconsistent).
 
-## Key Properties
+## Key Properties / Complexity
 | Good | Bad |
 |------|-----|
 | Precise | Loose |

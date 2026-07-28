@@ -12,20 +12,20 @@ prerequisites: []
 Multimedia annotation is the task of associating textual labels or tags to multimedia objects to represent their semantic content, hampered by the sensory and semantic gaps.
 
 ## Core Intuition
-A picture is worth a thousand words — but no two viewers describe the same picture the same way. ==Annotation tries to bridge the gap between raw multimedia data and human-understandable meaning, but this is inherently lossy and subjective==. Different users, contexts, and perspectives produce different annotations for the same object (e.g., a Kandinsky painting described as "Abstract", "Bauhaus", "Colorful", "Beautiful").
+A picture is worth a thousand words — but no two viewers describe the same picture the same way. **Annotation tries to bridge the gap between raw multimedia data and human-understandable meaning, but this is inherently lossy and subjective**. Different users, contexts, and perspectives produce different annotations for the same object (e.g., a Kandinsky painting described as "Abstract", "Bauhaus", "Colorful", "Beautiful").
 
 ## Formal Definition / Statement
 Multimedia annotation is the task of associating textual labels or tags to multimedia objects in order to represent their (semantic) content. It can be performed manually, automatically, or semi-automatically.
 
 Two fundamental challenges:
 - **Sensory Gap**: "The gap between the object in the world and the information in a description derived from a recording of that scene" (Smeulders et al., 2000). 2D recordings of different 3D objects can look identical (red ball vs. red sun).
-- **Semantic Gap**: "The lack of coincidence between the information that one can extract from the visual data and the interpretation that the same data have for a user in a given situation" (Smeulders et al., 2000). Low-level features (color, texture, shape) do not directly map to high-level concepts (keywords, classification, ontologies).
+- **Semantic Gap**: "The lack of coincidence between the information that one can extract from the visual data and the interpretation that the same data have for a user in a given situation" (Smeulders et al., 2000). Low-level features (colour, texture, shape) do not directly map to high-level concepts (keywords, classification, ontologies).
 
-## Key Properties
+## Key Properties / Complexity
 - Can be manual, automatic, or semi-automatic
 - Subjective: different annotators produce different labels
 - The sensory gap arises from physical limitations of recording (2D projection, missing depth, occlusion)
-- The semantic gap separates low-level features (color histogram, texture, motion) from high-level knowledge (keywords, descriptions, classification, ontologies)
+- The semantic gap separates low-level features (colour histogram, texture, motion) from high-level knowledge (keywords, descriptions, classification, ontologies)
 - Bridging the semantic gap is the central challenge of multimedia retrieval
 
 ## Worked Example

@@ -50,7 +50,7 @@ The algorithm maintains a partition of variables into equivalence classes, where
 
 **Reference**: Steensgaard, B. (1996). "Points-to analysis in almost linear time." POPL '96.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Tradeoffs
 - **+**: Fast — O(n · α(n, n)) per statement, can analyse millions of LOC

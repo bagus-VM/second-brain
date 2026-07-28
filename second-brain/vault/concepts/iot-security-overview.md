@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-IoT security spans the full lifecycle of connected devices — from threat modeling and secure design to identity management, communication protocols, compliance, and advanced threats including governmental attacks.
+IoT security spans the full lifecycle of connected devices — from threat modelling and secure design to identity management, communication protocols, compliance, and advanced threats including governmental attacks.
 
 ## Core Intuition
 IoT devices are everywhere — sensors, cameras, medical devices, industrial controllers — and they're often the weakest link in security. Unlike traditional IT, IoT devices are resource-constrained, deployed in physically accessible locations, and expected to run for years without updates. Security must be designed in from the start, not bolted on after. The core strategy is [[defense-in-depth]]: multiple layers of protection so that no single failure is catastrophic.
@@ -17,7 +17,7 @@ IoT devices are everywhere — sensors, cameras, medical devices, industrial con
 ## Formal Definition / Statement
 **Scope of IoT Security (across all 8 lectures):**
 
-1. **Threat Modeling**: Systematic identification of threats, attack surfaces, and risk ([[iot-attack-taxonomy]])
+1. **Threat Modelling**: Systematic identification of threats, attack surfaces, and risk ([[iot-attack-taxonomy]])
 2. **Secure Design**: Building security into architecture from the ground up ([[security-by-design]])
 3. **Privacy by Design**: Embedding data protection into system design ([[privacy-by-design]])
 4. **Identity and Access Management**: Device identity, authentication, authorization ([[iot-identity-lifecycle]])
@@ -27,7 +27,7 @@ IoT devices are everywhere — sensors, cameras, medical devices, industrial con
 8. **IoT 2.0 Ecosystem**: 5G, AI/ML, edge computing, blockchain integration ([[iot-lecture-8]])
 
 ## Key Properties / Complexity
-- **Defense-in-depth**: Multiple security layers; no single point of failure ([[defense-in-depth]])
+- **Defence-in-depth**: Multiple security layers; no single point of failure ([[defense-in-depth]])
 - **Resource constraints**: IoT devices have limited CPU, memory, and power
 - **Long lifecycles**: Devices may run 10-20 years, far outlasting their security support
 - **Physical exposure**: Devices often in publicly accessible locations
@@ -47,7 +47,7 @@ IoT devices are everywhere — sensors, cameras, medical devices, industrial con
 - Network segmentation (camera on separate VLAN)
 - Strong authentication (no default passwords)
 - Firmware update mechanism (patch lock vulnerability)
-- Intrusion detection (detect unusual device behavior)
+- Intrusion detection (detect unusual device behaviour)
 - Physical tamper detection on devices
 
 ## Common Pitfalls

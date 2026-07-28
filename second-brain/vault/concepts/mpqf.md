@@ -12,11 +12,11 @@ prerequisites: ["[[mpeg-7]]", "[[mpeg-7-descriptors]]", "[[content-based-retriev
 Standardized format for expressing multimedia queries using MPEG-7 descriptors.
 
 ## Core Intuition
-Content-based multimedia retrieval needs a way to express queries like "find images similar to this one" or "find videos with similar color distribution." But how do you represent these queries in a standardized, interoperable way?
+Content-based multimedia retrieval needs a way to express queries like "find images similar to this one" or "find videos with similar colour distribution." But how do you represent these queries in a standardized, interoperable way?
 
 **MPEG Query Format (MPQF)** is an ISO standard (part of MPEG-7) that provides a structured way to express multimedia queries using MPEG-7 descriptors. It allows you to specify:
 - **Query type**: query-by-example, query-by-feature, query-by-sket
-- **Descriptors**: which MPEG-7 descriptors to use (dominant color, texture, shape)
+- **Descriptors**: which MPEG-7 descriptors to use (dominant colour, texture, shape)
 - **Similarity criteria**: distance metric, threshold, weights
 - **Query items**: the actual query data (sample image, feature values)
 
@@ -132,14 +132,14 @@ MPQF is to multimedia queries what SQL is to relational queries — a standardiz
 </ResultSpecification>
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Query Types
 | Type | Input | Use Case | Example |
 |------|-------|----------|---------|
 | Query-by-Example | Sample media item | Find similar items | "Find images like this sunset photo" |
 | Query-by-Feature | Feature values | Find items matching specific features | "Find images with 60% red, 30% orange" |
-| Query-by-Sketch | Sketch/drawing | Find items matching a rough shape | "Find images with a circle in the center" |
+| Query-by-Sketch | Sketch/drawing | Find items matching a rough shape | "Find images with a circle in the centre" |
 | Query-by-Concept | Semantic concept | Find items matching a concept | "Find images of beaches" (requires semantic mapping) |
 
 ### Descriptor Usage
@@ -162,7 +162,7 @@ You can combine multiple descriptors with weights:
 
 ### Distance Metrics
 MPQF supports multiple distance metrics:
-- **Euclidean (L2)**: `√(Σ(pᵢ - qᵢ)²)` — most common, good for color histograms
+- **Euclidean (L2)**: `√(Σ(pᵢ - qᵢ)²)` — most common, good for colour histograms
 - **Manhattan (L1)**: `Σ|pᵢ - qᵢ|` — robust to outliers
 - **Chebyshev (L∞)**: `max|pᵢ - qᵢ|` — focuses on the largest difference
 - **Mahalanobis**: covariance-aware, good when features are correlated
@@ -219,7 +219,7 @@ Results in a rank and confidence evaluation for each element. MPQF also supports
 - Texture: low frequency, high smoothness (specific values depend on the texture descriptor)
 
 **Step 4: Choose distance metric and threshold**
-- Distance metric: **Weighted Euclidean** (to combine color and texture)
+- Distance metric: **Weighted Euclidean** (to combine colour and texture)
 - Threshold: **0.4** (allow some variation)
 
 **Step 5: Specify result requirements**
@@ -267,7 +267,7 @@ Results in a rank and confidence evaluation for each element. MPQF also supports
 </Mpeg7Query>
 ```
 
-**Another Example**: *"Find images similar to this sunset photo, focusing on color."*
+**Another Example**: *"Find images similar to this sunset photo, focusing on colour."*
 
 **MPQF**:
 ```xml
@@ -310,8 +310,8 @@ Results in a rank and confidence evaluation for each element. MPQF also supports
 ## Common Pitfalls
 - **Confusing MPQF with SQL/MM**: MPQF is a query format (XML), SQL/MM is a database query language (SQL). MPQF can be translated to SQL/MM for execution.
 - **Over-specifying descriptors**: using too many descriptors with equal weights can dilute the query. Focus on the most relevant descriptors for the task.
-- **Choosing the wrong distance metric**: Euclidean is not always the best. For color histograms, chi-squared or Earth Mover's Distance may be more appropriate.
-- **Ignoring normalization**: features with different scales (e.g., color percentages 0-1, texture values 0-1000) need normalization before distance computation.
+- **Choosing the wrong distance metric**: Euclidean is not always the best. For colour histograms, chi-squared or Earth Mover's Distance may be more appropriate.
+- **Ignoring normalization**: features with different scales (e.g., colour percentages 0-1, texture values 0-1000) need normalization before distance computation.
 - **Forgetting to specify weights**: when combining multiple descriptors, weights determine their relative importance. Default weights (all 1.0) may not be appropriate.
 
 ## Connections
@@ -328,5 +328,5 @@ Results in a rank and confidence evaluation for each element. MPQF also supports
 - Will MPQF gain wider adoption, or will proprietary query formats dominate?
 - How do you translate natural language queries ("find beautiful sunsets") to MPQF? This requires NLP and semantic mapping.
 - Can MPQF handle deep learning embeddings? MPEG-7 descriptors are hand-crafted; modern systems use CNN embeddings.
-- How do you optimize MPQF query execution? Parsing XML and computing distances for millions of items is slow.
+- How do you optimise MPQF query execution? Parsing XML and computing distances for millions of items is slow.
 - Can MPQF support interactive queries (relevance feedback)? The user marks results as relevant/irrelevant, and the system refines the query.

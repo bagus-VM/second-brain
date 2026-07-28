@@ -39,7 +39,7 @@ Zener diode voltage regulator:
 ## Common Pitfalls
 - Assuming Zener diodes work like regular diodes — they're designed for reverse breakdown operation
 - Forgetting that Zener diodes have a power rating — exceeding it causes thermal destruction
-- Confusing Zener breakdown (quantum tunnelling) with avalanche breakdown (impact ionization)
+- Confusing Zener breakdown (quantum tunnelling) with avalanche breakdown (impact ionisation)
 
 ## Connections
 - [[diode]] — base component

@@ -38,7 +38,7 @@ For a control flow graph with blocks b_0, b_1, ..., b_n and transfer functions f
 
 - **Theorem (Distributivity)**: MFP = MOP iff every transfer function f_b is distributive over ⊔.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why MOP is undecidable in general
 - Programs with loops have infinitely many execution paths

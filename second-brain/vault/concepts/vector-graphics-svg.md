@@ -12,11 +12,11 @@ prerequisites: [image-representation-bitmap]
 Vector graphics are mathematically defined drawing instructions (curves, lines, shapes) in a coordinate system, as opposed to pixel arrays; SVG is the web standard XML format for 2D vector graphics.
 
 ## Core Intuition
-==Instead of storing a color for every pixel (millions of values), vector graphics store a small set of mathematical instructions: "draw a curve from A to B with control points C and D, in red, 2px thick."== The image is *computed* at display time (rendered). This means you can zoom infinitely without pixelation, because the math scales perfectly. It's like the difference between a recipe (vector) and a photograph of a meal (raster).
+**Instead of storing a colour for every pixel (millions of values), vector graphics store a small set of mathematical instructions: "draw a curve from A to B with control points C and D, in red, 2px thick."** The image is *computed* at display time (rendered). This means you can zoom infinitely without pixelation, because the math scales perfectly. It's like the difference between a recipe (vector) and a photograph of a meal (raster).
 
 ## Formal Definition / Statement
 Vector graphics = programmatically defined drawing instructions within a coordinate system.
-Geometric transformations (scale, rotate, translate) are exact and trivial — they just transform the control points. Individual elements (layers, groups, objects) can be separated and their attributes (color, line thickness, fill) modified independently.
+Geometric transformations (scale, rotate, translate) are exact and trivial — they just transform the control points. Individual elements (layers, groups, objects) can be separated and their attributes (colour, line thickness, fill) modified independently.
 
 **SVG (Scalable Vector Graphics)**:
 - W3C standard for 2D vector graphics in XML
@@ -29,12 +29,12 @@ Geometric transformations (scale, rotate, translate) are exact and trivial — t
 
 **Vector graphics formats**: PostScript (.ps, .eps), PDF, WMF/EMF, Corel Draw (.cdr), SVG, VRML (3D)
 
-## Key Properties
+## Key Properties / Complexity
 - Resolution-independent: scales to any size without quality loss
 - Small file size for simple images (stores math, not pixels)
 - Requires **rendering** (interpretation/drawing) to become visible — a computational cost
 - Not suitable for photographic content (too many "instructions" needed)
-- Individual elements are editable: change color of a shape without touching anything else
+- Individual elements are editable: change colour of a shape without touching anything else
 - SVG integrates with web standards (CSS, JavaScript, DOM)
 
 ## Worked Example

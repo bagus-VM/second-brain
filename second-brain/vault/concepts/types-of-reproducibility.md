@@ -25,7 +25,7 @@ Some frameworks also distinguish:
 - **Methodological reproducibility**: Are the methods described in enough detail to be followed?
 - **Robustness reproducibility**: Do the conclusions hold under different reasonable analysis choices?
 
-## Key Properties
+## Key Properties / Complexity
 - **Computational reproducibility** is the most tractable in CS—tools like Docker, version control, and dependency management can solve most issues
 - **Empirical reproducibility** is harder because physical conditions vary—requires careful protocol documentation
 - **Statistical reproducibility** requires understanding of study design and inference—pre-registration helps

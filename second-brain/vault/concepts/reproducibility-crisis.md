@@ -22,7 +22,7 @@ A 2016 Nature survey of **1,576 researchers** found:
 
 This means ~90% of surveyed researchers acknowledge some level of crisis. The crisis manifests across disciplines—psychology, medicine, biology, computer science, and others.
 
-## Key Properties
+## Key Properties / Complexity
 - **Not new**: Concerns about reproducibility have existed for decades, but large-scale studies have quantified the problem
 - **Multidisciplinary**: It's not limited to one field; it's a systemic issue
 - **Multiple causes**: p-hacking, publication bias, insufficient documentation, opaque code, underpowered studies

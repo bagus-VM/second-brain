@@ -12,7 +12,7 @@ prerequisites: ["[[strong-triadic-closure]]"]
 Finding the edge labeling with the most strong edges that satisfies Strong Triadic Closure is NP-hard, forcing us to use polynomial-time structural proxies instead.
 
 ## Core Intuition
-We observe the graph G but not the edge labels. We want to recover the labeling that best explains the structure — maximizing strong edges subject to STC. This sounds like a clean optimization problem, but it turns out to be computationally intractable on general graphs. This is a fundamental modeling problem: the theoretical object we care about is out of reach, so we need approximations.
+We observe the graph G but not the edge labels. We want to recover the labeling that best explains the structure — maximising strong edges subject to STC. This sounds like a clean optimization problem, but it turns out to be computationally intractable on general graphs. This is a fundamental modelling problem: the theoretical object we care about is out of reach, so we need approximations.
 
 ## Formal Definition / Statement
 **MaxSTC Problem.** Given G = (V, E), find a labeling ℓ: E → {Strong, Weak} satisfying [[strong-triadic-closure|STC]] that maximizes |{e ∈ E : ℓ(e) = Strong}|.
@@ -24,7 +24,7 @@ We observe the graph G but not the edge labels. We want to recover the labeling 
 - MaxSTC is **NP-complete** as a decision problem on general graphs
 - Polynomial-time algorithms exist for restricted graph classes (e.g., cographs, some bipartite-like structures)
 
-## Key Properties
+## Key Properties / Complexity
 - The number of possible labelings is 2^|E| (exponential)
 - Optimal labelings may not be unique — exponentially many optima possible
 - Even restricted cases (planar, sparse) may not help unless the structure is very specific
@@ -34,7 +34,7 @@ We observe the graph G but not the edge labels. We want to recover the labeling 
 Graph with 4 nodes: A, B, C, D. Edges: A–B, A–C, A–D, B–C.
 
 - Total possible labelings: 2⁴ = 16
-- At node A with 3 neighbors: if all 3 strong → forces B–D, C–D, B–C. Only B–C exists.
+- At node A with 3 neighbours: if all 3 strong → forces B–D, C–D, B–C. Only B–C exists.
 - Max 2 of A's ties strong, and they must be A–B, A–C (connected via B–C)
 - B–C can also be strong → **3 strong edges maximum**
 - Optimal labeling: ℓ(A–B) = ℓ(A–C) = ℓ(B–C) = S, ℓ(A–D) = W

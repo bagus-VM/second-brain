@@ -15,10 +15,10 @@ last_updated: 2026-07-02
 Dynamic analysis observes actual program executions to collect traces, enabling instrumentation, fault localization, and debugging — trading completeness for precision.
 
 ## Core Intuition
-Static analysis is conservative: it accounts for all possible executions including infeasible paths. Dynamic analysis runs the program with real inputs and watches what actually happens. This gives precise results (no false positives for observed behavior) but only covers tested paths. Think of it as the difference between reading a recipe (static analysis) and actually cooking the dish (dynamic analysis) — you learn exactly what happens, but only for the ingredients you used.
+Static analysis is conservative: it accounts for all possible executions including infeasible paths. Dynamic analysis runs the program with real inputs and watches what actually happens. This gives precise results (no false positives for observed behaviour) but only covers tested paths. Think of it as the difference between reading a recipe (static analysis) and actually cooking the dish (dynamic analysis) — you learn exactly what happens, but only for the ingredients you used.
 
 ## Formal Definition / Statement
-Dynamic analysis is the examination of a program by executing it with concrete inputs and observing its runtime behavior. Formally:
+Dynamic analysis is the examination of a program by executing it with concrete inputs and observing its runtime behaviour. Formally:
 
 - **Input:** Program $P$, concrete input $I$, instrumentation probe set $S$
 - **Execution:** Run $P(I)$, record trace $T = \langle(s_1, v_1), (s_2, v_2), \ldots\rangle$ where $s_i$ is a statement/instruction and $v_i$ is the observed state (variable values, memory, I/O)
@@ -26,14 +26,14 @@ Dynamic analysis is the examination of a program by executing it with concrete i
 
 The key tradeoff: static analysis over-approximates (sound but imprecise), dynamic analysis under-approximates (precise but incomplete).
 
-## Key Properties
+## Key Properties / Complexity
 | Property | Detail |
 |----------|--------|
-| Precision | No false positives for observed behavior |
+| Precision | No false positives for observed behaviour |
 | Completeness | Only covers tested execution paths |
 | Runtime overhead | Instrumentation slows execution (2x–100x typical) |
 | Storage cost | Traces can be hundreds of MB per second |
-| Heisenberg effect | Observing the program changes its behavior |
+| Heisenberg effect | Observing the program changes its behaviour |
 | Input dependency | Results are only as good as test inputs |
 | Reproducibility | Same input → same trace (for deterministic programs) |
 
@@ -76,7 +76,7 @@ Run all tests, record which statements each test executes, compute suspiciousnes
 - **Ignoring storage overhead**: Tracing everything generates enormous data — must sample or filter
 - **Heisenberg effect**: Adding print statements or breakpoints changes timing, potentially hiding race conditions
 - **Input bias**: Results are only as good as test inputs — random/fuzz testing helps but doesn't guarantee coverage
-- **Confusing precision with correctness**: No false positives for observed behavior, but the observed behavior may not reveal the bug
+- **Confusing precision with correctness**: No false positives for observed behaviour, but the observed behaviour may not reveal the bug
 - **Overhead in production**: Heavy instrumentation is impractical in production — use sampling profilers instead
 
 ## Connections

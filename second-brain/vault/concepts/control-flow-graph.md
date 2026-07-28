@@ -10,11 +10,11 @@ prerequisites: [abstract-syntax-tree]
 
 ## One-line Summary
 
-A Control Flow Graph (CFG) is a directed graph G=(N,E) where nodes represent statements (or [[basic-block|basic blocks]]) and edges model the possible transfer of control between them during program execution.
+A Control Flow Graph (CFG) is a directed graph G=(N,E) where **nodes represent statements** (or [[basic-block|basic blocks]]) and **edges model the possible transfer of control between them** during program execution.
 
 ## Core Intuition
 
-Source code executes in a sequence — that sequence is the control flow. A CFG strips away syntactic details (types, declarations, expressions) and captures only *what can execute next after what*. This abstraction makes it tractable to reason about reachability, optimisation, and testing.
+Source code executes in a sequence — that sequence is the control flow. A CFG strips away syntactic details (types, declarations, expressions) and captures only ***what can execute next after what***. This abstraction makes it tractable to reason about reachability, optimisation, and testing.
 
 ## Formal Definition / Statement
 
@@ -30,7 +30,7 @@ A **Control Flow Graph** is a directed graph G = (N, E) where:
 - **Branch node**: a node with |Succ(n)| > 1
 - **Join node**: a node with |Pred(n)| > 1
 
-## Key Properties
+## Key Properties / Complexity
 
 - CFGs are much simpler than [[abstract-syntax-tree|ASTs]]: fewer node types, less redundancy, only simple expressions
 - CFGs lose block structure — harder to report errors or unparse back to readable code
@@ -74,7 +74,7 @@ Edge types: forward edges (Entry→2, 2→4, 4→5, 4→10, 5→6, 5→7) and ba
 
 - Confusing AST nodes with CFG nodes — a single AST statement may span multiple CFG nodes, and a single CFG node may contain multiple AST statements (when collapsed into [[basic-block|basic blocks]])
 - Forgetting the back edge in loops — without it, the CFG doesn't model iteration
-- Ignoring implicit control flow (exceptions, `break`, `continue`) which requires special edges
+- Ignoring implicit control flow (`exceptions`, `break`, `continue`) which requires special edges
 - Assuming the CFG captures all program semantics — it models *flow*, not *data*
 
 ## Connections

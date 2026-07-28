@@ -33,7 +33,7 @@ That is, FIRST(α) is the set of all terminals that can appear as the first symb
    - If ε ∈ FIRST(Y₁)...FIRST(Yₖ), add ε to FIRST(X)
 3. If X → ε is a production, add ε to FIRST(X)
 
-## Key Properties
+## Key Properties / Complexity
 
 - FIRST sets are computed iteratively until a fixed point is reached
 - For a nonterminal A with alternatives A → α | β, predictive parsing requires FIRST(α) ∩ FIRST(β) = ∅

@@ -30,7 +30,7 @@ A **connected component** of $G$ is a maximal subset $C \subseteq V$ such that f
 
 A graph is **connected** if it has exactly one connected component.
 
-## Key Properties
+## Key Properties / Complexity
 - Every node belongs to exactly one connected component (they partition the node set).
 - The number of components is a basic structural descriptor of a network.
 - In random graphs, the transition from many small components to one giant component is a phase transition — a key result in [[network-intro]].
@@ -44,7 +44,7 @@ Component 1: A—B—C, B—D        (A, B, C, D are all reachable from each oth
 Component 2: E—F               (E and F are connected to each other only)
 Component 3: G, H, I           (three isolated nodes, each a component of size 1)
 ```
-==This network has 5 connected components: {A,B,C,D}, {E,F}, {G}, {H}, {I}. A rumor starting at A can reach B, C, and D — but never E, F, G, H, or I.==
+**This network has 5 connected components: {A,B,C,D}, {E,F}, {G}, {H}, {I}. A rumor starting at A can reach B, C, and D — but never E, F, G, H, or I.**
 
 ## Common Pitfalls
 - **Confusing connected with "close together."** Nodes in the same component might be very far apart (many hops). Being connected just means *some* path exists.

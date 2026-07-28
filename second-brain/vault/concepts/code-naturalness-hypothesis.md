@@ -31,7 +31,7 @@ This opens the door to applying NLP techniques to SE tasks:
 - Code search
 - Identifier naming
 
-## Key Properties
+## Key Properties / Complexity
 - Code is **more predictable** than natural language (lower cross-entropy)
 - Predictability comes from:
   - Limited vocabulary of keywords and patterns

@@ -35,7 +35,7 @@ where F composes the body's transfer function with itself, treating recursive ca
 The summary is **applied** at every call site of f:
 - At call site c with input state σ, the caller's exit state is updated to σ' = σ[caller ← trans_f(σ[args])]
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why procedure summaries scale
 - The summary is computed *once* per procedure (not per call site)

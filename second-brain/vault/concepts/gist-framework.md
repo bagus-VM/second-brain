@@ -35,7 +35,7 @@ The **Generalized Search Tree (GiST)** is a template index structure that abstra
 
 ## Key Properties / Complexity
 - **Height-balanced**: like B-trees and R-trees, the tree stays balanced as it grows.
-- **Template algorithms**: search, insert, and delete are generic; the data-specific behavior comes from user-supplied extension functions.
+- **Template algorithms**: search, insert, and delete are generic; the data-specific behaviour comes from user-supplied extension functions.
 - **Extensible keys and predicates**: no assumption about key type or how keys distribute across nodes, so spatial, metric, and even custom predicates fit.
 - **Reuses concurrency and recovery**: the hard, easy-to-get-wrong parts are written once inside GiST rather than per tree.
 - **B+ trees remain special-cased in practice**: they are simple and important enough that commercial DBMSs ship dedicated implementations; GiST is the alternative for the rest.

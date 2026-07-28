@@ -30,7 +30,7 @@ Not all statements depend on all prior decisions. `y += x` inside an `if` is con
 3. Traverse backwards in the post-dominator tree from B to L, marking each visited node; mark L only if L = A
 4. All marked nodes are control dependent on A
 
-## Key Properties
+## Key Properties / Complexity
 
 - Every node that is not control dependent on any branch is control dependent on the entry node
 - Control dependence is not the same as data dependence — two statements can be control dependent without sharing any variables

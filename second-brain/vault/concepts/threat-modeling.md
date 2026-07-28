@@ -9,13 +9,13 @@ prerequisites: ["[[internet-of-things]]", "[[cia-triad]]", "[[iot-network-archit
 ---
 
 ## One-line Summary
-Threat modeling — using frameworks like STRIDE, DREAD, and attack trees — systematically identifies what can go wrong in an IoT system before it's built, so defenses can be designed in rather than bolted on.
+Threat modelling — using frameworks like STRIDE, DREAD, and attack trees — systematically identifies what can go wrong in an IoT system before it's built, so defenses can be designed in rather than bolted on.
 
 ## Core Intuition
-You cannot defend against threats you haven't identified. Threat modeling is the structured process of asking "what could an attacker do?" before writing code or designing hardware. For IoT, this is especially critical because devices are hard to update after deployment, physically exposed, and have long lifecycles. A threat model done at design time prevents vulnerabilities that would be expensive or impossible to fix later.
+You cannot defend against threats you haven't identified. Threat modelling is the structured process of asking "what could an attacker do?" before writing code or designing hardware. For IoT, this is especially critical because devices are hard to update after deployment, physically exposed, and have long lifecycles. A threat model done at design time prevents vulnerabilities that would be expensive or impossible to fix later.
 
 ## Formal Definition / Statement
-Threat modeling is a systematic process for identifying, quantifying, and addressing security threats to a system. Key frameworks:
+Threat modelling is a systematic process for identifying, quantifying, and addressing security threats to a system. Key frameworks:
 
 **STRIDE (Microsoft):**
 - **S**poofing: Impersonating a user or device (mitigated by authentication)
@@ -48,26 +48,26 @@ Each factor scored 1-10, averaged for overall risk rating. Used to prioritize mi
 3. Application decomposition (data flows)
 4. Threat analysis (who attacks and why)
 5. Weakness/vulnerability analysis
-6. Attack modeling (attack trees/scenarios)
+6. Attack modelling (attack trees/scenarios)
 7. Risk and impact analysis
 
-**LINDDUN (Privacy Threat Modeling):**
+**LINDDUN (Privacy Threat Modelling):**
 - **L**inking: Connecting data to individuals
 - **I**dentifying: Determining identity from data
 - **N**on-repudiation: Proving someone did something
-- **D**etecting: Detecting user behavior
+- **D**etecting: Detecting user behaviour
 - **D**ata Disclosure: Exposing collected data
 - **U**nawareness: Users not informed about data collection
 - **N**on-compliance: Violating privacy regulations
 
 ## Key Properties / Complexity
 
-- **Threat modeling should happen early** — during design, not after deployment
+- **Threat modelling should happen early** — during design, not after deployment
 - **IoT threat models must consider physical attacks** (not just network/application)
 - **STRIDE per element**: Apply STRIDE to every component and every data flow in the architecture diagram
 - **Attack trees scale with system complexity** — a smart home with 30 devices has a large tree
 - **DREAD is subjective** — different analysts may score differently; use calibrated scales
-- **Privacy threats require separate modeling** — STRIDE focuses on security, LINDDUN on privacy
+- **Privacy threats require separate modelling** — STRIDE focuses on security, LINDDUN on privacy
 - **Iterative process**: Threat models must be updated as the system evolves
 
 ### IoT-Specific Challenges
@@ -119,9 +119,9 @@ UNLOCK SMART LOCK
 
 ## Common Pitfalls
 
-- Threat modeling after deployment instead of during design
+- Threat modelling after deployment instead of during design
 - Only considering network attacks, ignoring physical and supply chain threats
-- Treating threat modeling as a one-time activity (it should be iterative)
+- Treating threat modelling as a one-time activity (it should be iterative)
 - Using DREAD scores without calibration (subjective and inconsistent)
 - Not involving developers, operations, and business stakeholders in the process
 - Creating overly complex models that nobody reads or acts upon
@@ -136,16 +136,16 @@ UNLOCK SMART LOCK
 - [[penetration-testing-methodology]] — Pentesting validates threat model assumptions
 - [[risk-assessment-frameworks]] — Risk assessment quantifies and prioritizes identified threats
 - [[security-principles]] — Principles that guide mitigation strategies
-- [[security-by-design]] — Threat modeling is a core security-by-design activity
-- [[iot-lecture-3]] — Attack surfaces identified through threat modeling
+- [[security-by-design]] — Threat modelling is a core security-by-design activity
+- [[iot-lecture-3]] — Attack surfaces identified through threat modelling
 - [[iot-lecture-4]] — Design goals address identified threats
-- [[privacy-by-design]] — LINDDUN for privacy threat modeling
+- [[privacy-by-design]] — LINDDUN for privacy threat modelling
 - [[iot-attack-taxonomy]] — Catalogue of threats to model against
 - [[operational-security-lifecycle]] — Threat modelling in the Define phase
 - [[iot-secure-design]] — Topic page on secure design practices
 
 ## Open Questions
-- Can AI-assisted threat modeling tools reliably generate threat models for novel IoT architectures?
+- Can AI-assisted threat modelling tools reliably generate threat models for novel IoT architectures?
 - How should threat models handle unknown unknowns — attacks that haven't been discovered yet?
 - What is the right level of detail for an IoT threat model (too detailed = unused, too high-level = useless)?
 - How do we threat-model systems with billions of heterogeneous devices?

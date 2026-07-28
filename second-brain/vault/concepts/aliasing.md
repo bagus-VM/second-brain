@@ -28,7 +28,7 @@ Two equivalent ways to compute alias information from [[points-to-analysis|point
 
 The two are equivalent; the alias-set view is usually more useful.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The three kinds of pointer operations
 The lecture identifies three kinds of pointer behaviour (slide 64):

@@ -12,7 +12,7 @@ prerequisites: [lossless-vs-lossy-compression]
 Transform coding converts data from its original domain (e.g., spatial pixels) into a mathematical representation (e.g., frequency coefficients) where redundancy becomes easier to exploit and perceptually insignificant information can be discarded.
 
 ## Core Intuition
-Raw pixel data is highly correlated — neighboring pixels have similar values. In the frequency domain, most of the important information is concentrated in a few coefficients (typically low frequencies = smooth structures), while high frequencies (fine details, noise) carry less perceptual weight. ==By transforming to frequency space, quantizing high-frequency coefficients aggressively, then applying entropy coding, we achieve dramatic compression with controlled quality loss.==
+Raw pixel data is highly correlated — neighboring pixels have similar values. In the frequency domain, most of the important information is concentrated in a few coefficients (typically low frequencies = smooth structures), while high frequencies (fine details, noise) carry less perceptual weight. **By transforming to frequency space, quantizing high-frequency coefficients aggressively, then applying entropy coding, we achieve dramatic compression with controlled quality loss.**
 
 ## Formal Definition / Statement
 Transform coding pipeline:
@@ -31,7 +31,7 @@ S(u,v) = (2/N) × c(u) × c(v) × Σₓ Σᵧ f(x,y) × cos((2x+1)uπ/16) × cos
 ```
 where c(0) = 1/√2, c(k) = 1 for k > 0, N = 8.
 
-## Key Properties
+## Key Properties / Complexity
 - **Reversible in theory**: the transform itself is lossless (inverse DCT reconstructs original), but quantization introduces irreversible loss
 - **Energy compaction**: DCT concentrates energy in few coefficients (top-left of 8×8 block), enabling aggressive quantization of the rest
 - **Block-based (DCT)**: 8×8 blocks are independent — causes blockiness artifacts at high compression
@@ -83,7 +83,7 @@ JPEG DCT on an 8×8 pixel block:
 - [[entropy-coding-huffman-arithmetic]] — final entropy coding stage of transform coding pipelines
 - [[mpeg-video-compression]] — MPEG uses DCT for intra-frame coding
 - [[h264-avc-video-compression]] — H.264 uses integer approximations of DCT (4×4 blocks)
-- [[color-space-conversion-ycbcr]] — color space conversion is applied before DCT in JPEG/MPEG
+- [[color-space-conversion-ycbcr]] — colour space conversion is applied before DCT in JPEG/MPEG
 
 ## Open Questions
 - How do learned transforms (via neural networks) compare to hand-crafted DCT/DWT?

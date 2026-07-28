@@ -32,7 +32,7 @@ where:
 - Homogeneous: most nodes have similar degree (e.g., Erdős–Rényi random graphs)
 - Power-law: few hubs, many low-degree nodes (e.g., Barabási–Albert model)
 
-## Key Properties
+## Key Properties / Complexity
 1. **Heavy tail**: high-degree nodes are relatively common
 2. **Scale-free**: the distribution looks the same at any scale
 3. **No characteristic degree**: there is no "typical" degree

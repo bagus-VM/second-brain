@@ -35,7 +35,7 @@ P(new tie | k shared friends) = 1 − (1 − q)^k
 
 **Key result**: All three show saturating curves — first shared contact matters most, diminishing returns thereafter.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Timestamped data enables forward-looking analysis**: observe what exists at t, measure what forms at t+1
 2. **Saturating curves**: first shared contact is highly informative, additional contacts add less
 3. **Redundancy**: shared contacts are correlated (embedded in same group), not independent

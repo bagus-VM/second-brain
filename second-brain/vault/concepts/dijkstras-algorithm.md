@@ -9,7 +9,7 @@ prerequisites: [breadth-first-search, weighted-graphs, shortest-path-and-diamete
 ---
 
 ## One-line Summary
-Dijkstra's algorithm finds shortest paths in weighted graphs with non-negative edge costs using a priority queue, ==always expanding the currently cheapest unvisited node.==
+Dijkstra's algorithm finds shortest paths in weighted graphs with non-negative edge costs using a priority queue, **always expanding the currently cheapest unvisited node.**
 
 ## Core Intuition
 [[breadth-first-search|BFS]] explores layer by layer because all edges cost the same. But when edges have different weights, we need to be smarter: always process the node with the smallest accumulated distance first. This greedy strategy works because with non-negative weights, once a node is settled, no cheaper path to it can appear later.
@@ -20,12 +20,12 @@ Dijkstra's algorithm finds shortest paths in weighted graphs with non-negative e
 2. Initialize a priority queue PQ with all nodes
 3. While PQ is not empty:
    - Extract node u with the minimum distance
-   - For each neighbor v of u:
+   - For each neighbour v of u:
      - If path through u is shorter: update v's distance
 
 **Complexity**: O((|V| + |E|) log |V|) with a min-heap priority queue.
 
-## Key Properties
+## Key Properties / Complexity
 - Uses a **priority queue (min-heap)** instead of a simple queue
 - Always expands the cheapest unvisited node — greedy strategy
 - Guarantees shortest paths when all edge weights are **non-negative**

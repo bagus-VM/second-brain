@@ -9,14 +9,14 @@ prerequisites: [color-models-overview, rgb-color-model]
 ---
 
 ## One-line Summary
-HSV (Hue, Saturation, Value) represents colors in a way that aligns with human perception: hue as the color wheel angle, saturation as color purity, and value as brightness.
+HSV (Hue, Saturation, Value) represents colours in a way that aligns with human perception: hue as the colour wheel angle, saturation as colour purity, and value as brightness.
 
 ## Core Intuition
-RGB is mathematically convenient but unintuitive for humans. HSV decouples "what color" (hue), "how vivid" (saturation), and "how bright" (value) — making it natural for color pickers and image editing. The model is a cylindrical or conical solid where hue wraps around 0°–360°.
+RGB is mathematically convenient but unintuitive for humans. HSV decouples "what colour" (hue), "how vivid" (saturation), and "how bright" (value) — making it natural for colour pickers and image editing. The model is a cylindrical or conical solid where hue wraps around 0°–360°.
 
 ## Formal Definition / Statement
 - **H (Hue)**: 0°–360°. Red = 0°, Green = 120°, Blue = 240°. Circular.
-- **S (Saturation)**: 0%–100%. 0% = gray (no color), 100% = fully saturated.
+- **S (Saturation)**: 0%–100%. 0% = gray (no colour), 100% = fully saturated.
 - **V (Value/Brightness)**: 0%–100%. 0% = black, 100% = full brightness.
 
 ### RGB → HSV Conversion (Gonzalez & Woods)
@@ -28,10 +28,10 @@ RGB is mathematically convenient but unintuitive for humans. HSV decouples "what
 4. S = (max(R,G,B) − W) / max(R,G,B)
 5. V = max(R, G, B)
 
-## Key Properties
-- Perceptually more intuitive than RGB for selecting/adjusting colors
+## Key Properties / Complexity
+- Perceptually more intuitive than RGB for selecting/adjusting colours
 - Not perceptually uniform — equal steps in HSV don't produce equal perceived changes
-- All fully saturated colors (S=100%, V=100%) lie on the outer rim of the hexcone
+- All fully saturated colours (S=100%, V=100%) lie on the outer rim of the hexcone
 
 ## Worked Example
 Convert RGB(0.6, 0.2, 0.4) to HSV:
@@ -43,13 +43,13 @@ Convert RGB(0.6, 0.2, 0.4) to HSV:
 Result: H=320°, S=66.7%, V=60% — a medium-saturation magenta-pink.
 
 ## Common Pitfalls
-- Confusing HSV with HSL — in HSL, L=100% is always white; in HSV, V=100% can still be a saturated color
+- Confusing HSV with HSL — in HSL, L=100% is always white; in HSV, V=100% can still be a saturated colour
 - Assuming HSV is perceptually uniform — it's not; [[lab-color-space]] is closer
 
 ## Connections
 - Conversion partner: [[rgb-color-model]]
 - Less perceptually uniform than [[lab-color-space]] but simpler to compute
-- Useful for color-based image retrieval in multimedia databases (query by hue)
+- Useful for colour-based image retrieval in multimedia databases (query by hue)
 - Related: [[hmmd-color-space]] attempts better perceptual uniformity
 
 ## Open Questions

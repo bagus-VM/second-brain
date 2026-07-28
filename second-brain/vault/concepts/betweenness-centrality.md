@@ -22,7 +22,7 @@ where:
 - σ_st = number of shortest paths from s to t
 - σ_st(v) = number of shortest paths from s to t that pass through v
 
-**Normalized form:** divide by (n-1)(n-2)/2 for undirected graphs (number of pairs excluding v).
+**Normalized form:** ==divide by (n-1)(n-2)/2 for undirected graphs== (number of pairs excluding v).
 
 **Range:** 0 to 1 (normalized). 1 means all shortest paths between other nodes use v.
 
@@ -30,7 +30,7 @@ where:
 
 **Difference from closeness:** Closeness asks "How near is v to everyone?" Betweenness asks "How many shortest paths between other nodes depend on v?"
 
-## Key Properties
+## Key Properties / Complexity
 1. **Brokerage theory**: importance from sitting on paths between others
 2. **Global measure**: requires all-pairs shortest paths
 3. **Brandes algorithm**: computes all nodes in O(n(n + m))

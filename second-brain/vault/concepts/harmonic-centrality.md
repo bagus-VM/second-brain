@@ -29,7 +29,7 @@ HMD(v) = (n-1) / H(v)
 
 **Interpretation:** many reachable nodes through short paths.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Handles disconnected graphs**: unreachable nodes contribute 0, not ∞
 2. **Robust alternative to closeness**: works on any graph
 3. **Same complexity as closeness**: O(n(n + m)) for all nodes

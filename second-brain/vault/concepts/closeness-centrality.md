@@ -12,7 +12,7 @@ prerequisites: []
 Closeness centrality measures how near a node is to all other nodes on average — quantifying accessibility and short-path reach.
 
 ## Core Intuition
-A node with high closeness can reach everyone quickly. This makes it ideal for service hubs, emergency-response centers, or information spreaders — anything where minimizing average distance matters.
+A node with high closeness can reach everyone quickly. This makes it ideal for service hubs, emergency-response centres, or information spreaders — anything where minimising average distance matters.
 
 ## Formal Definition / Statement
 **Closeness centrality:**
@@ -26,9 +26,9 @@ where d(v,u) is the shortest-path distance from v to u.
 
 **Limitation:** fails on disconnected graphs (distance to unreachable nodes is ∞).
 
-**Use:** accessibility studies — which hospital, station, or facility minimizes network distance to a population center.
+**Use:** accessibility studies — which hospital, station, or facility minimizes network distance to a population centre.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Accessibility theory**: importance from short paths to everyone
 2. **Global measure**: requires all-pairs shortest paths
 3. **Fails on disconnected graphs**: distance to unreachable nodes is ∞

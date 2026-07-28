@@ -37,3 +37,7 @@ The valence band is the range of energy levels corresponding to the outermost oc
 
 ## Open Questions
 - How do band structure modifications in [[nanoelectronics]] affect the valence band?
+
+## Worked Example
+
+*To be filled.*

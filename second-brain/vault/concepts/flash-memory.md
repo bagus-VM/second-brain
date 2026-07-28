@@ -12,14 +12,14 @@ prerequisites: ["[[mosfet]]"]
 *A floating gate traps electrons to store data permanently — no power needed, but writes wear out the cell.*
 
 ## Core Intuition
-A flash memory cell is a MOSFET with an extra gate — the floating gate — buried in oxide between the control gate and the channel. Electrons can be injected into the floating gate (programming) or removed (erasing) through quantum tunneling (Fowler-Nordheim) or hot-carrier injection. Trapped electrons shift the transistor's threshold voltage: high Vt = "0" (programmed), low Vt = "1" (erased). The oxide traps the charge permanently — no power needed to retain data. But each program/erase cycle damages the oxide slightly, limiting endurance to ~10K-100K cycles.
+A flash memory cell is a MOSFET with an extra gate — the floating gate — buried in oxide between the control gate and the channel. Electrons can be injected into the floating gate (programming) or removed (erasing) through quantum tunnelling (Fowler-Nordheim) or hot-carrier injection. Trapped electrons shift the transistor's threshold voltage: high Vt = "0" (programmed), low Vt = "1" (erased). The oxide traps the charge permanently — no power needed to retain data. But each program/erase cycle damages the oxide slightly, limiting endurance to ~10K-100K cycles.
 
 ## Formal Definition / Statement
 
 **Cell structure:**
 - Control gate: external terminal for read/program/erase operations
 - Floating gate: electrically isolated conductor sandwiched in oxide
-- Tunnel oxide: thin oxide layer (~10 nm) allows electron tunneling
+- Tunnel oxide: thin oxide layer (~10 nm) allows electron tunnelling
 - Source, drain, channel: standard MOSFET structure
 
 **Two architectures:**
@@ -28,17 +28,17 @@ A flash memory cell is a MOSFET with an extra gate — the floating gate — bur
 
 **Operations:**
 - **Read:** Apply normal gate voltage → if floating gate has trapped electrons (high Vt), transistor is off → "0". If no trapped electrons (low Vt), transistor is on → "1".
-- **Program:** Apply high voltage to control gate → electrons tunnel through thin oxide into floating gate (Fowler-Nordheim tunneling or hot-carrier injection)
+- **Program:** Apply high voltage to control gate → electrons tunnel through thin oxide into floating gate (Fowler-Nordheim tunnelling or hot-carrier injection)
 - **Erase:** Apply high voltage to source/bulk → electrons tunnel out of floating gate
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Non-volatile:** data retained without power (years to decades)
 - **Block erasure:** must erase entire blocks (128 KB - 256 KB) before writing
 - **Write endurance:** limited to ~10K-100K program/erase cycles per cell
 - **Read endurance:** essentially unlimited (reads don't damage the cell)
 - **Asymmetric speeds:** reads are fast (μs), writes are slow (ms), erases are very slow (ms)
-- **Wear leveling:** controllers distribute writes across cells to maximize lifetime
+- **Wear leveling:** controllers distribute writes across cells to maximise lifetime
 - **Multi-level cells (MLC):** store 2+ bits per cell by using multiple threshold levels
 
 ## Worked Example

@@ -11,10 +11,10 @@ prerequisites: ["[[electricity]]"]
 *Band theory explains how electrons in solids occupy continuous ranges of allowed energies (bands) separated by forbidden gaps, which determines whether a material is a conductor, semiconductor, or insulator.*
 
 ## Core Intuition
-In an isolated atom, electrons sit in discrete energy levels (like rungs on a ladder). When billions of atoms bond in a crystal, those levels spread out into continuous bands — like turning each rung into a broad platform. The gap between platforms (the "forbidden zone") determines everything about electrical behavior: no gap means electrons flow freely (conductor), a small gap means thermal energy can kick electrons across (semiconductor), and a huge gap means almost nothing gets through (insulator).
+In an isolated atom, electrons sit in discrete energy levels (like rungs on a ladder). When billions of atoms bond in a crystal, those levels spread out into continuous bands — like turning each rung into a broad platform. The gap between platforms (the "forbidden zone") determines everything about electrical behaviour: no gap means electrons flow freely (conductor), a small gap means thermal energy can kick electrons across (semiconductor), and a huge gap means almost nothing gets through (insulator).
 
 ## Formal Definition / Statement
-In a periodic crystal potential, electrons obey the Bloch theorem and occupy energy bands described by the E(k) dispersion relation. Each band can hold 2N states (N = number of unit cells, factor of 2 for spin). Key bands:
+In a periodic crystal potential, electrons obey the Bloch theorem and occupy energy bands described by the E(k) dispersion relation. Each band can hold 2N states (where N is the number of unit cells and the factor of 2 accounts for spin). Key bands:
 
 - **Valence band:** Highest energy band that is fully occupied at 0 K
 - **Conduction band:** Lowest energy band that is empty at 0 K
@@ -46,7 +46,7 @@ This shows why silicon is useful: the bandgap is small enough to allow some cont
 
 ## Common Pitfalls
 - Confusing "band" (continuous range of allowed energies) with "orbital" (discrete energy level in a single atom)
-- Assuming the bandgap is the only thing that matters — effective mass, density of states, and direct/indirect nature all critically affect device behavior
+- Assuming the bandgap is the only thing that matters — effective mass, density of states, and direct/indirect nature all critically affect device behaviour
 - Thinking all semiconductors behave similarly — GaAs, SiC, GaN, and Ge have very different band structures and therefore very different applications
 - Forgetting that band theory is a quantum mechanical result — classical physics cannot explain why some materials conduct and others don't
 
@@ -54,7 +54,7 @@ This shows why silicon is useful: the bandgap is small enough to allow some cont
 - [[semiconductor]] — Materials with moderate bandgaps whose conductivity is tunable
 - [[silicon]] — The dominant semiconductor, indirect bandgap 1.12 eV
 - [[germanium]] — Smaller bandgap semiconductor (0.66 eV), indirect
-- [[bandgap]] — The key parameter of band structure that determines semiconductor behavior
+- [[bandgap]] — The key parameter of band structure that determines semiconductor behaviour
 - [[valence-band]] — The highest fully-occupied band at 0 K
 - [[conduction-band]] — The lowest empty band at 0 K where free electrons reside
 - [[doping]] — Introduces energy levels within the bandgap to control carrier concentration

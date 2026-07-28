@@ -16,7 +16,7 @@ Data flow analysis is a compile-time technique that tracks how data (definitions
 
 Every statement in a program both *creates* (gen) and *destroys* (kill) facts about the program state. By propagating these facts along the [[control-flow-graph]], we can determine at each program point what *could* be true or *must* be true. Rather than tracing every path (which is exponential), we compute IN/OUT sets for each basic block and iterate until nothing changes — reaching a fixed point.
 
-When a compiler wants to optimize code, it needs to know things like: 'Is this variable used again?' 'Has this expression been computed before?' 'Could this pointer be null here?' Answering these questions requires understanding how data flows through the program — which assignments reach which uses, which variables are live at which points.
+When a compiler wants to optimise code, it needs to know things like: 'Is this variable used again?' 'Has this expression been computed before?' 'Could this pointer be null here?' Answering these questions requires understanding how data flows through the program — which assignments reach which uses, which variables are live at which points.
 
 ## Formal Definition / Statement
 
@@ -50,7 +50,7 @@ A data flow analysis is defined by:
 
 4. **Very Busy Expressions** (backward, must): Which expressions are evaluated on all paths?
 
-## Key Properties
+## Key Properties / Complexity
 
 - Every data flow analysis can be classified along two axes: **direction** (forward/backward) and **kind** (may/must)
 - The four classic analyses form a 2×2 matrix: [[reaching-definitions]] (forward, may), [[available-expressions]] (forward, must), [[live-variable-analysis]] (backward, may), [[very-busy-expressions]] (backward, must)

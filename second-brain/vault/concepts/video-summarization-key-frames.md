@@ -37,7 +37,7 @@ Users rarely want to watch an entire video to understand its content. Video summ
 - **Video skimming**: Shortened version preserving key moments.
 - **Video storyboard**: Grid of key frames providing visual overview (like a film strip).
 
-## Key Properties
+## Key Properties / Complexity
 - Key frames should be *representative* of the shot content, not just arbitrary frames.
 - In the compressed domain, an **I-frame** (intra-coded frame) can serve as a natural key frame since it's independently coded.
 - The optimal algorithm is O(n²) per shot — impractical for long videos without optimization.

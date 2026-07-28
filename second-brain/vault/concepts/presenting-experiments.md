@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [hypothesis-formulation]
 ---
 
-# Presenting Experiments
 
 ## One-line Summary
 A well-structured experiments section separates setup, results, and discussion, enabling readers to understand, evaluate, and reproduce the work.
@@ -23,7 +22,7 @@ The typical structure of an experiments section in a CS paper:
    - "We evaluate our method on data collected from five campus cafés and compare it against two baselines."
    - "We measure recommendation quality using click-through rate and normalized discounted cumulative gain."
 
-2. **Results:** What the data shows.
+2. **Results:** What the data show.
    - "Our method reduces the average search time by 23% compared with the popularity-based baseline."
    - "Figure 3 shows that the proposed method remains faster than all baselines as the number of users increases."
 
@@ -31,7 +30,7 @@ The typical structure of an experiments section in a CS paper:
    - "This suggests that personalization is especially useful when users have strong dietary preferences."
    - "The gains are smaller late in the day, possibly because several cafés have fewer items available."
 
-## Key Properties
+## Key Properties / Complexity
 - A figure should be accompanied by an explanation of what it shows and why it matters.
 - It is important to state limitations clearly.
 - The experiments section should **not** only present positive outcomes.

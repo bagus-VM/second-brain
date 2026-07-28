@@ -12,12 +12,12 @@ prerequisites: [lossless-vs-lossy-compression, transform-coding, jpeg-compressio
 MPEG video compression combines intra-frame coding (JPEG-like DCT within each frame) with inter-frame coding (motion-compensated prediction between frames) using I, P, and B frames organized in Groups of Pictures (GOPs).
 
 ## Core Intuition
-Video is a sequence of frames with massive temporal redundancy — consecutive frames are nearly identical except for object motion. Rather than encoding each frame independently (like Motion-JPEG), MPEG exploits this by encoding only the *differences* between frames. ==A reference frame (I-frame) is coded fully (like JPEG), then subsequent frames (P-frames, B-frames) are predicted from it using motion vectors==. Only the prediction error (residual) needs to be stored, dramatically reducing the bitrate.
+Video is a sequence of frames with massive temporal redundancy — consecutive frames are nearly identical except for object motion. Rather than encoding each frame independently (like Motion-JPEG), MPEG exploits this by encoding only the *differences* between frames. **A reference frame (I-frame) is coded fully (like JPEG), then subsequent frames (P-frames, B-frames) are predicted from it using motion vectors**. Only the prediction error (residual) needs to be stored, dramatically reducing the bitrate.
 
 ## Formal Definition / Statement
 MPEG-2 compression uses three coding types in a **Group of Pictures (GOP)**:
 
-**I-Frame (Intra-coded)**: Coded independently, no reference to other frames. Uses JPEG-like pipeline: color space conversion → subsampling → DCT (8×8 blocks) → quantization → RLE → Huffman. Serves as random access point and limits error propagation.
+**I-Frame (Intra-coded)**: Coded independently, no reference to other frames. Uses JPEG-like pipeline: colour space conversion → subsampling → DCT (8×8 blocks) → quantization → RLE → Huffman. Serves as random access point and limits error propagation.
 
 **P-Frame (Predictive)**: Coded using motion-compensated prediction from the preceding I or P-frame. For each macroblock (16×16), the encoder searches for the best matching block in the reference frame. Only the motion vector + residual (difference) are stored. Can also contain intra-coded blocks if no good match exists.
 
@@ -29,7 +29,7 @@ Typical GOP structure: `I-BB-P-BB-P-BB-P-BB-I-BB...`
 - MSE = ΣΣ(Currentᵢⱼ - Refᵢⱼ)² / N²
 - SAE = ΣΣ|Currentᵢⱼ - Refᵢⱼ|
 
-## Key Properties
+## Key Properties / Complexity
 - **GOP structure**: I-frame starts each GOP; all frames in GOP depend on the first I-frame
   - GOP length: typically 10–250 frames (DVB: 50 frames = 2 seconds)
   - Smallest unit for random access

@@ -30,7 +30,7 @@ If source code follows predictable patterns (the [[code-naturalness-hypothesis]]
 
 **Connection to the lecture:** This validates the [[code-naturalness-hypothesis]] — if code has natural patterns, violations of those patterns correlate with defects.
 
-## Key Properties
+## Key Properties / Complexity
 - Buggy code is less predictable → higher [[surprisal-and-code-prediction]] → higher [[perplexity-and-entropy|cross-entropy]]
 - The effect is **statistical**, not deterministic: not all high-surprisal code is buggy, and not all bugs produce high surprisal
 - Works best when the language model is trained on the same project (project-specific patterns)

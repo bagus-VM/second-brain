@@ -9,10 +9,10 @@ prerequisites: [pixel-formats-and-bit-depth, color-lookup-table]
 ---
 
 ## One-line Summary
-Image file formats ==define how pixel data, metadata, and compression are organized on disk==, with major formats (TIFF, GIF, PNG, JPEG, JPEG2000) differing in compression method, color depth support, and use cases.
+Image file formats **define how pixel data, metadata, and compression are organized on disk**, with major formats (TIFF, GIF, PNG, JPEG, JPEG2000) differing in compression method, colour depth support, and use cases.
 
 ## Core Intuition
-An image file is not just raw pixels — it needs a header (dimensions, bit depth, color model), optional metadata, and usually compression to reduce file size. Different formats make different tradeoffs: JPEG sacrifices some quality for tiny files (photos on the web), PNG preserves exact quality (illustrations, transparency), GIF is limited to 256 colors but supports animation, and TIFF is the Swiss Army knife of image formats (flexible but bulky).
+An image file is not just raw pixels — it needs a header (dimensions, bit depth, colour model), optional metadata, and usually compression to reduce file size. Different formats make different tradeoffs: JPEG sacrifices some quality for tiny files (photos on the web), PNG preserves exact quality (illustrations, transparency), GIF is limited to 256 colours but supports animation, and TIFF is the Swiss Army knife of image formats (flexible but bulky).
 
 ## Formal Definition / Statement
 Key image formats and their properties:
@@ -26,7 +26,7 @@ Key image formats and their properties:
 
 Other formats: BMP (Windows raw), RLE (compressed BMP), TGA (Targa), PBM/PGM/PPM (portable maps), RAW (camera-specific), PSD (Photoshop), JP2/JPX/JPM (JPEG2000).
 
-## Key Properties
+## Key Properties / Complexity
 
 ### TIFF (Tagged Image File Format, ~1985)
 - Developer: Aldus Corporation, 1986
@@ -34,24 +34,24 @@ Other formats: BMP (Windows raw), RLE (compressed BMP), TGA (Targa), PBM/PGM/PPM
 - Each tag: 2 bytes ID + 2 bytes type + 4 bytes length + 4 bytes value/offset
 - Key tags: ImageWidth (100), ImageHeight (101), BitsPerPixel (102), Compression (103), ColorCoding (104)
 - Compression options: none, CCITT (B/W), LZW, JPEG, Huffman
-- Color options: WhiteIsZero, BlackIsZero, RGB, CMYK, color table
+- Colour options: WhiteIsZero, BlackIsZero, RGB, CMYK, colour table
 - Very flexible but large file sizes
 
 ### GIF (Graphics Interchange Format, 1987)
 - Developer: CompuServe Inc., 1987
 - Structure: Header → Application → [Control → Image] → Comment → Plain Text → Trailer
-- Uses [[color-lookup-table|CLUT]] (8-bit indexed color, max 256 colors)
+- Uses [[color-lookup-table|CLUT]] (8-bit indexed colour, max 256 colours)
 - Compression: LZW (Lempel-Ziv-Welch) — identifies repeating bit patterns
 - Supports animation (multiple images per file) and 1-bit transparency
-- Limitations: max 16,000 × 16,000 pixels, max 256 colors, cannot handle TrueColor
+- Limitations: max 16,000 × 16,000 pixels, max 256 colours, cannot handle TrueColor
 - Developed for fast transmission at low bandwidth
 
 ### PNG (Portable Network Graphics, 1996)
 - Proposed as free, less complex replacement for GIF (patent issues, resolved 2004)
 - Lossless compression with pre-filters to improve compressibility:
   - None: original pixels
-  - Sub: differences to left neighbor
-  - Up: differences to top neighbor
+  - Sub: differences to left neighbour
+  - Up: differences to top neighbour
   - Average: differences to average of top and left
   - Paeth: uses Paeth predictor (top, left, top-left)
 - After pre-filtering: Deflate algorithm (same as ZIP/gzip)
@@ -59,10 +59,10 @@ Other formats: BMP (Windows raw), RLE (compressed BMP), TGA (Targa), PBM/PGM/PPM
 
 **PNG Variants:**
 
-| Variant | Color Depth / Features | Typical Use |
+| Variant | Colour Depth / Features | Typical Use |
 |---------|------------------------|-------------|
-| PNG-8 | 8-bit indexed (up to 256 colors) | Icons, logos, simple graphics |
-| PNG-24 | 24-bit true color (~16.7M colors) | Photos, detailed graphics |
+| PNG-8 | 8-bit indexed (up to 256 colours) | Icons, logos, simple graphics |
+| PNG-24 | 24-bit true colour (~16.7M colours) | Photos, detailed graphics |
 | PNG-32 | 24-bit + 8-bit alpha transparency | Transparent graphics, UI elements |
 | APNG | Animation support | Animated web graphics |
 | Interlaced PNG | Progressive loading (Adam7) | Web delivery over slow connections |
@@ -77,7 +77,7 @@ Other formats: BMP (Windows raw), RLE (compressed BMP), TGA (Targa), PBM/PGM/PPM
 | Storage | Low-avg | High | Average | Avg-low |
 | Use cases | Photos, web | Print, data exchange | Web, animation | Web, illustrations |
 | Compression | Lossy | Lossless possible | Lossless (LZW) | Lossless (Deflate) |
-| Color depth | 24-bit | Up to 48-bit | 8-bit indexed | Up to 48-bit |
+| Colour depth | 24-bit | Up to 48-bit | 8-bit indexed | Up to 48-bit |
 
 ### JPEG vs JPEG2000
 
@@ -98,15 +98,15 @@ See [[jpeg-compression-pipeline]] and [[jpeg2000-wavelet-compression]] for detai
 Saving a 1024×768 photograph:
 - As JPEG (quality 85): ~200 KB, slight quality loss, no transparency
 - As PNG: ~1.5 MB, perfect quality, full alpha transparency
-- As GIF: ~400 KB, reduced to 256 colors (posterization), 1-bit transparency
+- As GIF: ~400 KB, reduced to 256 colours (posterization), 1-bit transparency
 - As TIFF (LZW): ~1.2 MB, perfect quality, maximum flexibility
 
 ## Common Pitfalls
-- Using GIF for photographs — limited to 256 colors, causes severe posterization
+- Using GIF for photographs — limited to 256 colours, causes severe posterization
 - Using JPEG for graphics with text/sharp edges — lossy compression creates visible artifacts
 - Confusing TIFF's flexibility with universal support — not all viewers handle all TIFF variants
 - Forgetting that PNG's pre-filters are lossless — they transform data for better compression, not for visual effect
-- Overlooking that GIF's 256-color limit makes [[dithering]] essential for photographs
+- Overlooking that GIF's 256-colour limit makes [[dithering]] essential for photographs
 
 ## Connections
 - [[pixel-formats-and-bit-depth]] — formats differ in supported bit depths

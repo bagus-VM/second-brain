@@ -35,7 +35,7 @@ rest → + term { print("+") } rest
 
 Actions execute in the order they appear during a left-to-right depth-first traversal.
 
-## Key Properties
+## Key Properties / Complexity
 
 - Synthesized attributes can always be evaluated in a single bottom-up pass (post-order traversal)
 - Inherited attributes may require multiple passes or careful ordering

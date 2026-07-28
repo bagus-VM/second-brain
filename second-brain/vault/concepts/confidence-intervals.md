@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [statistical-significance]
 ---
 
-# Confidence Intervals
 
 ## One-line Summary
 A confidence interval gives a range of plausible values for a parameter, providing more information than a binary significant/not-significant decision.
@@ -22,7 +21,7 @@ Instead of just asking "is there an effect?" (hypothesis testing), a confidence 
 - Computed as: estimate ± (critical value × standard error).
 - For a 95% CI with a normal distribution: estimate ± 1.96 × SE.
 
-## Key Properties
+## Key Properties / Complexity
 - Wider intervals → less precision (smaller sample, more variability).
 - Narrower intervals → more precision (larger sample, less variability).
 - If a 95% CI for a difference does not include 0, the result is significant at α = 0.05.

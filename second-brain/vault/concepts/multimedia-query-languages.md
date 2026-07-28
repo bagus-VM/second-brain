@@ -22,7 +22,7 @@ A multimedia query language (MMQL) extends or replaces SQL to express these. The
 - **Exact queries**: target non multimedia attributes (standard SQL style filtering).
 - **Semantic queries**: determine the result from descriptions of the semantic content, such as the occurrence of specific objects or persons.
 - **Syntactic queries**: target basic media characteristics such as resolution or framerate.
-- **Similarity queries (content based)**: operate on low level features (color distributions, texture) and return media with similar features.
+- **Similarity queries (content based)**: operate on low level features (colour distributions, texture) and return media with similar features.
 - **Correlation queries**: identify spatial and temporal correlations in media, such as "all images in which a red ball is next to a yellow one."
 
 **Requirements for a MMQL**:
@@ -52,7 +52,7 @@ A multimedia query language (MMQL) extends or replaces SQL to express these. The
 ## Key Properties / Complexity
 
 ### Why two categories coexist
-- Extension approaches reuse a familiar syntax. Adoption is easier because SQL and OQL are already well known, and object orientation is desirable for modeling complex media. The cost is that the base language was never designed for similarity or spatial logic, so the extensions can feel bolted on.
+- Extension approaches reuse a familiar syntax. Adoption is easier because SQL and OQL are already well known, and object orientation is desirable for modelling complex media. The cost is that the base language was never designed for similarity or spatial logic, so the extensions can feel bolted on.
 - From scratch approaches design around multimedia from the start. MPQF, for example, is XML based and decoupled from any specific metadata standard, so it can target any XML described metadata, not only MPEG 7. The cost is a new syntax users must learn.
 
 ### The five query types form a ladder
@@ -68,7 +68,7 @@ A multimedia query language (MMQL) extends or replaces SQL to express these. The
 
 ### Processing and optimization implications
 - Similarity queries break the usual "push selections down" heuristic. A similarity based selection can be more expensive than a join, so the optimizer cannot assume cheap predicates.
-- A formal similarity algebra (similarity based selection and join, the Mine operator) is needed to optimize these queries the way relational algebra optimizes SQL.
+- A formal similarity algebra (similarity based selection and join, the Mine operator) is needed to optimise these queries the way relational algebra optimizes SQL.
 
 ## Worked Example
 

@@ -24,7 +24,7 @@ Both are main-memory structures. Neither is balanced for secondary storage the w
 - Repeat until a stopping condition holds: only one pixel left, only one point left, or only a few points left.
 - Variants: split only one dimension at a time, leading to kd-trees.
 
-**Quadtree range search** (near neighbor):
+**Quadtree range search** (near neighbour):
 - Put the root on a stack.
 - Repeat: pop the next node T from the stack. For each child C of T:
   - If C is a leaf, examine the point(s) in C.
@@ -33,7 +33,7 @@ Both are main-memory structures. Neither is balanced for secondary storage the w
 **kd-tree** (Bentley, 1975):
 - Only one-dimensional splits (not all dimensions at once).
 - Instead of splitting in the middle, choose the split carefully (many variations).
-- Near(est) neighbor queries proceed as for quadtrees.
+- Near(est) neighbour queries proceed as for quadtrees.
 - Linear space; less empty space than a quadtree.
 
 ## Key Properties / Complexity

@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# System Dependence Graph (SDG)
 
 ## One-line Summary
 
@@ -56,7 +55,7 @@ A summary edge connects actual-inᵢ to actual-outⱼ at a call site if there is
 
 The two phases prevent **unrealizable paths** — paths that don't correspond to any actual call sequence.
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|
@@ -154,3 +153,7 @@ If `y` were not used in `add`, the summary edge `y_actual_in → z_actual_out` w
 4. How do we slice **object-oriented programs** with virtual dispatch? (Dynamic SDG)
 5. Can SDGs capture **information flow** across procedure boundaries for security analysis?
 6. How does **modular slicing** differ from whole-program SDG slicing?
+
+## Formal Definition / Statement
+
+*To be filled.*

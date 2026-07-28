@@ -31,9 +31,9 @@ The output is the negative scaled derivative of the input.
 **For a linear ramp input Vin = kt:**
 Vout = -RC · k — a constant output proportional to the ramp rate.
 
-## Key Properties
+## Key Properties / Complexity
 
-- High-pass behavior: gain magnitude |ωRC| increases with frequency
+- High-pass behaviour: gain magnitude |ωRC| increases with frequency
 - At DC (ω=0), gain is zero (capacitor blocks DC → no output)
 - At very high frequencies, gain is very large → noise amplification
 - Practical fix: add a small resistor Rs in series with C to limit high-frequency gain to -R/Rs

@@ -25,13 +25,13 @@ A DRAM cell is the simplest possible memory: a capacitor stores charge (1 = char
 - **Read:** Word line high → transistor on → capacitor shares charge with bit line → small voltage change on bit line → sense amplifier detects and latches
 - **Refresh:** Every ~64 ms, read each row and write back the data (the sense amplifier does this automatically)
 
-**Organization:**
+**Organisation:**
 - Cells arranged in a 2D array: rows × columns
 - Word line = row select (activates all cells in a row)
 - Bit line = column data (one per column, shared by all cells in that column)
 - Row address + column address selects one cell
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Volatile:** loses data when power is removed
 - **Dense:** 1T + 1C per bit → ~6-10 F² per bit (much smaller than SRAM's 120-200 F²)

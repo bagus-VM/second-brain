@@ -23,7 +23,7 @@ Leiden improves Louvain by adding a refinement phase before aggregation — spli
 
 **Split effect**: if a Louvain community is held together only by a weak bridge, Leiden keeps its parts separate instead of collapsing them into one super-node.
 
-## Key Properties
+## Key Properties / Complexity
 - Preserves Louvain's near-linear scalability
 - Prevents structurally broken communities from being locked in
 - No fixed k — community count emerges from greedy moves + refinement
@@ -45,7 +45,7 @@ This prevents D from being permanently merged with the triangle.
 
 ## Connections
 - [[louvain-algorithm]] — Leiden is Louvain + refinement
-- [[modularity]] — both optimize Q (or variants)
+- [[modularity]] — both optimise Q (or variants)
 - [[girvan-newman-algorithm]] — the divisive alternative
 - [[community-detection-overview]] — Leiden is the recommended agglomerative method
 - [[embedding-based-community-detection]] — alternative approach using node embeddings for overlapping communities

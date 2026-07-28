@@ -29,7 +29,7 @@ r = (H_obs − H_base) / (1 − H_base)
 - r = 1: perfect segregation
 - r < 0: heterophily (preference for different attributes)
 
-## Key Properties
+## Key Properties / Complexity
 1. **Baseline depends only on population shares** — not on the network
 2. **r normalizes to [−1, 1]** — comparable across different populations
 3. **Same H_obs, different r**: 85% within-group means r = 0.70 (50/50 split) but r = 0.17 (90/10 split)

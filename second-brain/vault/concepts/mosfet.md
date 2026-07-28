@@ -46,9 +46,9 @@ nMOS transistor with VTH = 0.7V, k = 0.5 mA/V²:
 - Extends the concept of [[transistor]] to voltage-controlled, field-effect operation.
 - The [[mos-capacitor]] is the fundamental physical structure underlying MOSFET operation.
 - Specific implementations: [[nmos-transistor]] and [[pmtransistor]].
-- Operating behavior described by [[mosfet-operating-regions]].
+- Operating behaviour described by [[mosfet-operating-regions]].
 - [[threshold-voltage]] is the key parameter determining ON/OFF switching.
 
 ## Open Questions
-- How does gate oxide scaling affect reliability (tunneling, breakdown)?
+- How does gate oxide scaling affect reliability (tunnelling, breakdown)?
 - What replaces MOSFETs when we hit physical scaling limits?

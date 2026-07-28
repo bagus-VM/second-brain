@@ -8,7 +8,7 @@ last_updated: 2026-06-22
 prerequisites: []
 ---
 ## One-line Summary
-*The ten most critical IoT security vulnerabilities, providing a prioritized taxonomy for threat modeling and security testing.*
+*The ten most critical IoT security vulnerabilities, providing a prioritized taxonomy for threat modelling and security testing.*
 
 ## Core Intuition
 With billions of IoT devices deployed, you need a common language for 'what goes wrong most often.' The OWASP IoT Top 10 provides exactly that — a ranked list of the most impactful vulnerability categories, derived from real-world incidents and security research. It's the IoT equivalent of the famous OWASP Web Top 10, and it's what security auditors, penetration testers, and regulators reference when evaluating IoT products.

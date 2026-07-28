@@ -30,7 +30,7 @@ ENTRYPOINT ["/mentos"]
 
 The first stage (`builder`) compiles the program. The second stage (`scratch`, the empty image) copies only the binary. The final image contains nothing but the binary.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Size reduction**: the final image carries only the runtime artifact, not the build toolchain. A GCC-based single-stage image is ~1.2 GB; the equivalent multi-stage image on `scratch` can be ~100 KB.
 - **Separation of build and runtime dependencies**: the build stage can install any number of tools without bloating the final image.

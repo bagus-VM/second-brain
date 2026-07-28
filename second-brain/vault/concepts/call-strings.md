@@ -28,7 +28,7 @@ A **context-sensitive analysis with call strings** tracks, for each procedure f,
 
 Two invocations of f with the same call string share their state. Two invocations with different call strings are kept separate.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why bounded call strings are needed
 - For non-recursive programs, call strings can grow at most to the depth of the call graph (which is finite)

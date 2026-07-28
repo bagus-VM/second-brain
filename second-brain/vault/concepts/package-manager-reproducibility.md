@@ -30,7 +30,7 @@ Where `resolve` takes a dependency specification and returns the exact set of pa
 - **Content-addressable storage**: Packages identified by content hash, not version number
 - **Functional package management** (Nix/Guix): Packages built from pure functions with explicit inputs
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Lock files**: `package-lock.json`, `Pipfile.lock`, `Cargo.lock`, `go.sum` freeze dependency versions.
 - **Content hashing**: Lock files often include integrity hashes (SHA-256) to detect tampering.

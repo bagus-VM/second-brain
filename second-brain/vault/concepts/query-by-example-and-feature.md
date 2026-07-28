@@ -14,7 +14,7 @@ Two ways to drive a CBIR search: hand the system a sample picture and ask for si
 ## Core Intuition
 A user looking at a butterfly identification system rarely has a perfect photo and rarely speaks the language of feature vectors. The lecture's butterfly use case captures the tension well: non specialists cannot describe a butterfly in expert terms, they may not remember its exact appearance, and they will not page through hundreds of results.
 
-The system answers this with a two mode, user controlled loop. In **Query By Features (QBF)** the user supplies values for descriptors such as dominant color, texture pattern, or shape. This is a loose, exploratory way to start. In **Query By Example (QBE)** the user hands over a concrete image and asks for similar ones. This is the precise, narrowing step.
+The system answers this with a two mode, user controlled loop. In **Query By Features (QBF)** the user supplies values for descriptors such as dominant colour, texture pattern, or shape. This is a loose, exploratory way to start. In **Query By Example (QBE)** the user hands over a concrete image and asks for similar ones. This is the precise, narrowing step.
 
 The two modes feed each other. Every result page reports both the matching images and the features those images produced. A user can grab a result image and run another QBE, or grab a reported feature value and run another QBF. This keeps the search interactive and lets a user who starts fuzzy gradually tighten the query.
 
@@ -56,8 +56,8 @@ The two modes feed each other. Every result page reports both the matching image
 
 Butterfly identification, after the lecture's scenario.
 
-1. **Opening QBF (expand)**: the user remembers an orange-yellow butterfly with many spots. They submit feature values: color = orange_yellow, texture = many_spots. The system returns every butterfly matching those features, ranked by similarity. The result is loose. Orange butterflies of several species appear.
-2. **Read the result page**: the page lists matching butterfly images and, alongside them, the extracted features (color shares, texture match degrees, shape values).
+1. **Opening QBF (expand)**: the user remembers an orange-yellow butterfly with many spots. They submit feature values: colour = orange_yellow, texture = many_spots. The system returns every butterfly matching those features, ranked by similarity. The result is loose. Orange butterflies of several species appear.
+2. **Read the result page**: the page lists matching butterfly images and, alongside them, the extracted features (colour shares, texture match degrees, shape values).
 3. **QBE to restrict**: the user spots the right species in the result images and clicks it as the example. The system extracts that image's feature sequences and runs a QBF on them. Now the ranking is tight and detailed because the comparison uses real, fully populated descriptors rather than the user's rough guesses.
 4. **Iterate**: if the QBE still returns a few wrong species, the user picks a better result image and runs another QBE. Each pass restricts the search space further.
 

@@ -43,7 +43,7 @@ A context-sensitive analysis with procedure summaries computes
 trans_f = least fixpoint of f's body's transfer function
 and then applies trans_f at each call site as a single "black box" operation.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why context-insensitive is imprecise — a concrete example
 ```c

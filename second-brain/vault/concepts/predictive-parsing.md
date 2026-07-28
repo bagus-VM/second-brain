@@ -14,7 +14,7 @@ Predictive parsing is a top-down parsing method where a single lookahead token u
 
 ## Core Intuition
 
-Think of parsing as a decision tree: at each nonterminal, the parser peeks at the next input token and uses a lookup (the FIRST set) to pick the correct production. No backtracking needed — each decision is deterministic. This is exactly what a recursive descent parser does: each nonterminal becomes a procedure, and each production becomes a branch in an if/else chain keyed on the lookahead.
+Think of parsing as a decision tree: at each nonterminal, the parser inspects the next input token and consults a lookup (the FIRST set) to select the correct production. No backtracking is required — each decision is deterministic. This is exactly what a recursive descent parser does: each nonterminal becomes a procedure, and each production becomes a branch in an `if/else` chain keyed on the lookahead.
 
 ## Formal Definition / Statement
 
@@ -30,14 +30,14 @@ Key operations:
 
 **Grammar requirements** (may need transformation):
 - No left recursion (would cause infinite loop)
-- No common prefixes (would cause FIRST set overlap → use [[left-recursion-elimination|left factoring]])
+- No common prefixes (would cause FIRST set overlap → apply [[left-recursion-elimination|left factoring]])
 
-## Key Properties
+## Key Properties / Complexity
 
 - Runs in O(n) time where n = input length (one token consumed per match)
-- Uses exactly 1 token of lookahead (LL(1))
+- Uses exactly one token of lookahead (LL(1))
 - Cannot handle left-recursive grammars directly
-- Requires disjoint FIRST sets for alternatives of each nonterminal
+- Requires disjoint FIRST sets for the alternatives of each nonterminal
 - The parser is a direct transcription of the grammar into code
 
 ## Worked Example

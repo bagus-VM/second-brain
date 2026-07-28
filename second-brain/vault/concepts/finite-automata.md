@@ -28,7 +28,7 @@ A finite automaton (FA) is a 5-tuple (Q, Σ, δ, q₀, F) where:
 4. **Moore Machine**: Output associated with states
 5. **Mealy Machine**: Output associated with transitions
 
-**Equivalence:** DFA ≡ NFA ≡ ε-NFA (all recognize regular languages)
+**Equivalence:** DFA ≡ NFA ≡ ε-NFA (all recognise regular languages)
 
 **Key theorems:**
 - Kleene's theorem: A language is regular iff it's recognized by a FA
@@ -46,7 +46,7 @@ A finite automaton (FA) is a 5-tuple (Q, Σ, δ, q₀, F) where:
 - NFA to DFA conversion: potentially exponential state explosion (2^n states)
 - Minimization: every DFA has a unique minimal equivalent DFA
 - Regular expressions ≡ NFAs ≡ DFAs (three equivalent representations)
-- Cannot count (no memory beyond current state) — cannot recognize {aⁿbⁿ}
+- Cannot count (no memory beyond current state) — cannot recognise {aⁿbⁿ}
 - Decidable problems: emptiness, finiteness, equivalence, membership
 
 ## Worked Example

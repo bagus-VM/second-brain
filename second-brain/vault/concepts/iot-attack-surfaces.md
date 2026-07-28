@@ -49,7 +49,7 @@ Miessler's 15 IoT Attack Surface Classes (DefCon 2023):
 - Consumer IoT typically has 10-15 distinct attack surfaces
 - Industrial IoT may have 20+ including legacy protocol surfaces
 - Physical attack surfaces require proximity; network surfaces are remote
-- The update mechanism (class 15) is paradoxically both a defense and an attack surface
+- The update mechanism (class 15) is paradoxically both a defence and an attack surface
 - Attack surface reduction is often the most cost-effective security measure
 
 ## Worked Example
@@ -82,7 +82,7 @@ Attack surface assessment of a smart doorbell:
 - [[iot-common-attacks]] — Attacks that exploit these surfaces
 - [[owasp-iot-top-10]] — Top vulnerability categories across these surfaces
 - [[penetration-testing-methodology]] — Structured approach to testing attack surfaces
-- [[iot-secure-design]] — Designing to minimize attack surfaces
+- [[iot-secure-design]] — Designing to minimise attack surfaces
 - [[threat-modeling]] — Using attack surfaces as input to threat models
 - [[side-channel-attacks]] — Physical attack surfaces requiring specialized analysis
 

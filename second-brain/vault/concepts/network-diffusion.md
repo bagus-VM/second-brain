@@ -17,10 +17,10 @@ Drop a rumor into a network. Where it starts matters enormously. If it starts in
 This applies to everything: viruses spreading through contact networks, information cascading through social media, innovations adopted through professional networks, and bank failures propagating through financial exposure.
 
 ## Formal Definition / Statement
-==**Diffusion** is the process by which a quantity (information, disease, influence) spreads from node to node along edges.==
+****Diffusion** is the process by which a quantity (information, disease, influence) spreads from node to node along edges.**
 
 Basic model types:
-- **SI (Susceptible-Infected):** nodes are either susceptible or infected; infected nodes infect susceptible neighbors. Used for irreversible spreading (e.g., rumors).
+- **SI (Susceptible-Infected):** nodes are either susceptible or infected; infected nodes infect susceptible neighbours. Used for irreversible spreading (e.g., rumors).
 - **SIS (Susceptible-Infected-Susceptible):** nodes can recover and be re-infected. Used for endemic diseases.
 - **SIR (Susceptible-Infected-Recovered):** nodes recover and gain immunity. Used for epidemic diseases.
 
@@ -31,7 +31,7 @@ Key parameters:
 
 Network structure affects diffusion through: degree distribution, community structure, and the presence of hubs/bridges.
 
-## Key Properties
+## Key Properties / Complexity
 - **Starting position matters.** A rumor in the core of a high-school friendship network spreads far; one at the periphery doesn't (Easley & Kleinberg example).
 - **Hubs accelerate diffusion.** Highly connected nodes act as super-spreaders.
 - **Community boundaries slow diffusion.** Dense internal connections + sparse external connections = diffusion is contained within communities.

@@ -37,8 +37,8 @@ A p-n junction is the metallurgical boundary formed when p-type and n-type semic
 - Reverse bias (V < 0): current ≈ -I_s (tiny, nearly constant)
 
 **Breakdown mechanisms:**
-- [[zener-breakdown]]: quantum tunneling of electrons through thin depletion region (heavily doped, <5V)
-- [[avalanche-breakdown]]: impact ionization creates carrier avalanche (lightly doped, >5V)
+- [[zener-breakdown]]: quantum tunnelling of electrons through thin depletion region (heavily doped, <5V)
+- [[avalanche-breakdown]]: impact ionisation creates carrier avalanche (lightly doped, >5V)
 - Both are reversible if current is limited
 
 ## Key Properties / Complexity
@@ -78,7 +78,7 @@ Step 4: Maximum electric field at zero bias
 - **"No current in reverse bias"**: There is always a small reverse saturation current from minority carriers. It's tiny but not zero.
 - **Forward voltage is always 0.7V**: It's approximately 0.7V at typical operating currents, but varies with current, temperature, and doping. The Shockley equation is exponential, not a fixed threshold.
 - **Depletion region has no charge**: It has no mobile carriers, but it has fixed ionized dopant charges — this is what creates the electric field.
-- **Zener and avalanche are the same**: They're different mechanisms. Zener is tunneling (high doping), avalanche is impact ionization (low doping). "Zener diode" often uses avalanche in practice.
+- **Zener and avalanche are the same**: They're different mechanisms. Zener is tunnelling (high doping), avalanche is impact ionisation (low doping). "Zener diode" often uses avalanche in practice.
 - **The junction exists at zero bias**: The built-in field and depletion region form spontaneously — no external voltage is needed.
 
 ## Connections
@@ -86,8 +86,8 @@ Step 4: Maximum electric field at zero bias
 - [[depletion-region]] — The carrier-free zone with built-in electric field
 - [[diode]] — A two-terminal device based on a single p-n junction
 - [[zener-diode]] — A diode designed to operate in reverse breakdown for voltage regulation
-- [[zener-breakdown]] — Quantum tunneling breakdown mechanism in heavily doped junctions
-- [[avalanche-breakdown]] — Impact ionization breakdown in lightly doped junctions
+- [[zener-breakdown]] — Quantum tunnelling breakdown mechanism in heavily doped junctions
+- [[avalanche-breakdown]] — Impact ionisation breakdown in lightly doped junctions
 - [[doping-and-extrinsic-semiconductors]] — The p and n regions are created by selective doping
 - [[mosfet]] — Contains two p-n junctions (source-body and drain-body)
 

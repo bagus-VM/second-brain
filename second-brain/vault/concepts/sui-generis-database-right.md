@@ -21,7 +21,7 @@ The sui generis database right (EU Directive 96/9/EC, Article 7) prohibits:
 
 The right applies when there has been a "qualitatively and/or quantitatively a substantial investment in either the obtaining, verification or presentation of the contents."
 
-## Key Properties
+## Key Properties / Complexity
 
 ### What counts as "substantial investment"
 - **Obtaining**: collecting existing data from scattered sources (e.g., compiling weather stations' readings into one database)
@@ -56,7 +56,7 @@ The sui generis right is EU-only. There is no equivalent in US law (the US relie
 The German Toll Collect GmbH collected truck toll records as a byproduct of operating the toll system. These records were supplied to a payment-service provider, which reused them. The BGH ruled the database was *not* protected because the toll records were generated automatically by the system's operation -- there was no separate "substantial investment" in obtaining the data. The data creation was an automatic consequence of running the toll system.
 
 **Contrast with a weather database:**
-If a research institute employs staff to manually collect, clean, and organize weather measurements from hundreds of stations, that *is* a substantial investment in "obtaining" existing data. The database would be protected.
+If a research institute employs staff to manually collect, clean, and organise weather measurements from hundreds of stations, that *is* a substantial investment in "obtaining" existing data. The database would be protected.
 
 ## Common Pitfalls
 - **Confusing sui generis with copyright.** Copyright protects creative expression; sui generis protects investment. A database can have both, one, or neither.

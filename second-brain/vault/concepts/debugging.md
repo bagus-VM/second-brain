@@ -30,7 +30,7 @@ Three key automated techniques form a pipeline:
 2. **Fault localization** — given execution matrices from passing and failing test runs, rank statements by suspiciousness using formulas like Tarantula or Ochiai. This prioritises where to look. (See [[fault-localization]])
 3. **Delta debugging** — given a working input $I_w$ and a failing input $I_f$, binary-search for the minimal change $\Delta$ such that $I_w + \Delta$ still triggers the failure. This isolates the trigger. (See [[delta-debugging]])
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Pipeline approach** — narrow (slicing) → rank (fault localization) → isolate (delta debugging)
 - **Complementary strengths** — slicing reduces code to examine; ranking prioritises within that reduced set; delta debugging identifies the external trigger

@@ -30,12 +30,12 @@ Each level only references the next-higher level, ensuring higher-precedence ope
 - **Left-associative**: `left → left op term` (left-recursive production)
 - **Right-associative**: `right → term op right` (right-recursive production)
 
-## Key Properties
+## Key Properties / Complexity
 
 - Each precedence level corresponds to one nonterminal
 - Higher precedence → deeper in the parse tree (closer to leaves)
-- Left-recursion encodes left-associativity (e.g., `a - b - c = (a - b) - c`)
-- Right-recursion encodes right-associativity (e.g., `a = b = c = a = (b = c)`)
+- Left-recursion encodes left-associativity (e.g., `a - b - c` groups as `(a - b) - c`)
+- Right-recursion encodes right-associativity (e.g., `a = b = c` groups as `a = (b = c)`)
 - This approach eliminates [[grammar-ambiguity|ambiguity]] by making grouping explicit in the grammar structure
 
 ## Worked Example

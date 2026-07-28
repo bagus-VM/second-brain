@@ -15,7 +15,7 @@ prerequisites: ["[[java-for-software-analysis]]"]
 
 Imagine you're debugging code. You run it with one input and check if it crashes. But what about all the OTHER inputs? You can't test them all.
 
-**Static analysis** flips this: instead of running the code, you *analyze* it. You ask: "Is there ANY possible execution path where this divisor could be zero?" If yes, flag it.
+**Static analysis** flips this: instead of running the code, you *analyse* it. You ask: "Is there ANY possible execution path where this divisor could be zero?" If yes, flag it.
 
 But "any possible value" is too broad — it would flag everything. So we use **abstraction**: instead of tracking the exact value of each variable (which is impossible in general), we track just its *sign*:
 - Is it definitely negative? (−)
@@ -188,7 +188,7 @@ void test() {
 }
 ```
 
-If you only analyze `test()` in isolation, you see `x` comes from a method call. Without inter-procedural analysis, you'd have to assume `x` could be anything (⊤). You'd miss the definite bug.
+If you only analyse `test()` in isolation, you see `x` comes from a method call. Without inter-procedural analysis, you'd have to assume `x` could be anything (⊤). You'd miss the definite bug.
 
 ### The Solution: Recursive Analysis
 
@@ -380,3 +380,19 @@ arr[top];  // 0+ is never negative → no warning
 - What's the difference between context-sensitive and context-insensitive inter-procedural analysis?
 - How does this analysis relate to typing systems (which also use lattices)?
 - What other abstract domains could you use instead of signs? (e.g., intervals, parity, nullness)
+
+## Formal Definition / Statement
+
+*To be filled.*
+
+## Key Properties / Complexity
+
+*To be filled.*
+
+## Worked Example
+
+*To be filled.*
+
+## Common Pitfalls
+
+*To be filled.*

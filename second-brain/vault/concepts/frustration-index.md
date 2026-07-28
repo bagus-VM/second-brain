@@ -29,7 +29,7 @@ Equivalently: the minimum number of edges whose signs must be flipped to make th
 - f ≈ 0: approximately balanced (balance theory approximately applies)
 - f ≈ 0.5: no more balanced than a random sign assignment
 
-## Key Properties
+## Key Properties / Complexity
 - Computing F exactly is **NP-hard** (equivalent to minimum-weight graph cut on a related unsigned graph)
 - On small graphs, integer programming or brute force works
 - Triangle-level frustration ≠ graph-level frustration — multiple unbalanced triangles may share an edge, so one flip can fix several

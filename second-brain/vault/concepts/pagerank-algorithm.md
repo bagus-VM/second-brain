@@ -61,9 +61,7 @@ where M is the column-stochastic transition matrix of the web graph.
 ## Worked Example
 **Small web graph:** Pages A, B, C with links A→B, B→C, C→A, A→C.
 
-Iteration 0 (uniform): PR = [0.25, 0.25, 0.25] (C omitted for brevity — assume D exists)
-
-More concretely, 3 pages with out-degrees: A has outdeg 2 (→B, →C), B has outdeg 1 (→C), C has outdeg 1 (→A).
+Consider 3 pages (A, B, C) with out-degrees: A has outdeg 2 (→B, →C), B has outdeg 1 (→C), C has outdeg 1 (→A).
 
 With α = 0.85, n = 3:
 - PR(A) = 0.15/3 + 0.85 × (PR(C)/1) = 0.05 + 0.85·PR(C)

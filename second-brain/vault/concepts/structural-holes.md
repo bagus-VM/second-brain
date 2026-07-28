@@ -25,7 +25,7 @@ When two groups have no direct connection, the gap between them is a structural 
 
 **Key distinction:** removing the missing gap (adding an edge) eliminates the structural hole; removing the spanning actor eliminates the brokerage position.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Not the same as brokerage**: the hole is the gap; the broker is the actor spanning it
 2. **Information advantage**: non-redundant signals from independent sources
 3. **Control advantage**: mediation over flows between groups
@@ -50,7 +50,7 @@ If Dia leaves, the hole widens — the teams become disconnected.
 
 ## Connections
 - [[betweenness-centrality]] — quantifies brokerage (path dependency)
-- [[embeddedness]] — the opposite of brokerage (densely connected neighborhood)
+- [[embeddedness]] — the opposite of brokerage (densely connected neighbourhood)
 - [[centrality-measures]] — brokerage is one theory of importance
 - [[granovetter-weak-ties]] — weak ties often span structural holes
 - [[community-detection]] — structural holes are community boundaries

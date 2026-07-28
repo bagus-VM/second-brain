@@ -34,10 +34,10 @@ where assoc(A, A) = number of internal edges in A.
 
 **Approximation:** the normalized cut can be approximately minimized using the Fiedler vector of the normalized Laplacian L_norm = D^(-1/2) L D^(-1/2).
 
-## Key Properties
+## Key Properties / Complexity
 1. **Balanced partitions**: prevents trivial solutions (cutting off a single node)
 2. **Normalized by volume**: accounts for cluster size, not just cut size
-3. **NP-hard to minimize exactly**: spectral methods provide approximations
+3. **NP-hard to minimise exactly**: spectral methods provide approximations
 4. **Connects to spectral partitioning**: the Fiedler vector of the normalized Laplacian approximates the optimal normalized cut
 5. **Used in image segmentation**: originally developed for computer vision
 
@@ -52,7 +52,7 @@ Ncut = 5/50 + 5/100 = 0.1 + 0.05 = 0.15
 
 ## Common Pitfalls
 1. **Confusing normalized cut with raw cut**: raw cut favors small clusters; normalized cut balances
-2. **Assuming normalized cut is easy to minimize**: it's NP-hard; spectral methods are approximations
+2. **Assuming normalized cut is easy to minimise**: it's NP-hard; spectral methods are approximations
 3. **Ignoring that normalized cut needs k**: for k > 2, must specify the number of clusters
 4. **Confusing normalized cut with [[conductance]]**: they are related but distinct measures
 

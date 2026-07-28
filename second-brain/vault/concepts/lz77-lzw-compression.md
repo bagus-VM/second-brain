@@ -32,7 +32,7 @@ Instead of encoding individual symbols (like Huffman), dictionary-based methods 
 - Both encoder and decoder build the same dictionary independently
 - No need to transmit the dictionary
 
-## Key Properties
+## Key Properties / Complexity
 - **Lossless and adaptive**: single pass through data, no prior knowledge needed
 - **LZ77**: dictionary is implicit (sliding window), no dictionary storage needed
 - **LZW**: dictionary is explicit and grows dynamically; fixed-width codes (e.g., 12-bit) simplify implementation
@@ -66,7 +66,7 @@ LZ77: 5 tokens with small values → significantly fewer bits
 - Confusing LZ77 (sliding window, implicit dictionary) with LZW (explicit growing dictionary) — they're different algorithms with different tradeoffs
 - Forgetting that LZW builds the same dictionary on both encoder and decoder side — no dictionary transmission needed
 - Thinking dictionary-based methods are good for multimedia raw data — they're better for text/structured data; multimedia uses transform + entropy coding instead
-- Not recognizing that gzip/Deflate = LZ77 + Huffman, not just LZ77 alone
+- Not recognising that gzip/Deflate = LZ77 + Huffman, not just LZ77 alone
 - Overlooking that LZ77's sliding window size limits how far back matches can be found
 
 ## Connections

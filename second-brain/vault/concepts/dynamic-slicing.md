@@ -11,7 +11,6 @@ status: current
 last_updated: 2026-06-19
 ---
 
-# Dynamic Slicing
 
 ## One-line Summary
 
@@ -42,7 +41,7 @@ Think of it this way: if you're debugging a crash and you know the exact input t
   - Dynamic data dependence: definition at instance i reaches use at instance j in this trace
   - Dynamic control dependence: instance j was executed because of the branch at instance i in this trace
 
-## Key Properties
+## Key Properties / Complexity
 
 | Property | Detail |
 |----------|--------|
@@ -98,7 +97,7 @@ Now statement 4 is excluded (then-branch not taken), and statement 6 is included
 
 1. **Confusing dynamic with static**: Dynamic slices are input-specific. A dynamic slice for input A is not valid for input B.
 
-2. **Trace explosion**: Execution traces can be huge (millions of statements). Storing and analyzing them is expensive.
+2. **Trace explosion**: Execution traces can be huge (millions of statements). Storing and analysing them is expensive.
 
 3. **Instance vs. statement**: Dynamic slicing tracks statement *instances* (a statement executed twice = two nodes). Forgetting this leads to incorrect slices.
 
@@ -126,3 +125,7 @@ Now statement 4 is excluded (then-branch not taken), and statement 6 is included
 4. What is the relationship between dynamic slicing and **delta debugging**?
 5. Can we use dynamic slicing for **test case minimization**?
 6. How do we compute dynamic slices **online** (during execution, not post-mortem)?
+
+## Formal Definition / Statement
+
+*To be filled.*

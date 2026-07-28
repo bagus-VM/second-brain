@@ -29,7 +29,7 @@ where l_c = number of internal edges in community c, d_c = sum of degrees in com
 - **Range**: Q ∈ [-0.5, 1] in practice; Q = 0 means no better than random
 - **NP-hard**: finding the partition that maximizes Q is NP-hard (Brandes et al., 2008)
 
-## Key Properties
+## Key Properties / Complexity
 - Q compares observed internal density to a degree-preserving null model (configuration model)
 - Q > 0 means more within-community edges than expected by chance
 - Maximizing Q exactly is NP-hard — all practical methods are heuristics
@@ -55,7 +55,7 @@ The bridge edge is the only between-community edge. The configuration model null
 - Multiple near-optimal partitions exist — different algorithms may find different ones
 
 ## Connections
-- [[community-detection-overview]] — modularity is the objective all these methods optimize
+- [[community-detection-overview]] — modularity is the objective all these methods optimise
 - [[girvan-newman-algorithm]] — GN chooses the dendrogram cut that maximizes Q
 - [[louvain-algorithm]] — Louvain greedily improves Q via local moves + aggregation
 - [[leiden-algorithm]] — Leiden refines Louvain to avoid broken communities

@@ -9,7 +9,7 @@ prerequisites: ["[[content-based-retrieval]]", "[[multimedia-annotation]]", "[[f
 ---
 
 ## One-line Summary
-==A feature vector is a numerical representation of a multimedia object's content== — a point in a (typically high-dimensional) feature space where distance between vectors corresponds to semantic similarity between objects.
+**A feature vector is a numerical representation of a multimedia object's content** — a point in a (typically high-dimensional) feature space where distance between vectors corresponds to semantic similarity between objects.
 
 ## Core Intuition
 Computers can't directly compare images, audio, or video. They need a numerical representation that captures the *important* properties. A **feature vector** is that representation: a list of numbers where each number measures some property of the object.
@@ -38,7 +38,7 @@ A **feature space** is the set of all possible feature vectors, with a distance 
 - **Robust**: noise, compression artifacts, and other perturbations don't drastically change the vector
 - **Efficient to compute**: feature extraction shouldn't take longer than the query
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Common feature types
 

@@ -44,7 +44,7 @@ where nᵢ is the size of group i and N is the total number of nodes. If the obs
 
 The "baseline E-I" is computed by plugging the expected E and I into the formula. A network can have EI < 0 by chance if one group is much larger than the others; the random baseline tells you how negative EI is "for free."
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Strengths
 - **Single number**: easy to report, easy to compare across networks, easy to test statistically.

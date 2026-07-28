@@ -12,7 +12,7 @@ prerequisites: ["[[iot-data-lifecycle]]"]
 Privacy by Design embeds data minimization, consent, and anonymization into IoT systems from the start — because sensor networks collect intimate behavioral data that cannot be "un-collected."
 
 ## Core Intuition
-IoT sensors are privacy nightmares disguised as convenience features. A smart thermostat knows when you're home. A smart speaker records your conversations. A fitness tracker monitors your health. A smart meter reveals your daily routine. Unlike a website that collects data you explicitly enter, IoT devices passively observe your life. Privacy by Design means making the most private option the default, not the opt-in.
+IoT sensors are privacy nightmares disguised as convenience features. A smart thermostat knows when you're home. A smart speaker records your conversations. A fitness tracker monitors your health. A smart metre reveals your daily routine. Unlike a website that collects data you explicitly enter, IoT devices passively observe your life. Privacy by Design means making the most private option the default, not the opt-in.
 
 ## Formal Definition / Statement
 Privacy by Design (PbD) is a framework developed by Ann Cavoukian (1990s) with eight foundational principles. For IoT, the key principles are:
@@ -25,7 +25,7 @@ Privacy by Design (PbD) is a framework developed by Ann Cavoukian (1990s) with e
 5. **End-to-End Security**: Full lifecycle protection from collection to deletion
 6. **Visibility and Transparency**: Keep practices open to scrutiny by users and providers alike
 7. **Respect for User Privacy**: User interests are paramount; empower users
-8. **Privacy throughout the Organization**: Extend across the entire business process and supply chain — privacy is not just an engineering concern but an organizational one
+8. **Privacy throughout the Organisation**: Extend across the entire business process and supply chain — privacy is not just an engineering concern but an organizational one
 
 **GDPR (General Data Protection Regulation) Requirements for IoT:**
 - **Lawful basis**: Consent, legitimate interest, or legal obligation for data processing
@@ -46,7 +46,7 @@ Privacy by Design (PbD) is a framework developed by Ann Cavoukian (1990s) with e
 
 ## Key Properties / Complexity
 
-- **Sensor data is PII**: Even "anonymous" sensor data can be de-anonymized (smart meter data reveals occupancy, accelerometer reveals keystrokes)
+- **Sensor data is PII**: Even "anonymous" sensor data can be de-anonymized (smart metre data reveals occupancy, accelerometer reveals keystrokes)
 - **Always-on devices challenge consent**: How do you get meaningful consent from a voice assistant that's always listening?
 - **Data minimization vs. utility**: Less data means better privacy but potentially worse ML models and user experience
 - **Cross-border data flows**: IoT data may transit jurisdictions with different privacy laws (GDPR, CCPA, PIPL)
@@ -77,7 +77,7 @@ Privacy by Design (PbD) is a framework developed by Ann Cavoukian (1990s) with e
 - Collecting all data "just in case" — violates data minimization
 - Processing in the cloud when edge processing would suffice — unnecessary data transmission
 - Treating sensor data as non-PII (accelerometer data can reveal keystrokes)
-- Default settings that maximize data collection (opt-out instead of opt-in)
+- Default settings that maximise data collection (opt-out instead of opt-in)
 - Not providing users with data export and deletion capabilities
 - Assuming anonymization is sufficient (de-anonymization attacks are well-documented)
 - Ignoring GDPR/CCPA requirements because "it's just a thermostat"
@@ -91,7 +91,7 @@ Privacy by Design (PbD) is a framework developed by Ann Cavoukian (1990s) with e
 - [[risk-assessment-frameworks]] — Privacy risk assessment (DPIA)
 - [[iot-compliance-frameworks]] — GDPR, CCPA compliance
 - [[iot-lecture-1]] — Privacy as part of information assurance for IoT
-- [[iot-lecture-7]] — Identity lifecycle and privacy in IoT; extends these principles with the 8th principle (Privacy throughout the organization)
+- [[iot-lecture-7]] — Identity lifecycle and privacy in IoT; extends these principles with the 8th principle (Privacy throughout the organisation)
 - [[iot-privacy-concerns]] — The unique privacy challenges of pervasive sensing and metadata leakage
 - [[iot-identity-lifecycle]] — Strong identity management as a privacy technique (pseudonymous certificates)
 

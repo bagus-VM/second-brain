@@ -38,9 +38,9 @@ Classification Schemes are XML-based taxonomies integrated into MPEG-7 for:
 ```
 
 CS exist for: parental rating, genre, quality, semantic relations, file format, and more.
-New CS must be registered with the MPEG-7 organization.
+New CS must be registered with the MPEG-7 organisation.
 
-## Key Properties
+## Key Properties / Complexity
 - Each term has a unique `termID` within its CS
 - Terms can have multiple names (aliases) and definitions
 - CS are referenced by URI (e.g., `urn:mpeg:mpeg7:cs:FileFormatCS:2001`)

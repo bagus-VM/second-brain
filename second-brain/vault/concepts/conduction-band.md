@@ -38,3 +38,7 @@ The conduction band is the range of energy levels that excited or freed electron
 
 ## Open Questions
 - How does quantum confinement in [[nanoelectronics]] alter the conduction band structure?
+
+## Worked Example
+
+*To be filled.*

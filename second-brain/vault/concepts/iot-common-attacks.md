@@ -74,7 +74,7 @@ Attack chain against a smart home camera:
 - **Evolving landscape**: New attack vectors emerge as IoT adoption grows
 - **Incomplete coverage**: Any taxonomy will miss novel attack techniques
 - **Context matters**: The same vulnerability has different severity in consumer vs industrial IoT
-- **Defense vs offense**: Knowing attacks doesn't automatically tell you how to defend
+- **Defence vs offence**: Knowing attacks doesn't automatically tell you how to defend
 
 ## Connections
 - [[iot-attack-taxonomy]] — Broader taxonomy including Miessler's 15 attack surface classes

@@ -35,7 +35,7 @@ index <blob-hash-a>..<blob-hash-b> <mode>  # blob references and file mode
 - Commit message body
 - Trailers (`Signed-off-by:`, etc.)
 
-## Key Properties
+## Key Properties / Complexity
 - **Self-contained**: A patch contains enough information to apply the change to the correct file at the correct location.
 - **Context-dependent**: Surrounding context lines (default 3) help locate where to apply changes, even if line numbers shift.
 - **Composable**: Multiple hunks can represent changes across a file; multiple file diffs can be in one patch.

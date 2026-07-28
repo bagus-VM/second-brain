@@ -25,7 +25,7 @@ The HDF5 data model consists of:
 - **Datasets**: multi-dimensional arrays of data elements. Analogous to files in a filesystem. Datasets have a type (e.g., `float32`), a shape (e.g., `1000×1000`), and data.
 - **Attributes**: small metadata key-value pairs attached to groups or datasets. Limited to 64 KB total per object.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### File = root group
 An HDF5 file is itself a group — the root group. You can attach attributes to the root group (e.g., experiment ID, creation date), and it can contain subgroups and datasets.
@@ -115,7 +115,7 @@ Dataset: ocean/salinity, shape: (365, 180, 360)
   units: PSU
 ```
 
-## HDF5 vs XML vs JSON
+### HDF5 vs XML vs JSON
 
 HDF5, XML, and JSON all model hierarchical data, but they fit different workloads.
 

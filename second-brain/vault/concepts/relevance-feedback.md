@@ -28,7 +28,7 @@ Relevance feedback is an interactive retrieval process:
 - **Feature weight adjustment**: increase weights of features that discriminate relevant from irrelevant
 - **Metric learning**: learn a new [[similarity-measures|distance function]] from feedback
 
-## Key Properties
+## Key Properties / Complexity
 - Iterative — improves with each feedback round
 - User-specific — different users get different results for the same query
 - Addresses the [[semantic-gap]] by incorporating human judgment
@@ -39,7 +39,7 @@ Relevance feedback is an interactive retrieval process:
 Query: "find images of beaches"
 1. Initial retrieval returns: sunset (✓), ocean waves (✓), desert (✗), red car (✗)
 2. User marks: sunset and ocean as relevant, desert and car as irrelevant
-3. System learns: increase weight on blue color, sandy texture; decrease weight on red/orange, solid surfaces
+3. System learns: increase weight on blue colour, sandy texture; decrease weight on red/orange, solid surfaces
 4. Re-retrieval: beach scene (✓), coral reef (✓), mountain lake (✗)
 5. User marks: beach and coral as relevant, lake as irrelevant
 6. System further refines — converging on "beach" semantics

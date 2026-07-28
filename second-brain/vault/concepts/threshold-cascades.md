@@ -12,17 +12,17 @@ prerequisites: []
 A threshold cascade occurs when [[complex-contagion]] spreads globally through a network, requiring dense clusters linked by wide bridges and a threshold q that is not too high.
 
 ## Core Intuition
-A cascade starts from a seed set of initially active nodes. At each step, nodes whose active-neighbor fraction meets threshold q adopt. The cascade may spread globally or stall — the outcome depends on both q and the local network density around the wavefront. Unlike simple contagion epidemics that exploit any single path, threshold cascades need local reinforcement at every step.
+A cascade starts from a seed set of initially active nodes. At each step, nodes whose active-neighbour fraction meets threshold q adopt. The cascade may spread globally or stall — the outcome depends on both q and the local network density around the wavefront. Unlike simple contagion epidemics that exploit any single path, threshold cascades need local reinforcement at every step.
 
 ## Formal Definition / Statement
-**Threshold cascade:** Starting from a seed set, node v adopts if |active neighbors| / |total neighbors| ≥ q.
+**Threshold cascade:** Starting from a seed set, node v adopts if |active neighbours| / |total neighbours| ≥ q.
 
 **Cascade condition:** In a uniform-threshold network, a global cascade starting from a small seed set is possible if:
-1. The network contains enough dense clusters (where neighbors reinforce each other above q)
+1. The network contains enough dense clusters (where neighbours reinforce each other above q)
 2. These clusters are linked by wide bridges (multiple edges providing enough reinforcement)
 3. The threshold q ≤ 1/2 (if q > 1/2, cascades require majority adoption locally, which is very hard to trigger)
 
-## Key Properties
+## Key Properties / Complexity
 1. Outcome depends on both threshold q and local network density
 2. Dense clusters sustain internal adoption — essential for [[complex-contagion]]
 3. Wide bridges (multiple edges between communities) enable cross-community spread
@@ -31,7 +31,7 @@ A cascade starts from a seed set of initially active nodes. At each step, nodes 
 6. Opposite dynamics to [[simple-contagion]] epidemics
 
 ## Worked Example
-Two communities of 20 people each. Behavior with q = 0.2 starts with all 20 in community 1 adopting.
+Two communities of 20 people each. Behaviour with q = 0.2 starts with all 20 in community 1 adopting.
 
 **Wide bridge (5 parallel edges):** A community-2 node with 5 cross-community ties has 5/10 = 0.5 ≥ 0.2. Cascade crosses.
 

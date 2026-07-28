@@ -37,7 +37,7 @@ Optimisations:
 
 For all practical purposes, α(n, n) ≤ 5, so this is constant time.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why Union-Find works for Steensgaard's
 In Steensgaard's analysis:

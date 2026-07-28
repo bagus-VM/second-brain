@@ -9,29 +9,29 @@ prerequisites: ["[[graph-fundamentals]]"]
 ---
 
 ## One-line Summary
-Neighborhood overlap measures the fraction of neighbors shared by two connected nodes — an edge-level proxy for how embedded or bridging that edge is.
+Neighbourhood overlap measures the fraction of neighbours shared by two connected nodes — an edge-level proxy for how embedded or bridging that edge is.
 
 ## Core Intuition
-An edge connecting two people with many shared friends is deeply embedded in a cluster. An edge connecting two people with *no* shared friends is a [[bridges-and-local-bridges|local bridge]] — it spans between otherwise disconnected groups. Neighborhood overlap quantifies this distinction, giving us an edge-level measure that complements the node-level [[clustering-coefficient]]. Under [[weak-ties-hypothesis|the weak-tie theorem]], low overlap predicts weak ties.
+An edge connecting two people with many shared friends is deeply embedded in a cluster. An edge connecting two people with *no* shared friends is a [[bridges-and-local-bridges|local bridge]] — it spans between otherwise disconnected groups. Neighbourhood overlap quantifies this distinction, giving us an edge-level measure that complements the node-level [[clustering-coefficient]]. Under [[weak-ties-hypothesis|the weak-tie theorem]], low overlap predicts weak ties.
 
 ## Formal Definition / Statement
-**Neighborhood overlap.** For an edge (u, v):
+**Neighbourhood overlap.** For an edge (u, v):
 
 ```
 O(u, v) = |N(u) ∩ N(v)| / |N(u) ∪ N(v)|
 ```
 
-where N(u) and N(v) are the neighbor sets of u and v, *excluding each other*.
+where N(u) and N(v) are the neighbour sets of u and v, *excluding each other*.
 
 **Range:** O(u, v) ∈ [0, 1]
-- O = 0: u and v share no neighbors — the edge is a pure local bridge
-- O = 1: u and v have identical neighbor sets — edge inside a complete clique
+- O = 0: u and v share no neighbours — the edge is a pure local bridge
+- O = 1: u and v have identical neighbour sets — edge inside a complete clique
 
-This is the **Jaccard similarity** of the two neighbor sets.
+This is the **Jaccard similarity** of the two neighbour sets.
 
-## Key Properties
+## Key Properties / Complexity
 - Scope: per-edge measure
-- Complexity: O(k) per edge (set intersection of neighbor lists)
+- Complexity: O(k) per edge (set intersection of neighbour lists)
 - O(u, v) = 0 ↔ edge is a [[bridges-and-local-bridges|local bridge]]
 - Monotonically correlated with tie strength in empirical data (Onnela et al. 2007)
 - Serves as the measurable proxy for the weak-tie theorem
@@ -47,7 +47,7 @@ From Onnela et al. (2007) cell-phone study:
 
 ## Common Pitfalls
 - Confusing overlap with clustering coefficient — C is per-node, O is per-edge
-- Forgetting to exclude u and v from each other's neighbor sets
+- Forgetting to exclude u and v from each other's neighbour sets
 - Assuming O = 0 means the edge is unimportant — it's structurally the *most* important (carries novel information)
 - Thinking overlap directly measures tie strength — it's a proxy, tested empirically
 

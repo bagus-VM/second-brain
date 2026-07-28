@@ -15,7 +15,7 @@ last_updated: 2026-07-02
 Defence-in-depth layers multiple defensive mechanisms so that if one layer fails, others remain — forcing attackers to breach all layers to succeed.
 
 ## Core Intuition
-No single defense is sufficient. An attacker with enough time and resources can bypass any individual security measure. Defence-in-depth assumes breach will happen and designs for resilience: if the perimeter is breached, there are more walls inside. For IoT, this means securing the physical device, the firmware, the network, the application, the cloud backend, the data itself, and the operational processes around it. Governmental-level attackers (vast resources, time, effort) make this strategy mandatory, not optional.
+No single defence is sufficient. An attacker with enough time and resources can bypass any individual security measure. Defence-in-depth assumes breach will happen and designs for resilience: if the perimeter is breached, there are more walls inside. For IoT, this means securing the physical device, the firmware, the network, the application, the cloud backend, the data itself, and the operational processes around it. Governmental-level attackers (vast resources, time, effort) make this strategy mandatory, not optional.
 
 ## Formal Definition / Statement
 Defence-in-depth is a security architecture principle where multiple independent layers of controls are deployed so that the failure of any single control does not compromise the system. Formally, if each layer $L_i$ has a breach probability $p_i$, the probability of an attacker breaching all $n$ layers is:
@@ -24,10 +24,10 @@ $$P_{breach} = \prod_{i=1}^{n} p_i$$
 
 This assumes layers are independent — in practice, correlated failures reduce effectiveness.
 
-## Key Properties
+## Key Properties / Complexity
 | Property | Detail |
 |----------|--------|
-| Layered defense | Multiple independent security mechanisms |
+| Layered defence | Multiple independent security mechanisms |
 | Assumes breach | Designs for resilience, not prevention alone |
 | Independence | Layers should not share common failure modes |
 | Depth | More layers = exponentially harder to breach (if independent) |
@@ -60,7 +60,7 @@ Consider a smart home thermostat with defence-in-depth:
 - **Assuming layers are independent**: If all layers use the same underlying library, a single vulnerability can breach multiple layers
 - **Adding layers for quantity**: A poorly implemented layer gives false confidence — better to have fewer strong layers
 - **Ignoring operational security**: The best technical controls fail without monitoring and incident response
-- **Over-engineering for simple devices**: A temperature sensor doesn't need all 7 layers at enterprise grade — risk-proportionate defense
+- **Over-engineering for simple devices**: A temperature sensor doesn't need all 7 layers at enterprise grade — risk-proportionate defence
 - **Confusing depth with perimeter**: Defence-in-depth is not just "more firewalls" — it includes internal controls
 
 ## Connections

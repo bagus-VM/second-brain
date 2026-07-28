@@ -19,7 +19,7 @@ The Multi-level Visual Indexing Pyramid (Jaimes & Chang, 2000) forms the basis f
 
 **Syntactic Levels (1–4):**
 1. **Type/Technique** — General visual characteristics (colored vs. B&W, cartoon vs. photo)
-2. **Global Distribution** — Distribution of low-level features (color histogram, dominant color, texture, shape)
+2. **Global Distribution** — Distribution of low-level features (colour histogram, dominant colour, texture, shape)
 3. **Local Structure** — Extraction of visual basic elements (circles, lines, points — e.g., star=point, blood cell=circle)
 4. **Global Composition** — Focus on important image elements (centralized object, symmetry)
 
@@ -31,7 +31,7 @@ The Multi-level Visual Indexing Pyramid (Jaimes & Chang, 2000) forms the basis f
 9. **Abstract Object** — Meaning of objects (ecology, music)
 10. **Abstract Scene** — Meaning of locations (chaos, American government)
 
-## Key Properties
+## Key Properties / Complexity
 - Levels 1–4 are syntactic (data-driven, more automatable)
 - Levels 5–10 are semantic (require world knowledge, harder to automate)
 - Each level corresponds to specific MPEG-7 descriptor types
@@ -39,11 +39,11 @@ The Multi-level Visual Indexing Pyramid (Jaimes & Chang, 2000) forms the basis f
 - Higher levels require progressively more domain knowledge and reasoning
 
 ## Worked Example
-Analyzing a photograph of a football match:
+Analysing a photograph of a football match:
 - Level 1: Colored photograph (Type/Technique)
 - Level 2: Dominant green (grass), white (uniforms) (Global Distribution)
 - Level 3: Circle (ball), lines (field markings) (Local Structure)
-- Level 4: Players clustered in center of field (Global Composition)
+- Level 4: Players clustered in centre of field (Global Composition)
 - Level 5: "football players", "goal" (Generic Objects)
 - Level 6: "sports field", "stadium" (Generic Scene)
 - Level 7: "Thierry Henry" (Specific Object)

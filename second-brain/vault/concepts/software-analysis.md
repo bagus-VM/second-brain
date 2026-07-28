@@ -23,13 +23,13 @@ Given a program P and a property of interest φ, software analysis determines wh
 
 The process uses automatic tools to extract information, rather than manual inspection.
 
-## Key Properties
-- ==**Structural properties** must hold at design time== (e.g., indentation rules, visibility of attributes, code length)
-- ==**Behavioural properties** must hold during execution== (e.g., termination, execution time, crash conditions)
+## Key Properties / Complexity
+- ****Structural properties** must hold at design time** (e.g., indentation rules, visibility of attributes, code length)
+- ****Behavioural properties** must hold during execution** (e.g., termination, execution time, crash conditions)
 - Analysis operates on an **internal representation** of the program (not raw source text)
 - The pipeline: Source Code → Internal Representation → Analysis Algorithm → Result
 
-An **==internal representation (IR)==** is a data structure or model that captures the program’s:
+An ****internal representation (IR)**** is a data structure or model that captures the program’s:
 - Syntax (what constructs are present: loops, functions, conditions, etc.)
 - Semantics (what those constructs mean: control flow, data flow, types, etc.)
 - Relationships (which code calls which, which variables are used where, etc.)

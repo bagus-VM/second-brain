@@ -64,7 +64,7 @@ where j / r_ij is the precision at the j-th relevant document (j relevant items 
 
 ### Why MAP respects rank
 - A relevant document at rank 1 contributes precision 1.0. The same document at rank 100 contributes 0.01.
-- This matches user behavior: people read top results first. A system that surfaces relevant images early should score higher than one that buries them, even if both eventually retrieve the same set.
+- This matches user behaviour: people read top results first. A system that surfaces relevant images early should score higher than one that buries them, even if both eventually retrieve the same set.
 - MAP averages over multiple queries, so it rewards consistent early retrieval.
 
 ### Test corpus methodology

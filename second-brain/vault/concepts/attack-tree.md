@@ -12,10 +12,10 @@ prerequisites: ["[[threat-modeling]]"]
 An attack tree is a structured diagram modelling how an attacker could achieve a specific security goal, branching into sub-goals and methods — used as part of security analysis in IoT development.
 
 ## Core Intuition
-Start with the attacker's goal at the top ("steal data from smart lock"), then ask "how?" at each level. The tree branches into increasingly specific methods. This makes abstract threats concrete and helps prioritize defenses.
+Start with the attacker's goal at the top ("steal data from smart lock"), then ask "how?" at each level. The tree branches into increasingly specific methods. This makes abstract threats concrete and helps prioritise defenses.
 
 ## Formal Definition / Statement
-**Attack Tree:** A structured diagram modeling how an attacker could achieve a specific goal, branching into sub-goals and methods. Each node represents an attack step; children of a node are alternative or combined methods to achieve that step.
+**Attack Tree:** A structured diagram modelling how an attacker could achieve a specific goal, branching into sub-goals and methods. Each node represents an attack step; children of a node are alternative or combined methods to achieve that step.
 
 - **Root node:** Attacker's ultimate goal
 - **Intermediate nodes:** Sub-goals

@@ -34,7 +34,7 @@ where d(t, x) is shortest-path distance from t to x.
 
 After generating biased walks, apply the same skip-gram objective as DeepWalk.
 
-## Key Properties
+## Key Properties / Complexity
 1. Second-order transition: walk decisions depend on where we came from (not just current node)
 2. Two interpretable knobs: p controls return, q controls exploration depth
 3. Still transductive and feature-free (same limitations as DeepWalk)

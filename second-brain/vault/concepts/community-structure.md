@@ -14,7 +14,7 @@ Communities are densely connected groups of nodes within a network — they ofte
 ## Core Intuition
 Look at a network visualization and you'll often see clusters — groups of nodes with many internal connections and fewer connections to the outside. These clusters frequently correspond to meaningful real-world groupings: friend circles in a school, research groups in a collaboration network, liberal vs. conservative blogs in a political network. The remarkable thing is that you can discover these groups *from structure alone*, without knowing what the nodes represent.
 
-==Community detection is one of the central tasks of network analysis. It answers: "Are there groups? Who's in them?"==
+**Community detection is one of the central tasks of network analysis. It answers: "Are there groups? Who's in them?"**
 
 ## Formal Definition / Statement
 A **community** in a network is a subset of nodes $C \subseteq V$ such that:
@@ -27,7 +27,7 @@ This is an informal definition — formalizing "dense" vs. "sparse" leads to var
 
 There is no single "correct" community structure — different resolutions and methods can yield different valid decompositions.
 
-## Key Properties
+## Key Properties / Complexity
 - Communities are **relative**: what counts as a community depends on the resolution/scale of analysis.
 - They are distinct from **connected components**: components are absolute (disconnected or not), while communities are about *relative density*.
 - Community structure can reveal **polarization** (political blogs), **research groups** (scientific collaboration), or **social cliques** (high school friendships) — all without node metadata.

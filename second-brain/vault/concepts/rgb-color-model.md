@@ -9,19 +9,19 @@ prerequisites: [color-models-overview]
 ---
 
 ## One-line Summary
-RGB is an additive color model where Red, Green, and Blue form the axes of a coordinate system, producing a color cube with each channel typically quantized to 0–255.
+RGB is an additive colour model where Red, Green, and Blue form the axes of a coordinate system, producing a colour cube with each channel typically quantized to 0–255.
 
 ## Core Intuition
-Every color a display can produce is a point in a 3D cube. The origin (0,0,0) is black; the far corner (255,255,255) is white. Moving along one axis adds more of that primary. This maps directly to how screens work: each pixel has three sub-pixels whose intensities are independently controlled.
+Every colour a display can produce is a point in a 3D cube. The origin (0,0,0) is black; the far corner (255,255,255) is white. Moving along one axis adds more of that primary. This maps directly to how screens work: each pixel has three sub-pixels whose intensities are independently controlled.
 
 ## Formal Definition / Statement
-- Additive color model with primaries R, G, B as cube axes
+- Additive colour model with primaries R, G, B as cube axes
 - Each component in range [0, 255] (8-bit) or [0.0, 1.0] (normalized)
-- Color = (R, G, B) where 0 = no contribution, max = full contribution
-- 8-bit RGB yields 256³ = 16,777,216 distinct colors
+- Colour = (R, G, B) where 0 = no contribution, max = full contribution
+- 8-bit RGB yields 256³ = 16,777,216 distinct colours
 - The RGB gamut is a subset of the [[cie-chromaticity-diagram]] (represented as a triangle)
 
-## Key Properties
+## Key Properties / Complexity
 - Device-dependent: the same RGB values look different on different monitors
 - The gamut triangle in CIE space depends on the chosen primary chromaticities (e.g., sRGB vs Adobe RGB vs DCI-P3)
 - Standard sRGB uses specific CIE coordinates for R, G, B primaries and a D65 white point
@@ -32,7 +32,7 @@ Pure red = (255, 0, 0). Cyan (complement of red) = (0, 255, 255). Mid-gray = (12
 ## Common Pitfalls
 - Assuming RGB is perceptually uniform — doubling R does not double perceived redness
 - Forgetting gamma correction — sRGB applies a non-linear transfer function
-- Confusing color depth (bits per channel) with total number of representable colors
+- Confusing colour depth (bits per channel) with total number of representable colours
 
 ## Connections
 - Convert to [[hsv-color-model]] for intuitive manipulation
@@ -41,4 +41,4 @@ Pure red = (255, 0, 0). Cyan (complement of red) = (0, 255, 255). Mid-gray = (12
 - Printing requires conversion to [[cmyk-color-model]]
 
 ## Open Questions
-- How does the choice of RGB primaries affect color reproduction fidelity in multimedia databases?
+- How does the choice of RGB primaries affect colour reproduction fidelity in multimedia databases?

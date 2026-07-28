@@ -29,12 +29,12 @@ C_D(v) = deg(v) / (n-1)
 
 **Degree distribution:** the distribution of degrees across all nodes. Equal-sized degrees suggest homogeneous structure; a heavy-tailed/power-law distribution suggests hubs and inequality (Barabási & Albert 1999).
 
-## Key Properties
-1. **Local measure**: only counts direct neighbors
+## Key Properties / Complexity
+1. **Local measure**: only counts direct neighbours
 2. **Cheapest to compute**: O(1) per node if degree is stored
 3. **Degree distribution**: quick property check for network structure
 4. **Heavy-tailed distributions**: suggest hubs and inequality
-5. **No information about neighbor importance**: all neighbors weighted equally
+5. **No information about neighbour importance**: all neighbours weighted equally
 
 ## Worked Example
 Workplace graph — Team A (Ana, Ben, Cai, Dia):
@@ -47,7 +47,7 @@ Workplace graph — Team A (Ana, Ben, Cai, Dia):
 **Winner: Dia** — most direct contacts (4).
 
 ## Common Pitfalls
-1. **Assuming high degree means high importance**: degree ignores the structure of the neighborhood
+1. **Assuming high degree means high importance**: degree ignores the structure of the neighbourhood
 2. **Confusing degree with other centrality measures**: degree doesn't capture brokerage, proximity, or prestige
 3. **Ignoring degree distribution**: the shape of the distribution reveals network structure
 4. **Over-interpreting degree in isolation**: high degree may not mean high influence
@@ -56,7 +56,7 @@ Workplace graph — Team A (Ana, Ben, Cai, Dia):
 - [[centrality-measures]] — one of the main centrality measures
 - [[closeness-centrality]] — measures proximity, not direct contacts
 - [[betweenness-centrality]] — measures brokerage, not direct contacts
-- [[eigenvector-centrality]] — weights neighbors by their importance
+- [[eigenvector-centrality]] — weights neighbours by their importance
 - [[power-law-distribution]] — heavy-tailed degree distributions
 - [[network-science-l04]] — lecture overview
 

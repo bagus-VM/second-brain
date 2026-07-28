@@ -8,7 +8,7 @@ last_updated: 2026-06-22
 prerequisites: []
 ---
 ## One-line Summary
-*Structured methodologies for identifying, analyzing, and evaluating security risks specific to IoT systems and devices.*
+*Structured methodologies for identifying, analysing, and evaluating security risks specific to IoT systems and devices.*
 
 ## Core Intuition
 You can't secure everything equally — you need to prioritize. Risk assessment frameworks provide the structure to identify what could go wrong, how likely it is, how bad it would be, and where to invest limited security resources. For IoT, this means considering not just data breaches but physical safety, supply chain risks, and the unique constraints of constrained devices. The framework you choose determines what risks you see and what you miss.
@@ -85,7 +85,7 @@ A hospital assesses risk for a new IoT infusion pump:
 - [[iec-62443]] — 3-2 provides the standard risk assessment methodology for industrial IoT
 - [[nist-iot-cybersecurity]] — NISTIR 8259 risk-informed approach to device capabilities
 - [[etsi-en-303-645]] — ETSI provisions are risk-mitigation controls
-- [[threat-modeling]] — Threat modeling (STRIDE, DREAD) is a component of risk assessment
+- [[threat-modeling]] — Threat modelling (STRIDE, DREAD) is a component of risk assessment
 - [[owasp-iot-top-10]] — Top 10 informs threat identification in the risk assessment process
 
 ## Open Questions

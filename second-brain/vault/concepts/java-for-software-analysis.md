@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-*Everything you need to know about Java, Maven, and the libraries used in both Software Analyse projects — explained for someone who'd rather be writing Python.*
+The Java toolchain — Maven build system, JavaParser for AST analysis, ASM for bytecode analysis, WEKA for ML, picocli for CLI, JUnit for testing — as used in both Software Analyse projects.
 
 ## Core Intuition
 
@@ -17,9 +17,11 @@ You hate Java. Fine. But these two projects use Java-specific tools that you MUS
 
 ---
 
-## Java Basics You Actually Need
+## Formal Definition / Statement
 
-### Classes and Objects
+### Java Basics You Actually Need
+
+#### Classes and Objects
 
 ```java
 public class Dog {
@@ -40,9 +42,9 @@ public class Dog {
 **Key rules:**
 - `public` = accessible from anywhere. `private` = only within this class.
 - `this.name` = the field. `name` = the parameter. Use `this.` to disambiguate.
-- Methods return a type (`String`, `int`, `void` for nothing). 
+- Methods return a type (`String`, `int`, `void` for nothing).
 
-### Enums — Critical for Sign Analysis
+#### Enums — Critical for Sign Analysis
 
 ```java
 public enum SignValue {
@@ -50,7 +52,7 @@ public enum SignValue {
 }
 ```
 
-==An enum is a type with a fixed set of constants==. Each constant has an `ordinal()` (its position, starting from 0).
+An enum is a type with a fixed set of constants. Each constant has an `ordinal()` (its position, starting from 0).
 
 **Why enums are perfect for lattices:**
 - Fixed set of values (you can't add new ones at runtime)
@@ -58,16 +60,16 @@ public enum SignValue {
 - Can have methods: `SignValue.join(a, b)` works like a static method
 - Can use `values()` array: `SignValue.values()[3]` gives `ZERO_MINUS`
 
-### Generics
+#### Generics
 
 ```java
 Map<String, Integer> counts = new HashMap<>();  // maps Strings to Integers
 List<SignValue> values = new ArrayList<>();      // a list of SignValues
 ```
 
-==Generics are Java's way of saying "this collection holds X type."== The `<>` is the diamond operator — it infers the type from context.
+Generics are Java's way of saying "this collection holds X type." The `<>` is the diamond operator — it infers the type from context.
 
-### Interfaces and Abstract Classes
+#### Interfaces and Abstract Classes
 
 ```java
 public interface TransferRelation {
@@ -81,11 +83,11 @@ public abstract class FeatureMetric {
 }
 ```
 
-- **Interface:** ==A contract. Any class that "implements" it must provide all methods==. Multiple interfaces allowed.
-- **Abstract class:** ==A partial implementation. Can have both abstract and concrete methods==. Only one parent allowed.
+- **Interface:** A contract. Any class that "implements" it must provide all methods. Multiple interfaces allowed.
+- **Abstract class:** A partial implementation. Can have both abstract and concrete methods. Only one parent allowed.
 - In the projects: `TransferRelation` is an interface. `FeatureMetric` is an abstract class. `SignTransferRelation` implements `TransferRelation`. `NumberLinesFeature` extends `FeatureMetric`.
 
-### Static Methods and Fields
+#### Static Methods and Fields
 
 ```java
 public class MathUtils {
@@ -96,9 +98,9 @@ public class MathUtils {
 // Usage: MathUtils.add(2, 3) — no 'new MathUtils()'
 ```
 
-==Static methods belong to the class, not an instance.== They can't access `this` or instance fields.
+Static methods belong to the class, not an instance. They can't access `this` or instance fields.
 
-### Annotations
+#### Annotations
 
 ```java
 @Override                    // "I'm overriding a parent method"
@@ -106,9 +108,9 @@ public class MathUtils {
 @CommandLine.Command(...)    // picocli: marks a class as a CLI command
 ```
 
-Annotations are metadata. They don't change code behavior directly but tell the compiler, framework, or tool something about the method/class.
+Annotations are metadata. They don't change code behaviour directly but tell the compiler, framework, or tool something about the method/class.
 
-### Streams and Lambdas (Java 8+)
+#### Streams and Lambdas (Java 8+)
 
 ```java
 // Lambda: anonymous function
@@ -124,9 +126,9 @@ names.stream()
 // Result: [ALICE, CHARLIE]
 ```
 
-**In the projects:** You'll see ==`.stream().map().collect()` patterns for transforming collections==. The `::` is a method reference — shorthand for `s -> s.toUpperCase()`.
+**In the projects:** You'll see `.stream().map().collect()` patterns for transforming collections. The `::` is a method reference — shorthand for `s -> s.toUpperCase()`.
 
-### Exceptions
+#### Exceptions
 
 ```java
 try {
@@ -136,13 +138,13 @@ try {
 }
 ```
 
-==Java forces you to handle checked exceptions (like `IOException`)==. Unchecked exceptions (like `NullPointerException`) don't need explicit handling.
+Java forces you to handle checked exceptions (like `IOException`). Unchecked exceptions (like `NullPointerException`) don't need explicit handling.
 
 ---
 
-## Maven — The Build System
+### Maven — The Build System
 
-### What is Maven?
+#### What is Maven?
 
 Maven is Java's build tool. Think of it as `pip` + `make` + `pytest` combined. It handles:
 - **Dependencies** (like requirements.txt)
@@ -150,7 +152,7 @@ Maven is Java's build tool. Think of it as `pip` + `make` + `pytest` combined. I
 - **Testing** (like pytest)
 - **Packaging** (like pyinstaller)
 
-### pom.xml — The Configuration File
+#### pom.xml — The Configuration File
 
 ```xml
 <project>
@@ -174,7 +176,7 @@ Maven is Java's build tool. Think of it as `pip` + `make` + `pytest` combined. I
 </project>
 ```
 
-### Key Commands
+#### Key Commands
 
 ```bash
 mvn compile          # compile source code
@@ -184,7 +186,7 @@ mvn package          # create a JAR file
 mvn dependency:copy-dependencies  # copy all dependency JARs
 ```
 
-### The Project Structure
+#### The Project Structure
 
 ```
 project/
@@ -201,20 +203,20 @@ project/
     └── test-classes/                ← compiled test .class files
 ```
 
-==**Non-standard layout:** Normally Maven uses `src/main/java/` and `src/test/java/`. These projects use `src/` and `test/` directly==. This is configured in the pom.xml.
+**Non-standard layout:** Normally Maven uses `src/main/java/` and `src/test/java/`. These projects use `src/` and `test/` directly. This is configured in the pom.xml.
 
 ---
 
-## Libraries You Need to Know
+### Libraries You Need to Know
 
-### 1. JavaParser — AST Parsing (Used in Readability Project)
+#### 1. JavaParser — AST Parsing (Used in Readability Project)
 
-**What it does:** ==Parses Java source code into an Abstract Syntax Tree (AST)==, so that the program's meaning is easier to understand (Internal Representation).
+**What it does:** Parses Java source code into an Abstract Syntax Tree (AST), so that the program's meaning is easier to understand (Internal Representation).
 
 **Why you need it:** You can't compute metrics like cyclomatic complexity by counting characters. You need to understand the STRUCTURE of the code — which parts are if-statements, which are loops, which are operators. JavaParser gives you that structure.
 
-**Key concept — ==the Visitor Pattern==:**
-The Visitor pattern is a ==behavioral design pattern in Java that lets you add new operations to a fixed class hierarchy without changing the existing classes==.
+**Key concept — the Visitor Pattern:**
+The Visitor pattern is a behavioral design pattern in Java that lets you add new operations to a fixed class hierarchy without changing the existing classes.
 
 ```java
 public class CyclomaticComplexityVisitor extends VoidVisitorAdapter<Void> {
@@ -257,11 +259,11 @@ public class CyclomaticComplexityVisitor extends VoidVisitorAdapter<Void> {
 ```java
 StaticJavaParser.parse(code, ParseStart.CLASS_BODY);
 ```
-==This tells JavaParser to parse the code as a class body (methods, fields, inner classes), NOT as a full compilation unit== (which would require package declaration, imports, etc.). The `.jsnp` files are class body fragments.
+This tells JavaParser to parse the code as a class body (methods, fields, inner classes), NOT as a full compilation unit (which would require package declaration, imports, etc.). The `.jsnp` files are class body fragments.
 
-### 2. ASM — Bytecode Framework (Used in Sign Analysis)
+#### 2. ASM — Bytecode Framework (Used in Sign Analysis)
 
-**What it does:** ==Reads and manipulates Java bytecode== (`.class` files).
+**What it does:** Reads and manipulates Java bytecode (`.class` files).
 
 **Why you need it:** Sign analysis operates on BYTECODE, not source code. Bytecode is what the JVM actually executes. ASM gives you:
 - `ClassReader`: reads a `.class` file into memory
@@ -331,7 +333,7 @@ int y = x + 3;  →  ILOAD_1   →  [5]
                   ISTORE_2   →  []        (local 2 = 8)
 ```
 
-### 3. WEKA — Machine Learning (Used in Readability Project)
+#### 3. WEKA — Machine Learning (Used in Readability Project)
 
 **What it does:** A Java ML library with classifiers, filters, and evaluation tools.
 
@@ -370,7 +372,7 @@ fc.setClassifier(new Logistic());
 eval.crossValidateModel(fc, dataset, 10, new Random(1));
 ```
 
-### 4. picocli — CLI Framework
+#### 4. picocli — CLI Framework
 
 **What it does:** Parses command-line arguments into Java objects.
 
@@ -406,7 +408,7 @@ public class SubcommandPreprocess implements Callable<Integer> {
 java -cp ... Main preprocess -s snippets/ -g truth.csv LINES TOKEN_ENTROPY H_VOLUME
 ```
 
-### 5. JUnit — Testing Framework
+#### 5. JUnit — Testing Framework
 
 **What it does:** Runs unit tests.
 
@@ -430,9 +432,9 @@ assertThat(list).hasSize(3).contains("a", "b");
 
 ---
 
-## Design Patterns Used in Both Projects
+### Design Patterns Used in Both Projects
 
-### 1. Visitor Pattern (Both Projects)
+#### 1. Visitor Pattern (Both Projects)
 
 Used in: `CyclomaticComplexityVisitor`, `OperatorVisitor`, `OperandVisitor`, `SignInterpreter`
 
@@ -440,7 +442,7 @@ Used in: `CyclomaticComplexityVisitor`, `OperatorVisitor`, `OperandVisitor`, `Si
 
 **Solution:** Define a visitor class with a `visit()` method for each node type. The tree "accepts" the visitor, which dispatches to the right method.
 
-### 2. Strategy Pattern (Both Projects)
+#### 2. Strategy Pattern (Both Projects)
 
 Used in: `FeatureMetric` abstraction, `TransferRelation` interface
 
@@ -448,7 +450,7 @@ Used in: `FeatureMetric` abstraction, `TransferRelation` interface
 
 **Solution:** Define an interface, implement it in multiple classes, inject the right one.
 
-### 3. Template Method (Readability Project)
+#### 3. Template Method (Readability Project)
 
 Used in: `FeatureMetric.computeMetric()` is abstract; subclasses fill in the details.
 
@@ -456,16 +458,45 @@ Used in: `FeatureMetric.computeMetric()` is abstract; subclasses fill in the det
 
 **Solution:** Abstract class defines the skeleton, subclasses override the variable step.
 
----
+## Key Properties / Complexity
+
+- **JavaParser**: O(n) parse to AST; visitor traversal is O(n) in AST node count. Used for source-code-level static analysis.
+- **ASM**: O(n) per method in bytecode instructions; the `Analyzer` runs fixpoint iteration — cost depends on lattice height × instructions × join operations.
+- **WEKA**: Training cost depends on classifier — logistic regression is O(n × features × iterations); cross-validation multiplies by k folds.
+- **picocli**: O(args) parsing — negligible overhead.
+- **JUnit**: Test execution cost = sum of individual test costs.
+- **Maven build**: `mvn test` recompiles changed sources, resolves dependencies, runs all `@Test` methods. First run is slow (dependency download); subsequent runs are incremental.
+
+## Worked Example
+
+**Sign Analysis pipeline (ASM-based):**
+
+1. **`mvn clean test`** compiles `src/` and `test/`, downloads ASM 9.9, runs all `@Test` methods.
+2. `SignInterpreter` extends ASM's `Interpreter<SignValue>` — each bytecode instruction maps to an abstract operation on the sign lattice.
+3. `Analyzer<SignValue>` runs fixpoint iteration over the control-flow graph:
+   - `frames[i]` stores the abstract state before instruction `i`.
+   - `frames[i].getLocal(j)` = abstract value of local variable `j`.
+   - `frames[i].getStack(k)` = abstract value at stack position `k`.
+4. For `naryOperation` (method calls), the analysis recurses into the callee — inter-procedural analysis.
+
+**Readability pipeline (JavaParser + WEKA):**
+
+1. `StaticJavaParser.parse(code, ParseStart.CLASS_BODY)` parses `.jsnp` snippets into ASTs.
+2. Visitor classes (`CyclomaticComplexityVisitor`, `OperatorVisitor`, etc.) extract features per snippet.
+3. Features are written to CSV, loaded into WEKA `Instances`, standardized, and fed to `Logistic` with 10-fold cross-validation via `FilteredClassifier`.
+
+## Common Pitfalls
+- **Confusing source-level analysis (JavaParser) with bytecode analysis (ASM)**: JavaParser works on `.java` files; ASM works on `.class` files. They see different representations of the same program.
+- **Forgetting that Maven's project layout is non-standard** in these projects (`src/` and `test/` instead of `src/main/java/` and `src/test/java/`).
+- **Not using `FilteredClassifier`**: applying a `Standardize` filter before cross-validation leaks statistics across folds. `FilteredClassifier` applies the filter within each fold.
+- **Treating enums as just constants**: in sign analysis, `SignValue` is a lattice element with `join` and `meet` operations — the enum encodes the entire lattice.
+- **Ignoring the JVM stack machine model**: sign analysis operates on bytecode, where `IADD` pops two values and pushes one. The abstract interpreter must model the operand stack, not just local variables.
 
 ## Connections
-
 - [[readability-classifier]] — Uses JavaParser, WEKA, picocli, JUnit
 - [[sign-analysis]] — Uses ASM, picocli, JUnit
 - [[visitor-pattern]] — The central design pattern in both projects
 - [[data-flow-analysis]] — Sign Analysis's Analyzer uses fixpoint iteration
-
----
 
 ## Open Questions
 - What's the difference between checked and unchecked exceptions?

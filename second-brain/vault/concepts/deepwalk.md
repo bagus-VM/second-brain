@@ -35,7 +35,7 @@ where P(u|v) = exp(z_u · z_v) / Σ_{u'} exp(z_{u'} · z_v)
 
 Dense softmax over |V| is too expensive → negative sampling approximates with k random non-context nodes per pair.
 
-## Key Properties
+## Key Properties / Complexity
 1. Scalable: SGD-based, no eigendecomposition needed
 2. Unsupervised: no labels or features required
 3. Implicitly factorises the log of a shifted PPMI matrix from walk co-occurrence (Qiu et al. 2018)

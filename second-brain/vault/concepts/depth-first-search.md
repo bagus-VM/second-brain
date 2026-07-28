@@ -12,7 +12,7 @@ prerequisites: [graph-fundamentals, graph-representations, paths-walks-and-cycle
 DFS explores a graph by going as deep as possible along each branch before backtracking, using a LIFO stack with O(|V|+|E|) complexity.
 
 ## Core Intuition
-DFS is like exploring a maze: ==pick a path and keep going until you hit a dead end, then backtrack to the last junction with unexplored exits==. This "deep first, wide later" strategy is useful for structural exploration — finding cycles, determining reachability, and topological sorting — ==but it does NOT guarantee shortest paths.==
+DFS is like exploring a maze: **pick a path and keep going until you hit a dead end, then backtrack to the last junction with unexplored exits**. This "deep first, wide later" strategy is useful for structural exploration — finding cycles, determining reachability, and topological sorting — **but it does NOT guarantee shortest paths.**
 
 ## Formal Definition / Statement
 **Algorithm: DFS** (Input: Graph G = (V, E), source node s)
@@ -21,16 +21,16 @@ DFS is like exploring a maze: ==pick a path and keep going until you hit a dead 
    - Pop current node u from the top of S
    - If u is not visited:
      - Mark u as visited
-     - Push all neighbors of u onto the stack S
+     - Push all neighbours of u onto the stack S
 
-## Key Properties
+## Key Properties / Complexity
 - Uses a LIFO (Last-In, First-Out) stack (or recursion)
 - Explores deep before wide — can wander far across the network
 - Runs in **O(|V| + |E|)** time
 - **Does NOT guarantee shortest paths** — finds any path, not the shortest
 - Standard for finding **cycles**, **reachability**, and **topological sorting**
 - Can be used to find [[connectivity-and-components|connected components]]
-- Discovery order depends on the order neighbors are processed
+- Discovery order depends on the order neighbours are processed
 
 ## Worked Example
 DFS on ARPANET starting from UCLA:
@@ -54,7 +54,7 @@ def find_path(graph, start, end, path=[]):
 ## Common Pitfalls
 - Using DFS to find shortest paths — DFS finds any path, not necessarily the shortest
 - Confusing DFS with [[breadth-first-search|BFS]] — DFS uses a stack (LIFO), BFS uses a queue (FIFO)
-- Forgetting that DFS's path depends on neighbor processing order — different orderings can yield different paths
+- Forgetting that DFS's path depends on neighbour processing order — different orderings can yield different paths
 
 ## Connections
 - [[breadth-first-search]] — the complementary traversal strategy (BFS vs DFS comparison table)

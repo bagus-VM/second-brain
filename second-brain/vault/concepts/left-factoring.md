@@ -44,7 +44,7 @@ A  → α A' | γ₁ | γ₂ | ... | γₘ
 A' → β₁ | β₂ | ... | βₙ
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 - Preserves the language L(G)
 - Makes FIRST sets disjoint for the factored alternatives
@@ -85,7 +85,7 @@ type'   → [ num ] | ε
 ## Common Pitfalls
 
 - Forgetting that left factoring may need multiple passes (nested common prefixes)
-- Not realizing that left factoring alone doesn't make a grammar LL(1) — [[left-recursion-elimination|left recursion elimination]] may also be needed
+- Not realising that left factoring alone doesn't make a grammar LL(1) — [[left-recursion-elimination|left recursion elimination]] may also be needed
 - Confusing left factoring with left recursion elimination — they solve different problems:
   - Left factoring: common prefixes → FIRST set overlap
   - Left recursion elimination: self-reference → infinite loop

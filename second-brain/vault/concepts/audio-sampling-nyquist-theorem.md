@@ -9,7 +9,7 @@ prerequisites: []
 ---
 
 ## One-line Summary
-The Nyquist-Shannon theorem states that ==to perfectly reconstruct an analog signal, it must be sampled at a rate of at least twice its maximum frequency component==.
+The Nyquist-Shannon theorem states that to perfectly reconstruct an analog signal, it must be sampled at a rate of at least twice its maximum frequency component.
 
 ## Core Intuition
 Sound is a continuous analog pressure wave. To store it digitally, we must sample it — measure the amplitude at regular intervals. But how often must we sample? If we sample too infrequently, we miss important features of the wave and get distortion (aliasing). The Nyquist-Shannon theorem gives us the theoretical minimum: sample at least twice as fast as the highest frequency you want to capture. Since human hearing ranges from 20 Hz to 20 kHz, CDs sample at 44.1 kHz — just above the Nyquist rate for 20 kHz.
@@ -42,7 +42,7 @@ If a continuous signal contains no frequencies higher than f_max, it is complete
 | Rock band | 120 dB |
 | Pain threshold | 130 dB |
 
-## Key Properties
+## Key Properties / Complexity
 - The theorem applies to *bandlimited* signals — real-world signals must be low-pass filtered before sampling to remove frequencies above f_max.
 - **Aliasing**: When sampling below the Nyquist rate, high frequencies "fold" into lower frequencies, creating artifacts that cannot be removed after the fact.
 - The 44.1 kHz CD rate was chosen because: (1) it's above 2×20 kHz = 40 kHz, providing a safety margin; (2) it was compatible with video equipment used for early digital audio mastering.
@@ -71,7 +71,7 @@ If we sample a 1000 Hz wave at only 1500 samples/sec (< Nyquist rate):
 - [[video-frame-rate-resolution]] — video frame rate is an analogous temporal sampling concept for visual data
 - [[video-formats-container-vs-codec]] — audio codecs (AAC, MP3, Vorbis) compress the sampled audio data
 - [[multimedia-database-intro]] — audio is a continuous media type requiring real-time handling in MMDBMS
-- [[multimedia-databases-lecture-03]] — color quantization in images is analogous to amplitude quantization in audio
+- [[multimedia-databases-lecture-03]] — colour quantization in images is analogous to amplitude quantization in audio
 
 ## Open Questions
 - Why was 44.1 kHz chosen for CDs instead of exactly 40 kHz (2×20 kHz)?

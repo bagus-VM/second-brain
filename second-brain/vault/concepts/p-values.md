@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [null-and-alternative-hypothesis]
 ---
 
-# P-Values
 
 ## One-line Summary
 A p-value is the probability of observing data as extreme as the result, assuming the null hypothesis is true.
@@ -23,7 +22,7 @@ The p-value measures *surprise*: if H₀ is true, how likely is it that we'd see
 - It *is* the probability of getting a result at least as extreme as observed, if there were truly no effect.
 - Common threshold: **α = 0.05** (5%). If p < α, the result is "statistically significant."
 
-## Key Properties
+## Key Properties / Complexity
 - p-values are continuous from 0 to 1.
 - Smaller p → stronger evidence against H₀.
 - p = 0.05 means a 5% chance of seeing this data *if H₀ is true*.
@@ -50,6 +49,6 @@ The p-value measures *surprise*: if H₀ is true, how likely is it that we'd see
 - [[reproducibility-crisis]] — Overreliance on p-values is a major contributor.
 
 ## Open Questions
-- Should we abandon p-values in favor of Bayesian methods?
+- Should we abandon p-values in favour of Bayesian methods?
 - How should we adjust p-values for multiple comparisons?
 - Is the 0.05 threshold arbitrary? Should it be 0.005 (as some propose)?

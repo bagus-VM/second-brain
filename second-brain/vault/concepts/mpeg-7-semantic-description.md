@@ -19,7 +19,7 @@ The SemanticType hierarchy includes:
 
 - **SemanticBase** (abstract) — base type for all semantic elements
   - **ObjectType** — objects depicted in the content
-    - **AgentObjectType** — person, group, or organization
+    - **AgentObjectType** — person, group, or organisation
   - **EventType** — events/actions occurring in the content
   - **SemanticPlaceType** — location of events in the narrative world
   - **SemanticTimeType** — time frame of scenes (numerical or textual)
@@ -33,7 +33,7 @@ The SemanticType hierarchy includes:
 
 **Integration with structure**: The `<Semantic>` or `<SemanticRef>` element can be embedded in any SegmentType, linking structural segments to their meaning.
 
-## Key Properties
+## Key Properties / Complexity
 - AgentObject describes persons with structured fields (GivenName, FamilyName)
 - SemanticPlace uses Place/Region/PostalAddress structure
 - SemanticTime uses SemanticTimeInterval with displacement and direction
@@ -59,7 +59,7 @@ This links an event (handshake) to two agent objects (Person A and Person B) usi
 - Confusing semantic description with annotation — semantic description uses structured MPEG-7 types, annotation is free-form text
 - Assuming semantic descriptions are automatic — they typically require manual or semi-automatic creation
 - Forgetting that semantic elements can reference structural segments (bridging structure and meaning)
-- Ignoring that Classification Schemes must be registered with the MPEG-7 organization
+- Ignoring that Classification Schemes must be registered with the MPEG-7 organisation
 
 ## Connections
 - [[mpeg-7-structural-description]] — semantic descriptions attach to structural segments

@@ -9,27 +9,27 @@ prerequisites: []
 ---
 
 ## One-line Summary
-Embeddedness describes a node whose neighbors are themselves densely interconnected — high clustering coefficient, trust, and redundant information.
+Embeddedness describes a node whose neighbours are themselves densely interconnected — high clustering coefficient, trust, and redundant information.
 
 ## Core Intuition
-An embedded node sits inside a tightly connected neighborhood. Its removal barely affects connectivity because its neighbors are already well-connected to each other. This contrasts with a [[structural-holes|broker]], whose removal would disconnect groups.
+An embedded node sits inside a tightly connected neighbourhood. Its removal barely affects connectivity because its neighbours are already well-connected to each other. This contrasts with a [[structural-holes|broker]], whose removal would disconnect groups.
 
 ## Formal Definition / Statement
-**Embedded node:** a node v with high clustering coefficient C(v), meaning many of v's neighbors are also connected to each other.
+**Embedded node:** a node v with high clustering coefficient C(v), meaning many of v's neighbours are also connected to each other.
 
 **Clustering coefficient:**
-C(v) = 2 × (number of edges among v's neighbors) / (deg(v) × (deg(v) - 1))
+C(v) = 2 × (number of edges among v's neighbours) / (deg(v) × (deg(v) - 1))
 
 **Properties:**
-- High clustering coefficient (neighbors are interconnected)
+- High clustering coefficient (neighbours are interconnected)
 - Low betweenness centrality (doesn't sit on many shortest paths)
-- Redundant information (neighbors share the same information)
-- Trust (neighbors verify each other's information)
+- Redundant information (neighbours share the same information)
+- Trust (neighbours verify each other's information)
 
-## Key Properties
-1. **High clustering coefficient**: neighbors are densely connected
+## Key Properties / Complexity
+1. **High clustering coefficient**: neighbours are densely connected
 2. **Low betweenness**: doesn't broker between groups
-3. **Redundant information**: neighbors share the same signals
+3. **Redundant information**: neighbours share the same signals
 4. **Trust**: mutual connections enable verification
 5. **Structural stability**: removal doesn't fragment the network
 
@@ -37,7 +37,7 @@ C(v) = 2 × (number of edges among v's neighbors) / (deg(v) × (deg(v) - 1))
 Workplace graph — Team A (Ana, Ben, Cai, Dia):
 
 **Embedded nodes:** Ana, Ben, Cai
-- Their neighbors are mutually connected (dense triangle)
+- Their neighbours are mutually connected (dense triangle)
 - High clustering coefficient
 - Low betweenness (not on cross-team paths)
 
@@ -47,7 +47,7 @@ Workplace graph — Team A (Ana, Ben, Cai, Dia):
 - High betweenness
 
 ## Common Pitfalls
-1. **Confusing embeddedness with degree**: a node can have high degree but low embeddedness (neighbors not connected to each other)
+1. **Confusing embeddedness with degree**: a node can have high degree but low embeddedness (neighbours not connected to each other)
 2. **Assuming embedded nodes are unimportant**: they are important for local cohesion, not for bridging
 3. **Ignoring that embeddedness and brokerage are complementary**: a node can be both embedded locally and broker globally
 

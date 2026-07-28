@@ -9,7 +9,7 @@ prerequisites: [multimedia-database-intro]
 ---
 
 ## One-line Summary
-Structured data retrieval uses a DBMS with exact matching and query languages (SQL); unstructured data retrieval uses Information Retrieval (IR) systems with ==similarity-based fuzzy matching and ranked result lists==. A multimedia database must combine both.
+Structured data retrieval uses a DBMS with exact matching and query languages (SQL); unstructured data retrieval uses Information Retrieval (IR) systems with **similarity-based fuzzy matching and ranked result lists**. A multimedia database must combine both.
 
 ## Core Intuition
 These are two fundamentally different paradigms that evolved independently. A relational DBMS gives you *precision*: "Give me exactly the rows where age = 25." An IR system gives you *relevance*: "Give me documents *similar* to this query, ranked by how well they match." Multimedia data inherently spans both worlds — a photo has a structured timestamp but unstructured visual content. The [[multimedia-database-intro|MMDBMS]] must unify these paradigms, and this unification is one of the core challenges of the field.
@@ -32,7 +32,7 @@ These are two fundamentally different paradigms that evolved independently. A re
 - Matching considers the whole set of attributes and their relations
 - Combines exact matching of structured data with fuzzy matching of unstructured data
 
-## Key Properties
+## Key Properties / Complexity
 - **Deterministic vs Probabilistic**: DBMS queries have binary results (match/no match); IR queries produce probability-based relevance scores.
 - **Set vs Ranked**: DBMS returns an unordered set; IR returns an ordered list.
 - **Schema vs Schemaless**: Structured data has rigid schemas; unstructured data requires flexible representations (feature vectors, embeddings).

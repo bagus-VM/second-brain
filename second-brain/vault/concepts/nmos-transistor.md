@@ -54,8 +54,8 @@ nMOS with kn' = 100 μA/V², W/L = 10, VTH = 0.7V, λ = 0:
 - [[threshold-voltage]] determines the ON/OFF switching point.
 - Uses [[n-type-semiconductor]] for source/drain regions.
 - Combined with [[pmtransistor]] to form CMOS logic.
-- Operating behavior described by [[mosfet-operating-regions]].
+- Operating behaviour described by [[mosfet-operating-regions]].
 
 ## Open Questions
-- How does channel length modulation (λ) affect saturation region behavior?
+- How does channel length modulation (λ) affect saturation region behaviour?
 - What limits the minimum channel length in modern nMOS devices?

@@ -4,6 +4,42 @@
 > Format: `## [YYYY-MM-DD] OPERATION | title | details`
 > When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
 
+## [2026-07-27] UPDATE | Network Science Cheatsheet — gap fill from mock exam cross-reference | 10 concepts added
+
+- Cross-referenced cheatsheet against both mock exams (Mock 1: 46 MCQ + 5 essay, Mock 2: 48 MCQ + 5 essay). Found 10 concepts tested in the mocks but missing from the cheatsheet. Patched all gaps:
+- §1 GRAPH FUNDAMENTALS: Added density formula (2|E|/(|V|(|V|-1))), walk/path/cycle/trail hierarchy, Eulerian path/circuit conditions (even degree / 0 or 2 odd vertices, Königsberg).
+- §2 PATHS: Added eccentricity, radius, centre definitions (ecc(v) = max d(v,u), radius = min ecc, centre = {v : ecc(v) = radius}).
+- §2 CONNECTIVITY: Added BFS / Dijkstra / Bellman-Ford comparison table (shortest path algorithms — unweighted / non-negative weighted / negative weights).
+- §9 RANDOM GRAPHS: Added small-world index sigma formula (sigma = (C/C_rand)/(L/L_rand), sigma >> 1 means small-world), average path length estimation (d approx log(N)/log(k) with N=10^9, k=200 example).
+- §9: Added Kleinberg's navigability theorem (greedy routing O((log N)^2) iff alpha = d; 2D grid alpha = 2 optimal; navigability != small-world).
+- §18 NEW: Schelling segregation model — mild preferences (30-40%) cascade into strong global segregation, identification problem.
+- §19 NEW: Six gaps of the course — computational, causal, structural, navigational, process-structure, temporal.
+- last_updated bumped to 2026-07-27.
+
+## [2026-07-27] PREP | Mock Exam 2 — Network Science | 1 file, 48 MCQ + 5 essay
+
+- `study/exams/mock-exam-network-science-2026-07-27.md` — second mock exam, 50% Antwort-Wahl-Verfahren (48 questions across 8 sections) + 50% essay (5 open questions with model answers). Deliberately covers areas Mock 1 underweighted: spectral partitioning (Fiedler vector, Laplacian eigenmaps), Erdős–Rényi thresholds (giant component, connectivity), SIS vs SIR distinction, temporal networks (time-respecting paths, phantom paths), hierarchical clustering (dendrogram cut), homophily index r computation, cycle criterion for incomplete graphs, power iteration for eigenvector centrality.
+- Fresh graph examples: 3×2 grid for spectral bisection (E1), 6-node signed graph for camp partitioning (E5), 3-group researcher network for E-I + homophily r (E4).
+- Key traps planted: λ₂ = 0 ⟺ disconnected (not λ₁) (Q22), bipartite ⟺ no odd cycles (Q4), ER degree ≈ Poisson not power-law (Q6e false), signed Laplacian tests F=0 but doesn't compute F (Q37d false), BA distances log(N)/log(log(N)) (Q41), time-respecting paths need chronological edge order (Q46b), complex contagion needs clustered seeding not bridges (E3c).
+
+---
+
+## [2026-07-26] PREP | Mock Exam Network Science | 1 file, 46 MC + 5 essay
+
+- `study/exams/mock-exam-network-science-2026-07-26.md` — 50% Antwort-Wahl-Verfahren (46 questions across 8 sections: Fundamentals & Graph Theory, Centrality, Strong/Weak Ties, Communities, Social Context, Structural Balance, Small-World, Network Dynamics) + 50% essay (5 open questions with model answers). Scope: Lectures 1-8, Exercise Sheets 1-8. Solutions in `> [!note]- Solution` callouts per vault convention.
+- Key traps planted: (b) harmonic vs closeness on disconnected graphs (Q10, E1d), (c) C_D normalisation by n-1 (Q8), (d) betweenness normalisation (n-1)(n-2)/2 for undirected (Q11), (b) STC requires *strong* ties, not any ties (Q17), (c) weak tie paradox direction (Q45), (c) Kleinberg's navigability exponent α = d (Q42), (c) resolution limit is modularity-property, not Louvain-specific (Q24c false), (b) W-S produces Poisson degree distribution, not scale-free (Q38).
+
+---
+
+## [2026-07-26] PREP | Mock Exam SA + RepEng (Antwort-Wahl-Verfahren) | 2 dedicated files, 40Q each
+- `study/exams/mock-exam-software-analyse-2026-07-26.md` — 40 MC questions across 11 sections (Foundations, JVM/Bytecode, Readability, Parsing/AST, Sign Analysis, Control Flow, Data Flow, Abstract Interpretation, Interprocedural, Slicing, Dynamic Analysis). Scope: lectures 2-10 + all 3 projects. All professor-excluded topics removed.
+- `study/exams/mock-exam-reproducibility-engineering-2026-07-26.md` — 40 MC questions across 11 sections (Reproducibility Crisis & Terminology, Levels/Provenance/Standards, Hypotheses & Equivalence, Git Internals, Reproducible Builds, Database Architectures, Tidy Data & SQL, Hierarchical Data, LLMs & Reproducibility, FAIR Principles, Legal Aspects). Scope: all 11 lectures + 11 sheets + 11 IC sheets.
+- Format: Antwort-Wahl-Verfahren — single-best-answer (Einfachauswahl) + multi-select (Mehrfachauswahl) marked explicitly
+- Solutions in `> [!note]- Solution` callouts per vault convention
+- Removed the earlier combined `mock-exam-sa-repeng-2026-07-26.md` (superseded by the two dedicated files)
+- Key traps planted (SA): Java int division toward zero (Q17), BOTTOM vs TOP for div-by-zero (Q18), +1 in cyclomatic complexity (Q11), forward-may = union (Q25), Steensgaard speed vs. Andersen precision (Q33), PDG = CDG ∪ DDG (Q37)
+- Key traps planted (RepEng): __LINE__ vs __TIME__/__FILE__ reproducibility (Q22), transitive Make rebuilds (Q29), BHB ruling = creation vs. obtaining (Q62), oneOf XOR vs. anyOf OR (Q39/Q40), temperature=0 CPU vs GPU (Q43), Docker secrets gradient vs docker inspect (Q48)
+
 ---
 
 
@@ -460,6 +496,11 @@ Added `[[software-analyse-lecture-10]]` backlinks to:
 ## [2026-07-20] PREP | Reproducibility Engineering Exam Battle Plan | Delegated: covering sheets 1-11, IC 01-11, day-by-day schedule for Jul 20-29
 
 ## [2026-07-20] QUERY | "Condensed multimedia exercise sheet" | Created multimedia-databases-cheat-sheet.md — one-page reference covering all 9 exercise sheets (signal processing, color models, image processing, JPEG compression, CBR, querying, indexing). Formulas, definitions, algorithm steps.
+
+## [2026-07-27] PREP | IoT Security + Microelectronics Exam Prep | 2 files created
+
+- `study/exams/exam-prep-iot-security-2026-08-05.md` (38 KB) — condensed exam prep for IoT Security (exam Aug 5). Covers L1-L9: IoT definitions, CIA triad, attack case studies (Mirai, KRACK, ZigBee), Miessler 15 attack surface classes, SDLC/DevOps, operational security lifecycle, crypto fundamentals (symmetric/asymmetric, hashing, MAC, signatures), PUFs/TPM/TRNG, ASCON lightweight crypto, identity lifecycle, PKI/OAuth 2.0, compliance frameworks, DRAM-PUF protocol. 3 question types: definitions, use-case scenarios (assets/threats/attacks/countermeasures mapped to CIA), mechanism explanations. Mock questions included.
+- `study/exams/exam-prep-microelectronics-2026-08-06.md` (40 KB) — condensed exam prep for Introduction to Microelectronics (exam Aug 6). Covers L1-L10: semiconductor physics, p-n junction, diode applications (rectifiers, clampers, limiters, Zener), MOS transistors (nMOS/pMOS, operating regions, I-V characteristics, threshold voltage), CMOS logic gates (inverter, NAND, NOR, XOR), op-amps (inverting, non-inverting, integrator, differentiator, voltage adder, follower), SRAM/DRAM/Flash memory, beyond silicon (graphene, CNTs, memristors). Key formulas, mock questions, weak spot map included.
 
 ## [2026-07-22] UPDATE | Software Analyse Exam Prep | Professor excluded 20 topics from exam
 Exam prep page updated with professor's exclusions:

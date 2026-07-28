@@ -89,7 +89,7 @@ volumes:
 - `bench` is the **client** service: same image (reused for `pgbench` binary), connects to `db:5432` (Docker DNS resolves `db` to the server's IP), runs the benchmark.
 - The host port mapping `5433:5432` lets the *host machine* connect to the server (on 5433); other containers on the Compose network connect to `db:5432` directly.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Strengths
 - **Centralised data**: one server, one source of truth. Multiple clients can read/write the same data.

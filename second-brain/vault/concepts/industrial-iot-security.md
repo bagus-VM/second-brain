@@ -86,7 +86,7 @@ Industrial IoT encompasses connected devices in manufacturing, energy, water, oi
 - [[smart-city-infrastructure]] — Critical infrastructure overlaps
 - [[network-security-fundamentals]] — Network segmentation, firewalls, IDS
 - [[zero-trust-architecture]] — Applying zero-trust to OT networks
-- [[threat-modeling]] — Industrial-specific threat modeling
+- [[threat-modeling]] — Industrial-specific threat modelling
 - [[risk-assessment-frameworks]] — IEC 62443 risk assessment
 - [[iot-firewalling]] — Industrial network segmentation and traffic filtering
 - [[iot-lecture-1]] — Industrial IoT in the application domain overview

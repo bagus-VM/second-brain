@@ -40,7 +40,7 @@ There exists a node v ∈ V such that exactly one of (u, v) or (w, v) was in E a
 ### The Kossinets-Watts observation
 In a longitudinal study of an online social network, the three mechanisms had approximately equal explanatory power — focal and triadic closure were each ~30-40%, membership closure ~20-30%. The relative importance depends on the *affiliation density* of the network.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Mechanism signatures
 - **Triadic closure** is symmetric: both endpoints already knew *some* friend of the other. The new edge has no "context anchor" — both u and w are at the same event *because* of the new edge.

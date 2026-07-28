@@ -17,12 +17,12 @@ Many real-world relationships connect two fundamentally different types of entit
 ## Formal Definition / Statement
 A **bipartite graph** G = (U, V, E) has two disjoint node sets (U ∩ V = ∅) where all edges connect a node from U to a node from V. Edges never connect two nodes within the same set.
 
-## Key Properties
+## Key Properties / Complexity
 - All edges go between U and V, never within U or within V
-- Useful for modeling relations between two inherently different sets of entities
-- Can be **projected** onto one set (==e.g., "students who share a course")== — but projection loses information
+- Useful for modelling relations between two inherently different sets of entities
+- Can be **projected** onto one set (e.g., "students who share a course") — but projection loses information
 - A graph is bipartite if it contains no odd-length cycles
-- ==Common in [[sparse-dense-and-random-graphs|real networks]]: affiliation networks, recommendation systems==
+- Common in [[sparse-dense-and-random-graphs|real networks]]: affiliation networks, recommendation systems
 
 ## Worked Example
 University course enrollment:
@@ -34,8 +34,8 @@ University course enrollment:
 
 ## Common Pitfalls
 - Projecting a bipartite graph onto one set and treating the projection as the "real" graph — you lose the two-set structure and introduce assumptions
-- **Forcing a system into a bipartite mold when within-set edges exist and matter.** The "no edges inside U or V" axiom is a simplification; it misleads when those deleted edges drive the phenomenon. ==Example: modeling a sexual-contact network as bipartite (men↔women) for epidemic threshold — same-sex within-set edges are exactly the bridges that sustain transmission below the bipartite-predicted threshold. The simplification is cleanest where it's most wrong.==
-- **Reading a projection's dense cliques as real communities.** A high-degree node on one side injects C(s,2) edges into the projection (see [[affiliation-networks]] pitfall #2). ==One mandatory course with 400 students → a 400-clique that community detection flags as one community. Artifact, not structure. Co-occurrence ≠ relationship.==
+- **Forcing a system into a bipartite mould when within-set edges exist and matter.** The "no edges inside U or V" axiom is a simplification; it misleads when those deleted edges drive the phenomenon. Example: modelling a sexual-contact network as bipartite (men↔women) for epidemic threshold — same-sex within-set edges are exactly the bridges that sustain transmission below the bipartite-predicted threshold. The simplification is cleanest where it's most wrong.
+- **Reading a projection's dense cliques as real communities.** A high-degree node on one side injects C(s,2) edges into the projection (see [[affiliation-networks]] pitfall #2). One mandatory course with 400 students → a 400-clique that community detection flags as one community. Artifact, not structure. Co-occurrence ≠ relationship.
 - Forgetting that bipartite graphs cannot have odd cycles — this is both a property and a useful test
 - Confusing bipartite graphs with [[directed-and-undirected-graphs|directed graphs]] — bipartiteness is about node types, not edge direction
 
@@ -50,7 +50,7 @@ University course enrollment:
 
 ## Open Questions
 - ~~When is a bipartite projection a useful simplification, and when does it mislead?~~ **Resolved 2026-06-23:** 
-	- It misleads in two ways — (1) when the no-within-set-edges axiom is false and those edges drive the phenomenon (e.g., epidemic threshold on a sexual-contact network), and (2) when you collapse it by projection and read the resulting dense cliques as real communities (a single high-degree focus manufactures a clique of C(s,2)). It's a useful simplification when the two-type split is genuine and you analyze the graph *as* bipartite, keeping both partitions visible. See Common Pitfalls above.
+	- It misleads in two ways — (1) when the no-within-set-edges axiom is false and those edges drive the phenomenon (e.g., epidemic threshold on a sexual-contact network), and (2) when you collapse it by projection and read the resulting dense cliques as real communities (a single high-degree focus manufactures a clique of C(s,2)). It's a useful simplification when the two-type split is genuine and you analyse the graph *as* bipartite, keeping both partitions visible. See Common Pitfalls above.
 - ~~How do bipartite structures affect network dynamics like diffusion or influence?~~ **Resolved 2026-06-23 (student answer + Professor White refinement):**
 	- **Student intuition (correct):** University network, students ↔ courses bipartite. A student leaks an exam sheet to a friend. It spreads to the whole class — 300 students, 90 friend groups, even different faculties — even though none of those groups are friends with each other. The 1 common denominator: the single course they all share.
 	- **Precise mechanism:** The course node is a BROKER spanning the [[structural-holes]] between 90 disconnected friend groups. It has high betweenness — it sits on the shortest path between every cross-group pair. The leak is SIMPLE contagion (one hearing suffices), so bridges accelerate it ([[weak-tie-paradox-contagion]]).

@@ -64,4 +64,4 @@ This demonstrates why [[doping]] is essential — intrinsic semiconductor is too
 
 ## Open Questions
 - What are the fundamental limits of resistivity in doped semiconductors at nanoscale dimensions?
-- How does quantum tunneling affect classical Ohm's law in ultra-thin devices?
+- How does quantum tunnelling affect classical Ohm's law in ultra-thin devices?

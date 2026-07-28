@@ -28,7 +28,7 @@ where RCA (Revealed Comparative Advantage) > 1 means a country exports a product
 
 **Finding:** sophisticated products sit in a dense core; less sophisticated products often lie in sparse peripheral regions. Countries diversify by moving to nearby products, so peripheral position limits feasible development paths.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Capability-based**: edges reflect shared capabilities, not direct trade
 2. **Core-periphery structure**: sophisticated products in the dense core
 3. **Development constraints**: countries can only diversify to nearby products

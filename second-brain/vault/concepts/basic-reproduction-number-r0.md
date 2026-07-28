@@ -32,7 +32,7 @@ T_c ≈ ⟨k⟩ / (⟨k²⟩ − ⟨k⟩)
 
 In scale-free networks with γ ≤ 3, ⟨k²⟩ → ∞, so T_c → 0 (Pastor-Satorras & Vespignani, 2001).
 
-## Key Properties
+## Key Properties / Complexity
 1. R₀ > 1 ⟹ epidemic; R₀ ≤ 1 ⟹ disease dies out
 2. R₀ depends on both biology (β/γ) and network structure (⟨k⟩)
 3. In heterogeneous networks, the variance of degree matters more than the mean — hubs dominate transmission
@@ -58,7 +58,7 @@ Since R₀ = 6 ≫ 1, the cold becomes an epidemic. If we vaccinate one of Ana's
 - Part of [[simple-contagion]] theory
 - The scale-free vanishing threshold connects to [[scale-free-networks]] and [[centrality]]
 - Vaccination targeting relates to [[community-structure]] — bridges and hubs
-- Contrasted with [[threshold-cascades]] — complex contagion has a different kind of threshold (fraction q of neighbors)
+- Contrasted with [[threshold-cascades]] — complex contagion has a different kind of threshold (fraction q of neighbours)
 
 ## Open Questions
 - How does R₀ change in temporal networks where edges appear and disappear?

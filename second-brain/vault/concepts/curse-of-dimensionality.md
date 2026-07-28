@@ -38,7 +38,7 @@ The ratio of nearest to farthest neighbour approaches 1 — all points become "e
 
 **Sample complexity**: To cover a unit hypercube with samples spaced ε apart in each dimension requires (1/ε)ⁿ samples. For ε = 0.1 and n = 10, that's 10¹⁰ samples.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Practical consequences
 - **Kd-trees are effective for low dimensions** (< 20), but degrade to O(n) (linear scan) for high dimensions

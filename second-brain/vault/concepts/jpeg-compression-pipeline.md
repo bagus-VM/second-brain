@@ -12,14 +12,14 @@ prerequisites: [pixel-formats-and-bit-depth, image-file-formats]
 JPEG compression uses a three-stage pipeline — forward DCT transform, quantization, and entropy encoding — to achieve lossy compression of natural images by exploiting human visual perception limitations.
 
 ## Core Intuition
-The human eye is more sensitive to low-frequency changes (smooth gradients) than high-frequency details (sharp edges, noise). JPEG exploits this ==by transforming 8×8 pixel blocks into frequency space using the Discrete Cosine Transform (DCT), then aggressively quantizing the high-frequency coefficients (which the eye won't miss) while preserving low-frequency ones==. The result is dramatic compression with acceptable quality loss for photographs.
+The human eye is more sensitive to low-frequency changes (smooth gradients) than high-frequency details (sharp edges, noise). JPEG exploits this **by transforming 8×8 pixel blocks into frequency space using the Discrete Cosine Transform (DCT), then aggressively quantizing the high-frequency coefficients (which the eye won't miss) while preserving low-frequency ones**. The result is dramatic compression with acceptable quality loss for photographs.
 ![[Pasted image 20260708123921.png]]
 ## Formal Definition / Statement
 The JPEG compression pipeline consists of three stages:
 
 1. **Forward Transform**:
    - Level-shift pixel values by subtracting 2^(p-1) (where p is bit depth)
-   - ==Divide image into 8×8 pixel blocks==
+   - **Divide image into 8×8 pixel blocks**
    - Apply forward DCT to each block:
      ```
      [C]_ij = (2/N) × c(i) × c(j) × Σ Σ f(x,y) × cos((2x+1)iπ/2N) × cos((2y+1)jπ/2N)
@@ -36,7 +36,7 @@ The JPEG compression pipeline consists of three stages:
    - DC coefficient (top-left): encode difference from previous block
    - AC coefficients: run-length encoding + Huffman coding
 
-## Key Properties
+## Key Properties / Complexity
 - **Lossy compression**: irreversible quality loss, but adjustable via quantization table
 - **8×8 block structure**: each block is transformed independently
 - **DCT basis functions**: represent horizontal/vertical frequencies from DC (constant) to highest frequency
@@ -80,7 +80,7 @@ After quantization with standard table (Q[0,0]=16):
 ## Connections
 - [[image-file-formats]] — JPEG is one of the most widely used image formats
 - [[jpeg2000-wavelet-compression]] — successor using wavelet transform instead of DCT
-- [[pixel-formats-and-bit-depth]] — JPEG typically operates on 24-bit color images
+- [[pixel-formats-and-bit-depth]] — JPEG typically operates on 24-bit colour images
 - [[color-quantization]] — JPEG does not use CLUT; quantization is in frequency domain
 - [[image-representation-bitmap]] — JPEG compresses raster/bitmap image data
 

@@ -12,7 +12,7 @@ prerequisites: [graph-fundamentals, graph-representations, paths-walks-and-cycle
 BFS explores a graph layer by layer using a FIFO queue, guaranteeing shortest paths in unweighted graphs with O(|V|+|E|) complexity.
 
 ## Core Intuition
-==BFS is like dropping a stone in water: ripples expand outward one layer at a time==. Starting from a source node, BFS first visits all direct neighbors (layer 1), then all their unvisited neighbors (layer 2), and so on. Because it processes nodes in FIFO order, the first time it reaches a node, it has found the shortest path to that node.
+**BFS is like dropping a stone in water: ripples expand outward one layer at a time**. Starting from a source node, BFS first visits all direct neighbours (layer 1), then all their unvisited neighbours (layer 2), and so on. Because it processes nodes in FIFO order, the first time it reaches a node, it has found the shortest path to that node.
 
 ## Formal Definition / Statement
 **Algorithm: BFS** (Input: Graph G = (V, E), source node s)
@@ -20,12 +20,12 @@ BFS explores a graph layer by layer using a FIFO queue, guaranteeing shortest pa
 2. Mark s as visited
 3. While Q is not empty:
    - Extract current node u from the front of Q
-   - For each neighbor v of u: if v is not visited, mark v as visited and add v to the back of Q
+   - For each neighbour v of u: if v is not visited, mark v as visited and add v to the back of Q
 
-## Key Properties
-- Uses a FIFO (First-In, First-Out) queue
+## Key Properties / Complexity
+- ==Uses a FIFO (First-In, First-Out)== queue
 - Discovers nodes strictly layer by layer
-- Runs in **O(|V| + |E|)** time — each vertex and edge visited at most once
+- Runs in ==**O(|V| + |E|)**== time — each vertex and edge visited at most once
 - Guarantees **shortest paths** in unweighted graphs
 - Works identically on [[directed-and-undirected-graphs|directed graphs]] — follows edges in their given direction
 - Does **NOT** give shortest paths in [[weighted-graphs|weighted graphs]] — use [[dijkstras-algorithm|Dijkstra]] instead

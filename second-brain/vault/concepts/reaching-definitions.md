@@ -32,7 +32,7 @@ Where:
 
 **Join operator**: ∪ (union) — a definition reaches if it reaches on *any* path
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Direction**: Forward (data flows from predecessors to successors)
 - **Kind**: May (union at join points)

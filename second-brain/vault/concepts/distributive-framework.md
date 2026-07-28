@@ -35,7 +35,7 @@ Equivalently (and equivalently in any lattice with a distributive pair):
 Proof sketch: f_b(X) = gen(b) ∪ (X \ kill(b)).
 - f_b(X₁) ∪ f_b(X₂) = [gen(b) ∪ (X₁ \ kill(b))] ∪ [gen(b) ∪ (X₂ \ kill(b))] = gen(b) ∪ (X₁ \ kill(b)) ∪ (X₂ \ kill(b)) = gen(b) ∪ ((X₁ ∪ X₂) \ kill(b)) = f_b(X₁ ∪ X₂) ✓
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The four distributive classic analyses
 All four are distributive (their transfer functions are gen/kill):

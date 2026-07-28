@@ -47,7 +47,7 @@ They share the same Java toolchain (Maven, JUnit, picocli) and demonstrate two m
 **Approach:**
 1. **Abstract domain** — Track the sign (−, 0, +) of every integer value using a bitmask-encoded lattice (8 elements, from ⊥ to ⊤).
 2. **Transfer functions** — Define how signs propagate through arithmetic operations (IADD, ISUB, IMUL, IDIV) using pairwise decomposition of composite values.
-3. **Inter-procedural analysis** — When a method call is encountered, recursively analyze the callee, join all return values, and propagate the result back.
+3. **Inter-procedural analysis** — When a method call is encountered, recursively analyse the callee, join all return values, and propagate the result back.
 4. **Bug detection** — After fixpoint, scan for IDIV with zero divisor and IALOAD/IASTORE with negative index.
 
 **Key concepts:** Lattice theory, bitmask encoding, pairwise decomposition, ASM framework, fixpoint iteration, context-insensitive analysis.
@@ -91,3 +91,19 @@ They share the same Java toolchain (Maven, JUnit, picocli) and demonstrate two m
 - How do the two approaches complement each other in a real software quality workflow?
 - Could dataflow analysis improve the readability classifier (e.g., by adding control flow metrics)?
 - What other static analysis techniques could be applied to the same course projects?
+
+## Formal Definition / Statement
+
+*To be filled.*
+
+## Key Properties / Complexity
+
+*To be filled.*
+
+## Worked Example
+
+*To be filled.*
+
+## Common Pitfalls
+
+*To be filled.*

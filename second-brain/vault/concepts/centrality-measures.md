@@ -49,7 +49,7 @@ $$PR(v) = \frac{1-\alpha}{n} + \alpha \sum_{u \to v} \frac{PR(u)}{\text{outdeg}(
 - **Range**: scores sum to 1 (probabilities)
 - **Cheatable**: link farms can manufacture endorsements
 
-## Key Properties
+## Key Properties / Complexity
 
 | Measure | Theory | One node | All nodes |
 |---------|--------|----------|-----------|
@@ -73,7 +73,7 @@ Toy graph: edges AB, AC, AD, DE (n=5).
 
 A is near everyone (high closeness); D brokers access to E (high betweenness). Betweenness for A counts paths between B,C,D,E passing through A — not paths starting from A.
 
-In the L04 workplace: Degree→Ana (most contacts), Closeness→Dia (bridge position), Betweenness→Dia+Fin (inter-team paths), Eigenvector→Ana/Ben (connected to dense neighbors).
+In the L04 workplace: Degree→Ana (most contacts), Closeness→Dia (bridge position), Betweenness→Dia+Fin (inter-team paths), Eigenvector→Ana/Ben (connected to dense neighbours).
 
 ## Common Pitfalls
 - Confusing closeness with betweenness — one measures proximity, the other measures path control

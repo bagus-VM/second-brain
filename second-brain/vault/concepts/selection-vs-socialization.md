@@ -27,7 +27,7 @@ homophily = selection + socialization + contextual correlation
 - Socialization: attributes change after ties form, in the direction of friend's attribute
 - Contextual: association vanishes when conditioning on shared context C
 
-## Key Properties
+## Key Properties / Complexity
 1. **Cross-sectional data is fundamentally ambiguous** — all three mechanisms produce identical snapshots
 2. **Longitudinal data helps but is not sufficient** — evolving confounders can mimic socialization
 3. **Randomization is the gold standard** — but often unethical or impractical for social ties

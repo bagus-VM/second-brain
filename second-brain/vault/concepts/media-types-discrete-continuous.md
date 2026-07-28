@@ -18,7 +18,7 @@ The key insight is that the discrete/continuous distinction is about the *user's
 - **Discrete (static, time-independent)**: Information is displayed in a time-independent way; the duration of use is determined by the receiver. Examples: text (fonts), graphics (drawings, diagrams), real pictures (photography).
 - **Continuous (dynamic, time-dependent)**: Information has a predetermined temporal sequence that must be respected during presentation. Examples: audio (speech, music, sounds), video (film, animation).
 
-## Key Properties
+## Key Properties / Complexity
 - **Discrete media**: Random access is natural; can be displayed in any order; no synchronization constraints between successive elements.
 - **Continuous media**: Require real-time delivery; timing must be preserved; jitter and latency are critical concerns.
 - **The distinction is presentation-level**: A scanned text document is stored as an image (continuous pixel data) but is still "discrete" in the multimedia sense because the user reads it at their own pace.
@@ -43,5 +43,5 @@ The system must ensure the audio narration starts when the slide appears and the
 - [[multimedia-database-intro]] — storage and retrieval differ for discrete vs continuous media
 
 ## Open Questions
-- Where do animated GIFs or Lottie animations fall? They have temporal behavior but are often treated as discrete assets.
+- Where do animated GIFs or Lottie animations fall? They have temporal behaviour but are often treated as discrete assets.
 - How do modern adaptive streaming protocols (DASH, HLS) change the discrete/continuous boundary?

@@ -14,7 +14,7 @@ SQLite is a serverless, file-based, single-library database management system �
 ## Core Intuition
 Most databases are client/server systems: a separate server process manages the data, and clients connect over the network. **SQLite** is different — there is no server. The database is a single file (or in-memory), and the application links the SQLite library to read and write the file directly. The "architecture" is essentially: *application + SQLite library + database file*.
 
-This design has massive reproducibility implications. The database *is* the file — copying the file is the entire reproducibility protocol. There's no server to install, no configuration to remember, no version skew between server and client. And the public domain license means the exact source can be archived with the experiment.
+This design has massive reproducibility implications. The database *is* the file — copying the file is the entire reproducibility protocol. There's no server to install, no configuration to remember, no version skew between server and client. And the public domain licence means the exact source can be archived with the experiment.
 
 ## Key Concepts
 
@@ -71,7 +71,7 @@ This design has massive reproducibility implications. The database *is* the file
 - Can be modified, redistributed, sold, embedded — without restriction
 - Major implications for reproducibility (the exact source can be archived with the experiment)
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The single-file database
 A SQLite database is just a file. The file format is documented and stable. To back up a SQLite database, copy the file. To replicate a database to another machine, copy the file. To archive a database for long-term storage, copy the file.
@@ -79,7 +79,7 @@ A SQLite database is just a file. The file format is documented and stable. To b
 Compare to PostgreSQL: to back up a database, you need to run `pg_dump` (or use physical replication), transfer the dump file, and restore it. Multiple components, multiple files, multiple steps. With SQLite, the entire backup protocol is `cp database.db backup.db`.
 
 ### Public domain and reproducibility
-SQLite's public domain license means:
+SQLite's public domain licence means:
 - You can audit the source code: is the algorithm doing what the documentation claims?
 - You can modify the source: add custom logging, fix bugs, port to a new platform
 - You can ship the exact source with your experiment — version skew is impossible
@@ -138,16 +138,20 @@ No server to set up. No configuration. The file *is* the experiment.
 - **SQLite's SQL dialect has minor differences from PostgreSQL/MySQL**: e.g., SQLite has dynamic typing (no strict type enforcement), no native UUID type, no `BOOLEAN` type (uses 0/1 integers).
 - **The "small" claim is for the default build**: with all features enabled, the library is larger. With minimum features, much smaller.
 - **SQLite is not a "lightweight" database in the sense of "less powerful"**: it's a full SQL DBMS that happens to be small and embeddable.
-- **The public domain license is rare**: most open-source software is GPL, MIT, or Apache. Public domain means *no* license at all — anyone can do anything.
+- **The public domain licence is rare**: most open-source software is GPL, MIT, or Apache. Public domain means *no* licence at all — anyone can do anything.
 
 ## Connections
 - [[reproducibility-engineering-lecture-6]] — the lecture
 - [[containerization-for-builds]] — Docker for portable DB stacks
 - [[reproducible-builds]] — same principles apply to SQLite
 - postgresql-foreign-tables — alternative DB architecture
-- public-domain-software — the license category
+- public-domain-software — the licence category
 
 ## Open Questions
 - For large-scale experiments (terabytes of data), is SQLite still the right choice? (Probably not — but the file-format approach is still useful for archival.)
 - How does SQLite handle concurrent writers in practice? (File-level locking; can become a bottleneck for write-heavy workloads.)
 - Are there alternatives to SQLite for embedded/reproducible databases? (DuckDB for analytics, LevelDB for key-value, etc.)
+
+## Formal Definition / Statement
+
+*To be filled.*

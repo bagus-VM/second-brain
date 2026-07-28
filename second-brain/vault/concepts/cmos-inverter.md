@@ -37,7 +37,7 @@ A CMOS inverter consists of:
 **CMOS scaling:**
 - Technology node (e.g., 7nm, 5nm) refers to transistor feature size
 - Smaller transistors → lower C_L → lower power, higher speed
-- But leakage increases with scaling (subthreshold, gate oxide tunneling)
+- But leakage increases with scaling (subthreshold, gate oxide tunnelling)
 
 ## Key Properties / Complexity
 - Rail-to-rail output swing (0 to V_DD) — full logic levels

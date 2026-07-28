@@ -26,7 +26,7 @@ A build function B is **deterministic** if:
 
 Where t is time, m is machine, and env is a fully specified environment. The output must be identical regardless of *when* and *where* the build occurs.
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Time-independence**: Output does not depend on build time (no `__TIME__`, `__DATE__`).
 - **Path-independence**: Output does not depend on build directory (no absolute paths in `__FILE__`).

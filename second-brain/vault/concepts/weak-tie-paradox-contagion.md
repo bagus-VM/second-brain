@@ -9,23 +9,23 @@ prerequisites: []
 ---
 
 ## One-line Summary
-The same weak ties and bridges that accelerate simple contagion (rumors, diseases) block complex contagion (behavior adoption), because a single cross-community contact cannot provide enough social reinforcement.
+The same weak ties and bridges that accelerate simple contagion (rumors, diseases) block complex contagion (behaviour adoption), because a single cross-community contact cannot provide enough social reinforcement.
 
 ## Core Intuition
 Granovetter's "strength of weak ties" says bridges carry novel information between communities. This is true for [[simple-contagion]] — one hearing suffices, so bridges are accelerators. But for [[complex-contagion]] — where adoption requires multiple reinforcing signals — a single bridge contact is too thin. The bridge cannot deliver enough reinforcement to cross the adoption threshold. The same structural feature plays opposite roles depending on the spreading process.
 
 ## Formal Definition / Statement
 For **simple contagion** (e.g., rumor, disease):
-- One active neighbor suffices → bridges carry the process to new communities
+- One active neighbour suffices → bridges carry the process to new communities
 - Weak ties = accelerators of global spread
 
 For **complex contagion** (e.g., tool adoption, protest joining):
-- Need fraction q of active neighbors → bridges cannot provide enough reinforcement
+- Need fraction q of active neighbours → bridges cannot provide enough reinforcement
 - Weak ties = barriers to spread
 
 **What helps complex contagion instead:** Dense clusters (internal reinforcement) and wide bridges (multiple cross-community ties that jointly meet the threshold).
 
-## Key Properties
+## Key Properties / Complexity
 1. Simple contagion: weak ties help; complex contagion: weak ties block
 2. The distinction is about the process (spreading rule), not the structure
 3. Wide bridges (multiple edges between communities) can support complex contagion
@@ -41,7 +41,7 @@ In the workplace network, the Dia–Fin bridge:
 Same edge, opposite effects. Structure alone does not determine the outcome — the process matters.
 
 ## Common Pitfalls
-- Assuming Granovetter's weak-tie result applies universally — it applies to information spread (simple contagion), not necessarily to behavior adoption (complex contagion)
+- Assuming Granovetter's weak-tie result applies universally — it applies to information spread (simple contagion), not necessarily to behaviour adoption (complex contagion)
 - Confusing "weak tie" with "useless" — weak ties are crucial for simple contagion
 - Thinking the paradox means weak ties are always bad for complex contagion — wide bridges (multiple weak ties to the same community) can still work
 
@@ -54,4 +54,4 @@ Same edge, opposite effects. Structure alone does not determine the outcome — 
 
 ## Open Questions
 - How do mixed processes (partly simple, partly complex) interact with weak ties?
-- Can networks be designed to optimize for both simple and complex contagion simultaneously?
+- Can networks be designed to optimise for both simple and complex contagion simultaneously?

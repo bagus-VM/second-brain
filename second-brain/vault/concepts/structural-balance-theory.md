@@ -33,7 +33,7 @@ This is the strong version. Davis (1967) relaxed it to allow all-negative triang
 
 **Empirical evidence** (Leskovec, Huttenlocher, Kleinberg 2010): In real signed networks (Epinions, Slashdot, Wikipedia), the unbalanced (+, +, −) triangle is dramatically underrepresented (about 8% of triangles vs ~37.5% expected from random signing). The (+, +, +) triangle is overrepresented (~47% vs ~12.5% expected). This is strong empirical support for balance theory.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Heider's psychological reasoning
 - **Cognitive consistency**: humans prefer consistent belief systems. A friendship network that violates balance creates cognitive dissonance.

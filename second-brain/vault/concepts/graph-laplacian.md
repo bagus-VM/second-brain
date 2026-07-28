@@ -36,7 +36,7 @@ L_rw = D^(-1) L = I - D^(-1) A
 
 **Time complexity:** O(n³) for full eigendecomposition; faster sparse approximations exist.
 
-## Key Properties
+## Key Properties / Complexity
 1. **Positive semi-definite**: all eigenvalues are non-negative
 2. **λ₁ = 0**: always, with constant eigenvector
 3. **λ₂ > 0 if connected**: the Fiedler value measures connectivity

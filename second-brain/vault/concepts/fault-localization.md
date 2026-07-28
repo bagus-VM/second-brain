@@ -47,7 +47,7 @@ Equivalent to cosine similarity between execution vector and error vector.
 - **Dependence on test suite**: quality of localization depends on test coverage
 - **Multiple faults**: may not handle multiple independent bugs well
 - **Statement-level**: can be applied at method, class, or line granularity
-- **Visualization**: color-code statements (red = high suspiciousness, green = low)
+- **Visualization**: colour-code statements (red = high suspiciousness, green = low)
 
 ## Worked Example
 ```c

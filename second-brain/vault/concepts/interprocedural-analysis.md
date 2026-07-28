@@ -41,7 +41,7 @@ The **Meet Over Valid Paths (MVP)** solution at block b_i is the join over all v
 
 A **context-sensitive** analysis computes different abstract states for the same procedure at different call sites. A **context-insensitive** analysis does not.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### The four parts of interprocedural analysis
 1. **Call graph construction**: which procedures can be called from which call sites?

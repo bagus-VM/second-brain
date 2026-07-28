@@ -12,14 +12,14 @@ prerequisites: [jpeg-compression-pipeline, image-file-formats]
 JPEG2000 replaces the DCT with Discrete Wavelet Transform (DWT), enabling both lossless and lossy compression with progressive transmission and improved image quality over traditional JPEG.
 
 ## Core Intuition
-While JPEG's 8×8 DCT blocks create visible blockiness at high compression, JPEG2000 uses wavelets that analyze the entire image at multiple scales simultaneously. Wavelets capture both frequency and location information, allowing the codec to preserve important edges while compressing smooth areas aggressively. The layered file structure enables progressive transmission — send a low-quality preview first, then refine it with more data.
+While JPEG's 8×8 DCT blocks create visible blockiness at high compression, JPEG2000 uses wavelets that analyse the entire image at multiple scales simultaneously. Wavelets capture both frequency and location information, allowing the codec to preserve important edges while compressing smooth areas aggressively. The layered file structure enables progressive transmission — send a low-quality preview first, then refine it with more data.
 
 ## Formal Definition / Statement
 JPEG2000 compression pipeline:
 
 1. **Forward Transform**:
    - Level-shift pixel values
-   - ==Divide into blocks== (more flexible than JPEG's fixed 8×8)
+   - **Divide into blocks** (more flexible than JPEG's fixed 8×8)
    - Apply forward Discrete Wavelet Transform (DWT):
      - Decomposes image into approximation (low-frequency) and detail (high-frequency) subbands
      - Multi-resolution analysis: each level halves the resolution
@@ -35,7 +35,7 @@ JPEG2000 compression pipeline:
    - Embedded block coding with optimized truncation
    - Rate-distortion optimization for quality layers
 
-## Key Properties
+## Key Properties / Complexity
 - **Both lossless and lossy**: unlike JPEG which is always lossy
 - **No blockiness artifacts**: wavelets operate on the whole image, not 8×8 blocks
 - **Progressive transmission**: layered file structure enables:

@@ -35,7 +35,7 @@ See [[message-passing-framework]] for the general formulation. Four key variants
 - AGG = sum; UPDATE = MLP
 - Provably as powerful as the Weisfeiler-Lehman graph isomorphism test
 
-## Key Properties
+## Key Properties / Complexity
 1. Inductive: new nodes can be embedded without retraining (features → embedding)
 2. Feature-aware: initial h_v^{(0)} can be node attributes, one-hot IDs, or pretrained embeddings
 3. End-to-end trainable: embeddings optimised for the downstream task

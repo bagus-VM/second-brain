@@ -45,7 +45,7 @@ P(a₄ | a₁a₂a₃) = count(a₁a₂a₃a₄) / count(a₁a₂a₃*)
 ```
 where `*` represents any token.
 
-## Key Properties
+## Key Properties / Complexity
 - N-gram models are **local**: only the last n-1 tokens matter (Markov property)
 - Larger n → more context → better predictions, but **exponential data sparsity**
 - A trigram model over a vocabulary of 10⁴ tokens has 10¹² possible parameters — far more than any training corpus

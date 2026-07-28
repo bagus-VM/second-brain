@@ -28,7 +28,7 @@ Microelectronics is the subfield of [[electronics]] that focuses on the design, 
 A modern processor chip contains billions of [[mosfet]] transistors, each with gate lengths of ~5-7 nm. This is microelectronics in practice — each transistor acts as a switch controlled by electric fields, and collectively they implement complex digital logic.
 
 ## Common Pitfalls
-- Confusing microelectronics with nanoelectronics — microelectronics deals with classical device behavior at micrometre scale; [[nanoelectronics]] exploits quantum mechanical effects at nanometre scale
+- Confusing microelectronics with nanoelectronics — microelectronics deals with classical device behaviour at micrometre scale; [[nanoelectronics]] exploits quantum mechanical effects at nanometre scale
 - Assuming microelectronics only means digital circuits — analog microelectronics (sensors, RF, power management) is equally important
 
 ## Connections

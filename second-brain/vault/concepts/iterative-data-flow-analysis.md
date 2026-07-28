@@ -43,7 +43,7 @@ while worklist not empty:
 2. Transfer functions are monotone
 3. The meet/join operator is distributive (for precision)
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Termination**: Guaranteed in at most O(N × |facts|) iterations, where N = number of nodes
 - **Precision**: Result is the *least fixed point* (for may analyses) or *greatest fixed point* (for must analyses)

@@ -30,7 +30,7 @@ Loops are where programs spend most of their time, so identifying them is critic
 
 **Inner loop**: A loop that contains no other loops. If two loops share the same header, they are merged into a single loop.
 
-## Key Properties
+## Key Properties / Complexity
 
 - Unless two natural loops have the same header, they are either **disjoint** or one is **entirely contained** within the other (nesting structure)
 - Inner loops (containing no other loops) are the best candidates for optimisation
@@ -57,18 +57,18 @@ CFG with blocks 1–10:
 
 Wait — let's use the lecture's example with known dominator sets:
 
-| Block | DOM              | IDom |
-|-------|------------------|------|
-| 1     | {1}              | -    |
-| 2     | {1,2}            | 1    |
-| 3     | {1,3}            | 1    |
-| 4     | {1,3,4}          | 3    |
-| 5     | {1,3,4,5}        | 4    |
-| 6     | {1,3,4,6}        | 4    |
-| 7     | {1,3,4,7}        | 4    |
-| 8     | {1,3,4,7,8}      | 7    |
-| 9     | {1,3,4,7,8,9}    | 8    |
-| 10    | {1,3,4,7,8,10}   | 8    |
+| Block | DOM            | IDom |
+| ----- | -------------- | ---- |
+| 1     | {1}            | -    |
+| 2     | {1,2}          | 1    |
+| 3     | {1,3}          | 1    |
+| 4     | {1,3,4}        | 3    |
+| 5     | {1,3,4,5}      | 4    |
+| 6     | {1,3,4,6}      | 4    |
+| 7     | {1,3,4,7}      | 4    |
+| 8     | {1,3,4,7,8}    | 7    |
+| 9     | {1,3,4,7,8,9}  | 8    |
+| 10    | {1,3,4,7,8,10} | 8    |
 
 Back edges and natural loops:
 

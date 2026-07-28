@@ -46,7 +46,7 @@ Protection requires active secrecy measures (NDAs, access restrictions, encrypti
 ### 4. Sui Generis Database Right (EU)
 Protects the **substantial investment** in obtaining, verifying, or presenting database contents. See [[sui-generis-database-right]] for the full treatment.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Layered protection
 A single database can be protected by multiple frameworks simultaneously:

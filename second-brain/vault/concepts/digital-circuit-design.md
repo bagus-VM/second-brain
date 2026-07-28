@@ -71,7 +71,7 @@ Digital circuit design is the process of implementing Boolean functions using ne
 - NAND is preferred over NOR in CMOS: nMOS in series (NAND) is faster than pMOS in series (NOR) due to higher electron mobility
 - Fan-out limit: each gate output can drive ~10-20 CMOS inputs (capacitive loading)
 - Noise margins must be maintained across all process, voltage, and temperature (PVT) corners
-- Logic effort: framework for sizing gates to minimize delay along a path
+- Logic effort: framework for sizing gates to minimise delay along a path
 - Technology scaling: each generation (~0.7×) reduces area by 2×, increases speed by ~30%, but increases leakage
 - Standard cell libraries: pre-designed, characterized gates (INV, NAND2, NOR2, AOI21, etc.) used in automated place-and-route
 

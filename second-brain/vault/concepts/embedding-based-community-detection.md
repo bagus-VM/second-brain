@@ -12,7 +12,7 @@ prerequisites: []
 Embedding-based community detection uses node embeddings (from random walks or neural networks) to detect communities — handling overlapping memberships and node features.
 
 ## Core Intuition
-Instead of optimizing a quality function directly on the graph, embedding-based methods first represent each node as a vector (embedding), then cluster the vectors. This can capture overlapping communities (nodes belonging to multiple groups) and incorporate node features.
+Instead of optimising a quality function directly on the graph, embedding-based methods first represent each node as a vector (embedding), then cluster the vectors. This can capture overlapping communities (nodes belonging to multiple groups) and incorporate node features.
 
 ## Formal Definition / Statement
 **Approach:**
@@ -34,7 +34,7 @@ Instead of optimizing a quality function directly on the graph, embedding-based 
 - Hyperparameters for walks and training
 - Less interpretable than modularity-based methods
 
-## Key Properties
+## Key Properties / Complexity
 1. **Overlapping communities**: nodes can belong to multiple groups
 2. **Node features**: can incorporate attributes beyond graph structure
 3. **Scalable**: random walks and neural networks scale to large graphs

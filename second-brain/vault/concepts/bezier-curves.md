@@ -31,9 +31,9 @@ and C(d,i) = d! / (i! · (d-i)!) is the binomial coefficient.
 
 **Derivation from Hermite splines**: A Hermite cubic spline x = at³ + bt² + ct + d is determined by 4 constraints (pass through endpoints at t=0,1 and match given derivatives). Solving gives the coefficients. Bézier curves reparameterize this: instead of derivative values, control points *geometrically* determine the tangent directions.
 
-**Key**: the first and last control points are *interpolated* (curve passes through them); intermediate control points only *influenced* the curve's shape.
+**Key**: the first and last control points are *interpolated* (the curve passes through them); intermediate control points only *influence* the curve's shape.
 
-## Key Properties
+## Key Properties / Complexity
 - **Endpoint interpolation**: curve passes through p₀ and p_d
 - **Tangent property**: tangent at p₀ points toward p₁; tangent at p_d points toward p_{d-1}
 - **Convex hull**: the curve lies entirely within the convex hull of its control points

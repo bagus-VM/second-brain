@@ -29,7 +29,7 @@ Wayne Zachary (1977) observed a university karate club for two years. A conflict
 
 The ~1 misclassified node genuinely sat on the boundary — even Zachary noted it was a close call.
 
-## Key Properties
+## Key Properties / Complexity
 - Small enough for exact computation (34 nodes)
 - The ground-truth split is **not** the modularity optimum — exact max-Q gives 4 communities, not 2
 - The misclassified node is structurally meaningful (boundary position)
@@ -56,3 +56,7 @@ The ~1 misclassified node genuinely sat on the boundary — even Zachary noted i
 - Are there better benchmarks than Zachary's for modern community detection?
 - How would temporal/longitudinal data change the "ground truth"?
 - Can we quantify the uncertainty in the ground-truth labels themselves?
+
+## Worked Example
+
+*To be filled.*

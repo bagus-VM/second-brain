@@ -36,20 +36,20 @@ A compact table with formula, intuition, complexity, and quick notes for exam re
 | Closeness | $C_C(v)=(n-1)/\sum_{u\neq v} d(v,u)$ | Access — short-path reach to everyone | $O(n(n+m))$ | Fails on disconnected graphs; use Harmonic |
 | Harmonic | $H(v)=\sum_{u\neq v} 1/d(v,u)$ (1/\infty=0) | Reachability — handles disconnected graphs | $O(n(n+m))$ | Robust closeness alternative; unreachable nodes contribute 0 |
 | Betweenness | $C_B(v)=\sum_{s\neq v\neq t} \sigma_{st}(v)/\sigma_{st}$ | Brokerage/control — sits on shortest paths | $O(n(n+m))$ (Brandes) | Global; identifies bridges/brokers; expensive to compute |
-| Eigenvector / PageRank | $Ax=\lambda x$ ; $PR(v)=(1-\alpha)/n + \alpha\sum PR(u)/\text{outdeg}(u)$ | Recursive prestige / random-surfer endorsement | $O(k(n+m))$ per iteration | Prestige flows from important neighbors; PageRank adds damping and handles dangling nodes |
+| Eigenvector / PageRank | $Ax=\lambda x$ ; $PR(v)=(1-\alpha)/n + \alpha\sum PR(u)/\text{outdeg}(u)$ | Recursive prestige / random-surfer endorsement | $O(k(n+m))$ per iteration | Prestige flows from important neighbours; PageRank adds damping and handles dangling nodes |
 
 How to pick quickly:
 - Exposure/spreaders → Degree
 - Fast reach or broadcast → Closeness / Harmonic
 - Brokers/bridges → Betweenness
-- Prestige/influence from important neighbors → Eigenvector / PageRank
+- Prestige/influence from important neighbours → Eigenvector / PageRank
 
 For directed networks, degree splits into **in-degree** (edges arriving) and **out-degree** (edges leaving), each with different meanings (popularity vs. activity).
 
 Different measures capture different intuitions — there is no single "correct" centrality. The choice depends on what aspect of importance matters for the question.
 
-## Key Properties
-- **Degree centrality** is the simplest and most local — it only looks at immediate neighbors.
+## Key Properties / Complexity
+- **Degree centrality** is the simplest and most local — it only looks at immediate neighbours.
 - **Closeness centrality** captures global reach — nodes with high closeness can quickly disseminate or gather information.
 - **Betweenness centrality** identifies brokers and bridges — nodes that connect otherwise separate communities.
 - Centrality rankings can differ dramatically depending on which measure is used.
@@ -62,7 +62,7 @@ Consider a network where:
 - Node B has the shortest average distance to all others (highest closeness) — most "reachable"
 - Node C sits on the most shortest paths (highest betweenness) — most "central" as a bridge
 
-==These three nodes could all be different! A political blogger who bridges liberal and conservative communities (high betweenness) might have fewer total links (lower degree) than a blogger deeply embedded in one community.==
+These three nodes could all be different! A political blogger who bridges liberal and conservative communities (high betweenness) might have fewer total links (lower degree) than a blogger deeply embedded in one community.
 
 ## Common Pitfalls
 - **Assuming there's one "right" centrality.** Different measures answer different questions. The choice depends on the application.

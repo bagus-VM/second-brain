@@ -70,8 +70,8 @@ void foobar(int a, int b) {
 - **Loop handling**: unbounded loops cause infinite execution; solutions: bound loops or provide invariants
 - **Non-linear constraints**: x² + y² = z² may be undecidable for solvers
 - **Opaque functions**: if source unavailable (library calls), symbolic execution impossible
-- **Heap/pointer modeling**: symbolic data structures complex to handle
-- **Environmental modeling**: system calls, input() require special handling
+- **Heap/pointer modelling**: symbolic data structures complex to handle
+- **Environmental modelling**: system calls, input() require special handling
 
 ## Connections
 - [[concolic-execution]] — combines concrete and symbolic execution to avoid infeasible paths

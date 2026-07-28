@@ -40,7 +40,7 @@ For a directed graph $G = (V, E)$:
 | Tendrils/tubes | ~22% |
 | Disconnected | ~8% |
 
-## Key Properties
+## Key Properties / Complexity
 - The SCC is a small world: ~16 clicks between random page pairs within it
 - Reachability is **asymmetric**: IN → SCC → OUT works, but OUT → SCC does not
 - Most pairs of pages (~76%) do NOT have a directed path between them

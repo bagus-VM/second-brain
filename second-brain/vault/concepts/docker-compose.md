@@ -54,7 +54,7 @@ volumes:
   pgdata:
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 ### What Compose pins
 - Image version (`postgres:16` — exact tag)

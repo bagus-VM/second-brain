@@ -19,7 +19,7 @@ The core insight is deceptively simple: a word's meaning is determined by the co
 
 Given a corpus of words w₁, w₂, ..., wₜ and a context window of size c:
 
-**Objective**: Maximize the average log probability:
+**Objective**: Maximise the average log probability:
 $$\frac{1}{T} \sum_{t=1}^{T} \sum_{-c \leq j \leq c, j \neq 0} \log P(w_{t+j} | w_t)$$
 
 **Softmax probability**:
@@ -58,7 +58,7 @@ Training pairs (target → context):
 - the → {sat, on, mat}
 
 For the pair (cat, sat) with k=2 negative samples (say "democracy" and "piano"):
-- Maximize: log σ(v'_sat · v_cat) + log σ(−v'_democracy · v_cat) + log σ(−v'_piano · v_cat)
+- Maximise: log σ(v'_sat · v_cat) + log σ(−v'_democracy · v_cat) + log σ(−v'_piano · v_cat)
 - This pushes v_cat close to v_sat and far from v_democracy and v_piano
 
 After training over millions of sentences, words with similar contexts (e.g., "cat" and "dog") end up with similar vectors because they must predict similar context words.

@@ -104,7 +104,7 @@ max_inflight_messages 20
 
 - [[iot-communication-protocols]] — MQTT in the protocol landscape
 - [[coap-security]] — Compare CoAP and MQTT security models
-- [[zigbee-security-model]] — Zigbee uses different trust model (Trust Center)
+- [[zigbee-security-model]] — Zigbee uses different trust model (Trust Centre)
 - [[key-management-lifecycle]] — Certificate management for mTLS
 - [[network-security-fundamentals]] — TLS fundamentals
 - [[iot-network-architecture]] — MQTT broker placement in the architecture

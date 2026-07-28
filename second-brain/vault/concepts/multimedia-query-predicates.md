@@ -42,7 +42,7 @@ Four predicate types for multimedia queries:
 - Support uncertainty, proximity, and significance
 - Example: "Find all videos in which two brothers shake hands"
 
-## Key Properties
+## Key Properties / Complexity
 - **Attribute predicates** are the easiest — standard DBMS handles them.
 - **Structure predicates** require temporal reasoning (Allen's interval relations, etc.).
 - **Spatial predicates** require spatial indexing and geometric reasoning.
@@ -76,6 +76,6 @@ This single query exercises all four predicate types simultaneously.
 - [[multimedia-definition]] — spatial/temporal predicates relate to presentation dimensions
 
 ## Open Questions
-- How are semantic predicates implemented in practice — traditional feature extraction (SIFT, color histograms) vs deep learning embeddings?
+- How are semantic predicates implemented in practice — traditional feature extraction (SIFT, colour histograms) vs deep learning embeddings?
 - What query optimization strategies work when combining deterministic (attribute) and probabilistic (semantic) predicates?
 - How does MPEG-7's description scheme relate to these predicate types?

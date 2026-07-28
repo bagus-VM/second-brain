@@ -40,7 +40,7 @@ Where:
 - **Cutoff:** Transistor acts as open switch, no current flows
 - **Linear/Triode:** Transistor acts as voltage-controlled resistor, ID depends on both VGS and VDS
 - **Saturation:** ID depends primarily on VGS (VGS - VTH)², acts as current source
-- In saturation, ID is relatively independent of VDS (ideal current source behavior)
+- In saturation, ID is relatively independent of VDS (ideal current source behaviour)
 - λ (channel-length modulation) causes slight ID increase with VDS in saturation
 - Pinch-off occurs at the drain end when VDS = VGS - VTH
 - Digital circuits use cutoff and triode (switching); analog circuits use saturation (amplification)
@@ -66,10 +66,10 @@ nMOS with kn' = 100 μA/V², W/L = 10, VTH = 0.5V, λ = 0.02 V⁻¹:
 ## Connections
 - Region conditions defined by [[threshold-voltage]].
 - Applies to both [[nmos-transistor]] and [[pmtransistor]].
-- Derived from [[mosfet]] physics and [[mos-capacitor]] behavior.
+- Derived from [[mosfet]] physics and [[mos-capacitor]] behaviour.
 - Critical for [[cmos-inverter]] voltage transfer characteristics.
 - Saturation region used in [[common-source-amplifier]] design.
 
 ## Open Questions
 - How does velocity saturation at short channel lengths modify the saturation region equations?
-- What is the transition behavior at the boundary between linear and saturation regions?
+- What is the transition behaviour at the boundary between linear and saturation regions?

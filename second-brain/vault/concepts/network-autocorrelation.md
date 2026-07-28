@@ -24,14 +24,14 @@ For a node attribute x and adjacency matrix A:
 **Measures**:
 - Moran's I: global autocorrelation statistic
 - Geary's C: alternative measure, more sensitive to local patterns
-- Network regression: regress x on A·x (neighbor average) to estimate peer effects
+- Network regression: regress x on A·x (neighbour average) to estimate peer effects
 
 **Connection to homophily**:
 - High autocorrelation + balanced population → evidence of homophily
 - High autocorrelation + skewed population → could be baseline (H_base is already high)
 - Autocorrelation alone cannot distinguish selection from socialization
 
-## Key Properties
+## Key Properties / Complexity
 1. **Observable**: autocorrelation can be computed from a single cross-sectional snapshot
 2. **Mechanism-agnostic**: the same autocorrelation is consistent with selection, socialization, and context
 3. **Baseline-dependent**: must compare to random-mixing expectation (like H_base in [[homophily]])

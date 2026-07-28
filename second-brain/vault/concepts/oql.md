@@ -12,13 +12,13 @@ prerequisites: ["[[object-relational-databases]]", "[[multimedia-query-languages
 A query language for object databases, similar to SQL 92 but built around objects, identity, and path expressions instead of flat tables.
 
 ## Core Intuition
-SQL was designed for rows in tables. Object oriented databases store complex objects with identity, inheritance, and methods, none of which fit neatly into SQL's flat projection model. OQL answers this by keeping the familiar select from where shape but making every operand an object or a query that returns objects. You can navigate from an object to its related objects through path expressions, call methods in the query, and rely on late binding so the right method runs for the actual object type.
+SQL was designed for rows in tables. Object-oriented databases store complex objects with identity, inheritance, and methods, none of which fit neatly into SQL's flat projection model. OQL answers this by keeping the familiar SELECT-FROM-WHERE shape but making every operand an object or a query that returns objects. You can navigate from an object to its related objects through path expressions, call methods in the query, and rely on late binding so the right method runs for the actual object type.
 
 The practical reason OQL matters here is that it is the base MOQL extends. The multimedia extensions are bolted onto OQL's WHERE clause, so understanding OQL's basic construct is a prerequisite for reading MOQL queries. OQL is based on the ODMG object model and is usually embedded inside programming languages rather than used as a standalone shell.
 
 ## Formal Definition / Statement
 
-OQL is based on the ODMG object model. It is similar to SQL 92 with object oriented extensions:
+OQL is based on the ODMG object model. It is similar to SQL 92 with object-oriented extensions:
 - complex objects
 - object identity
 - path expressions
@@ -43,7 +43,7 @@ Key points about the construct:
 
 ## Key Properties / Complexity
 
-### Object oriented features that distinguish OQL from SQL 92
+### Object-oriented features that distinguish OQL from SQL 92
 - **Object identity**: two objects with identical attribute values are still distinct if they have different identities. Comparisons can be by identity, not only by value.
 - **Path expressions**: a query can write `student.advisor.department.name` to navigate from a student object through its advisor to the department and its name. SQL needs joins for the same navigation.
 - **Polymorphism and late binding**: when a query calls a method on an object, the method that runs is determined by the object's actual type at runtime, not the declared type. A `draw()` call on a Shape variable runs Circle.draw or Square.draw depending on the real object.
@@ -89,7 +89,7 @@ Here the from clause runs an inner query that filters departments by budget, bin
 ## Connections
 [[moql]]: MOQL extends OQL's WHERE clause with spatial, temporal, contains, and presentation constructs.
 [[multimedia-query-languages]]: OQL is the base of the extension category that produced MOQL.
-[[object-relational-databases]]: the ODMG object model OQL queries sits in the object oriented side of the object relational landscape.
+[[object-relational-databases]]: the ODMG object model OQL queries over it sit on the object-oriented side of the object-relational landscape.
 [[sql-mm]]: the SQL 99 multimedia extension, the parallel to MOQL on the SQL side.
 [[feature-vector]]: object identity and path expressions let an OQL query navigate from a media object to its stored feature descriptors.
 

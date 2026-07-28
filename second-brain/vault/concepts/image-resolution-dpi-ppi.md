@@ -12,13 +12,13 @@ prerequisites: [image-representation-bitmap]
 Image resolution measures how accurately a device or system approximates an image, expressed as dots per inch (DPI) for printers/scanners or pixel dimensions for monitors/cameras.
 
 ## Core Intuition
-Resolution answers: "==How much detail can we capture or display?==" For printers and scanners, it's a density measure — how many dots fit in one inch. For monitors and cameras, it's an absolute pixel count. The key insight is that the same pixel count looks different on devices of different physical sizes: a 1024×768 image on a 17" monitor has different PPI than on a 19" monitor.
+Resolution answers: "**How much detail can we capture or display?**" For printers and scanners, it's a density measure — how many dots fit in one inch. For monitors and cameras, it's an absolute pixel count. The key insight is that the same pixel count looks different on devices of different physical sizes: a 1024×768 image on a 17" monitor has different PPI than on a 19" monitor.
 
 ## Formal Definition / Statement
 Resolution takes two forms:
 
 **Relative (density-based)** — for printers, scanners:
-- Measured in ==dots per inch (DPI)==
+- Measured in **dots per inch (DPI)**
 - Desktop Printer: ~600 DPI; Typesetter: ~1270 DPI; Scanner: 300–3600 DPI
 
 **Absolute (pixel count)** — for monitors, digital cameras:
@@ -33,7 +33,7 @@ PPI = Pixel Dimension / Physical Dimension (in inches)
 
 Where physical dimension = pixel dimension × (device physical size / device pixel dimension)
 
-## Key Properties
+## Key Properties / Complexity
 - DPI is device-relative; PPI is a computed property of pixel count and physical size
 - Higher resolution → more detail → more memory required
 - When Image Resolution < Device Resolution: [[image-interpolation|interpolation]] required (quality loss)

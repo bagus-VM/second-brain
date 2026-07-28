@@ -19,7 +19,7 @@ OTA updates are IoT's "immune system" — the only way to fix vulnerabilities on
 - Be installed without consuming additional bandwidth
 - Be **authenticated** (only signed updates accepted)
 - Be **encrypted** (update content not interceptable)
-- Come from **writable-protected source locations**
+- Come from **write-protected source locations**
 
 ## Key Properties / Complexity
 

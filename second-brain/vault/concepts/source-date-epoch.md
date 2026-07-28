@@ -32,12 +32,12 @@ export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)
 # Now __TIME__ and __DATE__ use the last commit time, not wall clock
 ```
 
-## Key Properties
+## Key Properties / Complexity
 
 - **Single source of truth**: One environment variable controls all build timestamps.
 - **Git integration**: Naturally maps to the last commit timestamp via `git log --format=%ct`.
-- **Tool support**: GCC, Python, Java, and many other tools recognize it.
-- **Fallback behavior**: If not set, tools use the current time (backward compatible).
+- **Tool support**: GCC, Python, Java, and many other tools recognise it.
+- **Fallback behaviour**: If not set, tools use the current time (backward compatible).
 - **Integer format**: Unix epoch seconds -- simple, unambiguous, timezone-free.
 - **Convention over configuration**: A simple convention that any tool can adopt.
 

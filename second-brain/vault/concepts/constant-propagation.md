@@ -53,7 +53,7 @@ MFP loses the fact that z is always 5. This is the non-distributivity of constan
 
 **Conditional branches** (`if (c) S1 else S2`): the analysis joins the results of S1 and S2, losing the per-path precision.
 
-## Key Properties
+## Key Properties / Complexity
 
 ### Why constant propagation is non-distributive
 The non-distributivity comes from conditional branches. The transfer function for `if (c) S1 else S2` essentially does:

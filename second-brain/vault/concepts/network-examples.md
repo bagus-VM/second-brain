@@ -25,15 +25,15 @@ Network science identifies several canonical network types by domain:
 | **Economic** | Institutions/companies | Loans, trade | Interbank loan network |
 | **Infrastructure** | Physical locations | Roads, cables | Internet routing topology |
 
-## Key Properties
-- **Social networks** reveal communities, influence, and the spread of behaviors. Structure can predict group splits (Karate Club).
+## Key Properties / Complexity
+- **Social networks** reveal communities, influence, and the spread of behaviours. Structure can predict group splits (Karate Club).
 - **Communication networks** show actual interaction patterns, which often differ drastically from formal organizational hierarchies.
 - **Information networks** reveal clusters and polarization *without reading content* — structure alone exposes political alignment (Adamic & Glance 2005).
 - **Economic networks** expose systemic risk: one institution's failure cascades through lending connections.
 - **Infrastructure networks** have dense cores and sparse peripheries, reflecting uneven development.
 
 ## Worked Example
-**Political Blog Network (2004 US Election):** Nodes are political blogs, edges are hyperlinks between them. When visualized, two dense clusters emerge — liberal and conservative. The network structure reveals political alignment without analyzing a single word of content. This demonstrates that structure alone carries semantic information.
+**Political Blog Network (2004 US Election):** Nodes are political blogs, edges are hyperlinks between them. When visualized, two dense clusters emerge — liberal and conservative. The network structure reveals political alignment without analysing a single word of content. This demonstrates that structure alone carries semantic information.
 
 ## Common Pitfalls
 - **Domain ≠ type.** "Social network" and "information network" are not formal graph types (like directed/undirected). They describe the domain, not the mathematical structure.

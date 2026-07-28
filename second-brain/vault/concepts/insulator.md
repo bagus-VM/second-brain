@@ -31,7 +31,7 @@ An insulator is a material with very high resistivity (>10⁸ Ωm) due to a larg
 **In MOSFETs:**
 - Gate oxide (SiO₂ or high-k) is the insulator between gate and channel
 - Oxide thickness: ~1.2nm in modern processes (just a few atoms thick!)
-- Tunneling current increases exponentially as oxide thins → drives need for high-k
+- Tunnelling current increases exponentially as oxide thins → drives need for high-k
 
 **Breakdown:**
 - Intrinsic breakdown: ~10 MV/cm for SiO₂
@@ -56,7 +56,7 @@ Gate oxide in a modern MOSFET:
 - Advantage over SiO₂: same capacitance with 5× thicker physical layer → lower leakage
 
 ## Common Pitfalls
-- **Thickness scaling limit**: Below ~0.7nm EOT, tunneling current becomes unacceptable
+- **Thickness scaling limit**: Below ~0.7nm EOT, tunnelling current becomes unacceptable
 - **Interface traps**: Defects at the Si/SiO₂ interface degrade mobility and reliability
 - **High-k challenges**: HfO₂ has lower quality interface than SiO₂, more charge trapping
 - **Low-k fragility**: Low-k dielectrics are mechanically weak, causing reliability issues in packaging
@@ -66,10 +66,11 @@ Gate oxide in a modern MOSFET:
 - [[conductor]] — Opposite of insulator; circuit needs both
 - [[capacitor]] — Insulator is the dielectric in a capacitor
 - [[mosfet]] — Gate oxide is the critical insulator in MOSFET operation
-- [[band-theory]] — Large bandgap defines insulator behavior
+- [[band-theory]] — Large bandgap defines insulator behaviour
 - [[silicon]] — SiO₂ is silicon's native oxide, making it ideal for IC fabrication
 - [[mos-capacitor]] — MOS structure relies on oxide insulator
 
 ## Open Questions
-- How does this concept apply in practice with real-world constraints?
-- What are the deeper implications that aren't immediately obvious?
+- How far can EOT scale before tunnelling leakage makes SiO₂ unusable, and what replaces it?
+- Can 2D dielectrics (e.g., hBN) replace SiO₂ as the gate insulator for beyond-silicon transistors?
+- How does self-heating in high-k dielectrics affect long-term reliability?

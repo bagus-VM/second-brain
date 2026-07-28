@@ -15,15 +15,15 @@ prerequisites:
 *Diodes are one-way valves for current — by combining them with resistors and capacitors, you can convert AC to DC, clip unwanted voltage peaks, clamp signal levels, and regulate voltages.*
 
 ## Core Intuition
-A diode's exponential I-V curve isn't just a physics curiosity — it's the basis of several fundamental circuit functions. Rectifiers convert AC to DC (the most common power conversion). Clippers reshape waveforms by chopping peaks. Clampers shift the DC level of a signal without changing its shape. Zener regulators maintain a constant output voltage despite input variations or load changes. Each application exploits a different aspect of the diode's behavior: forward conduction, reverse blocking, or controlled breakdown.
+A diode's exponential I-V curve isn't just a physics curiosity — it's the basis of several fundamental circuit functions. Rectifiers convert AC to DC (the most common power conversion). Clippers reshape waveforms by chopping peaks. Clampers shift the DC level of a signal without changing its shape. Zener regulators maintain a constant output voltage despite input variations or load changes. Each application exploits a different aspect of the diode's behaviour: forward conduction, reverse blocking, or controlled breakdown.
 
 ## Formal Definition / Statement
 Diode circuits exploit the asymmetric I-V characteristic of the p-n junction for signal processing and power conversion.
 
 **Rectifier circuits:**
 - [[half-wave-rectifier]]: Single diode passes only positive half-cycles. Output: V_dc = V_peak/π (≈ 0.318 V_peak). Ripple frequency = input frequency.
-- [[full-wave-rectifier]]: Two diodes + center-tapped transformer. Output: V_dc = 2V_peak/π (≈ 0.636 V_peak). Ripple frequency = 2× input.
-- [[bridge-rectifier]]: Four diodes, no center tap needed. Same output as full-wave but uses entire transformer secondary. Most common in practice.
+- [[full-wave-rectifier]]: Two diodes + centre-tapped transformer. Output: V_dc = 2V_peak/π (≈ 0.636 V_peak). Ripple frequency = 2× input.
+- [[bridge-rectifier]]: Four diodes, no centre tap needed. Same output as full-wave but uses entire transformer secondary. Most common in practice.
 
 **Filtering:**
 - Capacitor input filter: C across load smooths ripple. Ripple voltage: V_r = I_load / (f × C)
@@ -57,7 +57,7 @@ Diode circuits exploit the asymmetric I-V characteristic of the p-n junction for
 - Peak inverse voltage (PIV): maximum reverse voltage the diode must withstand
   - Half-wave: PIV = V_peak
   - Bridge: PIV = V_peak (each diode)
-  - Full-wave center-tapped: PIV = 2V_peak
+  - Full-wave centre-tapped: PIV = 2V_peak
 - Ripple factor: γ = V_r(rms) / V_dc (lower is better)
 - Clippers distort the waveform; clampers preserve it
 - Zener regulator efficiency is low for large (V_in - V_Z) differences (wasted power in R_s)

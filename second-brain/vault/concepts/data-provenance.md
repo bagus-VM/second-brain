@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: []
 ---
 
-# Data Provenance
 
 ## One-line Summary
 Data provenance is the documented lineage of data -- where it came from, how it was collected and transformed, and every step that produced the current version.
@@ -25,7 +24,7 @@ Data provenance (a subset of [[provenance-in-reproducibility]]) records:
 
 This is closely related to the W3C PROV model, which defines entities, activities, and agents as the core vocabulary for provenance.
 
-## Key Properties
+## Key Properties / Complexity
 - **Forward provenance** (also called "why-provenance"): given an output, trace back to the source data and transformations that produced it.
 - **Backward provenance**: given a source, trace forward to all outputs that depend on it.
 - **Essential for trust**: without data provenance, published results cannot be verified or audited.

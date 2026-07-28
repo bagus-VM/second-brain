@@ -66,7 +66,6 @@ Implementation: device redundancy, gateway caching/clustering, rate limiting, co
 - [[iot-attack-taxonomy]] — Attacks classified by IA property violated
 - [[security-by-design]] — Building all IA properties into design
 - [[operational-security-lifecycle]] — Maintaining IA throughout operations
-
 - [[iot-lecture-1]] — IoT Security Landscape — course overview
 - [[iot-lecture-2]] — IoT Common Attacks — taxonomy
 - [[iot-lecture-4]] — IoT Secure Design — best practices

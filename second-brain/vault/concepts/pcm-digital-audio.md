@@ -32,7 +32,7 @@ Data rate = Sampling rate × Bit depth × Number of channels
 
 Example (CD): 44,100 × 16 × 2 = 1,411,200 bits/s = 176.4 KB/s ≈ 10.6 MB/min
 
-## Key Properties
+## Key Properties / Complexity
 - PCM is **uncompressed** — it stores every sample at full precision.
 - It is the basis for almost all digital audio formats — even compressed formats (MP3, AAC) decode to PCM for playback.
 - **Linear PCM (LPCM)**: Each quantization level is equally spaced. This is the standard for CD audio.

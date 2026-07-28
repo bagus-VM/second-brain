@@ -22,7 +22,7 @@ The IoT Security Landscape encompasses five interdependent domains:
 
 3. **Information Assurance for IoT** — The [[cia-triad]] adapted for IoT: confidentiality (encryption on constrained devices), integrity ([[firmware-security]]), availability (resilience to DoS). Extends to authentication, non-repudiation, and privacy ([[privacy-by-design]]).
 
-4. **DevOps and Secure Design** — [[secure-development-lifecycle]] applied to IoT: threat modeling, secure coding, CI/CD with static analysis, firmware signing, [[ota-updates]], incident response.
+4. **DevOps and Secure Design** — [[secure-development-lifecycle]] applied to IoT: threat modelling, secure coding, CI/CD with static analysis, firmware signing, [[ota-updates]], incident response.
 
 5. **Attack Surfaces** — Systematic enumeration of attack vectors. Miessler's 15 attack surface classes cover physical interfaces, device memory, cloud APIs, and ecosystem communications.
 
@@ -52,7 +52,7 @@ Mapping the landscape for a healthcare IoT deployment:
 ## Connections
 - [[iot-device-fundamentals]], [[iot-communication-protocols]], [[iot-network-architecture]] — Foundation layer
 - [[iot-common-attacks]], [[iot-attack-taxonomy]] — Threat landscape
-- [[iot-secure-design]], [[iot-compliance-frameworks]] — Defense landscape
+- [[iot-secure-design]], [[iot-compliance-frameworks]] — Defence landscape
 - [[information-assurance]], [[cia-triad]] — Security principles adapted for IoT
 - [[risk-assessment-frameworks]] — Prioritizing within the landscape
 

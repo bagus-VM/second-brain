@@ -8,7 +8,6 @@ last_updated: 2026-06-01
 prerequisites: [p-values, statistical-significance, effect-sizes]
 ---
 
-# Replication Crisis and Hypothesis Testing
 
 ## One-line Summary
 The replication crisis is largely driven by misuse of hypothesis testing: p-hacking, publication bias, and overreliance on p < 0.05 without considering effect sizes or power.
@@ -26,7 +25,7 @@ Key contributing factors related to hypothesis testing:
 4. **Low statistical power:** Small samples miss real effects and inflate effect sizes of detected effects.
 5. **Flexible stopping rules:** Collecting data until p < 0.05, then stopping.
 
-## Key Properties
+## Key Properties / Complexity
 - The "file drawer problem": non-significant results are never published.
 - With α = 0.05, even a true null has a 5% chance of being rejected.
 - If base rate of true effects is low, most "significant" findings may be false positives (see Positive Predictive Value).
