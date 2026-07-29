@@ -46,7 +46,7 @@ prerequisites: []
 - Dockerfile = script to build an image. Layered architecture: app container → Docker engine → host OS kernel.
 - `docker build`, `docker run -it`, `docker exec`, `docker cp`, `docker run -v` (bind mount).
 - SHA-256 checksums detect hidden differences (steganography example: fox.jpg vs fox_secret.jpg looked identical, hashes differed).
-- Pearson correlation on pixel arrays: close to 1.0 = nearly identical.
+- Pearson correlation on pixel arrays: close to 1.0 = nearly identical. Formula: r = Σ(xi - x̄)(yi - ȳ) / √(Σ(xi - x̄)² × Σ(yi - ȳ)²).
 
 **Trap:** "Reproduce" and "replicate" are NOT synonyms. Reproduce = same method, different team. Replicate = different method, different team.
 
@@ -368,6 +368,12 @@ Validates JSON structure. Key keywords:
 - `h5py` Python library: `f.create_group()`, `f.create_dataset()`, `d.attrs['unit'] = 'meters'`.
 - Visitor pattern: traverse the HDF5 tree by visiting each node.
 
+### Bowtie (JSON Schema meta-validator)
+
+- Meta-validator for JSON Schema implementations.
+- Runs multiple validators in pinned containers, exposes implementation differences.
+- Useful for finding validators that silently ignore keywords like `oneOf` mutual exclusivity.
+
 ### Pretty-printing JSON (Sheet 9)
 
 - `python -m json.tool` — pretty-prints JSON (indented).
@@ -420,7 +426,12 @@ Must pin:
 - Environment variables are NOT secure (visible in `docker inspect`).
 - Multi-stage builds: build stage has tools + source, runtime stage has only the binary. Smaller image, fewer attack surfaces.
 
-**Trap:** `temperature=0` does NOT guarantee determinism. It means "always pick the highest-probability token" but floating-point non-determinism on GPU can still cause differences. For true determinism you need CPU + fixed seed + pinned versions.
+**temperature=0 precision fix:**
+- On **CPU**: bitwise identical (greedy decoding + deterministic floating-point). Seed is irrelevant.
+- On **GPU**: NOT guaranteed (parallel floating-point non-determinism, even at temperature=0).
+- For true determinism: CPU + fixed seed + pinned library versions.
+
+**Trap:** `temperature=0` on GPU does NOT guarantee determinism. On CPU it does. The exam tests this distinction.
 
 ---
 
@@ -476,6 +487,16 @@ CMD ["myapp"]
 - Store measured data in HDF5: hierarchical, self-describing, efficient for large arrays.
 - Attach provenance metadata as HDF5 attributes (experiment ID, timestamp, hardware info).
 - Inspect with `h5dump`, `h5ls`, or `h5py` in Python.
+
+### Practical remote experiment tools (Sheet 11)
+
+- **tmux**: terminal multiplexer. Keeps sessions alive after SSH disconnect.
+  - `tmux new -s name` — create named session
+  - `Ctrl-b d` — detach (session keeps running)
+  - `tmux a -t name` — reattach
+- **SSH vs SCP port flag**: `-p` (lowercase) for ssh, `-P` (uppercase) for scp.
+- **Environment recording**: before running, record hostname, `/etc/os-release`, `/proc/cpuinfo`, `/proc/cmdline`, `/proc/config.gz`, `/proc/modules`, system load.
+- **Static binaries**: `FROM scratch` for runtime stage with statically linked binary = minimal image.
 
 ### SQPolite case study (IC 10)
 

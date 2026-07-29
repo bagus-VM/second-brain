@@ -279,6 +279,15 @@ B is control-dependent on A iff:
 - A does NOT post-dominate B
 - (B's execution depends on the branching decision at A)
 
+### Natural Loops (structure only — no loop detection algorithms)
+
+| Term | Definition |
+|------|-----------|
+| Natural loop | Single entry point (header) that dominates all nodes in the loop |
+| Header | The single entry node, dominates the back-edge target |
+| Back edge | Edge from node A to a dominator of A |
+| Loop body | All nodes reaching the back-edge target without going through the header |
+
 ### CDG Construction (Ferrante-Ottenstein-Warren)
 
 ```
@@ -304,7 +313,7 @@ Do NOT add edges from Entry. Do NOT make unmarked nodes dependent on Entry.
 | May (union at joins) | Reaching definitions | Live variables |
 | Must (intersection at joins) | Available expressions | Very busy expressions |
 
-NOTE: Available expressions, live variables, and very busy expressions are EXCLUDED from the exam. Only reaching definitions is in scope.
+Only reaching definitions is in scope. The others are listed for context: forward/backward and must/may dimensions are testable, but the specific excluded analyses are not.
 
 ### Reaching Definitions (Forward May)
 
@@ -354,13 +363,16 @@ while worklist not empty:
 | Context-insensitive | Analyze each method once | Low | Cheap |
 | Cloning/inlining | Duplicate method body per call site | High | Expensive (method count explodes) |
 | Call strings | Track sequence of call sites | Medium-High | State-space explosion with long strings |
+| Procedure summaries | Summary of callee effect as transfer function | Medium | Moderate (summary must be context-dependent for precision) |
 
 ### Points-to Analysis
 
 | Algorithm | Approach | Time | Precision |
 |-----------|----------|------|-----------|
-| Steensgaard | Unification (union-find) | Near-linear | Less precise (any shared allocation site → unification) |
-| Andersen's | Subset-based constraints | Cubic | More precise (distinguishes p→obj1 and q→obj1) |
+| Steensgaard | Unification (union-find) | Near-linear | Less precise (any shared allocation site → unification) | No (flow-insensitive) |
+| Andersen's | Subset-based constraints | Cubic | More precise (distinguishes p→obj1 and q→obj1) | No (flow-insensitive) |
+
+Both are flow-insensitive (do not consider order of statements). Andersen's is field-sensitive if configured. Steensgaard is field-insensitive by default.
 
 ### Call String
 
@@ -470,3 +482,7 @@ Slice includes the criterion node itself.
 | VariableDeclarator `=` is AssignExpr | No. JavaParser makes it implicit. OperatorVisitor counts it specially |
 | Widening needed for sign lattice | No. 8 elements = finite height = converges automatically |
 | MOP is on the exam | MOP itself excluded. Only the MOP=MFP condition (distributive) is testable |
+| IASTORE checks stack top | IASTORE stack: [arrayref, index, value]. Index is stackSize-2, NOT stackSize-1. Your code checks stackSize-1 for both IALOAD and IASTORE — potential bug |
+| Steensgaard is field-sensitive | No. Both Steensgaard and Andersen's are flow-insensitive. Andersen's can be field-sensitive if configured |
+| Natural loop requires loop detection algorithm | No. Loop detection algorithms are excluded. Only the structural definition (header, back edge, loop body) is testable |
+| Procedure summaries are context-sensitive by default | No. A summary loses precision unless it is context-dependent (parameterized by call context) |

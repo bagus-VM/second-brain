@@ -81,14 +81,15 @@ Data, code, workflows, models, documentation
 | Specific | State what is claimed AND what is NOT claimed |
 | Unambiguous | One interpretation only |
 | Falsifiable | An experiment could disprove it |
+| Contradictory | Must not contradict stated limitations |
 
 ### Levels of Equivalence (increasing strictness)
 
-| Level | Definition |
-|-------|-----------|
-| Bitwise identity | Byte-for-byte identical (SHA-256 match) |
-| Structural equivalence | Same structure, different representation |
-| Functional equivalence | Same I/O, different internals |
+| Level                  | Definition                                              |
+| ---------------------- | ------------------------------------------------------- |
+| Bitwise identity       | Byte-for-byte identical (SHA-256 match)                 |
+| Structural equivalence | Same structure, different representation                |
+| Functional equivalence | Same I/O, different internals                           |
 | Behavioral equivalence | Same observable behavior over time, different internals |
 
 ### Occam's Razor
@@ -158,6 +159,14 @@ A build is reproducible if given the same source code, build environment, and bu
 ### diffoscope
 
 Deep structural comparison of two builds. Disassembles binaries, compares ELF headers, recurses into embedded archives.
+
+### Heisenbug
+
+A bug that disappears or changes behavior when you try to observe it (adding print statements, running under a debugger, changing build config). Classic cause: linking order changes due to filesystem ordering. Fix: deterministic build environment.
+
+### XPath
+
+Query language for XML documents. Used to query experiment configs by path expressions.
 
 ---
 
@@ -261,6 +270,18 @@ All three must hold simultaneously.
 | Attribute | Metadata attached to group/dataset (max 64 KB) |
 | `h5py` | Python library: `create_group()`, `create_dataset()`, `d.attrs[...]` |
 
+### Bowtie
+
+Meta-validator for JSON Schema implementations. Runs multiple validators in pinned containers, exposes implementation differences (e.g., validators that silently ignore `oneOf`).
+
+### JSON Tools
+
+| Tool | Purpose |
+|------|---------|
+| `python -m json.tool` | Pretty-print JSON (indented) |
+| `jq -c` | Compact JSON |
+| `jq -S` | Sort keys (important for reproducible comparisons) |
+
 ---
 
 ## LLMs and Reproducibility
@@ -286,7 +307,7 @@ All three must hold simultaneously.
 
 | Fact | Detail |
 |------|--------|
-| `temperature=0` | Greedy decoding, NOT bitwise deterministic |
+| `temperature=0` | CPU: bitwise identical (greedy + deterministic FP). GPU: NOT guaranteed (parallel FP non-determinism) |
 | Constrained decoding | Mask tokens that produce invalid JSON at each step |
 | Structured outputs | `response_format: { type: "json_schema", json_schema: {...} }` |
 
@@ -313,6 +334,16 @@ All three must hold simultaneously.
 |-------|---------|
 | Build stage | Compiler + source + build tools |
 | Runtime stage | Binary + minimal OS only |
+
+### Remote Experiment Tools
+
+| Tool / Concept | Key Detail |
+|----------------|------------|
+| tmux | `tmux new -s name`, `Ctrl-b d` (detach), `tmux a -t name` (reattach) |
+| SSH port flag | `-p` (lowercase) |
+| SCP port flag | `-P` (uppercase) |
+| Environment recording | hostname, os-release, cpuinfo, cmdline, config.gz, modules, load |
+| Static binary runtime | `FROM scratch` — minimal image, no OS |
 
 ---
 
@@ -358,4 +389,10 @@ All three must hold simultaneously.
 | "FAIR = open access" | FAIR = findable + accessible (can be restricted with protocol) |
 | "Copyright protects datasets" | Facts aren't copyrightable; selection/arrangement may get sui generis right |
 | "SQLite = open source" | SQLite = public domain (no license at all) |
+| "`temperature=0` = deterministic" | CPU: yes. GPU: no (parallel FP non-determinism) |
+| "`oneOf` = at least one" | `oneOf` = EXACTLY one. `anyOf` = at least one |
+| "`$(wildcard)` is deterministic" | Filesystem-dependent order. Use `$(sort ...)` |
 | "Bronze/Silver/Gold = quality" | Levels of reproducibility documentation: share → document → automate |
+| "Git merge = rebase" | Same content, different history. Merge preserves, rebase rewrites |
+| "Tidy data = clean data" | Tidy = structural property (3 rules). Clean = no errors. Tidy can be dirty |
+| "Heisenbug = random bug" | Heisenbug = disappears when observed. Cause: observation changes behavior |
