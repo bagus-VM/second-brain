@@ -4,6 +4,28 @@
 > Format: `## [YYYY-MM-DD] OPERATION | title | details`
 > When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
 
+
+## [2026-07-29] INGEST | RepEng Lecture 11 — FAIR Principles & Legal | 1 page created
+
+- Coverage gap found during lint: `vault/topics/reproducibility-engineering-lecture-11.md` was missing.
+- Source: `raw/lectures/reproducibility_engineering/Vorlesung/SoSe_2026_RepEng_IC_11___Fair___Legal.pdf`
+- Exercise already processed: `study/practice/repeng-prof-ic11.md`
+- Created topic page with full template: FAIR principles (F/A/I/R), legal frameworks (copyright, GDPR, trade secrets, sui generis), BHB v William Hill case, Toll Collect case, schema copyright originality, jurisdiction notes.
+- Cross-linked to [[reproducibility-engineering-lecture-10]], [[artifact-availability]], [[data-provenance]], [[reproducible-builds]], [[reproducibility-crisis]].
+- Lint report updated: `study/exams/vault-lint-report-2026-07-29.md`
+
+## [2026-07-29] LINT | Full vault scan | 769 pages, 0 broken, 5 orphans (placeholders), 17 unsourced
+
+- Lint report: study/exams/vault-lint-report-2026-07-29.md
+- Vault health: EXCELLENT. Zero broken wikilinks, zero stale, zero drafts, zero old pages.
+- 3 initial false positives (escaped pipe \| in Obsidian table aliases — all target pages exist)
+- 5 orphan pages = Obsidian folder placeholders (safe to delete after exams)
+- 17 unsourced pages (source_count: 0) — low priority, fix after exams
+- 298 unique tags, some synonym sprawl noted
+- ~1657 open questions across vault (by design — not lint issues)
+- Comparison to 2026-07-20: +29 pages, broken links 12→0
+- No urgent actions. Vault is exam-ready.
+
 ## [2026-07-27] UPDATE | Network Science Cheatsheet — gap fill from mock exam cross-reference | 10 concepts added
 
 - Cross-referenced cheatsheet against both mock exams (Mock 1: 46 MCQ + 5 essay, Mock 2: 48 MCQ + 5 essay). Found 10 concepts tested in the mocks but missing from the cheatsheet. Patched all gaps:
@@ -514,3 +536,9 @@ Exam prep page updated with professor's exclusions:
 - Lecture 9: Trace levels, AOP, Fault localization, Delta debugging
 - Lecture 10: Entirely excluded (Symbolic + Dynamic symbolic execution)
 ~20 vault pages now out of exam scope. ~35 concept pages remain in scope.
+## [2026-07-28] PREP | RepEng condensed exam prep + SA concepts-by-project | 2 files created
+- Created `study/exams/repeng-exam-prep-condensed.md` — all 10 lectures + 11 lab sheets + 11 ICs distilled into condensed exam prep with formulas, trap questions, and quick-reference table
+- Created `study/exams/software-analyse-concepts-by-project.md` — all in-scope exam concepts grouped under the 3 projects (readability, sign analysis, slicing) with cross-cutting concepts, project interconnection diagram, and exam checklists
+## [2026-07-28] PREP | Cheatsheets for RepEng + SA | 2 files created
+- Created `study/exams/repeng-cheatsheet.md` — definitions and formulas only: terminology, levels/provenance, Heil Bronze/Silver/Gold, hypothesis properties, equivalence levels, Git object types, reproducible build non-determinism sources, DB architectures, JSON Schema keywords/combinators, HDF5 limits, LLM reproducibility package, remote experiment stages, FAIR principles, legal frameworks
+- Created `study/exams/software-analyse-cheatsheet.md` — definitions and formulas only: Rice's theorem, soundness/completeness, readability metrics (entropy, Halstead, cyclomatic), JVM instructions, sign lattice bitmask encoding + transfer rules, Galois connection, dataflow framework (forward/backward × must/may), reaching definitions equations, interprocedural techniques, PDG/slicing algorithms, dynamic slicing workflow, instrumentation

@@ -14,7 +14,7 @@ An abstract syntax tree (AST) is a condensed form of the parse tree that **disca
 
 ## Core Intuition
 
-A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: **operators become internal nodes, operands become children, and chains of single productions are collapsed**. This makes the AST the ideal input for semantic analysis and code generation.
+A [[parse-tree|parse tree]] records every step of the derivation — every intermediate nonterminal, every matched keyword, every pair of parentheses. An AST strips this down to the essential structure: ==**operators become internal nodes, operands become children, and chains of single productions are collapsed**. This makes the AST the ideal input for semantic analysis and code generation.==
 
 ## Formal Definition / Statement
 
@@ -77,6 +77,60 @@ F := num       →  F.ptr = mkleaf(num, val)
 - Thinking the AST is "just a smaller parse tree" — it's a fundamentally different abstraction that encodes semantic meaning, not derivation steps
 - Forgetting that parentheses disappear in the AST (their role is captured by tree structure)
 - Not realising that a chain-collapse rule like `E.ptr = T.ptr` means no node is created for E in that case
+
+## Side-by-Side: Parse Tree vs AST
+
+For `x = a + b * c;` with simplified Java grammar rules:
+
+```
+Expr        -> AssignExpr | AddExpr | MulExpr | Primary
+AssignExpr  -> Expr "=" Expr
+AddExpr     -> Expr "+" Expr | MulExpr
+MulExpr     -> Expr "*" Expr | Primary
+Primary     -> IDENT | INT_LITERAL
+```
+
+**Parse tree** (every grammar symbol preserved):
+
+```
+              Statement
+                  |
+              ExprStmt
+             /        \
+          Expr          ";"
+           |
+      AssignExpr
+    /      |      \
+  Expr     "="     Expr
+    |                 |
+  Primary          AddExpr
+    |             /      \
+   "x"          Expr      Expr
+                 |          |
+              Primary    MulExpr
+                 |       /      \
+                "a"    Expr      Expr
+                        |          |
+                      Primary    Primary
+                        |          |
+                       "b"        "c"
+```
+
+**AST** (non-terminals stripped, only semantic nodes remain):
+
+```
+       AssignExpr
+      /      |      \
+   "x"      "="    AddExpr
+                  /      \
+               "a"    MulExpr
+                     /      \
+                    "b"     "c"
+```
+
+The AST makes operator precedence visible in the tree shape. `*` sits deeper than `+` because it binds tighter. `=` sits at the root because the whole statement is an assignment. The parse tree encodes the same information but buries it under layers of grammar production rules. The long chain `Expr -> Primary -> "a"` in the parse tree becomes just `"a"` in the AST — that is the chain-collapse rule in action.
+
+**Exam one-liner:** Parse tree = grammar's view (every derivation step). AST = language's view (only semantic structure).
 
 ## Connections
 

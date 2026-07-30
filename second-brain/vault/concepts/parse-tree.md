@@ -25,7 +25,6 @@ Given CFG G = (T, N, P, S), a parse tree is a rooted tree such that:
 4. If an interior node A has children X₁, X₂, …, Xₙ, then A → X₁ X₂ … Xₙ is a production in P
 
 The **yield** of the tree is the concatenation of leaf labels (left to right), which is a string in L(G).
-![[Pasted image 20260726214022.png|654]]
 ## Key Properties / Complexity
 
 - A parse tree corresponds to a **rightmost** or **leftmost** derivation (depending on the order of expansion)
@@ -61,6 +60,68 @@ Reading leaves left to right: 9, -, 5, +, 2. The tree encodes that `-` binds to 
 - Conflating parse trees with [[abstract-syntax-tree|ASTs]] — parse trees are concrete and verbose; ASTs are abstract and compact
 - Drawing a parse tree that doesn't correspond to any valid derivation (every interior node must match a production)
 - Forgetting that the same parse tree can arise from different derivation orders
+
+## Side-by-Side: Parse Tree vs AST
+
+For `x = a + b * c;` with simplified Java grammar rules:
+
+```
+Expr        -> AssignExpr | AddExpr | MulExpr | Primary
+AssignExpr  -> Expr "=" Expr
+AddExpr     -> Expr "+" Expr | MulExpr
+MulExpr     -> Expr "*" Expr | Primary
+Primary     -> IDENT | INT_LITERAL
+```
+
+Operator precedence: `*` binds tighter than `+`.
+
+**Parse tree** (every grammar symbol preserved):
+
+```
+              Statement
+                  |
+              ExprStmt
+             /        \
+          Expr          ";"
+           |
+      AssignExpr
+    /      |      \
+  Expr     "="     Expr
+    |                 |
+  Primary          AddExpr
+    |             /      \
+   "x"          Expr      Expr      <- "+" is root of RHS
+                 |          |
+              Primary    MulExpr   <- * groups tighter
+                 |       /      \
+                "a"    Expr      Expr
+                        |          |
+                      Primary    Primary
+                        |          |
+                       "b"        "c"
+```
+
+**AST** (non-terminals stripped, only semantic nodes remain):
+
+```
+       AssignExpr
+      /      |      \
+   "x"      "="    AddExpr
+                  /      \
+               "a"    MulExpr
+                     /      \
+                    "b"     "c"
+```
+
+What the parse tree has that the AST doesn't:
+
+- Extra non-terminal nodes: `Statement`, `ExprStmt`, `Expr` (x4), `Primary` (x4), `AddExpr` (root), `MulExpr` (inner)
+- Extra leaf: `";"` (structural punctuation, not semantic)
+- Long derivation chains like `Expr -> Primary -> "a"` that the AST collapses to just `"a"`
+
+The AST makes operator precedence visible in the tree shape. `*` sits deeper than `+` because it binds tighter. `=` sits at the root because the whole statement is an assignment. The parse tree encodes the same information but buries it under layers of grammar production rules.
+
+**Exam one-liner:** Parse tree = grammar's view (every derivation step). AST = language's view (only semantic structure).
 
 ## Connections
 
