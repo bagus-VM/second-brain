@@ -184,15 +184,15 @@ Given the same source + build instructions + build environment → byte-for-byte
 
 ### Sources of non-determinism (learn the full list)
 
-| Source | Example | Fix |
-|--------|---------|-----|
-| Timestamps embedded | `__TIME__`, `__DATE__` macros | Use `SOURCE_DATE_EPOCH` env var |
-| Filesystem ordering | `$(wildcard *.c)` order varies | Sort explicitly: `$(sort $(wildcard *.c))` |
-| Embedded paths | `__FILE__` includes absolute build path | Use relative paths or `--debug-prefix-map` |
-| Parallelism | Race conditions in build steps | Pin thread count, or serialize critical steps |
-| Randomness | uninitialized memory, ASLR | Pin ASLR off, zero-initialize |
-| Locale | Different locale → different output | `LC_ALL=C` |
-| Compiler version | Different compiler → different binary | Pin compiler version in Dockerfile |
+| Source              | Example                                 | Fix                                           |
+| ------------------- | --------------------------------------- | --------------------------------------------- |
+| Timestamps embedded | `__TIME__`, `__DATE__` macros           | Use `SOURCE_DATE_EPOCH` env var               |
+| Filesystem ordering | `$(wildcard *.c)` order varies          | Sort explicitly: `$(sort $(wildcard *.c))`    |
+| Embedded paths      | `__FILE__` includes absolute build path | Use relative paths or `--debug-prefix-map`    |
+| Parallelism         | Race conditions in build steps          | Pin thread count, or serialize critical steps |
+| Randomness          | uninitialized memory, ASLR              | Pin ASLR off, zero-initialize                 |
+| Locale              | Different locale → different output     | `LC_ALL=C`                                    |
+| Compiler version    | Different compiler → different binary   | Pin compiler version in Dockerfile            |
 
 ### C compilation pipeline
 
