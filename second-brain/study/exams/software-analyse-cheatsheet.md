@@ -40,7 +40,7 @@ Every non-trivial semantic property of a Turing-complete program is undecidable.
 ---
 
 ## Readability (Project 1)
-
+![[Pasted image 20260730213021.png]]
 ### Shannon Entropy
 
 H = -Σ p(token) × log₂(p(token))
@@ -130,7 +130,7 @@ IADD        → pops 4 and 3, pushes 7 → stack: [7]
 ---
 
 ## Sign Analysis (Project 2)
-
+![[Pasted image 20260730213001.png]]
 ### Sign Lattice (Bitmask Encoding)
 
 | Value | Symbol | Ordinal | Bits | Meaning |
@@ -248,7 +248,7 @@ Sign lattice: 8 elements, finite height, NO widening needed.
 ---
 
 ## Control Flow Analysis (Project 3)
-
+![[Pasted image 20260730213045.png]]
 ### Basic Block
 
 Maximal sequence of instructions with single entry (first instruction) and single exit (control leaves only after last instruction). No internal jumps.
