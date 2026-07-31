@@ -37,7 +37,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "Files"
@@ -142,15 +144,15 @@
   },
   "active": "4d38619bdb620b4a",
   "lastOpenFiles": [
+    "study/exams/repeng-cheatsheet.md",
+    "study/exams/repeng-exam-prep-condensed.md",
     "vault/concepts/lattice.md",
     "study/exams/reproducibility-engineering-exam-battle-plan.md",
-    "study/exams/repeng-cheatsheet.md",
     "vault/topics/reproducibility-engineering-lecture-11.md",
     "study/exams/vault-lint-report-2026-07-29.md",
     "study/exams/software-analyse-projects-vs-exam-concepts.md",
     "study/exams/software-analyse-concepts-by-project.md",
     "study/exams/software-analyse-cheatsheet.md",
-    "study/exams/repeng-exam-prep-condensed.md",
     "raw/handwritten_notes/RepEng/rep-eng_mockexam.rnote",
     "raw/lectures/iot_security/IoTsec1_2026.pdf",
     "vault/topics/microelectronics-lecture-8.md",
