@@ -6,11 +6,19 @@
 > ⚠️ **`AGENTS.md` is stale (Week 1 snapshot).** Corrections where it disagrees with the code:
 > | AGENTS.md says | Reality |
 > |---|---|
-> | `max_iterations: 15` | **50** (`config/config.yaml:20`, `settings.py:20`) |
+> | `max_iterations: 15` | **50** (`config/config.yaml:20`, `settings.py:36`) |
 > | 7 filesystem tools | **8** — `rename_file` was added |
 > | `memory/`, `observability/`, `subagents/` are empty stubs | **All fully implemented** (Weeks 2 & 3) |
 > | `compose.yaml` missing | It exists (284 lines) |
 > | `search_text` is regex | It is `re.escape`d → literal substring |
+>
+> ⚠️ **The checkout now matches `origin/main` @ `4b025c6` (Week 3 Day 5, pulled 2026-09-29).** All
+> line numbers below are against that head. **[Day5]** tags mark what changed in the Day-5 merge:
+> `max_tokens` 2048→**4096** (`config.yaml` only; Pydantic default stays 2048), permission tiers
+> re-shuffled (`research_topic`→observe, `delegate_task`→consequential), `DelegateTaskTool` input
+> sanitization + `ResearchTopicTool` now registered by `register_delegation_tools`, REPL feedback for
+> subagent calls, dead code in `tools/base.py` removed, plus docstring-only churn in most other files
+> (which shifted every line anchor — this guide has been re-anchored accordingly).
 
 ---
 
@@ -126,22 +134,22 @@ via `observe_*` hooks, never inline prints.
 
 ### 3.1 Pydantic hierarchy — `config/settings.py`
 
-Root `AppConfig` (`settings.py:126-134`) has seven sections, all `Field(default_factory=...)`:
+Root `AppConfig` (`settings.py:142-150`) has seven sections, all `Field(default_factory=...)`:
 
 | Class | Lines | Key fields (defaults) |
 |---|---|---|
-| `LLMConfig` | 5-14 | `model="qwen-agentworld-35b-a3b"`, `temperature=0.2`, `max_tokens=2048`, `base_url=InnKube`, `timeout=60.0`, `api_key=""`, `embedding_model="octen-embedding-8b"`, `reranker_model="qwen3-reranker-4b"` |
-| `AgentConfig` | 17-24 | `name="StudyMate"`, `max_iterations=50 (1..100)`, `system_prompt_path="config/soul.md"`, `workspace_dir`, `data_dir="./workspace/data"`, `artifacts_dir="./workspace/artifacts"` |
-| `FilesystemToolConfig` | 27-32 | `enabled=True`, `allow_delete=False`, `allowed_read_paths=["./workspace"]`, `allowed_write_paths=["./workspace/artifacts"]` |
-| `MCPToolConfig` | 35-47 | `enabled=True`, `vault_path="./workspace/"`, `search_command="duckduckgo-mcp-server"`, `search_args=[]` |
-| `ToolsConfig` | 50-53 | `filesystem`, `mcp` |
-| `MemoryConfig` | 56-64 | `enabled=True`, `db_path="./workspace/artifacts/memory/memory.db"`, `max_load=50 (1..200)`, `max_inject=5 (0..20)` |
-| `CompactionConfig` | 67-78 | `enabled=True`, `threshold=0.8`, `buffer=20000`, `keep_recent_messages=10`, `summary_max_tokens=1000`, `max_consecutive_failures=2`, `default_context_window=128000`, `context_windows={}` |
-| `PermissionRuleConfig` | 81-88 | `tools: List[str]` (fnmatch patterns), `decision` ∈ `allow\|deny\|require-user-confirmation`, `tier`, `arguments: Dict[str,str]` |
-| `PermissionsConfig` | 91-100 | `enabled=True`, `default_decision="require-user-confirmation"`, `rules=[]` |
-| `ObservabilityConfig` | 103-123 | `metrics_enabled=False`, `metrics_host="127.0.0.1"`, `metrics_port=8000`, `trace_file="./observability/traces.jsonl"`, `trace_max_chars=4000`, `langfuse_enabled=False`, `langfuse_host`, `langfuse_public_key/secret_key`, `health_enabled=False`, `health_interval_seconds=60.0` |
+| `LLMConfig` | 20-32 | `model="qwen-agentworld-35b-a3b"`, `temperature=0.2`, `max_tokens=2048` (Pydantic default; **config.yaml ships 4096 since Day5** — it raised the output cap for long subagent syntheses), `base_url=InnKube`, `timeout=60.0`, `api_key=""`, `embedding_model="octen-embedding-8b"`, `reranker_model="qwen3-reranker-4b"` |
+| `AgentConfig` | 33-42 | `name="StudyMate"`, `max_iterations=50 (1..100)`, `system_prompt_path="config/soul.md"`, `workspace_dir`, `data_dir="./workspace/data"`, `artifacts_dir="./workspace/artifacts"` |
+| `FilesystemToolConfig` | 43-50 | `enabled=True`, `allow_delete=False`, `allowed_read_paths=["./workspace"]`, `allowed_write_paths=["./workspace/artifacts"]` |
+| `MCPToolConfig` | 51-65 | `enabled=True`, `vault_path="./workspace/"`, `search_command="duckduckgo-mcp-server"`, `search_args=[]` |
+| `ToolsConfig` | 66-71 | `filesystem`, `mcp` |
+| `MemoryConfig` | 72-82 | `enabled=True`, `db_path="./workspace/artifacts/memory/memory.db"`, `max_load=50 (1..200)`, `max_inject=5 (0..20)` |
+| `CompactionConfig` | 83-96 | `enabled=True`, `threshold=0.8`, `buffer=20000`, `keep_recent_messages=10`, `summary_max_tokens=1000`, `max_consecutive_failures=2`, `default_context_window=128000`, `context_windows={}` |
+| `PermissionRuleConfig` | 97-106 | `tools: List[str]` (fnmatch patterns), `decision` ∈ `allow\|deny\|require-user-confirmation`, `tier`, `arguments: Dict[str,str]` |
+| `PermissionsConfig` | 107-118 | `enabled=True`, `default_decision="require-user-confirmation"`, `rules=[]` |
+| `ObservabilityConfig` | 119-141 | `metrics_enabled=False`, `metrics_host="127.0.0.1"`, `metrics_port=8000`, `trace_file="./observability/traces.jsonl"`, `trace_max_chars=4000`, `langfuse_enabled=False`, `langfuse_host`, `langfuse_public_key/secret_key`, `health_enabled=False`, `health_interval_seconds=60.0` |
 
-### 3.2 Loading precedence — `config/loader.py:29-37`
+### 3.2 Loading precedence — `config/loader.py:36-64`
 
 ```
 1. Real system environment variables  (e.g. INNKUBE_API_KEY)
@@ -152,12 +160,12 @@ Root `AppConfig` (`settings.py:126-134`) has seven sections, all `Field(default_
 
 Mechanics worth quoting:
 
-- `_load_env_file` (`loader.py:8-22`) only sets `os.environ[key]` **if the key is not already set**
+- `_load_env_file` (`loader.py:19-34`) only sets `os.environ[key]` **if the key is not already set**
   → that is exactly how a real env var beats `.env`.
 - `yaml.safe_load(f) or {}` → `AppConfig(**yaml_data)`. Unknown keys raise (Pydantic), missing keys fall back.
-- API key injection (`loader.py:55-58`): if `config.llm.api_key` empty →
+- API key injection (`loader.py:68-69`): if `config.llm.api_key` empty →
   `os.getenv("INNKUBE_API_KEY") or os.getenv("OPENAI_API_KEY")`. One key covers chat + embeddings + rerank.
-- Observability overrides (`loader.py:60-91`) each guarded by `if os.getenv(X, "") != ""`.
+- Observability overrides (`loader.py:73-102`) each guarded by `if os.getenv(X, "") != ""`.
 - **Langfuse keys are env-only, never YAML** (mirrors the API-key pattern).
 
 ### 3.3 `config/soul.md` — the persona
@@ -182,11 +190,11 @@ ReAct workflow (Thought → Action → Observation → Answer), and subagent del
 
 ---
 
-## 5. The ReAct engine — `core/engine.py` (693 lines)
+## 5. The ReAct engine — `core/engine.py` (707 lines)
 
 **This is the most likely deep-dive question. Learn it cold.**
 
-### 5.1 Constructor (`__init__`, L62-91)
+### 5.1 Constructor (`__init__`, L76-105)
 
 ```python
 def __init__(self, llm_client, tool_registry=None, config=None, compaction=None,
@@ -195,12 +203,12 @@ def __init__(self, llm_client, tool_registry=None, config=None, compaction=None,
 ```
 
 - Tool registry resolution is a **3-way fallback**: `tools` kwarg → `tool_registry` kwarg → fresh
-  `ToolRegistry()` (L77). `tools=` is what the subagent factory passes.
+  `ToolRegistry()` (L91). `tools=` is what the subagent factory passes.
 - Explicit `max_iterations` overrides via `self.config.model_copy(update=...)` so a shared
-  `AgentConfig` is never mutated (L78-80).
-- Holds a per-engine `CompactionState` (L83-84) — persists across runs of the same engine, which is
+  `AgentConfig` is never mutated (L93-94).
+- Holds a per-engine `CompactionState` (L97-98) — persists across runs of the same engine, which is
   how the failure circuit breaker survives between turns.
-- Telemetry listener list (L89-91); `parent_run_id` = delegation provenance.
+- Telemetry listener list (L103-105); `parent_run_id` = delegation provenance.
 
 ### 5.2 Helpers
 
@@ -219,28 +227,28 @@ def run(self, user_message, context=None, on_tool_start=None, on_tool_end=None,
         thread_id="", thread_name="") -> AgentRunResult:
 ```
 
-**Phase A — setup (L268-335)**
+**Phase A — setup (L282-347)**
 
-1. `run_id = new_run_id()` (L268)
+1. `run_id = new_run_id()` (L282)
 2. If `context is None` → create a fresh `ContextManager(custom_system_prompt=self.system_prompt)`
-   (L269-270). **This is exactly what a subagent does** → fresh history, parent invisible.
-3. Stamp `delegate_task.parent_run_id = run_id` (L274-277).
-4. `context.add_user_message(user_message)` — the user turn enters history *before* the loop (L279).
-5. Emit `run_start` telemetry (L281).
+   (L283-284). **This is exactly what a subagent does** → fresh history, parent invisible.
+3. Stamp `delegate_task.parent_run_id = run_id` (L288-291).
+4. `context.add_user_message(user_message)` — the user turn enters history *before* the loop (L293).
+5. Emit `run_start` telemetry (L295).
 6. Local counters: `iterations`, `tool_calls_count`, four token totals, `overflow_retried=False`,
-   `compacted_this_run` reset, `run_start=time.perf_counter()`, `turns=[]`, `compactions=0` (L286-299).
-7. `schemas = self.tool_registry.list_schemas()` — computed **once per run** (L301).
-8. Optionally open a live Langfuse root span (L313-335); any failure → `live_handle = None`
+   `compacted_this_run` reset, `run_start=time.perf_counter()`, `turns=[]`, `compactions=0` (L300-313).
+7. `schemas = self.tool_registry.list_schemas()` — computed **once per run** (L315).
+8. Optionally open a live Langfuse root span (L327-347); any failure → `live_handle = None`
    (degrades to post-hoc export).
 
-**Phase B — the loop (L337)**
+**Phase B — the loop (L351)**
 
 ```python
 while iterations < self.config.max_iterations:
     iterations += 1          # incremented at the TOP → at most N LLM calls
 ```
 
-**Step 0 — proactive context guard (L341-356)** — *compact before the call, never after an overflow*:
+**Step 0 — proactive context guard (L356-371)** — *compact before the call, never after an overflow*:
 
 ```python
 if self.compaction.enabled:
@@ -251,20 +259,20 @@ if self.compaction.enabled:
         if compacted: compactions += 1; observe_compaction("threshold")
 ```
 
-**Step 1 — Reason (L358-471)**
+**Step 1 — Reason (L372-487)**
 
-- Build a Langfuse *delta* snapshot of new messages (L364-376).
-- Open a generation span `llm-turn-{n}` (L377-386).
-- The core call (L387-391):
+- Build a Langfuse *delta* snapshot of new messages (L378-390).
+- Open a generation span `llm-turn-{n}` (L392-401).
+- The core call (L402-405):
   ```python
   response = self.llm_client.chat(messages=context.get_messages(),
                                   tools=schemas if schemas else None)
   ```
-- Exception path (L392-429) — see §5.5.
-- On success: `observe_llm(model, "ok", latency, tokens...)`, accumulate totals (L431-446), finish the
-  generation span (L450-471), append a `turn` record (L475-492).
+- Exception path (L406-443) — see §5.5.
+- On success: `observe_llm(model, "ok", latency, tokens...)`, accumulate totals (L445-458), finish the
+  generation span (L464-487), append a `turn` record (L489-506).
 
-**Step 2 — append assistant turn + terminal-answer branch (L494-579)**
+**Step 2 — append assistant turn + terminal-answer branch (L508-593)**
 
 ```python
 context.add_assistant_message(content=response.content,
@@ -283,7 +291,7 @@ Four sub-cases:
 
 ⚠️ The two `continue` branches go back to the `while` guard, so **retries consume iteration budget**.
 
-**Step 3 — Act: dispatch tool calls (L581-661)**
+**Step 3 — Act: dispatch tool calls (L595-668)**
 
 ```python
 for tool_call in response.tool_calls:
@@ -297,13 +305,13 @@ for tool_call in response.tool_calls:
     self._emit_telemetry("tool_end", {...})                    # L649
 ```
 
-**Step 4 — Observe (L656-661)**: the observation goes back into the conversation:
+**Step 4 — Observe (L670-675)**: the observation goes back into the conversation:
 
 ```python
 context.add_tool_result(tool_call_id=tool_call.id, name=tool_call.name, content=observation)
 ```
 
-**Phase C — budget exhaustion (L663-693)**
+**Phase C — budget exhaustion (L677-707)**
 
 Falling out of the loop → `_finish(status="max_iterations", is_success=False)` with the message
 *"I reached the maximum number of reasoning steps without finishing..."*. **The engine never loops
@@ -312,7 +320,7 @@ forever and never returns `None`.**
 ### 5.4 Callbacks (three seams)
 
 1. **UI**: `on_tool_start` / `on_tool_end` passed into `run()`; the REPL prints
-   `⚙ Action: <name> <args>` and `✓ Completed:` / `✗ Failed:` (`terminal.py:1218-1232`).
+   `⚙ Action: <name> <args>` and `✓ Completed:` / `✗ Failed:` (`terminal.py:1240-1264`).
 2. **Telemetry**: `on_telemetry_event` listeners for `run_start`, `tool_start`, `tool_end`, `run_end`;
    parent engines forward the same listener to children so the REPL sees child activity.
 3. **Observability side channels**: `observe_*` Prometheus hooks, `append_trace` JSONL, live Langfuse spans.
@@ -321,13 +329,13 @@ forever and never returns `None`.**
 
 | Failure | Handling | Outcome |
 |---|---|---|
-| LLM raises | finish span `level=ERROR`, `observe_llm(model, status)`; if `is_context_overflow(e)` and not yet retried → forced `maybe_compact(force=True)` + `continue`; else `abort_langfuse_run` then **`raise`** (L429) | overflow → one retry; otherwise propagates to the REPL catch block (`terminal.py:1283-1301`) |
-| Tool raises | caught inside `ToolRegistry.execute` (`tools/base.py:147-154`) → `"Error executing tool 'x': ..."` | normal TOOL observation; the LLM sees it and adapts |
-| Tool not registered | `tools/base.py:136-138` | `"Error: Tool 'x' is not registered."` |
-| Permission DENY / user reject / no handler | `tools/base.py:189,197-201,215` | `"Error: ... denied by permission policy"` (fail-closed) |
+| LLM raises | finish span `level=ERROR`, `observe_llm(model, status)`; if `is_context_overflow(e)` and not yet retried → forced `maybe_compact(force=True)` + `continue`; else `abort_langfuse_run` then **`raise`** (L443) | overflow → one retry; otherwise propagates to the REPL catch block (`terminal.py:1315-1333`) |
+| Tool raises | caught inside `ToolRegistry.execute` (`tools/base.py:155-162`) → `"Error executing tool 'x': ..."` | normal TOOL observation; the LLM sees it and adapts |
+| Tool not registered | `tools/base.py:144-146` | `"Error: Tool 'x' is not registered."` |
+| Permission DENY / user reject / no handler | `tools/base.py:197,206-209,223` | `"Error: ... denied by permission policy"` (fail-closed) |
 | Empty model output | §5.2 case table | nudge, then `status="empty"` failure |
 | Telemetry listener throws | contained (`logger.warning`) | loop unaffected |
-| Trace snapshot throws | `messages = []` (L180-183) | trace degrades, run continues |
+| Trace snapshot throws | `messages = []` (L194-197) | trace degrades, run continues |
 
 ### 5.6 `_finish()` (L148-236)
 
@@ -337,23 +345,23 @@ The only place a normal result is built:
 2. `observe_run(status, duration_s, iterations)`
 3. If obs active → `build_run_event(...)` → `append_trace(...)` → Langfuse finish **or**
    `export_langfuse_async(...)`
-4. Build `AgentRunResult(...)` with **`is_success = (status == "success")` (L234)**
+4. Build `AgentRunResult(...)` with **`is_success = (status == "success")` (L248)**
 
 Statuses: `"success"`, `"empty"`, `"max_iterations"` from the engine; `"error"` is only assigned by
 the REPL's own catch block.
 
 ---
 
-## 6. Context manager — `core/context.py` (139 lines)
+## 6. Context manager — `core/context.py` (163 lines)
 
 - `messages: List[ChatMessage]`, **index 0 is always the SYSTEM message** (compaction asserts this).
 - Append helpers: `add_user_message`, `add_assistant_message(content, tool_calls)`,
   `add_tool_result(tool_call_id, name, content)`.
 - `get_messages()` returns the **live list**, not a copy — deliberate, because `maybe_compact`
   mutates it in place.
-- `load_history(history)` (L94-100): keeps `messages[0]` if SYSTEM, else re-inits, then sets
+- `load_history(history)` (L116-123): keeps `messages[0]` if SYSTEM, else re-inits, then sets
   `[system_msg] + list(history)` — **this is the thread-resume primitive**.
-- `clear(keep_system_prompt=True)` (L129-134).
+- `clear(keep_system_prompt=True)` (L152-159).
 
 ### System prompt loading order (`_init_system_prompt`, L42-56)
 
@@ -373,7 +381,7 @@ if self._injected_note:
 Why the date anchor: without it, small models answer "latest release" questions from stale
 training data.
 
-### `inject_system_note()` (L102-116) — important design decision
+### `inject_system_note()` (L124-141 — important design decision
 
 Folds memory facts / approved procedures **into `messages[0]`** instead of appending a second SYSTEM
 message, because *"a second SYSTEM entry breaks strict chat templates (vLLM/LiteLLM 400: 'System
@@ -385,7 +393,7 @@ message must be at the beginning')"*. It is **idempotent** (replaces any previou
 
 ---
 
-## 7. Context compaction — `core/compaction.py` (223 lines)
+## 7. Context compaction — `core/compaction.py` (247 lines)
 
 ### One-sentence answer
 
@@ -397,11 +405,11 @@ and a failure circuit breaker.
 
 ### Constants & estimation
 
-- `CHARS_PER_TOKEN = 4` (L12) — `estimate_tokens()` (L28-37) sums message contents + JSON-dumped
+- `CHARS_PER_TOKEN = 4` (L21) — `estimate_tokens()` (L37-47) sums message contents + JSON-dumped
   tool calls + JSON-dumped tool schemas, then `max(1, chars // 4)`. **No tokenizer is used.**
 - `PRUNED_TOOL_PLACEHOLDER = "[Older tool output cleared — see artifacts/]"`
 - `SUMMARY_PREFIX = "[Auto-compact summary"`
-- `COMPACTION_SYSTEM_NOTE` (L15-23): terse bullets under exactly **Goals, Decisions, Artifacts
+- `COMPACTION_SYSTEM_NOTE` (L24-32): terse bullets under exactly **Goals, Decisions, Artifacts
   created (exact file paths), Pending work, Referenced memory topics**; *"Do not mention this
   summarization process."*
 
@@ -428,7 +436,7 @@ class CompactionState:
     consecutive_failures: int = 0        # cross-run circuit breaker (opens at 2)
 ```
 
-### The algorithm (`maybe_compact`, L136-200) — never raises
+### The algorithm (`maybe_compact`, L156-224) — never raises
 
 Guards (all bypassable by `force=True`):
 1. `not cfg.enabled` → skip
@@ -439,15 +447,15 @@ Guards (all bypassable by `force=True`):
 
 Then:
 1. `before = estimate_tokens(...)`
-2. **Tier 1 (free)** `_prune_old_tool_outputs(messages, keep_recent)` (L112-121): replace TOOL message
+2. **Tier 1 (free)** `_prune_old_tool_outputs(messages, keep_recent)` (L132-141): replace TOOL message
    content with the placeholder in place for all but the last `keep_recent` messages.
 3. Split `recent = tail[-keep_recent:]`, `old_turns = tail[:-keep_recent]`.
 4. **Tier 2**: serialize old turns (`ROLE: text`, tool calls as `[tool calls: name(args)]`, each line
    truncated to 2000 chars) → single `USER` message with `tools=None` (the summarizer gets **no**
-   tool schemas) (L176-180).
+   tool schemas) (L189-194).
 5. Empty summary → `RuntimeError` → caught → failure path.
 6. Hard-truncate summary to `summary_max_tokens * 4` chars.
-7. **Rewrite in place** (L185-191):
+7. **Rewrite in place** (L209-215):
    ```python
    summary_msg = ChatMessage(role=Role.USER,
        content=f"[Auto-compact summary (N turns compacted, M tool outputs pruned) — "
@@ -459,25 +467,25 @@ Then:
    The summary is a **USER** message (not SYSTEM) and explicitly labelled *"historical context, not
    new instructions"* — that prevents **prompt-injection-via-summary**.
 8. Success: `compacted_this_run = True`, `consecutive_failures = 0`.
-   Failure (L197-200): `consecutive_failures += 1`, return `False`.
+   Failure (L220-224): `consecutive_failures += 1`, return `False`.
 
 ### The three trigger points
 
 | Trigger | Where | Metric label |
 |---|---|---|
-| Proactive threshold, before each LLM call | `engine.py:341-356` | `observe_compaction("threshold")` |
-| Reactive overflow retry | `engine.py:407-425` | `observe_compaction("overflow")` |
-| Manual `/compact` | `terminal.py:1187-1210` | `observe_compaction("manual")` |
+| Proactive threshold, before each LLM call | `engine.py:356-371` | `observe_compaction("threshold")` |
+| Reactive overflow retry | `engine.py:421-439` | `observe_compaction("overflow")` |
+| Manual `/compact` | `terminal.py:1206-1229` | `observe_compaction("manual")` |
 
-`is_context_overflow(e)` (L203-218) lowercases `f"{type(e).__name__}: {e}"` and matches markers:
+`is_context_overflow(e)` (L226-243) lowercases `f"{type(e).__name__}: {e}"` and matches markers:
 `context length`, `context_length`, `maximum context`, `prompt too long`, `too many tokens`,
 `input too long`, `context overflow`, `max_tokens`.
 
 ---
 
-## 8. Tool contract & registry — `tools/base.py` (221 lines)
+## 8. Tool contract & registry — `tools/base.py` (224 lines)
 
-### 8.1 `BaseTool` ABC (L23-63)
+### 8.1 `BaseTool` ABC (L31-71)
 
 ```python
 @property @abstractmethod def name(self) -> str
@@ -489,7 +497,7 @@ Then:
 Contract: `execute()` returns a **plain string**, never a structured object, and (by convention)
 never an exception.
 
-### 8.2 OpenAI schema (L54-63)
+### 8.2 OpenAI schema (L62-71)
 
 ```python
 def to_openai_schema(self) -> Dict[str, Any]:
@@ -500,7 +508,7 @@ def to_openai_schema(self) -> Dict[str, Any]:
 
 Exactly the chat-completions `tools: [{"type":"function","function":{...}}]` shape.
 
-### 8.3 `tool_source()` (L66-77)
+### 8.3 `tool_source()` (L74-85)
 
 Infers the observability tier from `type(tool).__module__`: `.mcp` → `"mcp"`, module contains
 `memory` → `"memory"`, else `"builtin"`. Used for metrics/labels, **not** for permissioning.
@@ -508,41 +516,41 @@ Infers the observability tier from `type(tool).__module__`: `.mcp` → `"mcp"`, 
 ### 8.4 `ToolRegistry`
 
 - `register(tool)` keyed by `tool.name` (overwrite allowed but logged as a warning).
-- `list_schemas()` (L124-126) → what the engine passes to `llm.chat(..., tools=...)`.
+- `list_schemas()` (L132-134) → what the engine passes to `llm.chat(..., tools=...)`.
 - Constructor takes optional `policy` and `confirmation_handler`, plus
   `on_permission_decision: List[Callable[[PermissionEvent], None]]` — the **lifecycle hook seam**.
 
-### 8.5 `execute(name, arguments)` (L128-160) — order of operations
+### 8.5 `execute(name, arguments)` (L136-169) — order of operations
 
 1. **Lookup** → unknown → `"Error: Tool 'x' is not registered."` + `observe_tool(status="not_found")`
 2. `arguments = arguments or {}`
 3. **Permission gate** `_check_permission(...)` → if it returns a string, **return immediately, the
    tool never runs**
 4. **Execute** inside `try/except` → exception → `"Error executing tool 'x': ..."`
-5. Success → `status = "error" if result.startswith("Error") else "ok"` (L157) → metrics
+5. Success → `status = "error" if result.startswith("Error") else "ok"` (L165) → metrics
 
 **The `"Error"` prefix is the single error channel of the whole system** — reused by the engine
-(`engine.py:620`), the metrics layer, and the CLI's `on_tool_end` (failure = `startswith("Error:")`).
+(`engine.py:634`), the metrics layer, and the CLI's `on_tool_end` (failure = `startswith("Error:")`).
 
 ---
 
-## 9. Filesystem tools & the path jail — `tools/filesystem.py` (545 lines)
+## 9. Filesystem tools & the path jail — `tools/filesystem.py` (558 lines)
 
-### 9.1 `_atomic_write_text` (L10-29)
+### 9.1 `_atomic_write_text` (L22-43)
 
 `tempfile.mkstemp(dir=target.parent)` → write → `flush` + `fsync` → `os.replace(tmp, target)`; on any
 `BaseException` the temp file is unlinked. **The temp file lives inside the already-validated parent
 dir, so the atomic rename cannot be used to escape the jail** (docstring L15).
 
-### 9.2 `PathSecurityManager` (L32-103)
+### 9.2 `PathSecurityManager` (L44-116)
 
-Guarantees (L34-39): jail containment, read-only source protection, strict deletion prohibition.
+Guarantees (L48-51): jail containment, read-only source protection, strict deletion prohibition.
 
 ```python
 self.base_dir = (base_dir or Path.cwd()).resolve()          # L47
 self.allowed_read_roots  = [(self.base_dir / p).resolve() ...]   # from config
 self.allowed_write_roots = [(self.base_dir / p).resolve() ...]
-# both must be contained by workspace_root → else PermissionError  (L68-71)
+# both must be contained by workspace_root → else PermissionError  (L81-84)
 ```
 
 Core primitive (`_is_subpath`, L73-79):
@@ -554,7 +562,7 @@ def _is_subpath(self, target: Path, parent: Path) -> bool:
     return True
 ```
 
-`validate_read_path` / `validate_write_path` (L81-103) are structurally identical:
+`validate_read_path` / `validate_write_path` (L94-116) are structurally identical:
 
 ```python
 target = (self.base_dir / raw_path).resolve() if not Path(raw_path).is_absolute() \
@@ -573,7 +581,7 @@ Config (`config.yaml:26-34`): read `./workspace`, write `./workspace/artifacts`,
 
 ### 9.3 The delete prohibition is **structural**, three layers
 
-1. **No delete tool exists** — `register_filesystem_tools` (L526-545) registers 8 tools, none delete.
+1. **No delete tool exists** — `register_filesystem_tools` (L539-558) registers 8 tools, none delete.
 2. `allow_delete: bool = False` is a **config/test invariant** asserted by tests but **never actually
    read** by `filesystem.py` — enforcement is by absence of capability, not by a flag.
 3. The only `os.unlink` in the file cleans up the atomic-write temp file inside the validated dir.
@@ -635,7 +643,7 @@ must **exist** in the call args (missing key ⇒ rule does not match).
 `SESSION_ALWAYS_TIER = "session-always"` (L26) is exported so observability can key
 `permission:always:<tool>` off it — *"import it; never retype the string"*.
 
-### 10.5 The gate — `ToolRegistry._check_permission` (`tools/base.py:162-221`)
+### 10.5 The gate — `ToolRegistry._check_permission` (`tools/base.py:170-223`)
 
 | Decision | Behaviour | Emitted event |
 |---|---|---|
@@ -653,19 +661,24 @@ deny; only `enabled: false` disables the gate.
 
 | Tier | Decision | Tools |
 |---|---|---|
-| `observe` | `allow` | `read_file, read_pdf, list_files, search_text`, `obsidian_list_notes/read/search/get_outgoing_links/get_backlinks`, `memory_recall` |
+| `observe` | `allow` | `read_file, read_pdf, list_files, search_text, research_topic` **[Day5]**, `obsidian_list_notes/read/search/get_outgoing_links/get_backlinks`, `memory_recall` |
 | `sandbox-edit` | `allow` | `create_folder, write_file, edit_file, rename_file`, `obsidian_write/append/edit/insert_into_section`, `memory_store` |
-| `consequential` | `require-user-confirmation` | `web_search, fetch_web_content, expand_web_link` |
+| `consequential` | `require-user-confirmation` | `web_search, fetch_web_content, expand_web_link, delegate_task` **[Day5]** |
 | *(no rule)* | `require-user-confirmation` (default) | *"covers runtime-discovered MCP tools automatically"* |
 
 Note the tier-2 logic: writes are auto-allowed **because the path jail already confines them** to
 `workspace/artifacts` — the two security layers compose.
 
+**[Day5] why the two moves make sense:** `research_topic` is a read-only, simulated exploration tool
+(no side effects, no network) → observe tier. `delegate_task` spawns a whole child agent whose tool
+use is only indirectly bounded → consequential, so the *user* confirms the delegation itself
+(the child's individual calls stay gated by the inherited policy — two layers of consent).
+
 ### 10.7 The full decision path (say this end-to-end in the exam)
 
 ```
 LLM proposes tool call
-  → engine dispatch (engine.py:615)
+  → engine dispatch (engine.py:629)
   → ToolRegistry.execute
       (1) registered?
       (2) policy.evaluate → ALLOW | DENY | CONFIRM(y/n/always, fail-closed)
@@ -677,7 +690,7 @@ LLM proposes tool call
 The **engine contains zero permission logic** — the gate lives inside the registry, which is why
 every tool call in every loop iteration *and* every child subagent registry is covered.
 
-### 10.8 Confirmation handler (`cli/terminal.py:708-756`)
+### 10.8 Confirmation handler (`cli/terminal.py:727-777`)
 
 Rich panel `🔐 Permission check` offering `y / n / always`:
 - non-TTY stdin → `False` (fail-closed)
@@ -696,7 +709,7 @@ Rich panel `🔐 Permission check` offering `y / n / always`:
 hard-coded delegation logic:
 
 ```
-engine stamps delegate_task.parent_run_id = run_id        (engine.py:274-277)
+engine stamps delegate_task.parent_run_id = run_id        (engine.py:288-291)
   → LLM emits delegate_task
   → ToolRegistry.execute → DelegateTaskTool.execute(subagent_name, task)
   → SubagentRegistry.create_engine(...) → child AgentEngine.run(task)
@@ -706,18 +719,25 @@ engine stamps delegate_task.parent_run_id = run_id        (engine.py:274-277)
 
 ### 11.2 `DelegateTaskTool` (`tools/delegation.py`)
 
-- Schema: `subagent_name` (enum built from the registry), `task`; both required (L52-71).
+- Schema: `subagent_name` (enum built from the registry), `task`; both required (L72-90).
 - Description is deliberately restrictive: *"ONLY invoke this tool when the user explicitly requests
-  subagent delegation..."* (L45-50).
-- `execute` (L73-140): validation → unknown subagent returns
+  subagent delegation..."* (L61-70).
+- `execute` (L92-163): **[Day5]** signature now has defaults (`subagent_name: str = "", task: str = ""`);
+  inputs are sanitized first — `strip().lower()` on the name, `strip()` on the task — *then* validated,
+  so `" Researcher "` or an all-whitespace task can't slip through. → unknown subagent returns
   `"Error: Subagent 'x' is not registered. Available subagents: ..."` → build child engine →
   `child_engine.run(task)` → success returns `child_result.final_response`; failure returns
   `"Subagent 'x' failed: ..."`; `TimeoutError` → timeout error string. **Never propagates an
   exception to the parent LLM.**
-- `_record_run` (L142-178): `observe_subagent(...)` + `build_subagent_event(...)` for the trace,
+- `_record_run` (L165-198): `observe_subagent(...)` + `build_subagent_event(...)` for the trace,
   all listener failures contained — *"Telemetry must never break a delegation."*
+- **[Day5]** `register_delegation_tools` now registers **both** `DelegateTaskTool` *and*
+  `ResearchTopicTool()` into the parent registry (`delegation.py:258`). Before this the researcher's
+  only allowed tool existed nowhere → every researcher delegation failed with *"Tool 'research_topic'
+  is not registered"*. Good "what broke in Week 3" story: the whitelist referenced a tool that was
+  never wired in.
 
-### 11.3 `SubagentRegistry.create_engine` (`core/subagents.py:85-131`) — the security-relevant part
+### 11.3 `SubagentRegistry.create_engine` (`core/subagents.py:101-157`) — the security-relevant part
 
 ```python
 child_tools = ToolRegistry()                       # NEW registry
@@ -749,15 +769,20 @@ return AgentEngine(llm_client=llm_client, tools=child_tools,
 | Provenance | `parent_run_id=None` | stamped → `AgentRunResult.parent_run_id` |
 | Result | rendered by REPL | returned as a TOOL observation to the parent |
 
-### 11.5 The two default subagents (`core/subagents.py:134-163`)
+### 11.5 The two default subagents (`core/subagents.py:160-190`)
 
 | Name | `allowed_tools` | Budget | Prompt intent |
 |---|---|---|---|
 | `examiner` | `read_file`, `obsidian_get_backlinks`, `memory_recall` | 8 | *"You are strictly read-only. You CANNOT create, modify, or delete any files."* |
 | `researcher` | `research_topic` | 12 | *"NO file-writing or file-modifying tools."* |
 
-`ResearchTopicTool` (`delegation.py:181-218`) is **simulated** — returns a canned string. Honest
-weakness to volunteer.
+`ResearchTopicTool` (`delegation.py:200-238`) is **simulated** — returns a canned string. Honest
+weakness to volunteer. **[Day5]** it is finally registered by `register_delegation_tools`, moved to the
+`observe` permission tier, and the researcher prompt in `soul.md` gained output rules: attribute the
+synthesis (e.g. *"🔬 Synthesized via Researcher Subagent"*) and always deliver a complete top-to-bottom
+answer — never truncated fragments or leading ellipses. The REPL also prints
+`🤖 Accessing Subagent: <name>` on `delegate_task` start and `✓ Subagent [name] completed task` on
+finish (terminal.py Day-5 diff), so delegation is visible in the UI, not just in traces.
 
 ---
 
@@ -772,7 +797,7 @@ needed), three layers:
 | Semantic | `facts` (+ `vector_meta`) | durable facts the LLM stores/recalls |
 | Retrieval | — | keyword → vector → rerank pipeline |
 
-### 12.1 Schema (`store.py:102-180`)
+### 12.1 Schema (`store.py:139-218`)
 
 ```sql
 threads    (id TEXT PK, name, created_at, updated_at, archived INTEGER DEFAULT 0)
@@ -787,31 +812,31 @@ vector_meta(model TEXT PK, dim INTEGER)
 
 Notable details:
 
-- **Explicit `BEGIN` for DDL** (L105-113): sqlite3's legacy isolation mode only opens implicit
+- **Explicit `BEGIN` for DDL** (L142-150): sqlite3's legacy isolation mode only opens implicit
   transactions before `INSERT/UPDATE/DELETE`, so DDL autocommits — without `BEGIN`, a failed second
   `CREATE` would leave a corrupt half-schema. Proven by `test_init_db_is_all_or_nothing`.
 - **No delete API at all** (docstring L44-49): *"Append-only; no delete API (preserves
   `allow_delete=False` invariant)"*. `archive_*` sets `archived = 1` (tombstone), and
   `archive_thread` cascades to its messages.
-- Migrations are column back-fills (L165-177) since `CREATE TABLE IF NOT EXISTS` can't alter.
-- `store_fact` dedupe/revive (L391-481): on `UNIQUE(topic, fact)` conflict → re-select, **revive** if
+- Migrations are column back-fills (L202-214) since `CREATE TABLE IF NOT EXISTS` can't alter.
+- `store_fact` dedupe/revive (L428-519): on `UNIQUE(topic, fact)` conflict → re-select, **revive** if
   archived, backfill missing provenance with `COALESCE` (never overwrite), fill/update the embedding
   if missing or from another model → returns `(record, created=False)`.
 - `fact` longer than 2000 chars → `ValueError` (surfaced to the LLM as an `Error:` string by the tool).
 
 ### 12.2 Embeddings (`embeddings.py`)
 
-- ABC `Embedder` (L73-85): `model` property + `embed(texts)`.
-- **`InnKubeEmbedder`** (L88-126): OpenAI-compatible, default **`octen-embedding-8b`**,
+- ABC `Embedder` (L88-102): `model` property + `embed(texts)`.
+- **`InnKubeEmbedder`** (L103-152): OpenAI-compatible, default **`octen-embedding-8b`**,
   `client.embeddings.create(...)`, errors wrapped into `RuntimeError`. A **fresh `OpenAI` client per
   `embed()` call** — legit weakness to volunteer.
-- **`MockEmbedder`** (L129-150): scripted vectors, records every batch in `.calls`.
+- **`MockEmbedder`** (L153-175): scripted vectors, records every batch in `.calls`.
 - **Storage = `sqlite-vector` loadable extension**, not numpy, not a second DB:
-  `load_sqlite_vector()` (L12-29) loads `sqlite_vector.binaries/vector` per connection and **never
+  `load_sqlite_vector()` (L20-46) loads `sqlite_vector.binaries/vector` per connection and **never
   raises** → failure sets `vector_available = False`.
 - Serialization: little-endian **Float32 BLOB** via `struct.pack(f"<{len(v)}f", *v)`; `fmt="d"` reads
   legacy Float64 rows for one-way migration.
-- Metric chosen in SQL: `distance=COSINE` in `vector_init` (`store.py:88`); results come back as
+- Metric chosen in SQL: `distance=COSINE` in `vector_init` (`store.py:124-125`); results come back as
   ascending cosine distance.
 
 ### 12.3 Retrieval (`retrieval.py`) — hybrid, **not BM25**
@@ -845,7 +870,7 @@ Key facts:
 - **`InnKubeReranker`**: default **`qwen3-reranker-4b`**, hits the **non-OpenAI `/rerank` route via
   `httpx.post`** (not the openai SDK). `parse_rerank_response` normalises four possible envelope
   shapes because *"the endpoint is outside the OpenAI spec"*.
-- Applied in `_apply_rerank` (L22-36): skipped when fewer than 2 docs; indices the endpoint omitted
+- Applied in `_apply_rerank` (L30-36): skipped when fewer than 2 docs; indices the endpoint omitted
   are appended in original hybrid order; **any exception → keep hybrid order**.
 - Consequence: **rerank can override keyword-first precedence** — after a successful rerank the list
   is purely score-descending.
@@ -868,16 +893,16 @@ Key facts:
 | `memory_recall` | `query` (required; empty lists recent), `limit` (1..20, default 5) | `hybrid_recall` → formatted lines + overflow hint + optional "vector unavailable" note |
 
 **Anti-forgery design:** the `memory_store` schema exposes **no thread fields**. The harness stamps
-provenance via `set_thread_context(thread_id, thread_name)` each turn (`terminal.py:1256-1264`) so the
+provenance via `set_thread_context(thread_id, thread_name)` each turn (`terminal.py:1288-1296`) so the
 model cannot forge where a fact came from.
 
 ### 12.7 Integration
 
 - **`core/engine.py` does not import `memory`.** Persistence is the CLI's job: after each run it
-  writes `context.get_messages()[pre_len:]` via `memory_store.add_message(...)` (`terminal.py:1306-1311`).
+  writes `context.get_messages()[pre_len:]` via `memory_store.add_message(...)` (`terminal.py:1338-1343`).
 - Thread resume: `/threads` → `get_messages(id, limit=memory.max_load)` → `context.load_history(...)`.
 - Auto-injection: top `memory.max_inject` (5) recent facts are folded into the system note at startup
-  and refreshed each turn (`terminal.py:967-975`, `1234-1251`).
+  and refreshed each turn (`terminal.py:986-994`, `1266-1274`).
 - Metrics: `observe_memory(op, result)` → `studymate_memory_ops_total{op,result}`.
 
 ---
@@ -897,17 +922,17 @@ name, triggers, scope, version, status, supersedes
 ## Example
 ```
 
-- Statuses: `approved`, `draft`, `archived` (L10-12).
-- `parse_procedure_file` (L81-128): splits on `---`, `yaml.safe_load`, section extraction that is
+- Statuses: `approved`, `draft`, `archived` (L19-21).
+- `parse_procedure_file` (L105-154): splits on `---`, `yaml.safe_load`, section extraction that is
   **order-independent**; malformed files return `None` with a warning.
-- `match_procedures(dir, user_text, statuses=(APPROVED,), limit=2, max_chars=4000)` (L144-177):
+- `match_procedures(dir, user_text, statuses=(APPROVED,), limit=2, max_chars=4000)` (L168-204):
   bidirectional case-insensitive substring over `name + triggers + scope`; **archived never matches**;
   sorted by name; greedy budget stop at 2 items / 4000 chars.
 - Injection: `procedure_injection_text()` renders
   `Routine 'name' (v1) — follow before improvising:` + scope/steps/why/pitfalls (the Example section
   is **not** injected).
 
-CLI behaviour (`terminal.py:1234-1251`) — memorise this distinction:
+CLI behaviour (`terminal.py:1266-1274`) — memorise this distinction:
 
 - **approved** procedures merge into the system note (template-safe, idempotent replace), layered on
   top of the memory-facts note;
@@ -1010,7 +1035,7 @@ frozen."* All emitters are no-ops when disabled; everything is created once unde
   rate 5m, `histogram_quantile(0.95, ...)` component latency p95, LLM token rate by model/type, tool
   usage rate by tool/source, permission decision rate by decision, subagent activity rate by config.
 
-### 15.4 JSONL trace schema v2 (`build_run_event`, `tracing.py:100-155`)
+### 15.4 JSONL trace schema v2 (`build_run_event`, `tracing.py:100-157`)
 
 ```
 schema, run_id, parent_run_id, timestamp, model, model_parameters, available_tools,
@@ -1023,7 +1048,7 @@ Truncation helpers default to `trace_max_chars = 4000` with marker `…[truncate
 
 ### 15.5 Langfuse span tree
 
-1. **Live root agent span** opened *before* the ReAct loop (`engine.py:316-332`) so the UI latency
+1. **Live root agent span** opened *before* the ReAct loop (`engine.py:327-347`) so the UI latency
    column is real; pre-checks `/api/public/health` with a 3 s timeout → *"host unreachable, run
    unaffected"*.
 2. **Generation children** per turn, `llm-turn-{n}`, input = **delta** of new messages (full snapshot
@@ -1059,7 +1084,7 @@ Subagent delegations are modelled as a **tool record named `subagent:<name>`** w
 `source="subagent"` and `arguments={"parent_run_id": ...}` so widgets can filter by prefix and link
 child → parent trace.
 
-Permission events are **batched per turn** by the CLI (`_flush_permission_buffer`, `terminal.py:809-827`)
+Permission events are **batched per turn** by the CLI (`_flush_permission_buffer`, `terminal.py:828-846`)
 into a single trace record with summary `"Permissions: X/Y gated calls executed"`.
 
 ### 15.8 How the engine hooks in — **no decorators**
@@ -1094,16 +1119,16 @@ prerequisites: [{prerequisites}]
 ## Open Questions
 ```
 
-- **`format_concept_note(...)`** (L66-108) is the helper agents must use — never hand-roll
+- **`format_concept_note(...)`** (L74-137) is the helper agents must use — never hand-roll
   frontmatter. Defaults: `status="current"`, `tags = f"concept, {course.lower().replace(' ', '-')}"`,
   `last_updated = date.today().isoformat()`, connections render as `- [[x]] — Relationship description.`,
   open questions as `- [ ] q`.
 - `LECTURE_TEMPLATE` (`title`, `course`, `date`, `tags: [lecture, ...]` + Key Takeaways / Linked
   Concepts / Detailed Synthesis) and `FLASHCARD_TEMPLATE` (`# Flashcards: {topic}` + `{cards}`).
 
-### 16.2 Vault linter (`study/linter.py`, 131 lines)
+### 16.2 Vault linter (`study/linter.py`, 155 lines)
 
-Three regexes (L33-35):
+Three regexes (L45-47):
 
 ```python
 WIKILINK_PATTERN         = re.compile(r"\[\[(.*?)\]\]")
@@ -1118,7 +1143,7 @@ OPEN_QUESTIONS_PATTERN   = re.compile(r"## Open Questions\s*\n(.*?)(?=\n## |\Z)"
    `[[concept-foo.md]]` both resolve.
 3. Per file:
    - **Frontmatter**: must be a valid YAML mapping containing exactly the required fields
-     **`title` and `status`** (L86-88); other errors → *"Malformed YAMLfrontmatter"* / *"Unclosed YAML
+     **`title` and `status`** (L109-111); other errors → *"Malformed YAMLfrontmatter"* / *"Unclosed YAML
      frontmatter block"*.
    - **Wikilinks**: target cleaned with `raw.split("|")[0].split("#")[0].strip().lower()` (strips
      display text and anchors); unknown slug → `broken_links`.
@@ -1130,7 +1155,7 @@ OPEN_QUESTIONS_PATTERN   = re.compile(r"## Open Questions\s*\n(.*?)(?=\n## |\Z)"
 `VaultLintReport.is_healthy` = no broken links **and** no metadata issues.
 `/lint` additionally runs a **constrained auto-repair pass through the engine** and re-lints.
 
-### 16.3 Socratic griller (`study/griller.py`, 58 lines)
+### 16.3 Socratic griller (`study/griller.py`, 87 lines)
 
 - `GRILL_SYSTEM_PROMPT`: persona = *"Professor White, an intellectually demanding, precise, and
   adversarial Socratic examiner"* enforcing *"German academic rigor: reject vague, hand-wavy answers."*
@@ -1149,7 +1174,7 @@ OPEN_QUESTIONS_PATTERN   = re.compile(r"## Open Questions\s*\n(.*?)(?=\n## |\Z)"
 
 ---
 
-## 17. The CLI / REPL — `cli/terminal.py` (1405 lines)
+## 17. The CLI / REPL — `cli/terminal.py` (1437 lines)
 
 ### 17.1 Startup wiring order (`run_cli`, L786-1010)
 
@@ -1195,7 +1220,7 @@ read input
 ### 17.4 UI details worth knowing
 
 - **Windows UTF-8**: `sys.stdout.reconfigure(encoding="utf-8", errors="replace")` at import time
-  (L7-15) — without it Rich + emoji crash on PowerShell. Don't remove.
+  (L20-28) — without it Rich + emoji crash on PowerShell. Don't remove.
 - Bottom toolbar: `model | thread | ctx 12.4k/262k (5%)`, colourised
   (`toolbar_level`: red ≥95%, yellow past the compaction threshold, else green).
 - Autocompleter: slash commands with descriptions, otherwise registered **tool names** with their
@@ -1265,10 +1290,12 @@ read input
 ### Correctness / quirks
 
 - **`AGENTS.md` is stale** (see the banner at the top of this file).
-- **`tools/base.py:216-221` is dead code** — statements after a `return` inside `_check_permission`,
-  a refactor leftover; the real metrics call lives in `execute()`.
-- **`ToolResult` (`core/types.py:21-26`) is unused** — observations travel as `ChatMessage(role=TOOL)`.
-- **`search_text` escapes its query** (`re.escape`, `filesystem.py:334`) despite advertising regex in
+- **`tools/base.py` had dead code** (old lines 216-221) — statements after a `return` inside
+  `_check_permission`, a refactor leftover. **[Day5]** removed upstream; the file is now 224 lines
+  because the Day-5 merge also added module/function docstrings. Fine thing to mention as
+  "we caught and removed it".
+- **`ToolResult` (`core/types.py:44-58`) is unused** — observations travel as `ChatMessage(role=TOOL)`.
+- **`search_text` escapes its query** (`re.escape`, `filesystem.py:347`) despite advertising regex in
   its description → literal substring search.
 - **`edit_file` requires exactly one occurrence** — multiple matches are an error, so the agent must
   read the file first and pick a unique snippet.
@@ -1422,6 +1449,14 @@ cross-linking with wikilinks), assigns it to `user_input`, and falls through to 
 `engine.run(user_input, context, ...)` call as ordinary chat. So the engine only ever sees text, and
 the grilling levels (recall → tracing → edge case) are enforced purely by directives in
 `GRILL_SYSTEM_PROMPT`, executed inside the normal ReAct loop.
+
+**[Day5] trap to be ready for:** the Day-5 help table rewrites `/grill` as *"…with the Examiner
+subagent"* and the banner advertises *"use examiner to test me"*, but the code path is unchanged —
+`/grill` is still only a `SocraticGriller.create_initial_prompt` rewrite (`terminal.py:1177-1181`),
+no `delegate_task` call is hard-wired. If asked, say: the *label* nudges the model toward the
+examiner persona, but whether an actual child engine spawns depends on the LLM emitting
+`delegate_task` (which Day 5 also made user-confirmable via the consequential tier). Honest answer =
+the /grill help text oversells the wiring.
 
 ### Q12. Where does memory persistence happen, and why not in the engine?
 
