@@ -41,9 +41,9 @@ Vault sources synthesised here: [[microelectronics-lecture-1]] through [[microel
 
 Three nested fields. Definitions are tight and examinable.
 
-- **[[electronics]]:** scientific field that applies physics to devices manipulating electrons and charged particles. Subfields include microelectronics and nanoelectronics. Binary conducting/non-conducting states map to Boolean algebra; devices with >2 states enable unconventional computing (e.g. ternary).
-- **[[microelectronics]]:** subfield of electronics. Components at the micrometre scale or smaller. Built on semiconductor wafers (mostly [[silicon]]). Fabrication: [[photolithography]], [[ion-implantation]], [[thermal-diffusion]]. Enables VLSI, billions of transistors per chip.
-- **[[nanoelectronics]]:** subfield that exploits nanotechnology and quantum mechanical properties at the nanometre scale. Quantum tunnelling, discrete energy levels, wave-particle duality. Devices: quantum dots, single-electron transistors (SET), tunnel FETs, spintronics. Extends, does not replace, microelectronics. Many such devices need cryogenic temperatures.
+- **[[electronics]]:** scientific field that applies physics ==to devices manipulating electrons and charged particles==. Subfields include microelectronics and nanoelectronics. Binary conducting/non-conducting states map to Boolean algebra; devices with >2 states enable unconventional computing (e.g. ternary).
+- **[[microelectronics]]:** subfield of electronics. ==Components at the micrometre scale or smaller==. Built on ==semiconductor wafers== (==mostly [[silicon]]==). Fabrication: [[photolithography]], [[ion-implantation]], [[thermal-diffusion]]. Enables VLSI, billions of transistors per chip.
+- **[[nanoelectronics]]:** subfield that ==exploits nanotechnology and quantum mechanical== properties at the ==nanometre scale==. Quantum tunnelling, discrete energy levels, wave-particle duality. Devices: quantum dots, single-electron transistors (SET), tunnel FETs, spintronics. Extends, does not replace, microelectronics. Many such devices need cryogenic temperatures.
 
 Water analogies the lecturer uses and will lean on:
 - Conductor = open canal. Insulator = canal dammed by rocks. Semiconductor = filled pool with a low wall.
@@ -57,15 +57,15 @@ Memorise the distinction: **microelectronics = classical behaviour at micrometre
 
 ### 2.1 Band structure classification
 
-| Class | Bandgap E_g | Example | Carrier density |
-|---|---|---|---|
-| Conductor | overlapping / zero | Cu, Al | always free |
-| Semiconductor | 0.1 eV < E_g < 4 eV | Si (1.12), Ge (0.66), GaAs (1.42) | thermally tunable |
-| Insulator | E_g > 4 eV | SiO_2, diamond | essentially none |
+| Class         | Bandgap E_g         | Example                           | Carrier density   | Electrical Conductivity |
+| ------------- | ------------------- | --------------------------------- | ----------------- | ----------------------- |
+| Conductor     | overlapping / zero  | Cu, Al                            | always free       | Very High               |
+| Semiconductor | 0.1 eV < E_g < 4 eV | Si (1.12), Ge (0.66), GaAs (1.42) | thermally tunable | Moderate                |
+| Insulator     | E_g > 4 eV          | SiO_2, diamond                    | essentially none  | Very Low                |
 
 - **Direct bandgap** (GaAs, InP): momentum-conserving transitions, efficient light emission (LEDs, lasers).
 - **Indirect bandgap** (Si, Ge): photon emission needs a phonon, poor light emitters, excellent electronic material.
-- Why [[silicon]] dominates: E_g = 1.12 eV ideal for room temperature; SiO_2 native oxide enables MOS; abundant; decades of CMOS infrastructure.
+- ==Why [[silicon]] dominates==: E_g = ==1.12 eV ideal for room temperature; SiO_2 native oxide enables MOS; abundant; decades of CMOS infrastructure.==
 
 ### 2.2 Intrinsic carrier concentration
 
@@ -79,12 +79,12 @@ $$\sigma = q(n\mu_n + p\mu_p)$$
 
 ### 2.3 Doping
 
-[[doping]] deliberately introduces impurity atoms to control carrier concentration. Turns intrinsic Si into extrinsic Si.
+[[doping]] deliberately ==introduces impurity atoms== to ==control its electrical conductivity==, creating [[n-type-semiconductor]] or [[p-type-semiconductor]] materials with ==vastly more carriers than the intrinsic material==.
 
-| Dopant | Type | Group | Effect |
-|---|---|---|---|
-| P, As, Sb | n-type | V | donor, extra electron |
-| B, Al, Ga | p-type | III | acceptor, creates hole |
+| Dopant    | Type   | Group | Effect                 |
+| --------- | ------ | ----- | ---------------------- |
+| P, As, Sb | n-type | V     | donor, extra electron  |
+| B, Al, Ga | p-type | III   | acceptor, creates hole |
 
 **Mass-action law:** $n \cdot p = n_i^2$.
 
@@ -97,8 +97,8 @@ Dopant ionisation (Si): donor level ~E_c - 0.045 eV, acceptor level ~E_v + 0.045
 Doping ranges: light 10^14 to 10^16, moderate 10^16 to 10^18, heavy n+/p+ 10^18 to 10^21 cm^-3.
 
 Fabrication methods:
-1. **[[thermal-diffusion]]**: wafer at 900 to 1200 degC in dopant gas (PH_3, BCl_3). Gaussian or erfc profile. Older, less precise.
-2. **[[ion-implantation]]**: ions accelerated to keV to MeV, shot into wafer. Precise dose (ions/cm^2), masked by photolithography. Lattice damage needs annealing. Modern standard.
+1. **[[thermal-diffusion]]**: silicon wafers are ==heated in the presence of dopant vapor== or solid sources, allowing ==dopant atoms to diffuse into the crystal==. wafer at 900 to 1200 degC in dopant gas (PH_3, BCl_3). Gaussian or erfc profile. Older, less precise.
+2. **[[ion-implantation]]**: uses an ==electron gun to accelerate dopant ions to high energy and shoot them into the silicon wafer==. Precise dose (ions/cm^2), masked by photolithography. Lattice damage needs annealing. Modern standard.
 3. In-situ doping during epitaxial growth.
 
 Fermi level: more n-type doping shifts E_F toward E_c; more p-type toward E_v. Above ~10^19 the semiconductor becomes degenerate (metallic).
@@ -107,7 +107,7 @@ Fermi level: more n-type doping shifts E_F toward E_c; more p-type toward E_v. A
 
 ## Topic 3 — P-N Junction and Diode
 
-A [[p-n-junction]] forms when p-type and n-type meet. Holes and electrons diffuse across, recombine, and leave fixed ionised dopants: positive donors on the n side, negative acceptors on the p side. This exposed charge is the [[depletion-region]]; its field produces the built-in potential.
+A [[p-n-junction]] forms when ==p-type and n-type meet==. ==Holes and electrons diffuse across, recombine, and leave fixed ionised dopants: positive donors on the n side, negative acceptors on the p side==. This exposed charge is the [[depletion-region]]; its field produces the built-in potential.
 
 **Built-in potential:**
 
@@ -127,11 +127,12 @@ where I_s is reverse saturation current, n is ideality factor (1 to 2), V_T = kT
 
 ### Bias conditions
 
-| Condition | Barrier | Current | Depletion width |
-|---|---|---|---|
-| Zero bias | V_bi | zero net | W_0 |
-| Forward (V > 0) | V_bi - V | exponential rise | narrows |
-| Reverse (V < 0) | V_bi + |V| | ~ -I_s (tiny) | widens |
+
+| Bias Condition | Battery Connection           | Depletion Region | Current                    |
+| -------------- | ---------------------------- | ---------------- | -------------------------- |
+| Zero Bias      | No external Voltage          | Normal Width     | No net current             |
+| Forward Bias   | P -> Positive, N -> Negative | Narrows          | Large Current flows        |
+| Reverse Bias   | P -> Negative, N -> Positive | Widens           | Very small leakage current |
 
 Forward voltage drop: ~0.7 V (Si), ~0.3 V (Ge), ~1.5 V (GaAs). The slides say built-in potential is 0.6 to 0.9 V for Si.
 
@@ -150,6 +151,8 @@ Practical effects: reverse leakage from minority carriers and generation in the 
 ## Topic 4 — Diode Applications
 
 ### 4.1 Rectifiers
+
+==converts **Alternating Current (AC)** into **Direct Current (DC)**.==
 
 **[[half-wave-rectifier]]:** one diode in series with load. Conducts only on positive half cycle. V_out = V_in - 0.7 V for V_in > 0.7 V, else 0.
 - V_avg = V_peak / pi (~0.318 V_peak)
@@ -171,7 +174,7 @@ Larger C means less ripple.
 
 ### 4.2 Clampers ([[clamper-circuit]])
 
-Shift the DC level of a waveform without changing its shape. Capacitor + diode + optional bias.
+==Shift the DC level of a waveform without changing its shape. Capacitor + diode + optional bias.==
 
 - **Positive clamper:** on the negative half cycle the diode conducts, charging the cap to V_peak - 0.7 V. On the positive half cycle the diode is off, so V_out = V_in + V_cap. Shifts the waveform upward so its minimum sits near 0 V.
 - **Negative clamper:** reverse diode orientation. Shifts waveform downward so its maximum sits near 0 V.
@@ -181,7 +184,7 @@ Slides L04 walk through six clamper variants: positive, positive with +V_R, posi
 
 ### 4.3 Limiters ([[limiter-circuit]])
 
-Clip the waveform to a defined voltage range.
+==Clip the waveform to a defined voltage range.==
 
 - **Series clipper:** diode in series with the signal path. Positive clipper = anode to ground, cathode to signal, clips positive half. Reversed = clips negative half.
 - **Parallel (shunt) clipper:** diode in parallel with the output. When it conducts, it clamps output to ~0 V (or V_ref + 0.7 V with a bias source).
@@ -202,7 +205,7 @@ Exam trap: do not forget to check that I_Z stays positive and below the rated ma
 
 ## Topic 5 — MOS Transistors
 
-The [[mosfet]] is a voltage-controlled switch. A thin gate oxide separates the gate from the semiconductor body. Gate voltage creates a field through the oxide that forms or removes an inversion layer (channel) between source and drain. Because the oxide is insulating, gate current is essentially zero: the device has near-infinite input impedance.
+The [[mosfet]] is a ==voltage-controlled switch==. A thin gate oxide separates the gate from the semiconductor body. Gate voltage creates a field through the oxide that forms or removes an inversion layer (channel) between source and drain. Because the oxide is insulating, gate current is essentially zero: the device has near-infinite input impedance.
 
 ### 5.1 MOS capacitor and threshold
 
@@ -226,23 +229,22 @@ $$V_{th} = V_{FB} + 2\varphi_F + \frac{1}{C_{ox}}\sqrt{2\varepsilon_s q N_A (2\v
 
 where $\varphi_F = (kT/q)\ln(N_A/n_i)$.
 
-V_th is the minimum V_GS that creates a conducting path between source and drain. The slides phrase it exactly that way.
+==V_th is the minimum V_GS that creates a conducting path between source and drain==. The slides phrase it exactly that way.
 
 ### 5.2 MOSFET I-V (long-channel model)
 
-| Region | Condition | I_D |
-|---|---|---|
-| Cutoff | V_GS < V_th | 0 (leakage only) |
+| Region          | Condition                       | I_D                                                                              |
+| --------------- | ------------------------------- | -------------------------------------------------------------------------------- |
+| Cutoff          | V_GS < V_th                     | 0 (leakage only)                                                                 |
 | Linear / triode | V_GS > V_th, V_DS < V_GS - V_th | $\mu_n C_{ox}\frac{W}{L}\left[(V_{GS}-V_{th})V_{DS} - \frac{V_{DS}^2}{2}\right]$ |
-| Saturation | V_GS > V_th, V_DS >= V_dsat | $\frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS}-V_{th})^2(1+\lambda V_{DS})$ |
-| Breakdown | V_DS exceeds BV | avalanche, destructive |
-
+| Saturation      | V_GS > V_th, V_DS >= V_dsat     | $\frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS}-V_{th})^2(1+\lambda V_{DS})$          |
+| Breakdown       | V_DS exceeds BV                 | avalanche, destructive                                                           |
 V_dsat = V_GS - V_th is the saturation boundary. In saturation the channel pinches off at the drain end, and I_D is nearly independent of V_DS (lambda lumps channel-length modulation).
 
 Why three regions matter for the exam:
-- **Cutoff** is the OFF state in digital CMOS.
-- **Triode** acts as a voltage-controlled resistor. Used in analog switches and pass transistors.
-- **Saturation** is the amplification region. Common-source amplifiers bias here.
+- ==**Cutoff** is the OFF state in digital CMOS==.
+- ==**Triode** acts as a voltage-controlled resistor==. Used in analog switches and pass transistors.
+- ==**Saturation** is the amplification region==. Common-source amplifiers bias here.
 
 ### 5.3 nMOS vs pMOS
 
@@ -265,7 +267,7 @@ Velocity saturation, DIBL (drain-induced barrier lowering), channel-length modul
 
 ## Topic 6 — CMOS Logic Gates
 
-**CMOS = complementary MOS.** Combine an nMOS pull-down network (PDN) to GND and a pMOS pull-up network (PUN) to V_DD on the same chip. The two networks are logical duals: exactly one conducts for any input combination. This is why CMOS gates have near-zero static power. One device is always OFF in steady state. Power is drawn only during the switching transient.
+**CMOS = complementary MOS.** ==Combine an nMOS pull-down network (PDN) to GND and a pMOS pull-up network (PUN) to V_DD on the same chip==. The two networks are logical duals: exactly one conducts for any input combination. This is why ==CMOS gates have near-zero static power==. One device is always OFF in steady state. Power is drawn only during the switching transient.
 
 ### 6.1 Construction rule
 
@@ -313,9 +315,9 @@ CMOS advantages you should be able to list: near-zero static power, full rail-to
 
 ### 7.1 Memory cells
 
-**SRAM (Static RAM):** 6 transistors. Two cross-coupled CMOS inverters form a bistable latch, plus two access transistors. State persists as long as power is applied. No refresh. Fast (nanoseconds). Used for CPU caches (L1, L2, L3). Lower density (larger cell). Volatile.
+**SRAM (Static RAM):** ==6 transistors==. Two cross-coupled CMOS inverters form a bistable latch, plus two access transistors. State persists as long as power is applied. No refresh. Fast (nanoseconds). ==Used for CPU caches== (L1, L2, L3). Lower density (larger cell). Volatile.
 
-**DRAM (Dynamic RAM):** 1 transistor + 1 capacitor. The bit is stored as charge on the capacitor; the transistor gates access during read and write. Higher density than SRAM. Needs periodic refresh (~every 64 ms) because charge leaks. Slower. Used for main memory. Volatile.
+**DRAM (Dynamic RAM):** ==1 transistor + 1 capacitor==. The bit is stored as charge on the capacitor; the transistor gates access during read and write. Higher density than SRAM. Needs periodic refresh (~every 64 ms) because charge leaks. Slower. ==Used for main memory==. Volatile.
 
 This 6T vs 1T1C contrast is examinable. Drills:
 - "Which needs refresh?" DRAM.
