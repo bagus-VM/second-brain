@@ -1,5 +1,9 @@
 # StudyMate — Oral Exam Study Guide
 
+> 🔰 **Start with [[Plain Language Study Notes]]** — same system, short sentences, one concept per
+> section, with a "one-line answer" you can say out loud at the end of each part. This file is the
+> deep reference with the line numbers; use it to drill details, not for first-pass learning.
+
 > Comprehensive revision notes for the AI Engineering Lab (Uni Passau, SoSe 2026) oral exam.
 > Covers every subsystem of this repository with file/line references.
 >
