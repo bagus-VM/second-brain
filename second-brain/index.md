@@ -2,9 +2,15 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-07-20
-**Total pages:** 657 (vault + study; excluding raw/)
-**Active courses:** 6
+**Last updated:** 2026-10-20
+**Total pages:** 770 (vault + study, both semesters; excluding raw/ and projects/)
+**Active courses:** 6 (Semester 1, exams done) + 7 registered in Semester 2
+
+> **Semester 2 (WS 2026/27) has its own catalogue: [[2nd-semester/index|Semester 2 — Master Index]]**
+> 7 courses, 48 concept pages, 15 topic pages, 7 homework solutions. The sections below are the frozen Semester 1 record.
+>
+> **Dropped on 2026-10-20:** Hardware-Oriented Security and Reverse- and Reengineering — all pages,
+> homework and raw sources removed.
 
 ---
 

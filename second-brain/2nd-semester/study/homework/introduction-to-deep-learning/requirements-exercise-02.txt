@@ -1,0 +1,26 @@
+# Environment for the Introduction to Deep Learning exercise scripts.
+#
+# The course's own toolchain is uv (see vault/concepts/python-environment-management.md):
+#   uv add torch matplotlib
+# This file pins the versions that produced the recorded output in
+# output-exercise-02.txt and output-exercise-02-math.txt.
+#
+# To recreate the environment used for the recorded results:
+#   uv venv --python 3.12
+#   uv pip install --python <venv>/Scripts/python.exe \
+#     --index-url https://download.pytorch.org/whl/cpu \
+#     -r requirements-exercise-02.txt
+#   <venv>/Scripts/python.exe exercise-02-solutions.py
+#
+# The PyTorch index URL is REQUIRED. The "+cpu" local-version label exists only
+# in PyTorch's own CPU wheel index, not on the default PyPI index, so a plain
+# `uv pip install -r requirements-exercise-02.txt` fails to resolve torch. For a
+# CUDA build, drop --index-url and pin a plain version (e.g. torch==2.14.1) from
+# PyPI instead; the recorded results are CPU-only and do not depend on the build.
+#
+# Only torch is required. numpy arrives as a torch dependency; matplotlib is
+# not needed by these two scripts (the course's own exercise notebooks use it
+# for the plots).
+
+torch==2.14.1+cpu
+numpy==2.4.6

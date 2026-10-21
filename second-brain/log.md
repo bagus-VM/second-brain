@@ -542,3 +542,546 @@ Exam prep page updated with professor's exclusions:
 ## [2026-07-28] PREP | Cheatsheets for RepEng + SA | 2 files created
 - Created `study/exams/repeng-cheatsheet.md` — definitions and formulas only: terminology, levels/provenance, Heil Bronze/Silver/Gold, hypothesis properties, equivalence levels, Git object types, reproducible build non-determinism sources, DB architectures, JSON Schema keywords/combinators, HDF5 limits, LLM reproducibility package, remote experiment stages, FAIR principles, legal frameworks
 - Created `study/exams/software-analyse-cheatsheet.md` — definitions and formulas only: Rice's theorem, soundness/completeness, readability metrics (entropy, Halstead, cyclomatic), JVM instructions, sign lattice bitmask encoding + transfer rules, Galois connection, dataflow framework (forward/backward × must/may), reaching definitions equations, interprocedural techniques, PDG/slicing algorithms, dynamic slicing workflow, instrumentation
+
+
+## [2026-10-19] INGEST | Semester 2 (WS 2026/27) — first pass over all 8 courses | 36 concept pages + 8 course pages + 5 homework solutions
+
+**Sources read** (everything in `2nd-semester/raw/`, ~30k words excluding the reference book):
+- Advanced IT Security: `Advanced_IT-Security__Introduction.pdf` (exercise organisation only)
+- Energy Informatics I: `EnInf_I_Organisational.pdf`, `EnInf_I_0.Motivation.pdf`, `Tutorial_1.pdf`
+- Hardware-Oriented Security: `0-Intro.pdf`
+- Introduction to Deep Learning: `01-slides.pdf`, `01-homework.pdf`, `01-hw-intro-py-tasks.ipynb`, `01-demo.ipynb`
+- Machine Learning for Cybersecurity: `01_Org_Introduction.pdf`, `02_Spam.pdf`
+- Reverse- and Reengineering: `01-reengineering-intro.pdf`, `hw01.pdf`
+- Virtual Machines and Runtime Systems: `s00.pdf`, `s01.pdf`, `s02.pdf`, `01.pdf`, `addrs.c`, `eval.c`
+- Reference only (not ingested): `mml-book.pdf` (158k words, kept as `raw/assets` reference material)
+
+**Created — course layer** (`2nd-semester/courses/`): `Courses.md` + 8 course pages (exam dates, professors, schedules, topic roadmaps, syllabus section, open gaps). Bitcoin and Cryptocurrencies Technologies has an empty `raw/` folder, so no page was created.
+
+**Created — vault layer** (`2nd-semester/vault/concepts/`, 36 pages, all with full template):
+- Energy Informatics I (6): ict-energy-footprint, power-grid-fundamentals, sector-coupling, demand-side-integration, alternating-current-basics, paris-agreement-climate-goals
+- Hardware-Oriented Security (5): hardware-oriented-security-overview, trusted-platform-module, remote-attestation, covert-channels, iot-device-security
+- Introduction to Deep Learning (2 + 1 topic): python-for-deep-learning, python-environment-management, `vault/topics/deep-learning-course-roadmap.md`
+- Machine Learning for Cybersecurity (8): security-terminology-and-risk-model, attacker-classification, ml-task-taxonomy, ml-learning-paradigms, ml-for-security-domains, naive-bayes-text-classification, classification-metrics, ml-pipeline-scikit-learn
+- Reverse- and Reengineering (6): reengineering, software-aging, reverse-engineering, refactoring-and-code-smells, legacy-systems, reengineering-vs-maintenance
+- Virtual Machines and Runtime Systems (9): virtualization-vs-abstraction, runtime-system, process-memory-layout, dynamic-linking, errno-error-handling, setjmp-longjmp, unix-signals, exception-handling-implementation, thread-emulation-longjmp
+
+**Deliberately NOT duplicated** (already in the Semester 1 vault, now linked instead): [[cia-triad]], [[side-channel-attacks]], [[random-number-generator]], [[physical-unclonable-functions]], [[control-flow-graph]], [[program-dependence-graph]], [[program-slicing]], [[risk-assessment-frameworks]].
+
+**Created — homework** (`2nd-semester/study/homework/`), all executed rather than described:
+- `energy-informatics-1/tutorial-01.md` — Tutorial 1, all three tasks
+- `introduction-to-deep-learning/exercise-01-solution.md` + `exercise-01-solutions.py` (+ `output.txt`) — every notebook task, output from a real run
+- `machine-learning-for-cybersecurity/spam-classifier/` — `spam_classifier.py` trained on the real LingSpam dataset: accuracy 0.9897, precision 1.0000, recall 0.9388, F1 0.9684 (vs. 0.8316 always-ham baseline); plus answers to the 6 reading-assignment questions, including the finding that the assigned paper does **not** use a ROC curve
+- `reverse-and-reengineering/hw01-solution.md` — CFG, PDG, both backward slices, the forward slice, inter-procedural CFG (mermaid diagrams)
+- `virtual-machines-and-runtime-systems/sheet-01/` — `showaddrs.c`, `addrs.c`, `eval.c`; static, link-time dynamic and `dlopen` builds all compiled and run, plus the JIT evaluating `2+3*4`, `sqrt(144)`, `sin(0)+cos(0)`
+
+**Tooling added**: `2nd-semester/vault/tools/generate_index.py` (builds `index.md` from frontmatter) and `vault/tools/lint_vault.py` (broken wikilinks, missing sections, stubs). Lint result: **0 broken wikilinks** across 53 notes.
+
+**Open gaps flagged, not papered over**: AITS lecture slides absent from `raw/`; exam formats/dates unknown for Hardware-Oriented Security and Deep Learning (not guessed); obfuscation, SGAM, Garbage collection and containers not yet taught.
+
+*"Eight courses, one pass. The vault now knows what the semester is about. Say it back to me — which of these courses can you already explain without your notes?"*
+
+## [2026-10-19] INGEST | Semester 2 — per-lecture overview pages | 11 topic pages created + lecture links wired
+
+The Semester 2 vault had no `vault/topics/<course>-lecture-N.md` layer (the Semester 1 convention: one
+overview page per teaching unit, tying that session's concepts together). Created:
+
+- `vault/topics/Topics.md` — naming convention + lecture index for WS 2026/27
+- `advanced-it-security-exercise-0`, `energy-informatics-1-lecture-0`, `hardware-oriented-security-lecture-0`,
+  `introduction-to-deep-learning-exercise-1`, `machine-learning-for-cybersecurity-lecture-1`,
+  `machine-learning-for-cybersecurity-lecture-2`, `reverse-and-reengineering-lecture-1`,
+  `virtual-machines-and-runtime-systems-lecture-1`, `virtual-machines-and-runtime-systems-lecture-2`,
+  `virtual-machines-and-runtime-systems-exercise-1`
+
+Each page carries: one-line summary, core map (ASCII tree of the lecture's concepts), key concepts at a
+glance (table), lecture structure, exam-relevant points, connections, open questions.
+
+Also updated: all 7 course pages now link their lecture pages from the Lecture Index;
+`courses/Courses.md` registry gained concept + lecture-page columns; `lint_vault.py` learned to resolve
+path-style links (`[[2nd-semester/index]]`) instead of reporting them as broken. Lint: 0 broken links
+across 64 notes. Index regenerated: 36 concepts, 12 topics, 8 courses.
+
+*"Every lecture now has a page that says what it was about. Read the core map first, then the pages."*
+## [2026-10-20] INGEST | Semester 2 — second pass: 5 new sources, 20 new pages, 1 error corrected | 11 concept pages, 2 topic pages, 3 study pages, 1 course page
+
+**Sources newly ingested** (everything in `raw/` that the 2026-10-19 pass had not yet read):
+- `Hardware Oriented Security/Ubung/ex_1.pdf` — Exercise 1 (randomness, middle-square, LCG)
+- `Machine Learning for Cybersecurity/Vorlesung/03_ML_Intro.pdf` — L3 (metrics, ROC, KNN, regressions)
+- `Machine Learning for Cybersecurity/Vorlesung/Lab1-Basics-CC.ipynb` — the professor's own lab notebook
+- `Introduction to Deep Learning/Ubung/15-10-2026/01-hw-intro-py-solutions.ipynb` — the official solutions
+- `Introduction to Deep Learning/Ubung/15-10-2026/01-notebook-issue.ipynb` and `01-demo.ipynb` — the demo notebooks
+
+**Created — concept pages (11):**
+- Hardware-Oriented Security: `middle-square-method`, `prng-seed-tail-and-cycle`
+- Machine Learning for Cybersecurity: `roc-curve`, `k-nearest-neighbors`, `linear-regression`,
+  `logistic-regression`, `feature-normalization`
+- Introduction to Deep Learning: `jupyter-notebook-state`, `linear-algebra-for-deep-learning`
+
+**Created — topic pages (2):** `hardware-oriented-security-exercise-1`,
+`machine-learning-for-cybersecurity-lecture-3`
+
+**Created — study pages (3):** `study/homework/hardware-oriented-security/exercise-01-solution.md`,
+`.../machine-learning-for-cybersecurity/lab-1-basics.md`,
+`.../machine-learning-for-cybersecurity/presentation-papers.md`
+
+**Updated:** `classification-metrics` and `ml-pipeline-scikit-learn` (source_count 2, the lab's real
+metrics, the multi-class matrix); `courses/hardware-oriented-security.md`,
+`courses/machine-learning-for-cybersecurity.md`, `courses/introduction-to-deep-learning.md`,
+`courses/Courses.md`, `vault/topics/Topics.md`, `study/homework/Homework.md`, both index files.
+
+**The correction.** The professor's official solution notebook settles the "compute 256²" cell that
+the vault had been carrying as an ambiguity: it is 256 squared (65536), not the two guesses
+(`25 ** 62`, `2 ** 56`) an earlier pass had offered. `exercise-01-solution.md` now says so and says
+that it was wrong before.
+
+**Three findings from the lab notebook, none of them in the slides:**
+1. It prints different metrics from the slides (0.9992/0.8481/0.6837/0.7571 against
+   0.9989/0.7869/0.4898/0.6038) on the same support. The reason is not stated in either source and
+   is left as an open question rather than guessed.
+2. The `ConvergenceWarning` (lbfgs, 1000 iterations) survives the scaling step, so `max_iter=1000`
+   did **not** make the solver converge. The vault's earlier claim was wrong and is corrected.
+3. The notebook undersamples the *training set only*, with `stratify=y`, and then scores the model on
+   the untouched imbalanced test set — the honest version of the balancing the slides do sloppily.
+   This closes the gap the vault had flagged.
+
+**Exercise coverage audited.** Every file under a `Ubung/` folder, and every exercise-like notebook,
+now has a solution, or a recorded reason why not: the AITS folder holds 5 slides of logistics (the
+exercise starts 29.10.2026), the ML4CySec `Ubung/` folder is empty, and Bitcoin has no material at
+all. The audit table is in `study/homework/Homework.md`. The HOS numbers (middle-square orbit of 407
+states, tail 197 / cycle 210; the LCG's tail 2 / cycle 20; the m=1024 fixed point 1023; m=2
+collapsing to a constant) were computed by running the generators, not read off a slide.
+
+**Two derived errors in the delegated draft were caught and fixed** during verification: the U2R
+column was described as having 674 predictions (it has 886), and U2R's support was called 40 samples
+(40 is its true positives; its support is 228). The slide's own numbers were all correct.
+
+**Verification:** lint 0 broken wikilinks, 0 missing frontmatter, 0 pages under 250 words across 90
+notes. Index regenerated: 56 concepts, 15 topics, 8 courses. A pre-existing broken link
+(`[[random-number-testing]]` for `[[randomness-testing]]`) was also fixed.
+
+*"The professor's own notebook disagrees with his own slides. Write down what the notebook says, not
+what you expect it to say — and when the two differ, say that they differ instead of picking one."*
+
+## [2026-10-20] DROP | Hardware-Oriented Security + Reverse- and Reengineering | 2 courses, 32 pages deleted, 7 files updated
+
+**Reason:** the student dropped both courses. Everything belonging to them was removed, not just
+the course pages — otherwise the vault would still be quietly selling concepts for exams that
+will never be sat.
+
+**Deleted — course layer (2):** `courses/hardware-oriented-security.md`,
+`courses/reverse-and-reengineering.md`.
+
+**Deleted — concept layer (24):** Hardware-Oriented Security (18): `chi-square-test`,
+`covert-channels`, `csprng`, `dual-ec-drbg`, `hardware-oriented-security-overview`,
+`iot-device-security`, `lfsr-and-casr`, `linear-congruential-generators`, `middle-square-method`,
+`prng-attacks`, `prng-seed-tail-and-cycle`, `pseudorandom-number-generators`,
+`randomness-definitions`, `randomness-in-cryptography`, `randomness-testing`,
+`remote-attestation`, `trng-construction`, `trusted-platform-module-hardware-security`.
+Reverse- and Reengineering (6): `legacy-systems`, `reengineering-vs-maintenance`, `reengineering`,
+`refactoring-and-code-smells`, `reverse-engineering`, `software-aging`.
+
+**Deleted — topic layer (4):** `hardware-oriented-security-lecture-0`,
+`hardware-oriented-security-lecture-1`, `hardware-oriented-security-exercise-1`,
+`reverse-and-reengineering-lecture-1`.
+
+**Deleted — study layer (2):** `study/homework/hardware-oriented-security/ex-01-solution.md`,
+`study/homework/reverse-and-reengineering/hw01-solution.md`.
+
+**Deleted — raw sources (5 PDFs, unrecoverable, untracked by git):**
+`raw/lectures/Hardware Oriented Security/` (`0-Intro.pdf`, `1-Randomness.pdf`, `Ubung/ex_1.pdf`) and
+`raw/lectures/Reverse and Re-Engineering/` (`01-reengineering-intro.pdf`, `Ubung/hw01.pdf`).
+The student confirmed the full purge.
+
+**Updated (7):**
+- `courses/Courses.md` — both rows removed, a *Dropped courses* section added, standing gaps kept.
+- `courses/advanced-it-security.md` — the `[[hardware-oriented-security]]` cross-link removed; the
+  page gained a "What to do when the slides arrive" section (it was the one page under 250 words
+  after the purge).
+- `vault/topics/advanced-it-security-exercise-0.md` — same link removed.
+- `vault/topics/Topics.md` — four lecture-index rows removed.
+- `study/homework/Homework.md` — both deliverable rows and both coverage-audit rows removed; the
+  "if it can be run, it was run" rule now says explicitly that the HOS solution it cites is gone.
+- `2nd-semester/index.md` — regenerated (56 → 32 concepts, 15 → 11 topics, 8 → 6 courses).
+- `vault/tools/generate_index.py` — both courses removed from `COURSE_ORDER` and from the professor
+  and exam tables, so a re-run cannot resurrect them; the Gaps section now records the drop.
+- `1st-semester/vault/concepts/trusted-platform-module.md` — the cross-semester link to
+  `[[trusted-platform-module-hardware-security]]` removed. It was the only inbound reference from
+  outside Semester 2, and it pointed at a page that no longer exists.
+
+**Verification:** lint — 58 notes scanned, **0 broken wikilinks**, 0 missing frontmatter, 0 pages
+under 250 words. Index regenerated: 32 concepts, 11 topics, 6 courses. Vault-wide check confirms no
+remaining reference to any of the 30 deleted slugs outside the historical entries in this log.
+
+**What survives from these two courses, and why it is not a gap:** the Semester 1 vault already
+carries the IoT-security half of the hardware story — `physical-unclonable-functions`,
+`side-channel-attacks`, `trusted-platform-module`, `iot-security-hardware`, `iot-lecture-5` — and
+the Semester 1 Software Analyse course covers CFG/PDG/slicing, which is exactly what the dropped
+Reverse- and Reengineering homework was practising. Nothing unique was lost by dropping them; the
+HOS randomness cluster (PRNGs, CSPRNGs, TRNGs, statistical tests) was the only genuinely
+course-specific material, and it was hardware-security exam material that is now out of scope.
+
+*"Dropping a course is not a gap in the vault. It is a decision about what the vault is for. Two
+courses, thirty pages, five PDFs — all of it gone, and the links that pointed at it rewritten so
+that nothing dangles. The remaining six courses are now the whole story. Say it back to me: which
+of the six would you still be able to explain without your notes?"*
+
+## [2026-10-20] INGEST | AITS Lecture 0 + DL Lecture 1/Exercise 2 + new course Scaling Database Systems | 16 concept pages, 4 topic pages, 1 course page, 2 homework solutions (7 files)
+
+**Sources ingested** (8 new files, all in `2nd-semester/raw/`):
+- `Advanced IT Security/Vorlesung/20261020_0_Basics.pdf` — 29 slides, lecture 0
+- `Introduction to Deep Learning/Vorlesung/01_introduction_to_dl.pdf` — 79 slides, lecture 1
+- `Introduction to Deep Learning/Ubung/22-10-2026/02-slides.pdf`, `02-homework.pdf`,
+  `02-hw-intro-pytorch-tasks.ipynb`, `02-demo.ipynb`, `comp-graph-example.png`
+- `Scaling Database Systems/Ubung/` — `prerequisites.pdf`, `sds_kickoff_exercises.pdf`,
+  `docker_server_instructions.pdf`, `praktomat.pdf` — **a new course, 7th in the registry**
+
+**Created — concept pages (16):**
+- Advanced IT Security (7): `risk-perception-and-dread-risk` (written by hand as the exemplar),
+  `security-policy-mechanism-assurance`, `security-relationship-model`,
+  `integrity-definition-landscape`, `security-cost-benefit-optimum`,
+  `gsm-security-political-constraints`, `security-evaluation-and-assurance-levels`
+- Introduction to Deep Learning (6): `representation-learning`, `pytorch-tensors-and-autograd`,
+  `neural-network-training-loop`, `gradient-descent-for-neural-networks`,
+  `polynomial-regression-and-overfitting`, `deep-learning-history-timeline`
+- Scaling Database Systems (3): `minihive-project-structure`, `praktomat-submission-workflow`,
+  `rootless-docker-server-access`
+
+**Created — topic pages (4):** `advanced-it-security-lecture-0`,
+`introduction-to-deep-learning-lecture-1`, `introduction-to-deep-learning-exercise-2`,
+`scaling-database-systems-exercise-0`. Plus the course page `courses/scaling-database-systems.md`.
+
+**Created — homework (4 files):** `study/homework/introduction-to-deep-learning/` now holds
+`exercise-02-solution.md`, `exercise-02-solutions.py`, `exercise-02-math.py`,
+`output-exercise-02.txt`, `output-exercise-02-math.txt`.
+
+**The homework was run, not described.** A CPU-only PyTorch 2.14.1 environment was built with
+`uv` for the purpose, and both scripts were executed. The numbers in the solution page are
+copied from the run output. Three implementation errors were found and fixed by running rather
+than by reasoning: `nn.Linear(1, degree+1)` had the argument order inverted (the model produced
+`(N, q+1, q+1)`); `torch.stack` on `(N,1)` tensors added a spurious axis where `torch.cat` was
+needed; and `torch.linalg.lstsq` needed a squeezed target.
+
+**The run produced a finding the notebook only hints at.** Task 8's degree-9 model with the
+notebook's default settings (Adam, `lr=5e-3`, 5000 epochs) reaches a *training* loss of
+1.102326 — higher than the degree-3 model's 0.056198. By the notebook's own hint 3 that is
+impossible for a converged model, because every degree-3 polynomial is also a degree-9
+polynomial with the extra weights at zero. The optimisation had not converged. The cause is
+conditioning: `x` reaches 3, so `x⁹ ≈ 20 000`, and the feature magnitudes span four orders of
+magnitude. Retried with `lr=1e-4` and 50 000 epochs it converges to train 0.025387 / val
+0.272569 — training loss now *below* the degree-3 model, validation loss *above* it. The
+least-squares reference makes the trade-off exact: at degree 9 the optimal training loss is
+0.000000 (10 points, 10 parameters — the model interpolates) while the validation loss is
+1.224176, the worst of any degree tried. The oracle solution of the training problem is the
+worst solution of the generalisation problem.
+
+**The paper half was verified numerically too.** Every claim in MML 2.4, the five derivative
+exercises and the four probability exercises was computed: the sigmoid and tanh identities to
+~1e-16, the variance identity to 4 decimals at ρ ∈ {0, 0.5, −0.8}, and the 3(d) PDF checked
+both ways (negative on (3.733079, 4], and integrating to 8.790908 rather than 1) with the
+renormalised fix computed explicitly.
+
+**One source correction.** The PDF text layer renders exercise 2(b)'s second component as
+`√x₂ + x₃`; a first reading of the extracted text gives plain `x₂ + x₃`, which would change the
+Jacobian's second row from `[0, 1/(2√x₂), 1]` to `[0, 1, 1]`. The rendered page confirms the
+radical. The vault has the radical.
+
+**A linter fix.** `lint_vault.py` reported `[[0.0740]]` and `[[629.5720]]` as broken wikilinks.
+These are tensor literals inside inline code spans — `tensor([[0.0740]], requires_grad=True)`.
+Obsidian does not create wikilinks inside code spans; the linter did. It now strips fenced
+blocks and inline code before scanning, which matches Obsidian's actual behaviour.
+
+**The environment was pinned and re-verified.** The PyTorch environment used for the run lives
+in Hermes's scratch directory, which is pruned after 24 hours idle — so the scripts in the vault
+would have had nothing to run them. `study/homework/introduction-to-deep-learning/requirements-exercise-02.txt`
+now pins the versions (torch 2.14.1+cpu, numpy 2.4.6, CPython 3.12), and both scripts were
+re-run in a **clean virtualenv built from nothing but that file** and reproduced the recorded
+output **byte for byte**.
+
+That verification caught a second error that reasoning would not have: `torch==2.14.1+cpu` is a
+local-version label that exists only in PyTorch's own CPU wheel index, so the requirements file as
+first written **failed to install at all** — `uv pip install -r` could not resolve torch. The
+`--index-url https://download.pytorch.org/whl/cpu` flag is mandatory, and both the requirements
+file and the solution page now say so, with the CUDA-build alternative noted.
+
+**Updated:** `courses/advanced-it-security.md` (lecture 0 ingested; the course agenda for
+lectures 1–6; the "logistics-only" section replaced), `courses/introduction-to-deep-learning.md`
+(exam format now known), `courses/Courses.md` (SDS registered, counts updated, standing gaps),
+`vault/topics/Topics.md` (4 new lecture rows), `study/homework/Homework.md` (2 new deliverables,
+4 new coverage-audit rows, SDS gap recorded), `vault/tools/generate_index.py` (SDS added to
+`COURSE_ORDER` and the professor/exam tables), `second-brain/index.md` (counts).
+
+**The exam question that was worth the whole lecture.** Lecture 0 asks: a broken temperature
+sensor on an IoT device, readings too high, the device digitally signs the measurement — should
+integrity verification of the signed but wrong value fail or succeed? The answer is **succeed**.
+The signature protects internal consistency; the integrity definition is explicitly "not concerned
+with the external consistency or veracity of the data" (Note 4, ISO 10181-6). The wrongness was
+introduced upstream by a faulty component, not by a modification. A student who answers "fail,
+the value is wrong" has silently adopted the external-consistency criterion the standard
+excludes. This is now the centrepiece of `integrity-definition-landscape`.
+
+**Verification:** lint — 80 notes scanned, **0 broken wikilinks**, 0 missing frontmatter, 0
+pages under 250 words. Index regenerated: 48 concepts, 15 topics, 7 courses. Every concept page
+programmatically checked for all 8 sections in order, frontmatter keys, and word count.
+
+**The history page was re-verified against the source after editing.** The Deep Learning
+subagent was interrupted while compressing `deep-learning-history-timeline`, which it had left at
+2061 words against a 1000-1800 target. The file was complete and correct - the interrupt landed
+before any write, so nothing was truncated - but the over-length was real. It is now 1834 words,
+in line with the other five Deep Learning pages (1600-1854), and every fact, date and number
+survived the trim. The cuts were duplication, not content: the milestone list in Core Intuition
+repeated the chronology, three Key Properties bullets restated chronology entries that Common
+Pitfalls already covered, and the "recognition" item was a list masquerading as a worked example
+(it now sits in the chronology where the dates put it). A separate re-check confirmed every
+quoted phrase in the page appears verbatim in the source text, and that the only number in the
+page absent from the source - the 134× size inversion between InstructGPT and GPT-3 - is
+arithmetic on two source figures (175B ÷ 1.3B = 134.6).
+
+*"Three things happened at once: a course that had been logistics-only acquired its first real
+lecture, a course you dropped two hours ago was replaced by one you have not sat in yet, and a
+homework sheet that says it will not be graded turned out to be the one that teaches you
+everything. Run the code. The numbers are the argument."*
+
+## [2026-10-20] VERIFY | Scaling Database Systems ingest audited against source | 5 pages corrected, 3 count errors fixed, lint clean
+
+The Scaling Database Systems pages were written by a subagent that was interrupted mid-run, so
+every claim on them was re-checked against the four extracted source documents
+(`prerequisites`, `sds_kickoff_exercises`, `docker_server_instructions`, `praktomat`) rather than
+assumed. The content held up. The bookkeeping did not.
+
+**Every quoted passage on all five SDS pages is now verbatim.** Each quote was located in the
+source text with whitespace, curly-quote and line-wrap normalisation applied. Five were not:
+
+- `praktomat-submission-workflow` quoted the Final Solution rule as "you must register again" —
+  the source says "for the instance used in this course". The truncation changed the meaning
+  (it read as a general rule rather than an instance-specific one). Restored to the full sentence.
+- The same page ended the grading sentence at "you can ignore the Result Overview", dropping the
+  source's "section". Restored.
+- The same page folded the upload instruction into "Click Upload to submit your files", losing the
+  source's "Click Upload (highlighted in green)". The parenthetical is restored.
+- `rootless-docker-server-access` rendered the activation command as if it were inside the quoted
+  sentence. In the source it is a separate code block after a colon. Reformatted.
+- The same page quoted "to confirm that the environment is set up correctly" as a fragment. The
+  source sentence is "To confirm that the environment is set up correctly, run the hello-world
+  image as described in the Docker documentation." Quoted in full.
+
+**One paraphrase was presented as a quotation.** "if it is not in Praktomat, it is not submitted"
+was in double quotes in the Core Intuition, but it is this vault's own summary, not the sheet's
+words. The quotes are gone; the sentence stands on its own. The same page also attributed the
+"We will use Praktomat for all kinds of submissions" line to the Praktomat sheet when it is in
+the exercise kickoff sheet, and the disclosure ban ("Do not make any submission public") was
+unattributed. Both are now attributed to the right document, with the ban's two examples
+(Stud.IP forum, public GitHub repository) named.
+
+**`source_count` was wrong on all three concept pages.** The field counts source documents, not
+pages, and each was set to 1. `minihive-project-structure` draws on three documents (the
+prerequisites sheet, the kickoff sheet, and the Docker sheet for the hello-world check),
+`praktomat-submission-workflow` on two (Praktomat and the kickoff sheet), and
+`rootless-docker-server-access` on one. Corrected to 3, 2, 1. The first two were understated;
+none was overstated.
+
+**Three count errors in the log and the root index, all corrected:**
+
+1. The DROP entry headlined "34 pages deleted". The enumerated deletions are 2 course pages + 24
+   concept pages + 4 topic pages + 2 study pages = **32**. The enumeration was always right; the
+   headline was not. Fixed.
+2. The INGEST entry called Scaling Database Systems "a new course, 8th in the registry". The
+   registry holds 7. The count came from the pre-drop number. Fixed to 7th.
+3. The root index claimed "8 homework solutions". There are 7 solution pages; the eighth file is
+   `Homework.md`, the index page that lists them. Fixed to 7. The "770 total pages" figure was
+   re-derived and is correct under the rule the index states (vault + study, both semesters,
+   excluding `raw/` and `projects/`); it was left alone.
+
+**One imprecision about a filesystem state.** Three pages said the course has "no lecture slides
+at all". `raw/lectures/Scaling Database Systems/Vorlesung/` does exist — it is empty. The
+distinction matters: an empty directory means the slides have not arrived yet, which is different
+from the directory not existing. Corrected in the course page, `Courses.md`, `Homework.md`, and the
+Gaps line in `generate_index.py` — the last one because that text is hardcoded in the generator and
+would have been regenerated on the next run.
+
+**What was checked and found correct:** the exercise group table (3 groups, 30-student cap,
+16 Oct 14:00 → 20 Oct 23:59 sign-up window, ITZ SR 004 / SR 001 / SR 004), the sheet publication
+rhythm (first sheet Tue 20 Oct 18:00 worked on *during* the session; later sheets Fri 18:00 worked
+on *before*), the Praktomat URL and instance name, the ZIM-name email restriction, the seven
+registration fields, the FIM-vs-ZIM account distinction, the Docker access deadline of 19 Oct 2026,
+the FQDN and SHA256 fingerprint, and the rootless per-user daemon model. Every technical term
+that a reader might mistake for database content — sharding, replication, B-trees, LSM, CAP,
+MVCC, write amplification — was checked and appears on the SDS pages **only** inside explicit
+negations stating that the topic is absent from the source. No database internals are invented
+anywhere.
+
+**Verification:** lint — 80 notes scanned, 0 broken wikilinks, 0 missing frontmatter, 0 pages under
+250 words. Index regenerated: 48 concepts, 15 topics, 7 courses. Both Deep Learning homework
+scripts were re-run in the pinned environment and reproduce their recorded output exactly — the
+math script byte for byte, the coding script identically apart from the version line. The
+`verifyenv` built for the clean-room check had been pruned from the scratch directory; the
+`dltorch` environment was still present and was used instead.
+
+*"Read the source again, not the summary of the source. The interrupted writer had the facts
+right and the punctuation slightly wrong, and a reader who trusted the punctuation would have
+quoted a rule that does not exist."*
+
+## [2026-10-20] VERIFY | Advanced IT Security concept pages audited against the lecture | 6 pages, 4 trimmed to vault band, 1 rule violation fixed
+
+The six AITS concept pages were written by a subagent that was interrupted while it worked on the
+last one. An interrupted write is not a partial write — the six files were complete and structurally
+valid — but it is an unverified write, so every claim on them was re-checked against the extracted
+lecture text (`20261020_0_Basics.txt`, 1552 words) rather than assumed.
+
+**All six pages were over the length the task specified.** The brief asked for 900-1600 words. The
+pages came in at 1617, 1644, 2256, 2122, 2159 and 2257. Every one of them was over, and four of
+them exceeded even the vault's own longest page (1834 words, `deep-learning-history-timeline`).
+Being *over* a length target is not automatically a defect — but the vault's established band for
+substantial concept pages is 1600-1854, and four pages were above it, which meant the same
+material was being re-stated across sections rather than said once.
+
+The duplication was consistent and identifiable: Core Intuition restated Formal Definition, and
+Key Properties restated both. The cuts removed the restatement, not the content. Final counts:
+
+| Page | Before | After |
+|---|---|---|
+| `security-policy-mechanism-assurance` | 1617 | 1608 |
+| `security-relationship-model` | 1644 | 1600 |
+| `integrity-definition-landscape` | 2256 | 1827 |
+| `security-cost-benefit-optimum` | 2122 | 1852 |
+| `gsm-security-political-constraints` | 2159 | 1848 |
+| `security-evaluation-and-assurance-levels` | 2257 | 1854 |
+
+**One style-rule violation.** The GSM page used the word "obviously" — inside a sentence where it
+carried real meaning ("not obviously a safeguard"), but the brief banned the word outright.
+Replaced with "not self-evidently a safeguard".
+
+**One spec violation.** The GSM page listed five Open Questions; the brief specified two to four.
+Two were merged into one.
+
+**Three source typos, corrected in the pages, recorded here.** The lecture slides read
+"Goernment regulations require to provide means for certain authorities to intercept data",
+"Complex systems and a high levels of assurance tend to me mutually exclusive", and "Everyting is
+as it is supposed to be..." — "Goernment", "me" and "Everyting" are all transcription errors in the
+deck. The pages quote the corrected forms ("Government", "mutually exclusive", "Everything"),
+because a page that reproduces a typo as if it were the standard's wording teaches the wrong
+string, and the corrected form is what any reader would find in the source material itself. The
+integrity page records the slide's actual spelling in a parenthesis, so a reader checking the deck
+can still find the string. The GSM page quotes the export-control sentence without its trailing
+period, because the source has none.
+
+**Everything factual checks out.** The Gollmann quotation, the six integrity definitions, the
+ISO 10181-6 Notes 3 and 4, the Clark and Wilson definition, the "X is secure" framing, the three
+elements of the "Elements of Security" slide, the ETSI/NIST/ISO TC 68 standards list, the
+eight-element list including "constraints", the relations diagram's nine arrows, the two GSM
+constraints, and the two "Security Evaluation" bullets were each located in the source and
+confirmed verbatim. The one number that is not on any slide — the offset between the crossing and
+the minimum of the total-cost curve — was recomputed and confirmed: with M(s) = 2500s² + 500s and
+V(s) = 4000 − 4000s, the crossing is at s ≈ 0.653 and the minimum of the total is at s* = 0.70,
+so the optimum does sit to the right of the crossing, which is the point the hand-drawn figure
+makes.
+
+**Structural verification of all six:** 8 sections each in the required order; frontmatter with
+the required keys; every wikilink drawn from the allowed set (no link outside it); every
+prerequisites link resolving to a real page; 4-8 connections each; 2-4 open questions each; all
+files valid UTF-8 ending in a newline; none of the banned filler words present.
+
+**Verification:** lint — 80 notes scanned, 0 broken wikilinks, 0 missing frontmatter, 0 pages
+under 250 words. Index regenerated: 48 concepts, 15 topics, 7 courses.
+
+*"An interrupted writer is not a broken writer, but it is an unverified one. Read the source
+again: the facts held, the words piled up, and the length was the symptom of the same fact being
+stated three times."*
+
+## [2026-10-20] AUDIT | 21 newly written pages checked against source | 9 errors fixed, 1 audit finding rejected on measurement
+
+An independent audit compared the 21 pages written in this session against their source documents.
+Every finding was re-checked before acting, and the arithmetic was recomputed rather than taken
+from the report. Nine findings were genuine and are fixed; one was wrong and is documented as
+rejected; two were acceptable synthesis and are left.
+
+**The two headline risk figures were misread from a damaged text layer.** The AITS extraction
+renders the flight-risk value as "1 in 8?0? million" and the car-trip value as "1 in 1?4?.6
+million". The vault had guessed at those damaged characters and recorded "1 in 8–10 million" and
+"1 in 1–14.6 million". Rendering the slide settles both: **1 in 80 million** and **1 in 14.6
+million**. The shark-attack figure (10) and the coconut figure (150) were right. All three
+appear on `risk-perception-and-dread-risk` in three places, plus the Open Questions entry that
+had claimed the guessed reading was "the standard published set of figures" — it was not, and the
+entry now says so.
+
+**A claim about the commute was backwards.** The page said "The daily commute is the largest single
+risk in that table". The Germany 2008 table reads rail 0.2, air 0.4, car 6, bicycle 30,
+pedestrian 38, motorcycle 45; driving is the second-*lowest* figure, not the highest. The point
+the sentence was making — that the risk everybody takes daily is the one nobody photographs —
+survives; the arithmetic did not. Rewritten.
+
+**The demo's loss plateau was called the noise floor. It is not.** The DGP is
+`y = 2.7x + 2*randn + 5`, so the irreducible MSE is 2² = 4. The demo's own closed-form fit on the
+same data reaches 4.164, and the true (2.7, 5) reaches 4.181. The SGD run stops at 7.044 with
+weights (2.9045, 0.2494) — the weight is near the true 2.7, the bias is nowhere near the true 5, and
+20 epochs of `lr=5e-4` have not moved it there. The plateau is slow convergence, not the floor.
+`neural-network-training-loop` claimed the opposite in three places, including a Key Properties
+bullet and an Open Question that half-admitted the contradiction. All three now say what the
+numbers say.
+
+**A measured loss was stated as a derived one.** `polynomial-regression-and-overfitting` said the
+degree-3 model's "training and validation losses both around the noise level, 0.4² = 0.16 per
+point". The recorded run gives train 0.056198 and validation 0.210666. Training lands *below* the
+noise level (four parameters on ten points can absorb some noise) and validation above it; the page
+now gives the measured figures and says which way each falls.
+
+**Two passages of invented technical content.** `representation-learning` described what early,
+middle and late CNN layers respond to ("local stroke patterns", "digit-part combinations", "the
+class itself"). The slide says only that the same digit is represented differently in each layer
+and that no feature was designed by hand; the per-layer reading was added. `minihive-project-structure`
+said a student "never learns what breaks when a query plan, a storage layout, or a distributed
+partition has to survive real workloads" — three database internals that appear in none of the four
+organisational sheets, and the exact thing the SDS pages are required not to assert. Both passages
+are cut; the surrounding argument stands without them.
+
+**A claim the sheets do not make.** The miniHive page stated "Grading of a milestone therefore does
+not depend on whose laptop produced it". The sheets never mention grading, and the same page's
+Open Questions admits that grading of the project is unknown. The claim is replaced with the
+honest form: whether grading depends on whose laptop is not stated, but the identical-environment
+property is what would make such a dependency harmless.
+
+**A number and a name.** `deep-learning-history-timeline` said the 2006 Hinton paper was about
+deep belief networks "and layer-wise training"; the slide lists only the paper's title and the
+re-branding points. `introduction-to-deep-learning-exercise-2` credited the demo notebook to "the
+uvar-l notebooks"; the notebook's first cell says "Partly based on
+https://uvadlc-notebooks.readthedocs.io/…" — the UvA Deep Learning course.
+
+**A count and a slide reference.** The AITS lecture-0 page said lecture 0 is "the frame for the
+other seven" lectures; the agenda lists 0–6, so six follow. It also cited the "Definitions" slide
+as "slide 11" and its successors as "slides 12–17" — those are PDF page numbers minus one, not the
+deck's own numbering, which prints nothing before slide 27. Rewritten to say what is actually
+recoverable: the Definitions slide is the twelfth PDF page, the deck prints no number on it, and the
+six slides that follow it are the definitions it presumably introduced.
+
+**One course field.** `courses/scaling-database-systems.md` asserted `language: "English"`. No SDS
+sheet states a language. The field now reads "not stated in the ingested sheets".
+
+**The audit finding that was wrong.** The report claimed the two lower curves in the "Cost vs.
+benefit" figure cross *left* of the optimal-level line, and that this contradicted
+`security-cost-benefit-optimum`. Measured on the rendered slide at 300 dpi, the crossing of the two
+lower curves is at x ≈ 1245 and the vertical dotted line sits at x = 1248, with the circle marking
+the total-cost minimum on that same line — they coincide, and the figure does not resolve a gap.
+The cost-benefit page was overclaiming in the other direction: it said its worked example's 0.05
+offset was "exactly the offset the hand-drawn figure shows". It is not; the figure draws them
+together, and the offset is an arithmetic consequence of the convex mechanism-cost curve. The page
+now says that. The audit was also right that the mechanism-cost curve is convex rather than "roughly
+straight" — measured, its slope steepens from 3.5 to 12.5 pixels per 40 pixels of x — and the page
+had called it straight in one place and convex in another. The page's own arithmetic had a slip:
+√60 250 000 ≈ 7762.1, not 7763.4, which moved s_cross from 0.653 to 0.6524 and the total at the
+crossing from 2778 to 2781. All recomputed values now match.
+
+**One finding left alone as acceptable synthesis.** The worked examples on the AITS and SDS pages
+are constructed scenarios (an LMS grade list, an industrial controller tender, a telecom roaming
+review, a student with 16 or 4 GiB of RAM) rather than source material. They are framed as
+illustrations, and the SDS pages' quoted strings were verified verbatim against the four sheets.
+
+**Verification:** lint — 80 notes scanned, 0 broken wikilinks, 0 missing frontmatter, 0 pages
+under 250 words. Index regenerated: 48 concepts, 15 topics, 7 courses. Every changed number was
+recomputed from the model rather than edited by hand: the cost-benefit arithmetic and the
+training-loop MSEs both reproduce exactly. Both Deep Learning homework scripts were re-run and
+still reproduce their recorded output — the math script byte for byte, the coding script
+identically apart from the version line.
+
+*"Read the slide, not the extraction. Two of the biggest numbers on the page were guesses at
+damaged characters, and the page had then written the guess down as if it were a reading. A
+hand-drawn graph is worth two counts: render it, measure it, and disagree with it only when the
+measurement says so."*

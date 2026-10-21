@@ -1,0 +1,35 @@
+======================================================================
+torch version: 2.14.1+cpu
+cuda available: False
+model(x).shape = (10, 1)
+======================================================================
+task 5: degree-3 model, Adam lr=5e-3
+  epoch  1000  train=0.056204  val=0.209887
+  epoch  2000  train=0.056197  val=0.210664
+  epoch  3000  train=0.056197  val=0.210665
+  epoch  4000  train=0.056197  val=0.210665
+  epoch  5000  train=0.056198  val=0.210666
+  degree 3 FINAL: train=0.056198  val=0.210666
+======================================================================
+task 8.1: degree 9 (same seed, same optimiser settings)
+  degree 9 FINAL: train=1.102326  val=3.479877
+task 8.2: degree 1 and degree 2
+  degree 1 FINAL: train=0.752247  val=0.422782
+  degree 2 FINAL: train=0.572659  val=0.455258
+======================================================================
+reference: least-squares optimum for each degree (torch.linalg.lstsq)
+  degree 1: lstsq train=0.752247  val=0.422782
+  degree 2: lstsq train=0.572659  val=0.455258
+  degree 3: lstsq train=0.056197  val=0.210665
+  degree 9: lstsq train=0.000000  val=1.224176
+======================================================================
+degree 9 retried with lr=1e-4 and 50000 epochs (convergence attempt)
+  degree 9 (lr=1e-4, 50000 ep) FINAL: train=0.025387  val=0.272569
+======================================================================
+task 6: three hyperparameters used in this code
+  1. learning rate (5e-3 for Adam)
+  2. number of epochs (5000)
+  3. polynomial degree q
+======================================================================
+task 9: task classification
+  supervised regression (numeric target, squared-error loss)
