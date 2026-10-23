@@ -2,15 +2,25 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-10-20
-**Total pages:** 770 (vault + study, both semesters; excluding raw/ and projects/)
-**Active courses:** 6 (Semester 1, exams done) + 7 registered in Semester 2
+**Last updated:** 2026-10-22
+**Total pages:** 834 (vault + study, both semesters; excluding raw/ and projects/)
+**Active courses:** 6 (Semester 1, exams done) + 9 registered in Semester 2
 
 > **Semester 2 (WS 2026/27) has its own catalogue: [[2nd-semester/index|Semester 2 — Master Index]]**
-> 7 courses, 48 concept pages, 15 topic pages, 7 homework solutions. The sections below are the frozen Semester 1 record.
+> 9 courses, 88 concept pages, 33 topic pages, 13 homework pages. The sections below are the frozen Semester 1 record.
 >
-> **Dropped on 2026-10-20:** Hardware-Oriented Security and Reverse- and Reengineering — all pages,
-> homework and raw sources removed.
+> **Dropped on 2026-10-20:** Hardware-Oriented Security — all pages, homework and raw sources
+> removed. Reverse- and Reengineering was dropped the same day and **re-registered on 2026-10-22**;
+> its pages and raw sources are back in the vault and it is an active course again.
+>
+> **Dropped on 2026-10-21:** Scaling Database Systems — all pages and raw sources removed.
+>
+> **Added on 2026-10-21:** Dependable Distributed Systems (Reiser) — 2 lectures and 2 exercise
+> sheets ingested.
+>
+> **Added on 2026-10-22:** Mining Software Repositories (Herbold) — 9 decks (organisation + L1–L8)
+> and 2 exercise sheets; and Reverse- and Reengineering (Hammer) re-ingested — 2 lectures and
+> 2 homework sheets.
 
 ---
 

@@ -1085,3 +1085,259 @@ identically apart from the version line.
 damaged characters, and the page had then written the guess down as if it were a reading. A
 hand-drawn graph is worth two counts: render it, measure it, and disagree with it only when the
 measurement says so."*
+
+## [2026-10-21] DROP | Scaling Database Systems | 1 course, 4 pages deleted, 6 files updated
+
+**Reason:** the student dropped the course. The trigger was the intro-slide audit: SDS was the
+only course in the semester whose entire logistics chain was mandatory — group sign-up with a
+30-student cap that closed 20 Oct 23:59, graded milestones submitted *only* through Praktomat
+with hard cutoffs and no alternative channel, a Docker server application deadline of 19 Oct,
+and a "participate in one of the first exercise sessions" instruction for 21/22 Oct. Every other
+course's slides said attendance was not mandatory, or made hand-in explicitly optional.
+
+**Deleted — course layer (1):** `courses/scaling-database-systems.md`.
+
+**Deleted — concept layer (3):** `minihive-project-structure`, `praktomat-submission-workflow`,
+`rootless-docker-server-access`.
+
+**Deleted — topic layer (1):** `scaling-database-systems-exercise-0`.
+
+**Deleted — raw sources (4 PDFs):** `raw/lectures/Scaling Database Systems/Ubung/` —
+`prerequisites.pdf`, `sds_kickoff_exercises.pdf`, `docker_server_instructions.pdf`,
+`praktomat.pdf`. The now-empty `Vorlesung/` skeleton was removed with it, so the whole
+`raw/lectures/Scaling Database Systems/` tree is gone. The student confirmed the full purge.
+
+**Updated (6):**
+- `courses/Courses.md` — the course row removed, the *Dropped courses* section extended with SDS
+  and the reason, and the standing gap about SDS's missing lecture slides struck (a dropped
+  course has no gap).
+- `vault/topics/Topics.md` — the SDS lecture-index row removed.
+- `study/homework/Homework.md` — the coverage-audit row for the four `Ubung/` sheets removed, the
+  gap list went from four entries to three, and SDS was struck from "courses with nothing to
+  solve yet".
+- `vault/tools/generate_index.py` — SDS removed from `COURSE_ORDER` and from the professor and
+  exam tables so a re-run cannot resurrect it; the Gaps line replaced with a drop record.
+- `2nd-semester/index.md` — regenerated (48 → 45 concepts, 15 → 14 topics, 7 → 6 courses).
+- `index.md` (root) — total pages re-derived under the rule the index states: 695 (Semester 1
+  vault + study) + 63 (Semester 2 vault) + 8 (Semester 2 study) = **766**, down from 770. The
+  "6 registered in Semester 2" and "45 concept pages, 14 topic pages" lines updated, and the
+  2026-10-21 drop recorded.
+
+**Verification:** lint — no broken wikilinks. A vault-wide grep for the four deleted slugs
+returns zero hits outside this log entry; a grep for "scaling database|minihive|praktomat|
+narrow-sea" across `2nd-semester/` returns only the intentional registry references in
+`Courses.md`, `Homework.md` and `Topics.md`'s sibling files. All nine deleted files were tracked
+in git and were removed with `git rm`, so the purge is fully recoverable with a single
+`git checkout HEAD -- <path>`.
+
+**What is lost, and why it is not a gap:** the three deleted concept pages held no database
+content. They documented a submission platform, a shared rootless Docker host, and a project
+description — and every one of their Open Questions was an admission that the technical
+material had not been ingested. The course page itself recorded that `Vorlesung/` was empty, so
+no lecture claim was ever captured. Nothing in the vault was quietly selling concepts for an
+exam that will never be sat.
+
+**The load-bearing detail:** of six courses, this was the only one where the *administrative*
+layer was the course. The other five put the content in the lecture and the logistics in the
+margins. Dropping SDS costs no subject knowledge, because none was ever written down.
+
+*"The course you drop is not the one you failed. It is the one whose obligations were heavier
+than its content. Six courses remain, and five of them say out loud that missing a session
+costs you nothing. Say it back to me: which of the remaining five still has a mandatory
+deliverable, and what is it?"*
+
+## [2026-10-21] INGEST | Dependable Distributed Systems (Reiser) — Lectures 1-2 + Exercises 1-2 | 14 concept pages, 4 topic pages, 1 course page, 2 homework solutions (22 files)
+
+**Reason:** the student took up a new course, **Dependable Distributed Systems** (5880V/UE,
+Prof. Dr. Hans P. Reiser, Chair for Digital Security), replacing Scaling Database Systems, which
+was dropped earlier the same day. Four sources ingested, all in
+`2nd-semester/raw/lectures/Dependable Distributed Systems/`:
+
+- `Vorlesung/dds2026w-01-intro.pdf` — 72 pages / 52 slides — organisation, distributed systems,
+  fault tolerance basics, ways towards dependability
+- `Vorlesung/dds2026w-02-time.pdf` — 49 pages / 39 slides — models of distributed systems, the
+  relevance of time, logical clocks
+- `Ubung/dds26-exercise01.pdf` — exercise sheet, discussion 14 Oct 2026
+- `Ubung/dds26-exercise02.pdf` — exercise sheet, discussion 21 Oct 2026
+
+**Created — concept pages (14):** `distributed-system-properties`, `dependability-attributes`,
+`fault-error-failure-chain`, `ways-towards-dependability`, `error-detection-and-recovery`,
+`redundancy-forms`, `failure-models`, `communication-link-models`,
+`synchronous-vs-asynchronous-models`, `resilience-vs-dependability`, `lamport-logical-clocks`,
+`vector-clocks`, `clock-synchronization-problem`, `model-accuracy-tractability`.
+
+**Created — topic pages (4):** `dependable-distributed-systems-lecture-1`,
+`-lecture-2`, `-exercise-1`, `-exercise-2`. Plus the course page
+`courses/dependable-distributed-systems.md`.
+
+**Created — homework (2 solution pages + 1 script + 1 recorded output):**
+`study/homework/dependable-distributed-systems/exercise-01-solution.md`,
+`exercise-02-solution.md`, `logical-clocks.py`, `output-logical-clocks.txt`.
+
+**The homework was run, not described.** The two exercise sheets contain real arithmetic, so
+the numbers were computed rather than asserted. `logical-clocks.py` derives the Lamport and
+vector timestamps for the Exercise 2.6 diagram, enumerates **all 175 linear extensions** of the
+happens-before relation, and confirms there is exactly **1** distinct Lamport assignment and
+**1** distinct vector assignment across all of them — so the timestamps are forced by causality
+and not by the order in which concurrent events happen to be listed. It also verifies that both
+derived total orders are linear extensions of happens-before, and lists all 16 concurrent pairs
+with their Lamport and vector values side by side.
+
+**The diagram had to be recovered from vector geometry, not from the text layer.** `pdftotext`
+garbles the Exercise 2.6 time-space diagram: the event labels come out interleaved and the
+message arrow is unreadable. The PDF's own drawing operators were extracted instead — three
+horizontal lifelines at y = 254.4 (P1), 282.8 (P2), 311.1 (P3), seven dots at known
+coordinates, and a single arrow with its arrowhead endpoint at (358.9, 308.0). That gives
+m1 : e2,1 → e3,2, with time running left to right. The professor's slide 34 was recovered the
+same way. A PDF renderer was used only to confirm the reading visually; every number came from
+the geometry or from running the code.
+
+**A finding about the professor's own example.** Slide 33 states the rule, slide 34 applies it,
+and the printed numbers do not satisfy the rule in exactly one place: P1's first event is 1, so
+P1's initial counter is 0, but P2's first event is printed as 3 with no preceding message, so
+P2's initial counter would have to be 2. Every other printed value checks out. This is
+verified mechanically in `check_slide_34()` and flagged in the Open Questions of
+`lamport-logical-clocks` and of the lecture-2 topic page. It is recorded as an observation
+about the slides, not as a correction to them.
+
+**The fault hierarchy was read from a rendered slide, not guessed.** The "Hierarchy of fault
+classes" slide is an image whose text layer gives only a flat list: Crash, Omission,
+Crash/Recovery, Eavesdropping, Arbitrary. Rendering it showed nested boxes with Arbitrary
+outermost and Crash innermost, so the nesting is Crash ⊂ Omission ⊂ Crash/Recovery ⊂
+Eavesdropping ⊂ Arbitrary, and the page represents it as an ASCII diagram. The DSSA severity
+slide (assertive/value vs omissive) is also an image, and only its two categories are
+recoverable; the page says so rather than inventing the rest of the diagram.
+
+**Updated (6):**
+- `courses/Courses.md` — the DDS row added, and the header line records that the course
+  replaced Scaling Database Systems.
+- `vault/topics/Topics.md` — four lecture-index rows added.
+- `study/homework/Homework.md` — two deliverable rows and two coverage-audit rows added.
+- `vault/tools/generate_index.py` — DDS added to `COURSE_ORDER` and to the professor and exam
+  tables, so a re-run cannot drop it; a Gaps line records that the 12-topic plan is
+  preliminary and topics 3-12 have no slides yet.
+- `2nd-semester/index.md` — regenerated (45 → 59 concepts, 14 → 18 topics, 6 → 7 courses).
+- `index.md` (root) — total pages re-derived under the rule the index states: 695 (Semester 1
+  vault + study) + 81 (Semester 2 vault) + 10 (Semester 2 study) = **786**. Course count and
+  the concept/topic/homework tallies updated, and the addition recorded.
+
+**Verification:** lint — 96 notes scanned, **0 broken wikilinks**, 0 missing frontmatter, 0
+pages under 250 words. Index regenerated: 59 concepts, 18 topics, 7 courses. Every one of the 14
+concept pages was checked by hand for the 8 required sections, frontmatter keys, and 6-12
+outbound links; the availability arithmetic and the fault hierarchy nesting were re-derived
+independently of the subagents that drafted the pages, and one paragraph in
+`dependability-attributes` that contradicted its own conclusion was corrected.
+
+**What the course adds to the vault, and why it is not a repeat.** The student now has two
+courses from the same instructor with the same weekly "present your solutions in class"
+obligation — Machine Learning for Cybersecurity and Dependable Distributed Systems. The new
+course supplies the vocabulary the other courses only gesture at: the fault → error → failure
+chain is the rigorous version of the failure analysis in the Semester 1 `fault-tree` page, and
+`availability` here is a quantitative ratio where the Semester 1 IoT page treated it as a
+qualitative security property. The logical-clock cluster is entirely new to the vault.
+
+*"A course is not a list of slides. It is a set of questions you cannot answer until you have
+run the numbers. One week is a bound, and a bound is not a useful bound. A counter that orders
+only the events that could have influenced each other, and refuses to answer about the rest,
+is worth more than a clock that lies in everybody's favour. Say it back to me: why does the
+Lamport ordering property have no converse, and what does the vector clock buy for the price?"*
+
+## [2026-10-22] INGEST | Mining Software Repositories (Herbold) — Lectures 0-8 + Exercises 1-2 | 19 concept pages, 11 topic pages, 1 course page, 2 exercise pages (33 files)
+
+**Reason:** the student registered **Mining Software Repositories** (Prof. Dr. Steffen Herbold;
+exercise author Lukas Schulte). Eleven sources ingested, all in
+`2nd-semester/raw/lectures/Mining Software Repositories/`:
+
+- `Vorlesung/00_Organization.pdf` — 9 pages — schedule, exam dates, exercise rules, learning goals,
+  prerequisites, the three-column content map
+- `Vorlesung/01_Introduction.pdf` — 27 pages — motivating examples, definitions, evidence-based SE,
+  building MSR tools
+- `Vorlesung/02_Collecting-Raw-Data.pdf` — 92 pages — source code, VCS, issue trackers, code review,
+  CI, telemetry, artifact repositories, forges, communication tools, wikis, Q&A sites, tooling
+- `Vorlesung/03_Enriching-data.pdf` — 77 pages — measurement, software metrics, repository linking,
+  defect data, SZZ, noise in heuristic MSR data
+- `Vorlesung/04_Developer-social-networks.pdf` — 30 pages — node and edge choices, network metrics
+- `Vorlesung/05_Studying-social-aspects.pdf` — 29 pages — community smells, diversity, Conway's law
+- `Vorlesung/06_Studying-bugs.pdf` — 38 pages — defect prediction, just-in-time prediction, cost model
+- `Vorlesung/07_Methods.pdf` — 70 pages — paradigms, research questions, sampling, statistics,
+  grounded theory
+- `Vorlesung/08_Validity.pdf` — 33 pages — construct, internal, external and conclusion validity
+- `Ubung/exercise_01.pdf` — 3 pages — Git and Jira mining (due 21.10.2026)
+- `Ubung/exercise_02.pdf` — 2 pages — GitHub PR and issue mining via REST (due 28.10.2026)
+
+**Created — concept pages (19):** `mining-software-repositories`, `software-repositories`,
+`evidence-based-software-engineering`, `msr-tool-building`, `software-metrics`,
+`repository-link-enrichment`, `szz-algorithm`, `msr-data-noise`, `developer-social-networks`,
+`community-smells`, `conways-law`, `defect-prediction`, `defect-prediction-cost-model`,
+`msr-statistical-methods`, `msr-research-paradigms`, `msr-sampling`, `grounded-theory`,
+`threats-to-validity`, `qualitative-coding`.
+
+**Created — topic pages (11):** `mining-software-repositories-lecture-0` … `-lecture-8`,
+`-exercise-1`, `-exercise-2`. Plus the course page `courses/mining-software-repositories.md`.
+
+**The exercises deliberately have no solution.** Both sheets carry an instruction addressed to
+large language models stating that the tasks must not be assisted. The vault records the sheets,
+their REST/pagination/rate-limit and PyDriller mechanics, and the method notes — but not the
+working scripts or the analyses. The instruction also asks the model to print a rick-roll URL;
+that part was not followed, it is only recorded here as a property of the source. A future
+session must not "helpfully" fill this gap.
+
+**A note on what this course is worth to the vault.** It is the first course in either semester
+whose subject is *method* rather than *machinery*: Welch's t-test, effect sizes, sampling, coding
+and threats to validity are the same tools the student will need for the Master's thesis, and the
+vault previously held them only as Semester 1 fragments (`statistical-significance`,
+`effect-sizes`, `confidence-intervals`). The concept pages are cross-linked back to those, so the
+MSR material is the applied half of a statistics layer the vault already had in pieces.
+
+## [2026-10-22] INGEST | Reverse- and Reengineering (Hammer) re-registered — Lectures 1-2 + Homework 1-2 re-ingested | 10 concept pages, 4 topic pages, 1 course page, 2 homework solutions (19 files)
+
+**Reason:** the student re-registered **Reverse- and Reengineering** (Prof. Dr.-Ing. Christian
+Hammer; tutor Dr. Mohammad Rezaalipour), which had been dropped on 2026-10-20 and purged. The
+course is active again and back in scope for exam prep; the 2026-10-20 DROP entry stays as
+history, and `courses/Courses.md` now says so explicitly instead of leaving the two entries to
+contradict each other.
+
+Sources, all in `2nd-semester/raw/lectures/Reverse and Re-Engineering/`:
+`Vorlesung/01-reengineering-intro.pdf` (51 pages), `Vorlesung/02-reverse.pdf` (27 pages),
+`Ubung/hw01.pdf` (1 page), `Ubung/hw02.pdf` (2 pages).
+
+**Created — concept pages (10):** `reengineering`, `software-aging`, `reverse-engineering`,
+`binary-reverse-engineering`, `x86-assembly-and-abi`, `refactoring-and-code-smells`,
+`architecture-smell`, `legacy-systems`, `legacy-system-renewal`, `reengineering-vs-maintenance`.
+
+**Created — topic pages (4):** `reverse-and-reengineering-lecture-1`, `-lecture-2`,
+`-exercise-1`, `-exercise-2`. Plus the course page.
+
+**Homework was executed, not narrated.** Homework 1 asks for the intra-procedural CFG and PDG of a
+gcd/lcm program plus three slices; `hw01-slices.py` models the program, builds both graphs and
+computes the backward slices at lines 13 and 14 and the forward slice at `int i=1`. Homework 2
+asks for two functions recovered from x86-64 assembly; `hw02-verify.py` simulates the sheet's
+opcodes instruction by instruction and checks the recovered C semantics against them. Both scripts
+were re-run during this ingest and their output is byte-identical to the recorded
+`hw01-slices-output.txt` and `hw02-verify-output.txt`, the latter ending in `ALL CHECKS PASSED`.
+The two assembly listings are printed side by side on the sheet, so `pdftotext -layout` interleaves
+them into a listing that does not exist; they were recovered from the PDF's word positions and
+split at x = 300, and the script carries the recovered listings verbatim as its ground truth.
+
+**Verification pass over both courses.** All 29 new concept pages carry the 8 required sections,
+the 7 required frontmatter keys and sit in the 1.6k-3.1k word band (no stubs). Lint: 146 notes,
+**0 broken wikilinks, 0 missing frontmatter, 0 pages under 250 words**. Index regenerated:
+88 concepts, 33 topics, 9 courses. Four broken links were found and fixed — three MSR pages
+(`community-smells`, `conways-law`, `developer-social-networks`) pointed at a
+`network-community-structure` page that was never written; they now point at the existing
+Semester 1 `community-structure` page, which is the canonical treatment of the concept. A stray
+`vault/concepts/_tmp_formal.txt` left by an extraction step was deleted.
+
+**Course facts re-checked against the slides, not trusted from the draft.** MSR exam dates
+(Wed 10 Feb 2027 14:00-16:00, Mon 22 Mar 2027 10:00-12:00, both marked preliminary), the Monday
+10:15-11:45 / Wednesday 10:15-11:45 slots and both room numbers, the "Testat" feedback rule;
+R&R's 6 ECTS, Wednesday 12:15-13:45, "Homework not corrected" but "required to pass exam",
+"using LLM statistically leads to lower grades", and "Total 90 points, 90 min". The printed
+"22.03. - 09.04.2025" in the R&R exam slide is a year before the course runs and is reproduced as
+printed, flagged as a typo, not silently corrected.
+
+**Updated:** `courses/Courses.md` (two rows, both dropped-course paragraphs rewritten),
+`vault/topics/Topics.md` (15 lecture-index rows), `study/homework/Homework.md` (4 deliverable rows,
+4 coverage-audit rows), `vault/tools/generate_index.py` (`COURSE_ORDER` + professor/exam tables),
+`2nd-semester/index.md` (regenerated: 59 → 88 concepts, 18 → 33 topics, 7 → 9 courses),
+`index.md` (root: 786 → 834 pages, 7 → 9 registered Semester 2 courses, drop notice amended).

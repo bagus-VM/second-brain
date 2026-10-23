@@ -1,0 +1,137 @@
+==============================================================================
+Homework 1 - Intra-procedural CFG, PDG and program slicing
+==============================================================================
+
+------------------------------------------------------------------------------
+1. Intra-procedural control flow graph
+------------------------------------------------------------------------------
+
+    CFG edges:
+      L1 (int main() {)  ->  L2
+      L2 (int x,y,prod,lcm,gcd=1;)  ->  L3
+      L3 (scanf("%d", &x);)  ->  L4
+      L4 (scanf("%d", &y);)  ->  L5
+      L5 (for (int i=1; i<=x && i<=y; ++i) {)  ->  L5, L6, L10
+      L6 (if (x%i==0 && y%i==0) {)  ->  L7, L9
+      L7 (gcd=i;)  ->  L8
+      L8 (})  ->  L9
+      L9 (})  ->  L5
+     L10 (prod=x*y;)  ->  L11
+     L11 (lcm=prod/gcd;)  ->  L12
+     L12 (printf("gcd=%d",gcd);)  ->  L13
+     L13 (printf("prod=%d", prod);)  ->  L14
+     L14 (printf("lcm=%d", lcm);)  ->  L15
+     L15 (})  ->  EXIT
+
+------------------------------------------------------------------------------
+2. Program dependence graph
+------------------------------------------------------------------------------
+
+    Data dependencies (definition -> use):
+      L2 (int x,y,prod,lcm,gcd=1;)  ->  L11, L12
+      L3 (scanf("%d", &x);)  ->  L5, L6, L10
+      L4 (scanf("%d", &y);)  ->  L5, L6, L10
+      L5 (for (int i=1; i<=x && i<=y; ++i) {)  ->  L6, L7
+      L7 (gcd=i;)  ->  L11, L12
+     L10 (prod=x*y;)  ->  L11, L13
+     L11 (lcm=prod/gcd;)  ->  L14
+
+    Control dependencies (branch -> controlled statement):
+      L5 (for (int i=1; i<=x && i<=y; ++i) {)  ->  L6, L7, L8, L9
+      L6 (if (x%i==0 && y%i==0) {)  ->  L7, L8
+
+    PDG = data dependencies + control dependencies
+    Post-dominator sets (used for the control dependencies):
+        post[L1] = {L1, L10, L11, L12, L13, L14, L15, L2, L3, L4, L5, EXIT}
+        post[L2] = {L10, L11, L12, L13, L14, L15, L2, L3, L4, L5, EXIT}
+        post[L3] = {L10, L11, L12, L13, L14, L15, L3, L4, L5, EXIT}
+        post[L4] = {L10, L11, L12, L13, L14, L15, L4, L5, EXIT}
+        post[L5] = {L10, L11, L12, L13, L14, L15, L5, EXIT}
+        post[L6] = {L10, L11, L12, L13, L14, L15, L5, L6, L9, EXIT}
+        post[L7] = {L10, L11, L12, L13, L14, L15, L5, L7, L8, L9, EXIT}
+        post[L8] = {L10, L11, L12, L13, L14, L15, L5, L8, L9, EXIT}
+        post[L9] = {L10, L11, L12, L13, L14, L15, L5, L9, EXIT}
+        post[L10] = {L10, L11, L12, L13, L14, L15, EXIT}
+        post[L11] = {L11, L12, L13, L14, L15, EXIT}
+        post[L12] = {L12, L13, L14, L15, EXIT}
+        post[L13] = {L13, L14, L15, EXIT}
+        post[L14] = {L14, L15, EXIT}
+        post[L15] = {L15, EXIT}
+
+------------------------------------------------------------------------------
+3. Backward slices
+------------------------------------------------------------------------------
+
+    Backward slice of line 13  printf("prod=%d", prod):
+        value slice (data dependencies only):
+              L3  scanf("%d", &x);
+              L4  scanf("%d", &y);
+             L10  prod=x*y;
+             L13  printf("prod=%d", prod);
+        conservative slice (data + control dependencies):
+              L3  scanf("%d", &x);
+              L4  scanf("%d", &y);
+             L10  prod=x*y;
+             L13  printf("prod=%d", prod);
+
+    Backward slice of line 14  printf("lcm=%d", lcm):
+        value slice (data dependencies only):
+              L2  int x,y,prod,lcm,gcd=1;
+              L3  scanf("%d", &x);
+              L4  scanf("%d", &y);
+              L5  for (int i=1; i<=x && i<=y; ++i) {
+              L7  gcd=i;
+             L10  prod=x*y;
+             L11  lcm=prod/gcd;
+             L14  printf("lcm=%d", lcm);
+        conservative slice (data + control dependencies):
+              L2  int x,y,prod,lcm,gcd=1;
+              L3  scanf("%d", &x);
+              L4  scanf("%d", &y);
+              L5  for (int i=1; i<=x && i<=y; ++i) {
+              L6  if (x%i==0 && y%i==0) {
+              L7  gcd=i;
+             L10  prod=x*y;
+             L11  lcm=prod/gcd;
+             L14  printf("lcm=%d", lcm);
+
+------------------------------------------------------------------------------
+4. Forward slice
+------------------------------------------------------------------------------
+
+    Forward slice of the statement `int i=1` at line 5:
+        value slice (data dependencies only):
+              L5  for (int i=1; i<=x && i<=y; ++i) {
+              L6  if (x%i==0 && y%i==0) {
+              L7  gcd=i;
+             L11  lcm=prod/gcd;
+             L12  printf("gcd=%d",gcd);
+             L14  printf("lcm=%d", lcm);
+        conservative slice (data + control dependencies):
+              L5  for (int i=1; i<=x && i<=y; ++i) {
+              L6  if (x%i==0 && y%i==0) {
+              L7  gcd=i;
+              L8  }
+              L9  }
+             L11  lcm=prod/gcd;
+             L12  printf("gcd=%d",gcd);
+             L14  printf("lcm=%d", lcm);
+
+------------------------------------------------------------------------------
+5. Statements excluded from each slice, and the reaching definitions
+------------------------------------------------------------------------------
+
+    conservative backward slice of 13 excludes: L1, L2, L5, L6, L7, L8, L9, L11, L12, L14, L15
+    conservative backward slice of 14 excludes: L1, L8, L9, L12, L13, L15
+    conservative forward slice of 5 excludes: L1, L2, L3, L4, L8, L9, L10, L13, L15
+
+    reaching definitions at each use site:
+        L5: uses ['x', 'y']  <-  x@[3], y@[4]
+        L6: uses ['x', 'y', 'i']  <-  i@[5], x@[3], y@[4]
+        L7: uses ['i']  <-  i@[5]
+        L10: uses ['x', 'y']  <-  x@[3], y@[4]
+        L11: uses ['prod', 'gcd']  <-  gcd@[2, 7], prod@[10]
+        L12: uses ['gcd']  <-  gcd@[2, 7]
+        L13: uses ['prod']  <-  prod@[10]
+        L14: uses ['lcm']  <-  lcm@[11]
+

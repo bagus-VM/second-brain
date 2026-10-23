@@ -1,0 +1,147 @@
+==============================================================================
+Part 1 - recovering `bar` and `foo` from the two listings
+==============================================================================
+
+  Listing 1 (bar), as recovered from the PDF:
+      1 push  rbp
+       2 mov   rbp, rsp
+       3 mov   dword ptr [rbp - 4], edi
+       4 mov   dword ptr [rbp - 8], esi
+       5 mov   eax, dword ptr [rbp - 4]
+       6 or    eax, dword ptr [rbp - 8]
+       7 xor   eax, -1
+       8 pop   rbp
+       9 ret
+
+  Listing 2 (foo), as recovered from the PDF:
+      1 push  rbp
+       2 mov   rbp, rsp
+       3 mov   dword ptr [rbp - 4], edi
+       4 mov   dword ptr [rbp - 8], esi
+       5 mov   dword ptr [rbp - 12], edx
+       6 mov   eax, dword ptr [rbp - 4]
+       7 xor   eax, -1
+       8 mov   ecx, dword ptr [rbp - 8]
+       9 xor   ecx, -1
+      10 and   ecx, dword ptr [rbp - 12]
+      11 or    eax, ecx
+      12 pop   rbp
+      13 ret
+
+  bar: the opcodes compute  ~(a | b)  in 32-bit arithmetic.
+    equals ~(a|b) on all 49 tested pairs: True
+    every boolean-input result is NONZERO (so it is never 'false'): True
+    values: {'0,0': '0xffffffff', '0,1': '0xfffffffe', '1,0': '0xfffffffe', '1,1': '0xfffffffe'}
+
+    IMPORTANT: `xor eax, -1` is a BITWISE complement, not a logical
+    NOT. The result is therefore 0xFFFFFFFF or 0xFFFFFFFE, never 0 or 1.
+    Reading this as `!(a || b)` (a NOR predicate) is the classic
+    mistake, and the compiler confirms it: the logical version emits
+    sete/setne + movzbl, while the sheet's listing has or + xor $-1.
+
+  foo: the opcodes compute  ~a | (~b & c).
+    equals ~a|(~b&c) on all 216 tested triples: True
+    equals ~(a & (b | ~c)) on all 216 tested triples: True
+    equals ~a | (~b & c) on all 216 tested triples: True
+
+  The values on boolean inputs (0xFFFFFFFF is the bitwise complement):
+      a b c | foo
+      0 0 0 |  4294967295
+      0 0 1 |  4294967295
+      0 1 0 |  4294967295
+      0 1 1 |  4294967295
+      1 0 0 |  4294967294
+      1 0 1 |  4294967295
+      1 1 0 |  4294967294
+      1 1 1 |  4294967294
+  Every one of them is nonzero, so as a predicate `foo` is never false.
+  The bitwise reading is the only one the machine code supports.
+
+  Every argument is used:
+    bar uses arg1 and arg2 (edi, esi).
+    foo uses arg1, arg2 and arg3 (edi, esi, edx).
+
+  Recovered C for bar:
+      int bar(int a, int b) { return ~(a | b); }
+      // on boolean inputs: return !(a || b);
+
+  Recovered C for foo:
+      int foo(int a, int b, int c) { return ~a | (~b & c); }
+      // on boolean inputs: return !(a && (b || !c));
+
+==============================================================================
+Part 2 - the assembly foo(int): CFG and what it computes
+==============================================================================
+
+  Intraprocedural CFG (basic blocks read off the listing):
+
+      entry
+        |
+        v
+      B1: cmp [rbp-20], 1 ; jg .L2
+        |            \
+        | T (n<=1)    \ F (n>1)
+        v              v
+      B2: mov eax,[rbp-4]      B3: cmp [rbp-20], 2 ; jne .L4
+          mov [rbp-12],eax         |                 |
+          jmp .L3                  | T (n==2)        | F (n>2)
+        |                           v                 v
+        |                         B4: mov eax,[rbp-8]  B5: mov [rbp-16], 3
+        |                           mov [rbp-12],eax      jmp .L5
+        |                           jmp .L3              |
+        |                           |                    v
+        |                           |                  B6: cmp eax,[rbp-20] ; jle .L7
+        |                           |                    |            \
+        |                           |                    | T (i<=n)   \ F (i>n)
+        |                           |                    v             v
+        |                           |                  B7: result=a+b   (falls through to B6)
+        |                           |                      a=b
+        |                           |                      b=result
+        |                           |                      i++
+        |                           |                    |
+        |                           |                    +----> B6 (back edge)
+        |                           |
+        +---------------------------+-----------------> B8: mov eax,[rbp-12] ; pop rbp ; ret
+
+  What it computes. Candidate: the (n-1)-th Fibonacci number
+  (F(0)=0, F(1)=1). Checking by simulation:
+
+        n :    0   1   2   3   4   5   6   7   8   9  10  11  12
+        foo:   0   0   1   1   2   3   5   8  13  21  34  55  89
+        F(n-1):  0   0   1   1   2   3   5   8  13  21  34  55  89
+        identical for n = 0..12: True
+
+  Why: the loop variable i runs from 3 to n, and after the iteration
+  for i the accumulator holds F(i-1). So the returned value is F(n-1).
+
+  Boundary cases read straight off the CFG:
+    n <= 1  -> returns a = 0            (the 'n<=1' branch)
+    n == 2  -> returns b = 1            (the 'n==2' branch)
+    n >= 3  -> the loop runs n-2 times
+
+  The functions called from main (Part 2, question 2):
+    __isoc99_scanf   (reads the integer argument)
+    foo(int)         (the function above)
+    printf           (prints the result with the format string "%d")
+
+  The equivalent C source, recovered:
+
+        int foo(int n) {
+            int a = 0, b = 1, result = 0;
+            if (n <= 1) { result = a; }
+            else if (n == 2) { result = b; }
+            else {
+                int i = 3;
+                while (i <= n) {
+                    result = a + b;
+                    a = b;
+                    b = result;
+                    i++;
+                }
+            }
+            return result;
+        }
+    
+==============================================================================
+ALL CHECKS PASSED: part1=True  part2=True
+==============================================================================

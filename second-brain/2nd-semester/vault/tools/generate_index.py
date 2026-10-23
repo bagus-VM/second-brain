@@ -13,9 +13,11 @@ COURSE_ORDER = [
     "Energy Informatics I",
     "Introduction to Deep Learning",
     "Machine Learning for Cybersecurity",
-    "Scaling Database Systems",
+    "Dependable Distributed Systems",
     "Virtual Machines and Runtime Systems",
     "Advanced IT Security",
+    "Reverse- and Reengineering",
+    "Mining Software Repositories",
     "AI Engineering Lab (Block Seminar)",
 ]
 
@@ -82,7 +84,7 @@ lines.append("---")
 lines.append('title: "Semester 2 — Master Index"')
 lines.append("tags: [meta, index, semester-2]")
 lines.append("status: current")
-lines.append("last_updated: 2026-10-20")
+lines.append("last_updated: 2026-10-22")
 lines.append("---")
 lines.append("")
 lines.append("# Semester 2 — Master Index")
@@ -101,18 +103,22 @@ exam = {
     "Energy Informatics I": "17.02.2027 / 24.03.2027",
     "Introduction to Deep Learning": "TBD",
     "Machine Learning for Cybersecurity": "portfolio",
-    "Scaling Database Systems": "TBD",
+    "Dependable Distributed Systems": "TBD",
     "Virtual Machines and Runtime Systems": "11.02.2027 / 01.04.2027",
     "Advanced IT Security": "05.04.2027",
+    "Reverse- and Reengineering": "two dates via Campus Portal (90 points / 90 min)",
+    "Mining Software Repositories": "10.02.2027 / 22.03.2027 (preliminary)",
     "AI Engineering Lab (Block Seminar)": "report-based",
 }
 prof = {
     "Energy Informatics I": "de Meer",
     "Introduction to Deep Learning": "Lemmerich",
     "Machine Learning for Cybersecurity": "Reiser",
-    "Scaling Database Systems": "Scherzinger",
+    "Dependable Distributed Systems": "Reiser",
     "Virtual Machines and Runtime Systems": "Größlinger",
     "Advanced IT Security": "Posegga",
+    "Reverse- and Reengineering": "Hammer",
+    "Mining Software Repositories": "Herbold",
     "AI Engineering Lab (Block Seminar)": "—",
 }
 for c in courses:
@@ -148,9 +154,13 @@ if topics:
 lines.append("## Gaps")
 lines.append("")
 lines.append("- Bitcoin and Cryptocurrencies Technologies: `raw/` folder empty, no page.")
-lines.append("- Dropped on 2026-10-20: Hardware-Oriented Security and Reverse- and Reengineering — all pages and raw sources removed.")
+lines.append("- Dropped on 2026-10-20: Hardware-Oriented Security — all pages and raw sources removed.")
+lines.append("- Reverse- and Reengineering was dropped on 2026-10-20 and has since been re-registered; new material (2 lectures, 2 homework sheets) was ingested on 2026-10-22. The Term 2 exam timeframe is printed as '22.03.-09.04.2025' and is flagged as a typo on the course page.")
+lines.append("- Mining Software Repositories (new registration, ingested 2026-10-22): 9 lecture decks and 2 exercise sheets. The two exam dates are explicitly preliminary; credit points and exam format are not stated in the material.")
+lines.append("- Dropped on 2026-10-21: Scaling Database Systems — all pages and raw sources removed.")
 lines.append("- Advanced IT Security: lecture 0 (Basics) is ingested; lectures 1-6 have no slides in `raw/` yet.")
-lines.append("- Scaling Database Systems: new course. Only organisational sheets in `raw/` - `raw/lectures/Scaling Database Systems/Vorlesung/` is empty, so no lecture slides have been ingested and the technical content is not yet in the vault.")
+lines.append("- Dependable Distributed Systems: lectures 1-2 and exercises 1-2 ingested; the 12-topic semester plan is preliminary, so topics 3-12 have no slides in `raw/` yet.")
+lines.append("- The two Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.")
 lines.append("- Exam formats/dates marked TBD were not in the source material and are not guessed.")
 lines.append("")
 
