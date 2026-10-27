@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en-CA">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="developer" content="Office/Bureau">
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted - The Citizen Lab</title>
+	<link rel="canonical" href="https://citizenlab.ca/research/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted - The Citizen Lab" />
+	<meta property="og:description" content="On April 29, 2025, a select group of iOS users were notified by Apple that they were targeted with advanced spyware. Among the group were two journalists who consented to the technical analysis of their cases. In this report, we discuss key findings from our forensic analyses of their devices." />
+	<meta property="og:url" content="https://citizenlab.ca/research/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted/" />
+	<meta property="og:site_name" content="The Citizen Lab" />
+	<meta property="article:modified_time" content="2026-06-16T19:53:32+00:00" />
+	<meta property="og:image" content="https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1024x576.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="576" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@citizenlab" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="10 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/","url":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/","name":"Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted - The Citizen Lab","isPartOf":{"@id":"https:\/\/citizenlab.ca\/#website"},"primaryImageOfPage":{"@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/#primaryimage"},"image":{"@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/#primaryimage"},"thumbnailUrl":"https:\/\/citizenlab.ca\/wp-content\/uploads\/2025\/06\/featuredimage-paragonredux-1920-x-1080-px-1.png","datePublished":"2025-06-12T11:55:29+00:00","dateModified":"2026-06-16T19:53:32+00:00","breadcrumb":{"@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/"]}]},{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/#primaryimage","url":"https:\/\/citizenlab.ca\/wp-content\/uploads\/2025\/06\/featuredimage-paragonredux-1920-x-1080-px-1.png","contentUrl":"https:\/\/citizenlab.ca\/wp-content\/uploads\/2025\/06\/featuredimage-paragonredux-1920-x-1080-px-1.png","width":1920,"height":1080},{"@type":"BreadcrumbList","@id":"https:\/\/citizenlab.ca\/research\/first-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Researches","item":"https:\/\/citizenlab2.staging-001.dev\/researches\/"},{"@type":"ListItem","position":2,"name":"Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted"}]},{"@type":"WebSite","@id":"https:\/\/citizenlab.ca\/#website","url":"https:\/\/citizenlab.ca\/","name":"The Citizen Lab","description":"University of Toronto","publisher":{"@id":"https:\/\/citizenlab.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/citizenlab.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-CA"},{"@type":"Organization","@id":"https:\/\/citizenlab.ca\/#organization","name":"The Citizen Lab","url":"https:\/\/citizenlab.ca\/","logo":{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/citizenlab.ca\/#\/schema\/logo\/image\/","url":"https:\/\/citizenlab.ca\/wp-content\/uploads\/2025\/10\/citizen-lab-logo-Teal-Orange.svg","contentUrl":"https:\/\/citizenlab.ca\/wp-content\/uploads\/2025\/10\/citizen-lab-logo-Teal-Orange.svg","width":572,"height":256,"caption":"The Citizen Lab"},"image":{"@id":"https:\/\/citizenlab.ca\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/x.com\/citizenlab","https:\/\/mastodon.social\/@citizenlab","https:\/\/ca.linkedin.com\/company\/the-citizen-lab","https:\/\/bsky.app\/profile\/citizenlab.ca","https:\/\/www.youtube.com\/channel\/UCf5Aunw7xvt3lAFrLhiCA5w","https:\/\/github.com\/citizenlab"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://citizenlab.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcitizenlab.ca%2Fresearch%2Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://citizenlab.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcitizenlab.ca%2Fresearch%2Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://citizenlab.ca/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:rgba(90,90,90,.25);border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto rgba(90,90,90,.25);outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:rgba(90,90,90,.25);border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://citizenlab.ca/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://citizenlab.ca/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://citizenlab.ca/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:transparent;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:transparent}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:currentColor}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:currentColor}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=https://citizenlab.ca/wp-includes/blocks/table/style.min.css */
+</style>
+
+
+<style id="nua-table-of-contents-style-inline-css">
+body{--screen-xs:480px;--screen-sm:768px;--screen-md:1024px;--screen-ml:1100px;--screen-lg:1400px;--color-black:var(--wp--preset--color--black);--color-white:var(--wp--preset--color--white);--color-gray-light:var(--wp--preset--color--gray-light);--color-orange:var(--wp--preset--color--orange);--color-teal:var(--wp--preset--color--teal);--color-brown:var(--wp--preset--color--brown);--color-beige:var(--wp--preset--color--beige);--color-beige-dark:var(--wp--preset--color--beige-dark);--color-beige-light:var(--wp--preset--color--beige-light);--color-beige-light-extra:var(--wp--preset--color--beige-light-extra);--color-red:var(--wp--preset--color--red);--font-size-10:var(--wp--preset--font-size--size-10);--font-size-12:var(--wp--preset--font-size--size-12);--font-size-14:var(--wp--preset--font-size--size-14);--font-size-16:var(--wp--preset--font-size--size-16);--font-size-18:var(--wp--preset--font-size--size-18);--font-size-20:var(--wp--preset--font-size--size-20);--font-size-20-fluid:var(--wp--preset--font-size--size-20-fluid);--font-size-25:var(--wp--preset--font-size--size-25);--font-size-28:var(--wp--preset--font-size--size-28);--font-size-30:var(--wp--preset--font-size--size-30);--font-size-32:var(--wp--preset--font-size--size-32);--font-size-36:var(--wp--preset--font-size--size-36);--font-size-40:var(--wp--preset--font-size--size-40);--font-size-44:var(--wp--preset--font-size--size-44);--font-size-44-fluid:var(--wp--preset--font-size--size-44-fluid);--font-size-80:var(--wp--preset--font-size--size-80);--font-family-theinhardt-cond:var(--wp--preset--font-family--theinhardt-condensed);--font-family-moderat-serif:var(--wp--preset--font-family--moderat-serif);--font-family-moderat-mono:var(--wp--preset--font-family--moderat-mono);--nua-default-content-width:var(--wp--style--global--content-size,867px);--nua-wide-content-width:var(--wp--style--global--wide-size,1324px);--nua-grid-columns:12;--nua-grid-column-min-width:1fr;--nua-grid-column-gap:20px;--nua-grid-column-max-width:calc((var(--nua-wide-content-width) - (var(--nua-grid-columns) - 1)*var(--nua-grid-column-gap))/var(--nua-grid-columns));--nua-page-padding-lg:40px;--nua-page-padding-md:25px;--nua-page-padding-sm:15px;--shift-down-offset:70px}.nua-table-of-contents{position:sticky;top:83px}@media screen and (min-width:1024px){.nua-table-of-contents{top:24px}}.nua-table-of-contents__header{background-color:var(--color-brown);color:var(--color-white);cursor:pointer;font-family:var(--font-family-moderat-mono);font-size:var(--font-size-12);font-weight:600;letter-spacing:1.2px;padding:15px;position:relative;text-transform:uppercase;-webkit-user-select:none;user-select:none}.nua-table-of-contents__header:hover{background-color:var(--color-brown-dark,#3a2a1a)}.nua-table-of-contents__header:after{content:"[-]";position:absolute;right:15px;top:15px;transition:transform .2s ease}.nua-table-of-contents__header.collapsed:after{content:"[+]"}.nua-table-of-contents ul{background-color:var(--color-beige-dark);display:none;list-style:none;margin:0;max-height:0;opacity:0;padding:0;transition-behavior:allow-discrete;transition-duration:.3s;transition-property:display,opacity,max-height;transition-timing-function:ease-in-out}.nua-table-of-contents ul.active{display:block;max-height:1000px;opacity:1}@starting-style{.nua-table-of-contents ul.active{max-height:0;opacity:0}}.nua-table-of-contents ul li{margin:0;padding:0}.nua-table-of-contents ul li.active,.nua-table-of-contents ul li:hover{background-color:var(--color-white)}.nua-table-of-contents ul a{color:var(--color-brown);display:block;font-family:var(--font-family-moderat-mono);font-size:var(--font-size-12);font-weight:600;letter-spacing:1.2px;padding:15px;text-decoration:none;text-transform:uppercase}
+
+/*# sourceURL=https://citizenlab.ca/wp-content/plugins/plugin-citizenlab/blocks/table-of-contents/build/style-index.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--gray-light: #BBBBBB;--wp--preset--color--orange: #F8981C;--wp--preset--color--teal: #1ABCB9;--wp--preset--color--brown: #38301F;--wp--preset--color--beige: #958F87;--wp--preset--color--beige-dark: #E9E4D9;--wp--preset--color--beige-light: #F9F5EE;--wp--preset--color--beige-light-extra: #FCFAF7;--wp--preset--color--red: #9A031E;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.682), 20px);--wp--preset--font-size--large: clamp(22.041px, 1.378rem + ((1vw - 3.2px) * 1.586), 36px);--wp--preset--font-size--x-large: clamp(25.014px, 1.563rem + ((1vw - 3.2px) * 1.93), 42px);--wp--preset--font-size--size-10: clamp(0.625rem, 0.625rem + ((1vw - 0.2rem) * 1), 0.625rem);--wp--preset--font-size--size-12: 12.0px;--wp--preset--font-size--size-12-fluid: clamp(10px, 0.625rem + ((1vw - 3.2px) * 0.227), 12px);--wp--preset--font-size--size-14: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 1), 0.875rem);--wp--preset--font-size--size-16: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1), 1rem);--wp--preset--font-size--size-18: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 1), 1.125rem);--wp--preset--font-size--size-20: 1.250rem;--wp--preset--font-size--size-20-fluid: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.455), 1.25rem);--wp--preset--font-size--size-25: clamp(1.5625rem, 1.563rem + ((1vw - 0.2rem) * 1), 1.5625rem);--wp--preset--font-size--size-28: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.909), 1.75rem);--wp--preset--font-size--size-30: clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 1), 1.875rem);--wp--preset--font-size--size-32: clamp(2rem, 2rem + ((1vw - 0.2rem) * 1), 2rem);--wp--preset--font-size--size-36: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 1.364), 2.25rem);--wp--preset--font-size--size-40: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 1), 2.5rem);--wp--preset--font-size--size-44: clamp(2.75rem, 2.75rem + ((1vw - 0.2rem) * 1), 2.75rem);--wp--preset--font-size--size-44-fluid: clamp(2rem, 2rem + ((1vw - 0.2rem) * 1.364), 2.75rem);--wp--preset--font-size--size-80: clamp(3rem, 3rem + ((1vw - 0.2rem) * 3.636), 5rem);--wp--preset--font-family--theinhardt-condensed: "Theinhardt Condensed", sans-serif;--wp--preset--font-family--moderat-serif: "Moderat Serif", sans-serif;--wp--preset--font-family--moderat-mono: "Moderat Mono", monospace;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 918px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{color: var(--wp--preset--color--brown);font-family: var(--wp--preset--font-family--moderat-serif);--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--brown);font-weight: 500;text-decoration: underline;}:root :where(a:where(:not(.wp-element-button)):visited){color: var(--wp--preset--color--brown);}:root :where(a:where(:not(.wp-element-button)):hover){color: var(--wp--preset--color--brown);text-decoration: underline;}:root :where(a:where(:not(.wp-element-button)):active){color: var(--wp--preset--color--brown);}h1{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-80);font-weight: 700;line-height: 1;margin-bottom: 1rem;}h2{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-44);font-weight: 700;line-height: 1;margin-top: 3rem;margin-bottom: 1rem;}h3{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-36);font-weight: 700;line-height: 1;margin-top: 1rem;margin-bottom: 1rem;}h4{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-25);font-weight: 700;margin-bottom: 1rem;}h5{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-18);font-weight: 700;margin-bottom: 1rem;}h6{color: var(--color-brown);font-family: var(--wp--preset--font-family--theinhardt-condensed);font-size: var(--wp--preset--font-size--size-20);font-weight: 700;margin-bottom: 1rem;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-gray-light-color{color: var(--wp--preset--color--gray-light) !important;}.has-orange-color{color: var(--wp--preset--color--orange) !important;}.has-teal-color{color: var(--wp--preset--color--teal) !important;}.has-brown-color{color: var(--wp--preset--color--brown) !important;}.has-beige-color{color: var(--wp--preset--color--beige) !important;}.has-beige-dark-color{color: var(--wp--preset--color--beige-dark) !important;}.has-beige-light-color{color: var(--wp--preset--color--beige-light) !important;}.has-beige-light-extra-color{color: var(--wp--preset--color--beige-light-extra) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-gray-light-background-color{background-color: var(--wp--preset--color--gray-light) !important;}.has-orange-background-color{background-color: var(--wp--preset--color--orange) !important;}.has-teal-background-color{background-color: var(--wp--preset--color--teal) !important;}.has-brown-background-color{background-color: var(--wp--preset--color--brown) !important;}.has-beige-background-color{background-color: var(--wp--preset--color--beige) !important;}.has-beige-dark-background-color{background-color: var(--wp--preset--color--beige-dark) !important;}.has-beige-light-background-color{background-color: var(--wp--preset--color--beige-light) !important;}.has-beige-light-extra-background-color{background-color: var(--wp--preset--color--beige-light-extra) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-gray-light-border-color{border-color: var(--wp--preset--color--gray-light) !important;}.has-orange-border-color{border-color: var(--wp--preset--color--orange) !important;}.has-teal-border-color{border-color: var(--wp--preset--color--teal) !important;}.has-brown-border-color{border-color: var(--wp--preset--color--brown) !important;}.has-beige-border-color{border-color: var(--wp--preset--color--beige) !important;}.has-beige-dark-border-color{border-color: var(--wp--preset--color--beige-dark) !important;}.has-beige-light-border-color{border-color: var(--wp--preset--color--beige-light) !important;}.has-beige-light-extra-border-color{border-color: var(--wp--preset--color--beige-light-extra) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-size-10-font-size{font-size: var(--wp--preset--font-size--size-10) !important;}.has-size-12-font-size{font-size: var(--wp--preset--font-size--size-12) !important;}.has-size-12-fluid-font-size{font-size: var(--wp--preset--font-size--size-12-fluid) !important;}.has-size-14-font-size{font-size: var(--wp--preset--font-size--size-14) !important;}.has-size-16-font-size{font-size: var(--wp--preset--font-size--size-16) !important;}.has-size-18-font-size{font-size: var(--wp--preset--font-size--size-18) !important;}.has-size-20-font-size{font-size: var(--wp--preset--font-size--size-20) !important;}.has-size-20-fluid-font-size{font-size: var(--wp--preset--font-size--size-20-fluid) !important;}.has-size-25-font-size{font-size: var(--wp--preset--font-size--size-25) !important;}.has-size-28-font-size{font-size: var(--wp--preset--font-size--size-28) !important;}.has-size-30-font-size{font-size: var(--wp--preset--font-size--size-30) !important;}.has-size-32-font-size{font-size: var(--wp--preset--font-size--size-32) !important;}.has-size-36-font-size{font-size: var(--wp--preset--font-size--size-36) !important;}.has-size-40-font-size{font-size: var(--wp--preset--font-size--size-40) !important;}.has-size-44-font-size{font-size: var(--wp--preset--font-size--size-44) !important;}.has-size-44-fluid-font-size{font-size: var(--wp--preset--font-size--size-44-fluid) !important;}.has-size-80-font-size{font-size: var(--wp--preset--font-size--size-80) !important;}.has-theinhardt-condensed-font-family{font-family: var(--wp--preset--font-family--theinhardt-condensed) !important;}.has-moderat-serif-font-family{font-family: var(--wp--preset--font-family--moderat-serif) !important;}.has-moderat-mono-font-family{font-family: var(--wp--preset--font-family--moderat-mono) !important;}
+:root :where(p){font-family: var(--wp--preset--font-family--moderat-serif);font-size: var(--wp--preset--font-size--size-20-fluid);font-weight: 400;line-height: 1.5;margin-bottom: 1em;}
+:root :where(.wp-block-list > li){font-family: var(--wp--preset--font-family--moderat-serif);font-size: var(--wp--preset--font-size--size-20);font-weight: 500;line-height: 1.4;margin-bottom: 1em;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet preload" as="style" href="https://citizenlab.ca/wp-content/plugins/bigfoot_footnotes/library/bigfoot-number.css?ver=7.1.3" media="all"><link rel="stylesheet preload" as="style" href="https://citizenlab.ca/wp-content/themes/theme-citizenlab/styles/style.css?ver=1.0.0" media="all"><link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css?ver=1.7.13" media="all"><script id="jquery-core-js" src="https://citizenlab.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-PB6MGSC" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["citizenlab.ca"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PB6MGSC", {"googlesitekit_post_type":"research"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<meta name="generator" content="Site Kit by Google 1.190.0" /><noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><style class="wp-fonts-local">
+@font-face{font-family:"Theinhardt Condensed";font-style:normal;font-weight:700;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Theinhardt-Condensed-Bold.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Theinhardt-Condensed-Bold.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Theinhardt Condensed";font-style:italic;font-weight:700;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Theinhardt-Condensed-Bold-Italic.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Theinhardt-Condensed-Bold-Italic.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Serif";font-style:normal;font-weight:400;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Regular.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Regular.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Serif";font-style:italic;font-weight:400;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Regular-Italic.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Regular-Italic.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Serif";font-style:normal;font-weight:700;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Bold.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Bold.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Serif";font-style:italic;font-weight:700;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Bold-Italic.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Serif-Bold-Italic.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Mono";font-style:normal;font-weight:400;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Regular.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Regular.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Mono";font-style:italic;font-weight:400;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Regular-Italic.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Regular-Italic.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Mono";font-style:normal;font-weight:600;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Semibold.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Semibold.woff') format('woff');font-stretch:normal;}
+@font-face{font-family:"Moderat Mono";font-style:italic;font-weight:600;font-display:fallback;src:url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Semibold-Italic.woff2') format('woff2'), url('https://citizenlab.ca/wp-content/themes/theme-citizenlab/fonts/Moderat-Mono-Semibold-Italic.woff') format('woff');font-stretch:normal;}
+</style>
+<link rel="icon" href="https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-180x180.png" />
+<meta name="msapplication-TileImage" content="https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-270x270.png" />
+    </head>
+    <body class="wp-singular research-template-default single single-research postid-83392 wp-theme-theme-citizenlab">
+                <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+        <div class="screen-reader-text">
+            <span id="new-window">Opens in a new window</span>
+            <span id="external-site">Opens an external site</span>
+            <span id="new-window-external-site">Opens an external site in a new window</span>
+        </div>
+        <header id="header" class="site-header" role="banner">
+            <!-- <a href="https://citizenlab.ca">
+                <picture class="site-logo">
+                    <source  type="image/webp" data-srcset="https://citizenlab.ca/wp-content/themes/theme-citizenlab/images/logo.webp">
+                    <source  type="image/png" data-srcset="https://citizenlab.ca/wp-content/themes/theme-citizenlab/images/logo.png">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Citizen Lab" data-src="https://citizenlab.ca/wp-content/themes/theme-citizenlab/images/logo.png" decoding="async" class="lazyload">
+                </picture><noscript><img src="https://citizenlab.ca/wp-content/themes/theme-citizenlab/images/logo.png" alt="The Citizen Lab" data-eio="l"></noscript>
+            </a> -->
+            			<nav class="grid-nav-mobile" role="navigation" aria-label="Mobile Navigation">
+
+	<div class="grid-nav-mobile__wrapper">
+				<div class="grid-nav-mobile__background-cell"></div>
+				<button class="hamburger-menu mobile" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-primary-nav">
+			<span class="hamburger-box" aria-hidden="true">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+				<div class="grid-nav-mobile__item primary-nav" id="mobile-primary-nav">
+			<nav class="site-nav" aria-label="Primary navigation"><ul id="menu-primary-menu" class="menu"><li id="menu-item-85318" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85318"><a href="#">Our Work</a>
+<ul class="sub-menu">
+	<li id="menu-item-83866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83866"><a href="https://citizenlab.ca/research/">Research</a></li>
+	<li id="menu-item-83865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83865"><a href="https://citizenlab.ca/publication-directory/">Publication Directory</a></li>
+	<li id="menu-item-83867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83867"><a href="https://citizenlab.ca/tools-resources/">Tools &amp; Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-85320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85320"><a href="#">News &#038; Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-84381" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84381"><a href="https://citizenlab.ca/content-type/expert-insights/">Expert Insights</a></li>
+	<li id="menu-item-84382" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84382"><a href="https://citizenlab.ca/content-type/in-the-media/">In the Media</a></li>
+	<li id="menu-item-83860" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83860"><a href="https://citizenlab.ca/events/">Events</a></li>
+	<li id="menu-item-84473" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84473"><a href="https://citizenlab.ca/content-type/news/">News</a></li>
+</ul>
+</li>
+<li id="menu-item-85325" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85325"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-83869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83869"><a href="https://citizenlab.ca/who-we-are/">Who We Are</a></li>
+	<li id="menu-item-84299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84299"><a href="https://citizenlab.ca/contact/">Contact</a></li>
+	<li id="menu-item-83864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83864"><a href="https://citizenlab.ca/people/">People</a></li>
+	<li id="menu-item-83897" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83897"><a target="_blank" href="https://engage.utoronto.ca/site/SPageServer?pagename=donate#/fund/847">Donate</a></li>
+</ul>
+</li>
+</ul></nav>		</div>
+
+
+				<div class="grid-nav-mobile__item search-field">
+			<p>Search by keyword</p>
+			<div class="search-form__wrapper" id="mobile-search-form">
+				<form role="search" aria-label="Mobile search" method="get" id="searchform-mobile" class="searchform" action="https://citizenlab.ca/">
+	<div>
+		<label class="screen-reader-text" for="s-mobile">Search for:</label>
+		<input type="text" value="" name="s" id="s-mobile">
+		<input type="submit" id="searchsubmit-mobile" value="Search">
+	</div>
+</form>
+				<button class="search-toggle__button mobile" aria-label="Toggle Search" aria-expanded="false" aria-controls="mobile-search-form">
+					<span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+  <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+  <path d="M12 13L18 18.5" stroke="currentColor" stroke-width="2"/>
+</svg>
+</span>
+				</button>
+			</div>
+		</div>
+
+
+
+
+				<div class="grid-nav-mobile__item menu-closed-logo">
+			<a href="https://citizenlab.ca" aria-label="Citizen Lab Home">
+				<span aria-hidden="true"><svg width="130" height="16" viewBox="0 0 130 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.2612 0.658691V3.13459H7.00344V15.2926H4.21479V3.13459H0.957031V0.658691H10.2612Z" fill="#1ABCB9"/>
+<path d="M12.0957 15.2926V0.658691H14.8909V6.52268H18.8458V0.658691H21.6409V15.2926H18.8458V8.96601H14.8909V15.2926H12.0957Z" fill="#1ABCB9"/>
+<path d="M24.3184 15.2926V0.658691H31.9741V3.13459H27.1135V6.47055H30.8209V8.93995H27.1135V12.7906H32.1826V15.2665L24.3184 15.2926Z" fill="#1ABCB9"/>
+<path d="M37.0068 10.9677C37.0068 12.5901 37.7104 13.0331 38.8246 13.0331C39.9387 13.0331 40.6489 12.5901 40.6489 10.9677V9.9969H43.4506V10.6028C43.4506 14.2125 41.5416 15.509 38.8246 15.509C36.1076 15.509 34.2051 14.2059 34.2051 10.6028V5.39041C34.2051 1.78731 36.1141 0.490723 38.8246 0.490723C41.535 0.490723 43.4506 1.79383 43.4506 5.39041V5.43602H40.6489V5.03205C40.6489 3.40968 39.9453 2.96011 38.8246 2.96011C37.7039 2.96011 37.0068 3.40968 37.0068 5.03205V10.9677Z" fill="#F8981C"/>
+<path d="M45.8809 15.2926V0.658691H48.7021V15.2926H45.8809Z" fill="#F8981C"/>
+<path d="M59.825 0.658691V3.13459H56.5673V15.2926H53.7656V3.13459H50.5078V0.658691H59.825Z" fill="#F8981C"/>
+<path d="M61.6543 15.2926V0.658691H64.4495V15.2926H61.6543Z" fill="#F8981C"/>
+<path d="M67.0981 0.658691H75.2034V3.0108L69.6782 12.7841H75.3272V15.26H66.5312V12.9209L72.0694 3.14763H67.0981V0.658691Z" fill="#F8981C"/>
+<path d="M77.252 15.2926V0.658691H84.9142V3.13459H80.0471V6.47055H83.7544V8.93995H80.0471V12.7906H85.1097V15.2665L77.252 15.2926Z" fill="#F8981C"/>
+<path d="M87.5469 15.2926V0.658691H90.6027L94.512 9.33088H94.5576V0.658691H97.1117V15.2926H94.4338L90.1401 5.819H90.101V15.2665L87.5469 15.2926Z" fill="#F8981C"/>
+<path d="M99.7637 15.2926V0.658691H102.565V12.8167H107.061V15.2926H99.7637Z" fill="#1ABCB9"/>
+<path d="M107.77 15.2926L111.392 0.658691H114.982L118.514 15.2926H115.81L115.158 12.2107H111.249L110.454 15.2926H107.77ZM111.764 9.72833H114.507L113.203 3.81873H113.164L111.764 9.72833Z" fill="#1ABCB9"/>
+<path d="M120.033 0.658691H123.943C126.94 0.658691 128.66 1.91619 128.66 4.43119C128.665 5.04909 128.503 5.65694 128.193 6.1911C127.882 6.72526 127.434 7.16608 126.894 7.46743C128.432 8.43825 129.044 9.24618 129.044 11.077C129.044 13.9699 127.09 15.2926 124.138 15.2926H120.04L120.033 0.658691ZM122.835 6.45753H123.806C125.063 6.45753 125.897 5.72127 125.897 4.73091C125.897 3.74054 125.246 2.97171 123.943 2.97171H122.828L122.835 6.45753ZM122.835 12.9731H124.008C124.3 13.0094 124.596 12.9806 124.876 12.8887C125.155 12.7969 125.411 12.6442 125.625 12.4418C125.839 12.2394 126.005 11.9921 126.112 11.7179C126.218 11.4436 126.263 11.1491 126.242 10.8555C126.242 9.45468 125.272 8.76402 123.812 8.76402H122.841L122.835 12.9731Z" fill="#1ABCB9"/>
+</svg>
+</span>
+			</a>
+		</div>
+
+
+	</div>
+</nav>        </header>
+        <div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<nav class="grid-nav" role="navigation" aria-label="Main Navigation">
+	
+	<div class="grid-nav__background-cell"></div>
+
+		<div class="grid-nav__item primary-nav" id="desktop-primary-nav">
+		<nav class="site-nav" aria-label="Primary navigation"><ul id="menu-primary-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85318"><a href="#">Our Work</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83866"><a href="https://citizenlab.ca/research/">Research</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83865"><a href="https://citizenlab.ca/publication-directory/">Publication Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83867"><a href="https://citizenlab.ca/tools-resources/">Tools &amp; Resources</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85320"><a href="#">News &#038; Events</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84381"><a href="https://citizenlab.ca/content-type/expert-insights/">Expert Insights</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84382"><a href="https://citizenlab.ca/content-type/in-the-media/">In the Media</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83860"><a href="https://citizenlab.ca/events/">Events</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-84473"><a href="https://citizenlab.ca/content-type/news/">News</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85325"><a href="#">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83869"><a href="https://citizenlab.ca/who-we-are/">Who We Are</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84299"><a href="https://citizenlab.ca/contact/">Contact</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83864"><a href="https://citizenlab.ca/people/">People</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83897"><a target="_blank" href="https://engage.utoronto.ca/site/SPageServer?pagename=donate#/fund/847">Donate</a></li>
+</ul>
+</li>
+</ul></nav>	</div>
+
+		<div class="grid-nav__item focus-areas">
+					<h2>Focus Areas</h2>
+			<ul class="focus-areas-list">
+									<li>
+						<a href="https://citizenlab.ca/focus-area/app-privacy-security/" class="focus-area-link">
+							App Security &amp; Privacy						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/artificial-intelligence/" class="focus-area-link">
+							Artificial Intelligence						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/censorship/" class="focus-area-link">
+							Censorship						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/digital-transnational-repression/" class="focus-area-link">
+							Digital Transnational Repression						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/disinformation/" class="focus-area-link">
+							Disinformation						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/law-policy/" class="focus-area-link">
+							Law &amp; Policy						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/mass-surveillance/" class="focus-area-link">
+							Mass Surveillance						</a>
+					</li>
+									<li>
+						<a href="https://citizenlab.ca/focus-area/targeted-surveillance/" class="focus-area-link">
+							Targeted Surveillance						</a>
+					</li>
+							</ul>
+			</div>
+
+		<div class="grid-nav__item newsletter-signup">
+					<a href="https://citizenlab.ca/newsletter/" target="_self" class="btn">Subscribe to our newsletter</a>
+			</div>
+
+
+		<div class="grid-nav__item search-toggle">
+		<div class="search-form__wrapper" id="desktop-search-form">
+			<p>Search by keyword</p>
+			<form role="search" aria-label="Desktop search" method="get" id="searchform-desktop" class="searchform" action="https://citizenlab.ca/">
+	<div>
+		<label class="screen-reader-text" for="s-desktop">Search for:</label>
+		<input type="text" value="" name="s" id="s-desktop">
+		<input type="submit" id="searchsubmit-desktop" value="Search">
+	</div>
+</form>
+		</div>
+
+		<button class="search-toggle__button desktop" aria-label="Toggle Search" aria-expanded="false" aria-controls="desktop-search-form">
+			<span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+  <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+  <path d="M12 13L18 18.5" stroke="currentColor" stroke-width="2"/>
+</svg>
+</span>
+		</button>
+
+		<button class="search-close-toggle__button desktop" aria-label="Close Search" aria-expanded="false" aria-controls="desktop-search-form">
+			<span aria-hidden="true"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-1" x2="25.1719" y2="-1" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 0.814453 18.2993)" stroke="currentColor" stroke-width="2"/>
+<path d="M19.0089 18.7992L1.20966 1" stroke="currentColor" stroke-width="2"/>
+</svg>
+</span>
+		</button>
+	</div>
+
+
+		<div class="grid-nav__item menu-closed-logo ">
+		<a href="https://citizenlab.ca" aria-label="Citizen Lab Home">
+			<span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="143" viewBox="0 0 18 143" fill="none">
+  <path d="M0.820312 132.612L3.58457 132.612L3.58457 136.249L17.1586 136.249L17.1586 139.363L3.58458 139.363L3.58458 143L0.820312 143L0.820312 132.612Z" fill="#1ABCB9"/>
+  <path d="M17.1586 130.561L0.820312 130.561L0.820312 127.44L7.36726 127.44L7.36726 123.024L0.820312 123.024L0.820312 119.904L17.1586 119.904L17.1586 123.024L10.0952 123.024L10.0952 127.44L17.1586 127.44L17.1586 130.561Z" fill="#1ABCB9"/>
+  <path d="M17.1586 116.914L0.820312 116.914L0.820312 108.367L3.58457 108.367L3.58458 113.793L7.30906 113.793L7.30906 109.654L10.0661 109.654L10.0661 113.793L14.3652 113.793L14.3652 108.134L17.1295 108.134L17.1586 116.914Z" fill="#1ABCB9"/>
+  <path d="M12.3144 102.75C14.1257 102.75 14.6204 101.965 14.6204 100.721C14.6204 99.477 14.1257 98.684 12.3144 98.684L11.2305 98.684L11.2305 95.5561L11.907 95.5561C15.937 95.5561 17.3846 97.6875 17.3846 100.721C17.3846 103.754 15.9298 105.878 11.907 105.878L6.08752 105.878C2.06479 105.878 0.617187 103.747 0.617187 100.721C0.617187 97.6947 2.07206 95.5561 6.08752 95.5561L6.13844 95.5561L6.13844 98.684L5.68743 98.684C3.87611 98.684 3.37417 99.4697 3.37417 100.721C3.37417 101.972 3.87611 102.75 5.68743 102.75L12.3144 102.75Z" fill="#F8981C"/>
+  <path d="M17.1586 92.8433L0.820312 92.8433L0.820312 89.6935L17.1586 89.6934L17.1586 92.8433Z" fill="#F8981C"/>
+  <path d="M0.820312 77.2763L3.58457 77.2763L3.58457 80.9135L17.1586 80.9135L17.1586 84.0415L3.58458 84.0415L3.58458 87.6787L0.820312 87.6787L0.820312 77.2763Z" fill="#F8981C"/>
+  <path d="M17.1586 75.2383L0.820312 75.2383L0.820312 72.1176L17.1586 72.1176L17.1586 75.2383Z" fill="#F8981C"/>
+  <path d="M0.820312 69.1572L0.820312 60.1078L3.44637 60.1078L14.3579 66.2765L14.3579 59.9696L17.1222 59.9696L17.1222 69.79L14.5107 69.79L3.59913 63.6068L3.59913 69.1572L0.820312 69.1572Z" fill="#F8981C"/>
+  <path d="M17.1586 57.8169L0.820312 57.8169L0.820312 49.2622L3.58457 49.2622L3.58458 54.6962L7.30906 54.6962L7.30906 50.5571L10.0661 50.5571L10.0661 54.6962L14.3652 54.6962L14.3652 49.044L17.1295 49.044L17.1586 57.8169Z" fill="#F8981C"/>
+  <path d="M17.1586 46.3232L0.820312 46.3232L0.820312 42.9116L10.5025 38.5469L10.5025 38.496L0.820312 38.496L0.820312 35.6444L17.1586 35.6444L17.1586 38.6342L6.58162 43.428L6.58162 43.4717L17.1295 43.4717L17.1586 46.3232Z" fill="#F8981C"/>
+  <path d="M17.1586 32.6831L0.820312 32.6831L0.820312 29.5551L14.3943 29.5551L14.3943 24.5358L17.1586 24.5358L17.1586 32.6831Z" fill="#1ABCB9"/>
+  <path d="M17.1586 23.7437L0.820312 19.6991L0.820312 15.6909L17.1586 11.7482L17.1586 14.7671L13.7178 15.4945L13.7178 19.8591L17.1586 20.7466L17.1586 23.7437ZM10.9463 19.2845L10.9463 16.2219L4.34839 17.6768L4.34839 17.7205L10.9463 19.2845Z" fill="#1ABCB9"/>
+  <path d="M0.820312 10.0605L0.820312 5.69591C0.820312 2.3497 2.22427 0.429255 5.03218 0.429254C5.72205 0.423814 6.40068 0.603941 6.99706 0.950758C7.59343 1.29758 8.0856 1.79833 8.42204 2.40062C9.50592 0.683863 10.4079 6.8065e-05 12.4521 6.79757e-05C15.6819 6.78345e-05 17.1586 2.18238 17.1586 5.47768L17.1586 10.0533L0.820312 10.0605ZM7.29452 6.93256L7.29452 5.84868C7.29452 4.44472 6.47251 3.5136 5.3668 3.5136C4.2611 3.5136 3.40272 4.24104 3.40272 5.69591L3.40272 6.93984L7.29452 6.93256ZM14.5689 6.93256L14.5689 5.62317C14.6094 5.29708 14.5773 4.96607 14.4747 4.65388C14.3722 4.3417 14.2018 4.0561 13.9758 3.81758C13.7497 3.57905 13.4737 3.39352 13.1675 3.27431C12.8613 3.15509 12.5325 3.10514 12.2047 3.12806C10.6407 3.12806 9.86964 4.21194 9.86964 5.8414L9.86964 6.92529L14.5689 6.93256Z" fill="#1ABCB9"/>
+</svg>
+</span>
+		</a>
+	</div>
+
+
+		<button class="hamburger-menu desktop" aria-label="Toggle Menu" aria-expanded="false" aria-controls="desktop-primary-nav">
+		<span class="hamburger-box" aria-hidden="true">
+			<span class="hamburger-inner"></span>
+		</span>
+	</button>
+</nav>
+
+<article id="post-83392" class="research-single research-default post-83392 research type-research status-publish has-post-thumbnail hentry content-type-brief focus-area-targeted-surveillance region-europe region-italy topic-paragon topic-spyware year-sf-1449">
+	<div class="entry-content nua-grid translated">
+
+		<header class="research-single__header alignfull">
+							<div class="research-single__thumbnail">
+					<img width="1024" height="576" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJAAQMAAAApW4aWAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAF5JREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GIk8AAbOpTZoAAAAASUVORK5CYII=" class="attachment-large size-large wp-post-image lazyload" alt="" decoding="async" fetchpriority="high"   data-src="https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1024x576.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1024x576.png 1024w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-300x169.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-768x432.png 768w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1536x864.png 1536w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-605x340.png 605w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-297x167.png 297w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-492x277.png 492w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-180x101.png 180w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1.png 1920w" data-max-width="1024" data-sizes="auto" data-eio-rwidth="1024" data-eio-rheight="576" /><noscript><img width="1024" height="576" src="https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1024x576.png" class="attachment-large size-large wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1024x576.png 1024w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-300x169.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-768x432.png 768w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-1536x864.png 1536w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-605x340.png 605w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-297x167.png 297w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-492x277.png 492w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1-180x101.png 180w, https://citizenlab.ca/wp-content/uploads/2025/06/featuredimage-paragonredux-1920-x-1080-px-1.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" data-eio="l" /></noscript>				</div>
+			
+			<div class="research-single__title-container" dir="ltr">
+				<div class="single__breadcrumbs">
+					<a class="single__breadcrumbs-item" href="https://citizenlab.ca/research">Research</a>
+					<span class="single__separator">→</span>
+											<a class="single__breadcrumbs-item" href="https://citizenlab.ca/focus-area/targeted-surveillance/">
+							Targeted Surveillance						</a>
+									</div>
+									<h1 class="research-single__title">Graphite Caught</h1>
+					<h2 class="research-single__subtitle">First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted</h2>
+				
+			</div>
+			
+							<div class="research-single__excerpt"><p>On April 29, 2025, a select group of iOS users were notified by Apple that they were targeted with advanced spyware. Among the group were two journalists who consented to the technical analysis of their cases. In this report, we discuss key findings from our forensic analyses of their devices. </p>
+</div>
+			
+			
+
+			
+
+
+
+
+			<div class="research-single__meta-container">
+				<div class="research-single__meta-wrapper">
+					
+
+					<div class="research-single__meta-date-author-container">
+						<div class="research-single__meta-date">
+							<div class="research-single__meta-date-published">
+								<h3>Date Published</h3>
+								<p>June 12, 2025</p>
+							</div>
+													</div>
+													<div class="research-single__meta-author">
+								<h3>Authors</h3>
+								<p><a href="https://citizenlab.ca/person/bill-marczak/">Bill Marczak</a> and <a href="https://citizenlab.ca/person/john-scott-railton/">John Scott-Railton</a></p>							</div>
+											</div>
+
+
+										<div class="single__topics-container">
+													<h3>Topics</h3>
+
+							
+									<a class="single__focus-area" href="https://citizenlab.ca/focus-area/targeted-surveillance/">
+										Targeted Surveillance									</a>
+									<div class="topics-list">
+							<a href="https://citizenlab.ca/topic/paragon/" class="topic-term">Paragon</a>, 						<a href="https://citizenlab.ca/topic/spyware/" class="topic-term">spyware</a>				</div>
+											</div>
+
+					<div class="research-single__languages-container">
+
+						
+
+						<div class="research-single__ctas-container">
+
+							
+							<div class="research-single__share-button share-button">
+								<div class="research-single__ctas-inner">
+									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+										<path d="M9.19623 4.19385C8.41088 4.19385 7.7014 4.51746 7.19258 5.0381L5.50383 4.06222C5.57086 3.82173 5.60753 3.56816 5.60753 3.30615C5.60753 1.75646 4.35214 0.5 2.80377 0.5C1.25539 0.5 0 1.75646 0 3.30615C0 4.85584 1.25539 6.11229 2.80377 6.11229C3.58912 6.11229 4.2986 5.78869 4.80784 5.26805L6.49659 6.24393C6.42956 6.48442 6.39289 6.73799 6.39289 7C6.39289 7.26201 6.42956 7.51558 6.49659 7.75607L4.80784 8.73196C4.29902 8.21131 3.58912 7.88771 2.80377 7.88771C1.25539 7.88771 0 9.14374 0 10.6939C0 12.244 1.25539 13.5 2.80377 13.5C4.35214 13.5 5.60753 12.2435 5.60753 10.6939C5.60753 10.4318 5.57086 10.1783 5.50383 9.93778L7.19258 8.9619C7.7014 9.48254 8.4113 9.80615 9.19623 9.80615C10.7446 9.80615 12 8.54969 12 7C12 5.45031 10.7446 4.19385 9.19623 4.19385Z" fill="currentColor" />
+									</svg>
+									Share								</div>
+								
+<ul class="socials">
+		<li><a href="https://bsky.app/intent/compose?text=Graphite%2520Caught%253A%2520First%2520Forensic%2520Confirmation%2520of%2520Paragon%25E2%2580%2599s%2520iOS%2520Mercenary%2520Spyware%2520Finds%2520Journalists%2520Targeted+https%253A%252F%252Fcitizenlab.ca%252Fresearch%252Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%252F" target="_blank" aria-label="Share on Bluesky">
+			
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" fill="none" viewBox="0 0 21 18">
+<path fill="currentColor" d="M15.795 1.436c-2.312 1.728-4.799 5.231-5.712 7.111-.913-1.88-3.4-5.383-5.712-7.111C2.703.189 0-.776 0 2.294c0 .613.353 5.15.56 5.886.72 2.561 3.343 3.214 5.676 2.819-4.078.691-5.116 2.98-2.875 5.268 4.255 4.347 6.116-1.09 6.593-2.483.088-.256.129-.375.13-.274 0-.101.04.018.128.274.477 1.393 2.338 6.83 6.594 2.483 2.24-2.288 1.203-4.577-2.876-5.268 2.334.395 4.957-.258 5.676-2.819.207-.736.56-5.273.56-5.886 0-3.07-2.703-2.105-4.37-.858Z"></path></svg>		</a></li>
+
+		<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcitizenlab.ca%2Fresearch%2Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%2F" target="_blank" aria-label="Share on LinkedIn">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" fill="none" viewBox="0 0 19 20">
+	<path fill="currentColor"
+		d="M17.692.531c.712.019 1.244.716 1.25 1.417l-.003 16.33c-.039.676-.534 1.323-1.224 1.358H1.343C.726 19.613.175 19.042.167 18.41V1.758C.174 1.143.73.528 1.343.53h16.349ZM4.147 3.187c-1.237.13-1.83 1.664-1.05 2.653.785.998 2.4.694 2.766-.531.345-1.151-.55-2.244-1.716-2.121v-.001ZM16.084 16.79v-5.703c-.09-1.704-.579-3.2-2.4-3.53-1.208-.222-2.518.003-3.3 1.045-.06.08-.152.272-.195.316-.029.03-.044.028-.083.024V7.717H7.465v9.074h2.76v-4.894c.063-1.022.4-1.886 1.524-1.95 1.193-.067 1.542.75 1.599 1.827v5.017h2.736ZM5.712 7.717H2.975v9.074h2.737V7.717Z">
+	</path>
+</svg>		</a></li>
+
+		<li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcitizenlab.ca%2Fresearch%2Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%2F&text=Graphite%20Caught%3A%20First%20Forensic%20Confirmation%20of%20Paragon%E2%80%99s%20iOS%20Mercenary%20Spyware%20Finds%20Journalists%20Targeted" target="_blank" aria-label="Share on X">
+			<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18"><path fill="currentColor" d="M10.121 7.818 16.14.822h-1.426L9.488 6.897 5.314.822H.5l6.312 9.186L.5 17.344h1.426l5.519-6.415 4.408 6.415h4.814L10.12 7.818Zm-1.953 2.27-.64-.914L2.44 1.896h2.19L8.738 7.77l.64.914 5.337 7.635h-2.19l-4.356-6.23Z"></path></svg>		</a></li>
+
+		<li><a href="https://mastodon.social/share?text=Graphite%2520Caught%253A%2520First%2520Forensic%2520Confirmation%2520of%2520Paragon%25E2%2580%2599s%2520iOS%2520Mercenary%2520Spyware%2520Finds%2520Journalists%2520Targeted+https%253A%252F%252Fcitizenlab.ca%252Fresearch%252Ffirst-forensic-confirmation-of-paragons-ios-mercenary-spyware-finds-journalists-targeted%252F" target="_blank" aria-label="Share on Mastodon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" fill="none" viewBox="0 0 19 20">
+	<path fill="currentColor"
+		d="M18.76 4.775c-.28-2.047-2.093-3.66-4.242-3.973C14.156.749 12.782.557 9.6.557h-.024c-3.182 0-3.865.192-4.228.245-2.089.304-3.997 1.753-4.46 3.825-.222 1.02-.246 2.15-.205 3.188.06 1.488.07 2.973.208 4.455.095.984.26 1.96.495 2.921.44 1.776 2.222 3.253 3.967 3.856a10.8 10.8 0 0 0 5.802.301 8.68 8.68 0 0 0 .629-.169c.467-.146 1.015-.31 1.418-.597a.045.045 0 0 0 .018-.035v-1.436a.044.044 0 0 0-.034-.04.045.045 0 0 0-.018 0 16.33 16.33 0 0 1-3.766.433c-2.182 0-2.77-1.02-2.937-1.444a4.414 4.414 0 0 1-.255-1.138.041.041 0 0 1 .033-.043.043.043 0 0 1 .02 0c1.212.289 2.456.434 3.703.434.3 0 .6 0 .9-.008 1.255-.035 2.577-.098 3.812-.335.03-.006.061-.011.088-.02 1.947-.367 3.8-1.522 3.989-4.448a82.7 82.7 0 0 0 .024-1.326c.001-.406.133-2.88-.019-4.401Zm-2.997 7.299h-2.048V7.138c0-1.04-.44-1.57-1.335-1.57-.984 0-1.477.628-1.477 1.866v2.702H8.868V7.434c0-1.238-.494-1.865-1.477-1.865-.89 0-1.334.53-1.335 1.569v4.936H4.01V6.988c0-1.039.27-1.865.808-2.477.557-.61 1.286-.923 2.192-.923 1.048 0 1.84.396 2.368 1.188l.51.842.51-.842c.527-.792 1.32-1.188 2.366-1.188.904 0 1.634.313 2.192.923.539.612.809 1.437.809 2.477l-.002 5.086Z">
+	</path>
+</svg>		</a></li>
+
+		<li><a href="/cdn-cgi/l/email-protection#a798d4d2c5cdc2c4d39ae0d5c6d7cfced3c28295929597e4c6d2c0cfd382959294e68295929597e1ced5d4d38295929597e1c8d5c2c9d4cec48295929597e4c8c9c1ced5cac6d3cec8c98295929597c8c18295929597f7c6d5c6c0c8c9829592e2958295929f978295929e9ed48295929597cee8f48295929597eac2d5c4c2c9c6d5de8295929597f4d7ded0c6d5c28295929597e1cec9c3d48295929597edc8d2d5c9c6cbced4d3d48295929597f3c6d5c0c2d3c2c381c5c8c3de9ae0d5c6d7cfced3c28295929597e4c6d2c0cfd382959294e68295929597e1ced5d4d38295929597e1c8d5c2c9d4cec48295929597e4c8c9c1ced5cac6d3cec8c98295929597c8c18295929597f7c6d5c6c0c8c9829592e2958295929f978295929e9ed48295929597cee8f48295929597eac2d5c4c2c9c6d5de8295929597f4d7ded0c6d5c28295929597e1cec9c3d48295929597edc8d2d5c9c6cbced4d3d48295929597f3c6d5c0c2d3c2c38297e68297e6cfd3d3d7d482959294e682959295e182959295e1c4ced3ceddc2c9cbc6c589c4c682959295e1d5c2d4c2c6d5c4cf82959295e1c1ced5d4d38ac1c8d5c2c9d4cec48ac4c8c9c1ced5cac6d3cec8c98ac8c18ad7c6d5c6c0c8c9d48acec8d48acac2d5c4c2c9c6d5de8ad4d7ded0c6d5c28ac1cec9c3d48acdc8d2d5c9c6cbced4d3d48ad3c6d5c0c2d3c2c382959295e1" aria-label="Share via Email">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+  <path d="M18.5 12.5386C18.4999 12.9206 18.1897 13.231 17.8076 13.231H1.19238C0.810319 13.231 0.500147 12.9206 0.5 12.5386V1.78564L9.05664 8.9165C9.18472 9.02381 9.3425 9.07666 9.5 9.07666C9.6575 9.07666 9.81528 9.02381 9.94336 8.9165L18.5 1.78564V12.5386ZM17.5566 0.769043L9.49902 7.48291L1.44238 0.769043H17.5566Z" fill="currentColor"/>
+</svg>		</a></li>
+</ul>
+							</div>
+
+															<button class="research-single__citation-button" data-citation="Bill Marczak and John Scott-Railton. “Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted,” Citizen Lab Report No. 186, University of Toronto, June 12, 2025">
+									<div class="research-single__ctas-inner">
+										<svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+											<path d="M0 0.5V13.5L4 9.26566L8 13.5V4.53496C8 2.30666 6.29369 0.5 4.18835 0.5H0Z" fill="currentColor" />
+										</svg>
+										Citation										<div class="research-single__citation-content">Bill Marczak and John Scott-Railton. “Graphite Caught: First Forensic Confirmation of Paragon’s iOS Mercenary Spyware Finds Journalists Targeted,” Citizen Lab Report No. 186, University of Toronto, June 12, 2025</div>
+									</div>
+								</button>
+							
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+
+		</header>
+
+		    <div class="scroll-progress" id="scroll-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="scroll-progress__bar"></div>
+    </div>
+    
+		<div class="table-of-contents__container">
+			
+	<div class="nua-table-of-contents wp-block-nua-table-of-contents">
+
+		<div class="nua-table-of-contents__inner">
+			<div class="nua-table-of-contents__header">
+				Contents			</div>
+
+			<ul class="active">
+									<li>
+						<a href="#introduction" data-level="2">
+							Introduction						</a>
+					</li>
+									<li>
+						<a href="#case-1-prominent-european-journalist" data-level="2">
+							Case 1: Prominent European Journalist						</a>
+					</li>
+									<li>
+						<a href="#case-2-ciro-pellegrino" data-level="2">
+							Case 2: Ciro Pellegrino						</a>
+					</li>
+									<li>
+						<a href="#the-fanpageit-paragon-cluster" data-level="2">
+							The Fanpage.it Paragon Cluster						</a>
+					</li>
+									<li>
+						<a href="#statements-by-paragon-and-the-italian-government" data-level="2">
+							Statements by Paragon and the Italian Government						</a>
+					</li>
+									<li>
+						<a href="#response-from-paragon-solutions" data-level="2">
+							Response from Paragon Solutions						</a>
+					</li>
+									<li>
+						<a href="#europes-continuing-spyware-crisis-journalists-at-risk" data-level="2">
+							Europe’s Continuing Spyware Crisis: Journalists at Risk						</a>
+					</li>
+									<li>
+						<a href="#have-you-received-a-warning" data-level="2">
+							Have You Received a Warning?						</a>
+					</li>
+									<li>
+						<a href="#appendix-confirmed-paragon-targeting-in-italy-current-knowledge" data-level="2">
+							Appendix: Confirmed Paragon Targeting in Italy, Current Knowledge						</a>
+					</li>
+									<li>
+						<a href="#note-on-research-ethics" data-level="2">
+							Note on Research Ethics						</a>
+					</li>
+									<li>
+						<a href="#acknowledgements" data-level="2">
+							Acknowledgements&nbsp;						</a>
+					</li>
+							</ul>
+		</div>
+	</div>
+		</div>
+
+		<div class="research-single__content" dir="ltr">
+			
+<h2 class="wp-block-heading" id="introduction">Introduction</h2>
+
+
+
+<p class="wp-block-paragraph">On April 29, 2025, a select group of iOS users were notified by Apple that they were targeted with advanced spyware. Among the group were two journalists that consented for the technical analysis of their cases. The key findings from our forensic analysis of their devices are summarized below:</p>
+
+
+
+<ul class="wp-block-list">
+<li><span style="font-weight: 400;">Our analysis finds forensic evidence confirming with high confidence that both a prominent European journalist (who requests anonymity), and Italian journalist Ciro Pellegrino, were targeted with Paragon’s Graphite mercenary spyware.</span><span style="font-weight: 400;"><br></span></li>
+
+
+
+<li><span style="font-weight: 400;">We identify an indicator linking both cases to the same Paragon operator.</span><span style="font-weight: 400;"><br></span></li>
+
+
+
+<li>Apple confirms to us that the zero-click attack deployed in these cases was mitigated as of iOS 18.3.1 and has assigned the vulnerability <a href="https://support.apple.com/en-us/122174">CVE-2025-43200</a>.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Our analysis is ongoing.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="case-1-prominent-european-journalist">Case 1: Prominent European Journalist</h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We analyzed Apple devices belonging to a prominent European journalist who has requested to remain anonymous. On April 29, 2025, this journalist received an Apple notification and sought technical assistance.&nbsp;</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Our forensic analysis concluded that one of the journalist’s devices was compromised with Paragon’s Graphite spyware in January and early February 2025 while running </span>iOS 18.2.1<span style="font-weight: 400;">. We attribute the compromise to Graphite with high confidence because logs on the device indicated that it made a series of requests to a server that, during the same time period, matched our </span><a href="https://citizenlab.ca/2025/03/a-first-look-at-paragons-proliferating-spyware-operations/"><span style="font-weight: 400;">published</span></a> Fingerprint P1<span style="font-weight: 400;">. We linked this fingerprint to Paragon’s Graphite spyware with high confidence.</span></p>
+
+
+
+<p class="wp-block-paragraph"><b>Graphite spyware server contacted by the journalist’s device:</b></p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td><span style="font-weight: 400;">https://46.183.184[.]91/</span></td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">The server appears to have been rented from VPS provider </span><a href="https://www.edisglobal.com/about"><span style="font-weight: 400;">EDIS Global</span></a><span style="font-weight: 400;">. The server remained online and continued to match </span>Fingerprint P1<span style="font-weight: 400;"> until at least April 12, 2025.</span></p>
+
+
+
+<figure class="wp-block-image alignnone wp-image-82407 size-full"><img decoding="async" width="1594" height="1232" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjoAAATQAQMAAABwUA7fAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAQZJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBmx30AAUduHzUAAAAASUVORK5CYII=" alt="" class="wp-image-82407 lazyload"   data-src="https://citizenlab.ca/wp-content/uploads/2025/06/image2.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2025/06/image2.png 1594w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-300x232.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-1024x791.png 1024w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-768x594.png 768w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-1536x1187.png 1536w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-440x340.png 440w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-257x199.png 257w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-358x277.png 358w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-180x139.png 180w" data-max-width="1594" data-sizes="auto" data-eio-rwidth="1594" data-eio-rheight="1232" /><noscript><img decoding="async" width="1594" height="1232" src="https://citizenlab.ca/wp-content/uploads/2025/06/image2.png" alt="" class="wp-image-82407" srcset="https://citizenlab.ca/wp-content/uploads/2025/06/image2.png 1594w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-300x232.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-1024x791.png 1024w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-768x594.png 768w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-1536x1187.png 1536w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-440x340.png 440w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-257x199.png 257w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-358x277.png 358w, https://citizenlab.ca/wp-content/uploads/2025/06/image2-180x139.png 180w" sizes="(max-width: 1594px) 100vw, 1594px" data-eio="l" /></noscript><figcaption class="wp-element-caption">Figure 1. Censys result for the IP address contacted by the journalist’s phone during the infection period.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We identified an iMessage account present in the device logs around the same time as the phone was communicating with the Paragon server </span><code>46.183.184[.]91</code><span style="font-weight: 400;">. We redact the account and refer to it as </span><strong>ATTACKER1</strong><span style="font-weight: 400;">. Based on our forensic analysis, we conclude that this account was used to deploy Paragon&#8217;s Graphite spyware using a sophisticated iMessage zero-click attack. We believe that this infection would not have been visible to the target. Apple confirms to us that the zero-click attack deployed here was mitigated as of iOS 18.3.1 and has assigned <a href="https://support.apple.com/en-us/122174">CVE-2025-43200</a> to this zero-day vulnerability.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="case-2-ciro-pellegrino"><b>Case 2: Ciro Pellegrino</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Ciro Pellegrino is a journalist and head of the Naples newsroom at </span><i><span style="font-weight: 400;">Fanpage.it,</span></i><span style="font-weight: 400;"> where he has reported on numerous high-profile cases. On April 29, 2025, Mr. Pellegrino received an Apple notification and sought our technical assistance.&nbsp;</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We analyzed artifacts from Mr. Pellegrino’s iPhone and determined with high confidence that it was targeted with Paragon’s Graphite spyware. Our analysis of the device’s logs revealed the presence of the same </span><b>ATTACKER1 </b><span style="font-weight: 400;">iMessage account used to target the journalist from </span><b>Case 1</b><span style="font-weight: 400;">, which we associate with a Graphite zero-click infection attempt.</span></p>
+
+
+
+<figure class="wp-block-image alignnone wp-image-82414 size-full"><img decoding="async" width="674" height="846" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqIAAANOAQMAAADwPvz9AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAFxJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwbhxDAAEPBg65AAAAAElFTkSuQmCC" alt="" class="wp-image-82414 lazyload"   data-src="https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1.png 674w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-239x300.png 239w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-271x340.png 271w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-159x199.png 159w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-221x277.png 221w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-180x226.png 180w" data-max-width="674" data-sizes="auto" data-eio-rwidth="674" data-eio-rheight="846" /><noscript><img decoding="async" width="674" height="846" src="https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1.png" alt="" class="wp-image-82414" srcset="https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1.png 674w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-239x300.png 239w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-271x340.png 271w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-159x199.png 159w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-221x277.png 221w, https://citizenlab.ca/wp-content/uploads/2025/06/Paragonredux-1-180x226.png 180w" sizes="(max-width: 674px) 100vw, 674px" data-eio="l" /></noscript><figcaption class="wp-element-caption">Figure 2. Attribution to Paragon’s Graphite spyware via artifacts found on the devices of Ciro Pellegrino and the unnamed prominent European journalist.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">It is standard for each customer of a mercenary spyware company to have its own dedicated infrastructure. Thus, we believe that the </span><strong>ATTACKER1</strong><span style="font-weight: 400;"> account would be used exclusively by a single Graphite customer / operator, and we conclude that this customer targeted both individuals.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Our forensic analyses of these attacks, and Paragon’s iOS capabilities, are ongoing.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="the-fanpageit-paragon-cluster"><b>The Fanpage.it Paragon Cluster</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Mr. Pellegrino’s close colleague and </span><i><span style="font-weight: 400;">Fanpage.it</span></i><span style="font-weight: 400;"> editor, Francesco Cancellato, was </span><a href="https://citizenlab.ca/2025/03/a-first-look-at-paragons-proliferating-spyware-operations/"><span style="font-weight: 400;">notified</span></a><span style="font-weight: 400;"> in January 2025 by WhatsApp that he was targeted with Paragon’s Graphite spyware.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">The Citizen Lab has been conducting forensic analysis of Mr. Cancellato’s Android device. However, as of our initial report, we were unable to obtain forensic confirmation of a successful </span><span style="font-weight: 400;">infection</span><span style="font-weight: 400;"> of Mr. Cancellato’s Android. As we explained at the time: “</span><span style="font-weight: 400;">Given the sporadic nature of Android logs, the absence of a finding of BIGPRETZEL on a particular device does not mean that the phone wasn’t successfully hacked, simply that relevant logs may not have been captured or may have been overwritten</span><span style="font-weight: 400;">.”</span></p>
+
+
+
+<p class="wp-block-paragraph">Following Mr. Cancellato’s case, the identification of a second journalist at Fanpage.it targeted with Paragon suggests an effort to target this news organization This appears to be a distinct cluster of cases that warrants further scrutiny.</p>
+
+
+
+<h2 class="wp-block-heading" id="statements-by-paragon-and-the-italian-government"><b>Statements by Paragon and the Italian Government</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">On June 5, 2025, the Italian government’s parliamentary committee overseeing Italy’s intelligence services (COPASIR: Comitato Parlamentare per la Sicurezza della Repubblica) </span><a href="https://documenti.camera.it/_dati/leg19/lavori/documentiparlamentari/IndiceETesti/034/004/INTERO.pdf"><span style="font-weight: 400;">published</span></a><span style="font-weight: 400;"> the report of their inquiry into the Paragon affair in Italy.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">The report acknowledged that the Italian government had used Paragon’s Graphite spyware against Luca Casarini and Dr. Giuseppe “Beppe” Caccia, the two individuals where we found forensic evidence of Graphite present (via the </span>BIGPRETZEL<span style="font-weight: 400;"> Android indicator). However, the report stated that they were unable to determine who might have targeted Mr. Cancellato with Graphite.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">On June 9, 2025, </span><i><span style="font-weight: 400;">Haaretz</span></i><span style="font-weight: 400;"> reported that Paragon had offered to assist the Italian government in investigating the case of Mr. Cancellato, an offer that they say was </span><a href="https://www.haaretz.com/israel-news/security-aviation/2025-06-09/ty-article/.premium/paragon-questions-journalist-hack-probe-after-contract-nixed/00000197-511f-ddae-a1ff-5b5fb4bf0000"><span style="font-weight: 400;">rejected</span></a><span style="font-weight: 400;"> by the Italian government. Paragon also suggested that they had unilaterally terminated Italy’s contracts.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">In response later that day, the Italian Department of Security Intelligence (DIS: Dipartimento delle Informazioni per la Sicurezza), which coordinates Italy’s intelligence services, stated that it had rejected Paragon’s offer because of </span><a href="https://www.ansa.it/sito/notizie/topnews/2025/06/09/007-paragon-non-ha-rescisso-unilateralmente-il-contratto_fd2923ad-e944-46b1-9113-c8eccc3d1677.html"><span style="font-weight: 400;">national security concerns</span></a><span style="font-weight: 400;"> with exposing their activities to Paragon. They stated that providing Paragon such access would impact the reputation of Italy’s security services among peer services around the world. They denied that the contract termination was unilateral. Later the same day, the COPASIR committee stated that they had chosen <a href="https://agenparl.eu/2025/06/09/nota-copasir/">not to proceed with Paragon’s offer</a>, but instead elected to directly query the Paragon databases, having deemed the approaches to be equivalent.<sup><a id="fnref:1" href="#fn:1">1</a></sup>&nbsp;The committee also stated a willingness to declassify Paragon’s testimony to the committee.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="response-from-paragon-solutions"><b>Response from Paragon Solutions</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">On June 10, 2025, we sent a <a href="https://citizenlab.ca/wp-content/uploads/2025/06/Paragon-letter_Citizen-Lab_DEIBERT_Redacted.pdf">summary</a> of our latest findings to Paragon Solutions and offered them the opportunity to reply, which we undertook to publish in full. As of the time of publication we have not received a response.&nbsp;</span></p>
+
+
+
+<h2 class="wp-block-heading" id="europes-continuing-spyware-crisis-journalists-at-risk"><b>Europe’s Continuing Spyware Crisis: Journalists at Risk</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">At the time of publishing, three European journalists have been confirmed as targets of Paragon’s graphite mercenary spyware. Two of these confirmations are now forensically based, and the third follows from a notification by Meta. Yet to date, there has been no explanation as to who is responsible for spying on these journalists.&nbsp;</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Furthermore, the confirmation of a second case linked to a specific Italian news outlet (</span><em><a href="http://fanpage.it"><span style="font-weight: 400;">Fanpage.it</span></a></em><span style="font-weight: 400;"><em>)</em> adds urgency to the question of which Paragon customer is responsible for this targeting, and pursuant to what legal authority (if any) this targeting took place.</span><b></b></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">The lack of accountability available to these spyware targets highlights the extent to which journalists in Europe continue to be subjected to this highly invasive digital threat, and underlines the dangers of spyware proliferation and abuse.</span><b></b></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Our analysis of Paragon targeting on iOS and Android is ongoing. We thank Access Now for their support.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="have-you-received-a-warning"><b>Have You Received a Warning?</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">If you are a journalist, human rights defender, or other member of civil society and received a </span><a href="https://www.accessnow.org/help/access-nows-digital-security-helpline-and-apple-threat-notifications/"><span style="font-weight: 400;">spyware warning</span></a><span style="font-weight: 400;"> from Apple, Meta, WhatsApp, Google or others, take it seriously and seek expert assistance.&nbsp;</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Here is an example of one such notification:</span></p>
+
+
+
+<figure class="wp-block-image alignnone wp-image-82408 size-full"><img decoding="async" width="766" height="596" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAv4AAAJUAQMAAABXLLByAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAE9JREFUeNrtwYEAAAAAw6D5Ux/gClUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALwB4dQAAYPpO98AAAAASUVORK5CYII=" alt="" class="wp-image-82408 lazyload"   data-src="https://citizenlab.ca/wp-content/uploads/2025/06/image1.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2025/06/image1.png 766w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-300x233.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-437x340.png 437w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-256x199.png 256w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-356x277.png 356w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-180x140.png 180w" data-max-width="766" data-sizes="auto" data-eio-rwidth="766" data-eio-rheight="596" /><noscript><img decoding="async" width="766" height="596" src="https://citizenlab.ca/wp-content/uploads/2025/06/image1.png" alt="" class="wp-image-82408" srcset="https://citizenlab.ca/wp-content/uploads/2025/06/image1.png 766w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-300x233.png 300w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-437x340.png 437w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-256x199.png 256w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-356x277.png 356w, https://citizenlab.ca/wp-content/uploads/2025/06/image1-180x140.png 180w" sizes="(max-width: 766px) 100vw, 766px" data-eio="l" /></noscript><figcaption class="wp-element-caption">Figure 3. An excerpt of the Apple threat notification received by Ciro Pellegrino that triggered our investigation.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Organizations like <a href="https://www.accessnow.org/">Access Now</a> and their </span><a href="https://www.accessnow.org/help/"><span style="font-weight: 400;">Digital Security Helpline</span></a><span style="font-weight: 400;"> can assist you in understanding the attack, and quickly taking the next steps to increase your device security. We work with Access Now to ensure that cases get expert support. Similarly, the </span><a href="https://securitylab.amnesty.org/"><span style="font-weight: 400;">Security Lab</span></a><span style="font-weight: 400;"> at Amnesty International also maintains a resource and investigative contact point for </span><a href="https://www.amnesty.org/en/latest/news/2024/04/global-apple-threat-notifications-what-they-mean-and-what-you-can-do/"><span style="font-weight: 400;">notification recipients</span></a><span style="font-weight: 400;">.</span></p>
+
+
+
+<h2 class="wp-block-heading" id="appendix-confirmed-paragon-targeting-in-italy-current-knowledge"><strong>Appendix: Confirmed Paragon Targeting in Italy, Current Knowledge</strong></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">As there are now multiple cases and reports of Paragon targeting and infection, we are providing a table with an overview of each case, along with the associated evidentiary basis. Importantly, we use the term “</span>Targeted<span style="font-weight: 400;">” describing an individual being selected for infection by a Paragon operator and reserve “</span>Infected<span style="font-weight: 400;">” to describe a forensic confirmation of a successful infection. In many cases, full forensic findings may not be available even in cases where an infection has likely happened, due to limitations in logs and efforts by Paragon to delete traces of the infection.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">For example, Mr. Caccia is doubly </span><span style="font-weight: 400;">confirmed as a Paragon target</span><span style="font-weight: 400;"> from both WhatsApp’s notification and Citizen Lab’s </span><a href="https://citizenlab.ca/2025/03/a-first-look-at-paragons-proliferating-spyware-operations/"><span style="font-weight: 400;">previously published</span></a><span style="font-weight: 400;"> forensic analysis. Additionally, we were able to identify specific dates that </span><strong>BIGPRETZEL</strong><span style="font-weight: 400;"> was on his device, helping to illuminate the timeframe of the Paragon infection.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Meanwhile, Mr. Cancellato is </span><span style="font-weight: 400;">confirmed as a Paragon target</span><span style="font-weight: 400;"> via a notification from WhatsApp, but our Citizen Lab analysis has yet to identify forensic evidence on the device providing additional information about Paragon targeting or infection. This is not necessarily surprising given forensic limitations when conducting research on Android devices.</span>The following table summarizes these cases:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><td><b>Name</b></td><td><b>Type of notification received &amp; notification type</b></td><td><b>Device forensic analysis confirms Paragon targeting</b></td><td><b>Additional forensic Findings concerning Paragon infection(s)</b></td></tr></thead><tbody><tr><td><span style="font-weight: 400;">Ciro Pellegrino</span></td><td><span style="font-weight: 400;">Notification from Apple: Targeted with unspecified advanced spyware</span></td><td><span style="font-weight: 400;">Yes. Citizen Lab found artifacts on the Apple device that we attribute with high confidence to Paragon spyware targeting.</span></td><td><span style="font-weight: 400;">Presence of </span><b>ATTACKER1</b><span style="font-weight: 400;"> iMessage account that we link to a customer of Paragon’s spyware.</span></td></tr><tr><td><span style="font-weight: 400;">“Prominent European Journalist”</span></td><td><span style="font-weight: 400;">Notification from Apple: Targeted with unspecified advanced spyware</span></td><td><span style="font-weight: 400;">Yes. Citizen Lab found artifacts on the Apple device that we attribute with high confidence to Paragon spyware targeting.&nbsp;&nbsp;</span></td><td><span style="font-weight: 400;">Graphite infection present in January and early February 2025 (exact dates redacted). Communication with </span><b>https://46.183.184[.]91</b><span style="font-weight: 400;">, a server that we attribute to a Paragon customer. Presence of </span><b>ATTACKER1</b><span style="font-weight: 400;">, an iMessage account we attribute to a Paragon customer.</span></td></tr><tr><td><span style="font-weight: 400;">Luca Casarini</span></td><td><span style="font-weight: 400;">Notification from WhatsApp: Targeted with Paragon’s Spyware</span></td><td><span style="font-weight: 400;">Yes. Citizen Lab found artifacts on the Android device that we attribute with high confidence to Paragon spyware targeting.&nbsp;&nbsp;</span></td><td><span style="font-weight: 400;">Graphite infection present on seven dates between 2024-12-22 &#8211; 2025-01-31 (</span><b>BIGPRETZEL</b><span style="font-weight: 400;"> present)</span></td></tr><tr><td><span style="font-weight: 400;">Giuseppe Caccia</span></td><td><span style="font-weight: 400;">Notification from WhatsApp: Targeted with Paragon’s Spyware</span></td><td><span style="font-weight: 400;">Yes. Citizen Lab found artifacts on the Android device that we attribute with high confidence to Paragon spyware targeting.</span></td><td><span style="font-weight: 400;">Graphite infection present on 2024-12-23 (</span><b>BIGPRETZEL</b><span style="font-weight: 400;"> present)</span></td></tr><tr><td><span style="font-weight: 400;">Francesco Cancellato</span></td><td><span style="font-weight: 400;">Notification from WhatsApp: Targeted with Paragon’s Spyware</span></td><td><span style="font-weight: 400;">Not at this time, analysis ongoing.</span></td><td>&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">In addition to the cases listed above, two individuals have been described in our prior reporting: David Yambio and Father Mattia Ferrari. At the time of writing this report neither individual has been confirmed as a Paragon mercenary spyware target, although both are connected to the cases listed above.</span></p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><td><b>Name</b></td><td><b>Type of notification received &amp; notification type</b></td><td><b>Device Forensic Finding&nbsp;</b></td></tr></thead><tbody><tr><td><span style="font-weight: 400;">David Yambio</span></td><td><span style="font-weight: 400;">Notification from Apple: Targeted with unspecified advanced spyware</span></td><td><span style="font-weight: 400;">Citizen Lab confirmed that the device was targeted with spyware, and affirms the presence of the </span><b>SMALLPRETZEL</b><span style="font-weight: 400;"> forensic indicator.&nbsp; Compromise was not attributed to a specific actor, but the report notes proximity to multiple Paragon targets.</span></td></tr><tr><td><span style="font-weight: 400;">Father Mattia Ferrari</span></td><td><span style="font-weight: 400;">Notification from Meta: targeted by a “sophisticated attacker”</span></td><td><span style="font-weight: 400;">Not at this time, analysis ongoing.</span></td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="note-on-research-ethics"><b>Note on Research Ethics</b></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">All research involving human subjects conducted at the Citizen Lab is governed under research ethics protocols reviewed and approved by the University of Toronto’s </span><a href="https://research.utoronto.ca/ethics-human-research/ethics-human-research"><span style="font-weight: 400;">Research Ethics Board</span></a><span style="font-weight: 400;">. </span></p>
+
+
+
+<p class="wp-block-paragraph"><strong>The Citizen Lab does not take general or unsolicited inquiries related to individual concerns regarding information security and cannot provide individual assistance with security concerns.</strong><i></i></p>
+
+
+
+<h2 class="wp-block-heading" id="acknowledgements"><strong>Acknowledgements&nbsp;</strong></h2>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We wish to acknowledge the victims that chose to work with us and graciously consented to have their cases discussed. Without them, such research would not be possible. Their participation contributes to our collective digital security.&nbsp;</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We thank our Citizen Lab colleagues, especially Bahr AbdulRazzak for technical investigative support, and Siena Anstis, Rebekah Brown, M. Scott and Adam Senft for review, editing and feedback and Alyson Bruce for editing and communications support.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Research for this project was supervised by Professor Ronald J. Deibert.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">Special thanks to TNG.</span></p>
+
+
+
+<p class="wp-block-paragraph"><span style="font-weight: 400;">We thank Access Now for their support.</span></p>
+
+
+
+<div class="footnotes">
+<ol>
+<li id="fn:1">This paragraph has been corrected to reflect the fact that the Committee did have knowledge of the offer, but declined it. It had originally stated that the Committee denied knowledge of the offer. We wish to thank the COPASIR committee for bringing this to our attention and providing us with a translation of their original statement. 2025-06-12 <a href="#fnref:1">&#x21a9;</a></li>
+</ol>
+</div>
+		</div>
+
+		<div class="footnotes__container"></div>
+
+	</div><!-- .entry-content -->
+
+	<!-- Related content section -->
+	
+ <!-- END of related content when other content exists in investigation  -->
+
+	<div class="research-related-content__wrapper alignfull nua-grid has-related-reports">
+		<div class="research-related-content__header alignwide">
+			<h3 class="research-related-content__title">
+				More in:									<a class="research-single__breadcrumbs-item" href="https://citizenlab.ca/focus-area/targeted-surveillance/">
+						Targeted Surveillance					</a>
+							</h3>
+		</div>
+
+		<h4 class="research-related-content__latest-title alignwide">LATEST</h4>
+
+					<div class="research-related-content__with-report-container alignwide">
+
+								<div class="research-related-content__report">
+					
+<article class="content-card content-card--research  post-89697 research type-research status-publish has-post-thumbnail hentry content-type-brief content-type-report focus-area-targeted-surveillance region-eastern-europe-central-asia region-serbia topic-pegasus year-sf-1609">
+	<div class="content-card__content">
+		<header class="content-card__header">
+			<div class="content-card__breadcrumbs">
+				<a href="/research">research</a> → <a href="https://citizenlab.ca/content-type/brief/">Brief</a>			</div>
+							<a href="https://citizenlab.ca/research/pegasus-spyware-serbian-pro-democracy/">
+					<h2 class="content-card__title">Targeting Democracy</h2>
+					<h3 class="content-card__subtitle">Pegasus and Mercenary Spyware Attacks on Serbian Pro-Democracy Figures</h3>
+				</a>
+					</header>
+		<div class="content-card__excerpt">
+			<p>In collaboration with the SHARE Foundation, we found with high confidence that Professor Vladan Đokić, Rector of the University of Belgrade, and prominent supporter of the Serbian student movement, was hacked with NSO Group’s Pegasus spyware in 2026. Additionally, we note that Rade Bajić, who, as a prosecutor, investigated official corruption in a failed project in Belgrade, received an Apple Threat Notification. These notifications are high-confidence indicators of targeting with mercenary spyware such as Pegasus. Our investigations into these cases are ongoing.</p>
+		</div>
+
+		<div class="content-card__date-focus-areas-wrapper">
+			<div class="content-card__date">
+				October 19, 2026			</div>
+
+							<div class="person-single__focus-areas">
+					
+						<a class="single__focus-area" href="https://citizenlab.ca/focus-area/targeted-surveillance/">
+							Targeted Surveillance						</a>
+									</div>
+					</div>
+	</div>
+
+			<div class="content-card__thumbnail">
+			<img width="2560" height="1440" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4AQMAAADSHVMAAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAARJJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBU+OUAARAVzPEAAAAASUVORK5CYII=" class="attachment-medium-large size-medium-large wp-post-image lazyload" alt="" decoding="async"   data-src="https://citizenlab.ca/wp-content/uploads/2026/09/2.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2026/09/2.png 2560w, https://citizenlab.ca/wp-content/uploads/2026/09/2-300x169.png 300w, https://citizenlab.ca/wp-content/uploads/2026/09/2-1024x576.png 1024w, https://citizenlab.ca/wp-content/uploads/2026/09/2-768x432.png 768w, https://citizenlab.ca/wp-content/uploads/2026/09/2-1536x864.png 1536w, https://citizenlab.ca/wp-content/uploads/2026/09/2-2048x1152.png 2048w" data-max-width="2560" data-sizes="auto" data-eio-rwidth="2560" data-eio-rheight="1440" /><noscript><img width="2560" height="1440" src="https://citizenlab.ca/wp-content/uploads/2026/09/2.png" class="attachment-medium-large size-medium-large wp-post-image" alt="" decoding="async" srcset="https://citizenlab.ca/wp-content/uploads/2026/09/2.png 2560w, https://citizenlab.ca/wp-content/uploads/2026/09/2-300x169.png 300w, https://citizenlab.ca/wp-content/uploads/2026/09/2-1024x576.png 1024w, https://citizenlab.ca/wp-content/uploads/2026/09/2-768x432.png 768w, https://citizenlab.ca/wp-content/uploads/2026/09/2-1536x864.png 1536w, https://citizenlab.ca/wp-content/uploads/2026/09/2-2048x1152.png 2048w" sizes="(max-width: 2560px) 100vw, 2560px" data-eio="l" /></noscript>		</div>
+	</article>				</div>
+
+													<div class="research-related-content__other-related-content">
+						<article class="content-card content-card--related">
+	<div class="content-card__content">
+		<div class="content-card__meta">
+			<a href="/research">research</a> → <a href="https://citizenlab.ca/content-type/brief/">Brief</a>		</div>
+		<div class="content-card__title-container">
+							<h2 class="content-card__title"><a href="https://citizenlab.ca/research/exposing-adfection-executive-summary/">Exposing AdFection Executive Summary</a></h2>										<div class="content-card__image">
+					<a href="https://citizenlab.ca/research/exposing-adfection-executive-summary/">
+						<img width="300" height="195" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADDAQMAAAAC1r7VAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAB5JREFUWMPtwTEBAAAAwqD1T20MH6AAAAAAAAAAuBkdtQABXkGdigAAAABJRU5ErkJggg==" class="attachment-medium size-medium wp-post-image lazyload" alt="Exposing AdFection Executive Summary" decoding="async"   data-src="https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-300x195.png" data-srcset="https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-300x195.png 300w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-1024x667.png 1024w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-768x500.png 768w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984.png 1310w" data-max-width="300" data-sizes="auto" data-eio-rwidth="300" data-eio-rheight="195" /><noscript><img width="300" height="195" src="https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-300x195.png" class="attachment-medium size-medium wp-post-image" alt="Exposing AdFection Executive Summary" decoding="async" srcset="https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-300x195.png 300w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-1024x667.png 1024w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984-768x500.png 768w, https://citizenlab.ca/wp-content/uploads/2026/10/discover-report_updated-01-e1792025505984.png 1310w" sizes="(max-width: 300px) 100vw, 300px" data-eio="l" /></noscript>					</a>
+				</div>
+					</div>
+		<div class="content-card__date">
+			OCTOBER 15, 2026		</div>
+	</div>
+
+</article>
+<article class="content-card content-card--related">
+	<div class="content-card__content">
+		<div class="content-card__meta">
+			<a href="/research">News + Updates</a> → <a href="https://citizenlab.ca/content-type/in-the-media/">In the Media</a>		</div>
+		<div class="content-card__title-container">
+							<h2 class="content-card__title"><a href="https://citizenlab.ca/the-secrets-of-a-us-spyware-king/">The Secrets of a US Spyware King</a></h2>								</div>
+		<div class="content-card__date">
+			OCTOBER 8, 2026		</div>
+	</div>
+
+</article>
+<article class="content-card content-card--related">
+	<div class="content-card__content">
+		<div class="content-card__meta">
+			<a href="/research">News + Updates</a> → <a href="https://citizenlab.ca/content-type/in-the-media/">In the Media</a>		</div>
+		<div class="content-card__title-container">
+							<a href="https://citizenlab.ca/fixer-financier-spymaster-how-the-uaes-sheikh-tahnoon-is-setting-his-sights-on-ai-dominance/">
+					<h2 class="content-card__title">Fixer, Financier, Spymaster</h2>
+					<h3 class="content-card__subtitle">How the UAE’s Sheikh Tahnoon is Setting His Sights on AI Dominance</h3>
+				</a>
+								</div>
+		<div class="content-card__date">
+			OCTOBER 5, 2026		</div>
+	</div>
+
+</article>
+					</div>
+				
+			</div>
+
+			</div>
+
+</article>
+</main><!-- #main -->
+<footer class="site-footer" role="contentinfo">
+
+	<div class="brand-symbol__row nua-grid not-translated">
+		<div class="alignwide">
+			<svg width="132" height="59" viewBox="0 0 132 59" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="footer-brand-symbol-title">
+				<title id="footer-brand-symbol-title">Citizen Lab Brand Symbol</title>
+				<g clip-path="url(#clip0_3763_14516)">
+					<path d="M20.1895 25.9468C27.354 25.9468 33.1629 20.1379 33.1629 12.9734C33.1629 5.80896 27.354 0 20.1895 0C13.025 0 7.21608 5.80896 7.21608 12.9734C7.21608 20.1379 13.025 25.9468 20.1895 25.9468ZM35.1102 29.4115H5.2688C2.47433 29.4115 0.210938 31.6749 0.210938 34.4694V59H6.20451V44.3625H9.69444V59H30.5V44.3625H33.9899V59H40.1681V34.4694C40.1681 31.6749 37.9047 29.4115 35.1102 29.4115Z" fill="#1ABCB9" />
+					<path d="M65.71 25.9468C72.8745 25.9468 78.6834 20.1379 78.6834 12.9734C78.6834 5.80896 72.8745 0 65.71 0C58.5455 0 52.7366 5.80896 52.7366 12.9734C52.7366 20.1379 58.5455 25.9468 65.71 25.9468ZM80.6307 29.4115H50.7893C47.9948 29.4115 45.7314 31.6749 45.7314 34.4694V59H51.725V44.3625H55.2149V59H76.0205V44.3625H79.5104V59H85.6886V34.4694C85.6886 31.6749 83.4252 29.4115 80.6307 29.4115Z" fill="#F8981C" />
+					<path d="M111.231 25.9468C118.396 25.9468 124.205 20.1379 124.205 12.9734C124.205 5.80896 118.396 0 111.231 0C104.067 0 98.2581 5.80896 98.2581 12.9734C98.2581 20.1379 104.067 25.9468 111.231 25.9468ZM126.152 29.4115H96.3108C93.5163 29.4115 91.2529 31.6749 91.2529 34.4694V59H97.2465V44.3625H100.736V59H121.542V44.3625H125.032V59H131.21V34.4694C131.21 31.6749 128.947 29.4115 126.152 29.4115Z" fill="#1ABCB9" />
+				</g>
+				<defs>
+					<clipPath id="clip0_3763_14516">
+						<rect width="130.999" height="59" fill="white" transform="translate(0.210938)" />
+					</clipPath>
+				</defs>
+			</svg>
+		</div>
+	</div>
+
+	<div class="footer__wrapper nua-grid not-translated">
+
+		<div class="column__start-1 column__end-4 row__start-0">
+			<div class="brand-wordmark__wrapper">
+				<a class="logo" href="https://citizenlab.ca" aria-label="Citizen Lab Home">
+										<svg width="267" height="32" viewBox="0 0 267 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="footer-wordmark-title">
+						<title id="footer-wordmark-title">The Citizen Lab</title>
+						<path d="M19.3954 1.07324V6.23449H12.6043V31.579H6.79112V6.23449H0V1.07324H19.3954Z" fill="#1ABCB9" />
+						<path d="M23.2261 31.579V1.07324H29.0529V13.2973H37.2973V1.07324H43.1241V31.579H37.2973V18.3906H29.0529V31.579H23.2261Z" fill="#1ABCB9" />
+						<path d="M48.7056 31.579V1.07324H64.6647V6.23449H54.5323V13.1886H62.2606V18.3363H54.5323V26.3634H65.0993V31.5246L48.7056 31.579Z" fill="#1ABCB9" />
+						<path d="M75.1519 22.5336C75.1519 25.9156 76.6188 26.8392 78.9413 26.8392C81.2639 26.8392 82.7444 25.9156 82.7444 22.5336V20.5098H88.5847V21.773C88.5847 29.2976 84.6051 32.0004 78.9413 32.0004C73.2775 32.0004 69.3115 29.284 69.3115 21.773V10.9072C69.3115 3.39622 73.2911 0.693359 78.9413 0.693359C84.5915 0.693359 88.5847 3.4098 88.5847 10.9072V11.0023H82.7444V10.1602C82.7444 6.7782 81.2775 5.84102 78.9413 5.84102C76.6052 5.84102 75.1519 6.7782 75.1519 10.1602V22.5336Z" fill="#F8981C" />
+						<path d="M93.6494 31.579V1.07324H99.5305V31.579H93.6494Z" fill="#F8981C" />
+						<path d="M122.715 1.07324V6.23449H115.924V31.579H110.084V6.23449H103.292V1.07324H122.715Z" fill="#F8981C" />
+						<path d="M126.52 31.579V1.07324H132.347V31.579H126.52Z" fill="#F8981C" />
+						<path d="M137.875 1.07324H154.771V5.97643L143.253 26.3498H155.029V31.5111H136.693V26.635L148.238 6.26166H137.875V1.07324Z" fill="#F8981C" />
+						<path d="M159.048 31.579V1.07324H175.021V6.23449H164.875V13.1886H172.603V18.3363H164.875V26.3634H175.429V31.5246L159.048 31.579Z" fill="#F8981C" />
+						<path d="M180.507 31.579V1.07324H186.877L195.027 19.1512H195.122V1.07324H200.446V31.579H194.864L185.913 11.8304H185.832V31.5246L180.507 31.579Z" fill="#F8981C" />
+						<path d="M205.977 31.579V1.07324H211.817V26.4177H221.189V31.579H205.977Z" fill="#1ABCB9" />
+						<path d="M222.667 31.579L230.219 1.07324H237.703L245.064 31.579H239.427L238.069 25.1546H229.92L228.263 31.579H222.667ZM230.993 19.9797H236.711L233.995 7.66063H233.913L230.993 19.9797Z" fill="#1ABCB9" />
+						<path d="M248.216 1.07324H256.365C262.613 1.07324 266.199 3.69462 266.199 8.93736C266.209 10.2254 265.873 11.4925 265.225 12.606C264.577 13.7196 263.642 14.6385 262.518 15.2667C265.723 17.2904 267 18.9746 267 22.7912C267 28.8218 262.925 31.579 256.773 31.579H248.229L248.216 1.07324ZM254.056 13.1614H256.08C258.701 13.1614 260.44 11.6266 260.44 9.56215C260.44 7.49764 259.082 5.89493 256.365 5.89493H254.043L254.056 13.1614ZM254.056 26.7437H256.501C257.11 26.8194 257.728 26.7593 258.311 26.5678C258.894 26.3763 259.427 26.0582 259.872 25.6362C260.318 25.2142 260.664 24.6989 260.887 24.1271C261.109 23.5554 261.202 22.9415 261.16 22.3295C261.16 19.4093 259.136 17.9695 256.094 17.9695H254.07L254.056 26.7437Z" fill="#1ABCB9" />
+					</svg>
+				</a>
+			</div>
+							<a href="https://citizenlab.ca/newsletter/" target="_self" class="btn newsletter-signup-btn newsletter-signup-btn-1 column__start-1 column__end-4">Subscribe to our newsletter</a>
+					</div>
+
+
+		<div class="menu__wrapper column__start-5 column__end-12 row__start-0">
+			<nav class="footer-nav" aria-label="Footer navigation"><ul id="menu-footer-menu" class="menu"><li id="menu-item-85334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85334"><a href="#">Our Work</a>
+<ul class="sub-menu">
+	<li id="menu-item-83905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83905"><a href="https://citizenlab.ca/research/">Research</a></li>
+	<li id="menu-item-83904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83904"><a href="https://citizenlab.ca/publication-directory/">Publication Directory</a></li>
+	<li id="menu-item-83906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83906"><a href="https://citizenlab.ca/tools-resources/">Tools &amp; Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-85335" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85335"><a href="#">News &#038; Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-85339" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-85339"><a href="https://citizenlab.ca/content-type/expert-insights/">Expert Insights</a></li>
+	<li id="menu-item-85337" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-85337"><a href="https://citizenlab.ca/content-type/in-the-media/">In the Media</a></li>
+	<li id="menu-item-83899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83899"><a href="https://citizenlab.ca/events/">Events</a></li>
+	<li id="menu-item-85338" class="menu-item menu-item-type-taxonomy menu-item-object-content-type menu-item-85338"><a href="https://citizenlab.ca/content-type/news/">News</a></li>
+</ul>
+</li>
+<li id="menu-item-85336" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85336"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-83908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83908"><a href="https://citizenlab.ca/who-we-are/">Who We Are</a></li>
+	<li id="menu-item-85340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85340"><a href="https://citizenlab.ca/contact/">Contact</a></li>
+	<li id="menu-item-83902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83902"><a href="https://citizenlab.ca/people/">People</a></li>
+	<li id="menu-item-83910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83910"><a target="_blank" href="https://engage.utoronto.ca/site/SPageServer?pagename=donate#/fund/847">Donate</a></li>
+</ul>
+</li>
+</ul></nav>		</div>
+
+					<a href="https://citizenlab.ca/newsletter/" target="_self" class="btn newsletter-signup-btn newsletter-signup-btn-2 column__start-1 column__end-4">Subscribe to our newsletter</a>
+		
+		<div class="socials__wrapper column__start-1 column__end-6">
+			<h4>CONNECT</h4>
+
+							<ul class="socials">
+																		<li>
+								<a href="https://bsky.app/profile/citizenlab.ca" target="_blank" aria-label="Follow us on Bluesky">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" fill="none" viewBox="0 0 21 18"><path fill="currentColor" d="M15.795 1.436c-2.312 1.728-4.799 5.231-5.712 7.111-.913-1.88-3.4-5.383-5.712-7.111C2.703.189 0-.776 0 2.294c0 .613.353 5.15.56 5.886.72 2.561 3.343 3.214 5.676 2.819-4.078.691-5.116 2.98-2.875 5.268 4.255 4.347 6.116-1.09 6.593-2.483.088-.256.129-.375.13-.274 0-.101.04.018.128.274.477 1.393 2.338 6.83 6.594 2.483 2.24-2.288 1.203-4.577-2.876-5.268 2.334.395 4.957-.258 5.676-2.819.207-.736.56-5.273.56-5.886 0-3.07-2.703-2.105-4.37-.858Z"> </path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://ca.linkedin.com/company/the-citizen-lab" target="_blank" aria-label="Follow us on LinkedIn">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" fill="none" viewBox="0 0 19 20"><path fill="currentColor" d="M17.692.531c.712.019 1.244.716 1.25 1.417l-.003 16.33c-.039.676-.534 1.323-1.224 1.358H1.343C.726 19.613.175 19.042.167 18.41V1.758C.174 1.143.73.528 1.343.53h16.349ZM4.147 3.187c-1.237.13-1.83 1.664-1.05 2.653.785.998 2.4.694 2.766-.531.345-1.151-.55-2.244-1.716-2.121v-.001ZM16.084 16.79v-5.703c-.09-1.704-.579-3.2-2.4-3.53-1.208-.222-2.518.003-3.3 1.045-.06.08-.152.272-.195.316-.029.03-.044.028-.083.024V7.717H7.465v9.074h2.76v-4.894c.063-1.022.4-1.886 1.524-1.95 1.193-.067 1.542.75 1.599 1.827v5.017h2.736ZM5.712 7.717H2.975v9.074h2.737V7.717Z"> </path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://x.com/citizenlab" target="_blank" aria-label="Follow us on X (Twitter)">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18"><path fill="currentColor" d="M10.121 7.818 16.14.822h-1.426L9.488 6.897 5.314.822H.5l6.312 9.186L.5 17.344h1.426l5.519-6.415 4.408 6.415h4.814L10.12 7.818Zm-1.953 2.27-.64-.914L2.44 1.896h2.19L8.738 7.77l.64.914 5.337 7.635h-2.19l-4.356-6.23Z"> </path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://www.instagram.com/thecitizenlab/" target="_blank" aria-label="Follow us on Instagram">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21"><path fill="currentColor" d="M6.24.07C5.169.12 4.436.292 3.796.543A4.932 4.932 0 0 0 2.01 1.71 4.943 4.943 0 0 0 .85 3.497C.603 4.14.434 4.872.387 5.946.34 7.02.33 7.364.335 10.103c.005 2.738.017 3.081.068 4.157.051 1.073.223 1.805.473 2.446a4.937 4.937 0 0 0 1.167 1.784 4.945 4.945 0 0 0 1.788 1.159c.641.248 1.375.417 2.448.464 1.076.047 1.42.058 4.157.052 2.738-.005 3.082-.017 4.157-.068 1.073-.051 1.805-.223 2.446-.473a4.943 4.943 0 0 0 1.784-1.166 4.944 4.944 0 0 0 1.16-1.789c.247-.641.416-1.375.463-2.447.047-1.076.058-1.42.053-4.158-.005-2.738-.018-3.08-.069-4.156-.05-1.074-.223-1.806-.473-2.447a4.948 4.948 0 0 0-1.166-1.784A4.935 4.935 0 0 0 17.003.518C16.36.27 15.628.101 14.555.054c-1.076-.048-1.42-.058-4.157-.053C7.66.006 7.316.018 6.24.07m.117 18.228c-.983-.043-1.517-.206-1.872-.343a3.145 3.145 0 0 1-1.161-.752 3.134 3.134 0 0 1-.757-1.158c-.138-.356-.304-.889-.35-1.872-.05-1.063-.062-1.382-.067-4.074-.005-2.692.005-3.01.051-4.074.043-.983.207-1.517.343-1.872.183-.472.4-.808.753-1.162a3.125 3.125 0 0 1 1.158-.756c.355-.139.888-.304 1.871-.35 1.063-.05 1.382-.062 4.074-.067 2.692-.005 3.011.004 4.075.051.982.043 1.517.206 1.872.343.471.183.807.4 1.16.752.354.353.574.687.758 1.159.138.354.304.888.35 1.87.05 1.064.062 1.383.067 4.075.005 2.692-.005 3.01-.051 4.074-.043.983-.206 1.517-.343 1.873-.183.47-.4.807-.753 1.16a3.133 3.133 0 0 1-1.158.757c-.355.139-.889.304-1.87.35-1.064.05-1.383.062-4.075.067-2.692.005-3.01-.005-4.074-.051m8.22-13.605a1.21 1.21 0 1 0 2.42-.005 1.21 1.21 0 0 0-2.42.005m-9.34 5.4a5.178 5.178 0 1 0 10.355-.021 5.178 5.178 0 0 0-10.355.021Zm1.817-.003a3.361 3.361 0 1 1 6.722-.012 3.361 3.361 0 0 1-6.722.012"></path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://www.youtube.com/channel/UCf5Aunw7xvt3lAFrLhiCA5w" target="_blank" aria-label="Follow us on YouTube">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19" fill="none"><path d="M24.4793 3.48247C24.1912 2.40616 23.3454 1.56034 22.2691 1.27223C20.3182 0.749512 12.5 0.749512 12.5 0.749512C12.5 0.749512 4.68184 0.749512 2.73296 1.27223C1.65665 1.56034 0.810833 2.40616 0.52272 3.48247C0 5.43135 0 9.49992 0 9.49992C0 9.49992 0 13.5685 0.52272 15.5174C0.810833 16.5937 1.65665 17.4395 2.73296 17.7276C4.68184 18.2503 12.5 18.2503 12.5 18.2503C12.5 18.2503 20.3182 18.2503 22.267 17.7276C23.3433 17.4395 24.1892 16.5937 24.4773 15.5174C25 13.5685 25 9.49992 25 9.49992C25 9.49992 25 5.43135 24.4773 3.48247H24.4793ZM9.99959 13.2495V5.75033L16.4945 9.49992L9.99959 13.2495Z" fill="currentColor"></path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://github.com/citizenlab" target="_blank" aria-label="Follow us on Social Media">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5089 0.933594C5.59253 0.933594 0 6.6626 0 13.7509C0 19.4174 3.5824 24.2116 8.55268 25.9095C9.17493 26.0371 9.40283 25.6334 9.40283 25.2949C9.40283 24.998 9.38234 23.9798 9.38234 22.9173C5.90237 23.6803 5.1777 21.3887 5.1777 21.3887C4.61947 19.9044 3.78981 19.5216 3.78981 19.5216C2.65031 18.7378 3.87175 18.7378 3.87175 18.7378C5.13417 18.8237 5.79739 20.0528 5.79739 20.0528C6.9164 22.0059 8.71656 21.4538 9.4438 21.1127C9.54622 20.2846 9.87911 19.7117 10.2299 19.394C7.45415 19.0971 4.53497 17.993 4.53497 13.0713C4.53497 11.6703 5.03174 10.5245 5.81787 9.63387C5.6924 9.31617 5.25964 8.0011 5.94334 6.23813C5.94334 6.23813 6.99835 5.8996 9.38234 7.5532C10.4015 7.27196 11.4539 7.12873 12.5089 7.12873C13.5639 7.12873 14.642 7.27716 15.6355 7.5532C18.017 5.897 19.0745 6.23813 19.0745 6.23813C19.7582 7.9985 19.3229 9.31617 19.2 9.63387C20.0066 10.5245 20.4829 11.6703 20.4829 13.0713C20.4829 17.9956 17.5637 19.0763 14.7675 19.394C15.2233 19.7976 15.6176 20.5606 15.6176 21.7715C15.6176 23.4902 15.5971 24.8704 15.5971 25.2949C15.5971 25.6334 15.825 26.0371 16.4473 25.9095C21.4175 24.2116 24.9999 19.4174 24.9999 13.7509C25.0204 6.6626 19.4074 0.933594 12.5115 0.933594L12.5089 0.933594Z" fill="currentColor"></path></svg> </span>
+								</a>
+							</li>
+																								<li>
+								<a href="https://citizenlab.ca/feed/" target="_blank" aria-label="Follow us on Social Media">
+									<span aria-hidden="true"><?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none"><path d="M0 9.2002C9.23211 9.25426 16.7002 16.7242 16.7002 25.9336H12.1758C12.1758 24.2816 11.8532 22.6806 11.2139 21.1758C10.5956 19.7191 9.70889 18.4094 8.58105 17.2861C7.45007 16.1628 6.13754 15.2798 4.6748 14.6641C3.19393 14.0423 1.62263 13.7171 0 13.7051V9.2002ZM1.19434 0.933594C14.3411 0.933594 24.9998 11.5485 25 24.6416C25 25.0621 24.9879 25.4829 24.9668 25.9004H20.4365C20.4606 25.4829 20.4756 25.0621 20.4756 24.6416C20.4755 22.0466 19.9662 19.5327 18.9619 17.1689C18.4794 16.0337 17.8821 14.9373 17.1855 13.9102C16.4979 12.892 15.7046 11.9364 14.8301 11.0654C13.9555 10.1974 12.996 9.40755 11.9736 8.71973C10.9452 8.02587 9.84124 7.43079 8.70117 6.9502C6.32454 5.94997 3.80018 5.44246 1.19434 5.43945C0.814417 5.43945 0.434523 5.45164 0.0576172 5.47266V0.960938C0.43452 0.942925 0.81442 0.933594 1.19434 0.933594ZM3.51367 18.8691C5.45296 18.8691 7.0273 20.4397 7.02734 22.3711C7.02734 24.3025 5.45299 25.8672 3.51367 25.8672C1.57436 25.8672 0 24.2996 0 22.3682C5.14674e-06 20.4368 1.57135 18.8692 3.51367 18.8691Z" fill="currentColor"></path></svg> </span>
+								</a>
+							</li>
+															</ul>
+					</div>
+
+		<div class="uoft-logos__wrapper column__start-7 column__end-12">
+							<a href="https://munkschool.utoronto.ca/" target="_blank">
+					<img width="506" height="82" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfoAAABSAQMAAACG44Q9AAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAABxJREFUWMPtwQENAAAAwqD3T20ON6AAAAAAAF4MFNIAAbmnUToAAAAASUVORK5CYII=" class="attachment-full size-full lazyload" alt="Munk Logo" decoding="async" data-src="https://citizenlab.ca/wp-content/uploads/2025/10/MunkLogoLockup.svg" data-eio-rwidth="506" data-eio-rheight="82" /><noscript><img width="506" height="82" src="https://citizenlab.ca/wp-content/uploads/2025/10/MunkLogoLockup.svg" class="attachment-full size-full" alt="Munk Logo" decoding="async" data-eio="l" /></noscript>				</a>
+					</div>
+
+
+
+		<div class="copyright__wrapper column__start-1 column__end-12">
+			<span>&copy; 2026 The Citizen Lab</span>
+
+			<nav class="utility-nav" aria-label="Utility navigation"><ul id="menu-utility-menu" class="menu"><li id="menu-item-85811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85811"><a href="https://citizenlab.ca/vulnerability-disclosures/">Disclosure Policy</a></li>
+<li id="menu-item-83916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83916"><a href="https://citizenlab.ca/privacy-policy/">Privacy Policy</a></li>
+</ul></nav>		</div>
+
+	</div>
+</footer>
+</div><!-- #content -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/theme-citizenlab/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="eio-lazy-load-js-before">
+const eio_lazy_vars = {"bg_min_dpr":1.1,"exactdn_domain":"","safe_paths":["\/wp-content\/plugins","\/wp-content\/themes","\/wp-includes\/"],"safe_domains":["citizenlab.ca","www.citizenlab.ca"],"skip_autoscale":0,"threshold":0,"use_dpr":1};Object.freeze(eio_lazy_vars);
+//# sourceURL=eio-lazy-load-js-before
+</script>
+<script async data-wp-strategy="async" id="eio-lazy-load-js" src="https://citizenlab.ca/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=890"></script>
+<script id="bigfoot-js" src="https://citizenlab.ca/wp-content/plugins/bigfoot_footnotes/library/bigfoot.js?ver=1.0"></script>
+<script id="bigfoot-min-js" src="https://citizenlab.ca/wp-content/plugins/bigfoot_footnotes/library/bigfoot.min.js?ver=1.0"></script>
+<script id="bigfoot-function-js" src="https://citizenlab.ca/wp-content/plugins/bigfoot_footnotes/library/bigfoot-function.js?ver=1.0"></script>
+<script id="nua-scripts-js-before">
+const nua_env = {"rest_url":"https:\/\/citizenlab.ca\/wp-json\/","base_url":"https:\/\/citizenlab.ca","base_path":"\/","nonce":"94e75997ea","site_name":"The Citizen Lab","site_url":"https:\/\/citizenlab.ca","current_user":{"data":{},"ID":0,"caps":[],"cap_key":null,"roles":[],"allcaps":[],"filter":null}}
+//# sourceURL=nua-scripts-js-before
+</script>
+<script id="nua-scripts-js" src="https://citizenlab.ca/wp-content/themes/theme-citizenlab/build/main.js?ver=1.0.0"></script>
+<script id="featherlight-js-js" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js?ver=1.7.13"></script>
+<script id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":83392,"isReadableSinglePost":false,"hasVimeoEmbed":false,"wordCount":0,"estimatedReadTimeSeconds":0,"isLastPageOfMultiPagePost":false,"readTimeThresholdPercent":85,"minimumReadTimeSeconds":5};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script id="googlesitekit-events-provider-content-events-js" src="https://citizenlab.ca/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js" defer></script>
+<script id="nua-table-of-contents-script-js" src="https://citizenlab.ca/wp-content/plugins/plugin-citizenlab/blocks/table-of-contents/build/script.js?ver=d7d3455566fdc26bb101"></script>
+</body>
+
+</html><!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 4186 objects (1 MB) from Redis using PhpRedis (v6.3.0).
+-->

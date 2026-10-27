@@ -2,7 +2,7 @@
 title: "Topics — Semester 2"
 tags: [meta, vault, semester-2]
 status: current
-last_updated: 2026-10-22
+last_updated: 2026-10-23
 ---
 
 # Topics — Semester 2
@@ -32,6 +32,7 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Advanced IT Security | L0 Basics — meaning, elements, risk, CIA | [[advanced-it-security-lecture-0]] | 7 |
 | Energy Informatics I | L0 Motivation and Basics | [[energy-informatics-1-lecture-0]] | 6 |
 | Introduction to Deep Learning | L1 Introduction and Overview | [[introduction-to-deep-learning-lecture-1]] | 2 |
+| Introduction to Deep Learning | L2 Foundations of Machine Learning | [[introduction-to-deep-learning-lecture-2]] | 12 |
 | Introduction to Deep Learning | Exercise 1 — Python | [[introduction-to-deep-learning-exercise-1]] | 4 |
 | Introduction to Deep Learning | Exercise 2 — PyTorch | [[introduction-to-deep-learning-exercise-2]] | 4 |
 | Machine Learning for Cybersecurity | L1 Organisation, Security, ML basics | [[machine-learning-for-cybersecurity-lecture-1]] | 5 |
@@ -39,8 +40,10 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Machine Learning for Cybersecurity | L3 Metrics, ROC, KNN, regressions | [[machine-learning-for-cybersecurity-lecture-3]] | 5 |
 | Dependable Distributed Systems | L1 Introduction and fault tolerance basics | [[dependable-distributed-systems-lecture-1]] | 7 |
 | Dependable Distributed Systems | L2 Models, time, logical clocks | [[dependable-distributed-systems-lecture-2]] | 7 |
+| Dependable Distributed Systems | L3 Physical clock synchronization, CNV, NTP | [[dependable-distributed-systems-lecture-3]] | 6 |
 | Dependable Distributed Systems | Exercise 1 — distributed systems and dependability | [[dependable-distributed-systems-exercise-1]] | — |
 | Dependable Distributed Systems | Exercise 2 — models and logical clocks | [[dependable-distributed-systems-exercise-2]] | — |
+| Dependable Distributed Systems | Exercise 3 — clock measurement, CNV, transport | [[dependable-distributed-systems-exercise-3]] | — |
 | Virtual Machines and Runtime Systems | L1 Introduction to virtualization | [[virtual-machines-and-runtime-systems-lecture-1]] | 2 |
 | Virtual Machines and Runtime Systems | L2 The C runtime system | [[virtual-machines-and-runtime-systems-lecture-2]] | 6 |
 | Virtual Machines and Runtime Systems | Exercise Sheet 1 | [[virtual-machines-and-runtime-systems-exercise-1]] | 1 |

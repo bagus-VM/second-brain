@@ -9,7 +9,7 @@ last_updated: 2026-10-22
 
 > Maintained by Professor White. Generated from note frontmatter; re-run `vault/tools/generate_index.py` after an ingest.
 
-**Courses:** 9 registered · **Concept pages:** 88 · **Topic pages:** 33
+**Courses:** 9 registered · **Concept pages:** 106 · **Topic pages:** 36
 
 ---
 
@@ -44,16 +44,28 @@ last_updated: 2026-10-22
 
 | Page | Summary | Sources | Status |
 |------|---------|---------|--------|
+| [[class-imbalance]] | When the positive class is rare, accuracy is a base-rate artefact rather than a result — the classifier that never says "positive" scores… | 1 | current |
+| [[clustering-and-dimensionality-reduction]] | Unsupervised learning works on the features alone, and the lecture names three jobs for it — grouping similar instances, compressing them… | 1 | current |
+| [[cross-validation]] | One train/test split gives one noisy number; k-fold cross-validation rotates which fold is held out, scores k times, and averages — so th… | 1 | current |
+| [[decision-trees]] | Ask one attribute at a time, greedily from the top, and let the leaves carry the class labels — a model you can read out loud, and the ba… | 1 | current |
 | [[deep-learning-history-timeline]] | Deep learning is eighty years of slow progress, one long winter, one rebranding in 2006, and a data-and-hardware-driven explosion from 20… | 1 | current |
+| [[double-descent]] | The classical story says validation error is U-shaped in model capacity; double descent is the modern observation that past the point whe… | 1 | current |
+| [[ensemble-learning]] | Many models that are wrong in different ways can be combined into one that is wrong less often — bagging by averaging away variance, boos… | 1 | current |
 | [[gradient-descent-for-neural-networks]] | Gradient descent is the general method of approximately minimising a differentiable function by repeatedly stepping against its gradient;… | 1 | current |
+| [[information-leakage]] | Any information from the validation or test set that reaches training inflates the reported score without improving the model — and the l… | 1 | current |
 | [[jupyter-notebook-state]] | A notebook cell's stored output is a snapshot of one particular execution, not a property of the code beside it — so editing a definition… | 1 | current |
 | [[linear-algebra-for-deep-learning]] | The demo notebook implements the linear algebra a neural network does internally — dot product, vector addition, normalisation, matrix mu… | 1 | current |
+| [[loss-functions-and-empirical-risk]] | Training is minimising the average loss over the training data, and the loss you choose decides what the model is actually optimising for… | 1 | current |
+| [[ml-data-and-iid-assumption]] | A row is an instance and a column is a feature, and every guarantee the course makes about a model's performance rests on the rows being… | 1 | current |
 | [[neural-network-training-loop]] | Training a neural network is a fixed five-step cycle — forward pass, loss, zero the gradients, backpropagate, step the optimiser — repeat… | 1 | current |
 | [[polynomial-regression-and-overfitting]] | Polynomial regression fits a linear model to the powers of the features, so it is linear regression on transformed inputs — and the degre… | 1 | current |
 | [[python-environment-management]] | A virtual environment is a per-project box holding one Python interpreter and one exact set of packages; `uv` creates that box, installs… | 2 | current |
 | [[python-for-deep-learning]] | Python is the lingua franca of machine learning not because it is fast, but because it is readable, dynamically typed, garbage-collected,… | 1 | current |
 | [[pytorch-tensors-and-autograd]] | PyTorch gives you NumPy-style array arithmetic on tensors that remember the function they were produced by, so that gradients of any comp… | 1 | current |
+| [[regression-evaluation-metrics]] | MAE reports the average size of the error and MSE squares it before averaging, so MSE treats one large error as worse than several small… | 1 | current |
 | [[representation-learning]] | Representation learning is machine learning in which the features are not handed over but learned from data; deep learning is the part of… | 1 | current |
+| [[soft-classification-and-calibration]] | A hard classifier returns a label and throws the confidence away; a soft classifier returns a probability, which is only useful if it is… | 1 | current |
+| [[support-vector-machines]] | Of all the hyperplanes that separate two classes, take the one with the widest margin to the closest points — and if no hyperplane can do… | 1 | current |
 
 ### Machine Learning for Cybersecurity
 
@@ -79,6 +91,7 @@ last_updated: 2026-10-22
 |------|---------|---------|--------|
 | [[clock-synchronization-problem]] | Physical clocks never agree, they only disagree at different rates — and the first thing that breaks when they disagree is any snapshot o… | 1 | current |
 | [[communication-link-models]] | A communication link model states what a channel between two processes is allowed to do to messages — lose them, duplicate them, invent t… | 2 | current |
+| [[convergence-algorithm-cnv]] | Every process sets its clock to the average of everyone's clock, replacing readings that differ from its own by more than δ — and the gro… | 1 | current |
 | [[dependability-attributes]] | Dependability is measured on three axes — reliability, maintainability, and availability — which describe how long a system works, how fa… | 6 | current |
 | [[distributed-system-properties]] | A distributed system is several independent computers joined by a network that run shared protocols so that, to the people using them, th… | 4 | current |
 | [[error-detection-and-recovery]] | Fault tolerance has two moving parts — detect the error, then recover from it — and the lecture splits each of them into concrete sub-str… | 7 | current |
@@ -86,9 +99,14 @@ last_updated: 2026-10-22
 | [[fault-error-failure-chain]] | A fault is a broken part, an error is the broken state that part creates, and a failure is what the user finally notices when the service… | 5 | current |
 | [[lamport-logical-clocks]] | A counter per process that answers "which of these two events came first?" correctly whenever one event could have influenced the other —… | 2 | current |
 | [[model-accuracy-tractability]] | A model is a simplification you are allowed to argue with — but only if the simplification is both faithful to reality and small enough t… | 1 | current |
+| [[network-time-protocol]] | NTP keeps internet hosts close to UTC by timing round trips against a redundant set of servers arranged in strata, filtering bad samples… | 1 | current |
+| [[ntp-clock-discipline]] | Once the peers have agreed on an offset, something still has to apply it to a running clock: NTP runs a phase-locked loop to absorb short… | 1 | current |
+| [[physical-clock-drift]] | No two physical clocks start at the same reading or run at the same rate, so without synchronisation the difference between them grows wi… | 1 | current |
 | [[redundancy-forms]] | Redundancy comes in exactly three flavours — extra copies, extra tries, and extra information — and every dependable technique in the cou… | 2 | current |
 | [[resilience-vs-dependability]] | Dependability is the quality of a service you can justifiably rely on, while resilience adds the requirement that this reliability surviv… | 3 | current |
 | [[synchronous-vs-asynchronous-models]] | An asynchronous system makes no promises about how fast anything happens, while a synchronous system promises bounded speeds and bounded… | 3 | current |
+| [[tai-utc-time-scales]] | TAI counts atomic seconds from a definition fixed in 1967, UT1 follows the Earth's actual rotation, and UTC is the atomic scale bent to s… | 1 | current |
+| [[time-offset-measurement]] | A one-way message cannot separate the clock offset from the transmission delay, so every practical measurement pays for a round trip and… | 1 | current |
 | [[vector-clocks]] | Lamport's counter tells you that one event might have caused another; the vector version tells you exactly which — and what it costs you… | 1 | current |
 | [[ways-towards-dependability]] | There are exactly four ways to make a system more dependable: stop faults from happening, keep working despite them, take faults away onc… | 3 | current |
 
@@ -167,12 +185,15 @@ last_updated: 2026-10-22
 | [[deep-learning-course-roadmap]] | Fifteen weeks from Python syntax to graph neural networks, where each week's homework is either a pen-and-paper derivation or a coding ta… | 1 | current |
 | [[dependable-distributed-systems-exercise-1]] | Six tasks that turn lecture 1 into something you have to argue: pick the right property, pick the right attribute, separate dependability… | 1 | current |
 | [[dependable-distributed-systems-exercise-2]] | The sheet where the models become a T/F exercise and the logical clocks become arithmetic: one trick question about synchrony, five T/F i… | 2 | current |
+| [[dependable-distributed-systems-exercise-3]] | Four tasks that turn lecture 3 from slides into work: measure an offset two ways and say what the accuracy of each is, break and then rep… | 2 | current |
 | [[dependable-distributed-systems-lecture-1]] | The first lecture does two jobs: it establishes what a distributed system is and what it therefore cannot have, then it builds the vocabu… | 1 | current |
 | [[dependable-distributed-systems-lecture-2]] | One lecture, three movements: what a model is and why you need one that is both faithful and analysable, the taxonomy of failures and cha… | 1 | current |
+| [[dependable-distributed-systems-lecture-3]] | Lecture 2 said physical clocks cannot order events and handed the ordering job to logical clocks; this lecture goes back and makes the ph… | 1 | current |
 | [[energy-informatics-1-lecture-0]] | Lecture 0 sets up the whole course: computing is a large and growing energy load, the electrical grid is a real-time balancing act with h… | 1 | current |
 | [[introduction-to-deep-learning-exercise-1]] | The first session is not deep learning: it is the Python on-ramp the whole course stands on, plus an opinionated toolchain (`uv`, VS Code… | 5 | current |
 | [[introduction-to-deep-learning-exercise-2]] | The first week in which the course stops being about Python: PyTorch's tensors and autograd on one side, the fact that a network's loss c… | 3 | current |
 | [[introduction-to-deep-learning-lecture-1]] | The opening lecture: what deep learning is, how the field got here in eighty years, and what is still unsolved — plus the course organisa… | 1 | current |
+| [[introduction-to-deep-learning-lecture-2]] | The classical machine-learning course the deep-learning course assumes you already had: what a task is, what training actually minimises,… | 1 | current |
 | [[machine-learning-for-cybersecurity-lecture-1]] | Two foundations in one session: security as a cost/benefit discipline with its own vocabulary, and machine learning as a task taxonomy th… | 1 | current |
 | [[machine-learning-for-cybersecurity-lecture-2]] | The first working pipeline of the course: pandas → scikit-learn → metrics on credit-card fraud, then Naive Bayes derived from Bayes' rule… | 1 | current |
 | [[machine-learning-for-cybersecurity-lecture-3]] | Metrics and ROC curves get their own pass, KNN and the two regressions are added to the toolbox, and the ROC is then re-examined through… | 1 | current |

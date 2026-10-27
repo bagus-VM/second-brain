@@ -1341,3 +1341,86 @@ printed, flagged as a typo, not silently corrected.
 4 coverage-audit rows), `vault/tools/generate_index.py` (`COURSE_ORDER` + professor/exam tables),
 `2nd-semester/index.md` (regenerated: 59 → 88 concepts, 18 → 33 topics, 7 → 9 courses),
 `index.md` (root: 786 → 834 pages, 7 → 9 registered Semester 2 courses, drop notice amended).
+
+## [2026-10-23] INGEST | DDS lecture 3 + exercise 3 + official solutions; IDL lecture 2 | 18 concept pages, 3 topic pages, 1 homework page
+
+Five new files under `2nd-semester/raw/`, all previously un-ingested (the rest of `raw/` was already
+in the vault; `git status` shows exactly these five as untracked):
+
+- `Dependable Distributed Systems/Vorlesung/dds2026w-03-ntp.pdf` — lecture 3, 42 slides, physical
+  clock synchronization (background, offset measurement, CNV, NTP, clock discipline)
+- `Dependable Distributed Systems/Ubung/dds26-exercise03.pdf` — exercise 3, discussion 2026-10-28
+- `Dependable Distributed Systems/Ubung/dds26-exercise01-sol.pdf` and `…-exercise02-sol.pdf` —
+  the professor's official solutions to the two sheets already answered
+- `Introduction to Deep Learning/Vorlesung/02_foundations_of_ml.pdf` — lecture 2, 44 slides,
+  foundations of machine learning
+
+**Dependable Distributed Systems — 6 concept pages + 2 topic pages.** Lecture 3 produced
+`physical-clock-drift` (including the seven-item algorithm-characterisation list from slide 13),
+`tai-utc-time-scales` (TAI/UT1/UTC, 27 leap seconds, CGPM 2026 continuous UTC from 20 May 2027 with a
+3600 s bound), `time-offset-measurement` (unidirectional vs bidirectional, delta and theta from four
+timestamps, error bounded by delta/2), `convergence-algorithm-cnv` (Lamport/Melliar-Smith 1985, the
+delta clamp, the n > 3m threshold), `network-time-protocol` (strata, the 8-sample filter with v = 0.5,
+selection/clustering/combination with w = 0.75, correctness intervals) and `ntp-clock-discipline`
+(the hybrid PLL/FLL loop, the three process types, 1-second clock process).
+
+Exercise 3 was solved rather than described: `clock-sync.py` implements CNV from the lecture
+definition and runs seven scenarios — including the n = 3 = 3m case, where divergence is driven up
+toward the delta ceiling, and a naive no-clamp variant that converges to whatever the liar says —
+brute-forces the worst Byzantine lie in the 3.3 example (01:00 to P1 and 07:00 to P3, both on the
+delta boundary, leaving 03:00 against 05:00 and a round that achieves nothing), and computes the
+four 3.4(c) measurements down to M1/M4, theta = -2.500 s with a residual bound of 0.050 s.
+
+**`exercise2-cnv.py` is missing.** Task 3.2 asks for modifications to a file the sheet says to
+download; it is not in `raw/`. The answer substitutes an independent implementation and says so on
+the page — the sheet's "one case will not match the expected behaviour" is attributed to scenario 3
+(an initial offset larger than delta violates CNV's first assumption) as an inference, not a finding.
+
+**Official solutions cross-checked, not adopted.** `dds26-exercise01-sol.pdf` and
+`…-exercise02-sol.pdf` arrived after the written answers and were used as a check. Three differences
+are recorded on the course page: 1.3(c)'s availability arithmetic (the official counts the repair hour
+inside the weekly cycle — MTBF 167 h, not 168 h), 2.1's split verdict (yes for process behaviour, no
+for the distributed system) and 2.2(a)'s asterisk on the second statement. Everything else agrees,
+including 2.3's Lamport/vector verdicts and 2.5's total-order construction.
+
+**Introduction to Deep Learning — 12 concept pages + 1 topic page.** Lecture 2 produced
+`ml-data-and-iid-assumption`, `soft-classification-and-calibration`, `loss-functions-and-empirical-risk`,
+`double-descent`, `cross-validation`, `information-leakage`, `decision-trees`, `support-vector-machines`,
+`ensemble-learning`, `class-imbalance`, `regression-evaluation-metrics` and
+`clustering-and-dimensionality-reduction`. Every worked example was computed in
+`study/homework/introduction-to-deep-learning/idl-lecture2-numbers.py`; findings worth keeping:
+
+- The lecture's two quizzes are unanswered on the slides. All five "where is the leak?" cases are
+  answered on the page, including the fact that case 5 is the *correct* procedure.
+- Slide 30's accuracy column is misaligned in the PDF text extraction: recomputing from the printed
+  +/− rows gives 0.8/0.8/0.6 for the three classifiers, with 1.0 belonging to the majority-voting row.
+- A polynomial fit does NOT reproduce double descent, and the reason is structural: a degree-(n−1)
+  polynomial through n points is fully determined, so the model class ends at the interpolation
+  threshold. The demo shows the threshold and the blow-up (test MSE 1386× the minimum) and says
+  plainly what it does not show.
+- The slide's own tree is not minimal: a single Age split reproduces all five labels, so the example
+  does not demonstrate that the extra attribute is needed.
+- A 100 ppm frequency error is 8.64 s per day, and slewing that correction over one day requires a
+  100 ppm rate change — the same magnitude as the error, which is the argument for the frequency half
+  of NTP's loop.
+
+**Both delegated page batches died on a provider credit error (HTTP 402).** The DDS child wrote 4 of
+its 5 pages before its model ran out of credits; the IDL child failed before writing anything. The
+missing DDS page and all 11 IDL pages were written in this session instead. The completed child pages
+were verified individually — section counts, frontmatter keys, whitelist links, and every number in
+their worked examples recomputed (0.9 ns/day as 1.04e-14, 3792 days from the last leap second to
+continuous UTC, epsilon_rho = 0.0170 s from the eight filter entries, 0.75^7 = 0.1335).
+
+**Verification.** All 18 new concept pages carry the 8 required sections and the 7 frontmatter keys;
+programmatic check of every `[[wikilink]]` against the whitelist and against the set of slugs that
+actually exist in either semester: **0 bad links, 0 dead links**. Lint: 168 notes scanned, 0 broken
+wikilinks, 0 missing frontmatter, 0 notes under 250 words. Both runnable artifacts were executed and
+their outputs saved (`output-clock-sync.txt`, `output-idl-lecture2-numbers.txt`).
+
+**Updated:** `courses/dependable-distributed-systems.md` (source_count 4 → 8, lecture index +3 rows, 6
+concept rows, homework table, a new "official solutions, and what they changed" section, 4 open
+questions), `courses/introduction-to-deep-learning.md` (source_count 9 → 10, lecture index +1 row, a
+new "Lecture 2 — what it adds" section, the schedule-disagreement question revised),
+`vault/topics/Topics.md` (3 rows), `study/homework/Homework.md` (1 deliverable row, 5 coverage-audit
+rows), `2nd-semester/index.md` (regenerated: 88 → 106 concepts, 33 → 36 topics, 9 courses),
+`index.md` (root: 834 → 856 pages, 13 → 14 homework pages, ingest notice added).

@@ -1,0 +1,5 @@
+case_id,platform,actor,actor_class,vector,cve,in_the_wild,first_known_exploitation,fix,fix_date,detection_event,detection_date,source
+FORCEDENTRY,iOS,NSO Group,commercial surveillance vendor,zero-click iMessage,CVE-2021-30860,yes,,iOS 14.8,2021-09-13,captured in the wild,2021-09-13,marczak2021forcedentry
+Graphite,iOS,Paragon Solutions,commercial surveillance vendor,zero-click iMessage,CVE-2025-43200,yes,2025-01,iOS 18.3.1,2025-02-10,Apple notification; forensic confirmation,2025-04-29;2025-06-12,marczak2025graphite
+Cellebrite-chain,Android,Cellebrite,forensic tool vendor,physical USB access,CVE-2024-53104,yes,,February 2025 bulletin,2025-02-01,reported by GTIG and Amnesty Security Lab,,charrier2025zeroday
+Pixel-9-chain,Android,Project Zero,researcher,zero-click message transcription,CVE-2025-54957,no,,patched before disclosure,,public disclosure,2026-01-14,silvanovich2026pixel

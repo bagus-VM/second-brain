@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "TBD"
 credits: "TBD"
 language: "English"
-source_count: 9
+source_count: 10
 status: active
-last_updated: 2026-10-20
+last_updated: 2026-10-23
 prerequisites: []
 ---
 
@@ -51,6 +51,7 @@ The full map with prerequisites is [[deep-learning-course-roadmap]].
 
 Overview pages:
 - [[introduction-to-deep-learning-lecture-1]] — Lecture 1: Introduction and Overview
+- [[introduction-to-deep-learning-lecture-2]] — Lecture 2: Foundations of Machine Learning
 - [[introduction-to-deep-learning-exercise-2]] — Exercise 2: Introduction to PyTorch
 - [[introduction-to-deep-learning-exercise-1]] — Python on-ramp
 - [[deep-learning-course-roadmap]] — the whole 15-week schedule
@@ -58,6 +59,7 @@ Overview pages:
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
 | L1 | Introduction and overview: what is deep learning, its history, its open problems | `01_introduction_to_dl.pdf` | ingested → [[introduction-to-deep-learning-lecture-1]] |
+| L2 | Foundations of machine learning: tasks, training and generalization, example methods, evaluation | `02_foundations_of_ml.pdf` | ingested → [[introduction-to-deep-learning-lecture-2]] |
 | E1 | Python, environment management, Jupyter | `01-slides.pdf`, `01-homework.pdf`, notebooks | ingested → [[python-for-deep-learning]], [[python-environment-management]] |
 | E1 | Python demo notebooks (linear algebra, notebook state) | `01-demo.ipynb`, `01-notebook-issue.ipynb` | ingested → [[linear-algebra-for-deep-learning]], [[jupyter-notebook-state]] |
 | E1 | Official solution notebook (cross-check of the homework) | `01-hw-intro-py-solutions.ipynb` | used to correct the homework solution — see below |
@@ -120,18 +122,52 @@ Not deep learning yet. It is a Python on-ramp with an opinionated toolchain:
 - VS Code + Ruff, format-on-save, Jupyter extension
 - Notebooks as a blessing and a curse: state-keeping and inline plots, but they "easily lead to spaghetti code"
 
+## Lecture 2 — what it adds
+
+Lecture 2 is the classical machine-learning course that deep learning is built on, and it is the
+first lecture whose content the exam can test directly as definitions and formulas rather than as
+history:
+
+- **The vocabulary**: instance, feature, label, model, parameter, hyperparameter, prediction, loss,
+  with the notation D = {(x_i, y_i)}, x_i of dimension d, y_hat_i = f_w(x_i).
+- **The four paradigms** by training feedback — unsupervised, supervised, self-supervised,
+  reinforcement — with the unsupervised trio spelled out (clustering, dimensionality reduction,
+  density estimation).
+- **Training as empirical-risk minimisation**, with three named loss functions and gradient descent
+  as the optimiser, and the explicit deferral of the details to the next lecture.
+- **Generalisation**: underfitting, overfitting, model capacity, and the deep-learning exception
+  **double descent** — the one place where the lecture says the classical picture is wrong.
+- **Six classical methods** (k-NN, decision trees, SVMs, logistic regression, ensembles, gradient
+  boosting) and the claim, with citations, that gradient-boosted trees still beat deep learning on
+  tabular data.
+- **Evaluation**: train/validation/test, k-fold cross-validation, information leakage, distribution
+  shift, precision/recall/F1 under class imbalance, MAE and MSE.
+
+Two things are worth flagging for revision. First, the lecture poses two quizzes and answers
+neither on the slides — "Which task is it?" and "Where is the leak?" — so the answers had to be
+worked out on the concept pages. Second, the lecture repeatedly defers detail to lecture 3
+("log-likelihood, log-odds, cross-entropy", "details: next lecture"), which means the exam's
+single-layer-networks material will assume this lecture's formulas are already known.
+
+The 12 concept pages this lecture produced are listed on
+[[introduction-to-deep-learning-lecture-2]].
+
 ## Open Questions
 
 - The exam **date** is not in the material (the format and length are, as of lecture 1). The exam
   dates "will be announced as soon as possible".
-- **The two schedules disagree.** Lecture 1's "Course Overview (tentative)" lists 15 dated
-  sessions — Introduction, Foundations of Machine Learning ×2, Single-Layer Neural Networks ×2,
-  Multi-Layer ×3, CNN ×2, RNN, Language Models, Transformers, Generative Models,
-  Explainability & Wrap-up. The exercise-1 sheet listed a 15-**week** plan with a different
-  mapping (week 2 = Introduction to PyTorch, week 3 = Gradient descent, …). Both are recorded;
-  which one the exam follows is not stated.
+- **The two schedules disagree, and lecture 2 resolves one point in favour of lecture 1's version.**
+  Lecture 1's "Course Overview (tentative)" lists 15 dated sessions — Introduction, Foundations of
+  Machine Learning ×2, Single-Layer Neural Networks ×2, Multi-Layer ×3, CNN ×2, RNN, Language
+  Models, Transformers, Generative Models, Explainability & Wrap-up. The exercise-1 sheet listed a
+  15-**week** plan with a different mapping (week 2 = Introduction to PyTorch, week 3 = Gradient
+  descent, …). The second lecture deck is titled **"Foundations of Machine Learning"**, which is
+  lecture 1's item 2, not the exercise sheet's week-2 "Introduction to PyTorch". So the lecture-side
+  schedule is the one being followed; whether the exercise sheet's week numbers are simply offset
+  by one is not stated.
 - Whether the exam's "may contain some coding" means writing PyTorch from scratch or reading code
   is not specified. Exercise 2 is the only concrete coding evidence so far.
 - Exercise 1's material said the course covers "the first (!) and last (!) lecture" for the exam
   before lecture 1 had even been read; that is now confirmed by the lecture slides themselves.
-- PyTorch material is now in `raw/` (session 2). Sessions 3 onward are not.
+- PyTorch material is now in `raw/` (session 2), as is lecture 2's deck (`02_foundations_of_ml.pdf`).
+  Lecture 3 and exercise session 3 onward are not.

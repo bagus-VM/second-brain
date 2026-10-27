@@ -2,12 +2,19 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-10-22
-**Total pages:** 834 (vault + study, both semesters; excluding raw/ and projects/)
+**Last updated:** 2026-10-23
+**Total pages:** 856 (vault + study, both semesters; excluding raw/ and projects/)
 **Active courses:** 6 (Semester 1, exams done) + 9 registered in Semester 2
 
 > **Semester 2 (WS 2026/27) has its own catalogue: [[2nd-semester/index|Semester 2 — Master Index]]**
-> 9 courses, 88 concept pages, 33 topic pages, 13 homework pages. The sections below are the frozen Semester 1 record.
+> 9 courses, 106 concept pages, 36 topic pages, 14 homework pages. The sections below are the frozen Semester 1 record.
+>
+> **Ingested on 2026-10-23:** Dependable Distributed Systems lecture 3 (physical clock
+> synchronization: offset measurement, CNV, NTP) and its exercise sheet 3, plus the official
+> solution sheets for exercises 1 and 2 — 5 sources, 6 concept pages, 2 topic pages, 1 homework page.
+> Introduction to Deep Learning lecture 2 (foundations of machine learning) — 1 source, 12 concept
+> pages, 1 topic page. Both lecture decks were new; Semester 2 went 88 → 106 concept pages and
+> 33 → 36 topic pages across the two courses.
 >
 > **Dropped on 2026-10-20:** Hardware-Oriented Security — all pages, homework and raw sources
 > removed. Reverse- and Reengineering was dropped the same day and **re-registered on 2026-10-22**;
