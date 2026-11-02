@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Wiki"
+  short_description: "Build, ingest into, query, and lint a Karpathy-style markdown knowledge base."
+  default_prompt: "Use $llm-wiki to orient in this vault, ingest the source I provide, cross-reference the pages it touches, and update the index and log."

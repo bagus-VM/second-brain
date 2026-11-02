@@ -1,0 +1,40 @@
+==============================================================================
+(a) SEMANTIC CHECK - recovered C vs the sheet's own instructions
+==============================================================================
+  f1 = 15 >> 2 and f2 = 10 << 2, computed both ways
+    f1(15,2) =      3  (sheet's code:      3)  OK
+    f2(10,2) =     40  (sheet's code:     40)  OK
+  sar vs shr on negative values, which is the whole difference
+    v= -16  sar v>>2 =   -4   shr v>>2 = 1073741820   (x86 `shr` is the unsigned shift)
+    v=  -8  sar v>>2 =   -2   shr v>>2 = 1073741822   (x86 `shr` is the unsigned shift)
+    v=  -1  sar v>>2 =   -1   shr v>>2 = 1073741823   (x86 `shr` is the unsigned shift)
+    v=   0  sar v>>2 =    0   shr v>>2 =          0   (x86 `shr` is the unsigned shift)
+    v=   7  sar v>>2 =    1   shr v>>2 =          1   (x86 `shr` is the unsigned shift)
+  max(100,200,400) - what is printed, and what is returned
+    printed: [400]
+    returned: 0xdeadbeef  <- [rbp-4] is never written in the listing,
+              so the return value is indeterminate; main discards it anyway
+  max(5,5,1) - the tie case
+    printed: [5, 5]   (both 5s qualify, so the line prints twice)
+
+==============================================================================
+(b) COMPILER ROUND-TRIP - recovered C compiled at -O0 vs the sheet's listing
+==============================================================================
+  compiler: C:\Users\quiescent\AppData\Local/Temp/rr-hw03/.venv/Lib/site-packages/ziglang/zig.exe
+  f1: sheet = ['push', 'mov', 'mov', 'mov', 'mov', 'mov', 'sar', 'pop', 'ret']
+  f1: zig   = ['push', 'mov', 'mov', 'mov', 'mov', 'mov', 'sar', 'pop', 'ret']
+  f1: exact match, instruction for instruction
+  f2: sheet = ['push', 'mov', 'mov', 'mov', 'mov', 'mov', 'shl', 'pop', 'ret']
+  f2: zig   = ['push', 'mov', 'mov', 'mov', 'mov', 'mov', 'shl', 'pop', 'ret']
+  f2: exact match, instruction for instruction
+
+  the operator question, settled by compiling both candidates:
+  `a >= b && a >= c` compiles to conditional jumps: ['jl', 'jl', 'jl', 'jl', 'jl', 'jl']
+  `a >  b && a >  c` compiles to conditional jumps: ['jle', 'jle', 'jle', 'jle', 'jle', 'jle']
+  the sheet's listing uses `jl` three times at 9, 10 and 11, therefore the
+  source used >=, not >. `jl` is the branch taken when the first operand is
+  LESS, i.e. it skips the body when the comparison fails.
+
+==============================================================================
+RESULT: 0 mismatches
+==============================================================================

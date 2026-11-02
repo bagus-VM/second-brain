@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "LLM Wiki",
+    "description": "Maintains a Karpathy-style interlinked markdown knowledge base: orientation, link linting, source ingestion with content hashing, and an append-only action log."
+  },
+  "tool": {
+    "orient": "Read the wiki schema, index, and recent log before doing any work",
+    "lint": "Audit broken links, orphans, index gaps, source drift, and stale pages",
+    "ingest": "Store a source under raw/ with provenance frontmatter and a body hash",
+    "log": "Append one entry to the wiki's append-only log"
+  }
+}

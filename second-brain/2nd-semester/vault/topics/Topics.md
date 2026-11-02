@@ -2,7 +2,7 @@
 title: "Topics — Semester 2"
 tags: [meta, vault, semester-2]
 status: current
-last_updated: 2026-10-23
+last_updated: 2026-10-30
 ---
 
 # Topics — Semester 2
@@ -30,24 +30,31 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Course | Unit | Page | Concepts produced |
 |--------|------|------|-------------------|
 | Advanced IT Security | L0 Basics — meaning, elements, risk, CIA | [[advanced-it-security-lecture-0]] | 7 |
+| Advanced IT Security | L0b Basics II — properties beyond CIA, attackers, cell phones | [[advanced-it-security-lecture-0b]] | 3 |
 | Energy Informatics I | L0 Motivation and Basics | [[energy-informatics-1-lecture-0]] | 6 |
 | Introduction to Deep Learning | L1 Introduction and Overview | [[introduction-to-deep-learning-lecture-1]] | 2 |
 | Introduction to Deep Learning | L2 Foundations of Machine Learning | [[introduction-to-deep-learning-lecture-2]] | 12 |
 | Introduction to Deep Learning | Exercise 1 — Python | [[introduction-to-deep-learning-exercise-1]] | 4 |
 | Introduction to Deep Learning | Exercise 2 — PyTorch | [[introduction-to-deep-learning-exercise-2]] | 4 |
+| Introduction to Deep Learning | Exercise 3 — evaluation metrics, gradient descent by hand | [[introduction-to-deep-learning-exercise-3]] | 3 |
 | Machine Learning for Cybersecurity | L1 Organisation, Security, ML basics | [[machine-learning-for-cybersecurity-lecture-1]] | 5 |
 | Machine Learning for Cybersecurity | L2 Simple classification, spam | [[machine-learning-for-cybersecurity-lecture-2]] | 3 |
 | Machine Learning for Cybersecurity | L3 Metrics, ROC, KNN, regressions | [[machine-learning-for-cybersecurity-lecture-3]] | 5 |
 | Dependable Distributed Systems | L1 Introduction and fault tolerance basics | [[dependable-distributed-systems-lecture-1]] | 7 |
 | Dependable Distributed Systems | L2 Models, time, logical clocks | [[dependable-distributed-systems-lecture-2]] | 7 |
 | Dependable Distributed Systems | L3 Physical clock synchronization, CNV, NTP | [[dependable-distributed-systems-lecture-3]] | 6 |
+| Dependable Distributed Systems | L4 Broadcast semantics and algorithms | [[dependable-distributed-systems-lecture-4]] | 4 |
 | Dependable Distributed Systems | Exercise 1 — distributed systems and dependability | [[dependable-distributed-systems-exercise-1]] | — |
 | Dependable Distributed Systems | Exercise 2 — models and logical clocks | [[dependable-distributed-systems-exercise-2]] | — |
 | Dependable Distributed Systems | Exercise 3 — clock measurement, CNV, transport | [[dependable-distributed-systems-exercise-3]] | — |
+| Dependable Distributed Systems | Exercise 4 — broadcast semantics and algorithms | [[dependable-distributed-systems-exercise-4]] | 4 |
+| Virtual Machines and Runtime Systems | L0 Organizational matters | [[virtual-machines-and-runtime-systems-lecture-0]] | — |
 | Virtual Machines and Runtime Systems | L1 Introduction to virtualization | [[virtual-machines-and-runtime-systems-lecture-1]] | 2 |
 | Virtual Machines and Runtime Systems | L2 The C runtime system | [[virtual-machines-and-runtime-systems-lecture-2]] | 6 |
 | Virtual Machines and Runtime Systems | Exercise Sheet 1 | [[virtual-machines-and-runtime-systems-exercise-1]] | 1 |
+| Virtual Machines and Runtime Systems | Exercise Sheet 2 — signals, threads | [[virtual-machines-and-runtime-systems-exercise-2]] | — |
 | Advanced IT Security | Exercise organisation | [[advanced-it-security-exercise-0]] | — |
+| Advanced IT Security | Exercise 1 — vocabulary, relations, security solutions | [[advanced-it-security-exercise-1]] | — |
 | Introduction to Deep Learning | Course roadmap (all 15 weeks) | [[deep-learning-course-roadmap]] | — |
 | Mining Software Repositories | L0 Organisation, schedule and course map | [[mining-software-repositories-lecture-0]] | — |
 | Mining Software Repositories | L1 Introduction and foundations | [[mining-software-repositories-lecture-1]] | 4 |
@@ -60,10 +67,13 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Mining Software Repositories | L8 Validity of results | [[mining-software-repositories-lecture-8]] | 1 |
 | Mining Software Repositories | Exercise 1 — mining Git and Jira | [[mining-software-repositories-exercise-1]] | — |
 | Mining Software Repositories | Exercise 2 — mining GitHub PRs and issues | [[mining-software-repositories-exercise-2]] | — |
+| Mining Software Repositories | Exercise 3 — a harmonized database | [[mining-software-repositories-exercise-3]] | — |
 | Reverse- and Reengineering | L1 Reengineering, software aging, refactoring | [[reverse-and-reengineering-lecture-1]] | 8 |
 | Reverse- and Reengineering | L2 Reverse engineering, x86 and the ABI | [[reverse-and-reengineering-lecture-2]] | 2 |
+| Reverse- and Reengineering | L3 Binaries, ELF, symbols, GOT/PLT | [[reverse-and-reengineering-lecture-3]] | 3 |
 | Reverse- and Reengineering | Homework 1 — CFG, PDG and program slicing | [[reverse-and-reengineering-exercise-1]] | — |
 | Reverse- and Reengineering | Homework 2 — recovering C from x86-64 assembly | [[reverse-and-reengineering-exercise-2]] | — |
+| Reverse- and Reengineering | Homework 3 — x86 shifts and the max CFG | [[reverse-and-reengineering-exercise-3]] | — |
 
 Lectures not yet held or not yet in `raw/` have no page — see the Gaps section of
 [[2nd-semester/index|the semester index]].

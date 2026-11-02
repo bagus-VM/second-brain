@@ -1,0 +1,17 @@
+- insert:
+    - id: llm-wiki
+      name: '@local/dsh-llm-wiki'
+      config:
+        # Absolute wiki root. Leave empty to auto-detect (WIKI_PATH, then
+        # <workspace>/second-brain, <workspace>/wiki, then ~/wiki).
+        wikiPath: ''
+        # Register the llm-wiki skill in the Harness skill catalog.
+        registerSkill: true
+        # Force a specific SKILL.md. Empty follows titstack's layout:
+        # $AGENTS_HOME/skills/llm-wiki, then ~/.agents/skills/llm-wiki,
+        # then the copy bundled with this package.
+        skillFile: ''
+        # Pages over this line count are reported as split candidates.
+        maxPageLines: 200
+        # Pages untouched for longer than this are reported as stale.
+        staleDays: 90

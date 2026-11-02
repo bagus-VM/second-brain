@@ -1,0 +1,11 @@
+file                    bytes  complete  markers   torn  dup pairs  max rep
+---------------------------------------------------------------------------
+naive-1.txt            277281       676      742     66        362        2
+naive-2.txt            274813       670      735     65        362        2
+naive-3.txt            278069       674      741     67        361        2
+deferred-1.txt         162800       400      400      0          0        1
+deferred-2.txt         162800       400      400      0          0        1
+
+expected for a correct run: 400 complete, 400 markers, 0 torn, 0 duplicated
+naive    -> extra markers + torn records + duplicated work: stdio state damaged
+deferred -> exact, and byte-identical across runs

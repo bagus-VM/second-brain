@@ -13,15 +13,19 @@ prerequisites: ["[[dependable-distributed-systems-lecture-3]]"]
 Source: `dds26-exercise03.pdf` (Reiser, WS 2026/27, discussion 2026-10-28). The sheet's instruction:
 **"Prepare answers before the exercise class. In class you will present them."**
 
-Every number below is produced by `clock-sync.py` in this folder; the full run is in
-`output-clock-sync.txt`. Nothing here is arithmetic done in the head.
+**Update 2026-10-29 — the missing file arrived, and its behaviour is now measured.** Task 3.2
+tells you to download `exercise2-cnv.py`. When this page was first written that file was **not in
+`raw/`**, so 3.2 was answered from an independent CNV implementation. The professor's own
+simulator has since been added, as
+`raw/lectures/Dependable Distributed Systems/Ubung/code/exercise3-cnv.py` — a different filename,
+the same file. `cnv-official-sim.py` in this folder now runs *their* code under every scenario the
+sheet lists and records the outcome in `output-cnv-official-sim.txt`. The section on 3.2 below
+keeps the original independent analysis and adds the measured results from their file; the two
+agree on the mechanism and disagree on one case, which is itself the finding.
 
-**One gap, stated up front.** Task 3.2 tells you to download `exercise2-cnv.py` and modify it. That
-file is **not in `raw/`** — the sheet references it but it was never added to the vault. Rather than
-guess at someone else's code, 3.2 below is answered by implementing CNV from the lecture's own
-definition and running the four experiments against that. The consequence is recorded honestly at
-the end of 3.2: I can show which scenario fails and why, but I cannot tell you which line of *their*
-file is wrong.
+Every number below is produced by `clock-sync.py` or `cnv-official-sim.py` in this folder; the full
+runs are in `output-clock-sync.txt` and `output-cnv-official-sim.txt`. Nothing here is arithmetic
+done in the head.
 
 ---
 
@@ -144,6 +148,115 @@ accepted. Scenarios 5 and 6 are that attack. The result is the honest reading of
 n > 3m the damage stays bounded below δ but does not vanish (0.39 s of a 1 s δ, close to the 0.75δ
 bound), while with n = 3 = 3m the bound is δ itself and the adversary can drive correct nodes from
 agreement up to the ceiling.
+
+---
+
+## 3.2 measured — running the professor's own simulator
+
+`raw/.../Ubung/code/exercise3-cnv.py` is the file the sheet asks for. `cnv-official-sim.py` runs it
+**verbatim**, with exactly two textual edits, both stated: `time.sleep(1)` is neutralised (otherwise
+a run takes minutes) and the `while True` is bounded to 12 rounds. Every scenario is produced by
+uncommenting the line their own file already carries for it, which is how the sheet tells you to use
+it.
+
+The number below is the **max clock difference among the correct nodes** after each round, which is
+what their own `print` statement reports.
+
+### Their code, unmodified
+
+| scenario | round 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 perfect start | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 2 initial error +40 | 40.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 3 initial error +400 | 400.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 4 5 % frequency error | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 |
+| 5 EVILCNV | 0.00 | 96.00 | 4.50 | 165.75 | 159.50 | 33.75 | 107.50 | 142.50 | 138.75 | 30.25 | 98.75 | 203.25 |
+
+### After adding the δ clamp of the lecture's definition
+
+The fix is the one line their `sync()` omits. The lecture's CNV replaces any reading that differs
+from the reader's own clock by more than δ with the reader's own value; their partial implementation
+averages every reading unconditionally:
+
+```python
+def sync(self, nodelist):
+    self.adjust = 0
+    for n in nodelist:
+        diff = n.read() - self.ticks
+        if abs(diff) > DELTA:      # <<< the clamp their partial version omits
+            diff = 0               # reading replaced by own clock value
+        self.adjust += diff
+    self.adjust = self.adjust / len(nodelist)
+```
+
+| scenario | round 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 perfect start | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 2 initial error +40 | 40.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 3 initial error +400 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 | 400.00 |
+| 4 5 % frequency error | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 | 5.00 |
+| 5 EVILCNV | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 6.50 | 9.38 | 2.34 | 0.59 | 5.63 | 5.31 |
+
+### The case that does not match the lecture, and why
+
+The sheet warns: *"Note that in one of the cases, the observed behaviour will not match the expected
+behaviour (according to the lecture's description of the CNV algorithm)."* **It is scenario 5, the
+`EVILCNV` case.**
+
+The lecture's guarantee is that CNV converges when fewer than one third of the processes are faulty.
+There are four nodes and one liar: 4 > 3m = 3, so the guarantee applies. Their unmodified code does
+**not** converge — the divergence wanders between 4.50 and 203.25 for twelve rounds and never
+settles. With the δ clamp added, the same scenario converges to near zero (a residue of 0–9.38, from
+the ±0.02 s read noise in this implementation). The omitted clamp is the whole difference: without
+it, every correct node averages the liar's reading in at full weight; with it, a reading more than δ
+off a reader's own clock is discarded and replaced by that reader's own value.
+
+**A second, less obvious consequence: the fix makes scenario 3 worse.** With the clamp, a node that
+starts 400 ticks away (δ = 50) is **frozen out permanently** — the divergence stays at exactly 400
+forever, because every correct node rejects its readings and it rejects every correct node's, so
+nobody moves. Without the clamp, the buggy code averages the outlier in and everything converges to
+0 within one round. This is not a defect in the clamp; it is CNV's opening precondition — all clocks
+within δ of each other at the start — being violated. But it inverts the naive expectation that "the
+correct implementation is the one that converges", and it is worth saying out loud in the exercise
+class, because the previous analysis on this page had it as the failing case on the strength of an
+*independent* implementation, and the professor's own code shows the opposite for the same scenario.
+
+### 3.2(b) — the strongest attack on their code
+
+**A constant lie does nothing.** The first attempt at "maximum damage" was to have `EVILCNV.read()`
+return its own clock plus three times δ. Measured result: **0.00 in both versions**. The reason is
+structural: every correct node sees the *same* offset, so all of them are pushed the same way and
+stay in step with each other. A constant lie damages absolute accuracy against true time, not
+convergence — and the sheet asks for the max difference among the correct nodes.
+
+**A lie that varies between readers is what works.** `read()` is called once per node per round and
+is not told who is calling, so the attacker cannot tailor a value per victim; but alternating the
+sign across successive calls is enough to make consecutive readers receive opposite values:
+
+```python
+class EVILCNV(CNV):
+    flip = 0
+    def read(self):
+        EVILCNV.flip ^= 1
+        return self.ticks + (1000 if EVILCNV.flip else -1000)
+```
+
+| variant | round 1 | 2 | 3 | … | 12 |
+|---|---|---|---|---|---|
+| alternating ±1000, their unclamped code | 0.00 | **500.00** | 500.00 | … | 500.00 |
+| alternating ±1000, with the clamp | 0.00 | 0.00 | 0.00 | … | 0.00 |
+
+**500.00 against 0.00 for the same attacker.** Two things are settled by that pair of rows:
+
+1. **500 is the maximum available.** Each round, one reader is told +1000 and another −1000; the two
+   adjustments differ by 2000/4 = 500, and the divergence settles at exactly that value rather than
+   drifting. Since their own `read()` bounds the lie at ±1000 (`random.randint(-100, 1000)`), 500 is
+   the ceiling for their magnitude budget. The random version in their file reaches 96–263; the
+   alternation reaches the ceiling every round.
+2. **The clamp is what makes the algorithm Byzantine-tolerant at all.** With it, an out-of-δ
+   reading is replaced by the reader's own value — the liar is not merely outvoted, it is *ignored*,
+   and a magnitude attack contributes exactly nothing. What survives the clamp is only a lie
+   *inside* δ, which is why the δ bound is the security parameter and not a tuning knob.
 
 ---
 

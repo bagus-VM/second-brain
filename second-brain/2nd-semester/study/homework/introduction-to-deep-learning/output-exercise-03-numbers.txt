@@ -1,0 +1,172 @@
+
+==============================================================================
+A. Slide worked example — regression evaluation (slide 5)
+==============================================================================
+  pairs (yhat, y)   : [(4, 5), (7, 9), (9, 8), (3, 2), (100, 12)]
+  |yhat - y|        : [1, 2, 1, 1, 88]   sum = 93
+  (yhat - y)^2      : [1, 4, 1, 1, 7744]   sum = 7751
+  MAE  = 93/5 = 18.6
+  MSE  = 7751/5 = 1550.2
+  the slide's '7744 + e': e = 7  (the four small terms)
+  NOTE: the slide's row labels extract offset by one; the pairs above are the
+  ones that reproduce the printed 93/5, which is the check that settles it.
+
+==============================================================================
+B. Slide worked example — binary classification (slides 14-15)
+==============================================================================
+  TP=8 FN=2 FP=16 TN=974
+  Precision = 8/24 = 0.333333   (slide: 1/3)
+  Recall    = 8/10 = 0.800000   (slide: 4/5)
+  Accuracy  = 982/1000 = 0.982000   (slide: 0.982)
+  F1        = 0.470588   (slide: 8/17 = 0.470588)
+
+==============================================================================
+C. Slide worked example — 3-class one-vs-rest (slides 16-20)
+==============================================================================
+  matrix (rows = truth, cols = prediction): [[3, 147, 33], [17, 833, 137], [86, 84, 160]]
+  total samples = 1500
+  class 0: TP=   3 FN= 180 FP= 103 TN=1214 P=0.028302 R=0.016393 F1=0.020761
+  class 1: TP= 833 FN= 154 FP= 231 TN= 282 P=0.782895 R=0.843972 F1=0.812287
+  class 2: TP= 160 FN= 170 FP= 170 TN=1000 P=0.484848 R=0.484848 F1=0.484848
+  macro-F1  = 0.439299   (slide: ~0.44)
+  accuracy  = 996/1500 = 0.664000   (slide: 0.664)
+  the slide rounds P, R to 2 decimals before averaging; the exact macro-F1 from
+  the unrounded F1 values is the number above.
+
+==============================================================================
+D. Slide worked example — gradient descent, f(x) = x^2 (slide 31)
+==============================================================================
+  f(x) = x^2,  x0 = 1.0,  alpha = 0.25
+    step 1: x =   1.00000000   f' =   2.00000000   x_next =   0.50000000
+    step 2: x =   0.50000000   f' =   1.00000000   x_next =   0.25000000
+    step 3: x =   0.25000000   f' =   0.50000000   x_next =   0.12500000
+    step 4: x =   0.12500000   f' =   0.25000000   x_next =   0.06250000
+    step 5: x =   0.06250000   f' =   0.12500000   x_next =   0.03125000
+    step 6: x =   0.03125000   f' =   0.06250000   x_next =   0.01562500
+    step 7: x =   0.01562500   f' =   0.03125000   x_next =   0.00781250
+  converges to 0 (the minimum).
+
+==============================================================================
+E. Slide worked example — gradient descent that diverges (slides 32-33)
+==============================================================================
+  derivative check f(x,y)=x^2 y + y^2                       max rel. err 1.40e-10  OK
+  f(x,y) = x^2 y + y^2,  (x0,y0) = (2.0, 4.0),  alpha = 1.0
+    step 1: grad = (     16.00,      12.00)  ->  (      -14.00,        -8.00)
+    step 2: grad = (    224.00,     180.00)  ->  (     -238.00,      -188.00)
+    step 3: grad = (  89488.00,   56268.00)  ->  (   -89726.00,    -56456.00)
+    step 4: grad = (10131142112.00, 8050642164.00)  ->  (-10131231838.00, -8050698620.00)
+  no minimum exists on this surface: gradient descent runs off to -inf.
+
+==============================================================================
+F. Slide 'Your Tasks' — MSE and MAE
+==============================================================================
+  (yhat, y) = [(0.4, 0.5), (0.7, 1.7), (0.6, 0.5), (0.2, 0.3), (0.1, 0.1)]
+  yhat - y  = [-0.09999999999999998, -1.0, 0.09999999999999998, -0.09999999999999998, 0.0]
+  |diff|    = [0.09999999999999998, 1.0, 0.09999999999999998, 0.09999999999999998, 0.0]   sum = 1.3000000000000003
+  diff^2    = [0.01, 1.0, 0.01, 0.01, 0.0]   sum = 1.03
+  MAE = 0.2600
+  MSE = 0.2060
+  MAE > MSE here, which is possible because every error is below 1.
+
+==============================================================================
+G. Slide 'Your Tasks' — precision, recall, accuracy, F1
+==============================================================================
+  table: rows y=1 then y=0; columns yhat=1 then yhat=0
+         yhat=1  yhat=0
+  y=1      5      17
+  y=0      1      53
+  the first row/column is the positive class, as in the slide's own example
+  TP=5 FN=17 FP=1 TN=53
+  Precision = 0.8333   Recall = 0.2273   Accuracy = 0.7632   F1 = 0.3571
+  accuracy 0.763 looks respectable; recall 0.227 says the model misses 17 of 22
+
+==============================================================================
+H. Slide 'Your Tasks' — one step of gradient descent
+==============================================================================
+  derivative check f(x)=3x^2-1.25(x-1)^4+(x-2)^6            max rel. err 1.29e-11  OK
+  x0=2.0, alpha=0.1: f'=  7.0000  ->  x1 = 1.300000   f(x1)=5.1775
+  x0=3.0, alpha=0.01: f'=-16.0000  ->  x1 = 3.160000   f(x1)=5.1834
+  x0=3.0, alpha=0.1: f'=-16.0000  ->  x1 = 4.600000   f(x1)=162.4438
+
+==============================================================================
+I. Homework 1(a) — two steps, f(x,y) = 3xy - 5y^2
+==============================================================================
+  derivative check 3xy - 5y^2                               max rel. err 1.40e-10  OK
+  start (0.0, 1.0), alpha = 0.1, f = -5.0
+  step 1: grad = (  3.0000,  -10.0000)  ->  (x,y) = (-0.300000, 2.000000)   f = -21.800000
+  step 2: grad = (  6.0000,  -20.9000)  ->  (x,y) = (-0.900000, 4.090000)   f = -94.683500
+
+==============================================================================
+J. Homework 1(b) — one step, g(x,y) = xy^2 - x^3 exp(x-y) + sin^2(xy)
+==============================================================================
+  derivative check g_x at (1,1)                             rel. err 5.21e-11  OK
+  derivative check g_y at (1,1)                             rel. err 1.32e-11  OK
+  d/dx = y^2 - (3x^2 + x^3) e^(x-y) + 2 sin(xy)cos(xy) * y
+  d/dy = 2xy + x^3 e^(x-y) + 2 sin(xy)cos(xy) * x
+  at (1,1): grad = (-2.090703, 3.909297)
+  sin(2) = 0.909297 is the term that makes both numbers irrational
+  one step with alpha = 1:  (x,y) = (1 - -2.090703, 1 - 3.909297) = (3.090703, -2.909297)
+  f(1,1) = 0.708073   f(3.0907,-2.9093) = -11884.398381
+  the value went DOWN by 11,885.1: the direction is a
+  descent, but alpha = 1 is enormous - the step overshoots far past any minimum.
+
+==============================================================================
+K. Homework 1(c) — gradient ascent
+==============================================================================
+  x <- x + alpha * grad f.  Identical loop with the sign flipped.
+  Equivalently: gradient descent on -f, since grad(-f) = -grad(f).
+
+==============================================================================
+L. Homework 2 — regressor evaluation, two models
+==============================================================================
+  Model 1: yhat=[5, 7, 9, 2, 12]
+           errors=[0, 0, 0, -1, 2]  |e| sum=3  e^2 sum=5
+           MAE = 0.6000   MSE = 1.0000
+  Model 2: yhat=[4.5, 7.5, 10, 2.5, 11]
+           errors=[-0.5, 0.5, 1, -0.5, 1]  |e| sum=3.5  e^2 sum=2.75
+           MAE = 0.7000   MSE = 0.5500
+  VERDICT: the two metrics disagree. Model 1 wins on MAE (0.6 vs 0.7),
+  Model 2 wins on MSE (0.55 vs 1.00) because Model 1's single 2-unit miss
+  is squared, while Model 2 spreads five small misses. 'Which is better'
+  has no answer until the loss is chosen - and MSE punishes the outlier.
+
+==============================================================================
+M. Homework 3(a) — binary classifier on the 2x2 matrix
+==============================================================================
+  rows: y=0, y=1 ; columns: yhat=0, yhat=1
+         yhat=0  yhat=1
+  y=0      3      147
+  y=1      17     137
+  class 0 positive (first row/col, slide convention):
+      TP=3 FN=147 FP=17 TN=137  P=0.150000 R=0.020000 A=0.460526 F1=0.035294
+  class 1 positive (alternative reading):
+      TP=137 FN=17 FP=147 TN=3  P=0.482394 R=0.889610 A=0.460526 F1=0.625571
+
+==============================================================================
+N. Homework 3(b) — binary classifier on two label lists
+==============================================================================
+  y  = [0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0]
+  yh = [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+  class 0 positive: TP=2 FN=3 FP=3 TN=3  P=0.4000 R=0.4000 A=0.4545 F1=0.4000  (5 actual positives, 5 predicted positives)
+  class 1 positive: TP=3 FN=3 FP=3 TN=2  P=0.5000 R=0.5000 A=0.4545 F1=0.5000  (6 actual positives, 6 predicted positives)
+  accuracy is the same either way (0.5455); precision and recall swap roles.
+
+==============================================================================
+O. Homework 4(a) — 3-class one-vs-rest on the sheet's matrix
+==============================================================================
+  matrix = [[7, 129, 46], [25, 766, 170], [73, 73, 204]]   total = 1493
+  class 0: TP=   7 FN= 175 FP=  98  P=0.066667 R=0.038462 F1=0.048780
+  class 1: TP= 766 FN= 195 FP= 202  P=0.791322 R=0.797086 F1=0.794194
+  class 2: TP= 204 FN= 146 FP= 216  P=0.485714 R=0.582857 F1=0.529870
+  macro-F1 = 0.457615
+  accuracy = 977/1493 = 0.654387
+  fit for purpose, not for the metric: the 97.2% on class 1 and the near-zero
+  on class 0 are one story; accuracy 0.654 is the aggregate that hides it.
+
+==============================================================================
+P. Homework 4(b) — system margins on the same matrix
+==============================================================================
+  per-class recall = [0.0385, 0.7971, 0.5829]
+  spread = 0.7586
+  class 0 is predicted 105 times but is only 182 of the 1493 samples
+  predicted counts per class = [105, 968, 420]   actual counts = [182, 961, 350]

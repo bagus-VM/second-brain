@@ -1,0 +1,575 @@
+
+===== [00] Slide-110868.iwa =====
+1B/
+r9D
+Purposes of Reverse Engineering*
+Understand semantics of program
+Reengineering
+Find/fix bugs, quality issues or defects (own software or third-party)
+Security audits (e.g. untrusted compiler)
+Management issues (programming standard)
+Forensic analysis of malware (what, who, countermeasures)
+Protocol/API analysis
+Learning design decisions/ programming practices
+Discovering underlying business model
+Identification of intellectual property infringements*4
+Banks, but also Microsoft
+Untrusted third-party software
+Consoles, drivers, Linux
+MS founder learned programming by reading code from trash paper
+License infringements, Open source code included?*
+
+===== [01] Slide-132743.iwa =====
+1B/
+r9D
+Information Exploration*
+Navigate through links in data structures (mostly manual)
+Hierarchies, control flow, data flow, dependences
+Analysis (beyond basic model)
+Patterns, domain knowledge
+Presentation
+Visualization, etc.*!
+
+===== [02] Slide-137200.iwa =====
+0B.
+r9D
+Reverse Engineering Levels*
+Worst case: only binary/object code
+Higher level: bytecode/intermediate representation
+Best case: Source code (might still be cryptic)
+Common goal: IR suitable for further analysis*
+(PC
+TODO: abstraction levels HW/SW?*
+
+===== [03] Slide-141440.iwa =====
+1B/
+r9D
+Binary Analysis*
+Even if source code is available:
+correspondence of source and binary?
+Understanding of computer organization, low level code
+Executable formats
+Interface to OS/HW
+Assembly*
+
+===== [04] Slide-149999.iwa =====
+1B/
+r9D
+Binary Reverse Engineering*
+Code level
+Low-level, machine code or assembly
+Recognize design, data structures, algorithms
+lists, trees, tables, vectors, matrices, dictionaries, heaps,
+data structure traversals, iterators, applicators, manipulators;
+searching (linear, binary, hashing); event handling; exceptions
+System level
+Higher level
+E.g. interface with OS, protocols, etc.*!
+Lists, arrays, *
+
+===== [05] Slide-161628.iwa =====
+1B/
+r9D
+Static analysis*
+Analysis of code without execution
+Code level:
+Disassembly, control flow reconstruction (non-trivial)
+Decompilation (reconstruction of higher level constructs, undecidable)
+Detection (vulnerabilities, etc)
+System level
+Header information (meta data)
+Imported libraries, functions
+Resources (fixed locations for embedded data, GUI, etc)*/
+Disassembly: create assembler (machine-language)  mnemonics
+Tools: IDA Pro, Ghidra (NSA), Binary Ninja, Radare, Rizin,
+Static vulnerability detectors: Fortify, CodeSonar/x86, Veracode,
+System Tools: objdump, Win: PEiD, PeStudio (portable executable)*
+
+===== [06] Slide-174297.iwa =====
+1B/
+r9D
+Dynamic Analysis*
+Analyzing program executions (at runtime)
+Observe target program
+s behavior
+Execute program (requires input/test data)
+Potentially dangerous (malware?, side effects) -> VM
+Emulator, etc. for legacy software
+See program testing lecture
+Code level
+Debugging (manual, user mode / kernel level) vs.
+automatic (fuzzing, symbolic execution)
+System level (automatic, efficient)
+Monitoring: system and library calls
+Process creation, file system, network*9
+Fuzzing: afl, Symb. Exec. angr, S2E
+System calls: strace, library: ltrace, FS: Process monitor, netw.: tcpdump, wireshark
+Debugger: User: gdb, lldb, Win: x86dbg, OllyDbg
+Kernel: gdb, WinDbg: remote through VM interface*
+
+===== [07] Slide-182461.iwa =====
+0B.
+r9D
+Assembly (x86)*
+Evolution of x86
+16 bit architecture 8086 and 8088 (only 8 bit bus)
+Real mode (only), memory segmentation
+80286: protected mode
+32 bit architecture (ia32)
+80386: 32 bit registers and protected mode address space
+Pentium family introduced MMX + MMX registers, SIMD extensions
+64 bit architecture (ia64)
+Pentium 4 / AMD Athlon 64: 32 bit registers and address space
+Removes certain instructions of 16/32 bit cores*:
+
+===== [08] Slide-187443.iwa =====
+1B/
+r9D
+Goals of Reverse Engineering*
+discover underlying system features: requirements, specifications, design and implementation
+system structure: components, their interrelationships (interfaces)
+functionality: operations performed (on what components)
+dynamic behavior: how input is transformed to output
+rationale: decision making between a number of alternatives at each design step
+construction: modules, documentation, test suites, etc. *"
+
+===== [09] Slide-198230.iwa =====
+0B.
+By Paragraph
+apple:bc-appear
+apple:appear
+All at Once
+f@P h
+Action
+apple:action-rotation
+All at Once
+f@P h
+Action
+apple:action-rotation
+All at Once
+f@P h
+Action
+apple:action-rotation
+r9D
+Process*
+[Reversing forward engineering
+Problem: lost information*
+rVC
+rVC
+Requirement analysis*
+rVC
+rVC
+Architecture design*
+rVC
+rVC
+System design*
+System Implementation*
+
+===== [10] Slide-222664.iwa =====
+1B/
+r9D
+Registers 16/32 bit*
+32 bit variant or extension in parentheses
+Instruction pointer: (e)ip
+Stack pointer: (e)sp
+Base pointer: (e)bp
+General purpose: (e)ax, (e)bx, (e)cx, (e)dx, (e)si, (e)di
+further split of ax into al and ah, same for b,c,d
+Segment registers: cs, ds, ss, es, (fs, gs)
+Floating point: 8 register stack (st(0) to st(7))
+eflags: 16 bit for CF, PF, AF, ZF, SF, 0F, TF, IF, DF
+(SIMD registers: mmx0 to mmx7)*.
+
+===== [11] Slide-252601.iwa =====
+1B/
+r9D
+Instruction Set Architectures*
+RISC (e.g. MIPS)
+Many registers, typically 32
+Few simple addressing modes
+Load-/store-architecture
+three-address code: Rz
+constant-length instruction encoding, typically 4 bytes
+CISC
+Fewer registers, 8
+Complex address modes
+Memory operands
+two-address code: Rx
+variable-length instruction encoding (x86: from 1 to 15 bytes) *=
+
+===== [12] Slide-252763.iwa =====
+1B/
+r9D
+Registers 64 bit*
+Instruction pointer: rip
+Stack pointer: rsp
+Base pointer: rbp
+General purpose: rax, rbx, rcx, rdx, rsi, rdi, r8,
+, r15
+further split of ax into al and ah, same for b,c,d
+Segment registers: cs, ds, ss, es, fs, gs
+Floating point: 8 register stack (st(0) to st(7))
+eflags: 16 bit for CF, PF, AF, ZF, SF, 0F, TF, IF, DF
+SIMD registers: xmm0 to xmm15**
+
+===== [13] Slide-261521.iwa =====
+1B/
+r9D
+ia64 ABI*
+Differs from previous Intel processors (16/32 bit)
+RAX, RCX, RDX, R8, R9, R10, R11, and XMM0-XMM5 are considered volatile (potentially changed by callee on return)
+RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15, and XMM6-XMM15 nonvolatile: must be saved and restored by a function using them
+Integer arguments passed in registers RCX, RDX, R8, and R9, space must be reserved on stack for callee to spill them, further parameters are passed on the stack in right-to-left order
+Floating point arguments are passed in XMM0L, XMM1L, XMM2L, and XMM3L
+Return value stored in RAX or XMM0
+
+===== [14] Slide-265239.iwa =====
+1B/
+r9D
+Accessing
+subregisters
+rax to rdx allow accessing fragments of registers, even high byte of 16 bit word
+rsi, esi, si, sil
+r8, r8d, r8w, r8b
+Backwards compatibility:
+Writing eax zeroes significant 32 bit of rax
+Writing ax, al, ah does NOT zero significant parts (or al) of
+superregister
+(eax or ax)*
+
+===== [15] Slide-281386.iwa =====
+1B/
+r9D
+x86 ISA*
+CISC ISA
+8 Registers (64-bit mode 16 registers)
+Powerful addressing modes:
+base register + (1,2,4) * index register + constant
+For many instructions, one operand can be a memory cell
+(instead of register)
+Inhomogeneous register usage:
+some registers only work with some instructions
+Hundreds of instructions in vector extensions
+Base, index, scale, displacement format: quickly access array elements*&
+int *A;
+...
+A[i+2] += 100 *
+?# ebx = A, ecx = i
+mov eax, 100
+add [ebx + ecx*4 + 8], eax *
+
+===== [16] Slide-293696.iwa =====
+1B/
+r9D
+Instructions*
+Consist of opcode and zero or more operands
+Opcode defines operation (move data, call a function,
+Operands are parameters, three classes supported
+Register (read or write)
+Immediate (constant)
+Memory address: constant (direct) or computed (indirect)
+mov dword ptr [0xdeafbeef], ebx
+store ebx into 4 bytes at given address in virtual memory
+mov ah, byte ptr [0x100]
+load 1 byte at address into ah*0
+
+===== [17] Slide-306427.iwa =====
+1B/
+r9D
+Disclaimer*
+Reverse engineering may be illegal depending on the purpose and situation
+The information in this class is for educational purposes only
+Intended only in the context of this class (understanding of legacy code for which you have or are given permission by copyright owner to reverse engineer)
+Any reverse engineering without permission of copyright owner may have legal consequences
+It is the responsibility of each student to ensure legal abidance outside of this class
+Please refer to Directive 2009/24/EC (Computer Programs Directive) and national implementation laws.*"
+WReverse engineering legal to ensure it operates with another program or device (Art. 6)*
+
+===== [18] Slide-323703.iwa =====
+1B/
+r9D
+Instruction types*
+Arithmetic
+add/sub op1, op2
+mul op: multiply operand by eax, store into edx:eax
+div op: divide edx:eax by op, store into eax, remainder into edx
+imul, idiv: signed couterparts
+Bitvector
+and/or/xor op1, op2
+not op
+xor op, op: equivalent to but shorter than mov op, 0
+Unconditional jump:
+jmp, call addr: (direct or indirect) jump or call
+ret const: return and increase stack pointer by const*>
+
+===== [19] Slide-344445.iwa =====
+1B/
+r9D
+Address-of operation
+lea reg, mem: set reg to address of mem, e.g., lea eax, [edx*4 + ebp]
+Stack
+push op
+pop op
+Comparison:
+cmp op1, op2: sets flags for op1 - op2
+test op1, op2: sets flags for op1 & op2, e.g., test eax, eax
+Cond. jump
+je/jz addr: jump if equal (i.e. zero)
+jne/jnz,  jl, jg, jle, jge: not equal, less, greater (or equal)*6
+
+===== [20] Slide-378821.iwa =====
+1B/
+r9D
+References*
+Ignacio Sanmillan, Paul Litvak: Executable and Linkable Format 101
+https://www.intezer.com/blog/research/executable-linkable-format-101-part1-sections-segments/
+https://www.intezer.com/blog/malware-analysis/executable-linkable-format-101-part-4-dynamic-linking/
+Ryan O
+Neill, Learning Linux binary analysis, packt publishing, 2016
+J. Kinder: Reverse Engineering, Lecture at UBW, 2020
+Microsoft Documentation for Visual Studio 2022*
+]https://www.intezer.com/blog/research/executable-linkable-format-101-part1-sections-segments/
+dhttps://www.intezer.com/blog/malware-analysis/executable-linkable-format-101-part-4-dynamic-linking/
+
+===== [21] Slide-390854.iwa =====
+1B/
+r9D
+Call Stack*
+A calling B: Prolog, Epilog
+mov [RSP + 8], RCX
+push R15
+push R14
+push R13
+sub RSP, 0x40 ; fixed-allocation-size
+lea RBP, 64[RSP]
+lea RSP, -64[RBP]
+; epilogue proper starts here
+add RSP, 0x40 ; fixed-allocation-size
+pop R13
+pop R14
+pop R15
+ret *
+Prolog/Epilog*
+
+===== [22] Slide-404142.iwa =====
+1B/
+r9D
+Binary Executable Formats*
+Natural candidate for static analysis of target binary
+Identify machine code to be run and other artifacts
+Metadata: libraries and functions referenced from binary at runtime
+potentially exported functionalities
+Platform dependent
+Unix: ELF Executable and Linkable Format
+origin: Unix System V Release 4
+Linux, Unix variants, Game consoles, Mobile phones and others
+Win: PE Portable Executable Format
+also for Unified Extensible Firmware Interface (UEFI) (successor BIOS)
+Mac: Mach object file format
+Legacy: com, dos MZ, a.out, COFF*+
+#E.g. C standard library, GUI, Math
+
+===== [23] Slide-413895.iwa =====
+1B/
+r9D
+Binary in Executables*
+Source code compiled to object files (e.g. .o or .obj)
+Stored in some executable format (specified or implicit for compiler)
+(Static) linking integrates object files into executable
+Goal: Relocation of code and data in virtual memory
+Dynamic linker (OS) needs to load external libraries into shared memory space*
+
+===== [24] Slide-423956.iwa =====
+0B.
+r9D
+Loading Executable*
+Kernel and OS functionality when starting an executable
+Creation of new OS process
+Loading of program image into memory of this process
+(Recurs.) resolving runtime dependencies (dynamic libraries)
+Relocation: patch absolute/relative virtual addresses and resolve addresses of imported functions
+Invoke shared library initialization functions
+Jump to entry point*&
+/Win: Start/MainCRTStartup calling main/WinMain
+
+===== [25] Slide-433620.iwa =====
+1B/
+r9D
+ELF Format*
+Cross-Platform
+Header (0x7f ELF) defines 32 and 64 bit, endianness, OS ABI, ISA, pointers, size and numbers of Program header table/entries
+Program Header Table: segments of the executable
+loadable segment, dynamic linking info, interpreter info, thread-local storage
+Section Header Table: sections important for linking and execution
+provides a mapping to virtual memory
+program, symbols, strings, dynamic linking info, constructors, destructors,
+(e.g. .text: read-execute, .data: read-write, no-load)
+Tools: readelf -h <exec>, elfutils, objdump, file
+readelf GNU binutils
+
+===== [26] Slide-465042.iwa =====
+1B/
+r9D
+Common Sections*
+.text: code.
+.data: initialised data.
+.rodata: initialised read-only data.
+.bss: uninitialized data.
+.plt: PLT (Procedure Linkage Table) (IAT equivalent).
+.got: GOT entries dedicated to dynamically linked global variables.
+.got.plt: GOT entries dedicated to dynamically linked functions.
+.symtab: global symbol table.
+.dynamic: Holds all needed information for dynamic linking.
+.dynsym: symbol tables dedicated to dynamically linked symbols.
+.strtab: string table of .symtab section.
+.dynstr: string table of .dynsym section.
+.interp: RTLD embedded string.
+.rel.dyn: global variable relocation table.
+.rel.plt: function relocation table.*L
+
+===== [27] Slide-466708.iwa =====
+1B/
+r9D
+Segment Types*
+PT_NULL: unassigned segment (usually first entry of Program Header Table).
+PT_LOAD: Loadable segment (into memory), all others are mapped into one of these!
+PT_INTERP: Segment holding .interp section.
+PT_TLS: Thread Local Storage segment
+(Common in statically linked binaries).
+PT_DYNAMIC: Holding .dynamic section.
+Different segments usually have different access attributes
+readelf -l <exec>*,
+
+===== [28] Slide-468350.iwa =====
+0B.
+)Binary Loading with Segments and Sections*
+<Segments and virtual addresses must be aligned to page size!*
+r9D
+decimal
+
+===== [29] Slide-477042.iwa =====
+1B/
+r9D
+ELF Symbols*
+Compiler generates more than just code
+Symbolic info from source can improve interpretation of machine code
+Linkers refer to symbol table (match/reference/modify a symbol)
+Debuggers need symbols for better matching of names (vars/functions)
+Anti-analysis tools remove as many symbols as possible
+st_name: index into symbol name string table
+st_info: symbol binds (linker visibility: local, global, (global) weak)
+types: object (variable), func (function), section (ELF section)
+st_shndx: associated section type
+undef: external, progbits: in current object, symtab: symbol table,
+
+===== [30] Slide-500113.iwa =====
+1B/
+r9D
+Symbol Tables*
+Max 2 symbol tables per ELF object (.symtab, .dynsym)
+.symtab: binary
+s global symbol table
+section .strtab for (null-terminated) Strings referencing objects from a different section, one for each symbol of .symtab
+.dynsym required for dynamic linking of external objects
+corresponding string table called .dynstr
+.symtab can be removed, .dynsym cannot unless no dynamic linking*
+
+===== [31] Slide-512528.iwa =====
+1B/
+r9D
+Symbols Example*
+A.D
+A.D8
+@EDZ
+@ED
+@ED
+#.rodata: initialised read-only data*
+
+===== [32] Slide-518331.iwa =====
+1B/
+r9D
+Dynamic Linking*
+Dynamic linker (
+interpreter
+) is loaded first
+Sets up environment (recursively) using entries from .dynamic
+section
+DT_NEEDED
+name of required dependency to load.
+DT_SYMTAB
+address of dynamic symbol table.
+DT_FLAGS
+e.g. BIND_NOW flag
+Perform relocations
+Linker loads main executable and (eager) dependencies, invokes library initialization(s)
+Finally transfers control to executable
+s entry point*+
+
+===== [33] Slide-528761.iwa =====
+1B/
+r9D
+Summary*
+Executable files store significant metadata alongside binary
+Metadata for dynamic linking cannot be stripped
+The more metadata can be found the easier semantics can be inferred*
+
+===== [34] Slide-532494.iwa =====
+1B/
+r9D
+Lazy Linking*
+Resolve function references only when needed
+Global Offset Table (GOT): addresses of global variables and external functions
+Procedure Linkage Table (PLT): short entries of instructions (
+trampolines
+thunks
+): jump to corresponding GOT entry
+Eager linking: GOT entries relocated at load-time
+Lazy linking: GOT entry determined (through loading of library) and relocated at first use, initially GOT entry points to dynamic linker*
+
+===== [35] Slide-90228.iwa =====
+1B/
+Placeholder-10
+Bildplatzhalter 2R
++Prof. Dr.-Ing. Christian Hammer
+WS 2026/27*
+Reverse Engineering*
+xw7D
+decimal
+
+===== [36] Slide-94420.iwa =====
+1B/
+r9D
+Data Acquisition*
+Identify a system
+s artifacts and their relationships
+Techniques:
+Dynamic Program Analysis and Profiling
+Static Program Analysis
+Informal extraction: other information sources
+Potentially: Domain Knowledge (from involved developers etc.)
+Documentation
+Searching other sources (internet, etc.)**
+
+===== [37] Slide-96549.iwa =====
+1B/
+r9D
+Knowledge Organization*
+Create model of the software (-> SE)
+Efficient storage of information
+Data structures allowing automated analysis
+Appropriate abstraction level*
+:Abstraction by
+Classification
+Aggregation
+Generalization
+
+===== [38] Slide-99078.iwa =====
+1B/
+r9D
+Reverse Engineering*
+Origin: Hardware Analysis
+Disassemble product to understand its inner workings
+Goal: Specification for novel parts of e.g. competitors
+To copy product or adapt/fix a system
+Implication: Potential copyright infringement (patent, intellectual property)
+But: Repairing an owned product by disassembling it and replacing a part usually legal.*&
