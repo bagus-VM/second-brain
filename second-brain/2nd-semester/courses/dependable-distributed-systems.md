@@ -81,7 +81,7 @@ Overview pages:
 | E1 | Official solutions to exercise 1 | `dds26-exercise01-sol.pdf` | cross-checked against the written answer — see below |
 | E2 | Exercise 2: models, logical clocks, fault tolerance | `dds26-exercise02.pdf` | ingested → [[dependable-distributed-systems-exercise-2]] |
 | E2 | Official solutions to exercise 2 | `dds26-exercise02-sol.pdf` | cross-checked against the written answer — see below |
-| E3 | Exercise 3: clock measurement, CNV simulation, transport choice | `dds26-exercise03.pdf` | solved → [[dependable-distributed-systems-exercise-3]], `study/homework/…/exercise-03-solution.md` |
+| E3 | Exercise 3: clock measurement, CNV simulation, transport choice | `dds26-exercise03.pdf` | solved → [[dependable-distributed-systems-exercise-3]], `study/homework/…/dds-exercise-03-solution.md` |
 
 ## The official solutions, and what they changed
 
@@ -132,9 +132,9 @@ cross-check rather than as an answer key. Three differences came out of it:
 
 | Sheet | Deliverable | State |
 |-------|-------------|-------|
-| Exercise 1 (14 Oct 2026) | `study/homework/dependable-distributed-systems/exercise-01-solution.md` | written, every task answered; **cross-checked** against `dds26-exercise01-sol.pdf` |
-| Exercise 2 (21 Oct 2026) | `study/homework/dependable-distributed-systems/exercise-02-solution.md` + `logical-clocks.py` | **run**: Lamport and vector timestamps computed and verified over all 175 linear extensions; **cross-checked** against `dds26-exercise02-sol.pdf` |
-| Exercise 3 (28 Oct 2026) | `study/homework/dependable-distributed-systems/exercise-03-solution.md` + `clock-sync.py` | **run**: CNV implemented and simulated over 7 scenarios, the worst Byzantine lie brute-forced, all four measurements computed |
+| Exercise 1 (14 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-01-solution.md` | written, every task answered; **cross-checked** against `dds26-exercise01-sol.pdf` |
+| Exercise 2 (21 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-02-solution.md` + `logical-clocks.py` | **run**: Lamport and vector timestamps computed and verified over all 175 linear extensions; **cross-checked** against `dds26-exercise02-sol.pdf` |
+| Exercise 3 (28 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-03-solution.md` + `clock-sync.py` | **run**: CNV implemented and simulated over 7 scenarios, the worst Byzantine lie brute-forced, all four measurements computed |
 
 ## Connections
 

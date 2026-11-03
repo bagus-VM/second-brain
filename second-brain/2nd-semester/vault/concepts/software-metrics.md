@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -168,7 +168,7 @@ software metrics about raw data enriches data!"
 
 - [[software-metrics]] — this page; measurement theory, the classification grid, and the four
   worked cells.
-- [[mining-software-repositories]] — the pipeline that supplies the raw data metrics are
+- [[msr-pipeline]] — the pipeline that supplies the raw data metrics are
   computed from.
 - [[repository-link-enrichment]] — where the labels and links that metrics depend on come from.
 - [[msr-data-noise]] — the error rates that make a metric's validity questionable.

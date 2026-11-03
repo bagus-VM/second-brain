@@ -67,7 +67,7 @@ Exercise 3 (discussion 2026-10-28)
 
 | Task | What it asks | Where it is answered |
 |------|--------------|----------------------|
-| 3.1(a) | Describe unidirectional and bidirectional measurement, message contents, exact formulas | `exercise-03-solution.md` §3.1(a) |
+| 3.1(a) | Describe unidirectional and bidirectional measurement, message contents, exact formulas | `dds-exercise-03-solution.md` §3.1(a) |
 | 3.1(b) | Discuss whether an accuracy bound can be given in each case | §3.1(b) |
 | 3.2 | Run and break a CNV simulation; repair the algorithm; weaponise the evil node | §3.2, `clock-sync.py` `task_3_2` |
 | 3.3(a) | Compute one CNV round for three processes with δ = 2 h | §3.3(a), `task_3_3a` |

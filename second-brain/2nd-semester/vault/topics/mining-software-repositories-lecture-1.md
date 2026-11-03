@@ -40,7 +40,7 @@ Chapter 1 — Introduction and Foundations
 │
 ├── Software repositories + data mining = MSR
 │   │   Data from repositories -> Collection -> Analysis -> Insights or tools
-│   │   -> [[mining-software-repositories]]
+│   │   -> [[msr-pipeline]]
 │
 ├── Evidence-based software engineering
 │   ├── Evidence-based medicine: therapy -> evidence -> decision
@@ -64,7 +64,7 @@ Chapter 1 — Introduction and Foundations
 | Page | Core idea |
 |------|-----------|
 | [[software-repositories]] | Not one thing but a family of stores — SCM, trackers, reviews, CI, telemetry, forges, chats, wikis, Q&A sites |
-| [[mining-software-repositories]] | The pipeline equation: repository data + collection + analysis yields insights or tools |
+| [[msr-pipeline]] | The pipeline equation: repository data + collection + analysis yields insights or tools |
 | [[evidence-based-software-engineering]] | Evidence-first decision making, transplanted from medicine into software engineering |
 | [[msr-tool-building]] | Four steps — fix the goal, fix the data, build, then run an experiment — with proxy evidence |
 

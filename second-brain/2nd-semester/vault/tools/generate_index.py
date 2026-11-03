@@ -19,6 +19,7 @@ COURSE_ORDER = [
     "Reverse- and Reengineering",
     "Mining Software Repositories",
     "AI Engineering Lab (Block Seminar)",
+    "Seminar on Hardware Security Solutions for the Internet of Things",
 ]
 
 
@@ -84,7 +85,7 @@ lines.append("---")
 lines.append('title: "Semester 2 — Master Index"')
 lines.append("tags: [meta, index, semester-2]")
 lines.append("status: current")
-lines.append("last_updated: 2026-10-22")
+lines.append("last_updated: 2026-11-02")
 lines.append("---")
 lines.append("")
 lines.append("# Semester 2 — Master Index")
@@ -109,6 +110,7 @@ exam = {
     "Reverse- and Reengineering": "two dates via Campus Portal (90 points / 90 min)",
     "Mining Software Repositories": "10.02.2027 / 22.03.2027 (preliminary)",
     "AI Engineering Lab (Block Seminar)": "report-based",
+    "Seminar on Hardware Security Solutions for the Internet of Things": "04.01.2027 paper / 15.02.2027 talk",
 }
 prof = {
     "Energy Informatics I": "de Meer",
@@ -120,6 +122,7 @@ prof = {
     "Reverse- and Reengineering": "Hammer",
     "Mining Software Repositories": "Herbold",
     "AI Engineering Lab (Block Seminar)": "—",
+    "Seminar on Hardware Security Solutions for the Internet of Things": "Anagnostopoulos",
 }
 for c in courses:
     t = c["title"]
@@ -161,6 +164,7 @@ lines.append("- Dropped on 2026-10-21: Scaling Database Systems — all pages an
 lines.append("- Advanced IT Security: lectures 0 and 0b and exercise sheets 0-1 are ingested; lectures 1-6 have no slides in `raw/` yet.")
 lines.append("- Dependable Distributed Systems: lectures 1-3 and exercises 1-3 ingested (exercise 3 re-checked against the professor's own CNV simulator); the 12-topic semester plan is preliminary, so topics 4-12 have no slides in `raw/` yet.")
 lines.append("- The two Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.")
+lines.append("- Seminar on Hardware Security Solutions for the Internet of Things (ingested 2026-11-02): no lecture slides exist, only the kick-off deck and Overleaf guide. The deck forbids ChatGPT or any other automatic text generation, twice, and grades significant plagiarism 5,0. Whether the complete draft in `raw/.../paper/` is reused is undecided; the active repo is `projects/Seminar/` (skeleton only).")
 lines.append("- Exam formats/dates marked TBD were not in the source material and are not guessed.")
 lines.append("")
 

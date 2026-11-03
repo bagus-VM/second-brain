@@ -109,7 +109,7 @@ model's allowed complexity (the degree `q`) affects the fit. The companion demo 
 and four probability exercises.
 
 The full worked solution, with real output from a real PyTorch run, is in
-`study/homework/introduction-to-deep-learning/exercise-02-solution.md`.
+`study/homework/introduction-to-deep-learning/idl-exercise-02-solution.md`.
 
 ## Exam-Relevant Points
 

@@ -81,7 +81,7 @@ Exercise 1 — Introduction to Python
 ## Connections
 
 - [[introduction-to-deep-learning]] — course page with the provisional 15-week schedule.
-- Homework: `study/homework/introduction-to-deep-learning/exercise-01-solution.md` and
+- Homework: `study/homework/introduction-to-deep-learning/idl-exercise-01-solution.md` and
   `exercise-01-solutions.py` — every notebook task, executed, and cross-checked against the
   professor's own `01-hw-intro-py-solutions.ipynb`.
 - [[jupyter-notebook-state]] and [[linear-algebra-for-deep-learning]] — the two demo notebooks,

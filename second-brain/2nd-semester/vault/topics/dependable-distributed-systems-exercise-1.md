@@ -88,7 +88,7 @@ recorded output.
 preparation: 1.6(a) asks for the most important practical problems in distributed systems
 "especially ... technical problems that should be solved by algorithms", and 1.6(b) asks which of
 them interest you and what the lecture should cover more of. The full answer in
-`exercise-01-solution.md` argues for consensus and failure detectors (where the three models
+`dds-exercise-01-solution.md` argues for consensus and failure detectors (where the three models
 meet) and for the time models (the assumption layer under everything later in the semester),
 and it explicitly answers the "which problems are not algorithmic" half — administrative cost
 and hardware cost are real but are not solved by a distributed algorithm.

@@ -1,10 +1,10 @@
 ---
-title: "Mining Software Repositories"
+title: "MSR Pipeline (Mining Software Repositories)"
 tags: [concept, mining-software-repositories, semester-2, msr]
 course: "Mining Software Repositories"
 source_count: 2
 status: current
-last_updated: 2026-10-22
+last_updated: 2026-11-03
 prerequisites: []
 ---
 
@@ -201,6 +201,10 @@ not a user metric (time saved) or a business metric (ROI).
 - [[git-dag-structure-and-internals]] — the Semester 1 page on Git's object model; the
   data-collection lecture relies on it.
 - [[statistical-significance]] — the Semester 1 page on significance testing.
+- [[mining-software-repositories]] — the course page: professor, exam dates, lecture index and the
+  exercise rules this page deliberately does not carry. (This page was renamed from
+  `mining-software-repositories.md` on 2026-11-03 because the slug was shared with the course page
+  and Obsidian could not tell the two apart.)
 
 ## Open Questions
 

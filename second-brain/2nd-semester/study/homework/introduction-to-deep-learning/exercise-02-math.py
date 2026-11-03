@@ -1,6 +1,6 @@
 """Exercise 2 - paper homework: MML 2.4 matrix products, derivatives, probability.
 
-Every claim in exercise-02-solution.md is computed here, so the page quotes
+Every claim in idl-exercise-02-solution.md is computed here, so the page quotes
 computed results rather than asserted ones.
 
 Run:  python exercise-02-math.py

@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 2
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -165,7 +165,7 @@ snapshots from the Apache Foundation can still be build without additional effor
 
 ## Connections
 
-- [[mining-software-repositories]] — the pipeline whose first stage these repositories feed.
+- [[msr-pipeline]] — the pipeline whose first stage these repositories feed.
 - [[repository-link-enrichment]] — how the separate sources are joined into one dataset.
 - [[msr-data-noise]] — the error rates attached to the heuristics built on this raw data.
 - [[software-metrics]] — measurement theory applied to what these sources record.

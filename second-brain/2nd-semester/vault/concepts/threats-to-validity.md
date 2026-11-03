@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -235,7 +235,7 @@ agreement among our participants."
 
 ## Connections
 
-- [[mining-software-repositories]] — the pipeline whose results must survive this checklist.
+- [[msr-pipeline]] — the pipeline whose results must survive this checklist.
 - [[msr-sampling]] — the "selection" internal threat and the main external-validity threat.
 - [[msr-statistical-methods]] — power, test assumptions and the effects that conclusion validity
   checks.

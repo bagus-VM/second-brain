@@ -1,13 +1,14 @@
 ---
 title: "AI Engineering Lab (Block Seminar)"
 tags: [course, semester-2, ai-engineering]
+professor: "not stated in the ingested material"
 semester: "SoSe 2026"
 exam_date: "report-based"
 credits: "TBD"
 language: "English"
 source_count: 2
-status: current
-last_updated: 2026-10-19
+status: active
+last_updated: 2026-11-03
 prerequisites: []
 ---
 

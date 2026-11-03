@@ -5,6 +5,7 @@ course: "Virtual Machines and Runtime Systems"
 source_count: 2
 status: current
 last_updated: 2026-10-19
+prerequisites: []
 ---
 
 # Virtual Machines and Runtime Systems — Exercise Sheet 1

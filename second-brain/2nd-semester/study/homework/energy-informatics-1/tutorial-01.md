@@ -5,6 +5,7 @@ course: "Energy Informatics I"
 source_count: 2
 status: current
 last_updated: 2026-10-19
+prerequisites: []
 ---
 
 # Energy Informatics I — Tutorial 1 solutions

@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -151,7 +151,7 @@ people has crossed from observation into intervention.
 
 - [[evidence-based-software-engineering]] — this page; the survey/case-study/experiment
   distinction and the medicine analogy.
-- [[mining-software-repositories]] — the pipeline whose output is meant to be evidence.
+- [[msr-pipeline]] — the pipeline whose output is meant to be evidence.
 - [[msr-research-paradigms]] — the neighbouring philosophical frame the lecture gestures at.
 - [[threats-to-validity]] — where the case-study design's weaknesses get named.
 - [[software-repositories]] — the raw material for building developer profiles.

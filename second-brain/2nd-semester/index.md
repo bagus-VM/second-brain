@@ -2,14 +2,14 @@
 title: "Semester 2 — Master Index"
 tags: [meta, index, semester-2]
 status: current
-last_updated: 2026-10-22
+last_updated: 2026-11-02
 ---
 
 # Semester 2 — Master Index
 
 > Maintained by Professor White. Generated from note frontmatter; re-run `vault/tools/generate_index.py` after an ingest.
 
-**Courses:** 9 registered · **Concept pages:** 120 · **Topic pages:** 46
+**Courses:** 10 registered · **Concept pages:** 120 · **Topic pages:** 46
 
 ---
 
@@ -18,13 +18,14 @@ last_updated: 2026-10-22
 | Course | Professor | Exam | Page |
 |--------|-----------|------|------|
 | [[advanced-it-security]] | Posegga | 05.04.2027 | active |
-| [[ai-engineering-lab]] | — | report-based | current |
+| [[ai-engineering-lab]] | — | report-based | active |
 | [[dependable-distributed-systems]] | Reiser | TBD | active |
 | [[energy-informatics-1]] | de Meer | 17.02.2027 / 24.03.2027 | active |
 | [[introduction-to-deep-learning]] | Lemmerich | TBD | active |
 | [[machine-learning-for-cybersecurity]] | Reiser | portfolio | active |
 | [[mining-software-repositories]] | Herbold | 10.02.2027 / 22.03.2027 (preliminary) | active |
 | [[reverse-and-reengineering]] | Hammer | two dates via Campus Portal (90 points / 90 min) | active |
+| [[seminar-hardware-security-iot]] | Anagnostopoulos | 04.01.2027 paper / 15.02.2027 talk | active |
 | [[virtual-machines-and-runtime-systems]] | Größlinger | 11.02.2027 / 01.04.2027 | active |
 
 ## Concept Pages by Course
@@ -176,8 +177,8 @@ last_updated: 2026-10-22
 | [[developer-social-networks]] | A developer social network is a graph whose nodes and edges you choose, and every research claim about how developers work depends on tho… | 1 | current |
 | [[evidence-based-software-engineering]] | Evidence-based software engineering applies the logic of evidence-based medicine to technical decisions: gather rigorous evidence first,… | 1 | current |
 | [[grounded-theory]] | Grounded theory builds a theory out of data by coding it inductively — and the lecture's chosen variant, Straussian grounded theory, work… | 1 | current |
-| [[mining-software-repositories]] | MSR is a pipeline: take the data a repository already records, collect it in a form you can analyse, analyse it, and end up with either a… | 2 | current |
 | [[msr-data-noise]] | Heuristic MSR data is never clean: every wrong assumption behind a heuristic becomes noise, and a study's validity depends on measuring t… | 1 | current |
+| [[msr-pipeline]] | MSR is a pipeline: take the data a repository already records, collect it in a form you can analyse, analyse it, and end up with either a… | 2 | current |
 | [[msr-research-paradigms]] | The paradigm you adopt — positivism, interpretivism or pragmatism — decides how you frame the research question, which methods you reach… | 1 | current |
 | [[msr-sampling]] | Sampling decides which data a study looks at, how that data was drawn, and how far the resulting claim may travel — and randomness alone… | 1 | current |
 | [[msr-statistical-methods]] | The statistics that make an MSR claim defensible: hypothesis testing to decide whether an observation is likely random, effect sizes to s… | 1 | current |
@@ -250,4 +251,5 @@ last_updated: 2026-10-22
 - Advanced IT Security: lectures 0 and 0b and exercise sheets 0-1 are ingested; lectures 1-6 have no slides in `raw/` yet.
 - Dependable Distributed Systems: lectures 1-3 and exercises 1-3 ingested (exercise 3 re-checked against the professor's own CNV simulator); the 12-topic semester plan is preliminary, so topics 4-12 have no slides in `raw/` yet.
 - The two Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.
+- Seminar on Hardware Security Solutions for the Internet of Things (ingested 2026-11-02): no lecture slides exist, only the kick-off deck and Overleaf guide. The deck forbids ChatGPT or any other automatic text generation, twice, and grades significant plagiarism 5,0. Whether the complete draft in `raw/.../paper/` is reused is undecided; the active repo is `projects/Seminar/` (skeleton only).
 - Exam formats/dates marked TBD were not in the source material and are not guessed.

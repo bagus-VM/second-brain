@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -173,7 +173,7 @@ refactors gives blame-based attribution no way to separate the parts.
 
 - [[repository-link-enrichment]] — the heuristics whose error rates this page measures.
 - [[szz-algorithm]] — the algorithm whose assumptions produce most of the noise here.
-- [[mining-software-repositories]] — the pipeline whose enrichment stage this noise belongs to.
+- [[msr-pipeline]] — the pipeline whose enrichment stage this noise belongs to.
 - [[software-metrics]] — measurement quality attributes that the noise degrades.
 - [[threats-to-validity]] — the frame in which "Amount of noise impacts validity" is evaluated.
 - [[defect-prediction]] — the downstream consumer hurt by the 42 % mislabeling.

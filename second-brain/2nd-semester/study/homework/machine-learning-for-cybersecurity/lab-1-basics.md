@@ -5,6 +5,7 @@ course: "Machine Learning for Cybersecurity"
 source_count: 2
 status: current
 last_updated: 2026-10-20
+prerequisites: []
 ---
 
 # ML for Cybersecurity — Lab 1: Basics (credit-card fraud)

@@ -120,7 +120,7 @@ Lecture 3 — Physical clock synchronization (42 slides)
   timestamp.
 - **Homework:** exercise 3 (`dds26-exercise03.pdf`) is entirely this lecture — offset measurement,
   a CNV simulation, the three-process CNV example, and the choice of transport for a clock
-  protocol. Solved in `study/homework/dependable-distributed-systems/exercise-03-solution.md`,
+  protocol. Solved in `study/homework/dependable-distributed-systems/dds-exercise-03-solution.md`,
   with the arithmetic and the simulation in `clock-sync.py`.
 - **The lecture's own summary** frames the two families as complementary rather than competing:
   logical clocks for ordering in asynchronous systems, physical clocks where a real timestamp is

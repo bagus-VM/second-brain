@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -169,7 +169,7 @@ are correct.
 
 - [[repository-link-enrichment]] — this page; explicit, textual and implicit linking and their
   error rates.
-- [[mining-software-repositories]] — the pipeline stage this enrichment belongs to.
+- [[msr-pipeline]] — the pipeline stage this enrichment belongs to.
 - [[msr-data-noise]] — the measured consequences of link errors, including the 18,721
   manually validated links.
 - [[szz-algorithm]] — the algorithm whose first phase is issue linking.

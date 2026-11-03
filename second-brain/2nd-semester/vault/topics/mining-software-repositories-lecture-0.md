@@ -46,7 +46,7 @@ Lecture 0 — Organization
 │   ├── Machine learning, data science, statistics
 │   ├── Software engineering incl. version control, issue tracking, QA
 │   ├── Python, pandas, matplotlib, scikit-learn, databases
-│   └── -> [[evidence-based-software-engineering]] [[mining-software-repositories]]
+│   └── -> [[evidence-based-software-engineering]] [[msr-pipeline]]
 │
 └── Contents of the lecture (three columns)
     ├── MSR data collection
@@ -72,7 +72,7 @@ Lecture 0 — Organization
 
 | Page | Core idea |
 |------|-----------|
-| [[mining-software-repositories]] | The pipeline the course is built on: repository data, collection, analysis, and the resulting insight or tool |
+| [[msr-pipeline]] | The pipeline the course is built on: repository data, collection, analysis, and the resulting insight or tool |
 | [[evidence-based-software-engineering]] | The learning goal's justification — decisions in software engineering should rest on collected evidence, as in medicine |
 | [[software-repositories]] | The first content column: a large catalogue of data sources, chosen problem-first rather than convenience-first |
 | [[repository-link-enrichment]] | The second half of collection: linking commits, issues, and pull requests, where most MSR noise enters |

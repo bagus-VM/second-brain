@@ -5,6 +5,7 @@ course: "Introduction to Deep Learning"
 source_count: 4
 status: current
 last_updated: 2026-10-20
+prerequisites: []
 ---
 
 # Introduction to Deep Learning — Exercise 1 solutions

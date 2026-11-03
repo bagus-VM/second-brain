@@ -86,7 +86,7 @@ classifier good? The per-class numbers are wildly asymmetric (one class is near-
 near-useless), so accuracy alone gives a misleading answer.
 
 The full worked solution, with every number produced and finite-difference-checked by
-`exercise-03-numbers.py`, is in `study/homework/introduction-to-deep-learning/exercise-03-solution.md`.
+`exercise-03-numbers.py`, is in `study/homework/introduction-to-deep-learning/idl-exercise-03-solution.md`.
 
 ## Exam-Relevant Points
 
@@ -116,7 +116,7 @@ The full worked solution, with every number produced and finite-difference-check
   [[regression-evaluation-metrics]] — the concept pages behind tasks 2–4.
 - [[gradient-descent-step-mechanics]], [[derivatives-cheat-sheet]] — the concept pages behind
   task 1.
-- `study/homework/introduction-to-deep-learning/exercise-03-solution.md` — the worked solution,
+- `study/homework/introduction-to-deep-learning/idl-exercise-03-solution.md` — the worked solution,
   every number machine-verified.
 
 ## Open Questions

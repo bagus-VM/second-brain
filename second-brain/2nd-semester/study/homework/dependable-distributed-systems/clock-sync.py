@@ -2,7 +2,7 @@
 """DDS exercise 3 — computations.
 
 Sheet: dds26-exercise03.pdf (Reiser, WS 2026/27, discussion 2026-10-28).
-Every number quoted in exercise-03-solution.md is produced here; nothing is typed by hand.
+Every number quoted in dds-exercise-03-solution.md is produced here; nothing is typed by hand.
 
 Run:  python clock-sync.py
 """

@@ -54,7 +54,7 @@ Exercise 3 (due 04.11.2026) — Storing data in a harmonized database
 | [[msr-data-noise]] | The disparate source structures that make harmonization necessary in the first place |
 | [[software-repositories]] | The three source families whose contents must now share one schema |
 | [[msr-tool-building]] | The DBMS and tooling choices the sheet asks you to reason about |
-| [[mining-software-repositories]] | The pipeline: this sheet is its storage stage, the bridge from collect to analyse |
+| [[msr-pipeline]] | The pipeline: this sheet is its storage stage, the bridge from collect to analyse |
 
 ## Exercise Structure
 

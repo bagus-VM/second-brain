@@ -54,7 +54,7 @@ Exercise 1 (due 21.10.2026) — three tasks
 | Page | What the exercise exercises |
 |------|----------------------------|
 | [[software-repositories]] | Git and Jira as two repository families with distinct data models |
-| [[mining-software-repositories]] | The pipeline in miniature: collect, store, analyse, produce an insight |
+| [[msr-pipeline]] | The pipeline in miniature: collect, store, analyse, produce an insight |
 | [[msr-tool-building]] | Which API, which fields, which storage format |
 | [[git-dag-structure-and-internals]] | What a commit is and what the CLI exposes |
 | [[git-patches-and-diffs]] | The status of changed files per commit |

@@ -4,7 +4,7 @@ status: active
 tags: [ai-engineering-lab, studymate, oral-exam]
 ---
 
-Companion to [[Oral Exam Study Guide]]. The big guide is the detailed reference for each week's code.
+Companion to [[oral-exam-study-guide|Oral Exam Study Guide]]. The big guide is the detailed reference for each week's code.
 This file explains the same system in plain words, one concept at a time. It follows the order our
 study conversations went: harness first, then the model, then the loop, then lint vs grill, memory,
 permissions, and the rest. Each section ends with a short line you can actually say out loud.

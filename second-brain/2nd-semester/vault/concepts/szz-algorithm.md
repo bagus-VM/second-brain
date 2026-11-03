@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -178,7 +178,7 @@ none of the above.
 ## Connections
 
 - [[szz-algorithm]] — this page; the two phases, the rules, and the worked sample.
-- [[mining-software-repositories]] — the pipeline stage this algorithm belongs to.
+- [[msr-pipeline]] — the pipeline stage this algorithm belongs to.
 - [[repository-link-enrichment]] — phase 1 is a link-detection problem.
 - [[msr-data-noise]] — the measured error rates of SZZ and its inputs.
 - [[defect-prediction]] — the main downstream consumer of bug-introducing change data.

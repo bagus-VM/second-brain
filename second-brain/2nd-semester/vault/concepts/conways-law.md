@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -176,7 +176,7 @@ single pair is what drags the ratio below one.
 
 ## Connections
 
-- [[mining-software-repositories]] — the pipeline framing this measurement sits inside.
+- [[msr-pipeline]] — the pipeline framing this measurement sits inside.
 - [[community-smells]] — the other half of Chapter 5; the community machinery reused here.
 - [[developer-social-networks]] — the communication graph that supplies `Coordactual`.
 - [[community-structure]] — how communities are detected in the social network.

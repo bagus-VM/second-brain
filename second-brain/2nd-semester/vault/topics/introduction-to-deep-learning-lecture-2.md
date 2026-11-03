@@ -143,7 +143,7 @@ Lecture 2 — Foundations of machine learning (44 slides)
   one reading serves both courses.
 - **Exercise 2** (`02-homework.pdf`) is the paper half of this lecture's material: MML 2.4, matrix
   products, derivatives, probability. Solved in
-  `study/homework/introduction-to-deep-learning/exercise-02-solution.md`.
+  `study/homework/introduction-to-deep-learning/idl-exercise-02-solution.md`.
 - **Exercise 2's coding half** (polynomial regression) is the practical demonstration of the
   overfitting section — degrees 1/2/3/9 compared by measured train and validation loss.
 - **The course's own roadmap** ([[deep-learning-course-roadmap]]) places this lecture as week 3

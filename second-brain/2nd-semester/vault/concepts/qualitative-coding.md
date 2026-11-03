@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 2
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -205,7 +205,7 @@ revisions of the theory".
 - [[qualitative-coding]] — this page.
 - [[grounded-theory]] — the method that uses open and axial coding to build a theory.
 - [[msr-data-noise]] — manual cleaning as an option for handling heuristic noise.
-- [[mining-software-repositories]] — the pipeline whose enrichment step depends on coded labels.
+- [[msr-pipeline]] — the pipeline whose enrichment step depends on coded labels.
 - [[threats-to-validity]] — where rater disagreement enters the validity argument.
 - [[msr-sampling]] — the sampling frame that manual validation and theoretical sampling draw on.
 - [[msr-statistical-methods]] — the statistical machinery behind the agreement coefficients.

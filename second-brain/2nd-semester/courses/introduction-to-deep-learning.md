@@ -64,7 +64,7 @@ Overview pages:
 | E1 | Python demo notebooks (linear algebra, notebook state) | `01-demo.ipynb`, `01-notebook-issue.ipynb` | ingested → [[linear-algebra-for-deep-learning]], [[jupyter-notebook-state]] |
 | E1 | Official solution notebook (cross-check of the homework) | `01-hw-intro-py-solutions.ipynb` | used to correct the homework solution — see below |
 | E2 | PyTorch: tensors, autograd, the training loop | `02-slides.pdf`, `02-demo.ipynb` | ingested → [[pytorch-tensors-and-autograd]], [[neural-network-training-loop]] |
-| E2 | Paper homework: MML 2.4, derivatives, probability | `02-homework.pdf` | solved → `study/homework/introduction-to-deep-learning/exercise-02-solution.md` |
+| E2 | Paper homework: MML 2.4, derivatives, probability | `02-homework.pdf` | solved → `study/homework/introduction-to-deep-learning/idl-exercise-02-solution.md` |
 | E2 | Coding homework: polynomial regression | `02-hw-intro-pytorch-tasks.ipynb` | solved and **run** → [[polynomial-regression-and-overfitting]] |
 
 ## The Exam Is Now Specified
@@ -105,7 +105,7 @@ not in `raw/` at the time the homework was first written. It has now been used a
 and it caught one real error: the task cell reads "compute 256²", and the solution states it in
 words — *"compute 256 times 256"* → `65536`. An earlier version of the homework page had read the
 cell as "2562" and offered two guesses; both were wrong. The correction is recorded in
-`study/homework/introduction-to-deep-learning/exercise-01-solution.md`.
+`study/homework/introduction-to-deep-learning/idl-exercise-01-solution.md`.
 
 The rest of the official solutions agree with the independently written ones, including the details
 that are easy to get wrong: `is_prime` uses a square-root bound, `count_letter("a", "ftest.txt")`

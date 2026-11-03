@@ -122,7 +122,7 @@ Overview pages:
 
 | Page | One-line idea |
 |------|---------------|
-| [[mining-software-repositories]] | The pipeline definition: repository data → collection → analysis → insights or tools |
+| [[msr-pipeline]] | The pipeline definition: repository data → collection → analysis → insights or tools |
 | [[software-repositories]] | What counts as a repository (ISO/IEC/IEEE 24765) and the many kinds there are |
 | [[evidence-based-software-engineering]] | Evidence instead of anecdote: survey, case study, experiment, and the ethical edge |
 | [[msr-tool-building]] | Goal → data → build → evaluate, and why the evidence is usually a proxy metric |

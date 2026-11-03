@@ -51,7 +51,7 @@ Exercise 2 (due 28.10.2026) — two tasks
 | Page | What the exercise exercises |
 |------|----------------------------|
 | [[software-repositories]] | The forge as a repository family bundling issue tracking, pull requests, and reviews |
-| [[mining-software-repositories]] | The pipeline in miniature: collect, store, analyse, interpret |
+| [[msr-pipeline]] | The pipeline in miniature: collect, store, analyse, interpret |
 | [[msr-tool-building]] | Choosing the data, the API, the fields, and the storage format |
 | [[repository-link-enrichment]] | Which records behind PR comments and changed files belong together |
 | [[msr-statistical-methods]] | Task 2's final step asks for a significance test between two groups |

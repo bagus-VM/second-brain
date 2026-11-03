@@ -5,7 +5,7 @@ course: "Mining Software Repositories"
 source_count: 1
 status: current
 last_updated: 2026-10-22
-prerequisites: ["[[mining-software-repositories]]"]
+prerequisites: ["[[msr-pipeline]]"]
 ---
 
 ## One-line Summary
@@ -148,7 +148,7 @@ tool is worth adopting.
 ## Connections
 
 - [[msr-tool-building]] — this page; the four-step approach and the proxy-evidence caveat.
-- [[mining-software-repositories]] — the pipeline whose final cell the tool occupies.
+- [[msr-pipeline]] — the pipeline whose final cell the tool occupies.
 - [[repository-link-enrichment]] — the linking work every improvement target above depends on.
 - [[msr-data-noise]] — the measured error rates behind the "how noisy is the data?" question.
 - [[defect-prediction]] — the model class behind the risk-analysis and warning-ranking targets.

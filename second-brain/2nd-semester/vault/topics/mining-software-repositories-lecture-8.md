@@ -61,7 +61,7 @@ Chapter 8 — Validity of Results
 | [[msr-statistical-methods]] | Power, assumption violations, and fishing — the conclusion-validity threats |
 | [[grounded-theory]] | The qualitative side, where reliability rather than conclusion validity applies |
 | [[qualitative-coding]] | Inter-rater agreement as the evidence behind a reliability claim |
-| [[mining-software-repositories]] | The field whose methods this chapter judges |
+| [[msr-pipeline]] | The field whose methods this chapter judges |
 
 ## Lecture Structure
 1. **Trustworthiness** — the pattern-matching versus if/else thought experiment and the four

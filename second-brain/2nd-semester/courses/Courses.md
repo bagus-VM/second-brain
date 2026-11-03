@@ -11,7 +11,9 @@ Registry of the courses in this semester, with what has actually been ingested i
 Dependable Distributed Systems was taken up on 2026-10-21, replacing Scaling Database Systems.
 Reverse- and Reengineering was re-registered on 2026-10-22 and its material re-ingested after
 being dropped on 2026-10-20 — see *Dropped courses* below for the full history. Mining Software
-Repositories is a new registration, ingested 2026-10-22.
+Repositories is a new registration, ingested 2026-10-22. The Seminar on Hardware Security Solutions
+for the Internet of Things was taken up on 2026-11-02 from its kick-off deck and Overleaf guide;
+it is a paper-writing course with no lecture slides and an explicit no-AI-generated-text rule.
 
 | Course | Professor | Exam | Material in raw/ | Concepts | Lecture pages |
 |--------|-----------|------|------------------|----------|---------------|
@@ -25,6 +27,7 @@ Repositories is a new registration, ingested 2026-10-22.
 | [[reverse-and-reengineering]] | Hammer | two dates via Campus Portal (90 points / 90 min) | L1 + L2 + 2 homework sheets | 10 | [[reverse-and-reengineering-lecture-1]], [[reverse-and-reengineering-lecture-2]], [[reverse-and-reengineering-exercise-1]], [[reverse-and-reengineering-exercise-2]] |
 | [[virtual-machines-and-runtime-systems]] | Größlinger | 11.02.2027 / 01.04.2027 | s00, s01, s02 + sheet 1 | 9 | [[virtual-machines-and-runtime-systems-lecture-1]], [[virtual-machines-and-runtime-systems-lecture-2]], [[virtual-machines-and-runtime-systems-exercise-1]] |
 | [[ai-engineering-lab]] | — | report-based | project repo + report | existing artifacts | — |
+| [[seminar-hardware-security-iot]] | Anagnostopoulos | paper 04.01.2027 / reviews 18.01.2027 / final 01.02.2027 / talk 15.02.2027 | kick-off deck + Overleaf guide (project in `projects/Seminar/`) | 0 | — |
 
 ## Dropped courses
 
