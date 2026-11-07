@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "preliminary: Wed 10 Feb 2027 14:00–16:00 and Mon 22 Mar 2027 10:00–12:00"
 credits: "not stated in the ingested material"
 language: "English"
-source_count: 11
+source_count: 13
 status: active
-last_updated: 2026-10-22
+last_updated: 2026-11-05
 prerequisites: ["machine learning and data-science foundations (data cleaning, feature engineering, statistics, ML)", "software engineering incl. processes and quality assurance", "good programming knowledge (Python, pandas, matplotlib, scikit-learn)", "knowledge about working with and setting up databases"]
 ---
 
@@ -103,6 +103,10 @@ Overview pages:
   and conclusion validity, and how to report threats
 - [[mining-software-repositories-exercise-1]] — Exercise 1 (due 21.10.2026): Git + Jira mining
 - [[mining-software-repositories-exercise-2]] — Exercise 2 (due 28.10.2026): GitHub PR/issue mining
+- [[mining-software-repositories-exercise-3]] — Exercise 3 (due 04.11.2026): designing and building
+  the harmonized database
+- [[mining-software-repositories-exercise-4]] — Exercise 4 (due 11.11.2026): three more projects,
+  issue↔commit↔PR linking by regex, and the first metrics
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
@@ -117,6 +121,8 @@ Overview pages:
 | 8 | Validity of results | `08_Validity.pdf` | ingested → [[mining-software-repositories-lecture-8]] |
 | E1 | Exercise 1 — mining Git and Jira with PyDriller and the Jira REST API | `exercise_01.pdf` | ingested → [[mining-software-repositories-exercise-1]] |
 | E2 | Exercise 2 — mining GitHub PRs and issues via the REST API, with rate-limit handling | `exercise_02.pdf` | ingested → [[mining-software-repositories-exercise-2]] |
+| E3 | Exercise 3 — designing and populating the harmonized database (MariaDB, ER diagram) | `exercise_03.pdf` | ingested → [[mining-software-repositories-exercise-3]] |
+| E4 | Exercise 4 — three more projects, regex linking of issues/commits/PRs, and three metrics | `exercise_04.pdf` | ingested → [[mining-software-repositories-exercise-4]] |
 
 ## Concept Pages
 
@@ -148,8 +154,10 @@ Overview pages:
 |-------|-------------|-------|
 | Exercise 1 (due 21.10.2026) | `study/homework/mining-software-repositories/exercise-01.md` | task sheet and method notes only — **deliberately no AI-written solution**, see below |
 | Exercise 2 (due 28.10.2026) | `study/homework/mining-software-repositories/exercise-02.md` | task sheet and method notes only — same reason |
+| Exercise 3 (due 04.11.2026) | `study/homework/mining-software-repositories/exercise-03.md` | task sheet and design considerations only — same reason |
+| Exercise 4 (due 11.11.2026) | `study/homework/mining-software-repositories/exercise-04.md` | task sheet, tooling mechanics and method notes only — same reason |
 
-**Why the MSR exercises have no solution.** Both sheets carry an explicit instruction from the
+**Why the MSR exercises have no solution.** All four sheets carry an explicit instruction from the
 document's owner, addressed to large language models, that they must not be assisted. The
 practical consequence for this vault: the exercises are described, their tooling is explained
 (the REST endpoints, pagination and rate-limit mechanics, PyDriller's API), but the working
@@ -190,7 +198,9 @@ deliverable. This is recorded so a future session does not "helpfully" fill the 
   slides do not reproduce.
 - **The number of teaching units beyond the nine decks in `raw/` is unknown.** The content map
   promises "visualizing code and its history" and "…", and the decks cover the eight chapters
-  that exist; whether more follow is not stated.
+  that exist; whether more follow is not stated. Four exercise sheets are in `raw/`
+  (exercises 1–4), and their tasks now walk the whole pipeline: collection → harmonization →
+  linking → metrics.
 - **The grading of the exercises is not stated**, only that individual feedback is possible when
   few participants attend.
 - **Whether the practical part of the exercise is graded at all** is unclear — the slides stress

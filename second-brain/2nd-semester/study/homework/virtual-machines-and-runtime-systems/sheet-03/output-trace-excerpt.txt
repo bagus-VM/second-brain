@@ -1,0 +1,46 @@
+Allocation traces captured 2026-11-04 (myprintf writes to stderr; `sbrk(0)` is printed
+before every malloc). Same test program, same sequence, one run per implementation.
+
+--- part (a) mymalloc-bump.c: the break only ever rises ---------------------------
+
+malloc(1);  program break = 0x26232000
+malloc(2);  program break = 0x26232020
+malloc(3);  program break = 0x26232040
+malloc(4);  program break = 0x26232060
+malloc(5);  program break = 0x26232080
+...
+free(0x2626A000) -- ignored, part (a) never reuses memory
+malloc(4096);  program break = 0x26269000     # test's own 4096-byte block
+free(0x26269010) -- ignored, part (a) never reuses memory
+malloc(4096);  program break = 0x2626A010     # after free: a brand new block
+free(0x2626A020) -- ignored, part (a) never reuses memory
+malloc(4096);  program break = 0x2626B020     # and again
+...
+malloc(294);  program break = 0x2626DB80
+malloc(301);  program break = 0x2626DCC0
+malloc(308);  program break = 0x2626DE00
+malloc(315);  program break = 0x2626DF50
+malloc(322);  program break = 0x2626E0A0
+
+--- part (b) mymalloc-freelist.c: freed blocks come back --------------------------
+
+malloc(1);  program break = 0x82FD000
+malloc(2);  program break = 0x82FD020
+malloc(3);  program break = 0x82FD040
+...
+free(0x8333F40)
+malloc(4096);  program break = 0x8333FD0
+free(0x8333FE0)
+malloc(4096);  program break = 0x8333FD0     # break unchanged: the block is reused
+free(0x8333FF0)
+malloc(4096);  program break = 0x8333FD0     # and again
+...
+malloc(294);  program break = 0x8333FD0      # dozens of allocations from the warm heap
+malloc(301);  program break = 0x8333FD0
+malloc(308);  program break = 0x8333FD0
+malloc(315);  program break = 0x8333FD0
+malloc(322);  program break = 0x8333FD0
+```
+
+(Full traces: 403 lines each, in the build directory this run used. The excerpts above
+are the reuse and mixed-workload regions, which is where the two parts differ.)

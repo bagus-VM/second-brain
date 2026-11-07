@@ -2,7 +2,7 @@
 title: "Topics — Semester 2"
 tags: [meta, vault, semester-2]
 status: current
-last_updated: 2026-10-30
+last_updated: 2026-11-05
 ---
 
 # Topics — Semester 2
@@ -31,9 +31,9 @@ one used in `courses/<slug>.md`, so both layers sort together.
 |--------|------|------|-------------------|
 | Advanced IT Security | L0 Basics — meaning, elements, risk, CIA | [[advanced-it-security-lecture-0]] | 7 |
 | Advanced IT Security | L0b Basics II — properties beyond CIA, attackers, cell phones | [[advanced-it-security-lecture-0b]] | 3 |
-| Energy Informatics I | L0 Motivation and Basics | [[energy-informatics-1-lecture-0]] | 6 |
 | Introduction to Deep Learning | L1 Introduction and Overview | [[introduction-to-deep-learning-lecture-1]] | 2 |
 | Introduction to Deep Learning | L2 Foundations of Machine Learning | [[introduction-to-deep-learning-lecture-2]] | 12 |
+| Introduction to Deep Learning | L3 Single-layer neural networks — linear regression, GD, perceptron, logistic regression, computation graphs | [[introduction-to-deep-learning-lecture-3]] | 5 |
 | Introduction to Deep Learning | Exercise 1 — Python | [[introduction-to-deep-learning-exercise-1]] | 4 |
 | Introduction to Deep Learning | Exercise 2 — PyTorch | [[introduction-to-deep-learning-exercise-2]] | 4 |
 | Introduction to Deep Learning | Exercise 3 — evaluation metrics, gradient descent by hand | [[introduction-to-deep-learning-exercise-3]] | 3 |
@@ -53,8 +53,12 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Virtual Machines and Runtime Systems | L2 The C runtime system | [[virtual-machines-and-runtime-systems-lecture-2]] | 6 |
 | Virtual Machines and Runtime Systems | Exercise Sheet 1 | [[virtual-machines-and-runtime-systems-exercise-1]] | 1 |
 | Virtual Machines and Runtime Systems | Exercise Sheet 2 — signals, threads | [[virtual-machines-and-runtime-systems-exercise-2]] | — |
+| Virtual Machines and Runtime Systems | Exercise Sheet 3 — exceptions, memory management | [[virtual-machines-and-runtime-systems-exercise-3]] | 2 |
 | Advanced IT Security | Exercise organisation | [[advanced-it-security-exercise-0]] | — |
 | Advanced IT Security | Exercise 1 — vocabulary, relations, security solutions | [[advanced-it-security-exercise-1]] | — |
+| Advanced IT Security | L1 Introduction to Cryptography — hashes, MACs, unconditional vs conditional | [[advanced-it-security-lecture-1]] | 3 |
+| Advanced IT Security | L2 Introduction to Cryptography, continued — checksums, birthday bound, MD5/SHA history, MACs, encryption | [[advanced-it-security-lecture-2]] | 4 |
+| Advanced IT Security | Exercise 2 — cryptography, the adversary, hash functions | [[advanced-it-security-exercise-2]] | — |
 | Introduction to Deep Learning | Course roadmap (all 15 weeks) | [[deep-learning-course-roadmap]] | — |
 | Mining Software Repositories | L0 Organisation, schedule and course map | [[mining-software-repositories-lecture-0]] | — |
 | Mining Software Repositories | L1 Introduction and foundations | [[mining-software-repositories-lecture-1]] | 4 |
@@ -65,15 +69,22 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Mining Software Repositories | L6 Studying bugs | [[mining-software-repositories-lecture-6]] | 2 |
 | Mining Software Repositories | L7 Methods: paradigms, sampling, statistics | [[mining-software-repositories-lecture-7]] | 3 |
 | Mining Software Repositories | L8 Validity of results | [[mining-software-repositories-lecture-8]] | 1 |
+| Search-Based Software Engineering | L0 Organisation — assignments, Artemis, rules | [[search-based-software-engineering-lecture-0]] | — |
+| Search-Based Software Engineering | L1 Introduction — optimisation, metaheuristics, SBSE, fitness landscapes | [[search-based-software-engineering-lecture-1]] | 4 |
+| Search-Based Software Engineering | L2 Local search — hill climbing, tabu, simulated annealing, evaluation | [[search-based-software-engineering-lecture-2]] | 4 |
+| Search-Based Software Engineering | L3 Evolutionary algorithms — biology deck + ES/GA lab | [[search-based-software-engineering-lecture-3]] | 1 |
 | Mining Software Repositories | Exercise 1 — mining Git and Jira | [[mining-software-repositories-exercise-1]] | — |
 | Mining Software Repositories | Exercise 2 — mining GitHub PRs and issues | [[mining-software-repositories-exercise-2]] | — |
 | Mining Software Repositories | Exercise 3 — a harmonized database | [[mining-software-repositories-exercise-3]] | — |
+| Mining Software Repositories | Exercise 4 — expanding, linking and measuring the database | [[mining-software-repositories-exercise-4]] | — |
 | Reverse- and Reengineering | L1 Reengineering, software aging, refactoring | [[reverse-and-reengineering-lecture-1]] | 8 |
 | Reverse- and Reengineering | L2 Reverse engineering, x86 and the ABI | [[reverse-and-reengineering-lecture-2]] | 2 |
 | Reverse- and Reengineering | L3 Binaries, ELF, symbols, GOT/PLT | [[reverse-and-reengineering-lecture-3]] | 3 |
+| Reverse- and Reengineering | L4 Disassembly and obfuscation | [[reverse-and-reengineering-lecture-4]] | 5 |
 | Reverse- and Reengineering | Homework 1 — CFG, PDG and program slicing | [[reverse-and-reengineering-exercise-1]] | — |
 | Reverse- and Reengineering | Homework 2 — recovering C from x86-64 assembly | [[reverse-and-reengineering-exercise-2]] | — |
 | Reverse- and Reengineering | Homework 3 — x86 shifts and the max CFG | [[reverse-and-reengineering-exercise-3]] | — |
+| Reverse- and Reengineering | Homework 4 — x86-64 swap recovery and control-flow flattening | [[reverse-and-reengineering-exercise-4]] | — |
 
 Lectures not yet held or not yet in `raw/` have no page — see the Gaps section of
 [[2nd-semester/index|the semester index]].

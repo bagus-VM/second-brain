@@ -2,12 +2,12 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-10-23
-**Total pages:** 856 (vault + study, both semesters; excluding raw/ and projects/)
-**Active courses:** 6 (Semester 1, exams done) + 9 registered in Semester 2
+**Last updated:** 2026-11-07
+**Total pages:** 917 (vault + study, both semesters; excluding raw/ and projects/)
+**Active courses:** 6 (Semester 1, exams done) + 10 registered in Semester 2
 
 > **Semester 2 (WS 2026/27) has its own catalogue: [[2nd-semester/index|Semester 2 — Master Index]]**
-> 9 courses, 106 concept pages, 36 topic pages, 14 homework pages. The sections below are the frozen Semester 1 record.
+> 10 courses, 139 concept pages, 57 topic pages, 22 pages under `study/homework/`. The sections below are the frozen Semester 1 record.
 >
 > **Ingested on 2026-10-23:** Dependable Distributed Systems lecture 3 (physical clock
 > synchronization: offset measurement, CNV, NTP) and its exercise sheet 3, plus the official
@@ -28,6 +28,15 @@
 > **Added on 2026-10-22:** Mining Software Repositories (Herbold) — 9 decks (organisation + L1–L8)
 > and 2 exercise sheets; and Reverse- and Reengineering (Hammer) re-ingested — 2 lectures and
 > 2 homework sheets.
+>
+> **Ingested on 2026-11-05:** Reverse- and Reengineering lecture 4 (disassembly and obfuscation)
+> with homework 4, and Mining Software Repositories exercise 4 (described only — the sheet forbids
+> AI assistance) — 5 concept pages, 3 topic pages, 2 study pages, plus the `03-binaries.pdf` export
+> of lecture 3. Semester 2 now stands at 130 concept pages and 52 topic pages.
+>
+> **Dropped 2026-11-07:** Energy Informatics 1 (de Meer) — course page, 6 concept pages, 1 lecture page, 1 tutorial page and the 4 raw PDFs removed (raw was git-tracked, so recoverable with `git checkout`).
+>
+> **Added 2026-11-07:** Search-Based Software Engineering (Fraser / Feldmeier) — 1 course page, 4 topic pages, 8 concept pages; plus Introduction to Deep Learning lecture 3 (5 concept, 1 topic) and Advanced IT Security lecture 2 with the official sheet-2 solutions (2 concept, 1 topic, 1 rewritten exercise page). Semester 2 now stands at 139 concept pages and 57 topic pages.
 
 ---
 

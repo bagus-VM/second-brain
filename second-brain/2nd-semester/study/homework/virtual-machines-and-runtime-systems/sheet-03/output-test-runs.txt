@@ -1,0 +1,48 @@
+Captured 2026-11-04. Compiled with zig cc (x86_64-linux-gnu.2.35), run under WSL.
+Sources: mymalloc-bump.c (part a), mymalloc-freelist.c (part b), test-mymalloc.c.
+
+$ ./test-mymalloc                                      # system malloc, baseline
+reuse after free: x=0x10828f20 y=0x10828f20 same=yes
+5 checks, 0 failure(s)
+exit=0
+
+$ LD_PRELOAD=./libmymalloc-bump.so ./test-mymalloc      # part (a)
+reuse after free: x=0x26269010 y=0x2626a020 same=no
+5 checks, 0 failure(s)
+exit=0
+
+$ LD_PRELOAD=./libmymalloc-freelist.so ./test-mymalloc  # part (b)
+reuse after free: x=0x83032c0 y=0x83032c0 same=yes
+5 checks, 0 failure(s)
+exit=0
+
+$ LD_PRELOAD=./libmymalloc-bump.so ls -1 *.c
+demomem.c
+dyn_ex.c
+fpeprobe.c
+libmemory.c
+mymalloc-bump.c
+exit=0
+
+$ LD_PRELOAD=./libmymalloc-freelist.so ls -1 *.c
+demomem.c
+dyn_ex.c
+fpeprobe.c
+libmemory.c
+mymalloc-bump.c
+exit=0
+
+--- the lecture's own libmemory.c (flagged realloc bug) ---------------------------
+
+$ LD_PRELOAD=./libmemory.so ./demomem
+malloc(64)
+malloc(96)
+malloc(4096)
+realloc(308C7040,200000)
+malloc(200000)
+free(308C7040)
+free(308C7000)
+free(308C80C0)
+zeroed=1
+realloc ok, c[95]=A
+exit=0

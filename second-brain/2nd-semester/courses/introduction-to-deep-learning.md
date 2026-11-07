@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "TBD"
 credits: "TBD"
 language: "English"
-source_count: 10
+source_count: 11
 status: active
-last_updated: 2026-10-23
+last_updated: 2026-11-07
 prerequisites: []
 ---
 
@@ -52,6 +52,7 @@ The full map with prerequisites is [[deep-learning-course-roadmap]].
 Overview pages:
 - [[introduction-to-deep-learning-lecture-1]] — Lecture 1: Introduction and Overview
 - [[introduction-to-deep-learning-lecture-2]] — Lecture 2: Foundations of Machine Learning
+- [[introduction-to-deep-learning-lecture-3]] — Lecture 3: Single-layer neural networks (linear regression, gradient descent, perceptron, logistic regression, computation graphs)
 - [[introduction-to-deep-learning-exercise-2]] — Exercise 2: Introduction to PyTorch
 - [[introduction-to-deep-learning-exercise-1]] — Python on-ramp
 - [[deep-learning-course-roadmap]] — the whole 15-week schedule
@@ -60,6 +61,7 @@ Overview pages:
 |---|-------|--------|--------|
 | L1 | Introduction and overview: what is deep learning, its history, its open problems | `01_introduction_to_dl.pdf` | ingested → [[introduction-to-deep-learning-lecture-1]] |
 | L2 | Foundations of machine learning: tasks, training and generalization, example methods, evaluation | `02_foundations_of_ml.pdf` | ingested → [[introduction-to-deep-learning-lecture-2]] |
+| L3 | Single-layer neural networks: linear regression, gradient descent, perceptron, logistic regression, computation graphs | `03_single_layer_nns.pdf` | ingested → [[introduction-to-deep-learning-lecture-3]] |
 | E1 | Python, environment management, Jupyter | `01-slides.pdf`, `01-homework.pdf`, notebooks | ingested → [[python-for-deep-learning]], [[python-environment-management]] |
 | E1 | Python demo notebooks (linear algebra, notebook state) | `01-demo.ipynb`, `01-notebook-issue.ipynb` | ingested → [[linear-algebra-for-deep-learning]], [[jupyter-notebook-state]] |
 | E1 | Official solution notebook (cross-check of the homework) | `01-hw-intro-py-solutions.ipynb` | used to correct the homework solution — see below |

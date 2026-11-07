@@ -2,14 +2,14 @@
 title: "Semester 2 — Master Index"
 tags: [meta, index, semester-2]
 status: current
-last_updated: 2026-11-02
+last_updated: 2026-11-07
 ---
 
 # Semester 2 — Master Index
 
 > Maintained by Professor White. Generated from note frontmatter; re-run `vault/tools/generate_index.py` after an ingest.
 
-**Courses:** 10 registered · **Concept pages:** 120 · **Topic pages:** 46
+**Courses:** 10 registered · **Concept pages:** 139 · **Topic pages:** 57
 
 ---
 
@@ -20,33 +20,38 @@ last_updated: 2026-11-02
 | [[advanced-it-security]] | Posegga | 05.04.2027 | active |
 | [[ai-engineering-lab]] | — | report-based | active |
 | [[dependable-distributed-systems]] | Reiser | TBD | active |
-| [[energy-informatics-1]] | de Meer | 17.02.2027 / 24.03.2027 | active |
 | [[introduction-to-deep-learning]] | Lemmerich | TBD | active |
 | [[machine-learning-for-cybersecurity]] | Reiser | portfolio | active |
 | [[mining-software-repositories]] | Herbold | 10.02.2027 / 22.03.2027 (preliminary) | active |
 | [[reverse-and-reengineering]] | Hammer | two dates via Campus Portal (90 points / 90 min) | active |
+| [[search-based-software-engineering]] | Fraser | written or oral, depends on participants; registration closed 03.11.2026 | active |
 | [[seminar-hardware-security-iot]] | Anagnostopoulos | 04.01.2027 paper / 15.02.2027 talk | active |
 | [[virtual-machines-and-runtime-systems]] | Größlinger | 11.02.2027 / 01.04.2027 | active |
 
 ## Concept Pages by Course
 
-### Energy Informatics I
+### Search-Based Software Engineering
 
 | Page | Summary | Sources | Status |
 |------|---------|---------|--------|
-| [[alternating-current-basics]] | AC is a sinusoid; its descriptive numbers are amplitude, period and frequency, and the value that matters for power and for the 230 V soc… | 1 | current |
-| [[demand-side-integration]] | Once supply becomes volatile and moves into the low-voltage grid, the controllable side of the balance has to become demand — which turns… | 1 | current |
-| [[ict-energy-footprint]] | Computing consumes a measurable share of global energy, and the fastest-growing parts — cloud, AI, blockchain — are exactly the parts tha… | 1 | current |
-| [[paris-agreement-climate-goals]] | The 2015 Paris Agreement sets a "well below 2 °C, pursue 1.5 °C" target to avoid irreversible tipping points; the EU's 20/20/20 package t… | 1 | current |
-| [[power-grid-fundamentals]] | The grid is a two-level hierarchy — transmission above, distribution below — held together by one shared frequency that reports the deman… | 1 | current |
-| [[sector-coupling]] | Sector coupling is the interoperability of the electricity, gas and thermal systems under one integrated energy management, so that flexi… | 1 | current |
+| [[evolutionary-algorithm]] | An evolutionary algorithm keeps a population of candidate solutions and iterates select → recombine → mutate → select, so several regions… | 2 | current |
+| [[fitness-landscape]] | A fitness landscape is the search space with a fitness value attached to every solution and a neighbourhood relation between solutions —… | 3 | current |
+| [[hill-climbing]] | Hill climbing picks the best neighbour and moves there, repeating until no neighbour is better — cheap, monotone, and therefore certain t… | 3 | current |
+| [[metaheuristics]] | A metaheuristic is an approximation algorithm that gives a good answer in acceptable time without any guarantee of optimality: it makes n… | 2 | current |
+| [[sbse-paradigm]] | Search-based software engineering treats software-engineering problems as optimisation problems — you define a representation, a fitness… | 2 | current |
+| [[search-algorithm-evaluation]] | A randomised algorithm produces a distribution, not a number — so comparing two of them requires repeated independent runs, a significanc… | 3 | current |
+| [[simulated-annealing]] | Simulated annealing accepts worsening moves with probability p = min(1, e^(−ΔE/T)) and lowers T over time, so the search roams early and… | 3 | current |
+| [[tabu-search]] | Tabu search always moves to the best non-forbidden neighbour — even if it is worse than the current solution — and keeps a short-term mem… | 2 | current |
 
 ### Introduction to Deep Learning
 
 | Page | Summary | Sources | Status |
 |------|---------|---------|--------|
+| [[activation-functions]] | An activation function replaces the perceptron's step with a differentiable non-linearity — sigmoid, tanh, ReLU, Leaky ReLU or GELU — whi… | 1 | current |
+| [[binary-cross-entropy]] | Binary cross-entropy is the negative log-likelihood of a Bernoulli model — L = −y log ŷ − (1−y) log(1−ŷ) — and it is the right loss for a… | 1 | current |
 | [[class-imbalance]] | When the positive class is rare, accuracy is a base-rate artefact rather than a result — the classifier that never says "positive" scores… | 1 | current |
 | [[clustering-and-dimensionality-reduction]] | Unsupervised learning works on the features alone, and the lecture names three jobs for it — grouping similar instances, compressing them… | 1 | current |
+| [[computation-graphs]] | A computation graph decomposes a loss into atomic assignments over input, parameter and compute nodes; the forward pass evaluates it to g… | 2 | current |
 | [[cross-validation]] | One train/test split gives one noisy number; k-fold cross-validation rotates which fold is held out, scores k times, and averages — so th… | 1 | current |
 | [[decision-trees]] | Ask one attribute at a time, greedily from the top, and let the leaves carry the class labels — a model you can read out loud, and the ba… | 1 | current |
 | [[deep-learning-history-timeline]] | Deep learning is eighty years of slow progress, one long winter, one rebranding in 2006, and a data-and-hardware-driven explosion from 20… | 1 | current |
@@ -62,6 +67,7 @@ last_updated: 2026-11-02
 | [[ml-data-and-iid-assumption]] | A row is an instance and a column is a feature, and every guarantee the course makes about a model's performance rests on the rows being… | 1 | current |
 | [[multiclass-evaluation-and-macro-averaging]] | A classifier choosing among C classes is scored by collapsing the C×C confusion matrix into C one-vs-rest problems — each class against t… | 2 | current |
 | [[neural-network-training-loop]] | Training a neural network is a fixed five-step cycle — forward pass, loss, zero the gradients, backpropagate, step the optimiser — repeat… | 1 | current |
+| [[perceptron]] | A perceptron is a linear weighted sum followed by a step function — a binary classifier whose decision boundary is a hyperplane, trained… | 1 | current |
 | [[polynomial-regression-and-overfitting]] | Polynomial regression fits a linear model to the powers of the features, so it is linear regression on transformed inputs — and the degre… | 1 | current |
 | [[python-environment-management]] | A virtual environment is a per-project box holding one Python interpreter and one exact set of packages; `uv` creates that box, installs… | 2 | current |
 | [[python-for-deep-learning]] | Python is the lingua franca of machine learning not because it is fast, but because it is readable, dynamically typed, garbage-collected,… | 1 | current |
@@ -69,6 +75,7 @@ last_updated: 2026-11-02
 | [[regression-evaluation-metrics]] | MAE reports the average size of the error and MSE squares it before averaging, so MSE treats one large error as worse than several small… | 1 | current |
 | [[representation-learning]] | Representation learning is machine learning in which the features are not handed over but learned from data; deep learning is the part of… | 1 | current |
 | [[soft-classification-and-calibration]] | A hard classifier returns a label and throws the confidence away; a soft classifier returns a probability, which is only useful if it is… | 1 | current |
+| [[stochastic-gradient-descent]] | Instead of summing the gradient over all n training examples per update, estimate it from one random example (SGD) or a small batch (mini… | 1 | current |
 | [[support-vector-machines]] | Of all the hyperplanes that separate two classes, take the one with the widest margin to the closest points — and if no hyperplane can do… | 1 | current |
 
 ### Machine Learning for Cybersecurity
@@ -125,8 +132,10 @@ last_updated: 2026-11-02
 | [[dynamic-linking]] | Static libraries are copied into the binary at link time; dynamic libraries are separate objects mapped into the process's `mmap` area at… | 2 | current |
 | [[errno-error-handling]] | C has no exceptions, so functions report failure through their return value and stash the reason in the global `errno` — and the two must… | 1 | current |
 | [[exception-handling-implementation]] | Exceptions are implemented so that code which never throws pays nothing: hardware and kernel raise `SIGSEGV`/`SIGFPE`, and the runtime fi… | 1 | current |
+| [[ld-preload-symbol-interposition]] | `LD_PRELOAD` names shared libraries the loader maps *before* the ones the program asked for, so the symbols they define win the global lo… | 2 | current |
 | [[process-memory-layout]] | A process is a program in execution — text plus data, where data splits into data, BSS, heap and stack — laid out in a *virtual* address… | 2 | current |
 | [[runtime-system]] | A runtime system is everything a program needs at run time but did not get from the compiler — memory, I/O, threads, error handling — del… | 2 | current |
+| [[sbrk-program-break]] | The program break is the end of the process's data segment; `sbrk(delta)` moves it by `delta` bytes and returns the *old* break, which is… | 2 | current |
 | [[setjmp-longjmp]] | `setjmp` snapshots the processor registers; `longjmp` restores them — giving C an untyped, uncontrolled non-local goto that works by movi… | 1 | current |
 | [[signal-safety-and-async-reentrancy]] | Thread-safe and reentrant are two different guarantees — one about concurrent threads, one about nested activations of the same function… | 2 | current |
 | [[thread-emulation-longjmp]] | Threads can be emulated in plain C by keeping one `jmp_buf` per thread and jumping between them — the hard part is not the jump but givin… | 1 | current |
@@ -137,9 +146,13 @@ last_updated: 2026-11-02
 
 | Page | Summary | Sources | Status |
 |------|---------|---------|--------|
+| [[birthday-bound]] | For an n-bit hash, finding a pre-image costs about 2ⁿ work but finding *a* collision costs only about 2^(n/2) — the birthday paradox — so… | 2 | current |
 | [[cell-phone-opsec]] | The closing slides argue that a device which is uniquely identified, geo-trackable, a listening device, a secret store, a behaviour monit… | 2 | current |
+| [[cryptographic-hash-functions]] | A function that compresses an arbitrary-length input to a fixed-length digest, is cheap to compute, and is hard to invert — with three di… | 2 | current |
 | [[gsm-security-political-constraints]] | GSM's weak points are not oversights: they are the direct consequence of export-control law and lawful-interception regulation, so a fix… | 1 | current |
 | [[integrity-definition-landscape]] | Integrity has at least six competing standard definitions, and they disagree along two axes — property or state, and detection or prevent… | 1 | current |
+| [[mdc-vs-mac]] | An MDC is an *unkeyed* digest and can only detect that something changed; a MAC is a *keyed* digest and can additionally attest *who* pro… | 2 | current |
+| [[merkle-damgard-construction]] | Hash functions of arbitrary input length are built by iterating a fixed-size compression function over padded input blocks, so hᵢ = f(xᵢ… | 2 | current |
 | [[risk-perception-and-dread-risk]] | People judge risk by feeling, not by statistics — so the numbers that should govern a security decision are systematically the numbers th… | 1 | current |
 | [[security-approaches-taxonomy]] | The Basics deck maps security onto five sub-fields of computer science and eleven example approaches from a SIGARCH piece, and Exercise S… | 2 | current |
 | [[security-cost-benefit-optimum]] | The optimal security level is the point where the cost of security-enhancing mechanisms and the expected cost of violations cross — and i… | 1 | current |
@@ -147,13 +160,19 @@ last_updated: 2026-11-02
 | [[security-policy-mechanism-assurance]] | A security solution has three parts — a policy that states what must hold, a mechanism that enforces it, and assurance that shows the mec… | 1 | current |
 | [[security-properties-beyond-cia]] | The second Basics deck adds four properties beyond the ITSEC triad — data origin authentication, non-repudiation, entity authentication a… | 2 | current |
 | [[security-relationship-model]] | The lecture's "Beziehungen" diagram is the causal backbone of risk management: threats exploit vulnerabilities, both raise risk, risk ind… | 1 | current |
+| [[unconditional-vs-conditional-security]] | Unconditional security holds even against an adversary with unbounded computing power and is therefore measured with information theory;… | 2 | current |
 
 ### Reverse- and Reengineering
 
 | Page | Summary | Sources | Status |
 |------|---------|---------|--------|
 | [[architecture-smell]] | An architecture smell is a structural weakness at the level of the software architecture itself, and its remedy is architecture refactori… | 1 | current |
+| [[binary-packing]] | A packer compresses or encrypts the program after linking and prepends a stub that reverses the transformation in memory, so the file on… | 1 | current |
 | [[binary-reverse-engineering]] | Binary reverse engineering is the analysis of a program when the artefact available is machine code rather than source, spanning the abst… | 2 | current |
+| [[code-obfuscation]] | Obfuscation rewrites a program so it keeps doing exactly the same thing while becoming harder to understand — and since no perfect scheme… | 1 | current |
+| [[control-flow-obfuscation]] | Control-flow obfuscation destroys the shape of the program — which block runs next — while leaving the set of instructions alone, so the… | 1 | current |
+| [[disassembly]] | Disassembly is the reverse of assembly — machine code back into mnemonics — and because x86 instructions have variable length, *where you… | 1 | current |
+| [[dynamic-code-rewriting]] | The strongest anti-analysis move is not to hide the code's meaning but to keep the code out of the file entirely: transform it at build t… | 1 | current |
 | [[elf-executable-format]] | ELF is the Unix executable container: a header carrying the magic bytes `7f 45 4c 46` plus the machine, word size, endianness and ABI des… | 1 | current |
 | [[elf-symbols-and-tables]] | A compiler emits names as well as machine code: each symbol record holds a string-table index, a packed binding-and-type byte and a secti… | 1 | current |
 | [[got-plt-lazy-linking]] | A call to an external function goes through a Procedure Linkage Table stub that jumps via a Global Offset Table slot, and the dynamic lin… | 1 | current |
@@ -197,8 +216,11 @@ last_updated: 2026-11-02
 | [[Topics]] | Chapter-level overviews: one page per lecture (or exercise unit), tying that session's concepts together and pointing at the pages it pro… | — | current |
 | [[advanced-it-security-exercise-0]] | The only Advanced IT Security material in `raw/` is the exercise introduction: Thursdays from 29.10.2026, English, no credit points, but… | 1 | current |
 | [[advanced-it-security-exercise-1]] | The first real exercise sheet: match the security vocabulary, put it in a relation diagram, explain the three elements of a security solu… | 2 | current |
+| [[advanced-it-security-exercise-2]] | The first cryptography sheet: name the three-way terminology split, compare the old and the new paradigm and say why a TTP appears, separ… | 3 | current |
 | [[advanced-it-security-lecture-0]] | The lecture that fixes the vocabulary: what "secure" means, what a security solution is made of, what risk actually is — and why every on… | 1 | current |
 | [[advanced-it-security-lecture-0b]] | The second half of the Basics material: the security properties that sit *beyond* the CIA triad, the three classes of attacker, the catal… | 1 | current |
+| [[advanced-it-security-lecture-1]] | The deck that opens cryptography proper: what cryptology is and is not, the old and the new paradigm (mutually trusting parties vs commer… | 2 | current |
+| [[advanced-it-security-lecture-2]] | The continuation of the same cryptography deck (slides 18–55): what a checksum is and is not, the birthday bound and brute-force complexi… | 2 | current |
 | [[deep-learning-course-roadmap]] | Fifteen weeks from Python syntax to graph neural networks, where each week's homework is either a pen-and-paper derivation or a coding ta… | 1 | current |
 | [[dependable-distributed-systems-exercise-1]] | Six tasks that turn lecture 1 into something you have to argue: pick the right property, pick the right attribute, separate dependability… | 1 | current |
 | [[dependable-distributed-systems-exercise-2]] | The sheet where the models become a T/F exercise and the logical clocks become arithmetic: one trick question about synchrony, five T/F i… | 2 | current |
@@ -208,18 +230,19 @@ last_updated: 2026-11-02
 | [[dependable-distributed-systems-lecture-2]] | One lecture, three movements: what a model is and why you need one that is both faithful and analysable, the taxonomy of failures and cha… | 1 | current |
 | [[dependable-distributed-systems-lecture-3]] | Lecture 2 said physical clocks cannot order events and handed the ordering job to logical clocks; this lecture goes back and makes the ph… | 1 | current |
 | [[dependable-distributed-systems-lecture-4]] | The abstraction-building lecture: what safety and liveness mean, then five broadcast abstractions (best-effort, reliable, FIFO, causal, a… | 1 | current |
-| [[energy-informatics-1-lecture-0]] | Lecture 0 sets up the whole course: computing is a large and growing energy load, the electrical grid is a real-time balancing act with h… | 1 | current |
 | [[introduction-to-deep-learning-exercise-1]] | The first session is not deep learning: it is the Python on-ramp the whole course stands on, plus an opinionated toolchain (`uv`, VS Code… | 5 | current |
 | [[introduction-to-deep-learning-exercise-2]] | The first week in which the course stops being about Python: PyTorch's tensors and autograd on one side, the fact that a network's loss c… | 3 | current |
 | [[introduction-to-deep-learning-exercise-3]] | The session the last one promised: gradient descent in detail, done by hand on paper, and the evaluation metrics — MAE/MSE for regressors… | 3 | current |
 | [[introduction-to-deep-learning-lecture-1]] | The opening lecture: what deep learning is, how the field got here in eighty years, and what is still unsolved — plus the course organisa… | 1 | current |
 | [[introduction-to-deep-learning-lecture-2]] | The classical machine-learning course the deep-learning course assumes you already had: what a task is, what training actually minimises,… | 1 | current |
+| [[introduction-to-deep-learning-lecture-3]] | One lecture builds the whole single-layer stack in order — linear regression, gradient descent, perceptron, logistic regression, computat… | 2 | current |
 | [[machine-learning-for-cybersecurity-lecture-1]] | Two foundations in one session: security as a cost/benefit discipline with its own vocabulary, and machine learning as a task taxonomy th… | 1 | current |
 | [[machine-learning-for-cybersecurity-lecture-2]] | The first working pipeline of the course: pandas → scikit-learn → metrics on credit-card fraud, then Naive Bayes derived from Bayes' rule… | 1 | current |
 | [[machine-learning-for-cybersecurity-lecture-3]] | Metrics and ROC curves get their own pass, KNN and the two regressions are added to the toolbox, and the ROC is then re-examined through… | 1 | current |
 | [[mining-software-repositories-exercise-1]] | Exercise 1 asks you to build a small mining pipeline by hand: explore Git and Jira as data sources, collect commits with PyDriller and is… | 1 | current |
 | [[mining-software-repositories-exercise-2]] | Exercise 2 moves from Git and Jira to the forge: exploring which GitHub tools the Apache Ignite project uses, mining pull requests and is… | 1 | current |
 | [[mining-software-repositories-exercise-3]] | The hinge sheet of the course: the tool-building phase ends, and the first investigative-phase task is to harmonize the three disparate s… | 1 | current |
+| [[mining-software-repositories-exercise-4]] | The database built in exercise 3 gets three new projects, gets *links* between issues, commits and pull requests, and then gets interroga… | 1 | current |
 | [[mining-software-repositories-lecture-0]] | The organizational deck fixes the frame for the whole course: two lecturers, a Monday lecture and a Wednesday exercise slot, two prelimin… | 1 | current |
 | [[mining-software-repositories-lecture-1]] | Chapter 1 argues that software development is decided by anecdote where it could be decided by evidence, defines what a software reposito… | 1 | current |
 | [[mining-software-repositories-lecture-2]] | Chapter 2 is the data-source catalogue: it argues that any tool a developer uses is a potential MSR source, walks each family of sources… | 1 | current |
@@ -232,24 +255,35 @@ last_updated: 2026-11-02
 | [[reverse-and-reengineering-exercise-1]] | Four drawings that turn the lecture's graph vocabulary into practice — an intra-procedural CFG, a dependence graph, two backward slices,… | 1 | current |
 | [[reverse-and-reengineering-exercise-2]] | Homework 2 puts the lecture's x86 material to work: recover two functions' arguments and their equivalent C from assembly, then draw the… | 1 | current |
 | [[reverse-and-reengineering-exercise-3]] | Homework 3 continues the ladder from homework 2 with two shift-only leaf functions and a three-way `max` whose CFG — intra- and inter-pro… | 1 | current |
+| [[reverse-and-reengineering-exercise-4]] | Homework 4 pairs the reading skill with the obfuscation skill: recover a pointer-based swap from a frame-based listing, then take a loop… | 1 | current |
 | [[reverse-and-reengineering-lecture-1]] | Software ages, reengineering is the response, and control-flow graphs, dependence graphs and slicing are the analysis machinery that make… | 1 | current |
 | [[reverse-and-reengineering-lecture-2]] | Lecture 2 gives reverse engineering its definition, its ladder of artefacts, its static and dynamic toolkits, and the x86 instruction set… | 1 | current |
-| [[reverse-and-reengineering-lecture-3]] | From *what a binary is* to *what it leaks*: the executable file format as a first-class analysis target, the symbol tables as the analyst… | 1 | current |
+| [[reverse-and-reengineering-lecture-3]] | From *what a binary is* to *what it leaks*: the executable file format as a first-class analysis target, the symbol tables as the analyst… | 2 | current |
+| [[reverse-and-reengineering-lecture-4]] | Machine code back to mnemonics — and then the arms race: everything the first three lectures assumed (a readable binary, stable instructi… | 1 | current |
+| [[search-based-software-engineering-lecture-0]] | The organisational deck: Fraser lectures, Feldmeier runs the exercises, four individually-written Java assignments on Artemis plus a writ… | 1 | current |
+| [[search-based-software-engineering-lecture-1]] | The first content lecture builds the whole frame: optimisation problems and why they are hard, metaheuristics as smart trial and error, S… | 2 | current |
+| [[search-based-software-engineering-lecture-2]] | Three local-search algorithms on one template — hill climbing (always uphill), tabu search (always best non-forbidden), simulated anneali… | 3 | current |
+| [[search-based-software-engineering-lecture-3]] | The deck is a biology lecture — Lamarck, Darwin, Mendel, mutation, drift, memetics, and the 1975–1992 timeline of evolutionary computatio… | 2 | current |
 | [[virtual-machines-and-runtime-systems-exercise-1]] | Two problems that turn lecture 2's slides into running code: observe segment boundaries from inside a program and a library under three l… | 1 | current |
 | [[virtual-machines-and-runtime-systems-exercise-2]] | Three problems that turn the runtime-system lectures into running code: a signal-safe counter program, the reentrancy rules that decide w… | 2 | current |
+| [[virtual-machines-and-runtime-systems-exercise-3]] | Two halve-less problems: the exception machinery from lecture 2, measured in time complexity (entering a `try`, finding a handler, emulat… | 3 | current |
 | [[virtual-machines-and-runtime-systems-lecture-0]] | The seven-slide organizational deck: lecturer, rooms, the two exam dates, the lecture's full contents map, the tutorial language policy (… | 1 | current |
 | [[virtual-machines-and-runtime-systems-lecture-1]] | Three definitions that the rest of the course leans on: abstraction (loses detail) versus virtualization (preserves state transitions), e… | 1 | current |
-| [[virtual-machines-and-runtime-systems-lecture-2]] | Everything the C runtime system does at run time: process memory layout and the loader, dynamic libraries and `dlopen`, error handling wi… | 1 | current |
+| [[virtual-machines-and-runtime-systems-lecture-2]] | Everything the C runtime system does at run time: process memory layout and the loader, dynamic libraries and `dlopen`, error handling wi… | 3 | current |
 
 ## Gaps
 
 - Bitcoin and Cryptocurrencies Technologies: `raw/` folder empty, no page.
+- Search-Based Software Engineering (new registration, first ingested 2026-11-07, replacing Energy Informatics 1): organisation deck + lecture 1 (introduction, search spaces and fitness landscapes), lecture 2 (hill climbing, tabu search, simulated annealing, statistical evaluation) and the two Jupyter lab notebooks; lecture 3 is the evolutionary-algorithms deck, its Part 1 stopping at the history of evolutionary computation. Registration closed 2026-11-03 and is binding. Four Java assignments (Artemis, individual work) and a written-or-oral exam are the assessment.
+- Dropped on 2026-11-07: Energy Informatics 1 — course page, 6 concept pages, 1 lecture page, 1 tutorial page and the 4 raw PDFs removed (raw was git-tracked, so recoverable).
+- Introduction to Deep Learning: lectures 1-3 and exercise sets 1-3 ingested; lecture 3 (single-layer networks) arrived 2026-11-07.
 - Dropped on 2026-10-20: Hardware-Oriented Security — all pages and raw sources removed.
-- Reverse- and Reengineering was dropped on 2026-10-20 and has since been re-registered; new material (2 lectures, 2 homework sheets) was ingested on 2026-10-22. The Term 2 exam timeframe is printed as '22.03.-09.04.2025' and is flagged as a typo on the course page.
-- Mining Software Repositories (new registration, ingested 2026-10-22, exercise 3 on 2026-10-30): 9 lecture decks and 3 exercise sheets. The two exam dates are explicitly preliminary; credit points and exam format are not stated in the material.
+- Reverse- and Reengineering was dropped on 2026-10-20 and has since been re-registered; lectures 1-4 and homework 1-4 are now ingested (the 2026-10-29 and 2026-11-05 batches added lecture 3, lecture 4, homework 3 and homework 4; lecture 3 exists both as a `.key` package and as a 15-slide PDF export). The Term 2 exam timeframe is printed as '22.03.-09.04.2025' and is flagged as a typo on the course page.
+- Mining Software Repositories (new registration, ingested 2026-10-22, exercise 3 on 2026-10-30): 9 lecture decks and 4 exercise sheets (exercise 4 arrived 2026-11-05). The two exam dates are explicitly preliminary; credit points and exam format are not stated in the material.
 - Dropped on 2026-10-21: Scaling Database Systems — all pages and raw sources removed.
-- Advanced IT Security: lectures 0 and 0b and exercise sheets 0-1 are ingested; lectures 1-6 have no slides in `raw/` yet.
+- Advanced IT Security: lectures 0, 0b, 1 and 2 and exercise sheets 0-2 are ingested (the official deck for sheet 2 arrived 2026-11-07 and is folded in). The deck filed as `20261102_1_Symmetric.pdf` is titled "Introduction to Cryptography" and ends at hash functions; `20261105_1_Symmetric.pdf` continues it through checksums, the birthday bound, Merkle-Damgard, MD5/SHA history, MACs/HMAC and the start of symmetric encryption. Public-key cryptography, signatures and key establishment (agenda items 3-6) still have no slides in `raw/`.
+- Virtual Machines and Runtime Systems: lectures 0-2, the `s02` example programs, and exercise sheets 1-3 are ingested. Sheet 3 is implemented and run (both allocator variants), with the traces in `study/homework/virtual-machines-and-runtime-systems/sheet-03/`.
 - Dependable Distributed Systems: lectures 1-3 and exercises 1-3 ingested (exercise 3 re-checked against the professor's own CNV simulator); the 12-topic semester plan is preliminary, so topics 4-12 have no slides in `raw/` yet.
-- The two Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.
+- The four Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.
 - Seminar on Hardware Security Solutions for the Internet of Things (ingested 2026-11-02): no lecture slides exist, only the kick-off deck and Overleaf guide. The deck forbids ChatGPT or any other automatic text generation, twice, and grades significant plagiarism 5,0. Whether the complete draft in `raw/.../paper/` is reused is undecided; the active repo is `projects/Seminar/` (skeleton only).
 - Exam formats/dates marked TBD were not in the source material and are not guessed.

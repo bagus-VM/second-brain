@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "2027-02-11"
 credits: "6 ECTS"
 language: "English"
-source_count: 4
+source_count: 7
 status: active
-last_updated: 2026-10-19
+last_updated: 2026-11-04
 prerequisites: []
 ---
 
@@ -45,16 +45,22 @@ What sits between your program and the hardware: the C runtime system, processes
 ## Lecture Index
 
 Overview pages:
+- [[virtual-machines-and-runtime-systems-lecture-0]] — organisational matters (exam dates)
 - [[virtual-machines-and-runtime-systems-lecture-1]] — Introduction to virtualization
 - [[virtual-machines-and-runtime-systems-lecture-2]] — The C runtime system
 - [[virtual-machines-and-runtime-systems-exercise-1]] — Sheet 1 (dynamic libraries, JIT)
+- [[virtual-machines-and-runtime-systems-exercise-2]] — Sheet 2 (signals, threads, `printf` race)
+- [[virtual-machines-and-runtime-systems-exercise-3]] — Sheet 3 (exceptions, memory management, `LD_PRELOAD` allocator)
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
-| 0 | Organisation | `s00.pdf` | ingested |
+| 0 | Organisation | `s00.pdf` | ingested → [[virtual-machines-and-runtime-systems-lecture-0]] |
 | 1 | Virtualization vs. abstraction, emulation vs. simulation, runtime system, VM | `s01.pdf` | ingested → 2 pages |
 | 2 | C runtime system: libraries, memory layout, errno, longjmp, signals, exceptions | `s02.pdf` | ingested → 6 pages |
-| S1 | Dynamic libraries in C; primitive JIT compiler | `01.pdf`, `addrs.c`, `eval.c` | ingested as practice |
+| 2 | Example programs for `s02`: the two exception strategies (`dyn_ex.c`, `static_ex.c`) and a complete `sbrk` allocator (`libmemory.c`) | `Example_programs_for_s02/exception/`, `.../mem/` | ingested, built and run → [[virtual-machines-and-runtime-systems-lecture-2]] |
+| S1 | Dynamic libraries in C; primitive JIT compiler | `01.pdf`, `addrs.c`, `eval.c` | ingested as practice → [[virtual-machines-and-runtime-systems-exercise-1]] |
+| S2 | Signals, reentrancy, `longjmp` threads | `02.pdf`, skeleton sources | ingested as practice → [[virtual-machines-and-runtime-systems-exercise-2]] |
+| S3 | Exceptions (complexity of entry, handler search, `finally` rewrite) and memory management (`malloc`/`calloc`/`realloc`/`free` over `sbrk`) | `03.pdf`, `mymalloc.c` | ingested, implemented and run → [[virtual-machines-and-runtime-systems-exercise-3]] |
 
 ## Exercise Sheet 1 (due 22.10.2026, discussion 23.10.2026)
 

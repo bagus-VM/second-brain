@@ -1,0 +1,95 @@
+==============================================================================
+(a)+(b) LISTING RECOVERY AND SIMULATION
+==============================================================================
+   1  decode:
+   2  push rbp
+   3  mov rbp, rsp
+   4  mov qword ptr [rbp - 8], rdi
+   5  mov qword ptr [rbp - 16], rsi
+   6  mov rax, qword ptr [rbp - 8]
+   7  mov rax, qword ptr [rax]
+   8  mov qword ptr [rbp - 24], rax
+   9  mov rax, qword ptr [rbp - 16]
+  10  mov rax, qword ptr [rax]
+  11  mov qword ptr [rbp - 32], rax
+  12  mov rcx, qword ptr [rbp - 24]
+  13  mov rax, qword ptr [rbp - 16]
+  14  mov qword ptr [rax], rcx
+  15  mov rcx, qword ptr [rbp - 32]
+  16  mov rax, qword ptr [rbp - 8]
+  17  mov qword ptr [rax], rcx
+  18  pop rbp
+  19  ret
+  the recovered C, simulated against the listing itself:
+    decode(&7, &42) -> machine (42, 7)   C (42, 7)   OK
+    decode(&-1, &0) -> machine (0, -1)   C (0, -1)   OK
+    decode(&5, &5) -> machine (5, 5)   C (5, 5)   OK
+    decode(&4611686018427387904, &-4611686018427387904) -> machine (-4611686018427387904, 4611686018427387904)   C (-4611686018427387904, 4611686018427387904)   OK
+    aliased (xp == yp), v = 99 -> machine (99, 99)   C (99, 99)
+
+==============================================================================
+(c) COMPILER ROUND-TRIP - recovered C at -O0 vs the sheet's listing
+==============================================================================
+  compiler: C:/Users/quiescent/AppData/Roaming/uv/tools/ziglang/Lib/site-packages/ziglang/zig.exe
+  recovered C  (18 instructions):
+    push rbp
+    mov rbp, rsp
+    mov qword ptr [rbp - 8], rdi
+    mov qword ptr [rbp - 16], rsi
+    mov rax, qword ptr [rbp - 8]
+    mov rax, qword ptr [rax]
+    mov qword ptr [rbp - 24], rax
+    mov rax, qword ptr [rbp - 16]
+    mov rax, qword ptr [rax]
+    mov qword ptr [rbp - 32], rax
+    mov rcx, qword ptr [rbp - 24]
+    mov rax, qword ptr [rbp - 16]
+    mov qword ptr [rax], rcx
+    mov rcx, qword ptr [rbp - 32]
+    mov rax, qword ptr [rbp - 8]
+    mov qword ptr [rax], rcx
+    pop rbp
+    ret
+  sheet's listing (18 instructions):
+    push rbp
+    mov rbp, rsp
+    mov qword ptr [rbp - 8], rdi
+    mov qword ptr [rbp - 16], rsi
+    mov rax, qword ptr [rbp - 8]
+    mov rax, qword ptr [rax]
+    mov qword ptr [rbp - 24], rax
+    mov rax, qword ptr [rbp - 16]
+    mov rax, qword ptr [rax]
+    mov qword ptr [rbp - 32], rax
+    mov rcx, qword ptr [rbp - 24]
+    mov rax, qword ptr [rbp - 16]
+    mov qword ptr [rax], rcx
+    mov rcx, qword ptr [rbp - 32]
+    mov rax, qword ptr [rbp - 8]
+    mov qword ptr [rax], rcx
+    pop rbp
+    ret
+  EXACT MATCH, instruction for instruction
+  the semantically equivalent alternative `t = *xp; *xp = *yp; *yp = t;` compiles to:
+    at instruction 9:  listing `mov rax, qword ptr [rax]`  vs  alternative `mov rcx, qword ptr [rax]`
+    at instruction 10:  listing `mov qword ptr [rbp - 32], rax`  vs  alternative `mov rax, qword ptr [rbp - 8]`
+    at instruction 11:  listing `mov rcx, qword ptr [rbp - 24]`  vs  alternative `mov qword ptr [rax], rcx`
+    (8 of 18 instructions differ: the statement order is what the round-trip pins down.)
+
+==============================================================================
+(d) THE SHEET'S MACHINE CODE, ASSEMBLED AND RUN
+==============================================================================
+  distinct  in (7, 42) -> sheet (42, 7)  C (42, 7)  same
+  negative  in (-1, 0) -> sheet (0, -1)  C (0, -1)  same
+  equal     in (5, 5) -> sheet (5, 5)  C (5, 5)  same
+  extreme   in (9223372036854775807, -9223372036854775808) -> sheet (-9223372036854775808, 9223372036854775807)  C (-9223372036854775808, 9223372036854775807)  same
+  aliased   in (&v, &v) v=99 -> v=99
+
+==============================================================================
+(e) CONTROL-FLOW FLATTENING - original vs flattened, executed
+==============================================================================
+  bar() = 5050   bar_flat() = 5050   equal
+
+==============================================================================
+RESULT: 0 mismatches
+==============================================================================

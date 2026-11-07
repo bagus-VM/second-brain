@@ -2,9 +2,9 @@
 title: "Reverse- and Reengineering — Lecture 3: Binaries — ELF, Symbols, Dynamic Linking"
 tags: [topic, reverse-and-reengineering, semester-2, lecture, binary-analysis]
 course: "Reverse- and Reengineering"
-source_count: 1
+source_count: 2
 status: current
-last_updated: 2026-10-29
+last_updated: 2026-11-05
 prerequisites: ["[[reverse-and-reengineering-lecture-2]]"]
 ---
 
@@ -77,6 +77,16 @@ had to be opened as a zip archive to be read: a `.key` is a package containing
 by decompressing each `Slide-*.iwa` and extracting its strings, in slide order. That is why the
 page cites "slide 26" style references rather than page numbers: the deck has **39 slides**, in
 order, and 13 of them produce no usable text (title slides, images, animation artefacts).
+
+**The PDF export, added 2026-11-05.** `raw/` now also holds `03-binaries.pdf` — the same deck exported
+from Keynote (15 pages, produced 2026-10-28, 1024×768, footer numbers 2–15). It contains the new
+material of this lecture and none of the lecture-2 recap that the `.key` package carries, so the two
+sources are not the same slide set. Its fourteen slides run in the same order as the `.key`'s
+new-content block — the PDF's slide 2, "Binary Executable Formats", is the `.key`'s slide 22 — and
+the text agrees page for page from there to the summary; the one ordering difference is that the PDF
+puts the references at the end (slide 15) where the `.key` has them before the call-stack slide. The
+page below therefore keeps the `.key`'s slide numbers and cites the PDF only as corroboration: the
+PDF is the cleaner source, the `.key` the complete one.
 
 The deck's own structure is worth stating because it affects how to study it:
 

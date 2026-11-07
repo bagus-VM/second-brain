@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "two dates via Campus Portal; Term 1 window 08.02.–05.03.2027 (sign-up 16.11.–15.12.2026), Term 2 window 22.03.–09.04.2027 (sign-up 01.03.–18.03.2027)"
 credits: "6 ECTS"
 language: "English"
-source_count: 4
+source_count: 8
 status: active
-last_updated: 2026-10-22
+last_updated: 2026-11-05
 prerequisites: ["Compiler construction or software analysis (lexing, parsing, intermediate representation)"]
 ---
 
@@ -87,17 +87,30 @@ Overview pages:
   engineering, CFG/PDG/slicing, restructuring, refactoring, code smells, legacy systems
 - [[reverse-and-reengineering-lecture-2]] — reverse engineering proper: goals and purposes, the
   abstraction ladder, binary analysis, static vs dynamic analysis, x86 assembly and the ia64 ABI
+- [[reverse-and-reengineering-lecture-3]] — binaries: ELF, sections and segments, symbol tables,
+  dynamic linking, GOT/PLT, eager vs lazy binding
+- [[reverse-and-reengineering-lecture-4]] — disassembly (instruction decoding, linear sweep,
+  recursive traversal) and obfuscation (packing, control-flow flattening, opaque predicates,
+  function joining, virtualization, data-based obfuscation)
 - [[reverse-and-reengineering-exercise-1]] — Homework 1 (20.10.2026): CFG, PDG, backward and
   forward slices, interprocedural CFG
 - [[reverse-and-reengineering-exercise-2]] — Homework 2 (27.10.2026): x86 assembly → C, CFG of an
   assembly function, guessing what it computes
+- [[reverse-and-reengineering-exercise-3]] — Homework 3 (03.11.2026): `sar` vs `shl` recovery, the
+  intra- and interprocedural CFG of a three-way `max`
+- [[reverse-and-reengineering-exercise-4]] — Homework 4 (10.11.2026): a pointer-based swap recovered
+  from x86-64, and control-flow flattening of a `while` loop with its flattened CFG
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
 | 1 | Reengineering & software aging, reverse engineering workflow, control flow analysis, PDG, program slicing, restructuring, refactoring, code smells, architecture smells, legacy systems | `01-reengineering-intro.pdf` | ingested → [[reverse-and-reengineering-lecture-1]] |
 | 2 | Reverse engineering: definition, goals, purposes, levels of abstraction, binary analysis, static and dynamic analysis, x86 registers/ISA/instructions/call stack, ia64 ABI | `02-reverse.pdf` | ingested → [[reverse-and-reengineering-lecture-2]] |
+| 3 | Binaries: executable formats, ELF header/tables/sections/segments, symbol tables, dynamic linking, GOT/PLT, lazy linking | `03-binaries.key` (+ `03-binaries.pdf` export, 15 slides) | ingested → [[reverse-and-reengineering-lecture-3]] |
+| 4 | Disassembly: instruction decoding, linear sweep vs recursive traversal, obfuscation, packing, control-flow obfuscation, virtualization, data-based obfuscation | `04-disasssembly.pdf` (23 slides) | ingested → [[reverse-and-reengineering-lecture-4]] |
 | H1 | Homework 1 — intra-procedural CFG, PDG, backward slices (lines 13/14), forward slice (`int i=1`), interprocedural CFG | `hw01.pdf` | ingested → [[reverse-and-reengineering-exercise-1]] |
 | H2 | Homework 2 — recover `bar` and `foo` from x86-64 assembly, intraprocedural CFG of an assembly `foo`, infer what it computes | `hw02.pdf` | ingested → [[reverse-and-reengineering-exercise-2]] |
+| H3 | Homework 3 — `sar`/`shl` recovery from two listings, the CFG of a three-way `max`, intra- and interprocedural | `hw03.pdf` | ingested → [[reverse-and-reengineering-exercise-3]] |
+| H4 | Homework 4 — `void decode(long *xp, long *yp)` recovered from x86-64 assembly; control-flow flattening of `bar` plus its flattened CFG | `hw04.pdf` | ingested → [[reverse-and-reengineering-exercise-4]] |
 
 ## Concept Pages
 
@@ -113,6 +126,14 @@ Overview pages:
 | [[legacy-systems]] | Obsolete stacks, missing documentation, lost knowledge — and the paradox that these systems still run the company |
 | [[legacy-system-renewal]] | Packing, migration, replacement in one fell swoop — three ways to renew, with different risk profiles |
 | [[reengineering-vs-maintenance]] | Maintenance serves the customer and adapts; reengineering serves the developer and reconstitutes |
+| [[elf-executable-format]] | The ELF container in two tables — segments for the loader, sections for the linker — and the six-step load sequence |
+| [[elf-symbols-and-tables]] | What the compiler emits beyond code, and why `.symtab` can be stripped while `.dynsym` cannot |
+| [[got-plt-lazy-linking]] | The two tables that make a call into a shared library possible, and eager vs lazy resolution |
+| [[disassembly]] | Machine code back to mnemonics: variable-length opcodes, linear sweep, recursive traversal, and where each breaks |
+| [[code-obfuscation]] | Semantics-preserving transformation against analysis — the taxonomy, the impossibility claim, and superlinear composition |
+| [[control-flow-obfuscation]] | Flattening, opaque predicates, function joining, virtualization — hiding which block runs next |
+| [[binary-packing]] | Encrypt after linking, decrypt at load time: the stub, the manual import resolution, the tail jump |
+| [[dynamic-code-rewriting]] | Code that is not in the binary: runtime generation, self-modifying code, and unsetting W^X |
 
 ## Homework
 
@@ -120,8 +141,10 @@ Overview pages:
 |-------|-------------|-------|
 | Homework 1 (20.10.2026) | `study/homework/reverse-and-reengineering/hw01-solution.md` + `hw01-slices.py` | **run**: CFG, PDG and all three slices computed by a script that models the program, not drawn by hand |
 | Homework 2 (27.10.2026) | `study/homework/reverse-and-reengineering/hw02-solution.md` + `hw02-verify.py` | **run**: both functions recovered to C, the assembly CFG reconstructed, and the recovered semantics simulated instruction by instruction against the sheet's opcodes — `ALL CHECKS PASSED` |
+| Homework 3 (03.11.2026) | `study/homework/reverse-and-reengineering/hw03-solution.md` + `hw03-verify.py` | **run**: `sar`/`shl` recovered and confirmed by an exact `-O0` round-trip; the `max` CFG reconstructed; the `>=` vs `>` question settled by compiling both |
+| Homework 4 (10.11.2026) | `study/homework/reverse-and-reengineering/hw04-solution.md` + `hw04-verify.py` | **run**: the pointer swap recovered and verified four ways (listing simulation, exact `-O0` round-trip, the sheet's own listing assembled and executed, aliasing case); the flattened `bar` compiled and run against the original — both 5050 |
 
-Both sheets state: "This sheet is not for submission. However, we strongly encourage you to solve
+All four sheets state: "This sheet is not for submission. However, we strongly encourage you to solve
 the problems and bring your solutions to the tutorials for discussion."
 
 ## Connections
@@ -151,13 +174,14 @@ the problems and bring your solutions to the tutorials for discussion."
 
 - **The Term 2 exam timeframe is printed as "22.03. – 09.04.2025"** — a year before the course
   even runs. It is reproduced here as printed and flagged as a typo, not silently corrected.
-- **The number of teaching units is not stated.** The slides are numbered to 51 in lecture 1 and
-  27 in lecture 2, but the course outline says the lecture covers reverse engineering of
-  *processor-specific binary formats as well as intermediate codes* — which implies more material
-  than two lectures deliver (decompilation, obfuscation, intermediate-code formats, automatic
-  refactoring are named in the content list but not taught in the slides at hand).
-- **Obfuscation is named in the content list but has no slide.** The effect of obfuscation
-  techniques "on this process" is promised and not delivered in the ingested material.
+- **The number of teaching units is not stated.** Four decks are now in `raw/` (lectures 1–4,
+  numbered to 51, 27, 39 and 23 slides respectively — and lecture 3 exists twice, as a `.key`
+  package and as a 15-page PDF export that omits the lecture-2 recap). The course outline's content
+  list also promises decompilation and intermediate-code formats, which no ingested deck teaches.
+- **Obfuscation is covered, but only as mechanism.** Lecture 4 delivers the taxonomy — packing,
+  control-flow flattening, opaque predicates, function joining, virtualization, data-based
+  obfuscation — with no lab, no sample binary and no tool walkthrough, and no sheet in `raw/`
+  exercises it.
 - **"Automatic refactoring" is promised in the content list and never appears.** Refactoring
   appears only as a manual activity.
 - **How the two tutorials differ in content, and whether either is in English**, is not stated.
