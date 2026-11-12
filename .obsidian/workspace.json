@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "28006b321036afff",
+        "id": "d43a3d1178c4d217",
         "type": "tabs",
         "children": [
           {
-            "id": "5fb9554152cdc28a",
+            "id": "06fc1fbb4a619570",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "pdf",
               "state": {
-                "file": "Excalidraw/Drawing 2026-11-08 15.00.07.excalidraw.md"
+                "file": "second-brain/2nd-semester/projects/Seminar/main.pdf"
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-11-08 15.00.07.excalidraw"
+              "icon": "lucide-file-text",
+              "title": "main"
             }
           }
         ]
@@ -184,8 +184,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5fb9554152cdc28a",
+  "active": "06fc1fbb4a619570",
   "lastOpenFiles": [
+    "second-brain/2nd-semester/projects/Seminar/build-plan.md",
     "Excalidraw/Drawing 2026-11-08 15.00.07.excalidraw.md",
     "Excalidraw"
   ]

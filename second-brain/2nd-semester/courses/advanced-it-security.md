@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "2027-04-05"
 credits: "TBD"
 language: "English"
-source_count: 9
+source_count: 11
 status: active
-last_updated: 2026-11-07
+last_updated: 2026-11-12
 prerequisites: []
 ---
 
@@ -40,6 +40,8 @@ Overview pages:
 - [[advanced-it-security-exercise-0]] — exercise organisation
 - [[advanced-it-security-exercise-1]] — Sheet 1: terminology, attackers, the faulty sensor
 - [[advanced-it-security-exercise-2]] — Sheet 2: cryptography, the adversary, hash functions
+- [[advanced-it-security-lecture-3]] — Lecture 3: security games, symmetric ciphers, one-time pad
+- [[advanced-it-security-exercise-3]] — Sheet 3: hash functions and symmetric cryptography
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
@@ -47,9 +49,12 @@ Overview pages:
 | 0b | Basics II: properties beyond CIA, attacker classes, cell-phone OPSEC | `20261027_0_Basics.pdf` | ingested → [[advanced-it-security-lecture-0b]] |
 | 1 | Introduction to Cryptography: cryptology, old vs new paradigm, TTP, key recovery/escrow, unconditional vs conditional security, services, hash functions (MDC/MAC, OWHF/CRHF, three resistance properties) | `20261102_1_Symmetric.pdf` (16 slides) | ingested → [[advanced-it-security-lecture-1]] |
 | 2 | Cryptography continued: checksums vs CRC, birthday bound, Merkle-Damgård, hash history, MACs/HMAC, first statement of symmetric encryption | `20261105_1_Symmetric.pdf` (slides 18–55) | ingested → [[advanced-it-security-lecture-2]] |
+| 3 | Security games, classical symmetric ciphers, one-time pad, block vs stream ciphers | `20261110_1_Symmetric.pdf` (slides 56–93) | ingested → [[advanced-it-security-lecture-3]] |
 | 0 | Exercise organisation | `Advanced_IT-Security__Introduction.pdf` | ingested → [[advanced-it-security-exercise-0]] |
 | E1 | Terminology, attacker classification, the faulty sensor, policy/mechanism/assurance | `AdvITSEC_Übung_1.pdf` + `Exercise_1_with_solutions.pdf` (official answers) | ingested → [[advanced-it-security-exercise-1]] |
 | E2 | Cryptography and the adversary; hash functions (pre-image / 2nd pre-image / collision, MDC vs MAC, 32-bit digest arithmetic) — discussion 05.11.2026 | `Advanced_IT_Sec_Exercise_2.pdf` | ingested → [[advanced-it-security-exercise-2]] | + official solutions (three extra tasks)
+
+| E3 | Hash functions, birthday work, symmetric encryption and relay confidentiality — discussion 12.11.2026 | `Advanced_IT_Sec_Exercise_3.pdf` | task overview → [[advanced-it-security-exercise-3]] |
 
 ## The Course Agenda
 
@@ -79,7 +84,7 @@ signed-but-wrong temperature reading — so the exam is not going to be about re
 
 ## Open Questions
 
-- Lectures 2–6 have no slides in `raw/` yet: lectures 0, 0b and 1 are ingested, and exercise sheets 1–2 are answered. The deck filed as `20261102_1_Symmetric.pdf` is titled "Introduction to Cryptography" and ends at hash functions (slide 16) — symmetric encryption itself, agenda item 3, is not in the ingested PDF.
+- **Later agenda topics remain absent.** The deck `20261110_1_Symmetric.pdf` continues through symmetric cryptography and the one-time pad (slides 56–93), but no material for public-key cryptography, signatures, key establishment, authentication, access control or protocols has been ingested.
 - Which of the four Thursday slots is the "real" one? The sheet lists all four with "check rooms in Stud.IP" — the slot structure is unresolved.
 - The lecture-0 slides name the exam date (05.04.2027) via the course organisation sheet; whether the written exam's duration and any sub-parts are specified anywhere is not stated.
 

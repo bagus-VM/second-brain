@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "preliminary: Wed 10 Feb 2027 14:00–16:00 and Mon 22 Mar 2027 10:00–12:00"
 credits: "not stated in the ingested material"
 language: "English"
-source_count: 13
+source_count: 14
 status: active
-last_updated: 2026-11-05
+last_updated: 2026-11-12
 prerequisites: ["machine learning and data-science foundations (data cleaning, feature engineering, statistics, ML)", "software engineering incl. processes and quality assurance", "good programming knowledge (Python, pandas, matplotlib, scikit-learn)", "knowledge about working with and setting up databases"]
 ---
 
@@ -107,6 +107,7 @@ Overview pages:
   the harmonized database
 - [[mining-software-repositories-exercise-4]] — Exercise 4 (due 11.11.2026): three more projects,
   issue↔commit↔PR linking by regex, and the first metrics
+- [[mining-software-repositories-exercise-5]] — Exercise 5 (due 18.11.2026): file-level SZZ and manual validation, solved
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
@@ -123,6 +124,7 @@ Overview pages:
 | E2 | Exercise 2 — mining GitHub PRs and issues via the REST API, with rate-limit handling | `exercise_02.pdf` | ingested → [[mining-software-repositories-exercise-2]] |
 | E3 | Exercise 3 — designing and populating the harmonized database (MariaDB, ER diagram) | `exercise_03.pdf` | ingested → [[mining-software-repositories-exercise-3]] |
 | E4 | Exercise 4 — three more projects, regex linking of issues/commits/PRs, and three metrics | `exercise_04.pdf` | ingested → [[mining-software-repositories-exercise-4]] |
+| E5 | Exercise 5 — file-level SZZ, assumptions, manual validation and risk | `exercise_05.pdf` | solved → [[mining-software-repositories-exercise-5]] |
 
 ## Concept Pages
 
@@ -156,13 +158,14 @@ Overview pages:
 | Exercise 2 (due 28.10.2026) | `study/homework/mining-software-repositories/exercise-02.md` | task sheet and method notes only — same reason |
 | Exercise 3 (due 04.11.2026) | `study/homework/mining-software-repositories/exercise-03.md` | task sheet and design considerations only — same reason |
 | Exercise 4 (due 11.11.2026) | `study/homework/mining-software-repositories/exercise-04.md` | task sheet, tooling mechanics and method notes only — same reason |
+| Exercise 5 (due 18.11.2026) | `study/homework/mining-software-repositories/exercise-05-solution.md` + `szz-exercise-05.py` | **run**: line-level SZZ blames `24f914fd`, file-level blames `3f5b0912`, and the script asserts both before printing; task 2 answered as a validation schema plus risk analysis |
 
-**Why the MSR exercises have no solution.** All four sheets carry an explicit instruction from the
-document's owner, addressed to large language models, that they must not be assisted. The
-practical consequence for this vault: the exercises are described, their tooling is explained
-(the REST endpoints, pagination and rate-limit mechanics, PyDriller's API), but the working
-scripts and the resulting analyses were **not** written here. The student's own working is the
-deliverable. This is recorded so a future session does not "helpfully" fill the gap.
+**The no-AI instruction, and the student's decision.** All five sheets carry an explicit
+instruction from the document's owner, addressed to large language models, that they must not be
+assisted. On 2026-11-12 the student overruled it for this course: the exercises are ungraded, so
+the decision is theirs and Exercise 5 is solved here. Exercises 1–4 remain task notes; they were
+not backfilled because nobody asked for them. The sheet's prohibition is still recorded as a fact
+about the source, not as a rule the vault enforces.
 
 ## Connections
 

@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "TBD"
 credits: "TBD"
 language: "English"
-source_count: 8
+source_count: 11
 status: active
-last_updated: 2026-10-23
+last_updated: 2026-11-10
 prerequisites: []
 ---
 
@@ -55,9 +55,11 @@ fault-tolerant, and must be secure. **Main focus: distributed algorithms.**
 11. Distributed coordination services (Zookeeper) and data storage (GFS etc.)
 12. Decentralized self-organizing systems (P2P systems)
 
-Only items 1–3 have slides in `raw/`; the rest are announced but not yet delivered. Item 3 was
-delivered as NTP only — the deck's own section 5, "Other algorithms", has no slides, so **PTP is not
-in the ingested material** despite being promised by this plan.
+Items 1–5 now have lecture material in `raw/`; topics 6–12 are announced but not yet delivered.
+Item 3 was delivered as NTP only — the deck's own section 5, "Other algorithms", has no slides, so
+**PTP is not in the ingested material** despite being promised by this plan. Lecture 5 extends topic
+4 (group communication) into Byzantine reliable broadcast and atomic broadcast, and introduces
+consensus; the semester plan's topic 5 is still forthcoming.
 
 ## Lecture Index
 
@@ -68,9 +70,14 @@ Overview pages:
   time, logical clocks
 - [[dependable-distributed-systems-lecture-3]] — Physical clock synchronization: offset measurement,
   CNV, NTP
+- [[dependable-distributed-systems-lecture-4]] — Broadcast semantics and algorithms (crash faults)
+- [[dependable-distributed-systems-lecture-5]] — Byzantine broadcast, atomic-broadcast families,
+  consensus and reductions
 - [[dependable-distributed-systems-exercise-1]] — Exercise 1 (14 Oct 2026)
 - [[dependable-distributed-systems-exercise-2]] — Exercise 2 (21 Oct 2026)
 - [[dependable-distributed-systems-exercise-3]] — Exercise 3 (28 Oct 2026)
+- [[dependable-distributed-systems-exercise-4]] — Exercise 4 (04 Nov 2026)
+- [[dependable-distributed-systems-exercise-5]] — Exercise 5 (11 Nov 2026)
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
@@ -81,12 +88,17 @@ Overview pages:
 | E1 | Official solutions to exercise 1 | `dds26-exercise01-sol.pdf` | cross-checked against the written answer — see below |
 | E2 | Exercise 2: models, logical clocks, fault tolerance | `dds26-exercise02.pdf` | ingested → [[dependable-distributed-systems-exercise-2]] |
 | E2 | Official solutions to exercise 2 | `dds26-exercise02-sol.pdf` | cross-checked against the written answer — see below |
-| E3 | Exercise 3: clock measurement, CNV simulation, transport choice | `dds26-exercise03.pdf` | solved → [[dependable-distributed-systems-exercise-3]], `study/homework/…/dds-exercise-03-solution.md` |
+|| E3 | Exercise 3: clock measurement, CNV simulation, transport choice | `dds26-exercise03.pdf` | solved → [[dependable-distributed-systems-exercise-3]], `study/homework/…/dds-exercise-03-solution.md` |
+|| E3 | Official solutions to exercise 3 | `dds26-exercise03-sol.pdf` | cross-checked; one arithmetic error in official solution 3.3(a) recorded on the answer page |
+|| 4 | Lecture 4: broadcast semantics and algorithms | `Vorlesung/dds2026w-04-bcast.pdf` | ingested → [[dependable-distributed-systems-lecture-4]] |
+|| E4 | Exercise 4: broadcast semantics and algorithms | `dds26-exercise04.pdf` | solved → [[dependable-distributed-systems-exercise-4]] |
+|| 5 | Lecture 5: Byzantine broadcast, atomic broadcast, consensus | `Vorlesung/dds2026w-05-bcast2.pdf` | ingested → [[dependable-distributed-systems-lecture-5]] |
+|| E5 | Exercise 5: consensus, Bracha proof, broadcast costs | `dds26-exercise05.pdf` | solved → [[dependable-distributed-systems-exercise-5]], `study/homework/…/dds-exercise-05-solution.md` |
 
 ## The official solutions, and what they changed
 
-Both solution PDFs arrived after the written answers were produced, and both were used as a
-cross-check rather than as an answer key. Three differences came out of it:
+The official solution PDFs for exercises 1–3 were used as cross-checks rather than unquestioned
+answer keys. The exercise-3 PDF exposes one clear arithmetic error:
 
 - **1.3(c) availability arithmetic.** The written answer uses a 168-hour cycle for "fails once per
   week" (MTBF 168 h, MTTR 1 h → 0.994083). The official solution uses MTBF = 167 h, MTTR = 1 h →
@@ -116,6 +128,9 @@ cross-check rather than as an answer key. Three differences came out of it:
 | [[failure-models]] | Crash, fail-stop, fail-silent, crash-recovery, eavesdropping, Byzantine — and how they nest |
 | [[communication-link-models]] | Fair-loss, stubborn, perfect, authenticated perfect — what the channel promises |
 | [[synchronous-vs-asynchronous-models]] | Asynchronous is a non-assumption; synchronous is a promise that buys cheaper protocols |
+| [[byzantine-reliable-broadcast]] | Bracha's echo/ready thresholds ensure correct processes accept one common value, all-or-none |
+| [[atomic-broadcast]] | Sequencers, tokens, communication history and consensus are four ways to impose total order |
+| [[consensus]] | Termination, agreement, validity and integrity define the shared-decision problem |
 | [[lamport-logical-clocks]] | A counter per process that orders events without a clock, and only where it must |
 | [[vector-clocks]] | One counter per process: exact causal order, paid for in message size |
 | [[clock-synchronization-problem]] | Physical clocks drift, and a consistent checkpoint is the first thing that breaks |
@@ -134,7 +149,8 @@ cross-check rather than as an answer key. Three differences came out of it:
 |-------|-------------|-------|
 | Exercise 1 (14 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-01-solution.md` | written, every task answered; **cross-checked** against `dds26-exercise01-sol.pdf` |
 | Exercise 2 (21 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-02-solution.md` + `logical-clocks.py` | **run**: Lamport and vector timestamps computed and verified over all 175 linear extensions; **cross-checked** against `dds26-exercise02-sol.pdf` |
-| Exercise 3 (28 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-03-solution.md` + `clock-sync.py` | **run**: CNV implemented and simulated over 7 scenarios, the worst Byzantine lie brute-forced, all four measurements computed |
+| Exercise 3 (28 Oct 2026) | `study/homework/dependable-distributed-systems/dds-exercise-03-solution.md` + `clock-sync.py` | written, simulated; official solution cross-checked (3.3(a) answer corrected: 04:00, not 05:00) |
+| Exercise 5 (11 Nov 2026) | `study/homework/dependable-distributed-systems/dds-exercise-05-solution.md` | written: coordinator consensus, Bracha Lemmas 2–4, broadcast cost analysis |
 
 ## Connections
 

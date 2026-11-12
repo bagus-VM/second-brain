@@ -6,7 +6,7 @@ import os
 import re
 from collections import OrderedDict
 
-SEM = r"C:\Users\quiescent\Documents\Vault\second-brain\2nd-semester"
+SEM = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(SEM, "index.md")
 
 COURSE_ORDER = [
@@ -85,7 +85,7 @@ lines.append("---")
 lines.append('title: "Semester 2 — Master Index"')
 lines.append("tags: [meta, index, semester-2]")
 lines.append("status: current")
-lines.append("last_updated: 2026-11-07")
+lines.append("last_updated: 2026-11-12")
 lines.append("---")
 lines.append("")
 lines.append("# Semester 2 — Master Index")
@@ -161,17 +161,17 @@ lines.append("- Search-Based Software Engineering (new registration, first inges
 lines.append("- Dropped on 2026-11-07: Energy Informatics 1 — course page, 6 concept pages, 1 lecture page, 1 tutorial page and the 4 raw PDFs removed (raw was git-tracked, so recoverable).")
 lines.append("- Introduction to Deep Learning: lectures 1-3 and exercise sets 1-3 ingested; lecture 3 (single-layer networks) arrived 2026-11-07.")
 lines.append("- Dropped on 2026-10-20: Hardware-Oriented Security — all pages and raw sources removed.")
-lines.append("- Reverse- and Reengineering was dropped on 2026-10-20 and has since been re-registered; lectures 1-4 and homework 1-4 are now ingested (the 2026-10-29 and 2026-11-05 batches added lecture 3, lecture 4, homework 3 and homework 4; lecture 3 exists both as a `.key` package and as a 15-slide PDF export). The Term 2 exam timeframe is printed as '22.03.-09.04.2025' and is flagged as a typo on the course page.")
-lines.append("- Mining Software Repositories (new registration, ingested 2026-10-22, exercise 3 on 2026-10-30): 9 lecture decks and 4 exercise sheets (exercise 4 arrived 2026-11-05). The two exam dates are explicitly preliminary; credit points and exam format are not stated in the material.")
+lines.append("- Reverse- and Reengineering was dropped on 2026-10-20 and has since been re-registered; lectures 1-5 and homework 1-5 are ingested (lecture 5 and homework 5 arrived 2026-11-12). The Term 2 exam timeframe is printed as '22.03.-09.04.2025' and is flagged as a typo on the course page.")
+lines.append("- Mining Software Repositories (new registration, ingested 2026-10-22): 9 lecture decks and 5 exercise sheets (exercise 5 arrived 2026-11-12 and is solved; the student overruled the sheets' no-AI instruction on 2026-11-12 because they are ungraded).")
 lines.append("- Dropped on 2026-10-21: Scaling Database Systems — all pages and raw sources removed.")
-lines.append("- Advanced IT Security: lectures 0, 0b, 1 and 2 and exercise sheets 0-2 are ingested (the official deck for sheet 2 arrived 2026-11-07 and is folded in). The deck filed as `20261102_1_Symmetric.pdf` is titled \"Introduction to Cryptography\" and ends at hash functions; `20261105_1_Symmetric.pdf` continues it through checksums, the birthday bound, Merkle-Damgard, MD5/SHA history, MACs/HMAC and the start of symmetric encryption. Public-key cryptography, signatures and key establishment (agenda items 3-6) still have no slides in `raw/`.")
-lines.append("- Virtual Machines and Runtime Systems: lectures 0-2, the `s02` example programs, and exercise sheets 1-3 are ingested. Sheet 3 is implemented and run (both allocator variants), with the traces in `study/homework/virtual-machines-and-runtime-systems/sheet-03/`.")
-lines.append("- Dependable Distributed Systems: lectures 1-3 and exercises 1-3 ingested (exercise 3 re-checked against the professor's own CNV simulator); the 12-topic semester plan is preliminary, so topics 4-12 have no slides in `raw/` yet.")
-lines.append("- The four Mining Software Repositories exercise sheets carry an explicit instruction from their owner that they must not be assisted by AI, so no AI-written solution exists for them; the vault holds the task sheet, the tooling mechanics and the method notes, and the working scripts and analysis are the student's own work.")
+lines.append("- Advanced IT Security: lectures 0, 0b, 1-3 and exercise sheets 0-3 are ingested. The 2026-11-10 continuation covers security games, symmetric ciphers and the one-time pad; public-key cryptography, signatures, key establishment and later agenda topics remain absent.")
+lines.append("- Virtual Machines and Runtime Systems: lectures 0-3, the `s02` example programs, and exercise sheets 1-3 are ingested. Lecture 3 introduces C abstract-machine semantics and the Prolog/WAM execution model.")
+lines.append("- Dependable Distributed Systems: lectures 1-5 and exercises 1-5 ingested; official exercise-3 solutions cross-checked (their 3.3(a) arithmetic is wrong: the mean is 04:00, not 05:00). The semester plan is preliminary, so topics 6-12 have no slides in `raw/` yet; lecture 5 introduces broadcast and consensus but the separately announced consensus/failure-detectors topic is still forthcoming.")
+lines.append("- The five Mining Software Repositories exercise sheets carry an instruction from their owner against AI assistance; the student overruled it for this course on 2026-11-12 (ungraded), so exercise 5 is solved and 1-4 remain task notes.")
 lines.append("- Seminar on Hardware Security Solutions for the Internet of Things (ingested 2026-11-02): no lecture slides exist, only the kick-off deck and Overleaf guide. The deck forbids ChatGPT or any other automatic text generation, twice, and grades significant plagiarism 5,0. Whether the complete draft in `raw/.../paper/` is reused is undecided; the active repo is `projects/Seminar/` (skeleton only).")
 lines.append("- Exam formats/dates marked TBD were not in the source material and are not guessed.")
 lines.append("")
 
-with open(OUT, "w", encoding="utf-8") as f:
+with open(OUT, "w", encoding="utf-8", newline="\r\n") as f:
     f.write("\n".join(lines))
 print(f"wrote {OUT}: {len(concepts)} concepts, {len(topics)} topics, {len(courses)} courses")

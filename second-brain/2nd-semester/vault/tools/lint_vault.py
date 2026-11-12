@@ -10,7 +10,7 @@ import re
 import sys
 from collections import defaultdict
 
-ROOT = r"C:\Users\quiescent\Documents\Vault\second-brain"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 SEM = os.path.join(ROOT, "2nd-semester")
 # The 8-section concept template. Only vault/concepts pages owe all of it: topic overview pages,
 # course pages and homework solutions follow templates of their own.
@@ -92,6 +92,7 @@ def main():
                 files.append(os.path.join(dirpath, fn))
 
     broken = []
+    narrative = []
     no_fm = []
     short = []
     missing_sec = []
@@ -118,7 +119,13 @@ def main():
                 if os.path.exists(os.path.join(ROOT, target)) or os.path.exists(os.path.join(ROOT, target + ".md")):
                     continue
             if target not in names:
-                broken.append((rel, target))
+                # log.md is an append-only audit trail: its entries legitimately link pages
+                # that were deleted later (a dropped course's concepts). Report them, but do
+                # not count them as broken -- the deep linter makes the same exception.
+                if os.path.basename(path) == "log.md":
+                    narrative.append((rel, target))
+                else:
+                    broken.append((rel, target))
 
     # A name shared by two notes makes every [[wikilink]] to that name ambiguous, and Obsidian
     # resolves it silently — a page can end up pointing at the wrong course or concept with no
@@ -140,6 +147,9 @@ def main():
     print(f"notes scanned: {len(files)}")
     print(f"broken wikilinks: {len(broken)}")
     for rel, target in broken:
+        print(f"  {rel} -> [[{target}]]")
+    print(f"log.md narrative links (append-only, not counted): {len(narrative)}")
+    for rel, target in narrative:
         print(f"  {rel} -> [[{target}]]")
     print(f"duplicate note names: {len(dupes)}")
     for name, paths in sorted(dupes.items()):

@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "2027-02-11"
 credits: "6 ECTS"
 language: "English"
-source_count: 7
+source_count: 8
 status: active
-last_updated: 2026-11-04
+last_updated: 2026-11-12
 prerequisites: []
 ---
 
@@ -48,6 +48,7 @@ Overview pages:
 - [[virtual-machines-and-runtime-systems-lecture-0]] — organisational matters (exam dates)
 - [[virtual-machines-and-runtime-systems-lecture-1]] — Introduction to virtualization
 - [[virtual-machines-and-runtime-systems-lecture-2]] — The C runtime system
+- [[virtual-machines-and-runtime-systems-lecture-3]] — Abstract C machine, undefined behavior, Prolog and the Warren Abstract Machine
 - [[virtual-machines-and-runtime-systems-exercise-1]] — Sheet 1 (dynamic libraries, JIT)
 - [[virtual-machines-and-runtime-systems-exercise-2]] — Sheet 2 (signals, threads, `printf` race)
 - [[virtual-machines-and-runtime-systems-exercise-3]] — Sheet 3 (exceptions, memory management, `LD_PRELOAD` allocator)
@@ -61,6 +62,7 @@ Overview pages:
 | S1 | Dynamic libraries in C; primitive JIT compiler | `01.pdf`, `addrs.c`, `eval.c` | ingested as practice → [[virtual-machines-and-runtime-systems-exercise-1]] |
 | S2 | Signals, reentrancy, `longjmp` threads | `02.pdf`, skeleton sources | ingested as practice → [[virtual-machines-and-runtime-systems-exercise-2]] |
 | S3 | Exceptions (complexity of entry, handler search, `finally` rewrite) and memory management (`malloc`/`calloc`/`realloc`/`free` over `sbrk`) | `03.pdf`, `mymalloc.c` | ingested, implemented and run → [[virtual-machines-and-runtime-systems-exercise-3]] |
+| 3 | Abstract C machine and undefined behavior; Prolog semantics and Warren Abstract Machine | `s03.pdf` | ingested → [[virtual-machines-and-runtime-systems-lecture-3]] |
 
 ## Exercise Sheet 1 (due 22.10.2026, discussion 23.10.2026)
 

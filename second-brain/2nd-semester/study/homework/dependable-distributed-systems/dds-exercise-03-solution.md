@@ -2,9 +2,9 @@
 title: "Exercise 3 — Physical Clock Synchronization (Solutions)"
 tags: [homework, dependable-distributed-systems, semester-2, clock-synchronization]
 course: "Dependable Distributed Systems"
-source_count: 2
+source_count: 3
 status: current
-last_updated: 2026-10-23
+last_updated: 2026-11-10
 prerequisites: ["[[dependable-distributed-systems-lecture-3]]"]
 ---
 
@@ -322,6 +322,14 @@ lie carries a full one third of the weight in each correct process's update — 
 each correct process a *different* lie. Two honest processes plus one liar is precisely the case
 where "less than one third faulty" is violated, and the example is constructed to sit on that
 boundary. The general statement: 3f + 1 processes are needed to tolerate f Byzantine clock faults.
+
+---
+
+## Cross-check against the professor's official solution (added 2026-11-10)
+
+Source: `raw/lectures/Dependable Distributed Systems/Ubung/dds26-exercise03-sol.pdf`. The official solution confirms the unidirectional and bidirectional measurement setup, the `delta`/`theta` equations, the `±delta/2` asymmetry bound, the UDP recommendation, and selecting a minimum-round-trip measurement. It does not provide an offset number for task 3.4(c), so the measured calculation above remains independently derived from the task's table.
+
+**The official solution has an arithmetic error in 3.3(a).** It says all three clocks become 05:00. The stated readings are 03:00, 04:00 and 05:00; the mean is `(3+4+5)/3 = 4`, so all three become **04:00**, as computed above. The official solution's 3.3(b) and (c) reasoning agrees with the boundary attack and the `n > 3m` requirement recorded above.
 
 ---
 

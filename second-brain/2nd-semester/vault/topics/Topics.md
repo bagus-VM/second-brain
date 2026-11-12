@@ -2,7 +2,7 @@
 title: "Topics — Semester 2"
 tags: [meta, vault, semester-2]
 status: current
-last_updated: 2026-11-05
+last_updated: 2026-11-12
 ---
 
 # Topics — Semester 2
@@ -44,10 +44,12 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Dependable Distributed Systems | L2 Models, time, logical clocks | [[dependable-distributed-systems-lecture-2]] | 7 |
 | Dependable Distributed Systems | L3 Physical clock synchronization, CNV, NTP | [[dependable-distributed-systems-lecture-3]] | 6 |
 | Dependable Distributed Systems | L4 Broadcast semantics and algorithms | [[dependable-distributed-systems-lecture-4]] | 4 |
+| Dependable Distributed Systems | L5 Byzantine broadcast, atomic broadcast, consensus | [[dependable-distributed-systems-lecture-5]] | 3 |
 | Dependable Distributed Systems | Exercise 1 — distributed systems and dependability | [[dependable-distributed-systems-exercise-1]] | — |
 | Dependable Distributed Systems | Exercise 2 — models and logical clocks | [[dependable-distributed-systems-exercise-2]] | — |
 | Dependable Distributed Systems | Exercise 3 — clock measurement, CNV, transport | [[dependable-distributed-systems-exercise-3]] | — |
 | Dependable Distributed Systems | Exercise 4 — broadcast semantics and algorithms | [[dependable-distributed-systems-exercise-4]] | 4 |
+| Dependable Distributed Systems | Exercise 5 — consensus, Bracha proof, broadcast costs | [[dependable-distributed-systems-exercise-5]] | 3 |
 | Virtual Machines and Runtime Systems | L0 Organizational matters | [[virtual-machines-and-runtime-systems-lecture-0]] | — |
 | Virtual Machines and Runtime Systems | L1 Introduction to virtualization | [[virtual-machines-and-runtime-systems-lecture-1]] | 2 |
 | Virtual Machines and Runtime Systems | L2 The C runtime system | [[virtual-machines-and-runtime-systems-lecture-2]] | 6 |
@@ -85,6 +87,12 @@ one used in `courses/<slug>.md`, so both layers sort together.
 | Reverse- and Reengineering | Homework 2 — recovering C from x86-64 assembly | [[reverse-and-reengineering-exercise-2]] | — |
 | Reverse- and Reengineering | Homework 3 — x86 shifts and the max CFG | [[reverse-and-reengineering-exercise-3]] | — |
 | Reverse- and Reengineering | Homework 4 — x86-64 swap recovery and control-flow flattening | [[reverse-and-reengineering-exercise-4]] | — |
+| Advanced IT Security | L3 — security games and symmetric ciphers | [[advanced-it-security-lecture-3]] | 3 |
+| Advanced IT Security | Exercise 3 — hash functions and symmetric cryptography | [[advanced-it-security-exercise-3]] | — |
+| Reverse- and Reengineering | L5 — decompilation and structural analysis | [[reverse-and-reengineering-lecture-5]] | 2 |
+| Reverse- and Reengineering | Homework 5 — stack frames and CFG structuring | [[reverse-and-reengineering-exercise-5]] | — |
+| Mining Software Repositories | Exercise 5 — SZZ and manual validation (task overview only; no AI solution) | [[mining-software-repositories-exercise-5]] | — |
+| Virtual Machines and Runtime Systems | L3 — abstract C machine and Warren Abstract Machine | [[virtual-machines-and-runtime-systems-lecture-3]] | 4 |
 
 Lectures not yet held or not yet in `raw/` have no page — see the Gaps section of
 [[2nd-semester/index|the semester index]].

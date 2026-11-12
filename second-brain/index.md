@@ -2,12 +2,12 @@
 
 > Maintained by Professor White. Updated after every INGEST and significant QUERY.
 
-**Last updated:** 2026-11-07
-**Total pages:** 917 (vault + study, both semesters; excluding raw/ and projects/)
+**Last updated:** 2026-11-12
+**Total pages:** 942 (vault + study, both semesters; excluding raw/ and projects/)
 **Active courses:** 6 (Semester 1, exams done) + 10 registered in Semester 2
 
 > **Semester 2 (WS 2026/27) has its own catalogue: [[2nd-semester/index|Semester 2 — Master Index]]**
-> 10 courses, 139 concept pages, 57 topic pages, 22 pages under `study/homework/`. The sections below are the frozen Semester 1 record.
+> 10 courses, 151 concept pages, 65 topic pages, 25 pages under `study/homework/`. The sections below are the frozen Semester 1 record.
 >
 > **Ingested on 2026-10-23:** Dependable Distributed Systems lecture 3 (physical clock
 > synchronization: offset measurement, CNV, NTP) and its exercise sheet 3, plus the official
@@ -37,6 +37,10 @@
 > **Dropped 2026-11-07:** Energy Informatics 1 (de Meer) — course page, 6 concept pages, 1 lecture page, 1 tutorial page and the 4 raw PDFs removed (raw was git-tracked, so recoverable with `git checkout`).
 >
 > **Added 2026-11-07:** Search-Based Software Engineering (Fraser / Feldmeier) — 1 course page, 4 topic pages, 8 concept pages; plus Introduction to Deep Learning lecture 3 (5 concept, 1 topic) and Advanced IT Security lecture 2 with the official sheet-2 solutions (2 concept, 1 topic, 1 rewritten exercise page). Semester 2 now stands at 139 concept pages and 57 topic pages.
+>
+> **Ingested 2026-11-10:** Dependable Distributed Systems lecture 5 and exercise 5, plus the official exercise-3 solution PDF — 3 concepts, 2 topic pages, 1 solution page; corrected an arithmetic error in the official exercise-3 answer (03:00/04:00/05:00 average to 04:00). Semester 2 now stands at 142 concept pages and 59 topic pages.
+>
+> **Ingested 2026-11-12:** Advanced IT Security lecture continuation + exercise 3, Reverse- and Reengineering lecture 5 + homework 5, Mining Software Repositories exercise 5, and Virtual Machines and Runtime Systems lecture 3 — 9 concepts, 6 topic pages, 3 task notes + 1 solution (MSR exercise 5, after the student overruled the sheet's no-AI instruction on 2026-11-12). Semester 2 now stands at 151 concepts and 65 topics.
 
 ---
 

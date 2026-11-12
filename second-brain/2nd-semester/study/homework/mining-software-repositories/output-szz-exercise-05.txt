@@ -1,0 +1,23 @@
+== issue-linked bug fixes ==
+  42d921a2  Fixes ISSUE-0002: replace division by multiplication
+
+== line-level SZZ (the definition) ==
+  fix 42d921a2 removes 'import math' -> introduced by 24f914fd
+  fix 42d921a2 removes '    return math.divide(a, b)' -> introduced by 24f914fd
+
+== file-level SZZ (this sheet's substitute) ==
+  fix 42d921a2 -> last commit touching the file: 3f5b0912
+
+== naive 'fix' keyword detector ==
+  3f5b0912  ISSUE-0003: Change version to fix value 0.0002
+  42d921a2  Fixes ISSUE-0002: replace division by multiplication
+  line-level candidates: ['160f0625', '24f914fd']
+
+== validation table ==
+candidate,fix,issue,changed_line,label
+24f914fd,42d921a2,ISSUE-0002,"import math",true_positive
+24f914fd,42d921a2,ISSUE-0002,"return math.divide(a, b)",true_positive
+3f5b0912,42d921a2,ISSUE-0002,file-level,false_positive
+
+self-checks: PASS
+line-level = 24f914fd; file-level = 3f5b0912; the approximation blames the wrong commit

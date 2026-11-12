@@ -6,9 +6,9 @@ semester: "WS 2026/27"
 exam_date: "two dates via Campus Portal; Term 1 window 08.02.–05.03.2027 (sign-up 16.11.–15.12.2026), Term 2 window 22.03.–09.04.2027 (sign-up 01.03.–18.03.2027)"
 credits: "6 ECTS"
 language: "English"
-source_count: 8
+source_count: 10
 status: active
-last_updated: 2026-11-05
+last_updated: 2026-11-12
 prerequisites: ["Compiler construction or software analysis (lexing, parsing, intermediate representation)"]
 ---
 
@@ -92,6 +92,7 @@ Overview pages:
 - [[reverse-and-reengineering-lecture-4]] — disassembly (instruction decoding, linear sweep,
   recursive traversal) and obfuscation (packing, control-flow flattening, opaque predicates,
   function joining, virtualization, data-based obfuscation)
+- [[reverse-and-reengineering-lecture-5]] — decompilation, intermediate representation, structural analysis and iterative CFG refinement
 - [[reverse-and-reengineering-exercise-1]] — Homework 1 (20.10.2026): CFG, PDG, backward and
   forward slices, interprocedural CFG
 - [[reverse-and-reengineering-exercise-2]] — Homework 2 (27.10.2026): x86 assembly → C, CFG of an
@@ -100,6 +101,7 @@ Overview pages:
   intra- and interprocedural CFG of a three-way `max`
 - [[reverse-and-reengineering-exercise-4]] — Homework 4 (10.11.2026): a pointer-based swap recovered
   from x86-64, and control-flow flattening of a `while` loop with its flattened CFG
+- [[reverse-and-reengineering-exercise-5]] — Homework 5 (17.11.2026): call-stack tracing and CFG structuring
 
 | # | Topic | Source | Status |
 |---|-------|--------|--------|
@@ -111,6 +113,8 @@ Overview pages:
 | H2 | Homework 2 — recover `bar` and `foo` from x86-64 assembly, intraprocedural CFG of an assembly `foo`, infer what it computes | `hw02.pdf` | ingested → [[reverse-and-reengineering-exercise-2]] |
 | H3 | Homework 3 — `sar`/`shl` recovery from two listings, the CFG of a three-way `max`, intra- and interprocedural | `hw03.pdf` | ingested → [[reverse-and-reengineering-exercise-3]] |
 | H4 | Homework 4 — `void decode(long *xp, long *yp)` recovered from x86-64 assembly; control-flow flattening of `bar` plus its flattened CFG | `hw04.pdf` | ingested → [[reverse-and-reengineering-exercise-4]] |
+| 5 | Decompilation: intermediate representation, structural analysis, region matching and iterative refinement | `05-decompilation.pdf` (23 slides) | ingested → [[reverse-and-reengineering-lecture-5]] |
+| H5 | Program stack and goto-based CFG reconstruction; sheet is not for submission | `hw05.pdf` | task overview → [[reverse-and-reengineering-exercise-5]] |
 
 ## Concept Pages
 
@@ -134,6 +138,8 @@ Overview pages:
 | [[control-flow-obfuscation]] | Flattening, opaque predicates, function joining, virtualization — hiding which block runs next |
 | [[binary-packing]] | Encrypt after linking, decrypt at load time: the stub, the manual import resolution, the tail jump |
 | [[dynamic-code-rewriting]] | Code that is not in the binary: runtime generation, self-modifying code, and unsetting W^X |
+| [[decompilation]] | A source-like reconstruction of binary behavior, limited by information discarded or transformed by compilation |
+| [[structural-analysis-decompilation]] | CFG region matching and edge refinement recover structured branches and loops |
 
 ## Homework
 

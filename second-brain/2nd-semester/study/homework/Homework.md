@@ -2,7 +2,7 @@
 title: "Homework — WS 2026/27"
 tags: [meta, homework, semester-2]
 status: current
-last_updated: 2026-11-05
+last_updated: 2026-11-12
 ---
 
 # Homework
@@ -21,6 +21,8 @@ Solutions for every exercise sheet present in `raw/`. Each folder holds the writ
 | Dependable Distributed Systems | Exercise 1 (14 Oct 2026) | `dependable-distributed-systems/dds-exercise-01-solution.md` | written, all 6 tasks answered; availability arithmetic computed |
 | Dependable Distributed Systems | Exercise 2 (21 Oct 2026) | `dependable-distributed-systems/dds-exercise-02-solution.md` + `logical-clocks.py` | **run**: Lamport and vector timestamps computed, all 175 linear extensions checked, both total orders verified |
 | Dependable Distributed Systems | Exercise 3 (28 Oct 2026) | `dependable-distributed-systems/dds-exercise-03-solution.md` + `clock-sync.py` | **run**: CNV implemented from the lecture definition and simulated over 7 scenarios (including the n = 3m failure), the worst Byzantine lie brute-forced, four measurements reduced to one offset |
+| Dependable Distributed Systems | Exercise 3 official solutions | `dependable-distributed-systems/dds-exercise-03-solution.md` | cross-checked; official solution's 3.3(a) arithmetic error (mean is 04:00, not 05:00) recorded |
+| Dependable Distributed Systems | Exercise 5 (11 Nov 2026) | `dependable-distributed-systems/dds-exercise-05-solution.md` | written: coordinator consensus, Bracha Lemmas 2–4, and sequencer/token/history cost analysis |
 | Virtual Machines and Runtime Systems | Exercise Sheet 1 (due 22.10.2026) | `virtual-machines-and-runtime-systems/sheet-01/` | written, all three linking modes and the JIT built and executed |
 | Reverse- and Reengineering | Homework 1 (20.10.2026) — CFG, PDG and slicing | `reverse-and-reengineering/hw01-solution.md` + `hw01-slices.py` | **run**: intra-procedural CFG and PDG built and the backward and forward slices computed by a script that models the program, not drawn by hand |
 | Reverse- and Reengineering | Homework 2 (27.10.2026) — x86-64 assembly to C | `reverse-and-reengineering/hw02-solution.md` + `hw02-verify.py` | written and verified: both functions recovered to C, the assembly CFG reconstructed, and the recovered C checked against the sheet's own machine code |
@@ -32,45 +34,51 @@ Solutions for every exercise sheet present in `raw/`. Each folder holds the writ
 | Mining Software Repositories | Exercise 4 (due 11.11.2026) — expanding, linking, metrics | `mining-software-repositories/exercise-04.md` | task sheet, tooling mechanics (Seart search, RegEx) and method notes — **no AI-written solution by design**, for the same reason |
 | Virtual Machines and Runtime Systems | Exercise Sheet 3 (due 05.11.2026) — exceptions, memory management | `virtual-machines-and-runtime-systems/sheet-03/` (`mymalloc-bump.c`, `mymalloc-freelist.c`, `test-mymalloc.c`, `sheet-03-solution.md`, recorded output) | **run**: both allocators built and preloaded with `LD_PRELOAD`; 5/5 checks each, block reuse and program-break behaviour recorded from real traces |
 | Advanced IT Security | Exercise 2 (discussion 05.11.2026) — cryptography, the adversary, hash functions | `vault/topics/advanced-it-security-exercise-2.md` | written, all nine parts answered; the 32-bit digest count computed (2^32) including the birthday bound; **the official solution deck arrived 2026-11-07** and confirmed every answer, and its three extra tasks (h(x) = x mod 13 collision hunt, hash-or-MAC table, true/false table) are worked on the page |
+| Advanced IT Security | Exercise 3 (discussion 12.11.2026) — hashes and symmetric cryptography | `advanced-it-security/advanced-it-security-exercise-03.md` | task inventory only; no official solutions downloaded |
+| Reverse- and Reengineering | Homework 5 (dated 17.11.2026) — stack frames and CFG structuring | `reverse-and-reengineering/hw05.md` | task inventory only; sheet says not for submission |
+| Mining Software Repositories | Exercise 5 (due 18.11.2026) — SZZ and manual validation | `mining-software-repositories/exercise-05-solution.md` + `szz-exercise-05.py` | **run**: line-level SZZ blames `24f914fd`, file-level blames `3f5b0912`, and the script asserts both; task 2 answered as a validation schema and risk analysis |
 
 ## Coverage audit — every exercise file in `raw/`, and where it is answered
 
-Audited 2026-10-22 and **not re-audited since** — sheets that arrived after that date (DDS exercise 3-4,
-IDL exercise 3, RRE homework 3-4, VMRS sheets 2-3, AITS exercise 1-2, MSR exercises 3-4) are tracked
-in the table above and in the semester log rather than in this audit. Every file under a `Ubung/`
-folder (plus the exercise-like notebooks) is listed here, so a new sheet can be checked against this
-table in one glance.
+Coverage audit refreshed 2026-11-12. Earlier batches are listed below; the newest exercise sheets
+are also recorded here so every new source can be checked against its task note and topic overview.
 
 | Source file in `raw/` | Answered in | Status |
 |----------------------|-------------|--------|
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-hw-intro-py-tasks.ipynb` | `introduction-to-deep-learning/idl-exercise-01-solution.md` | complete — every notebook task |
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-homework.pdf` | same file, "Setup" section | complete — the three setup tasks (uv, VS Code, kernel) |
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-hw-intro-py-solutions.ipynb` | — | the professor's own solutions; used as a **cross-check**, not an exercise |
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-slides.pdf` (+ `-slim`) | — | session slides, not exercises (`-slim` is a strict subset of the full deck) |
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-demo.ipynb` | `vault/concepts/linear-algebra-for-deep-learning.md` | demo, not an exercise — but its content was worth a concept page |
-| `Introduction to Deep Learning/Ubung/15-10-2026/01-notebook-issue.ipynb` | `vault/concepts/jupyter-notebook-state.md` | demo, not an exercise — the notebook-state trap, worked out |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-hw-intro-py-tasks.ipynb` | `introduction-to-deep-learning/idl-exercise-01-solution.md` | complete — every notebook task |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-homework.pdf` | same file, "Setup" section | complete — the three setup tasks (uv, VS Code, kernel) |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-hw-intro-py-solutions.ipynb` | — | the professor's own solutions; used as a **cross-check**, not an exercise |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-slides.pdf` (+ `-slim`) | — | session slides, not exercises (`-slim` is a strict subset of the full deck) |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-demo.ipynb` | `vault/concepts/linear-algebra-for-deep-learning.md` | demo, not an exercise — but its content was worth a concept page |
+| `Introduction to Deep Learning/Ubung/01-intro-py/01-notebook-issue.ipynb` | `vault/concepts/jupyter-notebook-state.md` | demo, not an exercise — the notebook-state trap, worked out |
 | `Machine Learning for Cybersecurity/Vorlesung/Lab1-Basics-CC.ipynb` | `machine-learning-for-cybersecurity/lab-1-basics.md` | complete — all 28 cells, real outputs |
 | `Dependable Distributed Systems/Ubung/dds26-exercise01.pdf` | `dependable-distributed-systems/dds-exercise-01-solution.md` | complete — all 6 tasks; 1.3(c) availability computed |
 | `Dependable Distributed Systems/Ubung/dds26-exercise02.pdf` | `dependable-distributed-systems/dds-exercise-02-solution.md` + `logical-clocks.py` | complete — 2.6(a) and 2.6(b) timestamps computed and verified over all 175 linear extensions |
-| `Dependable Distributed Systems/Ubung/dds26-exercise01-sol.pdf` | `dependable-distributed-systems/dds-exercise-01-solution.md` | the official solutions; used as a **cross-check** — one arithmetic convention and one framing difference recorded on the course page |
-| `Dependable Distributed Systems/Ubung/dds26-exercise02-sol.pdf` | `dependable-distributed-systems/dds-exercise-02-solution.md` | the official solutions; used as a **cross-check** — 2.1's split verdict and 2.2(a)'s asterisk recorded on the course page |
+| `Dependable Distributed Systems/Ubung/Solutionscomments/dds26-exercise01-sol.pdf` | `dependable-distributed-systems/dds-exercise-01-solution.md` | the official solutions; used as a **cross-check** — one arithmetic convention and one framing difference recorded on the course page |
+| `Dependable Distributed Systems/Ubung/Solutionscomments/dds26-exercise02-sol.pdf` | `dependable-distributed-systems/dds-exercise-02-solution.md` | the official solutions; used as a **cross-check** — 2.1's split verdict and 2.2(a)'s asterisk recorded on the course page |
 | `Dependable Distributed Systems/Ubung/dds26-exercise03.pdf` | `dependable-distributed-systems/dds-exercise-03-solution.md` + `clock-sync.py` | complete — all four tasks; 3.2 answered from an independent CNV implementation because `exercise2-cnv.py` is **not in `raw/`** |
+| `Dependable Distributed Systems/Ubung/dds26-exercise03-sol.pdf` | `dependable-distributed-systems/dds-exercise-03-solution.md` | official cross-check; its 3.3(a) answer is arithmetically wrong (the mean is 04:00) |
+| `Dependable Distributed Systems/Ubung/dds26-exercise05.pdf` | `dependable-distributed-systems/dds-exercise-05-solution.md` | complete — 5.1–5.3; message counts follow the sheet's broadcast-as-n-unicasts model |
+| `Dependable Distributed Systems/Vorlesung/dds2026w-05-bcast2.pdf` | `vault/topics/dependable-distributed-systems-lecture-5.md` | lecture slides — 3 concepts produced |
 | `Dependable Distributed Systems/Vorlesung/dds2026w-03-ntp.pdf` | `vault/topics/dependable-distributed-systems-lecture-3.md` | lecture slides, not exercises — 6 concept pages produced |
-| `Introduction to Deep Learning/Ubung/22-10-2026/02-homework.pdf` | `introduction-to-deep-learning/idl-exercise-02-solution.md` + `exercise-02-math.py` | complete — MML 2.4 (a–e), derivatives (a–e), probability (a–d), every claim verified numerically |
-| `Introduction to Deep Learning/Ubung/22-10-2026/02-hw-intro-pytorch-tasks.ipynb` | `introduction-to-deep-learning/exercise-02-solutions.py` | complete — 9 tasks, model trained, degrees 1/2/3/9 compared by measured train and validation loss |
-| `Introduction to Deep Learning/Ubung/22-10-2026/02-slides.pdf` | `vault/topics/introduction-to-deep-learning-exercise-2.md` | session slides, not exercises |
-| `Introduction to Deep Learning/Ubung/22-10-2026/02-demo.ipynb` | `vault/concepts/pytorch-tensors-and-autograd.md`, `vault/concepts/neural-network-training-loop.md` | demo, not an exercise — but it is where the autograd and training-loop content lives |
+| `Introduction to Deep Learning/Ubung/02-intro-pytorch/02-homework.pdf` | `introduction-to-deep-learning/idl-exercise-02-solution.md` + `exercise-02-math.py` | complete — MML 2.4 (a–e), derivatives (a–e), probability (a–d), every claim verified numerically |
+| `Introduction to Deep Learning/Ubung/02-intro-pytorch/02-hw-intro-pytorch-tasks.ipynb` | `introduction-to-deep-learning/exercise-02-solutions.py` | complete — 9 tasks, model trained, degrees 1/2/3/9 compared by measured train and validation loss |
+| `Introduction to Deep Learning/Ubung/02-intro-pytorch/02-slides.pdf` | `vault/topics/introduction-to-deep-learning-exercise-2.md` | session slides, not exercises |
+| `Introduction to Deep Learning/Ubung/02-intro-pytorch/02-demo.ipynb` | `vault/concepts/pytorch-tensors-and-autograd.md`, `vault/concepts/neural-network-training-loop.md` | demo, not an exercise — but it is where the autograd and training-loop content lives |
 | `Introduction to Deep Learning/Vorlesung/01_introduction_to_dl.pdf` | `vault/topics/introduction-to-deep-learning-lecture-1.md` | lecture slides, not exercises |
 | `Introduction to Deep Learning/Vorlesung/02_foundations_of_ml.pdf` | `vault/topics/introduction-to-deep-learning-lecture-2.md` | lecture slides, not exercises — 12 concept pages produced |
-| `Introduction to Deep Learning/idl-lecture2-numbers.py` (this vault's own) | `vault/concepts/*` for lecture 2 | not a sheet — the computations behind the 12 lecture-2 concept pages; output in `output-idl-lecture2-numbers.txt` |
-| `Virtual Machine and Runtime System/Ubung/14-10-2026/01.pdf` (+ `addrs.c`, `eval.c`) | `virtual-machines-and-runtime-systems/sheet-01/` | complete — both problems, built and executed |
+| `study/homework/introduction-to-deep-learning/idl-lecture2-numbers.py` (this vault's own) | `vault/concepts/*` for lecture 2 | not a sheet — the computations behind the 12 lecture-2 concept pages; output in `output-idl-lecture2-numbers.txt` |
+| `Virtual Machine and Runtime System/Ubung/Sheet_01_Dynamic_Libraries_in_C-_discussion_on_October_23/01.pdf` (+ `addrs.c`, `eval.c`) | `virtual-machines-and-runtime-systems/sheet-01/` | complete — both problems, built and executed |
 | `Advanced IT Security/Ubung/Advanced_IT-Security__Introduction.pdf` | `vault/topics/advanced-it-security-exercise-0.md` | no exercises in it — 5 slides of course logistics only |
 | `Machine Learning for Cybersecurity/Ubung/` | — | **empty folder** — no sheet published yet |
 | `Reverse and Re-Engineering/Ubung/hw01.pdf` | `reverse-and-reengineering/hw01-solution.md` | complete — CFG, PDG, backward and forward slices; all three computed by script |
 | `Reverse and Re-Engineering/Ubung/hw02.pdf` | `reverse-and-reengineering/hw02-solution.md` | complete — both functions recovered to C, the assembly CFG reconstructed, the computed function identified |
 | `Mining Software Repositories/Ubung/exercise_01.pdf` | `mining-software-repositories/exercise-01.md` | task sheet and method notes only — **no AI-written solution by design**; the working scripts and the analysis are the student's own work |
 | `Mining Software Repositories/Ubung/exercise_02.pdf` | `mining-software-repositories/exercise-02.md` | task sheet and method notes only — **no AI-written solution by design**, for the same reason |
-| `Advanced IT Security/Ubung/Exercise_2_with_solutions.pdf` | `vault/topics/advanced-it-security-exercise-2.md` | the official solutions; used as a **cross-check** — every answer confirmed, plus three tasks the sheet PDF did not print |
+| Advanced IT Security/Ubung/Exercise_2_with_solutions.pdf | `vault/topics/advanced-it-security-exercise-2.md` | the official solutions; used as a **cross-check** — every answer confirmed, plus three tasks the sheet PDF did not print |
+| Advanced IT Security/Ubung/Advanced_IT_Sec_Exercise_3.pdf | `vault/topics/advanced-it-security-exercise-3.md` + `advanced-it-security/advanced-it-security-exercise-03.md` | task overview only; no solution sheet downloaded |
+| Reverse and Re-Engineering/Ubung/hw05.pdf | `vault/topics/reverse-and-reengineering-exercise-5.md` + `reverse-and-reengineering/hw05.md` | task overview only; sheet is not for submission |
+| Mining Software Repositories/Ubung/exercise_05.pdf | `vault/topics/mining-software-repositories-exercise-5.md` + `mining-software-repositories/exercise-05-solution.md` | complete — line-level and file-level SZZ run, both answers asserted, validation schema and risk analysis written |
 | `Advanced IT Security/Vorlesung/20261105_1_Symmetric.pdf` | `vault/topics/advanced-it-security-lecture-2.md` | lecture slides (slides 18–55 of the same deck), not exercises — 4 concept pages produced |
 | `Introduction to Deep Learning/Vorlesung/03_single_layer_nns.pdf` | `vault/topics/introduction-to-deep-learning-lecture-3.md` | lecture slides, not exercises — 5 concept pages produced |
 | `Introduction to Deep Learning/Ubung/03-eval-metrics-gradient-descent/03-PnP-01.jpg`, `03-PnP-02.jpg` | — | the student's **own handwritten** exercise-3 working (pen-and-paper, graph paper), not course material; no solution written from them |
@@ -90,14 +98,13 @@ remain, and all three are gaps in the *source*, not in the work:
    the `Vorlesung/` slot for the lab instead (Lab 1, answered above).
 3. **Bitcoin and Cryptocurrencies Technologies** — no files at all, not even a `Vorlesung/` document.
 
-**One deliberate exception to "every sheet is answered".** The two Mining Software Repositories
-exercise sheets carry an explicit instruction from their owner, addressed to large language
-models, that they must not be assisted — *"the tasks are not supposed to be solved by AI."*
-They are therefore **not** solved here: what the vault holds is the task sheet, the tooling
-mechanics (REST endpoints, pagination, rate limits, PyDriller's API) and the method notes, so
-the student can set the work up and reason about it. The working scripts and the resulting
-analysis are the student's own work. This is a deliberate state, not an unfinished one, and it
-is recorded on both sheets so a future session does not "helpfully" fill the gap.
+**The no-AI instruction, and what happened to it.** The Mining Software Repositories sheets carry
+an explicit instruction from their owner, addressed to large language models, that they must not
+be assisted — *"the tasks are not supposed to be solved by AI."* On 2026-11-12 the student
+overruled it for this course, on the grounds that the exercises are ungraded. Exercise 5 is
+therefore solved, with its script and recorded output. Exercises 1–4 remain task notes because
+nobody asked for them to be backfilled. The sheet's instruction is recorded as a fact about the
+source, not as a rule this vault enforces.
 
 ## Courses with nothing to solve yet
 
